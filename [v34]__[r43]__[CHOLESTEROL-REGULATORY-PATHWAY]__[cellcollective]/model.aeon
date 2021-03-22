@@ -1,0 +1,111 @@
+#position:Acetyl_CoA_acetyltransferase:61.512699374229726,412.4408305698652
+$Acetyl_CoA_acetyltransferase:Acetyl_CoA_acetyltransferase_RNA
+Acetyl_CoA_acetyltransferase_RNA -> Acetyl_CoA_acetyltransferase
+#position:Acetoacetyl_CoA:147.3113581957304,291.8956848966444
+$Acetoacetyl_CoA:(Acetyl_CoA & Acetyl_CoA_acetyltransferase)
+Acetyl_CoA_acetyltransferase -> Acetoacetyl_CoA
+Acetyl_CoA -> Acetoacetyl_CoA
+#position:Acetyl_CoA:225.50027422180017,156.50057731991285
+$Acetyl_CoA:Acetyl_CoA
+Acetyl_CoA -> Acetyl_CoA
+#position:mSREBP:258.92095302806433,1011.6859606804012
+$mSREBP:pSREBP
+pSREBP -> mSREBP
+#position:HMG_CoA_Reductase_gene:237.01835520502155,782.8067472697998
+$HMG_CoA_Reductase_gene:mSREBP
+mSREBP -> HMG_CoA_Reductase_gene
+#position:Dimethyl_allyl_pyrophosphate:688.4184447308667,88
+$Dimethyl_allyl_pyrophosphate:Isopentenyl_pyrophosphate
+Isopentenyl_pyrophosphate -> Dimethyl_allyl_pyrophosphate
+#position:Geranyl_pyrophosphate:707.6004357272192,372.9084236412589
+$Geranyl_pyrophosphate:(Isopentenyl_pyrophosphate | Dimethyl_allyl_pyrophosphate)
+Dimethyl_allyl_pyrophosphate -> Geranyl_pyrophosphate
+Isopentenyl_pyrophosphate -> Geranyl_pyrophosphate
+#position:Isopentenyl_pyrophosphate:610.241007751194,283.74135075224876
+$Isopentenyl_pyrophosphate:Mevalonyl_pyrophosphate
+Mevalonyl_pyrophosphate -> Isopentenyl_pyrophosphate
+#position:Mevalonyl_pyrophosphate:495.9160747524228,248.6755220090747
+$Mevalonyl_pyrophosphate:Mevalonic_Acid
+Mevalonic_Acid -> Mevalonyl_pyrophosphate
+#position:Cyp51_RNA:97.50279600466843,1299.250889214773
+$Cyp51_RNA:Cyp51_gene
+Cyp51_gene -> Cyp51_RNA
+#position:Cyp51:19.5,1422.7704527418823
+$Cyp51:Cyp51_RNA
+Cyp51_RNA -> Cyp51
+#position:HMG_CoA_Synthase_gene:308.03109634330133,1187.269549796836
+$HMG_CoA_Synthase_gene:mSREBP
+mSREBP -> HMG_CoA_Synthase_gene
+#position:HMG_CoA_Synthase_RNA:315.1377175110509,861.5294004727432
+$HMG_CoA_Synthase_RNA:HMG_CoA_Synthase_gene
+HMG_CoA_Synthase_gene -> HMG_CoA_Synthase_RNA
+#position:Statins:457.56791098074694,741.4989292597887
+$Statins:Statins
+Statins -> Statins
+#position:Acetyl_CoA_acetyltransferase_RNA:64.72008269464828,748.6849449715004
+$Acetyl_CoA_acetyltransferase_RNA:Acetyl_CoA_acetyltransferase_gene
+Acetyl_CoA_acetyltransferase_gene -> Acetyl_CoA_acetyltransferase_RNA
+#position:Cholesterol:717.7592720307301,1064.4924752476538
+$Cholesterol:(Desmosterol | Septdehydrocholesterol)
+Desmosterol -> Cholesterol
+Septdehydrocholesterol -> Cholesterol
+#position:Insig_SREBP_SCAP:595.1176068213787,1032.22950547532
+$Insig_SREBP_SCAP:!Cholesterol
+Cholesterol -| Insig_SREBP_SCAP
+#position:HMG_CoA_Synthase:247.52100981968485,546.8592887017288
+$HMG_CoA_Synthase:HMG_CoA_Synthase_RNA
+HMG_CoA_Synthase_RNA -> HMG_CoA_Synthase
+#position:SREBP_SCAP:479.70054087188146,955.7991672120119
+$SREBP_SCAP:(Insig_SREBP_SCAP & !Statins)
+Insig_SREBP_SCAP -> SREBP_SCAP
+Statins -| SREBP_SCAP
+#position:Cyp51_gene:181.02920584263637,1181.105347885545
+$Cyp51_gene:mSREBP
+mSREBP -> Cyp51_gene
+#position:pSREBP:386.94400261564965,1072.0211342703915
+$pSREBP:SREBP_SCAP
+SREBP_SCAP -> pSREBP
+#position:Desmosterol:766.0863387860489,894.4424772094762
+$Desmosterol:Lanosterol
+Lanosterol -> Desmosterol
+#position:Septdehydrocholesterol:831.8290034731425,1114.7758768057074
+$Septdehydrocholesterol:Lanosterol
+Lanosterol -> Septdehydrocholesterol
+#position:Lanosterol:874.8219259552865,896.6111113091448
+$Lanosterol:Squaline
+Squaline -> Lanosterol
+#position:Acetyl_CoA_acetyltransferase_gene:148.30945683823967,890.119245588522
+$Acetyl_CoA_acetyltransferase_gene:mSREBP
+mSREBP -> Acetyl_CoA_acetyltransferase_gene
+#position:FPP_Synthase_RNA:535.8662845937424,768.5912107629182
+$FPP_Synthase_RNA:FPP_Synthase_gene
+FPP_Synthase_gene -> FPP_Synthase_RNA
+#position:FPP_Synthase:648.6474777604992,693.9979531256333
+$FPP_Synthase:FPP_Synthase_RNA
+FPP_Synthase_RNA -> FPP_Synthase
+#position:HMG_CoA:259.2965453307711,330.9394868406569
+$HMG_CoA:(Acetoacetyl_CoA & (Acetyl_CoA & HMG_CoA_Synthase))
+Acetyl_CoA -> HMG_CoA
+Acetoacetyl_CoA -> HMG_CoA
+HMG_CoA_Synthase -> HMG_CoA
+#position:Mevalonic_Acid:384.6646218890811,305.02061654537965
+$Mevalonic_Acid:(HMG_CoA & HMG_CoA_Reductase)
+HMG_CoA -> Mevalonic_Acid
+HMG_CoA_Reductase -> Mevalonic_Acid
+#position:HMG_CoA_Reductase:427.4504707366611,541.7476724305545
+$HMG_CoA_Reductase:(HMG_CoA_Reductase_RNA & !Statins)
+HMG_CoA_Reductase_RNA -> HMG_CoA_Reductase
+Statins -| HMG_CoA_Reductase
+#position:FPP_Synthase_gene:395.3450926234067,877.6928070341392
+$FPP_Synthase_gene:mSREBP
+mSREBP -> FPP_Synthase_gene
+#position:HMG_CoA_Reductase_RNA:326.9782522372608,582.9786598496958
+$HMG_CoA_Reductase_RNA:HMG_CoA_Reductase_gene
+HMG_CoA_Reductase_gene -> HMG_CoA_Reductase_RNA
+#position:Squaline:855.6848821746368,737.930893606541
+$Squaline:Farnesyl_pyrophosphate
+Farnesyl_pyrophosphate -> Squaline
+#position:Farnesyl_pyrophosphate:759.4014754017105,628.2931748698379
+$Farnesyl_pyrophosphate:(Geranyl_pyrophosphate & !FPP_Synthase)
+Geranyl_pyrophosphate -> Farnesyl_pyrophosphate
+FPP_Synthase -| Farnesyl_pyrophosphate

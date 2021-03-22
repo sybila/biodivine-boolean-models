@@ -1,0 +1,122 @@
+sa160_Nsp3_____rna -> Nsp3
+Nsp3 -> Nsp3_Nsp4_Nsp6_complex
+Nsp6 -> Nsp3_Nsp4_Nsp6_complex
+Nsp4 -> Nsp3_Nsp4_Nsp6_complex
+sa47_Nsp6_____rna -> Nsp6
+sa3_Nsp4_____rna -> Nsp4
+Nsp4 -> csa15_Nsp4_ALG11_complex_ER
+sa14_ALG11_ER -> csa15_Nsp4_ALG11_complex_ER
+Nsp4 -> csa2_Nsp4_IDE_complex_cytoplasm
+sa8_IDE_cytoplasm -> csa2_Nsp4_IDE_complex_cytoplasm
+csa2_Nsp4_IDE_complex_cytoplasm -> Nsp4_IDE_complex
+Nsp4 -> Nsp4_DNAJC11_complex
+DNAJC11 -> Nsp4_DNAJC11_complex
+Nsp6 -> F_ATPase_Nsp6_complex
+F_ATPase_complex -> F_ATPase_Nsp6_complex
+Nsp4 -> Nsp4_NUP210_complex_ER
+NUP210_ER -> Nsp4_NUP210_complex_ER
+Nsp4_NUP210_complex_ER -> Nsp4_NUP210_complex_nucleus
+Several_drugs_drug -> SIGMAR1_Drugs_complex
+SIGMAR1_ER -> SIGMAR1_Drugs_complex
+Nsp6 -> Nsp6_SIGMAR1_complex_ER
+SIGMAR1_ER -> Nsp6_SIGMAR1_complex_ER
+Nsp6_SIGMAR1_complex_ER -> Nsp6_SIGMAR1_complex_nucleus
+Nsp6 -> V_ATPase_Nsp6_complex_ER
+V_ATPase_complex_ER -> V_ATPase_Nsp6_complex_ER
+V_ATPase_Nsp6_complex_ER -> V_ATPase_Nsp6_complex_endosome
+Nsp4 -> TIM_complex_Nsp4_complex
+TOM_complex_complex -> TIM_complex_Nsp4_complex
+V_type_space_proton_space_ATPase_complex -> V_ATPase_complex_ER
+ATP6AP1 -> V_ATPase_complex_ER
+NUP210_ER -> NUP210_Selinexor_complex
+Selinexor_drug -> NUP210_Selinexor_complex
+Nsp6 -> P_ATPase_Nsp6_complex
+P_ATPase_complex -> P_ATPase_Nsp6_complex
+csa2_Nsp4_IDE_complex_cytoplasm -> csa4_Nsp4_IDE_complex_cytoplasm
+Nsp6 -> SLC6A15_Nsp6_complex
+SLC6A15 -> SLC6A15_Nsp6_complex
+SLC6A15 -> SLC6A15_Orf9c_complex
+Orf9c -> SLC6A15_Orf9c_complex
+SLC6A15 -> SLC6A15_M_complex
+M -> SLC6A15_M_complex
+SLC6A15 -> SLC6A15_Loratadine_complex
+Loratadine_drug -> SLC6A15_Loratadine_complex
+V_ATPase_complex_ER -> V_ATPase_complex_endosome
+ATP6AP1 -> ATP6AP1_Bafilomycin_A1_complex
+Bafilomycin_A1_drug -> ATP6AP1_Bafilomycin_A1_complex
+Nsp6_SIGMAR1_complex_ER -> Nsp6_SIGMAR1_complex_cytoplasm
+csa15_Nsp4_ALG11_complex_ER -> csa93_Nsp4_ALG11_complex_ER
+sa3_Nsp4_____rna -> sa220_Nsp4_____rna
+sa220_Nsp4_____rna -> sa3_Nsp4_____rna
+sa47_Nsp6_____rna -> sa218_Nsp6_____rna
+sa218_Nsp6_____rna -> sa47_Nsp6_____rna
+sa8_IDE_cytoplasm -> IDE_default_compartment
+sa160_Nsp3_____rna -> sa219_Nsp3_____rna
+sa219_Nsp3_____rna -> sa160_Nsp3_____rna
+Nsp3_Nsp4_Nsp6_complex -> Plasma_membrane_organization_phenotype
+NUP210_ER -> NUP210_nucleus
+sa8_IDE_cytoplasm -> sa225_IDE_cytoplasm
+SIGMAR1_ER -> SIGMAR1_nucleus
+SIGMAR1_ER -> SIGMAR1_cytoplasm
+sa14_ALG11_ER -> sa230_ALG11_ER
+V_type_space_proton_space_ATPase_complex -> H__ion
+$ATP6AP1: true
+$ATP6AP1_Bafilomycin_A1_complex: (ATP6AP1 & Bafilomycin_A1_drug)
+$Bafilomycin_A1_drug: true
+$DNAJC11: true
+$F_ATPase_Nsp6_complex: (Nsp6 & F_ATPase_complex)
+$F_ATPase_complex: true
+$H__ion: V_type_space_proton_space_ATPase_complex
+$IDE_default_compartment: sa8_IDE_cytoplasm
+$Loratadine_drug: true
+$M: true
+$NUP210_ER: true
+$NUP210_Selinexor_complex: (NUP210_ER & Selinexor_drug)
+$NUP210_nucleus: NUP210_ER
+$Nsp3: sa160_Nsp3_____rna
+$Nsp3_Nsp4_Nsp6_complex: ((Nsp3 & Nsp6) & Nsp4)
+$Nsp4: sa3_Nsp4_____rna
+$Nsp4_DNAJC11_complex: (Nsp4 & DNAJC11)
+$Nsp4_IDE_complex: csa2_Nsp4_IDE_complex_cytoplasm
+$Nsp4_NUP210_complex_ER: (Nsp4 & NUP210_ER)
+$Nsp4_NUP210_complex_nucleus: Nsp4_NUP210_complex_ER
+$Nsp6: sa47_Nsp6_____rna
+$Nsp6_SIGMAR1_complex_ER: (Nsp6 & SIGMAR1_ER)
+$Nsp6_SIGMAR1_complex_cytoplasm: Nsp6_SIGMAR1_complex_ER
+$Nsp6_SIGMAR1_complex_nucleus: Nsp6_SIGMAR1_complex_ER
+$Orf9c: true
+$P_ATPase_Nsp6_complex: (Nsp6 & P_ATPase_complex)
+$P_ATPase_complex: true
+$Plasma_membrane_organization_phenotype: Nsp3_Nsp4_Nsp6_complex
+$SIGMAR1_Drugs_complex: (Several_drugs_drug & SIGMAR1_ER)
+$SIGMAR1_ER: true
+$SIGMAR1_cytoplasm: SIGMAR1_ER
+$SIGMAR1_nucleus: SIGMAR1_ER
+$SLC6A15: true
+$SLC6A15_Loratadine_complex: (SLC6A15 & Loratadine_drug)
+$SLC6A15_M_complex: (SLC6A15 & M)
+$SLC6A15_Nsp6_complex: (Nsp6 & SLC6A15)
+$SLC6A15_Orf9c_complex: (SLC6A15 & Orf9c)
+$Selinexor_drug: true
+$Several_drugs_drug: true
+$TIM_complex_Nsp4_complex: (Nsp4 & TOM_complex_complex)
+$TOM_complex_complex: true
+$V_ATPase_Nsp6_complex_ER: (Nsp6 & V_ATPase_complex_ER)
+$V_ATPase_Nsp6_complex_endosome: V_ATPase_Nsp6_complex_ER
+$V_ATPase_complex_ER: (V_type_space_proton_space_ATPase_complex & ATP6AP1)
+$V_ATPase_complex_endosome: V_ATPase_complex_ER
+$V_type_space_proton_space_ATPase_complex: true
+$csa15_Nsp4_ALG11_complex_ER: (Nsp4 & sa14_ALG11_ER)
+$csa2_Nsp4_IDE_complex_cytoplasm: (Nsp4 & sa8_IDE_cytoplasm)
+$csa4_Nsp4_IDE_complex_cytoplasm: csa2_Nsp4_IDE_complex_cytoplasm
+$csa93_Nsp4_ALG11_complex_ER: csa15_Nsp4_ALG11_complex_ER
+$sa14_ALG11_ER: true
+$sa160_Nsp3_____rna: sa219_Nsp3_____rna
+$sa218_Nsp6_____rna: sa47_Nsp6_____rna
+$sa219_Nsp3_____rna: sa160_Nsp3_____rna
+$sa220_Nsp4_____rna: sa3_Nsp4_____rna
+$sa225_IDE_cytoplasm: sa8_IDE_cytoplasm
+$sa230_ALG11_ER: sa14_ALG11_ER
+$sa3_Nsp4_____rna: sa220_Nsp4_____rna
+$sa47_Nsp6_____rna: sa218_Nsp6_____rna
+$sa8_IDE_cytoplasm: true

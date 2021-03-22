@@ -1,0 +1,994 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" metaid="f180aa52-d5c4-4a2b-84f7-78a736947038" qual:required="true" version="1" xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+  <model id="MODEL1606020000" metaid="_50fa164e-ec44-4d5d-8f7a-cfd7afdbede8" name="Sanchez2017 -  Inflammatory responses during acute hyperinsulinemia">
+    <notes>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+    <div class="dc:title">Sanchez2017 -  Inflammatory responses during acute hyperinsulinemia</div>
+<div class="dc:description">
+  <p style="font-size: 12px; margin-left: -1em; padding-bottom: 4px; color: rgb(0, 0, 0); font-family: helvetica, 'trebuchet MS', arial, sans-serif;">
+    <br/>
+  </p>
+</div>
+<div class="dc:bibliographicCitation">
+  <p>This model is described in the article:</p>
+  <div class="bibo:title">
+    <a href="http://identifiers.org/doi/10.1186/s12918-017-0436-y" title="Access to this publication">The CD4+ T cell regulatory
+    network mediates inflammatory responses during acute
+    hyperinsulinemia: a simulation study</a>
+  </div>
+  <div class="bibo:authorList">Mariana E. Martinez-Sanchez, Marcia
+  Hiriart, Elena R. Alvarez-Buylla</div>
+  <div class="bibo:Journal">BMC Systems Biology</div>
+  <p>Abstract:</p>
+  <div class="bibo:abstract">
+    <p>Obesity is frequently linked to insulin resistance, high
+    insulin levels, chronic inflammation, and alterations in the
+    behaviour of CD4+ T cells. Despite the biomedical importance of
+    this condition, the system-level mechanisms that alter CD4+ T
+    cell differentiation and plasticity are not well understood. We
+    model how hyperinsulinemia alters the dynamics of the CD4+ T
+    regulatory network, and this, in turn, modulates cell
+    differentiation and plasticity. Different polarizing
+    microenvironments are simulated under basal and high levels of
+    insulin to assess impacts on cell-fate attainment and
+    robustness in response to transient perturbations. In the
+    presence of high levels of insulin Th1 and Th17 become more
+    stable to transient perturbations, and their basin sizes are
+    augmented, Tr1 cells become less stable or disappear, while
+    TGF? producing cells remain unaltered. Hence, the model
+    provides a dynamic system-level framework and explanation to
+    further understand the documented and apparently paradoxical
+    role of TGF? in both inflammation and regulation of immune
+    responses, as well as the emergence of the adipose Treg
+    phenotype. Furthermore, our simulations provide new predictions
+    on the impact of the microenvironment in the coexistence of the
+    different cell types, suggesting that in pro-Th1, pro-Th2 and
+    pro-Th17 environments effector and regulatory cells can
+    coexist, but that high levels of insulin severely diminish
+    regulatory cells, especially in a pro-Th17 environment. This
+    work provides a first step towards a system-level formal and
+    dynamic framework to integrate further experimental data in the
+    study of complex inflammatory diseases.</p>
+  </div>
+</div>
+<div class="dc:publisher">
+  <p>This model is hosted on 
+  <a href="http://www.ebi.ac.uk/biomodels/">BioModels Database</a>
+  and identified by: 
+  <a href="http://identifiers.org/biomodels.db/MODEL1606020000">MODEL1606020000</a>.</p>
+  <p>To cite BioModels Database, please use: 
+  <a href="http://identifiers.org/pubmed/20587024" title="Latest BioModels Database publication">BioModels Database:
+  An enhanced, curated and annotated resource for published
+  quantitative kinetic models</a>.</p>
+</div>
+<div class="dc:license">
+  <p>To the extent possible under law, all copyright and related or
+  neighbouring rights to this encoded model have been dedicated to
+  the public domain worldwide. Please refer to 
+  <a href="http://creativecommons.org/publicdomain/zero/1.0/" title="Access to: CC0 1.0 Universal (CC0 1.0), Public Domain Dedication">CC0
+  Public Domain Dedication</a> for more information.</p>
+</div>
+</body>
+    </notes>
+    <qual:listOfQualitativeSpecies xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:qualitativeSpecies metaid="_44b18926-7501-42c6-ab18-8d2f29571b92" qual:compartment="default" qual:constant="false" qual:id="TBET" qual:maxLevel="1" qual:name="TBET"/>
+      <qual:qualitativeSpecies metaid="_39ee14e4-4ba7-40d1-8b91-5cb1675b51d7" qual:compartment="default" qual:constant="false" qual:id="IFNG" qual:maxLevel="1" qual:name="IFNG"/>
+      <qual:qualitativeSpecies metaid="_3342e0d4-17eb-4799-b01a-e52a4f265a53" qual:compartment="default" qual:constant="false" qual:id="GATA3" qual:maxLevel="1" qual:name="GATA3"/>
+      <qual:qualitativeSpecies metaid="d8ca3b8f-3f8e-45c7-946d-ffb533a01e61" qual:compartment="default" qual:constant="false" qual:id="IL2" qual:maxLevel="1" qual:name="IL2"/>
+      <qual:qualitativeSpecies metaid="c6121688-aa00-434c-9811-a8657fd2d533" qual:compartment="default" qual:constant="false" qual:id="IL4" qual:maxLevel="1" qual:name="IL4"/>
+      <qual:qualitativeSpecies metaid="d452c9dd-a605-4b0b-b6f2-8b3de82cee11" qual:compartment="default" qual:constant="false" qual:id="RORGT" qual:maxLevel="1" qual:name="RORGT"/>
+      <qual:qualitativeSpecies metaid="_19d5bafa-6ded-4eb0-9799-a60b04d19162" qual:compartment="default" qual:constant="false" qual:id="IL21" qual:maxLevel="1" qual:name="IL21"/>
+      <qual:qualitativeSpecies metaid="e0eace00-b03a-4eef-8159-650b1be6334d" qual:compartment="default" qual:constant="false" qual:id="FOXP3" qual:maxLevel="1" qual:name="FOXP3"/>
+      <qual:qualitativeSpecies metaid="_066bdc72-dbd2-4810-be19-f89d8db03b86" qual:compartment="default" qual:constant="false" qual:id="TGFB" qual:maxLevel="1" qual:name="TGFB"/>
+      <qual:qualitativeSpecies metaid="_9331bf41-df91-479f-88a0-aa0e6d2667b5" qual:compartment="default" qual:constant="false" qual:id="IL10" qual:maxLevel="1" qual:name="IL10"/>
+      <qual:qualitativeSpecies metaid="_4dec72f6-6d83-4a05-b7e4-853ec8a8c8b3" qual:compartment="default" qual:constant="false" qual:id="IL12e" qual:maxLevel="1" qual:name="IL12e"/>
+      <qual:qualitativeSpecies metaid="_509f349e-5f20-453b-87c2-afe43ce77a7d" qual:compartment="default" qual:constant="false" qual:id="IFNGe" qual:maxLevel="1" qual:name="IFNGe"/>
+      <qual:qualitativeSpecies metaid="a3c48726-0224-48be-a630-910baa400ade" qual:compartment="default" qual:constant="false" qual:id="IL2e" qual:maxLevel="1" qual:name="IL2e"/>
+      <qual:qualitativeSpecies metaid="_88746fb3-db3c-4b99-acb2-e30a6683fdfe" qual:compartment="default" qual:constant="false" qual:id="IL4e" qual:maxLevel="1" qual:name="IL4e"/>
+      <qual:qualitativeSpecies metaid="_63800d82-94f4-488b-84b6-5018970fce1b" qual:compartment="default" qual:constant="false" qual:id="IL21e" qual:maxLevel="1" qual:name="IL21e"/>
+      <qual:qualitativeSpecies metaid="_5eecf5e7-6b68-40db-ae83-22f11079967f" qual:compartment="default" qual:constant="false" qual:id="TGFBe" qual:maxLevel="1" qual:name="TGFBe"/>
+      <qual:qualitativeSpecies metaid="_77587d1c-f60e-46e2-9ce4-f7b3560202c2" qual:compartment="default" qual:constant="false" qual:id="IL10e" qual:maxLevel="1" qual:name="IL10e"/>
+      <qual:qualitativeSpecies metaid="a7d5ae04-e6ec-428e-a515-ebed2c0bf2e1" qual:compartment="default" qual:constant="false" qual:id="IL27e" qual:maxLevel="1" qual:name="IL27e"/>
+      <qual:qualitativeSpecies metaid="_6ae9056f-96b9-4e02-a774-f6166c8c7e86" qual:compartment="default" qual:constant="false" qual:id="INSULIN" qual:maxLevel="1" qual:name="INSULIN"/>
+    </qual:listOfQualitativeSpecies>
+    <qual:listOfTransitions xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:transition metaid="c109fb3d-7823-40b3-9b93-5723654d7dc5" qual:id="tr_TBET" qual:name="Interactions targeting TBET">
+        <qual:listOfInputs>
+          <qual:input metaid="_14ffb52b-635b-40b6-b4c7-8871b1a9e9ad" qual:qualitativeSpecies="TBET" qual:transitionEffect="none"/>
+          <qual:input metaid="_5e632c9a-c4cc-4991-9cdd-f5a6cef32392" qual:qualitativeSpecies="IFNG" qual:transitionEffect="none"/>
+          <qual:input metaid="_9b3ba5ca-1aa3-465c-9521-57bb229fbacf" qual:qualitativeSpecies="GATA3" qual:transitionEffect="none"/>
+          <qual:input metaid="_784519d6-7fa3-43ab-ac1a-2f7bd425e48a" qual:qualitativeSpecies="IL4" qual:transitionEffect="none"/>
+          <qual:input metaid="dec0c80c-8e8d-4f1d-a6e6-d1eec1fc9584" qual:qualitativeSpecies="IL21" qual:transitionEffect="none"/>
+          <qual:input metaid="ad1c5757-5d6a-4375-880e-d38280f97d74" qual:qualitativeSpecies="IL10" qual:transitionEffect="none"/>
+          <qual:input metaid="_35bd46e9-e7af-4790-ae62-5fd045831a41" qual:qualitativeSpecies="IL12e" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="a078124a-ef88-4ae3-acef-f2be072aa2a6" qual:qualitativeSpecies="TBET" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="a88ebe0e-9abc-4f36-9494-deb136863d69" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <or/>
+                  <apply>
+                    <or/>
+                    <apply>
+                      <eq/>
+                      <ci> IFNG </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <and/>
+                      <apply>
+                        <eq/>
+                        <ci> IL12e </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                      <apply>
+                        <not/>
+                        <apply>
+                          <or/>
+                          <apply>
+                            <eq/>
+                            <ci> IL21 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                          <apply>
+                            <eq/>
+                            <ci> IL4 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                          <apply>
+                            <eq/>
+                            <ci> IL10 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> TBET </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <not/>
+                  <apply>
+                    <or/>
+                    <apply>
+                      <eq/>
+                      <ci> IL4 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> GATA3 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> IL21 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_0c13ea69-6e96-45c5-b62c-e28852717428" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="d688c613-24a2-4356-a18e-1daede34d781" qual:id="tr_IFNG" qual:name="Interactions targeting IFNG">
+        <qual:listOfInputs>
+          <qual:input metaid="aa4e8f8b-d4d8-4eeb-979a-6fa16b389394" qual:qualitativeSpecies="TBET" qual:transitionEffect="none"/>
+          <qual:input metaid="_1d2ce582-2de9-4015-8600-c81c6496ae57" qual:qualitativeSpecies="IFNG" qual:transitionEffect="none"/>
+          <qual:input metaid="_3bb5cca7-71e8-448e-98df-847e7e10a212" qual:qualitativeSpecies="GATA3" qual:transitionEffect="none"/>
+          <qual:input metaid="b598b1cd-62a8-43d3-9b25-385428eb0d99" qual:qualitativeSpecies="IL4" qual:transitionEffect="none"/>
+          <qual:input metaid="e6b0b832-3e52-4982-a77a-796a149b60da" qual:qualitativeSpecies="IL21" qual:transitionEffect="none"/>
+          <qual:input metaid="bc1d2081-33e6-435b-83e3-38cc217ada66" qual:qualitativeSpecies="TGFB" qual:transitionEffect="none"/>
+          <qual:input metaid="_688213b6-5700-45ed-900c-3dc3f152430e" qual:qualitativeSpecies="IL10" qual:transitionEffect="none"/>
+          <qual:input metaid="_2498be8c-860b-4827-9842-db8ccf8c443c" qual:qualitativeSpecies="IFNGe" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="ca5476cc-7f4f-4a9d-81b6-9385a803a266" qual:qualitativeSpecies="IFNG" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="d85058af-7984-4f29-a1fa-5b3503506984" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <or/>
+                  <apply>
+                    <eq/>
+                    <ci> IFNGe </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <or/>
+                      <apply>
+                        <eq/>
+                        <ci> IFNG </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                      <apply>
+                        <eq/>
+                        <ci> TBET </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <not/>
+                      <apply>
+                        <or/>
+                        <apply>
+                          <eq/>
+                          <ci> GATA3 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci> TGFB </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <not/>
+                  <apply>
+                    <or/>
+                    <apply>
+                      <eq/>
+                      <ci> IL21 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> IL4 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> IL10 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_2848bb8e-4387-4102-b8cd-af798c7c6356" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_4a8e9eb6-10ec-4a1c-b9fd-f61585e18195" qual:id="tr_GATA3" qual:name="Interactions targeting GATA3">
+        <qual:listOfInputs>
+          <qual:input metaid="_5803a965-0f68-49ae-81f3-92e60ce7f562" qual:qualitativeSpecies="TBET" qual:transitionEffect="none"/>
+          <qual:input metaid="bd499a4b-c1f9-4d86-88fa-c6baa7f948eb" qual:qualitativeSpecies="IFNG" qual:transitionEffect="none"/>
+          <qual:input metaid="_60dc54db-07ec-45f0-bcb5-dd851a00ce30" qual:qualitativeSpecies="GATA3" qual:transitionEffect="none"/>
+          <qual:input metaid="_4f2f6869-0dce-4d3b-a7a2-9a4f47b42bf1" qual:qualitativeSpecies="IL2" qual:transitionEffect="none"/>
+          <qual:input metaid="c41c4952-22dc-435b-aed9-d27d5c9519f9" qual:qualitativeSpecies="IL4" qual:transitionEffect="none"/>
+          <qual:input metaid="b805ee7e-e963-4b59-aecb-a29138ad6e4c" qual:qualitativeSpecies="IL21" qual:transitionEffect="none"/>
+          <qual:input metaid="_68e54ec3-fac9-4479-acd1-d2b148f9d1f6" qual:qualitativeSpecies="TGFB" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="e686dd3f-fab9-4a73-8d5d-0e27707f483d" qual:qualitativeSpecies="GATA3" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="_82eed90a-4002-4523-a85c-38344b2dfd9f" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <or/>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci> IL2 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> IL4 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> GATA3 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <not/>
+                  <apply>
+                    <or/>
+                    <apply>
+                      <eq/>
+                      <ci> TBET </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> TGFB </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> IL21 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> IFNG </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="ffc50e6b-b380-43a1-b12a-a446bf174bc1" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="e44d15cd-0989-470b-83dc-489a5f6919fd" qual:id="tr_IL2" qual:name="Interactions targeting IL2">
+        <qual:listOfInputs>
+          <qual:input metaid="_0462fe0b-7e9d-4416-a818-edf96fefb09a" qual:qualitativeSpecies="IFNG" qual:transitionEffect="none"/>
+          <qual:input metaid="_32b4ec2b-8bb1-404f-8e39-869606ede353" qual:qualitativeSpecies="IL2" qual:transitionEffect="none"/>
+          <qual:input metaid="_5a40cff1-895c-4d2a-a781-eac696ee2eed" qual:qualitativeSpecies="IL21" qual:transitionEffect="none"/>
+          <qual:input metaid="_5089f251-ce96-428f-a45a-a93143260c9f" qual:qualitativeSpecies="FOXP3" qual:transitionEffect="none"/>
+          <qual:input metaid="_9ce2b047-da48-4b0e-ae94-558a5dee9b4d" qual:qualitativeSpecies="IL10" qual:transitionEffect="none"/>
+          <qual:input metaid="_7f341e69-cb2b-48a9-a8ad-8e116b2436a5" qual:qualitativeSpecies="IL2e" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="b51e2066-35b5-4c6f-b469-cc92980d0b4d" qual:qualitativeSpecies="IL2" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="_9b609fd3-2cda-4a78-b052-1645a16c25ba" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <or/>
+                  <apply>
+                    <eq/>
+                    <ci> IL2e </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci> IL2 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> FOXP3 </ci>
+                      <cn type="integer"> 0 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <not/>
+                  <apply>
+                    <or/>
+                    <apply>
+                      <eq/>
+                      <ci> IFNG </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> IL21 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <and/>
+                      <apply>
+                        <eq/>
+                        <ci> IL10 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                      <apply>
+                        <eq/>
+                        <ci> FOXP3 </ci>
+                        <cn type="integer"> 0 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_3f4b70f3-8299-4b11-b865-550f169f5fb2" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="d491a415-c348-4e3a-8f8a-d0ef756f6176" qual:id="tr_IL4" qual:name="Interactions targeting IL4">
+        <qual:listOfInputs>
+          <qual:input metaid="_98d688f9-1110-4995-b676-88fc9c72825b" qual:qualitativeSpecies="TBET" qual:transitionEffect="none"/>
+          <qual:input metaid="e513d52b-ed4d-441a-aa3b-4f2afc4f500b" qual:qualitativeSpecies="IFNG" qual:transitionEffect="none"/>
+          <qual:input metaid="_434444a1-82db-4183-9215-893ff2c8be30" qual:qualitativeSpecies="GATA3" qual:transitionEffect="none"/>
+          <qual:input metaid="_18ff544c-df25-43dd-b064-afbd1ceb7c5a" qual:qualitativeSpecies="IL2" qual:transitionEffect="none"/>
+          <qual:input metaid="_8f80a3d0-35e2-40ef-b2f5-0199819ea8b9" qual:qualitativeSpecies="IL4" qual:transitionEffect="none"/>
+          <qual:input metaid="_96b3a909-aac1-42f0-b8c8-dfd564aaf95d" qual:qualitativeSpecies="IL21" qual:transitionEffect="none"/>
+          <qual:input metaid="_7223f4b4-a647-4d97-a698-e14889778855" qual:qualitativeSpecies="IL4e" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="_63fb7887-5cbb-4925-91b9-24b616c2f8d7" qual:qualitativeSpecies="IL4" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="a354b8b3-a43b-4fe4-8737-ff8fd82110cc" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <or/>
+                  <apply>
+                    <eq/>
+                    <ci> IL4e </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci> GATA3 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <or/>
+                      <apply>
+                        <eq/>
+                        <ci> IL2 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                      <apply>
+                        <eq/>
+                        <ci> IL4 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> TBET </ci>
+                      <cn type="integer"> 0 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <not/>
+                  <apply>
+                    <or/>
+                    <apply>
+                      <eq/>
+                      <ci> IFNG </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> IL21 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_6073ba8b-0c9b-40da-9324-a254f53357d6" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_7bcdf3ed-a196-4711-bca6-79151460895c" qual:id="tr_RORGT" qual:name="Interactions targeting RORGT">
+        <qual:listOfInputs>
+          <qual:input metaid="_16cdb7b3-8e3d-441e-b63e-e5674a9807f1" qual:qualitativeSpecies="TBET" qual:transitionEffect="none"/>
+          <qual:input metaid="fe0064ce-54ff-4923-879f-981762a1f9aa" qual:qualitativeSpecies="GATA3" qual:transitionEffect="none"/>
+          <qual:input metaid="b5511a5d-f52d-45ce-adf6-cd6a4c5d04e0" qual:qualitativeSpecies="IL21" qual:transitionEffect="none"/>
+          <qual:input metaid="_192b5a8d-7c83-4e86-945b-91209aca0d33" qual:qualitativeSpecies="FOXP3" qual:transitionEffect="none"/>
+          <qual:input metaid="_6d6cbbc5-4c95-422d-b291-ad0aad46168e" qual:qualitativeSpecies="TGFB" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="f9cdc04d-ae57-4ee7-9596-a53ac8ebc9e8" qual:qualitativeSpecies="RORGT" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="bbf3b92b-fd2a-4f0f-b0b7-68ad8b01ab29" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> IL21 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> TGFB </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <not/>
+                  <apply>
+                    <or/>
+                    <apply>
+                      <eq/>
+                      <ci> TBET </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> FOXP3 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> GATA3 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_7a7f76f0-fcec-4c82-8219-974e27b22dca" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_7521fdbf-19d8-4bdc-ba23-a4c338b33cad" qual:id="tr_IL21" qual:name="Interactions targeting IL21">
+        <qual:listOfInputs>
+          <qual:input metaid="_08a25a2f-882c-4db1-b7ca-72103d9d85a3" qual:qualitativeSpecies="IFNG" qual:transitionEffect="none"/>
+          <qual:input metaid="_7249cb9f-1d4a-48bf-8329-b77809b4648b" qual:qualitativeSpecies="IL2" qual:transitionEffect="none"/>
+          <qual:input metaid="a5b79093-cb78-49ee-b818-392bce362bd8" qual:qualitativeSpecies="IL4" qual:transitionEffect="none"/>
+          <qual:input metaid="a084b79a-97d9-43e6-8a16-6e1e87eeb27d" qual:qualitativeSpecies="RORGT" qual:transitionEffect="none"/>
+          <qual:input metaid="_34a3eabf-f198-476c-8d93-96d152e51ed8" qual:qualitativeSpecies="IL21" qual:transitionEffect="none"/>
+          <qual:input metaid="_249932fb-c509-4ca1-9320-80cb6ea2ce1f" qual:qualitativeSpecies="IL10" qual:transitionEffect="none"/>
+          <qual:input metaid="e1c330e0-7cf6-4c67-8c36-b2bafa0a8e30" qual:qualitativeSpecies="IL21e" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="_67b5099b-fcc4-4a43-afa3-f604223d3521" qual:qualitativeSpecies="IL21" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="_8527e331-7d05-4b8b-b867-514c808f690c" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <or/>
+                  <apply>
+                    <eq/>
+                    <ci> IL21e </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IL21 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> RORGT </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <not/>
+                  <apply>
+                    <or/>
+                    <apply>
+                      <eq/>
+                      <ci> IFNG </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> IL4 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> IL10 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> IL2 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_22ebdb16-9967-46c1-89d9-1a3dceab840b" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_48563568-0cb0-4420-8393-1523b7dc4ed6" qual:id="tr_FOXP3" qual:name="Interactions targeting FOXP3">
+        <qual:listOfInputs>
+          <qual:input metaid="f17cb3b5-597a-41e7-b68d-7fc87ddf728b" qual:qualitativeSpecies="IL2" qual:transitionEffect="none"/>
+          <qual:input metaid="_8dae5623-49df-47b9-88cc-ddd9186f6cdb" qual:qualitativeSpecies="RORGT" qual:transitionEffect="none"/>
+          <qual:input metaid="e0796a95-e84f-4c4e-9dc8-c543f3ace2c0" qual:qualitativeSpecies="IL21" qual:transitionEffect="none"/>
+          <qual:input metaid="_7aaf4385-4b88-4bb5-8ab5-a1afbdf9b5ad" qual:qualitativeSpecies="FOXP3" qual:transitionEffect="none"/>
+          <qual:input metaid="_22f9c5d6-c9f3-4316-97de-79cd34b2f85d" qual:qualitativeSpecies="TGFB" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="_172afab3-6889-4fcf-8ec0-6adfa3c57308" qual:qualitativeSpecies="FOXP3" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="f7269563-8dde-4e44-8c88-5fe346b48594" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> IL2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <or/>
+                    <apply>
+                      <eq/>
+                      <ci> TGFB </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> FOXP3 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <not/>
+                  <apply>
+                    <or/>
+                    <apply>
+                      <eq/>
+                      <ci> IL21 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> RORGT </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="f224ae5a-eae3-478c-a4c0-23595e61ceef" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="d16e624c-c0ce-4910-9eb7-5c86ab217e71" qual:id="tr_TGFB" qual:name="Interactions targeting TGFB">
+        <qual:listOfInputs>
+          <qual:input metaid="_79f37576-fdcb-4bdd-97a9-59f7c10c8421" qual:qualitativeSpecies="IL21" qual:transitionEffect="none"/>
+          <qual:input metaid="_272010e4-dd39-4bdf-a5fe-eca704545795" qual:qualitativeSpecies="FOXP3" qual:transitionEffect="none"/>
+          <qual:input metaid="e9aa2082-a075-4c8d-ad94-272ef5d961f0" qual:qualitativeSpecies="TGFB" qual:transitionEffect="none"/>
+          <qual:input metaid="_3e668852-f99a-452b-a768-41c47dea1a10" qual:qualitativeSpecies="TGFBe" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="_91d078ac-6eec-4438-8beb-5c24f5433954" qual:qualitativeSpecies="TGFB" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="_84435bba-21a7-4f80-93e6-29e39c928e7f" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> TGFBe </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <or/>
+                    <apply>
+                      <eq/>
+                      <ci> TGFB </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> FOXP3 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IL21 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="a8504158-67f6-43fd-83a1-6281031ab004" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="d5807da1-084a-427c-bdba-95fdc8659972" qual:id="tr_IL10" qual:name="Interactions targeting IL10">
+        <qual:listOfInputs>
+          <qual:input metaid="_2039a8c5-27cd-41cc-a735-a039ff0fdb3e" qual:qualitativeSpecies="IFNG" qual:transitionEffect="none"/>
+          <qual:input metaid="a6434d2e-d011-4c1f-9db6-c48ea82a3899" qual:qualitativeSpecies="GATA3" qual:transitionEffect="none"/>
+          <qual:input metaid="_55b51d33-a38e-4604-a597-e9013e7a17cc" qual:qualitativeSpecies="IL21" qual:transitionEffect="none"/>
+          <qual:input metaid="_5827f231-5631-4c9f-993a-09a92f6b9189" qual:qualitativeSpecies="TGFB" qual:transitionEffect="none"/>
+          <qual:input metaid="_559f3118-78df-4cfc-8fbd-e6f1f8045269" qual:qualitativeSpecies="IL10" qual:transitionEffect="none"/>
+          <qual:input metaid="_4119ff0e-f1d9-4a00-ab4b-4416871a0b2f" qual:qualitativeSpecies="IL10e" qual:transitionEffect="none"/>
+          <qual:input metaid="_19be8302-38dc-40df-b735-5ab7ee482f1c" qual:qualitativeSpecies="IL27e" qual:transitionEffect="none"/>
+          <qual:input metaid="_18285f58-6882-49bb-b277-c4a9051633ee" qual:qualitativeSpecies="INSULIN" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="_70e5ab80-9f73-48ec-a3fb-d619e3002670" qual:qualitativeSpecies="IL10" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="_73ebf544-021d-4702-92d4-27fd749c6859" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> IL10e </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> IL10 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <or/>
+                    <apply>
+                      <eq/>
+                      <ci> IFNG </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> IL21 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> TGFB </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> GATA3 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> IL27e </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> INSULIN </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_8749de57-2cb7-4f4d-b4e3-c6eeb4c3702e" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="e82a2e96-6597-45e5-9502-aeb055f9d4d2" qual:id="tr_IL12e" qual:name="Interactions targeting IL12e">
+        <qual:listOfInputs>
+          <qual:input metaid="_0d5e5cdb-3faa-4ab0-9a08-1cbd20d384ed" qual:qualitativeSpecies="IL12e" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="_95cfbbb6-d48b-4416-a224-656e2cd55b3c" qual:qualitativeSpecies="IL12e" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="fa048186-693b-442b-9224-b0496898a2c2" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> IL12e </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_91828cab-5930-4978-b304-8ef9bf4d54c9" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="aaa39b2f-100f-41a0-9a76-2967a23a8272" qual:id="tr_IFNGe" qual:name="Interactions targeting IFNGe">
+        <qual:listOfInputs>
+          <qual:input metaid="_3415ab41-21df-44b9-89c0-55536a8dcb8c" qual:qualitativeSpecies="IFNGe" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="_50a3bcbc-a4e8-4696-a425-052445fecd60" qual:qualitativeSpecies="IFNGe" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="d2bf4118-d061-47bd-ac87-ce901ccaffe1" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> IFNGe </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="dfd40364-3d37-4350-ab95-01798984bc4f" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_81e32787-1205-4a12-bfcf-665edfe6f4a1" qual:id="tr_IL2e" qual:name="Interactions targeting IL2e">
+        <qual:listOfInputs>
+          <qual:input metaid="_0a856264-04e8-4562-a152-c0c7ee4d5058" qual:qualitativeSpecies="IL2e" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="_5b233f92-a3a8-4310-bf6a-efc73ee1f179" qual:qualitativeSpecies="IL2e" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="_80b65a6c-81e6-47c6-aad8-096b641562e3" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> IL2e </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_79c394e2-e0eb-451d-8317-c37ff5a47904" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="a2bb1c3e-704d-4c4d-99a2-aae675a6b960" qual:id="tr_IL4e" qual:name="Interactions targeting IL4e">
+        <qual:listOfInputs>
+          <qual:input metaid="fc7f6244-1710-4f95-ae10-72ee200d79c3" qual:qualitativeSpecies="IL4e" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="_28b1ddf3-e164-4868-95f7-a31afec37aa6" qual:qualitativeSpecies="IL4e" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="_5144e1d5-4542-46d0-a740-b46ab35bfe71" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> IL4e </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_90a0443e-426f-4bc7-93d2-8b1f913c83b5" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_00666e1b-128e-4ebc-af14-f5bf0334f941" qual:id="tr_IL21e" qual:name="Interactions targeting IL21e">
+        <qual:listOfInputs>
+          <qual:input metaid="_31ccc1d7-e79f-4c96-9429-9f9fccfd7ef8" qual:qualitativeSpecies="IL21e" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="f0cea0f5-2178-4837-b0e3-ea2781a95c15" qual:qualitativeSpecies="IL21e" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="_25c9e481-240b-4b6e-a7be-ae99b03da450" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> IL21e </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_859f9159-e19a-4a4a-94e4-d15db47cebe3" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="cc46a8eb-d061-451e-aa63-bf75b4d70592" qual:id="tr_TGFBe" qual:name="Interactions targeting TGFBe">
+        <qual:listOfInputs>
+          <qual:input metaid="_115ef927-4bf0-43e2-8e35-4734b9fc489d" qual:qualitativeSpecies="TGFBe" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="ca1e913f-b1c7-4099-8f5a-e8992769d2fa" qual:qualitativeSpecies="TGFBe" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="_6e46aa98-b9d1-4055-b29f-9ba3e916b17c" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> TGFBe </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="c985e3d9-5e71-44ea-b9b1-e39c58b842bf" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="d47deb04-c789-40fa-a12f-9997013a28b4" qual:id="tr_IL10e" qual:name="Interactions targeting IL10e">
+        <qual:listOfInputs>
+          <qual:input metaid="_1bfeeca2-f749-47d0-9653-c20e96fdcfc7" qual:qualitativeSpecies="IL10e" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="_52344925-06ef-4422-bc37-53d337f1874c" qual:qualitativeSpecies="IL10e" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="bb1eca19-1d3c-4c31-85d4-b7fa3ecaec22" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> IL10e </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_49c8cbf9-d7fb-4940-985a-5e48d890f365" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="cfe45d16-3fb5-4638-9c68-20b1b3997008" qual:id="tr_IL27e" qual:name="Interactions targeting IL27e">
+        <qual:listOfInputs>
+          <qual:input metaid="_44ec34f7-d4c5-4fab-a920-a6815c7901ef" qual:qualitativeSpecies="IL27e" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="_642638ad-ab29-4ca0-958f-57f6f194c132" qual:qualitativeSpecies="IL27e" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="fc99f60e-b09e-4eeb-a883-4da0cd9881b6" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> IL27e </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_1be438da-677d-4b65-add5-03225f309ba8" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_364c0cf4-657b-4f8b-9233-c82634112100" qual:id="tr_INSULIN" qual:name="Interactions targeting INSULIN">
+        <qual:listOfInputs>
+          <qual:input metaid="_937b5e31-55fd-47db-8d89-1b18d01a8d21" qual:qualitativeSpecies="INSULIN" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="_71ee7923-a898-49f1-be82-8bb9aad9a75f" qual:qualitativeSpecies="INSULIN" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="_7f7aaa9e-9b4e-4c13-927f-557e21cd847b" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> INSULIN </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="de83b5a5-2c5b-4743-aa61-2981423ba622" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+    </qual:listOfTransitions>
+    <listOfCompartments>
+      <compartment constant="true" id="default" metaid="_32ae2d47-d9de-485c-b30e-8d1862ed0710"/>
+    </listOfCompartments>
+  </model>
+</sbml>

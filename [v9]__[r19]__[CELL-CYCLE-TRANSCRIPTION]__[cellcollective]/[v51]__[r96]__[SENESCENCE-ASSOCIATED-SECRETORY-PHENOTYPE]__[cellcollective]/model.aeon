@@ -1,0 +1,147 @@
+Hypoxia -> HIF1
+p53 -| HIF1
+MDM2 -| p53
+CHK1 -> p53
+ATM -> p53
+CHK2 -> p53
+MKP1 -| JNK
+MKK -> JNK
+JNK -> cJun
+p38 -> cJun
+CEBPbeta -> cJun
+ERK1_2 -> cJun
+cFos -> cJun
+MKP1 -| p38
+MKK -> p38
+Elk1 -> CEBPbeta
+IL6 -> ERK1_2
+MEK1_2 -> ERK1_2
+JNK -> cFos
+p38 -> cFos
+Elk1 -> cFos
+CEBPbeta -> cFos
+STAT3 -> cFos
+TRAF6 -> MEKK
+MEKK -> MKK
+TAK1 -> MKK
+TAB -> TAK1
+TRAF6 -> TAK1
+pRB -> E2F
+E2F -> E2F
+RB_ -| E2F
+E2F -> CDK2
+p21 -| CDK2
+HIF1 -> p21
+p53 -> p21
+IL6R -> JAK
+SOCS3 -| JAK
+JAK -> STAT3
+cJun -> STAT3
+mTOR -> STAT3
+cFos -> STAT3
+Akt -> mTOR
+NFkB -> IL1
+IL1 -> IL1R
+DNAD -> ATM
+DNAD -> p16INK4
+Oncogene -> p16INK4
+IL6 -> Oncogene
+IL8 -> Oncogene
+NFkB -> IL6
+CEBPbeta -> IL6
+ERK1_2 -> IL6
+IL6 -> GP130
+cJun -> AP1
+cFos -> AP1
+NFkB -> IkB
+IkB -> IkB
+NEMO -| IkB
+IKK -| IkB
+IkB -| NFkB
+IKK -> NFkB
+NIK -> IKK
+NEMO -> IKK
+Akt -> IKK
+DNAD -> ATR
+ERK1_2 -> Elk1
+IRAK -> TAB
+TRAF6 -> TAB
+IRAK -> TRAF6
+p53 -> MDM2
+ATM -| MDM2
+ATR -> CHK1
+ATM -> CHK2
+TAK1 -> NIK
+DNAD -> NEMO
+PI3K -> Akt
+GP130 -> MEK1_2
+IL6 -> MEK1_2
+IL6 -> IL6R
+STAT3 -> SOCS3
+p16INK4 -| CDK4
+p21 -| CDK4
+IL1R -> MyD88
+MyD88 -> IRAK
+IRAK -> IRAK
+IL1R -> IRAK
+CDK2 -> pRB
+CDK4 -> pRB
+NFkB -> IL8
+AP1 -> IL8
+CEBPbeta -> IL8
+JAK -> PI3K
+pRB -| RB_
+CDK2 -| RB_
+CDK4 -| RB_
+AP1 -> MKP1
+$AP1: (cJun & cFos)
+$ATM: DNAD
+$ATR: DNAD
+$Akt: PI3K
+$CDK2: (E2F & !p21)
+$CDK4: !(p21 | p16INK4)
+$CEBPbeta: Elk1
+$CHK1: ATR
+$CHK2: ATM
+$DNAD: true
+$E2F: ((pRB & !RB_) | (E2F & !RB_))
+$ERK1_2: (MEK1_2 & IL6)
+$Elk1: ERK1_2
+$GP130: IL6
+$HIF1: (Hypoxia & !p53)
+$Hypoxia: true
+$IKK: ((Akt | NEMO) | NIK)
+$IL1: NFkB
+$IL1R: IL1
+$IL6: ((NFkB | ERK1_2) | CEBPbeta)
+$IL6R: IL6
+$IL8: ((AP1 | CEBPbeta) | NFkB)
+$IRAK: ((MyD88 | IRAK) | IL1R)
+$IkB: ((NFkB & !(IKK & NEMO)) | (IkB & !(IKK & NEMO)))
+$JAK: (IL6R & !SOCS3)
+$JNK: (MKK & !MKP1)
+$MDM2: (p53 & !ATM)
+$MEK1_2: (GP130 & IL6)
+$MEKK: TRAF6
+$MKK: (TAK1 | MEKK)
+$MKP1: AP1
+$MyD88: IL1R
+$NEMO: DNAD
+$NFkB: (IKK & !IkB)
+$NIK: TAK1
+$Oncogene: (IL6 | IL8)
+$PI3K: JAK
+$RB_: !((CDK2 | pRB) | CDK4)
+$SOCS3: STAT3
+$STAT3: ((JAK | (cFos & cJun)) | mTOR)
+$TAB: (IRAK | TRAF6)
+$TAK1: (TRAF6 | TAB)
+$TRAF6: IRAK
+$cFos: ((((Elk1 | CEBPbeta) | JNK) | p38) | STAT3)
+$cJun: (cFos & (((JNK | p38) | CEBPbeta) | ERK1_2))
+$mTOR: Akt
+$p16INK4: (Oncogene | DNAD)
+$p21: (p53 | HIF1)
+$p38: (MKK & !MKP1)
+$p53: (((CHK1 & !MDM2) | (ATM & !MDM2)) | (CHK2 & !MDM2))
+$pRB: (CDK2 | CDK4)

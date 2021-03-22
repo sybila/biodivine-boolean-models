@@ -1,0 +1,72 @@
+CellDens -| Crc
+CAA -> Crc
+Heat -> RpoH
+CellDens -> IHF
+CellDens -| PtsN
+Glu -> PtsN
+Crc -| Upper
+TurA -| Upper
+PprA -| Upper
+PtsN -| Upper
+IHF -> Upper
+m_xyl -> Upper
+XylR -> Upper
+RpoN -> Upper
+Cold -> TurA
+Cold -> PprA
+Crc -| XylR
+RpoD -> XylR
+ProX -| XylR
+RpoD -> XylS
+Crc -| XylSh
+PtsN -| XylSh
+HU -> XylSh
+m_xyl -> XylSh
+XylR -> XylSh
+RpoN -> XylSh
+CellDens -| ProX
+Glu -> ProX
+Crc -| Meta
+3MBz -> Meta
+m_xyl -> Meta
+Upper -> Meta
+RpoH -> Meta
+RpoD -> Meta
+XylSh -> Meta
+XylS -> Meta
+RpoS -> Meta
+CellDens -> RpoS
+Crc -| Meta2
+3MBz -> Meta2
+m_xyl -> Meta2
+Upper -> Meta2
+RpoH -> Meta2
+RpoD -> Meta2
+XylSh -> Meta2
+XylS -> Meta2
+ProX -| Meta2
+RpoS -> Meta2
+$3MBz: true
+$CAA: true
+$CellDens: true
+$Cold: true
+$Crc: (CAA & !CellDens)
+$Glu: true
+$HU: true
+$Heat: true
+$IHF: CellDens
+$Meta: ((((XylSh & ((RpoH | RpoD) | RpoS)) & !Crc) | ((m_xyl & ((Upper & ((RpoH | RpoD) | RpoS)) & XylS)) & !Crc)) | ((3MBz & (((RpoH | RpoD) | RpoS) & XylS)) & !Crc))
+$Meta2: ((((3MBz & (((RpoH | RpoD) | RpoS) & XylS)) & !(Crc | ProX)) | ((XylSh & ((RpoH | RpoD) | RpoS)) & !(Crc | ProX))) | ((m_xyl & ((((RpoH | RpoD) | RpoS) & XylS) & Upper)) & !(Crc | ProX)))
+$PprA: Cold
+$ProX: (Glu & !CellDens)
+$PtsN: (Glu & !CellDens)
+$RpoD: true
+$RpoH: Heat
+$RpoN: true
+$RpoS: CellDens
+$TurA: Cold
+$Upper: ((m_xyl & ((IHF & XylR) & RpoN)) & !(((PprA | PtsN) | Crc) | TurA))
+$XylR: (RpoD & !(ProX | Crc))
+$XylS: RpoD
+$XylSh: ((m_xyl & ((HU & XylR) & RpoN)) & !(Crc | PtsN))
+$m_xyl: true

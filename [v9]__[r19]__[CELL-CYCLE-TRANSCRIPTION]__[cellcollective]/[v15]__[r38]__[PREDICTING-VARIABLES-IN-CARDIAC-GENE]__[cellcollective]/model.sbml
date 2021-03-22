@@ -1,0 +1,1182 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" qual:required="true" version="1" xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+  <model id="M4706" metaid="_633423eb-6e55-4c25-ac0b-c6ecdd06e36d" name="Predicting Variabilities in Cardiac Gene">
+    <notes>
+      <body xmlns="http://www.w3.org/1999/xhtml">Gene interactions in cells can be represented by gene regulatory networks. A Boolean network models gene interactions according to rules where gene expression is represented by binary values (on / off or {1, 0}). In reality, however, the gene’s state can have multiple values due to biological properties. Furthermore, the noisy nature of the experimental design results in uncertainty about a state of the gene. Here we present a new Boolean network paradigm to allow intermediate values on the interval [0, 1]. As in the Boolean network, fixed points or attractors of such a model correspond to biological phenotypes or states. We use our new extension of the Boolean network paradigm to model gene expression in first and second heart field lineages which are cardiac progenitor cell populations involved in early vertebrate heart development. By this we are able to predict additional biological phenotypes that the Boolean model alone is not able to identify without utilizing additional biological knowledge. The additional phenotypes predicted by the model were confirmed by published biological experiments. Furthermore, the new method predicts gene expression propensities for modelled but yet to be analyzed genes.</body>
+    </notes>
+    <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_633423eb-6e55-4c25-ac0b-c6ecdd06e36d">
+	<dc:creator>
+	<rdf:Bag>
+	<rdf:li rdf:parseType="Resource">
+	<vCard:N rdf:parseType="Resource">
+	<vCard:Family>Crowther</vCard:Family>
+	<vCard:Given>Audrey</vCard:Given>
+	</vCard:N>
+	<vCard:EMAIL>audrey.crowther@huskers.unl.edu</vCard:EMAIL>
+	<vCard:ORG rdf:parseType="Resource">
+	<vCard:Orgname>University of Nebraska-Lincoln</vCard:Orgname>
+	</vCard:ORG>
+	</rdf:li>
+	</rdf:Bag>
+	</dc:creator>
+	<dcterms:created rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-07-21T21:32:19Z</dcterms:W3CDTF>
+	</dcterms:created>
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2017-02-13T13:39:00Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:26207376"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+      <qual:listOfQualitativeSpecies xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:qualitativeSpecies metaid="_27bf996f-73f6-44dc-a313-f37cc4b30e5b" qual:compartment="extracellular" qual:constant="true" qual:id="S_8" qual:name="exogen_BMP2_I">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Bmp2 derived from neighboring tissue</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_27bf996f-73f6-44dc-a313-f37cc4b30e5b">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-03T20:27:14Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="aa40eda5-d2ca-4574-9006-4d39c06b37e9" qual:compartment="cytosol" qual:constant="false" qual:id="S_1" qual:initialLevel="0" qual:maxLevel="1" qual:name="Tbx5">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>T-box transcription factor TBX5</p><p>Gene Name: TBX5</p><p>UniProt ID: Q99593</p><p>Gene ID: 6910</p><p>FHF transcription factor</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#aa40eda5-d2ca-4574-9006-4d39c06b37e9">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2017-02-08T19:11:12Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="ff9f9e46-44eb-42e9-8f21-58db9d0df9f8" qual:compartment="cytosol" qual:constant="false" qual:id="S_2" qual:initialLevel="0" qual:maxLevel="1" qual:name="Mesp1 ">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>This node representsMesp1 and Mesp2.</p><p>Gene Name: MESP1/MESP2</p><p>UniProt ID: Q9BRJ9/Q0VG99</p><p>Mesoderm posterior protein 1/ Mesoderm posterior protein 2</p><p>Gene ID: 55897/145873</p><p>transcription factor</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#ff9f9e46-44eb-42e9-8f21-58db9d0df9f8">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2017-02-13T13:39:00Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_916958ba-a7a1-4750-961f-d7171aa190eb" qual:compartment="cytosol" qual:constant="false" qual:id="S_3" qual:initialLevel="0" qual:maxLevel="1" qual:name="exogen_BMP2_II">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Time delay of Bmp2 derived from neighboring tissue</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_916958ba-a7a1-4750-961f-d7171aa190eb">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2017-02-13T13:39:00Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="f89c4d4f-f683-4db1-bb11-6d6fab4839cb" qual:compartment="cytosol" qual:constant="false" qual:id="S_4" qual:initialLevel="0" qual:maxLevel="1" qual:name="Isl1">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Insulin gene enhancer protein ISL-1</p><p>SHF transcription factor</p><p>Gene Name: ISL1</p><p>UniProt ID: P61371</p><p>Gene ID: 3670</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#f89c4d4f-f683-4db1-bb11-6d6fab4839cb">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-07-22T10:07:55Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="e4932ff6-58d9-4641-b730-e24435610af1" qual:compartment="cytosol" qual:constant="false" qual:id="S_5" qual:initialLevel="0" qual:maxLevel="1" qual:name="Dkk1">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Dickkopf-related protein 1</p><p>Gene Name: DKK1</p><p>UniProt ID: O94907</p><p>Gene ID: 22943</p><p>Signaling factor</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#e4932ff6-58d9-4641-b730-e24435610af1">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2017-02-08T18:17:49Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_8addc64c-b129-486f-a977-4daf502d936a" qual:compartment="cytosol" qual:constant="false" qual:id="S_6" qual:initialLevel="0" qual:maxLevel="1" qual:name="Fgf8">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Fibroblast growth factor 8</p><p>Gene Name: FGF8</p><p>UniProt ID: P55075</p><p>Gene ID: 2253</p><p>SHF transcription factor</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_8addc64c-b129-486f-a977-4daf502d936a">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-03T15:19:40Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_85ee0a4c-3c37-4348-b519-7e6c94f5a150" qual:compartment="cytosol" qual:constant="false" qual:id="S_7" qual:initialLevel="0" qual:maxLevel="1" qual:name="exogen_CanWnt_II">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Time delay of canonical Wnt derived from neighboring tissue</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_85ee0a4c-3c37-4348-b519-7e6c94f5a150">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-07-22T10:25:19Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_373ebd96-cab7-435d-9ea8-119cd6c79d84" qual:compartment="cytosol" qual:constant="false" qual:id="S_9" qual:initialLevel="0" qual:maxLevel="1" qual:name="Foxc1.2">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>This node represents Foxc1 and Foxc2.</p><p>Forkhead box protein C1/ Forkhead box protein C2 SHF transcription factor</p><p>Gene Name: FOXC1/FOXC2</p><p>UniProt ID: Q12948/Q99958</p><p>Gene ID: 2296/2303</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_373ebd96-cab7-435d-9ea8-119cd6c79d84">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-07-22T10:21:04Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_12fa4aad-ca9c-4b18-b179-aa561810d2d0" qual:compartment="cytosol" qual:constant="false" qual:id="S_10" qual:initialLevel="0" qual:maxLevel="1" qual:name="Tbx1">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>T-box transcription factor TBX1</p><p>Gene Name: TBX1</p><p>UniProt ID: O43435</p><p>Gene ID: 6899</p><p>SHF transcription factor</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_12fa4aad-ca9c-4b18-b179-aa561810d2d0">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-03T15:19:40Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_8697faf6-6265-41f7-8c7e-60dd74631b60" qual:compartment="cytosol" qual:constant="false" qual:id="S_11" qual:initialLevel="0" qual:maxLevel="1" qual:name="exogen_CanWnt_I">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Canonical Wnt derived from neighboring tissue</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_8697faf6-6265-41f7-8c7e-60dd74631b60">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-07-22T10:25:19Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="c01e30e5-7462-46ad-928f-20af5935afbf" qual:compartment="cytosol" qual:constant="false" qual:id="S_12" qual:initialLevel="0" qual:maxLevel="1" qual:name="Nkx2.5 ">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Homeobox protein Nkx-2.5</p><p>Gene Name: NKX2-5</p><p>UniProt ID: P52952</p><p>Gene ID: 1482</p><p>transcription factor</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#c01e30e5-7462-46ad-928f-20af5935afbf">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2017-02-08T19:11:12Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_022d5bba-209e-416e-b5f8-609ef432c704" qual:compartment="cytosol" qual:constant="false" qual:id="S_13" qual:initialLevel="0" qual:maxLevel="1" qual:name="canWnt">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>canonical Wnt signaling</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_022d5bba-209e-416e-b5f8-609ef432c704">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2017-02-13T13:39:00Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="f40c15c1-605a-48df-9915-4d48d18cc905" qual:compartment="cytosol" qual:constant="false" qual:id="S_14" qual:initialLevel="0" qual:maxLevel="1" qual:name="Bmp2">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Gene Name: BMP2</p><p>Bone morphogenetic protein 2</p><p>UniProt ID: P12643</p><p>Gene ID: 650</p><p>Signaling factor</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#f40c15c1-605a-48df-9915-4d48d18cc905">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-12-19T14:24:15Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="bf104b8e-d07e-4f20-84fa-1a958527086e" qual:compartment="cytosol" qual:constant="false" qual:id="S_15" qual:initialLevel="0" qual:maxLevel="1" qual:name="GATAs">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>This node represents GATA4, GATA5, and GATA6.</p><p>Transcription factor GATA-4/ Transcription factor GATA-5/Transcription factor GATA-6</p><p>Gene Name: GATA4/GATA5/GATA6</p><p>UniProt ID: P43694/Q9BWX5/Q92908</p><p>Gene ID: 14463/140628/2627</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#bf104b8e-d07e-4f20-84fa-1a958527086e">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-12-19T14:24:15Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+    </qual:listOfQualitativeSpecies>
+    <qual:listOfTransitions xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:transition qual:id="tr_S_1">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Mesp1 activates Tbx5.</p><p>Tbx1 inhibits Tbx5.</p><p>Tbx5 activates Tbx5.</p><p>Dkk1 inhibits Tbx5 when Mesp1 and Tbx5 are inactive.</p><p>canWnt inhibits Tbx5.</p><p>Nkx2.5 activates Tbx5.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_1_in_S_5" qual:qualitativeSpecies="S_5" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Dkk1 downregulates Tbx5 expression.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_1_in_S_13" qual:qualitativeSpecies="S_13" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>canWnt downregulates Tbx5.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_1_in_S_2" qual:qualitativeSpecies="S_2" qual:sign="dual" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Mesp1 upregulates Tbx5 expression.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_1_in_S_1" qual:qualitativeSpecies="S_1" qual:sign="dual" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Tbx5 upregulates Tbx5 expression.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_1_in_S_10" qual:qualitativeSpecies="S_10" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Tbx1 downregulates Tbx5 expression.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_1_in_S_12" qual:qualitativeSpecies="S_12" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Nkx2.5 upregulates Tbx5 expression.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_1" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <or/>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci> S_12 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <not/>
+                      <apply>
+                        <or/>
+                        <apply>
+                          <or/>
+                          <apply>
+                            <eq/>
+                            <ci> S_10 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                          <apply>
+                            <and/>
+                            <apply>
+                              <eq/>
+                              <ci> S_5 </ci>
+                              <cn type="integer"> 1 </cn>
+                            </apply>
+                            <apply>
+                              <and/>
+                              <apply>
+                                <not/>
+                                <apply>
+                                  <eq/>
+                                  <ci> S_2 </ci>
+                                  <cn type="integer"> 1 </cn>
+                                </apply>
+                              </apply>
+                              <apply>
+                                <not/>
+                                <apply>
+                                  <eq/>
+                                  <ci> S_1 </ci>
+                                  <cn type="integer"> 1 </cn>
+                                </apply>
+                              </apply>
+                            </apply>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci> S_13 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci> S_2 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <not/>
+                      <apply>
+                        <or/>
+                        <apply>
+                          <or/>
+                          <apply>
+                            <eq/>
+                            <ci> S_10 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                          <apply>
+                            <and/>
+                            <apply>
+                              <eq/>
+                              <ci> S_5 </ci>
+                              <cn type="integer"> 1 </cn>
+                            </apply>
+                            <apply>
+                              <and/>
+                              <apply>
+                                <not/>
+                                <apply>
+                                  <eq/>
+                                  <ci> S_2 </ci>
+                                  <cn type="integer"> 1 </cn>
+                                </apply>
+                              </apply>
+                              <apply>
+                                <not/>
+                                <apply>
+                                  <eq/>
+                                  <ci> S_1 </ci>
+                                  <cn type="integer"> 1 </cn>
+                                </apply>
+                              </apply>
+                            </apply>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci> S_13 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <or/>
+                      <apply>
+                        <or/>
+                        <apply>
+                          <eq/>
+                          <ci> S_10 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                        <apply>
+                          <and/>
+                          <apply>
+                            <eq/>
+                            <ci> S_5 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                          <apply>
+                            <and/>
+                            <apply>
+                              <not/>
+                              <apply>
+                                <eq/>
+                                <ci> S_2 </ci>
+                                <cn type="integer"> 1 </cn>
+                              </apply>
+                            </apply>
+                            <apply>
+                              <not/>
+                              <apply>
+                                <eq/>
+                                <ci> S_1 </ci>
+                                <cn type="integer"> 1 </cn>
+                              </apply>
+                            </apply>
+                          </apply>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <eq/>
+                        <ci> S_13 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_2">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>canWnt activates Mesp1.</p><p>exogen_BMP2_II inhibits Mesp1.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_2_in_S_13" qual:qualitativeSpecies="S_13" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>After mesoderm formation, which is dependent on canWnt signaling, cardiogenic precursor cells express the transcription factor Mesp1.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_2_in_S_3" qual:qualitativeSpecies="S_3" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>BMP2 signaling inhibits Mesp1 expression.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_2" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> S_13 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <not/>
+                  <apply>
+                    <eq/>
+                    <ci> S_3 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_3">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>exogen_BMP2_I activates exogen_BMP2_II.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_3_in_S_8" qual:qualitativeSpecies="S_8" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>exogen_BMP2_I activates exogen_BMP2_II. This interaction ensures proper network timing.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_3" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_8 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_4">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Mesp1 activates IsI1.</p><p>Fgf8 activates IsI1.</p><p>canWnt in conjunction with exogen_CanWnt activates Isl1.</p><p>Tbx1 activates IsI1.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_4_in_S_13" qual:qualitativeSpecies="S_13" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>exogen_CanWnt in conjunction with canWnt upregulates of IsI1 expression.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_4_in_S_6" qual:qualitativeSpecies="S_6" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Decreased Fgf8 expression leads to aberrant production of Isl1, indicating Fgf8 is responsible for upregulating IsI1 expression.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_4_in_S_2" qual:qualitativeSpecies="S_2" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Mesp1 upregulates IsI1 expression.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_4_in_S_7" qual:qualitativeSpecies="S_7" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>exogen_CanWnt in conjunction with canWnt upregulates of IsI1 expression.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_4_in_S_10" qual:qualitativeSpecies="S_10" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Isl1 is downregulated in Tbx1 knockout embryos, indicating that Tbx1upregulates IsI1 expression.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_4" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <or/>
+                  <apply>
+                    <or/>
+                    <apply>
+                      <eq/>
+                      <ci> S_2 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <and/>
+                      <apply>
+                        <eq/>
+                        <ci> S_13 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                      <apply>
+                        <eq/>
+                        <ci> S_7 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> S_10 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_6 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_5">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Mesp1 activates Dkk1.</p><p>exogen_BMP_II inhibits Dkk1.</p><p>canWnt activates Dkk1.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_5_in_S_13" qual:qualitativeSpecies="S_13" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>canWnt indirectly upregulates Dkk1.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_5_in_S_2" qual:qualitativeSpecies="S_2" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Mesp1 upregulates Dkk1 gene expression.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_5_in_S_3" qual:qualitativeSpecies="S_3" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>exogen_BMP_II downregulates Dkk1 gene expression.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_5" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> S_2 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_13 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <eq/>
+                      <ci> S_3 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_6">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Mesp1 inhibits Fgf8.</p><p>Tbx1 activates Fgf8.</p><p>Foxc1.2 activates Fgf8.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_6_in_S_2" qual:qualitativeSpecies="S_2" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Mesp1 downregulates Fgf8 gene expression.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_6_in_S_9" qual:qualitativeSpecies="S_9" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Foxc1.2 upregulates Fgf8 expression in the mesenchyme.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_6_in_S_10" qual:qualitativeSpecies="S_10" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Tbx1 upregulates Fgf8 gene expression.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_6" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_10 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <eq/>
+                      <ci> S_2 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_9 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <eq/>
+                      <ci> S_2 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_7">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>exogen_CanWnt_I activates exogen_CanWnt_II.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_7_in_S_11" qual:qualitativeSpecies="S_11" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>exogen_CanWnt_I activates exogen_CanWnt_II. This interaction ensures proper network timing.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_7" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_11 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_9">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>canWnt with exogen_CanWnt activates Foxc1.2.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_9_in_S_13" qual:qualitativeSpecies="S_13" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>canWnt upregulates Foxc1.2 gene expression through β-catenin binding to conserved regions upstream of Foxc1.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_9_in_S_7" qual:qualitativeSpecies="S_7" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Endodermal canWnt signaling (represented as exogen_CanWnt) activates Foxc1.2 gene expression.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_9" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> S_13 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_7 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_10">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Foxc1.2 activates Tbx1.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_10_in_S_9" qual:qualitativeSpecies="S_9" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Foxc1.2 bind to the  Fox site #1 of Tbx1 to activate Tbx1 transcription.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_10" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_9 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_11">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>exogen_CanWnt_1 positively regulates itself.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_11_in_S_11" qual:qualitativeSpecies="S_11" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>exogen_CanWnt_1 positively regulates itself.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_11" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_11 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_12">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Bmp2 in conjunction with GATAs activates Nkx2.5.</p><p>IsI1 in conjunction with GATAs activates Nkx2.5.</p><p>Tbx5 activates Nkx2.5.</p><p>Mesp1 in conjunction with DKK1 activates Nkx2.5.</p><p>Tbx1 activates Nkx2.5.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_12_in_S_5" qual:qualitativeSpecies="S_5" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Mesp1 upregulates Nkx2.5 gene expression via Dkk-1-mediated blockade of canonical Wnt-signalling.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_12_in_S_15" qual:qualitativeSpecies="S_15" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GATA binds to the Nkx2.5 enhancer region.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_12_in_S_14" qual:qualitativeSpecies="S_14" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Bmp2 upregulates Nkx2.5 gene expression through the induction of Gata4 expression.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_12_in_S_2" qual:qualitativeSpecies="S_2" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Mesp1 upregulates Nkx2.5 gene expression via Dkk-1-mediated blockade of canonical Wnt-signalling.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_12_in_S_1" qual:qualitativeSpecies="S_1" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Tbx5 upregulates Nkx2.5 gene expression.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_12_in_S_4" qual:qualitativeSpecies="S_4" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IsI1 binds to the Nkx2.5 enhancer region located adjacent to the Gata binding site</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_12_in_S_10" qual:qualitativeSpecies="S_10" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Tbx1 upregulates Nkx2.5 gene expression.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_12" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <or/>
+                  <apply>
+                    <or/>
+                    <apply>
+                      <or/>
+                      <apply>
+                        <and/>
+                        <apply>
+                          <eq/>
+                          <ci> S_2 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci> S_5 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <and/>
+                        <apply>
+                          <eq/>
+                          <ci> S_15 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci> S_14 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> S_1 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci> S_4 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> S_15 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_10 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_13">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>canWnt is activated by exogen_CanWnt_II.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_13_in_S_7" qual:qualitativeSpecies="S_7" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>canWnt signally starts from the endoderm (represented as exogen_CanWnt_II) before reaching the mesoderm.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_13" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_7 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_14">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>canWnt inhibits Bmp2.</p><p>Bmp2 is activated by exogen_BMP2_II.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_14_in_S_13" qual:qualitativeSpecies="S_13" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>canWnt downregulates Bmp2 gene expression.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_14_in_S_3" qual:qualitativeSpecies="S_3" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Bmp2 signally starts from the endoderm (represented as exogen_BMP2_II) before reaching the mesoderm.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_14" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> S_3 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <not/>
+                  <apply>
+                    <eq/>
+                    <ci> S_13 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_15">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Mesp1 activates GATA4.</p><p>Nkx2.5. activates GATA6.</p><p>Tbx5 activates GATAs.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_15_in_S_2" qual:qualitativeSpecies="S_2" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Mesp1 upregulates GATA4 expression.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_15_in_S_1" qual:qualitativeSpecies="S_1" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Expression of GATA4 is reduced in Tbx5 knockout embroys, indicating that Tbx5 upregulates GATA4 expression.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_15_in_S_12" qual:qualitativeSpecies="S_12" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Nkx2.5 binds to the GATA6 enhancer region.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_15" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <or/>
+                  <apply>
+                    <eq/>
+                    <ci> S_2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> S_1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_12 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+    </qual:listOfTransitions>
+    <listOfCompartments>
+      <compartment constant="true" id="extracellular" name="extracellular"/>
+      <compartment constant="true" id="cytosol" name="cytosol"/>
+    </listOfCompartments>
+  </model>
+</sbml>

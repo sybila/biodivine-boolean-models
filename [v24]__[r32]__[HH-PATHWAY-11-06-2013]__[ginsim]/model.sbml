@@ -1,0 +1,1956 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" layout:required="false" level="3" qual:required="true" xmlns:layout="http://www.sbml.org/sbml/level3/version1/layout/version1" version="1" xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+  <model metaid="ac58d885-750f-463e-a5a7-9be1ba092dd0" id="model_id">
+    <notes>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>The precursor of HH is auto-catalytically cleaved to produce an N-terminal (HH-N) and a C- 
+terminal (HH-C) fragments (Lee et al, 1994; Porter et al, 1996b). 
+A cholesterol moiety is covalently attached to the last amino acid of HH-N to create HH-Np, that is responsible for the biological activities of HH proteins (Ingham and McMahon, 2001; Lee et al, 1994; Porter et al, 1996b). 
+The N-terminal region of HH-Np is further modified by addition of palmitate that is essential for its signalling activity (Pepinsky et al, 1998, Wang et al, 2000; Amanai and Jiang, 2001; Chamoun et al, 2001; Lee and Treisman, 2001; Micchelli et al, 2002). 
+We model these aspects by an AND rule (combining inputs from DLP, IHOG, Rasp, DISP, SHF, 
+Lipophorin, BOI and DALLY) attached to the component representing the secreted HH 
+molecule, denoted Hh in our model. 
+Two integral membrane proteins are involved in HH signal reception: Patched and Smoothened. 
+HH binding to its receptor Patched (PTC) relieves PTC-mediated repression of Smoothened 
+(SMO), a serpentine-like membrane protein required for HH signalling (Alcedo et al., 1996; 
+Chen and Struhl, 1996). 
+This allows SMO stabilisation, activation, and phosphorylation by Shaggy (SGG), and 
+downstream signalling through the formation of a protein complex including the serine threonine kinase Fused (FU), the kinesin-like protein Costa (COS), and the protein Suppressor of Fused (SU(FU)), ultimately controlling the post-translational processing of the protein Cubitus interruptus (CI) (Lum et al, 2003). 
+In the absence of HH, COS binds CI directly and sequesters it in the cytoplasm with the help of 
+SUFU. The recruitment of different kinases (Casein kinase 1 alpha, Shaggy, Protein kinase A) then leads to the phosphorylation of CI and to its proteolysis by SLMB. 
+The resulting truncated protein (CI_rep) is released and enters the nucleus, where it has a 
+transcriptional repressing activity. 
+Recent evidence further indicates that SMO is inhibited by TOW, which tentatively mediates the 
+effect of PTC on SMO (Ayers et al, 2009 and 2010). 
+Following SMO activation, the transcription factor CI is phosphorylated and translocated into the nucleus in its entire form, which plays a transcriptional activatory role (CI_act). 
+In the model, a cascade of inhibitions, from HH on PTC, and from PTC on SMO, implements the 
+indirect positive action of HH on SMO. 
+A protein complex including CI, COS, and FU, phosphorylates and thereby inhibits SU(FU), 
+ultimately favouring the CI activatory form and its translocation into the nucleus. 
+We model the roles of the kinases (SGG, PKA, and CK1a), COS and SU(FU) (both needed to 
+recruit the kinases) in the processing of CI in terms of inhibitory interactions on CI_act and 
+activatory interactions on CI_rep (Wilson et al, 2006 and Aikin et al, 2008). 
+Complexes are represented implicitly (they are formed as soon as the components are 
+synthesised or activated), while logical rules define component activity requirements to form 
+CI_act versus CI_rep forms. 
+To explore the dynamic of the pathway, we define two initial states to simulate the presence and the absence of signalling. On one hand, the non binding of HH (level expression 0) triggers a series of signalling cascades that lead to the activation of several kinases (for example SGG, 
+PKA, CK1a, ...) at level of expression 1, which will permit the formation of CI repressor 
+(expressed at level 1), which in turn will inhibit the targets. On the other hand, the presence of 
+HH (level of expression 1) leads to a stable state corresponding to the signalling conditions 
+leading to the formation of CI activator that will activate the targets node (level of expression 1). 
+</p>
+  </body>
+    </notes>
+    <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#ac58d885-750f-463e-a5a7-9be1ba092dd0">
+          <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:16678090"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:7985023"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11731473"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11290291"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:18379584"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:19285058"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8824192"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9593755"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11090136"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11748147"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11486055"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:20207148"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11861468"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8706127"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12663920"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8898207"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+      <layout:listOfLayouts xmlns:layout="http://www.sbml.org/sbml/level3/version1/layout/version1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <layout:layout layout:id="__layout__">
+        <layout:dimensions layout:height="305" layout:width="1036"/>
+        <layout:listOfAdditionalGraphicalObjects>
+          <layout:generalGlyph layout:id="_ly_Ttv" layout:reference="Ttv">
+            <layout:boundingBox>
+              <layout:position layout:x="33" layout:y="271"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Dlp" layout:reference="Dlp">
+            <layout:boundingBox>
+              <layout:position layout:x="36" layout:y="211"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Dally" layout:reference="Dally">
+            <layout:boundingBox>
+              <layout:position layout:x="156" layout:y="274"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Rasp" layout:reference="Rasp">
+            <layout:boundingBox>
+              <layout:position layout:x="41" layout:y="165"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Shf" layout:reference="Shf">
+            <layout:boundingBox>
+              <layout:position layout:x="39" layout:y="101"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_iHog" layout:reference="iHog">
+            <layout:boundingBox>
+              <layout:position layout:x="58" layout:y="43"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Boi" layout:reference="Boi">
+            <layout:boundingBox>
+              <layout:position layout:x="138" layout:y="36"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Dsp" layout:reference="Dsp">
+            <layout:boundingBox>
+              <layout:position layout:x="214" layout:y="36"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Lipophorin" layout:reference="Lipophorin">
+            <layout:boundingBox>
+              <layout:position layout:x="264" layout:y="86"/>
+              <layout:dimensions layout:height="30" layout:width="85"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Hh" layout:reference="Hh">
+            <layout:boundingBox>
+              <layout:position layout:x="166" layout:y="164"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Ptc" layout:reference="Ptc">
+            <layout:boundingBox>
+              <layout:position layout:x="303" layout:y="165"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Gprk2" layout:reference="Gprk2">
+            <layout:boundingBox>
+              <layout:position layout:x="430" layout:y="73"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Tow" layout:reference="Tow">
+            <layout:boundingBox>
+              <layout:position layout:x="428" layout:y="266"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Smo" layout:reference="Smo">
+            <layout:boundingBox>
+              <layout:position layout:x="430" layout:y="166"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Fu" layout:reference="Fu">
+            <layout:boundingBox>
+              <layout:position layout:x="530" layout:y="169"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Cos" layout:reference="Cos">
+            <layout:boundingBox>
+              <layout:position layout:x="652" layout:y="118"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_SuFu" layout:reference="SuFu">
+            <layout:boundingBox>
+              <layout:position layout:x="661" layout:y="263"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Sgg" layout:reference="Sgg">
+            <layout:boundingBox>
+              <layout:position layout:x="692" layout:y="59"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Pka" layout:reference="Pka">
+            <layout:boundingBox>
+              <layout:position layout:x="875" layout:y="56"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Slmb" layout:reference="Slmb">
+            <layout:boundingBox>
+              <layout:position layout:x="895" layout:y="169"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_CK1a" layout:reference="CK1a">
+            <layout:boundingBox>
+              <layout:position layout:x="905" layout:y="275"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Ci_act" layout:reference="Ci_act">
+            <layout:boundingBox>
+              <layout:position layout:x="778" layout:y="209"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Ci_rep" layout:reference="Ci_rep">
+            <layout:boundingBox>
+              <layout:position layout:x="778" layout:y="119"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Targets" layout:reference="Targets">
+            <layout:boundingBox>
+              <layout:position layout:x="976" layout:y="170"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+        </layout:listOfAdditionalGraphicalObjects>
+      </layout:layout>
+    </layout:listOfLayouts>
+    <qual:listOfQualitativeSpecies xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="fb6b1c03-0feb-4992-94cb-373c22792000" qual:id="Ttv" qual:constant="true" qual:name="Tout velu">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Production of heparan sulfate proteoglycans (HSPG) involved in HH movement, such as Dally and Dally-like 
+(DLP), requires Tout-velu (TTV), a heparan sulphate copolymerase. In the absence of TTV activity, HH is only seen in HH-expressing cells, indicating that HH does not move beyond its site of production. 
+HSPGs are needed for HH to reach target cells, while TTV is required for proper diffusion of the cholesterol-modified, membrane-associated HH-Np (Lind et al, 1998; The et al, 1999, Bellaiche et al, 1999, Han et al, 2004, Lin et al, 2004). 
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#fb6b1c03-0feb-4992-94cb-373c22792000">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9756849"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:10549295"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:14729575"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:15563523"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0020245.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="e0616977-5ab3-4b50-bd27-92c687a92da8" qual:id="Dlp" qual:constant="false" qual:name="dally-like">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>The heparan sulfate proteoglycan Dally and DLP are the substrates for TTV and are involved in HH movement 
+signalling (Han et al, 2003). During mesoderm specification, Bap expression is strikingly reduced in dally or dlp knockout embryos (Han et al., 2003). DLP is required for full-strength HH signalling, but does not affect the range over which HH spreads (Eugster et al, 2007).</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#e0616977-5ab3-4b50-bd27-92c687a92da8">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8985186"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:14729575"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0041604.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="ebf52496-ba27-40c7-9195-a15d95ba99cf" qual:id="Dally" qual:constant="false" qual:name="division abnormally delayed">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>The heparan sulfate proteoglycanDivision Abnormally Delayed (DALLY) and Dally-like (DLP) are the 
+substrates for TTV and are involved in HH signalling (Han et al, 2003). 
+Activated by HH signalling in the wild type, bap expression is strikingly reduced in dally or dlp knockout 
+embryos (Han et al., 2003). In wing development, loss of function of DALLY and DLP is similar to a typical loss of HH function. Both DALLY and DLP are required for full-strength HH signaling, but do not affect the range over which HH spreads (Eugster et al, 2007). 
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#ebf52496-ba27-40c7-9195-a15d95ba99cf">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8985186"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:14729575"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:17609110"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource=":DOI 10.1016/j.devcel.2007.04.019"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0263930.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_3c624082-8b22-4ce0-8920-13c3a93f5a2f" qual:id="Rasp" qual:constant="true" qual:name="Rasp">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Skinny Hedgehog or Rasp likely palmitoylates Hedgehog (HH), a modification essential for its activity. 
+Rasp is a 12-transmembrane protein with similarities to acyltransferases, encoded by a segment-polarity gene. 
+Reduction or loss of Rasp function thus reduces the hydrophobicity of HH, consistent with a loss of NH2- terminal palmitoylation and with a role for Rasp function in palmitate transfer (Chamoun et al, 2001). </p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_3c624082-8b22-4ce0-8920-13c3a93f5a2f">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11486055"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="DOI:10.1126/science.1064437"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0024194.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_80e266c6-28c1-4430-a409-7800babf5e62" qual:id="Shf" qual:constant="true" qual:name="Shifted">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>shifted (shf) mutations decrease the range and level of HH signaling (Glise et al, 2005; Gorfinkiel et al, 2005) 
+SHF acts upstream of CI stabilization, while PTC acts downstream from SHF in HH pathway. SHF is required for normal range of movement of cholesterol modified HH in the wing disc. Secreted SHF controls the stability (accumulation) and movement of HH through direct interaction with HH. </p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_80e266c6-28c1-4430-a409-7800babf5e62">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource=":DOI 10.1016/j.devcel.2005.01.003"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/pubmed/15691766"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/pubmed/15691765"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1016/j.devcel.2004.12.018"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0003390.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_483ba115-a1aa-4a27-b912-ba28bbe58d07" qual:id="iHog" qual:constant="true" qual:name="interference hedgehog">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Interference Hog (IHOG) is a receptor for Hedgehog (HH) (McLellan et al, 2006) that facilitates the  binding 
+of HH to Patched (PTC). IHOG is a type I transmembrane glycoprotein, containing immunoglobulin (Ig) domains and fibronectin type III (FNIII) domains on its N-terminus (Yao et al, 2006, Wilson, 2006). 
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_483ba115-a1aa-4a27-b912-ba28bbe58d07">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/pubmed/17077139"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/pubmed/16630821"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource=":DOI 10.1016/j.cell.2006.04.016"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0031872.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="ce95cd99-e27e-4027-8eec-99101476a7a0" qual:id="Boi" qual:constant="true" qual:name="Brother of iHog">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Brother of iHog (BOI), like IHOG, functions as a receptor for Hedgehog (HH). 
+BOI is a member of a larger family of HH-binding proteins that includes IHOG (Yao et al, 2006; Wilson et 
+al, 2006). 
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#ce95cd99-e27e-4027-8eec-99101476a7a0">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/pubmed/16630821"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource=":DOI 10.1016/j.cell.2006.04.016"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0040388.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_8d25a08f-5747-435d-b38b-241e21dd8c24" qual:id="Dsp" qual:constant="true" qual:name="Dispatched">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Dispatched (DISP) is a multi-span transmembrane protein essential for HH trafficking in producing cells. 
+DISP appears to control the release of HH-Np from the produciIng cells. 
+In the absence of DISP function, HH-Np accumulates in the producing cells and fails to move towards receiving 
+cells (Burke et al,, 1999, Ma et al, 2002). 
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_8d25a08f-5747-435d-b38b-241e21dd8c24">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/pubmed/10619433"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/pubmed/12372301"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0029088.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_20c19ff3-9b84-4f05-bb06-67abc932cac1" qual:id="Lipophorin" qual:constant="true" qual:name="Lipophorin">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Lipophorins are lipid-transporting particles that are important for Hedgehog (HH) movement. 
+Lipophorins form a complex with HH and membrane associated and solubilized glypican family members. 
+Interactions between lipophorins and the glypicans are mediated by the heparan sulfate moieties found on 
+glypicans, and these interactions are likely important to HH movement. 
+Lipophorins remain associated with glypicans when they are released from the plasma membrane. 
+The released form of Dally is found in endosomes containing Lipophorin, HH, and the HH receptor PTC (in 
+receiving cells).Lipophorins thereby increase HH signaling efficiency (Eugster et al, 2007). </p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_20c19ff3-9b84-4f05-bb06-67abc932cac1">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1016/j.devcel.2007.04.019"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:17609110"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="abd4c933-9053-4739-ae1f-9a572c158e6e" qual:id="Hh" qual:constant="false" qual:name="Hh exterior input">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Hedgehog (HH) is a segment polarity gene (Nusslein-Volhard and Wieschaus, 1980; Lee et al, 1992) encoding 
+a 47-kD protein that undergoes an intramolecular cleavage to yield a mature, N-terminal signaling polypeptide (Lee et al, 1994). This signaling protein is modified by cholesterol on the C-terminus and palmitoylated on a cysteine near the N-terminus (Porter et al, 1996). 
+This dually lipidated molecule requires the action of Dispatched (Disp) for release from the cell membrane 
+(Ma et al, 2002). Movement to neighboring cells likely involves the glypican family member Dally-like (Dlp) (Desbordes and Sanson, 2003; Han et al, 2004). 
+HH modifications restrain its diffusion, while Dlp promotes its movement, contributing to the formation of 
+a gradient that confers different cell-fate outcomes in a dose-dependent manner (Strigini and Cohen, 1997). 
+Binding of HH to Patched (PTC) initiates pathway response (Chen and Struhl, 1996; Marigo et al,1996). 
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#abd4c933-9053-4739-ae1f-9a572c158e6e">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:6776413"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:1394430"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:7985023"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8689684"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12372301"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:14602684"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:14729575"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9409685"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8898207"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8906794"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0004644.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_55a72c42-8e36-46d9-93d7-290731a40b85" qual:id="Ptc" qual:constant="false" qual:name="Pka">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Patched (PTC) is a receptor for HH (Chen and Struhl, 1996; Marigo et al, 1996). In the absence of HH binding, PTC suppresses the function of the transmembrane protein SMO (Taipale et al, 2002). PTC may also contributes to the control of the processing of lipophorin (Alyers et al, 2009). In the embryo imaginal discs, the distribution of HH in 
+receiving cells is regulated by the receptor PTC, which is expressed in all anterior compartment cells and is up- 
+regulated by HH signalling (Forbes et al, 1993; Goodrich et al, 1996; Marigo et al, 1996). Up-regulated PTC protein in HH-responding wing cells sequesters HH and thereby restricts further HH diffusion (Chen and Struhl, 1996). 
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_55a72c42-8e36-46d9-93d7-290731a40b85">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8049467"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8595881"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8906794"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8898207"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12192414"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:19285058"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0003892.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_6e6d75d1-511d-4a70-83c5-e8bcb232dc3f" qual:id="Gprk2" qual:constant="true" qual:name="G protein receptor-coupled kinase 2">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>G protein receptor-coupled kinase 2 (GPRK2) participates in the Hedgehog (HH) pathway, likely by 
+contributing to SMO protein phosphorylation in response to HH (Molnar et al, 2007). </p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_6e6d75d1-511d-4a70-83c5-e8bcb232dc3f">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:17483466"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0261988.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="d0d600ce-e3b4-4b6f-9232-0e7a33adf793" qual:id="Tow" qual:constant="true" qual:name="Target of Wingless">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>The effect of Target of Wingless (TOW) over-expression on HH signalling occurs specifically in HH receiving 
+cells. TOW apparently acts downstream of PTC, upstream of SMO and independently of COS, to 
+destabilize positive pathway members and conversely stabilize negative members, resulting in a repression of 
+all levels of HH signalling. Both ectopic PTC and TOW cause lipophorin accumulation in imaginal discs. 
+Loss of TOW leads to sensitized HH signalling, with a phenotype resembling SU(FU) loss of function. 
+PTC repression of SMO is tentatively mediated by TOW, possibly through regulation of the degradation or 
+homeostasis of lipophorin particles, thereby controlling the availability of SMO ligand(s) (Alyers et al, 2009). 
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#d0d600ce-e3b4-4b6f-9232-0e7a33adf793">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:19285058"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0035719.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_8a8da045-5f95-48b2-8c87-5185a68c18ca" qual:id="Smo" qual:constant="false" qual:name="Smoothened">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>The activity of Smoothened (SMO) is regulated by the transmembrane protein Patched (PTC) (Taipale et al, 
+2002) and the Hedgehog (HH) signalling molecule that binds PTC. In the absence of HH, SMO activity is inhibited. Upon inactivation of PTC by HH binding, SMO recruits a large cytoplasmic complex to its cytoplasmic tail that 
+contains COS (Lum et al, 2003; Jia et al, 2003; Ogden et al, 2003; Hooper, 2003), FU (Robbins et al, 1997; Lum et 
+al, 2003; Ruel et al, 2003), and CI (Sisson et al, 1997; Wang et al, 2000, Zhang et al, 2005). 
+This complex is required for CI-act formation (Zhang et al. 2005) and is dependent on the phosphorylation of 
+SMO cytoplasmic tail by the kinases PKA, CK1 and SGG (Jia et al, 2004; Apionishev et al, 2005; Zhang et al.,2004). 
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_8a8da045-5f95-48b2-8c87-5185a68c18ca">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:17483466"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12192414"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:14636583"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:14597665"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:14614827"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12874118"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9244297"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:14523402"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9244298"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11090136"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:15691767"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:15616566"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:15592457"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:15598741"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0003444.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_7c0ded4a-7adb-437b-b312-dba03d105fc6" qual:id="Fu" qual:constant="false" qual:name="Fused">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Fused (FU) is a segment polarity gene (Nusslein-Volhard and Wieschaus 1980) that encodes a putative serine- 
+threonine kinase (Preat et al, 1990; Nybakken et al, 2002). 
+FU is a partner for the kinesin-like protein Costa (COS) (Sisson et al, 1997; Robbins et al, 1997; Lum et al., 2003) 
+and participates in the Hedgehog (HH) signal transduction pathway. 
+In the absence of HH stimulation, FU and COS are basally phosphorylated and, together with CI, form a 
+high molecular weight protein complex that binds to microtubules. 
+In the presence of HH stimulation, FU and COS are hyperphosphorylated, and the complex only weakly binds 
+to microtubules (Nybakken et al, 2002). 
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_7c0ded4a-7adb-437b-b312-dba03d105fc6">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:6776413"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:1468628"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11934882"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9244298"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9244297"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:14636583"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0001079.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_547e1641-f9e8-415a-ac86-7599d316be34" qual:id="Cos" qual:constant="false" qual:name="Costa">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Costa (COS) is a kinesin-like molecule with no predicted motor function (Sisson et al, 1997; Robbins et al, 1997). 
+In the presence of HH, COS forms a complex with SMO (Lum et al, 2003; Jia et al. 2003; Odgen et al, 2003; 
+Hooper, 2003), and recruits FU and CI with SMO (Sisson et al, 1997; Robbins et al, 1997; Wang et al, 2000; Lum et 
+al, 2003; Zhang et al, 2005). This complex allows the dissociation of CI, leading to its activation and translocation to the nucleus. In the absence of HH binding, FU and COS are basally phosphorylated and, together with CI, form a complex sequestered on microtubules. In the presence of HH binding, FU and COS are hyper-phosphorylated, thereby weakening their binding to microtubules (Nybakken et al, 2002). In the absence of HH signalling, a similar complex is formed, involving SU(FU), PKA and CI.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_547e1641-f9e8-415a-ac86-7599d316be34">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9244298"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11912487"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:14636583"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:14597665"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:14614827"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12874118"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11090136"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:15691767"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11934882"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0000352.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_89f7f618-7900-4623-8350-19e9bd08fed3" qual:id="SuFu" qual:constant="false" qual:name="Suppressor of Fused">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Suppressor of Fused directly binds Cubitus interruptus (CI) (Monnier et al, 1998; Lum et al, 2003) and reduces 
+the  abundance (Ohlmeyer and Kalderon, 1998) and nuclear accumulation of CI (Methot and Basler ,2000; 
+Wang et al, 2000). SU(FU) is phosphorylated by FU in response to HH signalling (Lum et al, 2003). In the absence of HH signaling, non phosphorylated SU(FU) binds to CI and thereby prevents nuclear accumulation of CI-act, the activated form of CI. Upon reception of the HH signal, FU is activated and counteracts SU(FU), favouring the activatory CI-act form (Monnier, 1998). </p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_89f7f618-7900-4623-8350-19e9bd08fed3">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:1468628"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:7498739"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9601642"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:14636583"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:10952898"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11090136"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9874371"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0005355.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="f0d05fa1-da67-43b4-9105-5dae3b7a7955" qual:id="Sgg" qual:constant="true" qual:name="Shaggy">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Zeste white 3 or Shaggy  (Sgg), functions in concert with the protein kinase A (PKA) and casein kinase 1a (CK1a) 
+to promote the phorphorylation of CI (Price and Kalderon 2002; Jia et al. 2002) and its subsequent proteolytic processing into a truncated repressive form. Sgg is scaffolded by COS. </p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#f0d05fa1-da67-43b4-9105-5dae3b7a7955">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11955435"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11912487"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0003371.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_12c4c363-7ac1-4e84-b2dd-c9383978a5a1" qual:id="Pka" qual:constant="true" qual:name="Protein kinase A">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Protein kinase A (PKA) acts at two levels in HH pathway. Phosphorylation of SMO cytoplasmic tail by PKA is 
+important for SMO-mediated recruitment of the cytoplasmic regulatory complex (COS, FU, and CI) 
+(Robbins et al, 1997; Sisson et al, 1997; Wang et al. 2000; Lum et al, 2003; Jia et al, 2003 and 2004; Ogden et 
+al. 2003; Hooper 2003; Ruel et al, 2003; Zhang et al, 2004 and 2005; Apionishev et al, 2005). 
+Phosphorylation of CI by PKA ultimately targets CI for proteolytic processing into a transcriptional repressor CI-rep (Chen et al. 1998; Price and Kalderon 1999).</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_12c4c363-7ac1-4e84-b2dd-c9383978a5a1">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0000273.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.uniprot.org/uniprot/P12370"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.sdbonline.org/fly/newgene/pka-c1.htm"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:15616566"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:15592457"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:15598741"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:14636583"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:14597665"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:14614827"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12874118"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9244297"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:14523402"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9244298"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11090136"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:15691767"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9482888"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:10477300"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="d9bd69f0-8112-4686-9fa7-b9e5eb43938e" qual:id="Slmb" qual:constant="true" qual:name="Supernumary limbs">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>The F-box protein supernumerary limbs (SLMB) functions as an adaptor protein between the ubiquitin 
+ligase complex and substrates to be targeted for ubiquitinylation (Spencer et al, 1998). 
+In the absence of HH, CI phosphorylation enables the recruitment of SLMB(Jia et al, 2005), resulting in CI 
+ubiquitinylation and  its proteasome-mediated proteolytic processing into a repressor (Theodosiou et al, 1998; Jiang and Struhl, 1998). </p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#d9bd69f0-8112-4686-9fa7-b9e5eb43938e">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9990853"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:16326393"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9693144"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9461217"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0023423.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="e2da5fcb-fb8a-4923-94f7-86b1696d3c46" qual:id="CK1a" qual:constant="true" qual:name="Casein kinase 1 alpha">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Casein kinase 1a (CK1a) phosphorylates both SMO (Jia et al, 2004; Apionishev et al, 2005; Zhang et al, 
+2004) and CI (Price and Kalderon, 2002; Jia et al, 2002). Phosphorylation by PKA primes both SMO and CI for 
+subsequent CK1a phosphorylation. 
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#e2da5fcb-fb8a-4923-94f7-86b1696d3c46">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:15616566"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:15598741"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:15592457"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11955435"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11912487"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0015024.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_924874d5-08c1-47a3-a15c-46da69b6293c" qual:id="Ci_act" qual:constant="false" qual:name="Ci activator">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Cubitus Interruptus (CI) is the transcriptional effector of the HH pathway (Forbes et al, 1993; Alexandre et al, 
+1996). Pathway activation is mediated by the full-length CI molecule CI-act (Aza-Blanc et al. 1997). 
+CI directly binds to the other HH pathway components COS (Sisson et al, 1997; Robbins et al, 1997; Wang et al, 
+2000, Zhang et al., 2005) and SU(FU) (Monnier et al. 1998; Lum et al. 2003). </p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_924874d5-08c1-47a3-a15c-46da69b6293c">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:2166702"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8049467"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8769644"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9215627"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9482888"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:10477300"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11955435"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11912487"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9244298"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9244297"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11090136"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:15691767"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9601642"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:14636583"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0004859.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="f17a564f-1ba5-40f1-a452-822fff60d892" qual:id="Ci_rep" qual:constant="false" qual:name="Ci repressor">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Cubitus Interruptus (CI) is the transcriptional effector of the HH pathway (Forbes et al, 1993; Alexandre et al, 
+1996). Repressor CI activity is mediated by an N-terminal protein fragment CI-rep lacking the carboxy regulatory 
+domain (Aza-Blanc et al. 1997). Proteolysis of CI is initiated by phosphorylation by the protein kinases PKA, SGG and CK1a (Chen et al, 1998; Price and Kalderon, 2002; Jia et al, 2002). Activation of the Hedgehog (HH) pathway abrogates this processing (Aza-Blanc et al. 1997). CI directly binds to the other HH pathway components 
+COS (Sisson et al, 1997; Robbins et al, 1997; Wang et al, 2000, Zhang et al, 2005) and Su(FU) (Monnier et al. 
+1998; Lum et al. 2003).</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#f17a564f-1ba5-40f1-a452-822fff60d892">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:2166702"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8049467"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8769644"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9215627"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9482888"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:10477300"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11955435"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11912487"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9244298"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9244297"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11090136"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:15691767"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9601642"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:14636583"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0004859.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="false" qual:name="Targets" qual:id="Targets">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>HH pathway target genes participate in embryo segmentation, in mesoderm specification, as well as in cardiac cell diversification. 
+</p>
+  </body>
+        </notes>
+      </qual:qualitativeSpecies>
+    </qual:listOfQualitativeSpecies>
+    <qual:listOfTransitions xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:transition qual:id="tr_Dlp">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Ttv" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Dlp_in_0"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Dlp" qual:transitionEffect="assignmentLevel" qual:id="tr_Dlp_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Ttv </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Dally">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Ttv" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Dally_in_0"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Dally" qual:transitionEffect="assignmentLevel" qual:id="tr_Dally_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Ttv </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Hh">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Dlp" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Hh_in_1"/>
+          <qual:input qual:qualitativeSpecies="Dally" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Hh_in_2"/>
+          <qual:input qual:qualitativeSpecies="Rasp" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Hh_in_3"/>
+          <qual:input qual:qualitativeSpecies="Shf" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Hh_in_4"/>
+          <qual:input qual:qualitativeSpecies="iHog" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Hh_in_5"/>
+          <qual:input qual:qualitativeSpecies="Boi" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Hh_in_6"/>
+          <qual:input qual:qualitativeSpecies="Dsp" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Hh_in_7"/>
+          <qual:input qual:qualitativeSpecies="Lipophorin" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Hh_in_8"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Hh" qual:transitionEffect="assignmentLevel" qual:id="tr_Hh_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Dlp </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Dally </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Rasp </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Shf </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> iHog </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Boi </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Dsp </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Lipophorin </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Ptc">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Hh" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Ptc_in_9"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Ptc" qual:transitionEffect="assignmentLevel" qual:id="tr_Ptc_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Hh </ci>
+                <cn type="integer"> 0 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Smo">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Ptc" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Smo_in_10"/>
+          <qual:input qual:qualitativeSpecies="Gprk2" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Smo_in_11"/>
+          <qual:input qual:qualitativeSpecies="Tow" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Smo_in_12"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Smo" qual:transitionEffect="assignmentLevel" qual:id="tr_Smo_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Ptc </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Gprk2 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Tow </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Fu">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Smo" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Fu_in_13"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Fu" qual:transitionEffect="assignmentLevel" qual:id="tr_Fu_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Smo </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Cos">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Smo" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Cos_in_13"/>
+          <qual:input qual:qualitativeSpecies="Fu" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Cos_in_14"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Cos" qual:transitionEffect="assignmentLevel" qual:id="tr_Cos_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Smo </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Fu </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_SuFu">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Fu" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_SuFu_in_14"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="SuFu" qual:transitionEffect="assignmentLevel" qual:id="tr_SuFu_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Fu </ci>
+                <cn type="integer"> 0 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Ci_act">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Cos" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Ci_act_in_15"/>
+          <qual:input qual:qualitativeSpecies="SuFu" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Ci_act_in_16"/>
+          <qual:input qual:qualitativeSpecies="Sgg" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Ci_act_in_17"/>
+          <qual:input qual:qualitativeSpecies="Pka" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Ci_act_in_18"/>
+          <qual:input qual:qualitativeSpecies="Slmb" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Ci_act_in_19"/>
+          <qual:input qual:qualitativeSpecies="CK1a" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Ci_act_in_20"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Ci_act" qual:transitionEffect="assignmentLevel" qual:id="tr_Ci_act_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> Cos </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cos </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> SuFu </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cos </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> SuFu </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Sgg </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Pka </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Slmb </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cos </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> SuFu </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Sgg </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Pka </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Slmb </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CK1a </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cos </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> SuFu </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Sgg </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Pka </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Slmb </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cos </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> SuFu </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Sgg </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Slmb </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Ci_rep">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Cos" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Ci_rep_in_15"/>
+          <qual:input qual:qualitativeSpecies="SuFu" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Ci_rep_in_16"/>
+          <qual:input qual:qualitativeSpecies="Sgg" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Ci_rep_in_17"/>
+          <qual:input qual:qualitativeSpecies="Pka" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Ci_rep_in_18"/>
+          <qual:input qual:qualitativeSpecies="Slmb" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Ci_rep_in_19"/>
+          <qual:input qual:qualitativeSpecies="CK1a" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Ci_rep_in_20"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Ci_rep" qual:transitionEffect="assignmentLevel" qual:id="tr_Ci_rep_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Cos </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> SuFu </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Sgg </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Pka </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Slmb </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> CK1a </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Targets">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Ci_act" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Targets_in_21"/>
+          <qual:input qual:qualitativeSpecies="Ci_rep" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Targets_in_22"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Targets" qual:transitionEffect="assignmentLevel" qual:id="tr_Targets_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Ci_act </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Ci_rep </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+    </qual:listOfTransitions>
+    <listOfCompartments>
+      <compartment constant="true" id="comp1"/>
+    </listOfCompartments>
+  </model>
+</sbml>

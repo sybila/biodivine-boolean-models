@@ -1,0 +1,52 @@
+Gram_Negative_bacteria -> diaminopimelic_acid_type
+sulfotransferase_Pipe -> Easter
+Snake -> Easter
+gastrulation_defective -> Snake
+Dorso_ventral_patterning -> Nudel
+Nudel -> gastrulation_defective
+GNBP1 -> modular_serine_protease
+Gram__negative_binding_protein_3 -> modular_serine_protease
+PGRP_SA -> modular_serine_protease
+peptidoglycan_recognition_proteins -> modular_serine_protease
+modular_serine_protease -> Gram_positive_specific_serine_protease
+Gram_positive_bacteria -> GNBP1
+Fungi -> Gram__negative_binding_protein_3
+Gram_positive_bacteria -> PGRP_SA
+diaminopimelic_acid_type -> peptidoglycan_recognition_proteins
+Necrotic -| Persephone
+Gram_positive_bacterial_virulence_factors -> Persephone
+Fungi -> Gram_positive_bacterial_virulence_factors
+Gram_positive_bacteria -> Gram_positive_bacterial_virulence_factors
+Easter -> Spz__processing_enzyme
+Persephone -> Spz__processing_enzyme
+Spheroide -> Spz__processing_enzyme
+Sphinx1_and_2 -> Spz__processing_enzyme
+Serine_Protease_Immune_Response_Integrator -> Spz__processing_enzyme
+Gram_positive_specific_serine_protease -> Spheroide
+Gram_positive_specific_serine_protease -> Sphinx1_and_2
+Gram_positive_specific_serine_protease -> Serine_Protease_Immune_Response_Integrator
+Spz__processing_enzyme -> Spatzle
+$Dorso_ventral_patterning: true
+$Easter: (sulfotransferase_Pipe & Snake)
+$Fungi: true
+$GNBP1: Gram_positive_bacteria
+$Gram_Negative_bacteria: true
+$Gram__negative_binding_protein_3: Fungi
+$Gram_positive_bacteria: true
+$Gram_positive_bacterial_virulence_factors: ((!Fungi & Gram_positive_bacteria) | Fungi)
+$Gram_positive_specific_serine_protease: modular_serine_protease
+$Necrotic: true
+$Nudel: Dorso_ventral_patterning
+$PGRP_SA: Gram_positive_bacteria
+$Persephone: (!Necrotic & Gram_positive_bacterial_virulence_factors)
+$Serine_Protease_Immune_Response_Integrator: Gram_positive_specific_serine_protease
+$Snake: gastrulation_defective
+$Spatzle: Spz__processing_enzyme
+$Spheroide: Gram_positive_specific_serine_protease
+$Sphinx1_and_2: Gram_positive_specific_serine_protease
+$Spz__processing_enzyme: ((((((((!Easter & !Persephone) & !Spheroide) & !Sphinx1_and_2) & Serine_Protease_Immune_Response_Integrator) | (((!Easter & !Persephone) & !Spheroide) & Sphinx1_and_2)) | ((!Easter & !Persephone) & Spheroide)) | (!Easter & Persephone)) | Easter)
+$diaminopimelic_acid_type: Gram_Negative_bacteria
+$gastrulation_defective: Nudel
+$modular_serine_protease: ((((((!GNBP1 & !Gram__negative_binding_protein_3) & peptidoglycan_recognition_proteins) | (((!GNBP1 & Gram__negative_binding_protein_3) & !PGRP_SA) & peptidoglycan_recognition_proteins)) | ((!GNBP1 & Gram__negative_binding_protein_3) & PGRP_SA)) | ((GNBP1 & !PGRP_SA) & peptidoglycan_recognition_proteins)) | (GNBP1 & PGRP_SA))
+$peptidoglycan_recognition_proteins: diaminopimelic_acid_type
+$sulfotransferase_Pipe: true

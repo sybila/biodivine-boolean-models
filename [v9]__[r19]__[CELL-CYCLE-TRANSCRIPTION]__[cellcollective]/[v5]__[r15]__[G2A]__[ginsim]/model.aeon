@@ -1,0 +1,25 @@
+#position:CtrA:419,94
+$CtrA:((((!CtrA & GcrA) & !CcrM) & !SciP) | ((CtrA & !CcrM) & !SciP))
+CtrA -> CtrA
+GcrA -> CtrA
+CcrM -| CtrA
+SciP -| CtrA
+#position:GcrA:325,135
+$GcrA:(!CtrA & DnaA)
+CtrA -| GcrA
+DnaA -> GcrA
+#position:CcrM:462,222
+$CcrM:((CtrA & !CcrM) & !SciP)
+CtrA -> CcrM
+CcrM -| CcrM
+SciP -| CcrM
+#position:SciP:506,133
+$SciP:(CtrA & !DnaA)
+CtrA -> SciP
+DnaA -| SciP
+#position:DnaA:374,224
+$DnaA:(((CtrA & !GcrA) & !DnaA) & CcrM)
+CtrA -> DnaA
+GcrA -| DnaA
+DnaA -| DnaA
+CcrM -> DnaA

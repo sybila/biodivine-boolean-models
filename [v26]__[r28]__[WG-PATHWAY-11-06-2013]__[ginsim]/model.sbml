@@ -1,0 +1,1548 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" layout:required="false" level="3" qual:required="true" xmlns:layout="http://www.sbml.org/sbml/level3/version1/layout/version1" version="1" xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+  <model metaid="bc6ca51a-4ceb-4b07-9355-7ec310432e80" id="model_id">
+    <notes>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>In the absence of WG, the protein complex composed by Axin, Shaggy (SGG or ZW3) and APC 
+sequesters and ubiquitinilates Armadillo, leading to a Slmb-dependant degradation by the 
+proteasome. 
+In the absence of ARM, PAN binds to GRO to repress WG targets. 
+Binding of Wingless to Arrow (ARR) or Frizzled (FZ) triggers a set of reactions, starting with 
+the activation of Dishevelled, which in turn inhibits the AXN-SGG-APC complex. 
+This leads (with the help of HIPK) to the accumulation and the stabilisation of ARM. 
+Next, ARM translocates into the nucleus and binds Pangolin (PAN). Then, the ARM/PAN 
+complex with the help of other cofactors (LGS, Nej, Pygo and Hyx) activates the transcription of WG targets. 
+During some patterning processes as in wing disc, Nemo can inhibit PAN and thereby controls 
+the level of WG signalling. 
+To study dynamically the WG signalling pathway, we define two initial states corresponding to 
+the binding of WG ligand and to the absence of binding condition. From these two initial states,
+we compute the resulting stable states recapitulating  the activation or the non activation of the pathway, respectively. </p>
+  </body>
+    </notes>
+    <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#bc6ca51a-4ceb-4b07-9355-7ec310432e80">
+          <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:7813765"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12881613"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:22855721"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:22535229"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:22371299"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+      <layout:listOfLayouts xmlns:layout="http://www.sbml.org/sbml/level3/version1/layout/version1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <layout:layout layout:id="__layout__">
+        <layout:dimensions layout:height="350" layout:width="1100"/>
+        <layout:listOfAdditionalGraphicalObjects>
+          <layout:generalGlyph layout:id="_ly_Ttv" layout:reference="Ttv">
+            <layout:boundingBox>
+              <layout:position layout:x="34" layout:y="198"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Wf" layout:reference="Wf">
+            <layout:boundingBox>
+              <layout:position layout:x="122" layout:y="199"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Dlp" layout:reference="Dlp">
+            <layout:boundingBox>
+              <layout:position layout:x="200" layout:y="89"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Dally" layout:reference="Dally">
+            <layout:boundingBox>
+              <layout:position layout:x="201" layout:y="313"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Wg" layout:reference="Wg">
+            <layout:boundingBox>
+              <layout:position layout:x="202" layout:y="201"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Fz" layout:reference="Fz">
+            <layout:boundingBox>
+              <layout:position layout:x="298" layout:y="137"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Arr" layout:reference="Arr">
+            <layout:boundingBox>
+              <layout:position layout:x="299" layout:y="262"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Boca" layout:reference="Boca">
+            <layout:boundingBox>
+              <layout:position layout:x="298" layout:y="62"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Nkd" layout:reference="Nkd">
+            <layout:boundingBox>
+              <layout:position layout:x="291" layout:y="202"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Dsh" layout:reference="Dsh">
+            <layout:boundingBox>
+              <layout:position layout:x="394" layout:y="204"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Axin" layout:reference="Axin">
+            <layout:boundingBox>
+              <layout:position layout:x="499" layout:y="133"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Sgg" layout:reference="Sgg">
+            <layout:boundingBox>
+              <layout:position layout:x="500" layout:y="206"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_APC" layout:reference="APC">
+            <layout:boundingBox>
+              <layout:position layout:x="500" layout:y="275"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_CK1alpha" layout:reference="CK1alpha">
+            <layout:boundingBox>
+              <layout:position layout:x="563" layout:y="241"/>
+              <layout:dimensions layout:height="30" layout:width="75"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Proteasome" layout:reference="Proteasome">
+            <layout:boundingBox>
+              <layout:position layout:x="667" layout:y="88"/>
+              <layout:dimensions layout:height="30" layout:width="90"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Hipk" layout:reference="Hipk">
+            <layout:boundingBox>
+              <layout:position layout:x="676" layout:y="320"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Slmb" layout:reference="Slmb">
+            <layout:boundingBox>
+              <layout:position layout:x="785" layout:y="270"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Arm" layout:reference="Arm">
+            <layout:boundingBox>
+              <layout:position layout:x="671" layout:y="206"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Pan" layout:reference="Pan">
+            <layout:boundingBox>
+              <layout:position layout:x="793" layout:y="206"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Nemo" layout:reference="Nemo">
+            <layout:boundingBox>
+              <layout:position layout:x="785" layout:y="112"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Lgs" layout:reference="Lgs">
+            <layout:boundingBox>
+              <layout:position layout:x="883" layout:y="115"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Nej" layout:reference="Nej">
+            <layout:boundingBox>
+              <layout:position layout:x="974" layout:y="115"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Gro" layout:reference="Gro">
+            <layout:boundingBox>
+              <layout:position layout:x="925" layout:y="282"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Hyx" layout:reference="Hyx">
+            <layout:boundingBox>
+              <layout:position layout:x="1040" layout:y="165"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Pygo" layout:reference="Pygo">
+            <layout:boundingBox>
+              <layout:position layout:x="1028" layout:y="257"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Targets" layout:reference="Targets">
+            <layout:boundingBox>
+              <layout:position layout:x="925" layout:y="203"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+        </layout:listOfAdditionalGraphicalObjects>
+      </layout:layout>
+    </layout:listOfLayouts>
+    <qual:listOfQualitativeSpecies xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_51e481c9-0a0d-4248-8719-fa1e412e6020" qual:id="Ttv" qual:constant="true" qual:name="Tout velu">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>The production of heparan sulfate proteoglycans (HSPG) involved in WG movement, such as Dally and Dally-like 
+(DLP), requires Tout-velu (TTV), a heparan sulphate copolymerase. In the absence of TTV activity, WG is seen only in 
+expressing cells, indicating that WG does not move beyond its production site. 
+HSPGs are needed for WG to reach distant target cells, while TTV is required for the proper diffusion of the cholesterol- modified, membrane-associated HH-Np (Bornemann et al., 2004; Han et al., 2004; Lin et Perrimon, 2000). </p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_51e481c9-0a0d-4248-8719-fa1e412e6020">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:15056609"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:14998928"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:10963990"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0020245.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="b937d14e-86a1-431d-a9fb-a62256d22f5b" qual:constant="true" qual:id="Wf">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Wingful or Notum is a secreted extracellular antagonist that regulates patterning processes depending on long-range WG signaling. Loss of WF function causes a gain of WG activity. A gain of function causes a loss of WG signaling. WF presumably inhibits the activity of a co-receptor component, such as Dally or Dally-like (DLP) proteoglycans that appear to participate in WG reception (Lin and Perrimon 1999; Tsuda et al., 1999; Baeg et al., 2001). WF may inhibit such receptor components via its presumptive esterase activity, by modifying Dally 
+glycosaminoglycan chains. (Gerlitz et al., 2002). </p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#b937d14e-86a1-431d-a9fb-a62256d22f5b">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:10421372"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11092814"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:10421371"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12000788"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0044028.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_1e8508bf-b77d-4e6b-80f8-acffd008fef9" qual:id="Dlp" qual:constant="false" qual:name="dally-like">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>The heparan sulfate proteoglycan Dally and DLP are the substrates for TTV and are involved in WG movement 
+signalling. In the wing imaginal discs, WG acts as a morphogen because it is organized in an extracellular protein gradient and activates the expression of target genes in a dose-dependent manner (Zecca et al., 1996; Neumann and Cohen, 1997). WG binds tightly to glycosaminoglycans and appears to interact with DLP, raising the possibility that DLP is also involved in shaping the gradient of extracellular WG. Experimental observations shows a high level of WG accumulation in wing discs over-expressing DLP, suggesting that DLP may have a high capacity to bind WG in vivo. 
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_1e8508bf-b77d-4e6b-80f8-acffd008fef9">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:2699855"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8945511"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9043068"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8909553"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0041604.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_932b9df1-cc69-4842-8148-3281c33cfe33" qual:id="Dally" qual:constant="false" qual:name="division abnormally delayed">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>In Drosophila, there are two heparan sulfate proteoglycan (HSPG), division abnormally delayed DALLY and DLP. 
+DALLY and DLP are the substrates for TTV and are involved in WG signalling. In the wing imaginal discs, WG acts as a morphogen. It is organized in an extracellular protein gradient and activates the expression of target genes in a dose-dependent manner (Zecca et al., 1996; Neumann and Cohen, 1997). WG binds tightly to glycosaminoglycans (Riechmann et al., 1996). 
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_932b9df1-cc69-4842-8148-3281c33cfe33">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:2699855"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8945511"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9043068"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8909553"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0263930.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_58ef3947-39bb-401c-b115-42af0063113a" qual:id="Wg" qual:constant="true" qual:name="External Wg">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>WG level is provided as an initial self-sustained condition, which represents the presence of external WG signal. 
+WG expression is limited to the anterior domain (Azpiazu et al. 1996). 
+Ectopic WG causes only a small reduction in bap expression. 
+Ectopic WG in HH mutant results in almost no bap expression. 
+Ventral FB needs WG for its specification and loss of WG leads to the expansion of dorsolateral FB, with an ectopic srp expression (Riechmann et al. 1998). 
+WG is needed for the induction of heart and dorsal muscle progenitors (Wu et al., 1995; Azpiazu et al., 1996; 
+Carmena et al., 1998). 
+WG acts negatively on bap, because bap expression is expanded in wg mutant embryo. 
+WG suppresses the induction of trunk visceral mesoderm at different positions (Azpiazu et al., 1996). 
+WG is a positive regulator of tin in VM development via PAN (Hosono et al., 2003). 
+In H, WG activates slp via PAN (Azpiazu et al., 1996). 
+WG is required for the development of SM because in wg mutants have no SM (Frasch et al., 1999). 
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_58ef3947-39bb-401c-b115-42af0063113a">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:7781903"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8985186"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9435291"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9869644"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:10508697"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:10355030"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11076769"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11783990"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12490551"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0004009.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="d983bdde-3bcd-4e80-b6db-b64a64ebd713" qual:id="Fz" qual:constant="false" qual:name="Frizzled">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>WG can associate with members of the Frizzled family of seven transmembrane-domain receptors. 
+Frizzled proteins are receptors for WG and functions upstream of Dishevelled, recruiting this cytoplasmic protein 
+to the cell membrane (Bhanot et al., 1996). 
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#d983bdde-3bcd-4e80-b6db-b64a64ebd713">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8717036"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1038/382225a0"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0001085.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_51d48f17-0751-4473-b60a-d15ac652c9cc" qual:id="Arr" qual:constant="false" qual:name="Arrow">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Arrow encodes an LDL-receptor related protein essential for Wingless signalling. 
+FZ and Arrow have similar roles in the reception of WG signal and they act together as in a receptor complex. 
+Secreted Wingless initiates signaling through the Frizzled family of receptors and Arrow. 
+This leads to the phosphorylation of Dishevelled. 
+(Wehrli et al., 2000; Tamai et al., 2000, Seto et al., 2004)</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_51d48f17-0751-4473-b60a-d15ac652c9cc">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11029007"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1038/35035110"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:14729180"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0000119.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_0a98090c-66f3-41e1-87e5-b28369f5cd0b" qual:id="Boca" qual:constant="true" qual:name="boca">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>WG requires two transmembrane receptors, Arrow, a member of the LDLR family, and either Frizzled or Fz2 (Bhat, 1998; Bhanot et al., 1999; Chen and Struhl, 1999; Wehrli et al., 2000). 
+Experimental localization of Boca and epistasis experiments suggest a potential role for Boca in the processing and/or transport of one of these receptors. (Axelrod et al., 1998).</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_0a98090c-66f3-41e1-87e5-b28369f5cd0b">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9875856"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:10457026"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:10556068"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11029006"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9716412"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0004132.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_4c142354-1d1a-444a-b65f-c8b356aec581" qual:id="Nkd" qual:constant="true" qual:name="naked cuticle">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>NKD regulates embryonic WG activity by acting as an inducible antagonist of the WG transduction component DSH 
+(Rousset et al., 2001). Unexpectedly, NKD plays no discernible role at later stages of development, such as during the patterning of imaginal discs (Zeng et al., 2000). NKD is also used during embryonic patterning as the 
+intracellular feedback antagonist, where WG functions at short range. 
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_4c142354-1d1a-444a-b65f-c8b356aec581">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11274052"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:10693810"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0002945.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="b51afd1d-bac1-4950-97f3-8b2d7359fc07" qual:id="Dsh" qual:constant="false" qual:name="Dishevelled">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>The binding of WG to its receptors induces the phosphorylation of the cytoplasmic protein Dishevelled 
+(DSH). DSH, an essential protein for WG signalling, inhibits constitutive repressors of WG signalling. 
+Phosphorylated DSH inhibits a multiprotein complex that includes Axin, Zeste-White-3, and Adenomatous Polyposis Coli (APC). 
+In the presence of WG ligand, DSH inhibits the phosphorylation of Armadillo, thereby stabilizing it. 
+Accumulation of Armadillo mediates the induction of WG target genes. 
+(Klingensmith et al., 1994, Yanagawa et al., 1995, Seto et al., 2004). 
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#b51afd1d-bac1-4950-97f3-8b2d7359fc07">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:7744250"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:7813765"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:14729180"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0000499.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="a728d2f4-3f0f-47c6-ac98-df6662e9be54" qual:id="Axin" qual:constant="false" qual:name="Axin">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Axin knockout produces phenotypes that are similar to over-expression of the Drosophila WG. Over-expression of Axin produces phenotypes similar to loss of WG.  Together, Axin, APC and Zeste-white 3 form a protein 
+complex, which signals ARM for destruction by the proteasome.  Axin is proposed to function as a scaffold that brings Zeste-White 3 and Armadillo together. This facilitates the phosphorylation of Armadillo, which is subsequently ubiquitinilated and degraded. In the presence of WG ligand, DSH inhibits the phosphorylation of ARM by the complex APC/SGG/Axin, thereby stabilizing it. (Ikeda et al., 1998 and Seto et al., 2004)</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#a728d2f4-3f0f-47c6-ac98-df6662e9be54">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9482734"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:14729180"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0026597.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_72e81e62-ce64-4611-8a77-320c49f4e7e4" qual:id="Sgg" qual:constant="false" qual:name="Zeste white 3">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Shaggy phosphorylates ARM in the absence of WG signalling (Aberle et al., 1997, Sakanaka et al., 1998, Seto et 
+al., 2004). 
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_72e81e62-ce64-4611-8a77-320c49f4e7e4">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9233789"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9501208"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:14729180"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:17881495"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FB gn0003371.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_7579f44b-5c20-4a89-8e59-d715cce40724" qual:id="APC" qual:constant="false" qual:name="Adenomatous Polyposis Coli">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>APC is a component of the WG pathway functioning as a negative regulator in signal transduction. 
+The cytoplasmic localization of ARM is regulated by phosphorylation. 
+SGG, a serine threonine kinase, lies upstream of ARM, and positively regulates the phosphorylation of ARM, while APC is a member of this complex. 
+This complex leads to the degradation of ARM in the absence of WG signalling (Seto et al., 2004). </p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_7579f44b-5c20-4a89-8e59-d715cce40724">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0015589.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:14729180"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="fddd8ff7-ab8a-4197-aea8-502443c57372" qual:id="CK1alpha" qual:constant="false" qual:name="CK1alpha">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>RNAi knockdown of CKI alpha inhibits ARM phosphorylation and degradation, and induces PAN-mediated 
+luciferase expression (Matsubayashi et al., 2004; Yanagawa et al., 2002). 
+CKI alpha RNAi in Drosophila embryos results in a naked cuticle‚ while CKI alpha ectopic expression phenotype is 
+consistent with ectopic WG signalling  (Yanagawa et al., 2002). CKI alpha may positively regulate WG signalling by 
+phosphorylating DSH (Matsubayashi et al., 2004; McKay et al., 2001). Alternatively, CKI alpha could exert a positive influence on WG pathway by phosphorylating ARR. 
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#fddd8ff7-ab8a-4197-aea8-502443c57372">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11927557"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:14966281"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0015024.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="true" qual:name="Proteasome" qual:id="Proteasome">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Proteasome complex (26 S in mammalian).</p>
+  </body>
+        </notes>
+      </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="c72b1266-c40d-48c7-b416-664a04a17861" qual:id="Hipk" qual:constant="true" qual:name="Homeodomain-interacting protein kinase">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Loss and gain of functions of hipk demonstrates that HIPK plays a positive role in transmission of the WG signal. 
+HIPK can promote ARM stabilization in regions of the wing disc receiving lower levels of WG signalling. Stabilized 
+ARM can induce gene expression of WG targets. HIPK can form a complex with ARM and PAN. 
+HIPK phosphorylates ARM.  (Ishitani et al., 1999, Xu et al., 2007). 
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#c72b1266-c40d-48c7-b416-664a04a17861">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:10391247"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:17881495"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0035142.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="ee2b8914-b045-44ca-9d9e-5f450154e6db" qual:id="Slmb" qual:constant="true" qual:name="Supernumerary limbs">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>The protein Supernumerary limbs (SLMB) is a subunit of a multi-protein complex that targets proteins for degradation by the ubiquitin-proteasome pathway (Ko et al., 2002, Smelkinson et al., 2006, 2007). </p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#ee2b8914-b045-44ca-9d9e-5f450154e6db">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12442174"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:16386907"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:17925225"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:17881495"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0023423.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="d4346406-85ac-4214-929b-8ad9b3bf9530" qual:id="Arm" qual:constant="false" qual:name="Armadillo">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>ARM mediates the induction of WG target genes. Upon WG signaling, ARM is stabilized and accumulates in the 
+cytoplasm, serving as a measure of WG activity (Seto et al., 2004). 
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#d4346406-85ac-4214-929b-8ad9b3bf9530">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0000117.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:14729180"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:17881495"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="eeb805df-ddcf-4adc-84c7-fddb7545f706" qual:id="Pan" qual:constant="false" qual:name="Pangolin/DTcf">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>PAN is the WG effector.  It is expressed in heart at stages 10-11. 
+PAN activates eve (Knirr et al., 2001). WG activates slpvia PAN, thereby contributing to the 
+specification of FB (Reichmann, 1998) and VM (Azpiazu et al., 1996). 
+The effect of WG on VM specification takes place after stage 10. (Azpiazu et al., 1996; Riechmann et al; 1998; Knirr et al., 2001; Hosono et al., 2003; Xu et al., 2007).</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#eeb805df-ddcf-4adc-84c7-fddb7545f706">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8985186"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11783990"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12490551"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:17881495"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0085432.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_96888e0a-f107-43d1-b709-2564b9ddd55c" qual:id="Nemo" qual:constant="true" qual:name="Nemo">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Nemo inhibits the activity of WG in the wing disc patterning 
+(Zeng et al., 2004). </p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_96888e0a-f107-43d1-b709-2564b9ddd55c">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:15169756"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0011817.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_7ceb300e-fc60-41ff-9051-ce9514acf754" qual:id="Lgs" qual:constant="true" qual:name="Legless">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>The adaptor protein Legless (LGS) links ARM N-terminal homology domain (NHD) and PYGO, is essential for WG- 
+regulated transcriptional activation (Hoffmans et al. 2007, Carrera et al., 2008, Jessen et al., 2008). </p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_7ceb300e-fc60-41ff-9051-ce9514acf754">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:17113272"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:18404694"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:18451032"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8985186"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0039907.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="bc9738fe-d383-4f08-8a21-0d92f8d63d20" qual:id="Nej" qual:constant="true" qual:name="Nejire">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Nejire (NEJ)  prevents ARM/PAN complex formation, thereby inhibiting transcription (Waltzer and Bienz, 1998). 
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#bc9738fe-d383-4f08-8a21-0d92f8d63d20">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:18404694"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0004396.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="f4411173-8457-4f57-90b9-4ac246578849" qual:id="Gro" qual:constant="true" qual:name="Grochou">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p> PAN protein interacts with co-repressors such as Groucho to keep WG target genes silent in the absence of an active signal (Jessen et al., 2008). </p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#f4411173-8457-4f57-90b9-4ac246578849">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:18404694"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0001139.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_15677bf6-59d3-4aa3-8522-573456b429f0" qual:id="Hyx" qual:constant="true" qual:name="Hyrax">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>The N-terminal region of Hyrax (HYX) directly interacts with the C-terminal region of ARM. HYX plays a key role in mediating the transcriptional output of ARM in response to WG pathway activation. Moreover, the transactivation potential of HYX depends on the recruitment of Pygopus to ARM (Mosimann et al., 2006).</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_15677bf6-59d3-4aa3-8522-573456b429f0">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:16630820"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0037657.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="d7ec35b9-27db-4270-beb4-cb6ed09d64f1" qual:id="Pygo" qual:constant="true" qual:name="Pygopus">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Pygopus (PYGO) is essential for the transcriptional activity of ARM during Drosophila development. 
+PYGO is recruited to Drosophila PAN target genes via the LGS-ARM adaptor chain. 
+Drosophila Hyrax is required for nuclear transduction of WG signal and binds directly to the C-terminal region of ARM.  Moreover, the transactivation potential of Hyrax depends on the recruitment of Pygopus to ARM. 
+(Carrera et al., 2008, Kessler et al., 2009). </p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#d7ec35b9-27db-4270-beb4-cb6ed09d64f1">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:18451032"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:19493659"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0043900.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="cf364467-cdcb-4e73-ba33-153d6f8acb68" qual:id="Targets" qual:constant="false" qual:name="Targets genes">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Targets or WG pathway in the mesoderm include: 
+- srp in fat body domain, 
+- tin, slp, doc in the heart domain.
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#cf364467-cdcb-4e73-ba33-153d6f8acb68">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8985186"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12858517"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:16221729"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+    </qual:listOfQualitativeSpecies>
+    <qual:listOfTransitions xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:transition qual:id="tr_Dlp">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Ttv" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Dlp_in_0"/>
+          <qual:input qual:qualitativeSpecies="Wf" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Dlp_in_1"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Dlp" qual:transitionEffect="assignmentLevel" qual:id="tr_Dlp_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Ttv </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Wf </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Dally">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Ttv" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Dally_in_0"/>
+          <qual:input qual:qualitativeSpecies="Wf" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Dally_in_1"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Dally" qual:transitionEffect="assignmentLevel" qual:id="tr_Dally_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Ttv </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Wf </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Fz">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Wg" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Fz_in_4"/>
+          <qual:input qual:qualitativeSpecies="Boca" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Fz_in_7"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Fz" qual:transitionEffect="assignmentLevel" qual:id="tr_Fz_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Wg </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Boca </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Arr">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Wg" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Arr_in_4"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Arr" qual:transitionEffect="assignmentLevel" qual:id="tr_Arr_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Wg </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Dsh">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Fz" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Dsh_in_5"/>
+          <qual:input qual:qualitativeSpecies="Arr" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Dsh_in_6"/>
+          <qual:input qual:qualitativeSpecies="Nkd" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Dsh_in_8"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Dsh" qual:transitionEffect="assignmentLevel" qual:id="tr_Dsh_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Fz </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Arr </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Nkd </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Fz </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Nkd </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Axin">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Dsh" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Axin_in_9"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Axin" qual:transitionEffect="assignmentLevel" qual:id="tr_Axin_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Dsh </ci>
+                <cn type="integer"> 0 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Sgg">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Dsh" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Sgg_in_9"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Sgg" qual:transitionEffect="assignmentLevel" qual:id="tr_Sgg_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Dsh </ci>
+                <cn type="integer"> 0 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_APC">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Dsh" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_APC_in_9"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="APC" qual:transitionEffect="assignmentLevel" qual:id="tr_APC_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Dsh </ci>
+                <cn type="integer"> 0 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_CK1alpha">
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="CK1alpha" qual:transitionEffect="assignmentLevel" qual:id="tr_CK1alpha_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Arm">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Axin" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Arm_in_10"/>
+          <qual:input qual:qualitativeSpecies="Sgg" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Arm_in_11"/>
+          <qual:input qual:qualitativeSpecies="APC" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Arm_in_12"/>
+          <qual:input qual:qualitativeSpecies="CK1alpha" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Arm_in_13"/>
+          <qual:input qual:qualitativeSpecies="Proteasome" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Arm_in_14"/>
+          <qual:input qual:qualitativeSpecies="Hipk" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Arm_in_15"/>
+          <qual:input qual:qualitativeSpecies="Slmb" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Arm_in_16"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Arm" qual:transitionEffect="assignmentLevel" qual:id="tr_Arm_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Axin </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Sgg </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> APC </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CK1alpha </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Proteasome </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Hipk </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Axin </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Sgg </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> APC </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CK1alpha </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Proteasome </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Hipk </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Slmb </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Pan">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Arm" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Pan_in_17"/>
+          <qual:input qual:qualitativeSpecies="Nemo" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Pan_in_19"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Pan" qual:transitionEffect="assignmentLevel" qual:id="tr_Pan_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Arm </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Nemo </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Targets">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Pan" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Targets_in_18"/>
+          <qual:input qual:qualitativeSpecies="Lgs" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Targets_in_20"/>
+          <qual:input qual:qualitativeSpecies="Nej" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Targets_in_21"/>
+          <qual:input qual:qualitativeSpecies="Gro" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Targets_in_22"/>
+          <qual:input qual:qualitativeSpecies="Hyx" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Targets_in_23"/>
+          <qual:input qual:qualitativeSpecies="Pygo" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Targets_in_24"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Targets" qual:transitionEffect="assignmentLevel" qual:id="tr_Targets_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Pan </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Lgs </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Nej </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Gro </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Hyx </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Pygo </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+    </qual:listOfTransitions>
+    <listOfCompartments>
+      <compartment constant="true" id="comp1"/>
+    </listOfCompartments>
+  </model>
+</sbml>

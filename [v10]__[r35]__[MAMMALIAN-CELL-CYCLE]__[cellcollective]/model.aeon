@@ -1,0 +1,55 @@
+#position:p27:66.46795550593697,274.854539886737
+$p27:((p27 & !(((CycA & CycE) | CycB) | CycD)) | !((((p27 | CycD) | CycB) | CycE) | CycA))
+p27 -> p27
+CycD -| p27
+CycB -| p27
+CycE -| p27
+CycA -| p27
+#position:Cdh1:19.5,153.10887195444207
+$Cdh1:((Cdc20 | (p27 & !CycB)) | !(((p27 | Cdc20) | CycB) | CycA))
+p27 -> Cdh1
+Cdc20 -> Cdh1
+CycB -| Cdh1
+CycA -| Cdh1
+#position:Cdc20:127.02576479686569,31.649655346288114
+$Cdc20:CycB
+CycB -> Cdc20
+#position:CycB:145.8490252438011,143.86537638325706
+$CycB:!(Cdh1 | Cdc20)
+Cdc20 -| CycB
+Cdh1 -| CycB
+#position:CycA:98.93970452792274,174.81527083953517
+$CycA:((E2F & !((Cdc20 | Rb) | (Cdh1 & UbcH10))) | (CycA & !((Cdc20 | Rb) | (Cdh1 & UbcH10))))
+Rb -| CycA
+E2F -> CycA
+Cdc20 -| CycA
+Cdh1 -| CycA
+CycA -> CycA
+UbcH10 -| CycA
+#position:Rb:142.67554733109844,281.8717925056807
+$Rb:((p27 & !(CycD | CycB)) | !((((p27 | CycD) | CycB) | CycE) | CycA))
+p27 -> Rb
+CycD -| Rb
+CycB -| Rb
+CycE -| Rb
+CycA -| Rb
+#position:CycD:53.57450101590709,389.8369905249405
+$CycD:CycD
+CycD -> CycD
+#position:CycE:180.33687363241012,375.66904948541395
+$CycE:(E2F & !Rb)
+Rb -| CycE
+E2F -> CycE
+#position:UbcH10:48.55451017154326,34
+$UbcH10:(((((CycB & !Cdh1) | (UbcH10 & ((Cdh1 & ((Cdc20 | CycB) | CycA)) | !Cdh1))) | (Cdc20 & !Cdh1)) | (CycA & !Cdh1)) | !((((Cdc20 | CycB) | Cdh1) | UbcH10) | CycA))
+Cdc20 -> UbcH10
+CycB -> UbcH10
+Cdh1 -? UbcH10
+UbcH10 -> UbcH10
+CycA -> UbcH10
+#position:E2F:202.17522949601266,240.17604797508267
+$E2F:((p27 & !(Rb | CycB)) | !(((Rb | p27) | CycB) | CycA))
+Rb -| E2F
+p27 -> E2F
+CycB -| E2F
+CycA -| E2F

@@ -1,0 +1,622 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" qual:required="true" version="1" xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+  <model id="M2668" metaid="_380122c5-3893-42d3-b710-4954cf8a196a" name="Toll Pathway of Drosophila Signaling Pathway">
+    <notes>
+      <body xmlns="http://www.w3.org/1999/xhtml">A limited number of signalling pathways are involved in the specification of cell fate during the development of all animals. Several of these pathways were originally identified in Drosophila. To clarify their roles, and possible cross-talk, we have built a logical model for the nine key signalling pathways recurrently used in metazoan development. In each case, we considered the associated ligands, receptors, signal transducers, modulators, and transcription factors reported in the literature. Implemented using the logical modelling software GINsim, the resulting models qualitatively recapitulate the main characteristics of each pathway, in wild type as well as in various mutant situations (e.g. loss-of-function or gain-of-function). These models constitute pluggable modules that can be used to assemble comprehensive models of complex developmental processes. Moreover, these models of Drosophila pathways could serve as scaffolds for more complicated models of orthologous mammalian pathways. Comprehensive model annotations and GINsim files are provided for each of the nine considered pathways.</body>
+    </notes>
+    <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_380122c5-3893-42d3-b710-4954cf8a196a">
+	<dc:creator>
+	<rdf:Bag>
+	<rdf:li rdf:parseType="Resource">
+	<vCard:N rdf:parseType="Resource">
+	<vCard:Family>Helikar</vCard:Family>
+	<vCard:Given>Tomas</vCard:Given>
+	</vCard:N>
+	<vCard:EMAIL>thelika@unmc.edu</vCard:EMAIL>
+	<vCard:ORG rdf:parseType="Resource">
+	<vCard:Orgname>University of Nebraska - Lincoln</vCard:Orgname>
+	</vCard:ORG>
+	</rdf:li>
+	</rdf:Bag>
+	</dc:creator>
+	<dcterms:created rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-01-28T19:24:15Z</dcterms:W3CDTF>
+	</dcterms:created>
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-01-22T07:08:46Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23868318"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+      <qual:listOfQualitativeSpecies xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:qualitativeSpecies metaid="_4f910aff-1858-493f-b8b2-9a3abbc10c37" qual:compartment="extracellular" qual:constant="true" qual:id="S_4" qual:name="Nec">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>necrotic (Nec) gene codes for the serine protease inhibitor (Serpin) SPN43Ac&lt;div>UniProt ID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/Q6V6F8" style="text-decoration: none; color: rgb(64, 148, 180); border-bottom-width: 0px; cursor: pointer; font-family: Verdana, Arial, sans-serif; font-size: 13.0571994781494px; line-height: 20.081974029541px; background-color: rgb(255, 255, 255);">Q6V6F8&lt;/a>&lt;/div>&lt;div>Gene Name: nec&lt;/div>&lt;div>Gene ID:&amp;nbsp;&lt;span style="color: rgb(87, 87, 87); font-family: arial, helvetica, clean, sans-serif; font-size: 11.6999998092651px; line-height: 16.199821472168px; background-color: rgb(213, 222, 227);">45908&lt;/span>&lt;/div>&lt;div>&lt;br/>&lt;/div>&lt;div>&lt;div>&lt;br/>&lt;/div>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_4f910aff-1858-493f-b8b2-9a3abbc10c37">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:51:48Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23868318"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="e05c56bf-c912-4037-b666-64404c40bf9b" qual:compartment="extracellular" qual:constant="true" qual:id="S_6" qual:name="Slmb">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>F-box protein Supernumary limbs (SLMB)&lt;div>UniProt ID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/Q9VDE3" style="text-decoration: none; color: rgb(64, 148, 180); border-bottom-width: 0px; cursor: pointer; font-family: Verdana, Arial, sans-serif; font-size: 13.0571994781494px; line-height: 20.081974029541px; background-color: rgb(255, 255, 255);">Q9VDE3&lt;/a>&lt;br/>Gene Name: slmb&lt;/div>&lt;div>Gene ID:&amp;nbsp;&lt;span style="color: rgb(87, 87, 87); font-family: arial, helvetica, clean, sans-serif; font-size: 11.6999998092651px; line-height: 16.199821472168px; background-color: rgb(213, 222, 227);">42504&lt;/span>&lt;span style="font-size: 10pt;">&amp;nbsp;&lt;/span>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#e05c56bf-c912-4037-b666-64404c40bf9b">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:51:48Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23868318"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="fa02b8b2-a8aa-4aee-ac74-1b40d3d898bf" qual:compartment="cytosol" qual:constant="false" qual:id="S_1" qual:initialLevel="0" qual:maxLevel="1" qual:name="Dif">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>dorsal-related immune responsive gene&lt;div>UniProt ID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/P98149" style="text-decoration: none; color: rgb(64, 148, 180); border-bottom-width: 0px; cursor: pointer; font-family: Verdana, Arial, sans-serif; font-size: 13.0571994781494px; line-height: 20.081974029541px; background-color: rgb(222, 239, 245);">P98149&lt;/a>&lt;/div>&lt;div>Gene Name: Dif&lt;/div>&lt;div>Gene ID:&amp;nbsp;&lt;span style="color: rgb(87, 87, 87); font-family: arial, helvetica, clean, sans-serif; font-size: 11.6999998092651px; line-height: 16.199821472168px; background-color: rgb(213, 222, 227);">35045&lt;/span>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#fa02b8b2-a8aa-4aee-ac74-1b40d3d898bf">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:51:48Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23868318"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:21209287"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:12872120"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_628c4d5d-103c-47bd-917e-7aac701fc3a2" qual:compartment="cytosol" qual:constant="false" qual:id="S_2" qual:initialLevel="0" qual:maxLevel="1" qual:name="Cactus">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>a IkB\r\nfactor Cactus&lt;div>UniProt ID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/Q03017" style="text-decoration: none; color: rgb(64, 148, 180); border-bottom-width: 0px; cursor: pointer; font-family: Verdana, Arial, sans-serif; font-size: 13.0571994781494px; line-height: 20.081974029541px; background-color: rgb(255, 255, 255);">Q03017&lt;/a>&lt;/div>&lt;div>Gene Name: cact&lt;/div>&lt;div>Gene ID:&amp;nbsp;&lt;span style="color: rgb(87, 87, 87); font-family: arial, helvetica, clean, sans-serif; font-size: 11.6999998092651px; line-height: 16.199821472168px; background-color: rgb(213, 222, 227);">34969&lt;/span>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_628c4d5d-103c-47bd-917e-7aac701fc3a2">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:51:48Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:21209287"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:17072326"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23868318"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_0fd1d96d-44a7-4bff-8184-7464e3209477" qual:compartment="cytosol" qual:constant="false" qual:id="S_3" qual:initialLevel="0" qual:maxLevel="1" qual:name="Toll">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Drosophila Toll receptor family&lt;div>Gene Name: TI&lt;/div>&lt;div>Gene ID:&amp;nbsp;&lt;span style="color: rgb(87, 87, 87); font-family: arial, helvetica, clean, sans-serif; font-size: 11.6999998092651px; line-height: 16.199821472168px; background-color: rgb(213, 222, 227);">43222&lt;/span>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_0fd1d96d-44a7-4bff-8184-7464e3209477">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:51:48Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23868318"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_4a136456-b1a3-4cd4-8609-6ab8b3790f25" qual:compartment="cytosol" qual:constant="false" qual:id="S_5" qual:initialLevel="0" qual:maxLevel="1" qual:name="MyD88">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>adaptor protein&lt;div>UniProt ID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/Q7K105" style="text-decoration: none; color: rgb(64, 148, 180); border-bottom-width: 0px; cursor: pointer; font-family: Verdana, Arial, sans-serif; font-size: 13.0571994781494px; line-height: 20.081974029541px; background-color: rgb(222, 239, 245);">Q7K105&lt;/a>&lt;br/>&lt;div>Gene Name:&amp;nbsp;&lt;a href="http://www.ncbi.nlm.nih.gov/gene/35956" ref="ordinalpos=1&amp;amp;ncbi_uid=35956&amp;amp;link_uid=35956" style="color: rgb(100, 42, 143); font-family: arial, helvetica, clean, sans-serif; font-size: 13px; line-height: 17.9998016357422px; white-space: nowrap; background-color: rgb(213, 222, 227);">&lt;span class="highlight">Myd88&lt;/span>&lt;/a>&lt;/div>&lt;div>Gene ID:&amp;nbsp;&lt;span style="color: rgb(87, 87, 87); font-family: arial, helvetica, clean, sans-serif; font-size: 11.6999998092651px; line-height: 16.199821472168px; background-color: rgb(213, 222, 227);">35956&lt;/span>&lt;/div>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_4a136456-b1a3-4cd4-8609-6ab8b3790f25">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:51:48Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:12888566"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:14685264"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:12351681"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23868318"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_19aee8fc-f682-42e1-81e9-905ce743714c" qual:compartment="cytosol" qual:constant="false" qual:id="S_7" qual:initialLevel="0" qual:maxLevel="1" qual:name="Dorsal">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;span style="font-family: arial, helvetica, clean, sans-serif; font-size: 13px; line-height: 17.9998016357422px; background-color: rgb(255, 255, 255);">embryonic polarity protein&lt;/span>&lt;span class="highlight" style="font-family: arial, helvetica, clean, sans-serif; font-size: 13px; line-height: 17.9998016357422px; background-color: rgb(255, 255, 255);">dorsal&lt;/span>&lt;div>&lt;span class="highlight" style="font-family: arial, helvetica, clean, sans-serif; font-size: 13px; line-height: 17.9998016357422px; background-color: rgb(255, 255, 255);">UniProt ID:&amp;nbsp;&lt;/span>&lt;a href="http://www.uniprot.org/uniprot/P15330" style="text-decoration: none; color: rgb(64, 148, 180); border-bottom-width: 0px; cursor: pointer; font-family: Verdana, Arial, sans-serif; font-size: 13.0571994781494px; line-height: 20.081974029541px; background-color: rgb(255, 255, 255);">P15330&lt;/a>&lt;/div>&lt;div>&lt;span class="highlight" style="font-family: arial, helvetica, clean, sans-serif; font-size: 13px; line-height: 17.9998016357422px; background-color: rgb(255, 255, 255);">Gene Name: Dorsal&lt;/span>&lt;/div>&lt;div>&lt;span class="highlight" style="font-family: arial, helvetica, clean, sans-serif; font-size: 13px; line-height: 17.9998016357422px; background-color: rgb(255, 255, 255);">Gene ID:&amp;nbsp;&lt;/span>&lt;span style="color: rgb(87, 87, 87); font-family: arial, helvetica, clean, sans-serif; font-size: 11.6999998092651px; line-height: 16.199821472168px; background-color: rgb(213, 222, 227);">692440&lt;/span>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_19aee8fc-f682-42e1-81e9-905ce743714c">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:51:48Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23868318"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_05907574-6f17-4464-a245-3da8990aa81c" qual:compartment="cytosol" qual:constant="false" qual:id="S_8" qual:initialLevel="0" qual:maxLevel="1" qual:name="Spz">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Protein spaetzle of&amp;nbsp;&amp;nbsp;the Toll pathway ligand&lt;div style="font-family: Arial, Verdana; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">UniProt ID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/P48607" style="text-decoration: none; color: rgb(64, 148, 180); border-bottom-width: 0px; cursor: pointer; font-family: Verdana, Arial, sans-serif; font-size: 13.0571994781494px; line-height: 20.081974029541px; background-color: rgb(222, 239, 245);">P48607&lt;/a>&lt;/div>&lt;div style="font-family: Arial, Verdana; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">Gene Name: spz&amp;nbsp;&lt;/div>&lt;div style="font-family: Arial, Verdana; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">Gene ID:&amp;nbsp;&lt;span style="color: rgb(87, 87, 87); font-family: arial, helvetica, clean, sans-serif; font-size: 11.6999998092651px; line-height: 16.199821472168px; background-color: rgb(213, 222, 227);">43256&lt;/span>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_05907574-6f17-4464-a245-3da8990aa81c">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:51:48Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23868318"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_69ed885c-75d2-48e4-8c3c-a715ce256965" qual:compartment="cytosol" qual:constant="false" qual:id="S_9" qual:initialLevel="0" qual:maxLevel="1" qual:name="Tube">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Tube adaptor protein&lt;div>UniProt ID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/P22812" style="text-decoration: none; color: rgb(64, 148, 180); border-bottom-width: 0px; cursor: pointer; font-family: Verdana, Arial, sans-serif; font-size: 13.0571994781494px; line-height: 20.081974029541px; background-color: rgb(255, 255, 255);">P22812&lt;/a>&lt;/div>&lt;div>Gene Name: tub&lt;/div>&lt;div>Gene ID:&amp;nbsp;&lt;span style="color: rgb(87, 87, 87); font-family: arial, helvetica, clean, sans-serif; font-size: 11.6999998092651px; line-height: 16.199821472168px; background-color: rgb(213, 222, 227);">40554&lt;/span>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_69ed885c-75d2-48e4-8c3c-a715ce256965">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:51:48Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23868318"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="fb542ae5-fe25-45c3-9a3d-312ce6404506" qual:compartment="cytosol" qual:constant="false" qual:id="S_10" qual:initialLevel="0" qual:maxLevel="1" qual:name="Pelle">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Pelle is a serine, threonine kinase.&lt;div>UniProt ID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/Q05652" style="text-decoration: none; color: rgb(64, 148, 180); border-bottom-width: 0px; cursor: pointer; font-family: Verdana, Arial, sans-serif; font-size: 13.0571994781494px; line-height: 20.081974029541px; background-color: rgb(255, 255, 255);">Q05652&lt;/a>&lt;/div>&lt;div>Gene Name: pll&lt;/div>&lt;div>Gene ID:&amp;nbsp;&lt;span style="color: rgb(87, 87, 87); font-family: arial, helvetica, clean, sans-serif; font-size: 11.6999998092651px; line-height: 16.199821472168px; background-color: rgb(213, 222, 227);">43283&lt;/span>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#fb542ae5-fe25-45c3-9a3d-312ce6404506">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:51:48Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:15797509"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:17072326"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23868318"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_9bc3947f-cce4-4bf8-9185-31922ea1e274" qual:compartment="cytosol" qual:constant="false" qual:id="S_11" qual:initialLevel="0" qual:maxLevel="1" qual:name="Targets">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Target nodes from the paper [1]</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_9bc3947f-cce4-4bf8-9185-31922ea1e274">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:51:48Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23868318"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+    </qual:listOfQualitativeSpecies>
+    <qual:listOfTransitions xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:transition qual:id="tr_S_1">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Cactus inhibits Dif [1, 2, 3].</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_1_in_S_2" qual:qualitativeSpecies="S_2" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>DIF was identified as a dorsal-related immune responsive gene that does not\r\nparticipate in dorsal ventral patterning. Instead, it mediates an immune\r\nresponse in Drosophila larvae and interacts with Cactus. [1, 2, 3]&amp;nbsp;</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_1" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <not/>
+                <apply>
+                  <eq/>
+                  <ci> S_2 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_2">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Pelle and Slmb inhibit Cactus [1, 2, 3].</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_2_in_S_6" qual:qualitativeSpecies="S_6" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Slmb inhibits Cactus [1]</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_2_in_S_10" qual:qualitativeSpecies="S_10" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>To be\r\ndegraded, Cactus is phosphorylated by Pelle. [1, 2, 3]</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_2" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <not/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_10 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> S_6 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_3">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;span style="color: rgb(79, 79, 79); font-family: Arial, sans-serif; font-size: 12px; line-height: 18px; orphans: 3; widows: 3; background-color: rgb(255, 255, 255);">Spz activates Toll [1]&lt;/span></p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_3_in_S_8" qual:qualitativeSpecies="S_8" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Spz activates Toll [1]</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_3" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_8 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_5">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Toll activates MyD88 [1, 2, 3, 4].</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_5_in_S_3" qual:qualitativeSpecies="S_3" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>The TIR interleukin-1 receptor domain of Toll binds to the TIR domain of\r\nMyD88, however, binding occurs only when the receptor is active. [1, 2, 3, 4]</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_5" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_3 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_7">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Cactus inhibits Dorsal [1]</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_7_in_S_2" qual:qualitativeSpecies="S_2" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;span style="font-size: 13.3333330154419px;">Cactus inhibits Dorsal [1]&lt;/span></p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_7" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <not/>
+                <apply>
+                  <eq/>
+                  <ci> S_2 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_8">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;span style="font-size: 13.3333330154419px;">Nec inhibits Spz [1]&lt;/span></p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_8_in_S_4" qual:qualitativeSpecies="S_4" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Nec inhibits Spz [1]</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_8" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <not/>
+                <apply>
+                  <eq/>
+                  <ci> S_4 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_9">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;span style="font-size: 13.3333330154419px;">MyD88 positively regulates Tube [1]&lt;/span></p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_9_in_S_5" qual:qualitativeSpecies="S_5" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>MyD88 positively regulates Tube [1]</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_9" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_5 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_10">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Tube activates Pelle [1, 2, 3].</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_10_in_S_9" qual:qualitativeSpecies="S_9" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Pelle has been shown to auto-phosphorylate himself and to phosphorylate\r\nToll and Tube. [1, 2, 3]</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_10" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_9 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_11">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;span style="font-size: 13.3333330154419px;">Dif activates the Target nodes [1].&amp;nbsp;&lt;/span>&lt;span style="font-size: 13.3333330154419px;">Dorsal activates the Target nodes [1]&lt;/span></p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_11_in_S_7" qual:qualitativeSpecies="S_7" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;span style="font-size: 13.3333330154419px;">Dorsal activates the Target nodes [1]&lt;/span></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_11_in_S_1" qual:qualitativeSpecies="S_1" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Dif activates the Target nodes [1]</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_11" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> S_1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_7 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+    </qual:listOfTransitions>
+    <listOfCompartments>
+      <compartment constant="true" id="extracellular" name="extracellular"/>
+      <compartment constant="true" id="cytosol" name="cytosol"/>
+    </listOfCompartments>
+  </model>
+</sbml>

@@ -1,0 +1,713 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" layout:required="false" level="3" qual:required="true" xmlns:layout="http://www.sbml.org/sbml/level3/version1/layout/version1" version="1" xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+  <model metaid="_3fee1bf9-ac19-47c9-8b86-98bd395bddca" id="model_id">
+    <notes>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Toll was initially discovered as an essential component of the pathway that establishes the dorsal, ventral axis of the early Drosophila embryo. If any component in that genetic pathway is missing, no ventral or lateral cell types develop and the resulting embryos lack all mesoderm and the entire nervous system (Anderson et al., 2000). 
+Fungal and Gram-positive bacterial infections in Drosophila also stimulate the Toll pathway. 
+Activation of Toll leads to recruitment of three cytoplasmic proteins, which are MYD88, Tube and Pelle, to form the signalling complex underneath the cell membrane (Sun et al, 2004). 
+Subsequently, through interactions via death domains, assembly of the signalling complex containing MYD88, Tube and Pelle occurs (Sun et al, 2004; Tanji et al, 2005). 
+From this complex, signalling proceeds through the phosphorylation and degradation of the Drosophila IkB factor Cactus. In non signaling conditions, Cactus is bound to Dorsal or Dorsal-related immunity factor (DIF), inhibiting their activity and nuclear localization. 
+Pelle is the only kinase reported for Cactus phosphorylation. After phosphorylation, nuclear translocation of Dorsal/DIF leads to activation of transcription of several sets of target genes. 
+(Tanji et al, 2005; Minakhina et al, 2006; Valanne et al, 2011). 
+To reproduce pathway signalling dynamics, we define two initial states corresponding to no signalling conditions (no ligand binding) and to signalling conditions (binding of SPZ to the receptor Toll).</p>
+  </body>
+    </notes>
+    <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_3fee1bf9-ac19-47c9-8b86-98bd395bddca">
+          <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:21209287"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:10679407"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:14685264"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:15797509"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+      <layout:listOfLayouts xmlns:layout="http://www.sbml.org/sbml/level3/version1/layout/version1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <layout:layout layout:id="__layout__">
+        <layout:dimensions layout:height="464" layout:width="464"/>
+        <layout:listOfAdditionalGraphicalObjects>
+          <layout:generalGlyph layout:id="_ly_Nec" layout:reference="Nec">
+            <layout:boundingBox>
+              <layout:position layout:x="201" layout:y="16"/>
+              <layout:dimensions layout:height="30" layout:width="61"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Spz" layout:reference="Spz">
+            <layout:boundingBox>
+              <layout:position layout:x="297" layout:y="17"/>
+              <layout:dimensions layout:height="30" layout:width="61"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Toll" layout:reference="Toll">
+            <layout:boundingBox>
+              <layout:position layout:x="296" layout:y="76"/>
+              <layout:dimensions layout:height="30" layout:width="61"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_MyD88" layout:reference="MyD88">
+            <layout:boundingBox>
+              <layout:position layout:x="298" layout:y="133"/>
+              <layout:dimensions layout:height="30" layout:width="61"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Tube" layout:reference="Tube">
+            <layout:boundingBox>
+              <layout:position layout:x="297" layout:y="194"/>
+              <layout:dimensions layout:height="30" layout:width="61"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Pelle" layout:reference="Pelle">
+            <layout:boundingBox>
+              <layout:position layout:x="299" layout:y="253"/>
+              <layout:dimensions layout:height="30" layout:width="61"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Slmb" layout:reference="Slmb">
+            <layout:boundingBox>
+              <layout:position layout:x="403" layout:y="318"/>
+              <layout:dimensions layout:height="30" layout:width="61"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Cactus" layout:reference="Cactus">
+            <layout:boundingBox>
+              <layout:position layout:x="299" layout:y="318"/>
+              <layout:dimensions layout:height="30" layout:width="61"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Dif" layout:reference="Dif">
+            <layout:boundingBox>
+              <layout:position layout:x="250" layout:y="379"/>
+              <layout:dimensions layout:height="30" layout:width="61"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Dorsal" layout:reference="Dorsal">
+            <layout:boundingBox>
+              <layout:position layout:x="354" layout:y="379"/>
+              <layout:dimensions layout:height="30" layout:width="61"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Targets" layout:reference="Targets">
+            <layout:boundingBox>
+              <layout:position layout:x="303" layout:y="434"/>
+              <layout:dimensions layout:height="30" layout:width="61"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+        </layout:listOfAdditionalGraphicalObjects>
+      </layout:layout>
+    </layout:listOfLayouts>
+    <qual:listOfQualitativeSpecies xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="c49590a5-7076-42da-85c6-d74918ee85dc" qual:id="Nec" qual:constant="true" qual:name="Necrotic or Serpin">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>The necrotic (nec) gene encodes a proteinase inhibitor of the serpin family (serine proteinase inhibitor). NEC controls a proteolytic cascade which activates the innate immune response to fungal and Gram+ bacterial 
+infections. In nec null mutants, the Toll-mediated immune response is constitutively activated (constitutive expression of cleaved SPZ and constitutive expression of Drosomycin), even in the absence of infection, 
+implying that NEC continually restrains this immune response. (Levashina et al, 1999; Takeda et al, 2003). </p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#c49590a5-7076-42da-85c6-d74918ee85dc">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:10489372"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:18432983"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0002930.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_1b3b5b9b-5f98-4207-84a6-55f87fe2bf01" qual:id="Spz" qual:constant="false" qual:name="Spaetzle">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Spatzle (SPZ) is synthesized and secreted as an inactive precursor consisting of a prodomain and a C-terminal region (C-106). In DV patterning, SPZ is processed into its active C-106 form by a serine protease cascade including Nudel, Gastrulation Defective, Snake, and Easter. In addition, sulfotransferase Pipe is required independently of the protease cascade to activate Easter. In microbe recognition, SPZ- processing enzyme 
+(SPE) is responsible for SPZ cleavage. 
+It has been showed that a truncated SPZ can bind to Toll and activate the Toll pathway, demonstrating that SPZ probably acts as a ligand for Toll in vivo. 
+Extracellular recognition factors initiate protease cascades leading to the activation of the Toll receptor ligand Spatzle. This activation induces proteolysis, which causes a conformational change exposing determinants that are critical for binding of the Toll receptor (Weber et al, 2003; Hu et al, 2004 and Ferrando et al, 2004) </p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_1b3b5b9b-5f98-4207-84a6-55f87fe2bf01">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12872120"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:15197269"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:14751763"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0003495.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_1375febd-4344-4833-a8d4-2f6c255180ca" qual:id="Toll" qual:constant="false" qual:name="Toll">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Drosophila Toll receptor family comprises nine members. Their extracellular domain is composed of leucine-rich repeats (LRRs) flanked by small domains characterised by specific arrangement of cystein residues, whereas the intracytoplasmic domain shows striking similarities with the cytoplasmic tail of the interleukin-1 (IL-1) receptor. 
+On the one hand, the function of Toll consisted in the regulation of the expression of antimicrobial peptides, which are strongly induced in the fat body in response to septic injury. On the other hand, Toll is involved in the establishment of the dorso-ventral (DV) axis of the Drosophila embryo. (Wu et al, 1997; Dunne et al, 2003 and 
+Lee et al, 2004).</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_1375febd-4344-4833-a8d4-2f6c255180ca">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9598341"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12888566"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:14966134"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0262473.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_769e07fe-d216-41cb-904a-033fd6f8d4d4" qual:constant="false" qual:id="MyD88">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>MyD88 and Tube act as adaptor proteins. 
+The TIR interleukin-1 receptor domain of Toll binds to the TIR domain of MyD88, however, binding occurs only when the receptor is active. MyD88 and Pelle do not come into contact with each other. Instead, two distinct surfaces in the adaptor protein Tube separately bind MyD88 and Pelle. 
+(Sun et al, 2002; Dunne et al, 2003; Sun et al. 2004) </p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_769e07fe-d216-41cb-904a-033fd6f8d4d4">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12351681"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12888566"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:14685264"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0033402.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_0c21511f-1a36-4151-af81-4cd1bb824a0b" qual:constant="false" qual:id="Tube">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Tube is an adaptor that functions downstream of Toll and upstream of Pelle. Tube recruits the Pelle kinase to the complex formed with toll, thereby increasing the Pelle concentration. (Minakhina et al, 2006)</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_0c21511f-1a36-4151-af81-4cd1bb824a0b">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:17072326"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0003882.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="c2f28202-149f-4c5a-b784-b8e42480b3d4" qual:constant="false" qual:id="Pelle">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Pelle is a serine, threonine kinase. Increased local concentration of Pelle might lead to trans-phosphorylation and stimulation of the Pelle kinase activity. 
+Ativated Pelle acts on cytoplasmic Dorsal, Cactus and DIF protein complexes. Pelle has been shown to auto-phosphorylate himself and to phosphorylate Toll and Tube. (Tanji et al, 2005; Minakhina et al, 2006).</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#c2f28202-149f-4c5a-b784-b8e42480b3d4">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:15797509"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:17072326"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0010441.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_14d12fd0-f7cf-405b-be05-dffe884390d5" qual:id="Slmb" qual:constant="true" qual:name="Supernumary limbs">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Supernumary limbs (SLMB) defined a phosphopeptide motif to target proteins for ubiquitination and subsequent proteolysis (ubiquitin-proteasome pathway). 
+Slmb is an important regulator of several developmental pathways, in particular the Wingless, Hedgehog and Toll pathways. 
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_14d12fd0-f7cf-405b-be05-dffe884390d5">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12401167"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12432393"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11500045"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:10097128"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:10022863"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0023423.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_53ae08ef-ad5b-4f6f-b4cd-9419b37be052" qual:constant="false" qual:id="Cactus">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>From the oligomeric MyD88-Tube-Pelle complex, Toll signalling proceeds to the phosphorylation and degradation of the Drosophila IkB factor Cactus. In non signaling conditions, Cactus is bound to Dorsal and/or DIF, 
+inhibiting their activity and nuclear localization. So, the nuclear translocation of both Dorsal and DIF requires Cactus degradation. To be degraded, Cactus is phosphorylated by Pelle. After signal-induced degradation of Cactus, DIF and Dorsal translocate to the nucleus and activate the expression of antimicrobial peptide genes. 
+(Tanji et al, 2005; Valanne et al, 2011)</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_53ae08ef-ad5b-4f6f-b4cd-9419b37be052">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:17072326"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:21209287"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0000250.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_6016d1bb-e3d4-41ed-bdf9-cd4fbf6e081a" qual:id="Dif" qual:constant="false" qual:name="Dif">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>DIF was identified as a dorsal-related immune responsive gene that does not participate in dorsal ventral patterning. Instead, it mediates an immune response in Drosophila larvae and interacts with Cactus. Dorsal and DIF are redundant in larvae and can form heterodimers. (Weber et al., 2003; Minakhina et al, 2006; Valanne et al, 2011).</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_6016d1bb-e3d4-41ed-bdf9-cd4fbf6e081a">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12872120"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:21209287"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0011274.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_378e490e-5970-4f32-b791-361456d1b081" qual:id="Dorsal" qual:constant="false" qual:name="Dorsal">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Threshold levels of Dorsal control the expression of zygotic genes. Dorsal-mediated gene expression represents the transition from maternal to zygotic control of dorsal ventral patterning in the Drosophila embryo. This 
+asymmetry is transmitted to the embryo through the interaction of two groups of genes. One group is expressed specifically on the ventral side of the follicle cells that surround the oocyte and secrete the egg membranes. 
+The other group is mainly made up of the genes gastrulation defective, snake and easter, all three encoding serine proteases. The proteases form an activation cascade that culminates in the maturation and cleavage of the ligand SPZ, which in turn activates the Toll-Dorsal signaling pathway. (Morisato and Anderson, 1994; Weber et al., 2003; 
+Minakhina et al, 2006).</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_378e490e-5970-4f32-b791-361456d1b081">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12872120"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:21209287"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0260632.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_02e1f0a7-e6cd-4d1e-aba7-cab6c9b2be4d" qual:id="Targets" qual:constant="false" qual:name="target genes">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>The Toll pathway is involved in several developmental processes (dorso-ventral patterning, apoptosis, oogenesis, cardiac development) and in the immune response.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_02e1f0a7-e6cd-4d1e-aba7-cab6c9b2be4d">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11832242"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:23083631"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:22902989"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:22611248"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+    </qual:listOfQualitativeSpecies>
+    <qual:listOfTransitions xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:transition qual:id="tr_Spz">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Nec" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Spz_in_0"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Spz" qual:transitionEffect="assignmentLevel" qual:id="tr_Spz_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Nec </ci>
+                <cn type="integer"> 0 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Toll">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Spz" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Toll_in_1"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Toll" qual:transitionEffect="assignmentLevel" qual:id="tr_Toll_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Spz </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_MyD88">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Toll" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_MyD88_in_2"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="MyD88" qual:transitionEffect="assignmentLevel" qual:id="tr_MyD88_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Toll </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Tube">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="MyD88" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Tube_in_3"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Tube" qual:transitionEffect="assignmentLevel" qual:id="tr_Tube_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> MyD88 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Pelle">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Tube" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Pelle_in_4"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Pelle" qual:transitionEffect="assignmentLevel" qual:id="tr_Pelle_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Tube </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Cactus">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Pelle" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Cactus_in_5"/>
+          <qual:input qual:qualitativeSpecies="Slmb" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Cactus_in_6"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Cactus" qual:transitionEffect="assignmentLevel" qual:id="tr_Cactus_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> Pelle </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Pelle </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Slmb </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Dif">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Cactus" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Dif_in_7"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Dif" qual:transitionEffect="assignmentLevel" qual:id="tr_Dif_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Cactus </ci>
+                <cn type="integer"> 0 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Dorsal">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Cactus" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Dorsal_in_7"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Dorsal" qual:transitionEffect="assignmentLevel" qual:id="tr_Dorsal_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Cactus </ci>
+                <cn type="integer"> 0 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Targets">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Dif" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Targets_in_8"/>
+          <qual:input qual:qualitativeSpecies="Dorsal" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Targets_in_9"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Targets" qual:transitionEffect="assignmentLevel" qual:id="tr_Targets_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Dif </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Dorsal </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Dif </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+    </qual:listOfTransitions>
+    <listOfCompartments>
+      <compartment constant="true" id="comp1"/>
+    </listOfCompartments>
+  </model>
+</sbml>

@@ -1,0 +1,419 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" layout:required="false" level="3" qual:required="true" xmlns:layout="http://www.sbml.org/sbml/level3/version1/layout/version1" version="1" xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+  <model id="model_id">
+    <notes>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>This Boolean model displays the subtle role of miR-9 in the course of neural specification in zebra fish.
+
+The node P denotes a proliferating progenitor state (P=1, N=0). It is defined by the expression of Her6 and/or Zic5. The node N denotes the differentiation of a progenitor into a neural precursor (N=1, N=0). 
+
+By inhibiting genes (Her6, Zic5 and HuC) with opposite effects on neural differentiation, miR-9 activity generates an third, ambivalent stable state (P=0; N=0). This state is  poised for responding to both progenitor maintenance and commitment cues.
+
+Model simulations qualitatively recapitulate all the experimental results presented in Coolen et al (submitted), for the wild-type as well as for various mutant situations (including loss-of-functions, ectopic gene expressions, and miR-9 target protection by morpholinos).
+
+</p>
+  </body>
+    </notes>
+    <layout:listOfLayouts xmlns:layout="http://www.sbml.org/sbml/level3/version1/layout/version1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <layout:layout layout:id="__layout__">
+        <layout:dimensions layout:height="371" layout:width="489"/>
+        <layout:listOfAdditionalGraphicalObjects>
+          <layout:generalGlyph layout:id="_ly_miR9" layout:reference="miR9">
+            <layout:boundingBox>
+              <layout:position layout:x="285" layout:y="76"/>
+              <layout:dimensions layout:height="40" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Her6" layout:reference="Her6">
+            <layout:boundingBox>
+              <layout:position layout:x="137" layout:y="194"/>
+              <layout:dimensions layout:height="40" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Zic5" layout:reference="Zic5">
+            <layout:boundingBox>
+              <layout:position layout:x="285" layout:y="198"/>
+              <layout:dimensions layout:height="40" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_HuC" layout:reference="HuC">
+            <layout:boundingBox>
+              <layout:position layout:x="429" layout:y="199"/>
+              <layout:dimensions layout:height="40" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_P" layout:reference="P">
+            <layout:boundingBox>
+              <layout:position layout:x="139" layout:y="329"/>
+              <layout:dimensions layout:height="40" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_N" layout:reference="N">
+            <layout:boundingBox>
+              <layout:position layout:x="420" layout:y="331"/>
+              <layout:dimensions layout:height="40" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+        </layout:listOfAdditionalGraphicalObjects>
+      </layout:layout>
+    </layout:listOfLayouts>
+    <qual:listOfQualitativeSpecies xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_69882a48-dd05-49b5-a16d-41b372404f75" qual:id="miR9" qual:constant="false" qual:name="miR-9">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>miR-9 expression starts at late stages of embryogenesis, in progenitor cells and freshly determined neuronal precursors. miR-9 expression is absent from differentiating precursors. 
+Several studies showed that miR-9 tends to favor neuronal differentiation over progenitor proliferation (Leucht et al., 2008; Packer et al., 2008; Shibata et al., 2008; Yoo et al., 2009; Zhao et al., 2009; Bonev et al., 2011; Shibata et al., 2011). 
+In contrast, Delaloy et al. (2010) demonstrated that miR-9 promotes proliferation of human neural precursors cells, suggesting that miR-9 function is context-dependent (Gao, 2010). 
+
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_69882a48-dd05-49b5-a16d-41b372404f75">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/18454145"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/19118166"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/18842901"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/19561591"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/19330006"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/21238922"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/21368052"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/20362537"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/20920300"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="d9022f35-f85a-4ac5-9082-2e0acd376be2" qual:id="Her6" qual:constant="false" qual:name="her6">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Her6 is a transcriptional repressor of the hairy/enhancer-of-split family involved in progenitor maintenance.
+Her6 is the direct ortholog of the mammalian gene Hes1 (Pasini et al., 2001) and is a member of the hairy/enhancer-of-split family of transcription factors-encoding genes (Hes). In rodents, there is compelling evidence that Hes1, as an effector of the Notch signaling pathway, prevents precocious differentiation of progenitors, notably through the direct inhibition of proneural factors (Hatakeyama et al., 2004). Likewise, a role of her6 in the maintenance of progenitor pools in the zebrafish thalamus has recently been uncovered (Scholpp et al., 2009).</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#d9022f35-f85a-4ac5-9082-2e0acd376be2">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/11165489"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/15496443"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/19903880"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_3211e137-3564-469d-ba99-764965508047" qual:id="Zic5" qual:constant="false" qual:name="zic5">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Zic5 is a zinc finger transcription factor involved in progenitor maintenance.
+Zic transcription factors act at different steps of neural development (Aruga, 2004). Like Hes proteins, some Zic factors have been shown to favor proliferation of neural progenitors and repress proneural factors expression (Inoue et al., 2007; Elsen et al., 2008). In zebrafish zic5 cooperates with zic2a in the regulation of tectal proliferation (Nyholm et al., 2007).</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_3211e137-3564-469d-ba99-764965508047">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/17507568"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/18191121"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/17215296"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_31f27381-501b-4004-9a71-63dc854b04fa" qual:id="HuC" qual:constant="false" qual:name="elavl3/HuC">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>HuC is a RNA-binding protein encoded by the gene elavl3 and expressed in neuronal precursors. HuC has been shown to promote cell cycle exit and neuronal maturation.
+Hu proteins have been shown to promote neuronal maturation by increasing the stability and/or translation of target messenger RNAs encoding neuron specific factors, such as Mapt (Tau) (Aranda-Abreu et al., 1999) and neurofilament  M (Antic et al., 1999). Over-expression of Hu proteins has also been shown to promote cell cycle arrest (Akamatsu et al., 1999; Yano et al., 2005), and, in the mouse rhombencephalon, over-expression of elavl3/HuC or its paralog elavl2/HuB results in precocious neuronal differentiation (Akamatsu et al., 1999). </p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_31f27381-501b-4004-9a71-63dc854b04fa">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/10436048"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/10049360"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/10449789"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/15671036"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="false" qual:name="Progenitor" qual:id="P">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>P denotes a cycling progenitor. It is characterized by the expression of Her6 and/or Zic5.</p>
+  </body>
+        </notes>
+      </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="false" qual:name="Neural Precursor" qual:id="N">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>N denotes a neuronal precursor, on the way to cell-cycle exit and neuronal maturation. It is defined by the expression of HuC.</p>
+  </body>
+        </notes>
+      </qual:qualitativeSpecies>
+    </qual:listOfQualitativeSpecies>
+    <qual:listOfTransitions xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:transition qual:id="tr_miR9">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Her6" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_miR9_in_1"/>
+          <qual:input qual:qualitativeSpecies="N" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_miR9_in_5"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="miR9" qual:transitionEffect="assignmentLevel" qual:id="tr_miR9_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Her6 </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> N </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Her6">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="miR9" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Her6_in_0"/>
+          <qual:input qual:qualitativeSpecies="N" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Her6_in_5"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Her6" qual:transitionEffect="assignmentLevel" qual:id="tr_Her6_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> miR9 </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> N </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Zic5">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="miR9" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Zic5_in_0"/>
+          <qual:input qual:qualitativeSpecies="N" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Zic5_in_5"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Zic5" qual:transitionEffect="assignmentLevel" qual:id="tr_Zic5_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> miR9 </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> N </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_HuC">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="miR9" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_HuC_in_0"/>
+          <qual:input qual:qualitativeSpecies="P" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_HuC_in_4"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="HuC" qual:transitionEffect="assignmentLevel" qual:id="tr_HuC_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> miR9 </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> P </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_P">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Her6" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_P_in_1"/>
+          <qual:input qual:qualitativeSpecies="Zic5" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_P_in_2"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="P" qual:transitionEffect="assignmentLevel" qual:id="tr_P_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Her6 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Zic5 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Her6 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_N">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="HuC" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_N_in_3"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="N" qual:transitionEffect="assignmentLevel" qual:id="tr_N_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> HuC </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+    </qual:listOfTransitions>
+    <listOfCompartments>
+      <compartment constant="true" id="comp1"/>
+    </listOfCompartments>
+  </model>
+</sbml>

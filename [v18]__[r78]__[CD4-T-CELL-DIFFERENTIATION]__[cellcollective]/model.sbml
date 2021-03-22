@@ -1,0 +1,2000 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" qual:required="true" version="1" xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+  <model id="M5025" metaid="b7c0d40a-a82b-480c-9d37-931c7e8258f3" name="CD4+ T Cell Differentiation and Plasticity">
+    <notes>
+      <body xmlns="http://www.w3.org/1999/xhtml">CD4+ T cells orchestrate the adaptive immune response in vertebrates. While both experimental and modeling work has been conducted to understand the molecular genetic mechanisms involved in CD4+ T cell responses and fate attainment, the dynamic role of intrinsic (produced by CD4+ T lymphocytes) versus extrinsic (produced by other cells) components remains unclear, and the mechanistic and dynamic understanding of the plastic responses of these cells remains incomplete. In this work, we studied a regulatory network for the core transcription factors involved in CD4+ T cell-fate attainment. We first show that this core is not sufficient to recover common CD4+ T phenotypes. We thus postulate a minimal Boolean regulatory network model derived from a larger and more comprehensive network that is based on experimental data. The minimal network integrates transcriptional regulation, signaling pathways and the micro-environment. This network model recovers reported configurations of most of the characterized cell types (Th0, Th1, Th2, Th17, Tfh, Th9, iTreg, and Foxp3-independent T regulatory cells). This transcriptional-signaling regulatory network is robust and recovers mutant configurations that have been reported experimentally. Additionally, this model recovers many of the plasticity patterns documented for different T CD4+ cell types, as summarized in a cell-fate map. We tested the effects of various micro-environments and transient perturbations on such transitions among CD4+ T cell types. Interestingly, most cell-fate transitions were induced by transient activations, with the opposite behavior associated with transient inhibitions. Finally, we used a novel methodology was used to establish that T-bet, TGF-β and suppressors of cytokine signaling proteins are keys to recovering observed CD4+ T cell plastic responses. In conclusion, the observed CD4+ T cell-types and transition patterns emerge from the feedback between the intrinsic or intracellular regulatory core and the micro-environment. We discuss the broader use of this approach for other plastic systems and possible therapeutic interventions.</body>
+    </notes>
+    <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#b7c0d40a-a82b-480c-9d37-931c7e8258f3">
+	<dc:creator>
+	<rdf:Bag>
+	<rdf:li rdf:parseType="Resource">
+	<vCard:N rdf:parseType="Resource">
+	<vCard:Family>Bird</vCard:Family>
+	<vCard:Given>Shannyn</vCard:Given>
+	</vCard:N>
+	<vCard:EMAIL>birdgirl@arcticmail.com</vCard:EMAIL>
+	<vCard:ORG rdf:parseType="Resource">
+	<vCard:Orgname>University of Nebraska-Lincoln</vCard:Orgname>
+	</vCard:ORG>
+	</rdf:li>
+	</rdf:Bag>
+	</dc:creator>
+	<dcterms:created rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-10-28T14:33:21Z</dcterms:W3CDTF>
+	</dcterms:created>
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2017-02-25T18:06:48Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:26090929"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+      <qual:listOfQualitativeSpecies xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:qualitativeSpecies metaid="fd86450f-377c-4b9e-95a6-c432573d0108" qual:compartment="extracellular" qual:constant="true" qual:id="S_1" qual:name="IFNGe">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Name: Interferon gamma - environmental</p><p>Gene Name: IFNG</p><p>UNIPROT ID: P01579</p><p>Gene ID: 3458</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#fd86450f-377c-4b9e-95a6-c432573d0108">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-12-22T20:57:41Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="b017e9bf-ba35-49dd-a2a6-b46028ebe4a2" qual:compartment="extracellular" qual:constant="true" qual:id="S_2" qual:name="IL21e">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Name: Interleukin-21 - environmental</p><p>Gene Name: IL21</p><p>UNIPROT ID: Q9HBE4</p><p>Gene ID: 59067</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#b017e9bf-ba35-49dd-a2a6-b46028ebe4a2">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-12-26T18:59:02Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_31c06ee6-d2b4-4049-99c5-1defd66999ec" qual:compartment="extracellular" qual:constant="true" qual:id="S_5" qual:name="IL4e">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Name: Interleukin-4 - environmental</p><p>Gene Name: IL4</p><p>UNIPROT ID: P05112</p><p>Gene ID: 3565</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_31c06ee6-d2b4-4049-99c5-1defd66999ec">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-12-26T19:04:35Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="b6609d5f-4bf7-4384-8a6b-5d78ecaaec10" qual:compartment="extracellular" qual:constant="true" qual:id="S_10" qual:name="TGFBe">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Name: Transforming growth factor beta-1 - environmental</p><p>Gene Name: TGFB1</p><p>UNIPROT ID: P01137</p><p>Gene ID: 7040</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#b6609d5f-4bf7-4384-8a6b-5d78ecaaec10">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-12-27T13:13:49Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_516131d0-0c61-490c-a393-7425e84c8962" qual:compartment="extracellular" qual:constant="true" qual:id="S_15" qual:name="IL10e">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Name: Interleukin-10 - environmental</p><p>Gene Name: IL10</p><p>UNIPROT ID: P22301</p><p>Gene ID: 3586</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_516131d0-0c61-490c-a393-7425e84c8962">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-12-26T11:47:53Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_7022d4ed-20eb-45f4-9368-cb03b8a151f1" qual:compartment="extracellular" qual:constant="true" qual:id="S_18" qual:name="IL2e">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Name: Interleukin-2 - environmental</p><p>Gene Name: IL2</p><p>UNIPROT ID: P60568</p><p>Gene ID: 3558</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_7022d4ed-20eb-45f4-9368-cb03b8a151f1">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-12-26T19:02:51Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="e4302356-ebb9-417b-a5b3-c0b86a05f69f" qual:compartment="cytosol" qual:constant="false" qual:id="S_3" qual:initialLevel="0" qual:maxLevel="1" qual:name="RORGT">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Name: Nuclear receptor ROR-gamma</p><p>Gene Name: RORC</p><p>UNIPROT ID: P51449</p><p>Gene ID: 6097</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#e4302356-ebb9-417b-a5b3-c0b86a05f69f">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-10-28T15:11:08Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_620af450-122f-41b8-ad91-8662e2124d60" qual:compartment="cytosol" qual:constant="false" qual:id="S_4" qual:initialLevel="0" qual:maxLevel="1" qual:name="IFNG">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Name: 	 Interferon gamma</p><p>Gene Name: IFNG</p><p>UNIPROT ID: P01579</p><p>Gene ID: 3458</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_620af450-122f-41b8-ad91-8662e2124d60">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-12-22T20:57:41Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_42f69458-89f3-4508-b887-7d2c3875dd37" qual:compartment="cytosol" qual:constant="false" qual:id="S_6" qual:initialLevel="0" qual:maxLevel="1" qual:name="BCL6">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Name: B-cell lymphoma 6 protein</p><p>Gene Name: BCL6</p><p>UNIPROT ID: 	P41182</p><p>Gene ID: 604</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_42f69458-89f3-4508-b887-7d2c3875dd37">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-10-28T15:15:00Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_64c54cb0-dc51-4b81-aa76-c360bbc203be" qual:compartment="cytosol" qual:constant="false" qual:id="S_7" qual:initialLevel="0" qual:maxLevel="1" qual:name="GATA3">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Name: Trans-acting T-cell-specific transcription factor GATA-3</p><p>Gene Name: GATA3</p><p>UNIPROT ID: P23771</p><p>Gene ID: 2625</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_64c54cb0-dc51-4b81-aa76-c360bbc203be">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-12-21T17:07:46Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_369d34d2-eaf2-4706-ae2c-d027209b8077" qual:compartment="cytosol" qual:constant="false" qual:id="S_8" qual:initialLevel="0" qual:maxLevel="1" qual:name="TBET">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Name: T-box transcription factor TBX21</p><p>Gene Name: TBX21</p><p>UNIPROT ID: Q9UL17</p><p>Gene ID: 30009</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_369d34d2-eaf2-4706-ae2c-d027209b8077">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-10-28T15:15:00Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_8f0eb521-cb71-4148-9e3d-7ef7109a27ab" qual:compartment="cytosol" qual:constant="false" qual:id="S_9" qual:initialLevel="0" qual:maxLevel="1" qual:name="IL2">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Name: 	 Interleukin-2</p><p>Gene Name: IL2</p><p>UNIPROT ID: P60568</p><p>Gene ID: 3558</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_8f0eb521-cb71-4148-9e3d-7ef7109a27ab">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2017-02-25T17:59:08Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_40517131-4eb7-427c-ad95-b888a6c892d7" qual:compartment="cytosol" qual:constant="false" qual:id="S_11" qual:initialLevel="0" qual:maxLevel="1" qual:name="IL21">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Name: Interleukin-21</p><p>Gene Name: IL21</p><p>UNIPROT ID: Q9HBE4</p><p>Gene ID: 59067</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_40517131-4eb7-427c-ad95-b888a6c892d7">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-12-26T18:59:02Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_51f01123-57a3-42ce-8a8a-abd2e6d5b356" qual:compartment="cytosol" qual:constant="false" qual:id="S_12" qual:initialLevel="0" qual:maxLevel="1" qual:name="IL9">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Name: 	 Interleukin-9</p><p>Gene Name: IL9</p><p>UNIPROT ID: P15248</p><p>Gene ID: 3578</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_51f01123-57a3-42ce-8a8a-abd2e6d5b356">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-10-28T15:15:00Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_8429d9aa-f2f6-479c-a6ca-78f617645ef2" qual:compartment="cytosol" qual:constant="false" qual:id="S_13" qual:initialLevel="0" qual:maxLevel="1" qual:name="IL10">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Name: Interleukin-10</p><p>Gene Name: IL10</p><p>UNIPROT ID: P22301</p><p>Gene ID: 3586</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_8429d9aa-f2f6-479c-a6ca-78f617645ef2">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-12-26T11:47:53Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_9be9c7f2-a64a-426c-b44d-cfa6392266e8" qual:compartment="cytosol" qual:constant="false" qual:id="S_14" qual:initialLevel="0" qual:maxLevel="1" qual:name="IL4">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Name: 	 Interleukin-4</p><p>Gene Name: IL4</p><p>UNIPROT ID: P05112</p><p>Gene ID: 3565</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_9be9c7f2-a64a-426c-b44d-cfa6392266e8">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-12-26T19:04:35Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="c3643a4f-86a6-4d66-bd28-3749484a4c41" qual:compartment="cytosol" qual:constant="false" qual:id="S_16" qual:initialLevel="0" qual:maxLevel="1" qual:name="TGFB">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Name: Transforming growth factor beta-1</p><p>Gene Name: TGFB1</p><p>UNIPROT ID: P01137</p><p>Gene ID: 7040</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#c3643a4f-86a6-4d66-bd28-3749484a4c41">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2017-02-25T17:59:08Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_5709cc90-505c-44c9-b8a5-96e7ca2dbfa7" qual:compartment="cytosol" qual:constant="false" qual:id="S_17" qual:initialLevel="0" qual:maxLevel="1" qual:name="FOXP3">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Name: Forkhead box protein P3</p><p>Gene Name: FOXP3</p><p>UNIPROT ID: Q9BZS1</p><p>Gene ID: 50943</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_5709cc90-505c-44c9-b8a5-96e7ca2dbfa7">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2017-02-25T17:59:08Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+    </qual:listOfQualitativeSpecies>
+    <qual:listOfTransitions xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:transition qual:id="tr_S_3">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>IL21 activates RORGT in conjunction with TGFB. BCL6, FOXP3, GATA3, and TBET are inhibitors of RORGT which express dominance over IL21.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_3_in_S_8" qual:qualitativeSpecies="S_8" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>TBET sequesters runx1 and runx3 in order to prevent activation of RORGT.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_3_in_S_11" qual:qualitativeSpecies="S_11" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IL21 indirectly activates RORGT.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_3_in_S_16" qual:qualitativeSpecies="S_16" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>TGFB activates RORGT gene expression.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_3_in_S_17" qual:qualitativeSpecies="S_17" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>FOXP3 binds to RORGT and inhibits binding of runx1. This prevents RORGT-runx1 action, including inhibiting binding to IL17.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_3_in_S_7" qual:qualitativeSpecies="S_7" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GATA3 binds to rorc in order to inhibit RORGT.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_3_in_S_6" qual:qualitativeSpecies="S_6" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>BCL6 inhibits RORGT-induced luciferase activity.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_3" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_11 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> S_16 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <not/>
+                  <apply>
+                    <or/>
+                    <apply>
+                      <or/>
+                      <apply>
+                        <or/>
+                        <apply>
+                          <eq/>
+                          <ci> S_6 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci> S_17 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <eq/>
+                        <ci> S_8 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> S_7 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_4">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>TBET, IFNG, and IFNGe activate IFNG. TGFB, BCL6, and GATA3 are inhibitors of IFNG which express dominance over IFNG and TBET. IL10, IL21, IL4, and IL9 are negative regulators of IFNG which express dominance over IFNG, IFNGe, and TBET.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_4_in_S_8" qual:qualitativeSpecies="S_8" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>T-bet transactivates the IFNγ gene.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_4_in_S_11" qual:qualitativeSpecies="S_11" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IL21 inhibits IFNG by repressing eomesodermin expression.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_4_in_S_12" qual:qualitativeSpecies="S_12" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IL9 indirectly inhibits IFNG.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_4_in_S_16" qual:qualitativeSpecies="S_16" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>TGFB inhibits priming of the IFNG gene through inhibition of Stat4.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_4_in_S_4" qual:qualitativeSpecies="S_4" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IFNG indirectly activates itself.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_4_in_S_13" qual:qualitativeSpecies="S_13" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IL10 indirectly inhibits IFNG through STAT3.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_4_in_S_7" qual:qualitativeSpecies="S_7" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Gata3 binds to runx3. This prevents runx3-mediated activation of IFNG.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_4_in_S_1" qual:qualitativeSpecies="S_1" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IFNGe indirectly activates IFNG.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_4_in_S_6" qual:qualitativeSpecies="S_6" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Bcl6−/− mice cells observed an increase in IFNG production, indicating that BCL6 is a negative regulator of IFNG.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_4_in_S_14" qual:qualitativeSpecies="S_14" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IL4 indirectly inhibits IFNG.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_4" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <or/>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci> S_8 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <not/>
+                      <apply>
+                        <or/>
+                        <apply>
+                          <or/>
+                          <apply>
+                            <or/>
+                            <apply>
+                              <or/>
+                              <apply>
+                                <or/>
+                                <apply>
+                                  <or/>
+                                  <apply>
+                                    <eq/>
+                                    <ci> S_11 </ci>
+                                    <cn type="integer"> 1 </cn>
+                                  </apply>
+                                  <apply>
+                                    <eq/>
+                                    <ci> S_12 </ci>
+                                    <cn type="integer"> 1 </cn>
+                                  </apply>
+                                </apply>
+                                <apply>
+                                  <eq/>
+                                  <ci> S_6 </ci>
+                                  <cn type="integer"> 1 </cn>
+                                </apply>
+                              </apply>
+                              <apply>
+                                <eq/>
+                                <ci> S_7 </ci>
+                                <cn type="integer"> 1 </cn>
+                              </apply>
+                            </apply>
+                            <apply>
+                              <eq/>
+                              <ci> S_16 </ci>
+                              <cn type="integer"> 1 </cn>
+                            </apply>
+                          </apply>
+                          <apply>
+                            <eq/>
+                            <ci> S_13 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci> S_14 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci> S_1 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <not/>
+                      <apply>
+                        <or/>
+                        <apply>
+                          <or/>
+                          <apply>
+                            <or/>
+                            <apply>
+                              <eq/>
+                              <ci> S_11 </ci>
+                              <cn type="integer"> 1 </cn>
+                            </apply>
+                            <apply>
+                              <eq/>
+                              <ci> S_12 </ci>
+                              <cn type="integer"> 1 </cn>
+                            </apply>
+                          </apply>
+                          <apply>
+                            <eq/>
+                            <ci> S_13 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci> S_14 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_4 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <or/>
+                      <apply>
+                        <or/>
+                        <apply>
+                          <or/>
+                          <apply>
+                            <or/>
+                            <apply>
+                              <or/>
+                              <apply>
+                                <or/>
+                                <apply>
+                                  <eq/>
+                                  <ci> S_11 </ci>
+                                  <cn type="integer"> 1 </cn>
+                                </apply>
+                                <apply>
+                                  <eq/>
+                                  <ci> S_12 </ci>
+                                  <cn type="integer"> 1 </cn>
+                                </apply>
+                              </apply>
+                              <apply>
+                                <eq/>
+                                <ci> S_6 </ci>
+                                <cn type="integer"> 1 </cn>
+                              </apply>
+                            </apply>
+                            <apply>
+                              <eq/>
+                              <ci> S_7 </ci>
+                              <cn type="integer"> 1 </cn>
+                            </apply>
+                          </apply>
+                          <apply>
+                            <eq/>
+                            <ci> S_16 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci> S_13 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <eq/>
+                        <ci> S_14 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_6">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>IL21 activates BCL6. IL2, TBET, and TGFB are negative regulators of BCL6 that express dominance over IL21.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_6_in_S_8" qual:qualitativeSpecies="S_8" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>TBET recruits BCL6 to the Ifng locus.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_6_in_S_11" qual:qualitativeSpecies="S_11" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IL21 induces BCL6 expression.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_6_in_S_16" qual:qualitativeSpecies="S_16" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>TGFB indirectly inhibits BCL6.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_6_in_S_9" qual:qualitativeSpecies="S_9" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IL2 inhibits BCL6 expression in TH1 cells.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_6" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> S_11 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <not/>
+                  <apply>
+                    <or/>
+                    <apply>
+                      <or/>
+                      <apply>
+                        <eq/>
+                        <ci> S_8 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                      <apply>
+                        <eq/>
+                        <ci> S_9 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> S_16 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_7">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>GATA3 activates itself. IL2 is a positive regulator of GATA3 which acts in conjunction with IL4. BCL6, IFNG, IL21, TBET, and TGFB are all inhibitors of GATA3 which express dominance over GATA3 and IL4.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_7_in_S_8" qual:qualitativeSpecies="S_8" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>TBET in conjunction with runx3 inhibit gata3 binding to target genes.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_7_in_S_16" qual:qualitativeSpecies="S_16" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>TGFB indirectly inhibits GATA3.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_7_in_S_11" qual:qualitativeSpecies="S_11" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>CD4+ T cells treated with IL21 observe a decrease in GATA3 activity.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_7_in_S_4" qual:qualitativeSpecies="S_4" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IFNG indirectly inhibits GATA3.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_7_in_S_7" qual:qualitativeSpecies="S_7" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GATA3 establishes a positive feedback loop that sustains its own activation.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_7_in_S_6" qual:qualitativeSpecies="S_6" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>BCL6 is a postranscriptional inhibitor for GATA3.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_7_in_S_9" qual:qualitativeSpecies="S_9" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IL2 indirectly activates GATA3 through IL4.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_7_in_S_14" qual:qualitativeSpecies="S_14" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IL4 indirectly activates GATA3 through STAT6.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_7" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_7 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <or/>
+                      <apply>
+                        <or/>
+                        <apply>
+                          <or/>
+                          <apply>
+                            <or/>
+                            <apply>
+                              <eq/>
+                              <ci> S_8 </ci>
+                              <cn type="integer"> 1 </cn>
+                            </apply>
+                            <apply>
+                              <eq/>
+                              <ci> S_6 </ci>
+                              <cn type="integer"> 1 </cn>
+                            </apply>
+                          </apply>
+                          <apply>
+                            <eq/>
+                            <ci> S_4 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci> S_16 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <eq/>
+                        <ci> S_11 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci> S_14 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> S_9 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <or/>
+                      <apply>
+                        <or/>
+                        <apply>
+                          <or/>
+                          <apply>
+                            <or/>
+                            <apply>
+                              <eq/>
+                              <ci> S_8 </ci>
+                              <cn type="integer"> 1 </cn>
+                            </apply>
+                            <apply>
+                              <eq/>
+                              <ci> S_6 </ci>
+                              <cn type="integer"> 1 </cn>
+                            </apply>
+                          </apply>
+                          <apply>
+                            <eq/>
+                            <ci> S_4 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci> S_16 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <eq/>
+                        <ci> S_11 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_8">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>TBET and IFNG activate TBET. BCL6, GATA3, IL21, IL4, and IL9 are inhibitors of TBET which express dominance over IFNG and TBET.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_8_in_S_8" qual:qualitativeSpecies="S_8" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>TBET works in cooperation with stat1 to maintain T cell levels and for T cell memory.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_8_in_S_12" qual:qualitativeSpecies="S_12" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IL9 indirectly inhibits TBET.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_8_in_S_11" qual:qualitativeSpecies="S_11" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IL21 inhibits TBET expression.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_8_in_S_4" qual:qualitativeSpecies="S_4" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Naive T cells induced TBET expression after stimulation of IFNG.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_8_in_S_7" qual:qualitativeSpecies="S_7" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GATA3 inhibits TBET via a protein-protein interaction.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_8_in_S_6" qual:qualitativeSpecies="S_6" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>BCL6  binds to the TBET promoter.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_8_in_S_14" qual:qualitativeSpecies="S_14" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IL4 indirectly inhibits TBET.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_8" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_8 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <or/>
+                      <apply>
+                        <or/>
+                        <apply>
+                          <or/>
+                          <apply>
+                            <or/>
+                            <apply>
+                              <eq/>
+                              <ci> S_12 </ci>
+                              <cn type="integer"> 1 </cn>
+                            </apply>
+                            <apply>
+                              <eq/>
+                              <ci> S_14 </ci>
+                              <cn type="integer"> 1 </cn>
+                            </apply>
+                          </apply>
+                          <apply>
+                            <eq/>
+                            <ci> S_11 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci> S_7 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <eq/>
+                        <ci> S_6 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_4 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <or/>
+                      <apply>
+                        <or/>
+                        <apply>
+                          <or/>
+                          <apply>
+                            <or/>
+                            <apply>
+                              <eq/>
+                              <ci> S_12 </ci>
+                              <cn type="integer"> 1 </cn>
+                            </apply>
+                            <apply>
+                              <eq/>
+                              <ci> S_14 </ci>
+                              <cn type="integer"> 1 </cn>
+                            </apply>
+                          </apply>
+                          <apply>
+                            <eq/>
+                            <ci> S_11 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci> S_7 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <eq/>
+                        <ci> S_6 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_9">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>IL2 and IL2e are both positive regulators of IL2. IL21, IL10, and IFNG inhibit IL2 and express dominance over IL2 and IL2e. FOXP3 is a negative regulator of IL2 which also is dominant over IL2.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_9_in_S_11" qual:qualitativeSpecies="S_11" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IL21 inhibits IL2 production.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_9_in_S_18" qual:qualitativeSpecies="S_18" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IL2e indirectly activates IL2 expression .</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_9_in_S_4" qual:qualitativeSpecies="S_4" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IFNG inhibits IL2 by altering the histone modifications in the IL2 promoter to make it  inaccessible.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_9_in_S_13" qual:qualitativeSpecies="S_13" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IL10 inhibits T cell proliferation and IL-2 production.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_9_in_S_17" qual:qualitativeSpecies="S_17" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>FOXP3 binds to nfat and inhibits nfat from forming a complex with ap-1. FOXp3 also binds to runx1 to prevent runx1-mediated activation of IL2.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_9_in_S_9" qual:qualitativeSpecies="S_9" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IL2 indirectly activates its own production.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_9" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_18 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <or/>
+                      <apply>
+                        <or/>
+                        <apply>
+                          <eq/>
+                          <ci> S_4 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci> S_13 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <eq/>
+                        <ci> S_11 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_9 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <or/>
+                      <apply>
+                        <or/>
+                        <apply>
+                          <or/>
+                          <apply>
+                            <eq/>
+                            <ci> S_4 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                          <apply>
+                            <eq/>
+                            <ci> S_17 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci> S_13 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <eq/>
+                        <ci> S_11 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_11">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>RORGT, BCL6, IL21, and IL21e are positive regulators of IL21. IL4, IL9, IL2, IL10, and IFNG are negative regulators of IL21 that express dominance over BCL6, RORGT, IL21, and IL21e.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_11_in_S_11" qual:qualitativeSpecies="S_11" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IL21 activation of it's own expression is dependent on stat3 and rorgt.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_11_in_S_12" qual:qualitativeSpecies="S_12" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IL9 indirectly inhibits IL21.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_11_in_S_4" qual:qualitativeSpecies="S_4" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IFNG inhibits IL-21-mediated STAT3 phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_11_in_S_13" qual:qualitativeSpecies="S_13" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IL21 is inhibited by IL10.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_11_in_S_2" qual:qualitativeSpecies="S_2" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IL21e activation of IL21 expression is dependent on stat3 and rorgt. .</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_11_in_S_3" qual:qualitativeSpecies="S_3" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>RORGT indirectly activates IL21.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_11_in_S_6" qual:qualitativeSpecies="S_6" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>BCL6 indirectly activates IL21.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_11_in_S_9" qual:qualitativeSpecies="S_9" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IL2 and IL21 have opposing  differentiation functions in CD8 T cell.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_11_in_S_14" qual:qualitativeSpecies="S_14" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IL4 inhibits IL21-induced plasma cell differentiation.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_11" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <or/>
+                  <apply>
+                    <or/>
+                    <apply>
+                      <and/>
+                      <apply>
+                        <eq/>
+                        <ci> S_2 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                      <apply>
+                        <not/>
+                        <apply>
+                          <or/>
+                          <apply>
+                            <or/>
+                            <apply>
+                              <or/>
+                              <apply>
+                                <or/>
+                                <apply>
+                                  <eq/>
+                                  <ci> S_14 </ci>
+                                  <cn type="integer"> 1 </cn>
+                                </apply>
+                                <apply>
+                                  <eq/>
+                                  <ci> S_9 </ci>
+                                  <cn type="integer"> 1 </cn>
+                                </apply>
+                              </apply>
+                              <apply>
+                                <eq/>
+                                <ci> S_4 </ci>
+                                <cn type="integer"> 1 </cn>
+                              </apply>
+                            </apply>
+                            <apply>
+                              <eq/>
+                              <ci> S_12 </ci>
+                              <cn type="integer"> 1 </cn>
+                            </apply>
+                          </apply>
+                          <apply>
+                            <eq/>
+                            <ci> S_13 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                        </apply>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <and/>
+                      <apply>
+                        <eq/>
+                        <ci> S_6 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                      <apply>
+                        <not/>
+                        <apply>
+                          <or/>
+                          <apply>
+                            <or/>
+                            <apply>
+                              <or/>
+                              <apply>
+                                <or/>
+                                <apply>
+                                  <eq/>
+                                  <ci> S_14 </ci>
+                                  <cn type="integer"> 1 </cn>
+                                </apply>
+                                <apply>
+                                  <eq/>
+                                  <ci> S_9 </ci>
+                                  <cn type="integer"> 1 </cn>
+                                </apply>
+                              </apply>
+                              <apply>
+                                <eq/>
+                                <ci> S_4 </ci>
+                                <cn type="integer"> 1 </cn>
+                              </apply>
+                            </apply>
+                            <apply>
+                              <eq/>
+                              <ci> S_12 </ci>
+                              <cn type="integer"> 1 </cn>
+                            </apply>
+                          </apply>
+                          <apply>
+                            <eq/>
+                            <ci> S_13 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci> S_11 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <not/>
+                      <apply>
+                        <or/>
+                        <apply>
+                          <or/>
+                          <apply>
+                            <or/>
+                            <apply>
+                              <or/>
+                              <apply>
+                                <eq/>
+                                <ci> S_14 </ci>
+                                <cn type="integer"> 1 </cn>
+                              </apply>
+                              <apply>
+                                <eq/>
+                                <ci> S_9 </ci>
+                                <cn type="integer"> 1 </cn>
+                              </apply>
+                            </apply>
+                            <apply>
+                              <eq/>
+                              <ci> S_4 </ci>
+                              <cn type="integer"> 1 </cn>
+                            </apply>
+                          </apply>
+                          <apply>
+                            <eq/>
+                            <ci> S_12 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci> S_13 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_3 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <or/>
+                      <apply>
+                        <or/>
+                        <apply>
+                          <or/>
+                          <apply>
+                            <or/>
+                            <apply>
+                              <eq/>
+                              <ci> S_14 </ci>
+                              <cn type="integer"> 1 </cn>
+                            </apply>
+                            <apply>
+                              <eq/>
+                              <ci> S_9 </ci>
+                              <cn type="integer"> 1 </cn>
+                            </apply>
+                          </apply>
+                          <apply>
+                            <eq/>
+                            <ci> S_4 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci> S_12 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <eq/>
+                        <ci> S_13 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_12">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>IL4 activates IL9 in the presence of TGFB, or in conjunction with either IL10 or IL2. IFNG and IL21 are inhibitors of IL9 which express dominance over IL4.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_12_in_S_16" qual:qualitativeSpecies="S_16" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>TGFB indirectly enhances IL9 production.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_12_in_S_11" qual:qualitativeSpecies="S_11" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IL21 indirectly inhibits IL9 production.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_12_in_S_4" qual:qualitativeSpecies="S_4" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IFNG has been found to significantly inhibit IL-9 production from Th9 T cells</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_12_in_S_13" qual:qualitativeSpecies="S_13" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IL10 stimulates the production of IL9 by CD4 T reg cells.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_12_in_S_9" qual:qualitativeSpecies="S_9" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IL2 is crutial for the differentiation of CD4+ T cells.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_12_in_S_14" qual:qualitativeSpecies="S_14" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IL4 enhances IL9 production through STAT6.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_12" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_14 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <or/>
+                    <apply>
+                      <eq/>
+                      <ci> S_16 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <and/>
+                      <apply>
+                        <eq/>
+                        <ci> S_13 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                      <apply>
+                        <eq/>
+                        <ci> S_9 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <not/>
+                  <apply>
+                    <or/>
+                    <apply>
+                      <eq/>
+                      <ci> S_4 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> S_11 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_13">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>IL10 activates itself in conjunction with either GATA3, IFNG, IL21, or TGFB. IL10e also activates IL10.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_13_in_S_11" qual:qualitativeSpecies="S_11" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IL21 indirectly activates IL10 production.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_13_in_S_16" qual:qualitativeSpecies="S_16" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>TGFB indirectly activates IL10 production.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_13_in_S_4" qual:qualitativeSpecies="S_4" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Th1 cells require STAT1 activation via IFNG.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_13_in_S_15" qual:qualitativeSpecies="S_15" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Environmental IL10 activates STAT3, a positive regulator for IL10.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_13_in_S_13" qual:qualitativeSpecies="S_13" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IL10 activates STAT3, a positive regulator for IL10.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_13_in_S_7" qual:qualitativeSpecies="S_7" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GATA3 binds to the IL10 promoter.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_13" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_13 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <or/>
+                    <apply>
+                      <or/>
+                      <apply>
+                        <or/>
+                        <apply>
+                          <eq/>
+                          <ci> S_11 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci> S_16 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <eq/>
+                        <ci> S_4 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> S_7 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_15 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_14">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>IL4e activates IL4. GATA3 is a positive regulator of IL4 which acts in conjunction with either IL2 or IL4. IFNG and IL21 are inhibitors of IL4 which express dominance over IL4e and GATA3. TBET is a negative regulator of IL4 which is dominant over GATA3.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_14_in_S_8" qual:qualitativeSpecies="S_8" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>TBET inhibits IL4 gene expression.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_14_in_S_11" qual:qualitativeSpecies="S_11" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IL21 indirectly inhibits IL4.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_14_in_S_4" qual:qualitativeSpecies="S_4" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IFNG inhibits IL-4-induced cytokine expression by CD8 T cells.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_14_in_S_7" qual:qualitativeSpecies="S_7" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GATA3 binds to the IL4 enhancer region and requires stat5 to activate IL4.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_14_in_S_9" qual:qualitativeSpecies="S_9" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IL2 indirectly activates IL4 through STAT5.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_14_in_S_5" qual:qualitativeSpecies="S_5" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IL4e indirectly activates IL4 production.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_14_in_S_14" qual:qualitativeSpecies="S_14" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IL4 indirectly activates its own production.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_14" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_5 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <or/>
+                      <apply>
+                        <eq/>
+                        <ci> S_4 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                      <apply>
+                        <eq/>
+                        <ci> S_11 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci> S_7 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <or/>
+                      <apply>
+                        <eq/>
+                        <ci> S_9 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                      <apply>
+                        <eq/>
+                        <ci> S_14 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <or/>
+                      <apply>
+                        <or/>
+                        <apply>
+                          <eq/>
+                          <ci> S_8 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci> S_4 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <eq/>
+                        <ci> S_11 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_16">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>FOXP3, TGFB, and TGFBe all activate TGFB. IL21 is a negative regulator of TGFB which expresses dominance over FOXP3 and TGFB.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_16_in_S_16" qual:qualitativeSpecies="S_16" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>TGFB indirectly activates its own expression.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_16_in_S_11" qual:qualitativeSpecies="S_11" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IL21 indirectly inhibits TGFB.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_16_in_S_17" qual:qualitativeSpecies="S_17" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>FOXP3 is a predicted activator for TGFB expression</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_16_in_S_10" qual:qualitativeSpecies="S_10" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>TGFBe indirectly activates TGFB production.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_16" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <or/>
+                  <apply>
+                    <eq/>
+                    <ci> S_10 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci> S_17 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <not/>
+                      <apply>
+                        <eq/>
+                        <ci> S_11 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_16 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <eq/>
+                      <ci> S_11 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_17">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>IL2 activates FOXP3 in conjunction with either FOXP3 or TGFB. IL21 and RORGT inhibit FOXP3 and express dominance over IL2.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_17_in_S_16" qual:qualitativeSpecies="S_16" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>T3GFB upregulates FOXP3 via SMAD3.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_17_in_S_11" qual:qualitativeSpecies="S_11" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IL21 impairs Treg proliferation by regulating different checkpoints of the FOXP3 Treg chain.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_17_in_S_17" qual:qualitativeSpecies="S_17" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>FOXP3 upreguates its own production by upregulating IL2 and TGFB signaling components.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_17_in_S_3" qual:qualitativeSpecies="S_3" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>RORGT interacts with the FOXP3 promoter.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_17_in_S_9" qual:qualitativeSpecies="S_9" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IL2 upregulates FOXP3 through a STAT-dependent mechanism.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_17" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_9 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <or/>
+                    <apply>
+                      <eq/>
+                      <ci> S_16 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> S_17 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <not/>
+                  <apply>
+                    <or/>
+                    <apply>
+                      <eq/>
+                      <ci> S_3 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> S_11 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+    </qual:listOfTransitions>
+    <listOfCompartments>
+      <compartment constant="true" id="extracellular" name="extracellular"/>
+      <compartment constant="true" id="cytosol" name="cytosol"/>
+    </listOfCompartments>
+  </model>
+</sbml>

@@ -1,0 +1,1669 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" qual:required="true" version="1" xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+  <model id="M3491" metaid="_6b627fdc-4b3f-42a0-ba78-c58cda434d6d" name="TOL Regulatory Network">
+    <notes>
+      <body xmlns="http://www.w3.org/1999/xhtml">The TOL system encoded by plasmid pWW0 of Pseudomonas putida mt-2 is able to sense a large number of both exogenous and endogenous signals as inputs for the genetic and metabolic circuit that determines the biodegradation of m-xylene. However, whether the enormous combinatorial space of inputs is translated into an equally variable response landscape or is processed into very few outcomes remains unclear. To address this question, we set out to define the number of states that can be obtained by a network of a given set of genes under the control of a specified regulatory circuit that is exposed to all possible combinations of inputs. To this end, the TOL network and its regulatory wiring were formalized as a synchronous logic Boolean circuit that had 10 signals (i.e. pathway substrates, temperature, sugars, amino acids, metabolic regimes and global regulators) as possible inputs. The analysis of the attractors of the circuit using a satisfiability (SAT) algorithm revealed that only eight transcriptional states are reached in response to the 1024 possible combinations of stimuli. The experimental validation resulted in a refinement of the model through the addition of a previously unknown interaction that controls the meta catabolic pathway. The full induction of the two xyl operons occurred with only 1.6% of the input combinations, which suggests that the architecture of the network allows the expression of the xyl genes only under a very narrow range of conditions. These data not only explain much of the unusual layout of the TOL circuit but also strengthen the view of the regulatory circuits of environmental bacteria as digital decision-making devices.</body>
+    </notes>
+    <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_6b627fdc-4b3f-42a0-ba78-c58cda434d6d">
+	<dc:creator>
+	<rdf:Bag>
+	<rdf:li rdf:parseType="Resource">
+	<vCard:N rdf:parseType="Resource">
+	<vCard:Family>Helikar</vCard:Family>
+	<vCard:Given>Tomas</vCard:Given>
+	</vCard:N>
+	<vCard:EMAIL>thelika@unmc.edu</vCard:EMAIL>
+	<vCard:ORG rdf:parseType="Resource">
+	<vCard:Orgname>University of Nebraska - Lincoln</vCard:Orgname>
+	</vCard:ORG>
+	</rdf:li>
+	</rdf:Bag>
+	</dc:creator>
+	<dcterms:created rdf:parseType="Resource">
+	<dcterms:W3CDTF>2013-05-06T13:37:11Z</dcterms:W3CDTF>
+	</dcterms:created>
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-01-22T07:08:46Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23171249"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+      <qual:listOfQualitativeSpecies xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:qualitativeSpecies metaid="_90b6c768-a7fb-4a0c-b06e-07412288c63d" qual:compartment="extracellular" qual:constant="true" qual:id="S_1" qual:name="CellDens">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;font face="Arial, Verdana" size="2">Cell density, refers to exponential phase (if low), or stationary phase (if high) [1].&lt;/font></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_90b6c768-a7fb-4a0c-b06e-07412288c63d">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:12:44Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23171249"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="c58a16c0-d07f-49f6-9870-c8f602d28d3a" qual:compartment="extracellular" qual:constant="true" qual:id="S_3" qual:name="3MBz">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>m-xylene is metabolized to 3MBz in the model TOL Regulatory Network [1].&amp;nbsp;</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#c58a16c0-d07f-49f6-9870-c8f602d28d3a">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:12:44Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23171249"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_40dd67b8-baca-4462-84fe-e13e20b253b5" qual:compartment="extracellular" qual:constant="true" qual:id="S_6" qual:name="HU">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;font face="Arial, Verdana" size="2">Histone-like protein HU&lt;/font></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_40dd67b8-baca-4462-84fe-e13e20b253b5">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:12:44Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23171249"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="fed42d03-39e1-436b-a520-a37b80d25857" qual:compartment="extracellular" qual:constant="true" qual:id="S_11" qual:name="CAA">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;font face="Arial, Verdana" size="2">Casamino acids, mix of amino acids and small peptides [1].&amp;nbsp;&lt;/font></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#fed42d03-39e1-436b-a520-a37b80d25857">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:12:44Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23171249"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="a9fb68bd-f5c7-48f5-898a-d49ddb22fd4d" qual:compartment="extracellular" qual:constant="true" qual:id="S_12" qual:name="RpoD">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;font face="Arial, Verdana" size="2">?70, housekeeping RNAP subunit sigma factor&lt;/font></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#a9fb68bd-f5c7-48f5-898a-d49ddb22fd4d">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:12:44Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23171249"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_7e38a360-adc7-407c-ae32-0237cd08bd42" qual:compartment="extracellular" qual:constant="true" qual:id="S_13" qual:name="m-xyl">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;font face="Arial, Verdana" size="2">m-xylene, aromatic compounds substrate of the TOL pathway&lt;/font>&lt;div>&lt;font face="Arial, Verdana" size="2">PubChem ID:&amp;nbsp;&lt;/font>&lt;span style="background-color: rgb(255, 255, 255); color: rgb(85, 85, 85); font-family: Arial, Verdana, sans-serif; font-size: 14px; line-height: 19.384401321411133px;">7929&lt;/span>&lt;/div>&lt;div>&lt;span style="background-color: rgb(255, 255, 255); color: rgb(85, 85, 85); font-family: Arial, Verdana, sans-serif; font-size: 14px; line-height: 19.384401321411133px;">&lt;br/>&lt;/span>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_7e38a360-adc7-407c-ae32-0237cd08bd42">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:12:44Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23171249"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_209033f5-b458-485c-a48b-59709f3e7090" qual:compartment="extracellular" qual:constant="true" qual:id="S_18" qual:name="Glu">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;font face="Arial, Verdana" size="2">Glucose, a six-carbon sugar&lt;/font>&lt;div>&lt;font face="Arial, Verdana" size="2">PubChem ID:&amp;nbsp;&lt;/font>&lt;span style="background-color: rgb(255, 255, 255); color: rgb(87, 87, 87); font-family: arial, helvetica, clean, sans-serif; font-size: 12px; line-height: 16.798599243164063px; white-space: nowrap;">79025&lt;/span>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_209033f5-b458-485c-a48b-59709f3e7090">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:12:44Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23171249"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_17ebfefd-a1c0-4691-b04e-a09da954daac" qual:compartment="extracellular" qual:constant="true" qual:id="S_21" qual:name="Cold">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;font face="Arial, Verdana" size="2">Cold shock represented by low temperatures [1].&lt;/font></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_17ebfefd-a1c0-4691-b04e-a09da954daac">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:12:44Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23171249"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="fb77e757-b1f3-40bc-bbcd-74beec40cd22" qual:compartment="extracellular" qual:constant="true" qual:id="S_23" qual:name="RpoN">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;font face="Arial, Verdana" size="2">?54, nitrogen-related RNAP subunit sigma factor&lt;/font></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#fb77e757-b1f3-40bc-bbcd-74beec40cd22">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:12:44Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23171249"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="adb5ff86-0ef0-44c3-82cb-cbe9ec0a1454" qual:compartment="extracellular" qual:constant="true" qual:id="S_24" qual:name="Heat">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;font face="Arial, Verdana" size="2">Heat shock represented by high temperatures of or stress triggered by a denaturing compound [1].&lt;/font></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#adb5ff86-0ef0-44c3-82cb-cbe9ec0a1454">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:12:44Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23171249"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_0e2685be-c635-44ef-b32e-3d00466456e3" qual:compartment="cytosol" qual:constant="false" qual:id="S_2" qual:initialLevel="0" qual:maxLevel="1" qual:name="Crc">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;font face="Georgia" size="2">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">Exodeoxyribonuclease III [&lt;/span>&lt;em style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">Pseudomonas putida KT2440&lt;/em>&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">]&lt;/span>&lt;/font>&lt;div>&lt;font face="Georgia" size="2">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">Gene Name:&amp;nbsp;&lt;/span>&lt;a href="http://www.ncbi.nlm.nih.gov/gene/1042227" ref="ordinalpos=3&amp;amp;ncbi_uid=1042227&amp;amp;link_uid=1042227" style="line-height: 17.999801635742188px; white-space: nowrap; background-color: rgb(255, 255, 255);">&lt;span class="highlight">crc&lt;/span>&lt;/a>&lt;/font>&lt;/div>&lt;div>&lt;font face="Georgia" size="2">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">NCBI Gene ID:&amp;nbsp;&lt;/span>&lt;span style="background-color: rgb(255, 255, 255); line-height: 16.19982147216797px;">1042227&lt;/span&gt;&lt;/font>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_0e2685be-c635-44ef-b32e-3d00466456e3">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:12:44Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:15901690"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:17478425"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23171249"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:19825982"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_07ab9bf8-35fd-4fa1-a77f-dcf7faabab38" qual:compartment="cytosol" qual:constant="false" qual:id="S_4" qual:initialLevel="0" qual:maxLevel="1" qual:name="RpoH">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;font face="Georgia">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">RNA polymerase factor sigma-32 [&lt;/span>&lt;em style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">&lt;span class="highlight">Pseudomonas&lt;/span>&amp;nbsp;putida KT2440&lt;/em>&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">]&lt;/span>&lt;/font>&lt;div>&lt;font face="Georgia">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);"&gt;Gene Name:&amp;nbsp;&lt;/span>&lt;a href="http://www.ncbi.nlm.nih.gov/gene/1042633" ref="ordinalpos=11&amp;amp;ncbi_uid=1042633&amp;amp;link_uid=1042633" style="font-size: 10pt; line-height: 17.999801635742188px; white-space: nowrap; background-color: rgb(255, 255, 255);">&lt;span class="highlight">rpoH&lt;/span>&lt;/a>&lt;/font>&lt;/div>&lt;div>&lt;font face="Georgia">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">NCBI Gene ID:&amp;nbsp;&lt;/span>&lt;span style="background-color: rgb(255, 255, 255); font-size: 12px; line-height: 16.19982147216797px;">1042633&lt;/span>&lt;/font>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_07ab9bf8-35fd-4fa1-a77f-dcf7faabab38">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:12:44Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:11750797"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23171249"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="df953c8f-6a13-422e-8e34-575c07aed276" qual:compartment="cytosol" qual:constant="false" qual:id="S_5" qual:initialLevel="0" qual:maxLevel="1" qual:name="IHF">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;font face="Georgia">There are two IHF genes in &lt;em>Pseudomonas putida&lt;/em> [1].&amp;nbsp;&lt;/font>&lt;div style="font-style: normal;">&lt;font face="Georgia">&lt;br/>&lt;/font>&lt;div>&lt;font face="Georgia">&lt;span class="highlight" style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">Integration host factor&lt;/span>&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">&amp;nbsp;subunit alpha [&lt;/span>&lt;em style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">&lt;span class="highlight">Pseudomonas putida&lt;/span>KT2440&lt;/em>&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">]&lt;/span>&lt;/font>&lt;/div>&lt;div>&lt;font face="Georgia">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">Gene Name:&amp;nbsp;&lt;/span>&lt;a href="http://www.ncbi.nlm.nih.gov/gene/1045640" ref="ordinalpos=2&amp;amp;ncbi_uid=1045640&amp;amp;link_uid=1045640" style="font-size: 10pt; line-height: 17.999801635742188px; white-space: nowrap; background-color: rgb(255, 255, 255);">ihfA&lt;/a>&lt;/font>&lt;/div>&lt;div>&lt;font face="Georgia">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">Gene ID:&amp;nbsp;&lt;/span>&lt;span style="background-color: rgb(255, 255, 255); font-size: 12px; line-height: 16.19982147216797px;">1045640&lt;/span>&lt;/font>&lt;/div>&lt;div>&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">&lt;font face="Georgia">&lt;br/>&lt;/font>&lt;/span>&lt;/div>&lt;/div>&lt;div style="font-style: normal;">&lt;font face="Georgia">&lt;span class="highlight" style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">Integration host factor&lt;/span>&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">&amp;nbsp;subunit beta [&lt;/span>&lt;em style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">&lt;span class="highlight">Pseudomonas putida&lt;/span>KT2440&lt;/em>&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">]&lt;/span>&lt;/font>&lt;/div>&lt;div style="font-style: normal;">&lt;font face="Georgia">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">Gene Name:&lt;/span>&lt;a href="http://www.ncbi.nlm.nih.gov/gene/1043345" ref="ordinalpos=3&amp;amp;ncbi_uid=1043345&amp;amp;link_uid=1043345" style="font-size: 10pt; line-height: 17.999801635742188px; white-space: nowrap; background-color: rgb(255, 255, 255);">ihfB&lt;/a>&lt;/font>&lt;/div>&lt;div style="font-style: normal;">&lt;font face="Georgia">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">Gene ID:&amp;nbsp;&lt;/span>&lt;span style="background-color: rgb(255, 255, 255); font-size: 12px; line-height: 16.19982147216797px;">1043345&lt;/span>&lt;/font>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#df953c8f-6a13-422e-8e34-575c07aed276">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:12:44Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:9642197"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:11694511"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23171249"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_2d41b08b-e4b9-474f-b3e0-277e17cae1b0" qual:compartment="cytosol" qual:constant="false" qual:id="S_7" qual:initialLevel="0" qual:maxLevel="1" qual:name="PtsN">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;font face="Georgia">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">PTS transporter subunit IIA-like nitrogen-regulatory protein&amp;nbsp;&lt;/span>&lt;span class="highlight" style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">PtsN&lt;/span>&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">[&lt;/span>&lt;em style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">&lt;span class="highlight">Pseudomonas&lt;/span>&amp;nbsp;putida KT2440&lt;/em>&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">]&lt;/span>&lt;/font>&lt;div>&lt;font face="Georgia">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">Gene Name:&amp;nbsp;&lt;/span>&lt;a href="http://www.ncbi.nlm.nih.gov/gene/1044865" ref="ordinalpos=1&amp;amp;ncbi_uid=1044865&amp;amp;link_uid=1044865" style="font-size: 10pt; line-height: 17.999801635742188px; white-space: nowrap; background-color: rgb(255, 255, 255);">&lt;span class="highlight">ptsN&lt;/span>&lt;/a>&lt;/font>&lt;/div>&lt;div>&lt;font face="Georgia">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">NCBI Gene ID:&amp;nbsp;&lt;/span>&lt;span style="background-color: rgb(255, 255, 255); font-size: 12px; line-height: 16.19982147216797px;">1044865&lt;/span>&lt;/font>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_2d41b08b-e4b9-474f-b3e0-277e17cae1b0">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:12:44Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:10336451"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:15901690"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:17478425"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23171249"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_93cebff3-66be-421d-b6cf-c21c5a22ba27" qual:compartment="cytosol" qual:constant="false" qual:id="S_8" qual:initialLevel="0" qual:maxLevel="1" qual:name="Upper">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;font face="Arial, Verdana" size="2">Catabolic operon [1].&amp;nbsp;&lt;/font></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_93cebff3-66be-421d-b6cf-c21c5a22ba27">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:12:44Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23171249"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_2c9ae9a5-6fbe-4344-a8c7-926d275f6113" qual:compartment="cytosol" qual:constant="false" qual:id="S_9" qual:initialLevel="0" qual:maxLevel="1" qual:name="XylS">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;font face="Georgia">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">Transcriptional activator of xyl-meta pathway operon [&lt;/span>&lt;em style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">&lt;span class="highlight">Pseudomonas&lt;/span>&amp;nbsp;putida&lt;/em>&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">]&lt;/span>&lt;/font>&lt;div>&lt;font face="Georgia">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">UniProt ID:&amp;nbsp;&lt;/span>&lt;a href="http://www.uniprot.org/uniprot/P07859" style="font-size: small; text-decoration: none; background-color: rgb(255, 255, 255);">P07859&lt;/a>&lt;/font>&lt;/div>&lt;div>&lt;font face="Georgia">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">Gene Name:&amp;nbsp;&lt;/span>&lt;a href="http://www.ncbi.nlm.nih.gov/gene/9121240" ref="ordinalpos=1&amp;amp;ncbi_uid=9121240&amp;amp;link_uid=9121240" style="font-size: 10pt; line-height: 17.999801635742188px; white-space: nowrap; background-color: rgb(255, 255, 255);">&lt;span class="highlight">xylS&lt;/span>&lt;/a>&lt;/font>&lt;/div>&lt;div>&lt;font face="Georgia">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">NCBI Gene ID:&amp;nbsp;&lt;/span>&lt;span style="background-color: rgb(255, 255, 255); font-size: 12px; line-height: 16.19982147216797px;">9121240&lt;/span>&lt;/font>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_2c9ae9a5-6fbe-4344-a8c7-926d275f6113">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:12:44Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23171249"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="f8606b94-b007-4d12-b4b9-f170b2008bef" qual:compartment="cytosol" qual:constant="false" qual:id="S_10" qual:initialLevel="0" qual:maxLevel="1" qual:name="XylSh">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;font size="2" face="Georgia">Hyper-expressed form of XylS&lt;/font>&lt;div>&lt;font face="Georgia">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">Transcriptional activator of xyl-meta pathway operon [&lt;/span>&lt;em style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">&lt;span class="highlight">Pseudomonas&lt;/span>&amp;nbsp;putida&lt;/em>&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">]&lt;/span>&lt;/font>&lt;div>&lt;font face="Georgia">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">UniProt ID:&amp;nbsp;&lt;/span>&lt;a href="http://www.uniprot.org/uniprot/P07859" style="font-size: small; text-decoration: none; background-color: rgb(255, 255, 255);">P07859&lt;/a>&lt;/font>&lt;/div>&lt;div>&lt;font face="Georgia">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">Gene Name:&amp;nbsp;&lt;/span>&lt;a href="http://www.ncbi.nlm.nih.gov/gene/9121240" ref="ordinalpos=1&amp;amp;ncbi_uid=9121240&amp;amp;link_uid=9121240" style="font-size: 10pt; line-height: 17.999801635742188px; white-space: nowrap; background-color: rgb(255, 255, 255);">&lt;span class="highlight">xylS&lt;/span>&lt;/a>&lt;/font>&lt;/div>&lt;div>&lt;font face="Georgia">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">NCBI Gene ID:&amp;nbsp;&lt;/span>&lt;span style="background-color: rgb(255, 255, 255); font-size: 12px; line-height: 16.19982147216797px;">9121240&lt;/span>&lt;/font>&lt;/div>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#f8606b94-b007-4d12-b4b9-f170b2008bef">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:12:44Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23171249"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="fc8b0835-563c-4b4a-a37c-73b329d1f078" qual:compartment="cytosol" qual:constant="false" qual:id="S_14" qual:initialLevel="0" qual:maxLevel="1" qual:name="XylR">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;div>&lt;font face="Georgia">&lt;span style="font-size: 10pt; line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">Transcriptional regulator&amp;nbsp;&lt;/span>&lt;span class="highlight" style="font-size: 10pt; line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">XylR&amp;nbsp;&lt;/span>&lt;span style="font-size: 10pt; line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">[&lt;/span>&lt;em style="font-size: 10pt; line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">&lt;span class="highlight">Pseudomonas&lt;/span>&amp;nbsp;putida&lt;/em>&lt;span style="font-size: 10pt; line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">]&lt;/span>&lt;/font>&lt;/div>&lt;div>&lt;font face="Georgia">&lt;span style="font-size: 10pt; line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">UniProt ID:&amp;nbsp;&lt;/span>&lt;a href="http://www.uniprot.org/uniprot/P06519" style="font-size: small; text-decoration: none; background-color: rgb(255, 255, 255);">P06519&lt;/a>&lt;/font>&lt;/div>&lt;div>&lt;font face="Georgia">&lt;span style="font-size: 10pt; line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">Gene Name:&amp;nbsp;&lt;/span>&lt;a href="http://www.ncbi.nlm.nih.gov/gene/4226942" ref="ordinalpos=1&amp;amp;ncbi_uid=4226942&amp;amp;link_uid=4226942" style="font-size: 10pt; line-height: 17.999801635742188px; white-space: nowrap; background-color: rgb(255, 255, 255);">&lt;span class="highlight">xylR&lt;/span>&lt;/a>&lt;/font>&lt;/div>&lt;div>&lt;font face="Georgia">&lt;span style="font-size: 10pt; line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">NCBI Gene ID:&amp;nbsp;&lt;/span>&lt;span style="background-color: rgb(255, 255, 255); font-size: 12px; line-height: 16.19982147216797px;">4226942&lt;/span>&lt;/font>&lt;/div>&lt;div style="font-family: Arial, Verdana;">&lt;span style="font-size: 10pt; font-family: arial, helvetica, clean, sans-serif; line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">&lt;br/>&lt;/span>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#fc8b0835-563c-4b4a-a37c-73b329d1f078">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:12:44Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:20529863"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23171249"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="be0a2af1-18b9-4eec-9211-ede3a704f212" qual:compartment="cytosol" qual:constant="false" qual:id="S_15" qual:initialLevel="0" qual:maxLevel="1" qual:name="Meta">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;font face="Arial, Verdana" size="2">Represents a catabolic operon. m-Xylene enters the TCA cycle through the activity of multiple enzymes, here represented as&amp;nbsp;&lt;em>meta&lt;/em>&amp;nbsp;[1].&amp;nbsp;&lt;/font></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#be0a2af1-18b9-4eec-9211-ede3a704f212">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:12:44Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:20529863"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:6950388"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23171249"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:6885718"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="f1f6d3da-c287-445a-af36-cdf98ff98925" qual:compartment="cytosol" qual:constant="false" qual:id="S_16" qual:initialLevel="0" qual:maxLevel="1" qual:name="ProX">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;font face="Georgia" size="2">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">Glycine betaine transporter periplasmic subunit [&lt;/span>&lt;em style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">&lt;span class="highlight">Pseudomonas&lt;/span>&amp;nbsp;putida W619&lt;/em>&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">]&lt;/span>&lt;/font>&lt;div>&lt;font face="Georgia" size="2">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">Gene Name:&amp;nbsp;&lt;/span>&lt;a href="http://www.ncbi.nlm.nih.gov/gene/6111248" ref="ordinalpos=2&amp;amp;ncbi_uid=6111248&amp;amp;link_uid=6111248" style="line-height: 17.999801635742188px; white-space: nowrap; background-color: rgb(255, 255, 255);">&lt;span class="highlight">proX&lt;/span>&lt;/a>&lt;/font>&lt;/div>&lt;div>&lt;font face="Georgia" size="2">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">NCBI Gene ID:&amp;nbsp;&lt;/span>&lt;span style="background-color: rgb(255, 255, 255); line-height: 16.19982147216797px;">6111248&lt;/span>&lt;/font>&lt;/div>&lt;div>&lt;font face="Georgia" size="2">&lt;span style="background-color: rgb(255, 255, 255); line-height: 16.19982147216797px;">&lt;br/>&lt;/span>&lt;/font>&lt;/div>&lt;div>&lt;font face="Georgia" size="2">&lt;span style="background-color: rgb(255, 255, 255); line-height: 16.19982147216797px;">Referred to unknown protein labeled X. [1]&lt;/span>&lt;/font>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#f1f6d3da-c287-445a-af36-cdf98ff98925">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:12:44Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23171249"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="ee7d7f28-80cd-48db-8abb-bfb3ea979bdd" qual:compartment="cytosol" qual:constant="false" qual:id="S_17" qual:initialLevel="0" qual:maxLevel="1" qual:name="Meta2">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;font face="Arial, Verdana" size="2">Catabolic operon [1].&amp;nbsp;&lt;/font></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#ee7d7f28-80cd-48db-8abb-bfb3ea979bdd">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:12:44Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23171249"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="c99ffe80-d403-4339-bbfd-7e0387862310" qual:compartment="cytosol" qual:constant="false" qual:id="S_19" qual:initialLevel="0" qual:maxLevel="1" qual:name="RpoS">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;font face="Georgia">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">RNA polymerase sigma factor&lt;/span>&lt;span class="highlight" style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">RpoS&lt;/span>&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">&amp;nbsp;[&lt;/span>&lt;em style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">&lt;span class="highlight">Pseudomonas&lt;/span>&amp;nbsp;putida KT2440&lt;/em>&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">]&lt;/span>&lt;/font>&lt;div style="line-height: normal;">&lt;font face="Georgia">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">Gene Name:&amp;nbsp;&lt;/span>&lt;a href="http://www.ncbi.nlm.nih.gov/gene/1044853" ref="ordinalpos=2&amp;amp;ncbi_uid=1044853&amp;amp;link_uid=1044853" style="font-size: 10pt; line-height: 17.999801635742188px; white-space: nowrap; background-color: rgb(255, 255, 255);">&lt;span class="highlight">rpoS&lt;/span>&lt;/a>&lt;/font>&lt;/div>&lt;div>&lt;font face="Georgia">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">NCBI Gene ID:&amp;nbsp;&lt;/span>&lt;span style="background-color: rgb(255, 255, 255); font-size: 12px; line-height: 16.19982147216797px;">1044853&lt;/span>&lt;/font>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#c99ffe80-d403-4339-bbfd-7e0387862310">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:12:44Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:11694511"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:9642197"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23171249"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="cb38caec-0189-4e39-beaa-257360bc8e9d" qual:compartment="cytosol" qual:constant="false" qual:id="S_20" qual:initialLevel="0" qual:maxLevel="1" qual:name="TurA">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;font face="Georgia">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">Transcriptional regulator&amp;nbsp;&lt;/span>&lt;span class="highlight" style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">TurA&lt;/span>&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">[&lt;/span>&lt;em style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">&lt;span class="highlight">Pseudomonas&lt;/span>&amp;nbsp;putida NBRC 14164&lt;/em>&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">]&lt;/span>&lt;/font>&lt;div>&lt;font face="Georgia">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">Gene Name:&amp;nbsp;&lt;/span>&lt;a href="http://www.ncbi.nlm.nih.gov/gene/16139004" ref="ordinalpos=1&amp;amp;ncbi_uid=16139004&amp;amp;link_uid=16139004" style="font-size: 10pt; line-height: 17.999801635742188px; white-space: nowrap; background-color: rgb(255, 255, 255);">&lt;span class="highlight">turA&lt;/span>&lt;/a>&lt;/font>&lt;/div>&lt;div>&lt;font face="Georgia">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">NCBI Gene ID:&amp;nbsp;&lt;/span>&lt;span style="background-color: rgb(255, 255, 255); font-size: 12px; line-height: 16.19982147216797px;">16139004&lt;/span>&lt;/font>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#cb38caec-0189-4e39-beaa-257360bc8e9d">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:12:44Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23171249"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:11750797"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_42fc47ce-19e5-4140-9a02-033a677a6098" qual:compartment="cytosol" qual:constant="false" qual:id="S_22" qual:initialLevel="0" qual:maxLevel="1" qual:name="PprA">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;font face="Georgia" size="2">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">LytTR family two component transcriptional regulator [&lt;/span>&lt;em style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">&lt;span class="highlight">Pseudomonas&lt;/span>&amp;nbsp;putida KT2440&lt;/em>&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">]&lt;/span>&lt;/font>&lt;div>&lt;div>&lt;font face="Georgia" size="2">&lt;span style="line-height: 17.999801635742188px;">Gene Name:&amp;nbsp;&lt;/span>&lt;a href="http://www.ncbi.nlm.nih.gov/gene/1043711" ref="ordinalpos=2&amp;amp;ncbi_uid=1043711&amp;amp;link_uid=1043711" style="line-height: 17.999801635742188px; white-space: nowrap; background-color: rgb(255, 255, 255);">&lt;span class="highlight">pprA&lt;/span>&lt;/a>&lt;span style="line-height: 17.999801635742188px;">&lt;br/>&lt;/span>&lt;/font>&lt;div>&lt;font face="Georgia" size="2">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">NCBI Gene ID:&amp;nbsp;&lt;/span>&lt;span style="background-color: rgb(255, 255, 255); line-height: 16.19982147216797px;">1043711&lt;/span>&lt;/font>&lt;/div>&lt;/div>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_42fc47ce-19e5-4140-9a02-033a677a6098">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:12:44Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23171249"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:11750797"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+    </qual:listOfQualitativeSpecies>
+    <qual:listOfTransitions xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:transition qual:id="tr_S_2">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Crc is activated by CAA and inactivated by CellDens. CellDens is dominant over the activity of CAA [1].</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_2_in_S_1" qual:qualitativeSpecies="S_1" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Crc and PtsN are low when Cell Density is high [1-3]</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_2_in_S_11" qual:qualitativeSpecies="S_11" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>CAA activates Crc [1,4].&amp;nbsp;</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_2" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> S_11 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <not/>
+                  <apply>
+                    <eq/>
+                    <ci> S_1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_4">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Heat activates RpoH [1].</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_4_in_S_24" qual:qualitativeSpecies="S_24" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Heat shock induces the expression/activity of RpoH [1,2]</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_4" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_24 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_5">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>IHF is activated by CellDens [1].</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_5_in_S_1" qual:qualitativeSpecies="S_1" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IHF and RpoS are high when Cell Density is high [1-3]</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_5" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_1 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_7">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>PtsN is activated by Glu and inhibited by CellDens [1].</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_7_in_S_1" qual:qualitativeSpecies="S_1" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Crc and PtsN are low when Cell Density is high [1,3]</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_7_in_S_18" qual:qualitativeSpecies="S_18" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>PtsN is regulated by glucose [1,4]</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_7" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> S_18 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <not/>
+                  <apply>
+                    <eq/>
+                    <ci> S_1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_8">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>\r\n	\r\n	\r\n		&lt;div class="page" title="Page 6">\r\n			&lt;div class="layoutArea">\r\n				&lt;div class="column">\r\n					&lt;p>&lt;font face="Georgia" size="2">The regulation of the Upper metabolic operon is controlled by: ((&lt;span style="font-style: oblique;">m&lt;/span>-xyl ^ (XylR ^ (IHF ^ (RpoN)))) ^¬ (Crc V (PtsN &amp;nbsp;V (TurA V (PprA))))) [1].&amp;nbsp;&lt;/font>&lt;/p>\r\n				&lt;/div>\r\n			&lt;/div>\r\n		&lt;/div></p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_8_in_S_2" qual:qualitativeSpecies="S_2" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Crc is a negative regulator of Upper [1].&amp;nbsp;</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_8_in_S_20" qual:qualitativeSpecies="S_20" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>TurA is a negative regulator of Upper [1].&amp;nbsp;</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_8_in_S_22" qual:qualitativeSpecies="S_22" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>PprA is a negative regulator of Upper [1].&amp;nbsp;</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_8_in_S_7" qual:qualitativeSpecies="S_7" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>PtsN is a negative regulator of Upper [1].&amp;nbsp;</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_8_in_S_5" qual:qualitativeSpecies="S_5" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IHF activates the Upper metabolic operon [1].&amp;nbsp;</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_8_in_S_13" qual:qualitativeSpecies="S_13" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>m-xyl activates the Upper metabolic operon [1].&amp;nbsp;</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_8_in_S_14" qual:qualitativeSpecies="S_14" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>XylR activates the Upper metabolic operon [1].&amp;nbsp;</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_8_in_S_23" qual:qualitativeSpecies="S_23" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>RpoN activates the Upper metabolic operon [1].&amp;nbsp;</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_8" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_13 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <and/>
+                      <apply>
+                        <eq/>
+                        <ci> S_5 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                      <apply>
+                        <eq/>
+                        <ci> S_14 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> S_23 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <not/>
+                  <apply>
+                    <or/>
+                    <apply>
+                      <or/>
+                      <apply>
+                        <or/>
+                        <apply>
+                          <eq/>
+                          <ci> S_22 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci> S_7 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <eq/>
+                        <ci> S_2 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> S_20 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_9">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>RpoD activates XylS [1].&amp;nbsp;</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_9_in_S_12" qual:qualitativeSpecies="S_12" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>RpoD activates XylS [1].&amp;nbsp;</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_9" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_12 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_10">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>\r\n	\r\n	\r\n		&lt;div class="page" title="Page 6">\r\n			&lt;div class="layoutArea">\r\n				&lt;div class="column">\r\n					&lt;p>&lt;font face="Helvetica" size="2">m-xyl, RpoN, HU, and XylR are all required to activate XylSh. Crc and PtsN each deactivate XylSh and are dominant over the activators [1].&amp;nbsp;&lt;/font>&lt;/p>\r\n				&lt;/div>\r\n			&lt;/div>\r\n		&lt;/div></p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_10_in_S_2" qual:qualitativeSpecies="S_2" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Crc deactivates XylSh [1].&amp;nbsp;</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_10_in_S_7" qual:qualitativeSpecies="S_7" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>PtsN deactivates XylSh [1].&amp;nbsp;</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_10_in_S_6" qual:qualitativeSpecies="S_6" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>HU activates XylSh [1].&amp;nbsp;</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_10_in_S_13" qual:qualitativeSpecies="S_13" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>m-xyl activates XylSh [1].&amp;nbsp;</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_10_in_S_14" qual:qualitativeSpecies="S_14" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>XylR activates XylSh [1].&amp;nbsp;</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_10_in_S_23" qual:qualitativeSpecies="S_23" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>RpoN activates XylSh [1].&amp;nbsp;</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_10" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_13 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <and/>
+                      <apply>
+                        <eq/>
+                        <ci> S_6 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                      <apply>
+                        <eq/>
+                        <ci> S_14 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> S_23 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <not/>
+                  <apply>
+                    <or/>
+                    <apply>
+                      <eq/>
+                      <ci> S_2 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> S_7 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_14">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>XylR is activated by RpoD, while IHF, Crc, and ProX deactivate XylR and are dominant over XylR [1].&amp;nbsp;</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_14_in_S_2" qual:qualitativeSpecies="S_2" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Crc inhibits XylR, XylS, and the catabolic operons (upper and meta) [1-2]</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_14_in_S_12" qual:qualitativeSpecies="S_12" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>RpoD activates XylR [1].</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_14_in_S_16" qual:qualitativeSpecies="S_16" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>ProX inhibits XylR [1].&amp;nbsp;</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_14" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> S_12 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <not/>
+                  <apply>
+                    <or/>
+                    <apply>
+                      <eq/>
+                      <ci> S_16 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> S_2 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_15">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;font face="Georgia" size="2">The regulation of Meta is described as:&amp;nbsp;((((((m-xyl ^ Upper) V 3MBz) ^ XylS) V XylSh) ^ (RpoD V (RpoS V (RpoH)))) ^¬ Crc) [1].&amp;nbsp;&lt;/font></p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_15_in_S_2" qual:qualitativeSpecies="S_2" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;span style="font-style: normal;">CAA controls the activity of &lt;/span>&lt;em>meta&lt;/em>&amp;nbsp;through Crc. Crc deactivates the &lt;em>meta&lt;/em>&amp;nbsp;operon [1,4].&amp;nbsp;</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_15_in_S_3" qual:qualitativeSpecies="S_3" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;span style="font-family: Arial, 'Lucida Grande', Geneva, Verdana, Helvetica, 'Lucida Sans Unicode', sans-serif; font-size: 12px; line-height: 18px; background-color: rgb(255, 255, 255);">The&amp;nbsp;&lt;/span>&lt;em style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-size: 12px; vertical-align: baseline; background-color: rgb(255, 255, 255); font-family: Arial, 'Lucida Grande', Geneva, Verdana, Helvetica, 'Lucida Sans Unicode', sans-serif; line-height: 18px;">meta&lt;/em>&lt;span style="font-family: Arial, 'Lucida Grande', Geneva, Verdana, Helvetica, 'Lucida Sans Unicode', sans-serif; font-size: 12px; line-height: 18px; background-color: rgb(255, 255, 255);">&amp;nbsp;operon is expressed from the&amp;nbsp;&lt;/span>&lt;em style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-size: 12px; vertical-align: baseline; background-color: rgb(255, 255, 255); font-family: Arial, 'Lucida Grande', Geneva, Verdana, Helvetica, 'Lucida Sans Unicode', sans-serif; line-height: 18px;">Pm&lt;/em>&lt;span style="font-family: Arial, 'Lucida Grande', Geneva, Verdana, Helvetica, 'Lucida Sans Unicode', sans-serif; font-size: 12px; line-height: 18px; background-color: rgb(255, 255, 255);">&amp;nbsp;promoter and is activated by XylS in response to 3MBz&amp;nbsp;[1-3]&lt;/span></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_15_in_S_13" qual:qualitativeSpecies="S_13" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;em>m&lt;/em>-Xyl&amp;nbsp;&lt;span style="font-style: normal;">is an activator of &lt;/span>&lt;em>meta&lt;/em>&lt;span style="font-style: normal;"> and can activate&amp;nbsp;&lt;em>meta&lt;/em>&amp;nbsp;under certain conditions [1].&amp;nbsp;&lt;/span></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_15_in_S_8" qual:qualitativeSpecies="S_8" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;span style="font-style: normal;">Upper is an activator of Meta and can activate &lt;/span>&lt;em>meta&lt;/em> under certain conditions [1].&amp;nbsp;</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_15_in_S_4" qual:qualitativeSpecies="S_4" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>RpoH is an activator of&amp;nbsp;&lt;em>meta&lt;/em>&amp;nbsp;and can activate&amp;nbsp;&lt;em>meta&lt;/em>&amp;nbsp;under certain conditions [1].&amp;nbsp;</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_15_in_S_12" qual:qualitativeSpecies="S_12" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>RpoD&lt;span style="font-style: normal;">&amp;nbsp;is an activator of&amp;nbsp;&lt;em>meta&lt;/em>&amp;nbsp;and can activate&amp;nbsp;&lt;em>meta&lt;/em>&amp;nbsp;under certain conditions [1].&amp;nbsp;&lt;/span></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_15_in_S_10" qual:qualitativeSpecies="S_10" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>XylSh is an activator of&amp;nbsp;&lt;em>meta&lt;/em>&amp;nbsp;and can activate&amp;nbsp;&lt;em>meta&lt;/em>&amp;nbsp;under certain conditions [1].&amp;nbsp;</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_15_in_S_9" qual:qualitativeSpecies="S_9" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;span style="font-family: Arial, 'Lucida Grande', Geneva, Verdana, Helvetica, 'Lucida Sans Unicode', sans-serif; font-size: 12px; line-height: 18px; background-color: rgb(255, 255, 255);">The&amp;nbsp;&lt;/span>&lt;em style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-size: 12px; vertical-align: baseline; background-color: rgb(255, 255, 255); font-family: Arial, 'Lucida Grande', Geneva, Verdana, Helvetica, 'Lucida Sans Unicode', sans-serif; line-height: 18px;">meta&lt;/em>&lt;span style="font-family: Arial, 'Lucida Grande', Geneva, Verdana, Helvetica, 'Lucida Sans Unicode', sans-serif; font-size: 12px; line-height: 18px; background-color: rgb(255, 255, 255);">&amp;nbsp;operon is expressed from the&amp;nbsp;&lt;/span>&lt;em style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-size: 12px; vertical-align: baseline; background-color: rgb(255, 255, 255); font-family: Arial, 'Lucida Grande', Geneva, Verdana, Helvetica, 'Lucida Sans Unicode', sans-serif; line-height: 18px;">Pm&lt;/em>&lt;span style="font-family: Arial, 'Lucida Grande', Geneva, Verdana, Helvetica, 'Lucida Sans Unicode', sans-serif; font-size: 12px; line-height: 18px; background-color: rgb(255, 255, 255);">&amp;nbsp;promoter and is activated by XylS in response to 3MBz&amp;nbsp;[1-3]&lt;/span></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_15_in_S_19" qual:qualitativeSpecies="S_19" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>RpoS is an activator of&amp;nbsp;&lt;em>meta&lt;/em>&amp;nbsp;and can activate&amp;nbsp;&lt;em>meta&lt;/em>&amp;nbsp;under certain conditions [1].&amp;nbsp;</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_15" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <or/>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <and/>
+                      <apply>
+                        <eq/>
+                        <ci> S_10 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                      <apply>
+                        <or/>
+                        <apply>
+                          <or/>
+                          <apply>
+                            <eq/>
+                            <ci> S_4 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                          <apply>
+                            <eq/>
+                            <ci> S_12 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci> S_19 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <not/>
+                      <apply>
+                        <eq/>
+                        <ci> S_2 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <and/>
+                      <apply>
+                        <eq/>
+                        <ci> S_13 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                      <apply>
+                        <and/>
+                        <apply>
+                          <and/>
+                          <apply>
+                            <eq/>
+                            <ci> S_8 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                          <apply>
+                            <or/>
+                            <apply>
+                              <or/>
+                              <apply>
+                                <eq/>
+                                <ci> S_4 </ci>
+                                <cn type="integer"> 1 </cn>
+                              </apply>
+                              <apply>
+                                <eq/>
+                                <ci> S_12 </ci>
+                                <cn type="integer"> 1 </cn>
+                              </apply>
+                            </apply>
+                            <apply>
+                              <eq/>
+                              <ci> S_19 </ci>
+                              <cn type="integer"> 1 </cn>
+                            </apply>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci> S_9 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <not/>
+                      <apply>
+                        <eq/>
+                        <ci> S_2 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci> S_3 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <and/>
+                      <apply>
+                        <or/>
+                        <apply>
+                          <or/>
+                          <apply>
+                            <eq/>
+                            <ci> S_4 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                          <apply>
+                            <eq/>
+                            <ci> S_12 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci> S_19 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <eq/>
+                        <ci> S_9 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <eq/>
+                      <ci> S_2 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_16">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>ProX is activated by Glu and deactivated by CellDens [1].&amp;nbsp;</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_16_in_S_1" qual:qualitativeSpecies="S_1" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>CellDens deactivates ProX [1].</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_16_in_S_18" qual:qualitativeSpecies="S_18" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Glu activates ProX [1].</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_16" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> S_18 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <not/>
+                  <apply>
+                    <eq/>
+                    <ci> S_1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_17">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;font face="Georgia" size="2">The logical regulation of Meta2 is defined as&amp;nbsp;((((((m-xyl ^ Upper) v&amp;nbsp;3MBz) ^ XylS) ^ XylSh) ^ (RpoD &amp;nbsp;v&amp;nbsp;(RpoS ^ (RpoH)))) ^¬ (Crc v&amp;nbsp;ProX)) [1]. &amp;nbsp;&lt;/font></p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_17_in_S_2" qual:qualitativeSpecies="S_2" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>\r\n		\r\n	\r\n	\r\n		&lt;div class="page" title="Page 3">\r\n			&lt;div class="layoutArea">\r\n				&lt;div class="column">\r\n					&lt;p>&lt;span style="font-size: 9.000000pt; font-family: 'Helvetica'">In &lt;/span>&lt;span style="font-size: 9.000000pt; font-family: 'Helvetica'; font-style: oblique">Pseu-\r\ndomonas&lt;/span>&lt;span style="font-size: 9.000000pt; font-family: 'Helvetica'">, the CR that is triggered by amino acids is\r\nexerted through the inhibition of the translation of the target\r\ngenes by the RNA-binding protein Crc (Aranda-Olmedo\r\n&lt;/span>&lt;span style="font-size: 9.000000pt; font-family: 'Helvetica'; font-style: oblique">et al&lt;/span>&lt;span style="font-size: 9.000000pt; font-family: 'Helvetica'">., 2005; Moreno &lt;/span>&lt;span style="font-size: 9.000000pt; font-family: 'Helvetica'; font-style: oblique">et al&lt;/span>&lt;span style="font-size: 9.000000pt; font-family: 'Helvetica'">., 2009). This protein targets the\r\nmRNA of the two local regulators of the TOL system (XylR\r\nand XylS) and the catabolic operons (Moreno &lt;/span>&lt;span style="font-size: 9.000000pt; font-family: 'Helvetica'; font-style: oblique">et al&lt;/span>&lt;span style="font-size: 9.000000pt; font-family: 'Helvetica'">., 2010).&amp;nbsp;&lt;/span>&lt;/p>\r\n				&lt;/div>\r\n			&lt;/div>\r\n		&lt;/div></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_17_in_S_3" qual:qualitativeSpecies="S_3" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>\r\n		\r\n	\r\n	\r\n		&lt;div class="page" title="Page 2">\r\n			&lt;div class="layoutArea">\r\n				&lt;div class="column">\r\n					&lt;p>&lt;span style="font-size: 9.000000pt; font-family: 'Helvetica'">The &lt;/span>&lt;span style="font-size: 9.000000pt; font-family: 'Helvetica'; font-style: oblique">meta &lt;/span>&lt;span style="font-size: 9.000000pt; font-family: 'Helvetica'">operon, however, is\r\nexpressed from the &lt;/span>&lt;span style="font-size: 9.000000pt; font-family: 'Helvetica'; font-style: oblique">Pm &lt;/span>&lt;span style="font-size: 9.000000pt; font-family: 'Helvetica'">promoter and is activated by XylS\r\nin response to 3MBz (Franklin &lt;/span>&lt;span style="font-size: 9.000000pt; font-family: 'Helvetica'; font-style: oblique">et al&lt;/span>&lt;span style="font-size: 9.000000pt; font-family: 'Helvetica'">., 1981; Inouye &lt;/span>&lt;span style="font-size: 9.000000pt; font-family: 'Helvetica'; font-style: oblique">et al&lt;/span>&lt;span style="font-size: 9.000000pt; font-family: 'Helvetica'">.,\r\n1983).&amp;nbsp;&lt;/span>&lt;/p>\r\n				&lt;/div>\r\n			&lt;/div>\r\n		&lt;/div></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_17_in_S_13" qual:qualitativeSpecies="S_13" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>\r\n		\r\n	\r\n	\r\n		&lt;div class="page" title="Page 2">\r\n			&lt;div class="layoutArea">\r\n				&lt;div class="column">\r\n					&lt;p>&lt;span style="font-size: 9.000000pt; font-family: 'Helvetica'">The &lt;/span>&lt;span style="font-size: 9.000000pt; font-family: 'Helvetica'; font-style: oblique">upper &lt;/span>&lt;span style="font-size: 9.000000pt; font-family: 'Helvetica'">operon encodes the\r\nenzymes that are required for the conversion of &lt;/span>&lt;span style="font-size: 9.000000pt; font-family: 'Helvetica'; font-style: oblique">m&lt;/span>&lt;span style="font-size: 9.000000pt; font-family: 'Helvetica'">-xylene\r\ninto 3-methylbenzoate (3MBz), whereas &lt;/span>&lt;span style="font-size: 9.000000pt; font-family: 'Helvetica'; font-style: oblique">meta &lt;/span>&lt;span style="font-size: 9.000000pt; font-family: 'Helvetica'">encodes\r\nthe enzymes that catalyse the metabolization of 3MBz\r\ninto pyruvate and acetaldehyde. The &lt;/span>&lt;span style="font-size: 9.000000pt; font-family: 'Helvetica'; font-style: oblique">upper &lt;/span>&lt;span style="font-size: 9.000000pt; font-family: 'Helvetica'">operon is\r\nexpressed from the &lt;/span>&lt;span style="font-size: 9.000000pt; font-family: 'Helvetica'; font-style: oblique">Pu &lt;/span>&lt;span style="font-size: 9.000000pt; font-family: 'Helvetica'">promoter, which is activated by the\r\ntranscriptional factor (TF) named XylR in response to the\r\npresence of &lt;/span>&lt;span style="font-size: 9.000000pt; font-family: 'Helvetica'; font-style: oblique">m&lt;/span>&lt;span style="font-size: 9.000000pt; font-family: 'Helvetica'">-xylene. The &lt;/span>&lt;span style="font-size: 9.000000pt; font-family: 'Helvetica'; font-style: oblique">meta &lt;/span>&lt;span style="font-size: 9.000000pt; font-family: 'Helvetica'">operon, however, is\r\nexpressed from the &lt;/span>&lt;span style="font-size: 9.000000pt; font-family: 'Helvetica'; font-style: oblique">Pm &lt;/span>&lt;span style="font-size: 9.000000pt; font-family: 'Helvetica'">promoter and is activated by XylS\r\nin response to 3MBz (Franklin &lt;/span>&lt;span style="font-size: 9.000000pt; font-family: 'Helvetica'; font-style: oblique">et al&lt;/span>&lt;span style="font-size: 9.000000pt; font-family: 'Helvetica'">., 1981; Inouye &lt;/span>&lt;span style="font-size: 9.000000pt; font-family: 'Helvetica'; font-style: oblique">et al&lt;/span>&lt;span style="font-size: 9.000000pt; font-family: 'Helvetica'">.,\r\n1983). In addition, XylR also triggers the expression of\r\nXylS, which leads to its overproduction. A distinct property\r\nof the TOL network is that such overexpression of XylS due&amp;nbsp;&lt;/span>&lt;span style="font-size: 9pt; font-family: Helvetica;">to XylR can trigger the expression of &lt;/span>&lt;span style="font-size: 9pt; font-family: Helvetica; font-style: oblique;">Pm &lt;/span>&lt;span style="font-size: 9pt; font-family: Helvetica;">even in the\r\nabsence of its cognate inducer 3MBz (Mermod &lt;/span>&lt;span style="font-size: 9pt; font-family: Helvetica; font-style: oblique;">et al&lt;/span>&lt;span style="font-size: 9pt; font-family: Helvetica;">.,\r\n1987).&lt;/span>&lt;/p>\r\n		\r\n	\r\n	\r\n		&lt;p>&lt;span style="font-family: Helvetica; font-size: 9pt;">&amp;nbsp;&lt;/span>&lt;span style="font-size: 9.000000pt; font-family: 'Helvetica'">&amp;nbsp;&lt;/span>&lt;/p>\r\n				&lt;/div>\r\n			&lt;/div>\r\n		&lt;/div></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_17_in_S_8" qual:qualitativeSpecies="S_8" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_S_17_in_S_4" qual:qualitativeSpecies="S_4" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_S_17_in_S_12" qual:qualitativeSpecies="S_12" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_S_17_in_S_10" qual:qualitativeSpecies="S_10" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_S_17_in_S_9" qual:qualitativeSpecies="S_9" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_S_17_in_S_16" qual:qualitativeSpecies="S_16" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_S_17_in_S_19" qual:qualitativeSpecies="S_19" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_17" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <or/>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <and/>
+                      <apply>
+                        <eq/>
+                        <ci> S_3 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                      <apply>
+                        <and/>
+                        <apply>
+                          <or/>
+                          <apply>
+                            <or/>
+                            <apply>
+                              <eq/>
+                              <ci> S_4 </ci>
+                              <cn type="integer"> 1 </cn>
+                            </apply>
+                            <apply>
+                              <eq/>
+                              <ci> S_12 </ci>
+                              <cn type="integer"> 1 </cn>
+                            </apply>
+                          </apply>
+                          <apply>
+                            <eq/>
+                            <ci> S_19 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci> S_9 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <not/>
+                      <apply>
+                        <or/>
+                        <apply>
+                          <eq/>
+                          <ci> S_2 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci> S_16 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <and/>
+                      <apply>
+                        <eq/>
+                        <ci> S_10 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                      <apply>
+                        <or/>
+                        <apply>
+                          <or/>
+                          <apply>
+                            <eq/>
+                            <ci> S_4 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                          <apply>
+                            <eq/>
+                            <ci> S_12 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci> S_19 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <not/>
+                      <apply>
+                        <or/>
+                        <apply>
+                          <eq/>
+                          <ci> S_2 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci> S_16 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci> S_13 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <and/>
+                      <apply>
+                        <and/>
+                        <apply>
+                          <or/>
+                          <apply>
+                            <or/>
+                            <apply>
+                              <eq/>
+                              <ci> S_4 </ci>
+                              <cn type="integer"> 1 </cn>
+                            </apply>
+                            <apply>
+                              <eq/>
+                              <ci> S_12 </ci>
+                              <cn type="integer"> 1 </cn>
+                            </apply>
+                          </apply>
+                          <apply>
+                            <eq/>
+                            <ci> S_19 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci> S_9 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <eq/>
+                        <ci> S_8 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <or/>
+                      <apply>
+                        <eq/>
+                        <ci> S_2 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                      <apply>
+                        <eq/>
+                        <ci> S_16 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_19">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>RpoS is activated by CellDens [1].</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_19_in_S_1" qual:qualitativeSpecies="S_1" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IHF and RpoS are high when Cell Density is high [1-3]</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_19" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_1 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_20">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Cold induces the activity of TurA [1].</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_20_in_S_21" qual:qualitativeSpecies="S_21" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Cold shock induces the expression/activity of TurA and PprA [1,2]</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_20" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_21 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_22">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Cold activates PprA [1].</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_22_in_S_21" qual:qualitativeSpecies="S_21" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Cold shock induces the expression/activity of TurA and PprA [1,2]</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_22" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_21 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+    </qual:listOfTransitions>
+    <listOfCompartments>
+      <compartment constant="true" id="extracellular" name="extracellular"/>
+      <compartment constant="true" id="cytosol" name="cytosol"/>
+    </listOfCompartments>
+  </model>
+</sbml>

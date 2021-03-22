@@ -1,0 +1,54 @@
+#position:Dopamine:247.16458304444842,245.9225733270656
+$Dopamine:(Tryosine_hydroxylase & !COMT)
+Tryosine_hydroxylase -> Dopamine
+COMT -| Dopamine
+#position:Dopamine_Receptor_1:331.1648551317089,357.5532424960982
+$Dopamine_Receptor_1:Dopamine
+Dopamine -> Dopamine_Receptor_1
+#position:Protein_Kinase_A:231.0938871323773,809.8263460489233
+$Protein_Kinase_A:Adenylate_cyclase
+Adenylate_cyclase -> Protein_Kinase_A
+#position:Glutamate_Receptor:215.93486842343637,1051.7998400031877
+$Glutamate_Receptor:((Protein_Kinase_A & Glutamate) & !Protein_Phosphatase_1)
+Protein_Kinase_A -> Glutamate_Receptor
+Glutamate -> Glutamate_Receptor
+Protein_Phosphatase_1 -| Glutamate_Receptor
+#position:Glutamate:193.57553490281086,1253.022871721671
+$Glutamate:Glutamate
+Glutamate -> Glutamate
+#position:Protein_Phosphatase_1:96.30953201645714,1051.9572033239228
+$Protein_Phosphatase_1:!DARPP32
+DARPP32 -| Protein_Phosphatase_1
+#position:Dopamine_Receptor_2:202.20147408071324,455.4539161772327
+$Dopamine_Receptor_2:Dopamine
+Dopamine -> Dopamine_Receptor_2
+#position:Adenylate_cyclase:279.3317221984819,587.7466624043582
+$Adenylate_cyclase:(Dopamine_Receptor_1 & !Dopamine_Receptor_2)
+Dopamine_Receptor_2 -| Adenylate_cyclase
+Dopamine_Receptor_1 -> Adenylate_cyclase
+#position:Packaging_Proteins:325.24588284004386,1105.7183214947063
+$Packaging_Proteins:Glutamate_Receptor
+Glutamate_Receptor -> Packaging_Proteins
+#position:DARPP32:74.08546088593997,825.7818576645685
+$DARPP32:(Protein_Kinase_A & !Calcineurin)
+Protein_Kinase_A -> DARPP32
+Calcineurin -| DARPP32
+#position:Calcineurin:19.5,952.5854632280026
+$Calcineurin:Calcium
+Calcium -> Calcineurin
+#position:Exocytosis:429.3289660445102,1163.2152642877281
+$Exocytosis:Packaging_Proteins
+Packaging_Proteins -> Exocytosis
+#position:Tryosine_hydroxylase:318.92236802311294,67
+$Tryosine_hydroxylase:Tryosine_hydroxylase
+Tryosine_hydroxylase -> Tryosine_hydroxylase
+#position:Calcium:151.71816277112808,881.1555563062534
+$Calcium:(Phospholipase_C | Glutamate_Receptor)
+Glutamate_Receptor -> Calcium
+Phospholipase_C -> Calcium
+#position:Phospholipase_C:151.76970098160598,677.379566551113
+$Phospholipase_C:Dopamine_Receptor_2
+Dopamine_Receptor_2 -> Phospholipase_C
+#position:COMT:157.82935523147796,175.36761012979446
+$COMT:Dopamine
+Dopamine -> COMT

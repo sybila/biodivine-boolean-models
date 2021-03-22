@@ -1,0 +1,1913 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" qual:required="true" version="1" xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+  <model id="M2423" metaid="beabb93b-0c48-4381-9f2b-48316def7452" name="Budding Yeast Cell Cycle 2009">
+    <notes>
+      <body xmlns="http://www.w3.org/1999/xhtml">Abstract The budding yeast Saccharomyces cerevisiae is a model organism that is commonly used to investigate control of the eukaryotic cell cycle. Moreover, because of the extensive experimental data on wild type and mutant phenotypes, it is also particularly suitable for mathematical modelling and analysis. Here, I present a new Boolean model of the budding yeast cell cycle. This model is consistent with a wide range of wild type and mutant phenotypes and shows remarkable robustness against perturbations, both to reaction times and the states of component genes/proteins. Because of its simple logical nature, the model is suitable for sub-network analysis, which can be used to identify a four node core regulatory circuit underlying cell cycle regulation. Sub-network analysis can also be used to identify key sub-dynamics that are essential for viable cell cycle control, as well as identifying the sub-dynamics that are most variable between different mutants.</body>
+    </notes>
+    <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#beabb93b-0c48-4381-9f2b-48316def7452">
+	<dc:creator>
+	<rdf:Bag>
+	<rdf:li rdf:parseType="Resource">
+	<vCard:N rdf:parseType="Resource">
+	<vCard:Family>Helikar</vCard:Family>
+	<vCard:Given>Tomas</vCard:Given>
+	</vCard:N>
+	<vCard:EMAIL>thelika@unmc.edu</vCard:EMAIL>
+	<vCard:ORG rdf:parseType="Resource">
+	<vCard:Orgname>University of Nebraska - Lincoln</vCard:Orgname>
+	</vCard:ORG>
+	</rdf:li>
+	</rdf:Bag>
+	</dc:creator>
+	<dcterms:created rdf:parseType="Resource">
+	<dcterms:W3CDTF>2014-06-18T11:38:15Z</dcterms:W3CDTF>
+	</dcterms:created>
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-03-29T23:24:54Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:19185585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+      <qual:listOfQualitativeSpecies xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:qualitativeSpecies metaid="_9d2e2b36-8141-4edb-98c2-90002cf98859" qual:compartment="cytosol" qual:constant="false" qual:id="S_1" qual:initialLevel="0" qual:maxLevel="1" qual:name="Cdh1">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;font face="Georgia">&lt;span style="font-style: normal; line-height: 16px; background-color: rgb(255, 255, 255);">PC/C activator protein CDH1 (&lt;/span>&lt;i style="line-height: 19.1875px; background-color: rgb(255, 255, 255);">Saccharomyces cerevisiae&lt;/i>&lt;i style="font-style: normal; line-height: 19.1875px; background-color: rgb(255, 255, 255);">)&lt;/i>&lt;/font>&lt;div>&lt;font face="Georgia">&lt;span style="line-height: 19.1875px; background-color: rgb(255, 255, 255);">UniProt ID:&amp;nbsp;&lt;/span>&lt;span style="background-color: rgb(255, 255, 255);">P53197&lt;/span>&lt;/font>&lt;/div>&lt;div>&lt;span style="background-color: rgb(255, 255, 255);">&lt;font face="Georgia">&lt;br/>&lt;/font>&lt;/span>&lt;/div>&lt;div>&lt;span style="line-height: 16px; background-color: rgb(255, 255, 255);">&lt;font face="Georgia">Fizzy-related protein homolog (&lt;em>Homo sapiens)&lt;/em>&lt;/font>&lt;/span>&lt;/div>&lt;div>&lt;font face="Georgia">&lt;acronym class="ALTERNATIVE" title="A synonym of the recommended name." style="border: none; cursor: pointer; font-style: italic; line-height: 16px; background-color: rgb(255, 255, 255);">Alternative name(s):&lt;/acronym>&lt;br style="line-height: 16px; background-color: rgb(255, 255, 255);"/>&lt;span style="padding-left: 1em; line-height: 16px;">&lt;acronym class="names FULL" style="border: none; cursor: pointer; padding-left: 1em; line-height: 16px; background-color: rgb(255, 255, 255);">&lt;/acronym>&lt;/span>&lt;span class="FULL_NAME" style="line-height: 16px; background-color: rgb(255, 255, 255);">CDC20-like protein 1&lt;/span>&lt;br style="line-height: 16px; background-color: rgb(255, 255, 255);"/>&lt;span style="padding-left: 1em; line-height: 16px;">&lt;acronym class="names FULL" style="border: none; cursor: pointer; padding-left: 1em; line-height: 16px; background-color: rgb(255, 255, 255);">&lt;/acronym>&lt;/span>&lt;span class="FULL_NAME" style="line-height: 16px; background-color: rgb(255, 255, 255);">Cdh1/Hct1 homolog&lt;/span>&lt;/font>&lt;/div>&lt;div>&lt;font face="Georgia">&lt;span class="FULL_NAME" style="line-height: 16px; background-color: rgb(255, 255, 255);">UniProt ID:&amp;nbsp;&lt;/span>&lt;span style="background-color: rgb(255, 255, 255);">Q9UM11&lt;/span>&lt;/font>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_9d2e2b36-8141-4edb-98c2-90002cf98859">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-03-29T12:47:17Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:9885559"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:9831566"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:19185585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="bc75d574-c261-4996-ace6-68c8e351fa20" qual:compartment="cytosol" qual:constant="false" qual:id="S_2" qual:initialLevel="0" qual:maxLevel="1" qual:name="CKI">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>cyclin-dependent kinase inhibitors&lt;div>UniProt AccessionID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/P21268" style="border-bottom-width: 0px; cursor: pointer;">P21268&lt;/a>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#bc75d574-c261-4996-ace6-68c8e351fa20">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-03-29T15:01:01Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:9885559"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:19185585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:16285853"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_0b1b3d7e-a287-4533-803e-326386749c20" qual:compartment="cytosol" qual:constant="false" qual:id="S_3" qual:initialLevel="0" qual:maxLevel="1" qual:name="Cdc14">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;font face="Georgia" style="font-style: normal;">&lt;span style="line-height: 16px; background-color: rgb(255, 255, 255);">Tyrosine-protein phosphatase CDC14 (&lt;/span>&lt;i style="line-height: 19.1875px; background-color: rgb(255, 255, 255);">Saccharomyces cerevisiae&lt;/i>&lt;span style="line-height: 16px; background-color: rgb(255, 255, 255);">)&amp;nbsp;&lt;/span>&lt;/font>&lt;div style="font-style: normal;">&lt;font face="Georgia">&lt;span style="line-height: 15.989583969116211px;">UniProt ID:&amp;nbsp;&lt;/span>&lt;span style="background-color: rgb(255, 255, 255);">Q00684&lt;/span>&lt;/font>&lt;/div>&lt;div style="font-style: normal;">&lt;font face="Georgia">&lt;span style="background-color: rgb(255, 255, 255);">&lt;br/>&lt;/span>&lt;/font>&lt;/div>&lt;div>&lt;font face="Georgia">&lt;span style="background-color: rgb(255, 255, 255);">&lt;em>Homo sapiens&lt;/em>&amp;nbsp;has three homologs of CDC14, each with a specific area of functionality.&amp;nbsp;&lt;/span>&lt;/font>&lt;/div>&lt;div>&lt;ul>&lt;li>&lt;span style="font-family: Georgia; line-height: 16px; background-color: rgb(255, 255, 255);">Dual specificity protein phosphatase CDC14A, UniProt ID:&lt;/span>&lt;span style="font-family: Georgia; background-color: rgb(255, 255, 255);">Q9UNH5&lt;/span>&lt;/li>&lt;li>&lt;span style="font-family: Georgia; line-height: 16px; background-color: rgb(255, 255, 255);">Dual specificity protein phosphatase CDC14B, UniProt ID:&amp;nbsp;&lt;/span>&lt;span style="font-family: Georgia; background-color: rgb(255, 255, 255);">O60729&lt;/span>&lt;/li>&lt;li>&lt;span style="font-family: Georgia; line-height: 16px; background-color: rgb(255, 255, 255);">Dual specificity protein phosphatase CDC14C, UniProt ID:&amp;nbsp;&lt;/span>&lt;span style="font-family: Georgia; background-color: rgb(255, 255, 255);">A4D256&lt;/span>&lt;/li>&lt;/ul>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_0b1b3d7e-a287-4533-803e-326386749c20">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:18:34Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:11832211"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:15520278"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:19185585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_7ec08286-0a2f-44b6-ac43-9f25504b6e7f" qual:compartment="cytosol" qual:constant="false" qual:id="S_4" qual:initialLevel="0" qual:maxLevel="1" qual:name="Cln2">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;font face="Georgia" style="font-family: Arial, Verdana; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">Cln2p [&lt;/span>&lt;em style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">Saccharomyces cerevisiae S288c&lt;/em>&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">]&lt;/span>&lt;/font>&lt;div style="font-family: Arial, Verdana; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&lt;font face="Georgia">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">UniProt ID:&amp;nbsp;&lt;/span>&lt;a href="http://www.uniprot.org/uniprot/P20438" style="font-size: small; text-decoration: none; background-color: rgb(255, 255, 255);">P20438&lt;/a>&lt;/font>&lt;/div>&lt;div style="font-family: Arial, Verdana; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&lt;font face="Georgia">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">Gene Name:&amp;nbsp;&lt;/span>&lt;a href="http://www.ncbi.nlm.nih.gov/gene/855819" ref="ordinalpos=1&amp;amp;ncbi_uid=855819&amp;amp;link_uid=855819" style="font-size: 10pt; line-height: 17.999801635742188px; white-space: nowrap; background-color: rgb(255, 255, 255);">&lt;span class="highlight">CLN2&lt;/span>&lt;/a>&lt;/font>&lt;/div>&lt;div style="font-family: Arial, Verdana; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&lt;font face="Georgia">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">NCBI Gene ID:&amp;nbsp;&lt;/span>&lt;span style="background-color: rgb(255, 255, 255); font-size: 12px; line-height: 16.19982147216797px;">855819&lt;/span>&lt;/font>&lt;/div>&lt;div style="font-family: Arial, Verdana; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&lt;font face="Georgia">&lt;span style="background-color: rgb(255, 255, 255); font-size: 12px; line-height: 16.19982147216797px;">&lt;br/>&lt;/span>&lt;/font>&lt;/div>&lt;div>&lt;br/>&lt;/div>&lt;div>&lt;div>For Budding Yeast Cell Cycle 2009 [1]:&lt;/div>&lt;div>Cln2 includes the following genes, proteins, events:&lt;/div>&lt;div>&lt;br/>&lt;/div>&lt;div>Cln1&lt;/div>&lt;div>UniProt ID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/P20437" style="border-bottom-width: 0px; cursor: pointer;">P20437&lt;/a>&lt;/div>&lt;div>&lt;br/>&lt;/div>&lt;div>Cln2&lt;/div>&lt;div>UniProt ID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/P20438" style="border-bottom-width: 0px; cursor: pointer;">P20438&lt;/a>&lt;/div>&lt;div>&lt;br/>&lt;/div>&lt;div>Clb1:&lt;/div>&lt;div>UniProt ID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/P24868" style="border-bottom-width: 0px; cursor: pointer;">P24868&lt;/a>&lt;/div>&lt;/div>&lt;div>&lt;br/>&lt;/div>&lt;div>&lt;div>Clb2:&lt;/div>&lt;div>UniProt ID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/P24869" style="border-bottom-width: 0px; cursor: pointer;">P24869&lt;/a>&lt;/div>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_7ec08286-0a2f-44b6-ac43-9f25504b6e7f">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:18:34Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:19185585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_2be9fe5d-d815-49f1-b608-a0d98d507c4d" qual:compartment="cytosol" qual:constant="false" qual:id="S_5" qual:initialLevel="0" qual:maxLevel="1" qual:name="SFF">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;font face="Arial, Verdana" size="2">Represents the yeast cell cycle transcription factor: Swi Five Factor [1].&amp;nbsp;&lt;/font>&lt;div>&lt;br/>&lt;/div>&lt;div>Transcript factor complex including: Fkh2 and Ndd1 [2]&lt;/div>&lt;div>&lt;br/>&lt;/div>&lt;div>Nuclear division defective protein 1&lt;/div>&lt;div>Uniprot AccessionID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/Q08887" style="border-bottom-width: 0px; cursor: pointer;">Q08887&lt;/a>&lt;/div>&lt;div>&lt;br/>&lt;/div>&lt;div>Fork head protein homolog 2&lt;/div>&lt;div>UniProt AccessionID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/P41813" style="border-bottom-width: 0px; cursor: pointer;">P41813&lt;/a>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_2be9fe5d-d815-49f1-b608-a0d98d507c4d">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-03-29T12:47:17Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:15838511"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:16285853"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:19185585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_2f124de4-c7b3-4210-817d-52be5c5b69e2" qual:compartment="cytosol" qual:constant="false" qual:id="S_6" qual:initialLevel="0" qual:maxLevel="1" qual:name="B">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Bud Growth-- a cell cycle event (from the Budding Yeast Cell Cycle 2009)</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_2f124de4-c7b3-4210-817d-52be5c5b69e2">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:18:34Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:19185585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="b4a97450-0002-4fad-839c-7afccde23274" qual:compartment="cytosol" qual:constant="false" qual:id="S_7" qual:initialLevel="0" qual:maxLevel="1" qual:name="FEAR">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;font face="Arial, Verdana" size="2">This node represents the FEAR Network [1].&amp;nbsp;&lt;/font>&lt;div style="font-family: Arial, Verdana; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&lt;br/>&lt;/div>&lt;div>&lt;font face="Arial, Verdana" size="2">Cdc fourteen early anaphase release-- a mitotic pathway (from Budding Yeast Cell Cycle 2009) [2]&lt;/font>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#b4a97450-0002-4fad-839c-7afccde23274">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:18:34Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:15520278"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:19185585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_2bd018e2-5d0b-4610-a66d-836d8a0e357f" qual:compartment="cytosol" qual:constant="false" qual:id="S_8" qual:initialLevel="0" qual:maxLevel="1" qual:name="Cln3">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;font face="Georgia" style="font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal; font-family: Arial, Verdana;">&lt;span style="font-style: normal; line-height: 16px; background-color: rgb(255, 255, 255);">G1/S-specific cyclin CLN3 (&lt;/span>&lt;i style="line-height: 19.1875px; background-color: rgb(255, 255, 255);">Saccharomyces cerevisiae&lt;/i>&lt;i style="font-style: normal; line-height: 19.1875px; background-color: rgb(255, 255, 255);">)&lt;/i>&lt;/font>&lt;div style="font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal; font-family: Arial, Verdana;">&lt;font face="Georgia">&lt;span style="line-height: 19.1875px; background-color: rgb(255, 255, 255);">UniProt ID:&lt;/span>&lt;i style="font-style: normal; line-height: 19.1875px; background-color: rgb(255, 255, 255);">&amp;nbsp;&lt;/i>&lt;span style="font-style: normal; background-color: rgb(255, 255, 255);">P13365&lt;/span>&lt;/font>&lt;/div>&lt;div style="font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal; font-family: Arial, Verdana;">&lt;font face="Georgia">&lt;span style="font-style: normal; background-color: rgb(255, 255, 255);">&lt;br/>&lt;/span>&lt;/font>&lt;/div>&lt;div>For Budding Yeast Cell Cycle 2009:&lt;/div>&lt;div>Cln3 includes the following genes, proteins, events:&lt;/div>&lt;div>&lt;br/>&lt;/div>&lt;div>Cln3&lt;/div>&lt;div>UniProt ID:&amp;nbsp;P13365&lt;/div>&lt;div>&lt;br/>&lt;/div>&lt;div>Cln3-Cdc28&lt;/div>&lt;div>UniProt ID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/P00546" style="border-bottom-width: 0px; cursor: pointer;">P00546&lt;/a>&lt;/div>&lt;div>&lt;br/>&lt;/div>&lt;div>Bck2:&lt;/div>&lt;div>UniProt ID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/P33306" style="border-bottom-width: 0px; cursor: pointer;">P33306&lt;/a>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_2bd018e2-5d0b-4610-a66d-836d8a0e357f">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:18:34Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:19185585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_33a1f026-b1c4-4d59-8526-b9d6557b2462" qual:compartment="cytosol" qual:constant="false" qual:id="S_9" qual:initialLevel="0" qual:maxLevel="1" qual:name="Clb2">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;font face="Georgia">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">Clb2p [&lt;/span>&lt;em style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">Saccharomyces cerevisiae S288c&lt;/em>&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">]&lt;/span>&lt;/font>&lt;div>&lt;font face="Georgia">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">UniProt ID:&amp;nbsp;&lt;/span>&lt;a href="http://www.uniprot.org/uniprot/P24869" style="font-size: small; text-decoration: none; background-color: rgb(255, 255, 255);">P24869&lt;/a>&lt;/font>&lt;/div>&lt;div>&lt;font face="Georgia">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">Gene Name:&amp;nbsp;&lt;/span>&lt;a href="http://www.ncbi.nlm.nih.gov/gene/856236" ref="ordinalpos=1&amp;amp;ncbi_uid=856236&amp;amp;link_uid=856236" style="font-size: 10pt; line-height: 17.999801635742188px; white-space: nowrap; background-color: rgb(255, 255, 255);">&lt;span class="highlight">CLB2&lt;/span>&lt;/a>&lt;/font>&lt;/div>&lt;div>&lt;font face="Georgia">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">NCBI Gene ID:&amp;nbsp;&lt;/span>&lt;span style="background-color: rgb(255, 255, 255); font-size: 12px; line-height: 16.19982147216797px;">856236&lt;/span>&lt;/font>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_33a1f026-b1c4-4d59-8526-b9d6557b2462">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-03-29T15:01:01Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:7954792"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:16612388"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:15838511"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:10882135"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:7760809"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:19185585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:16285853"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:11809822"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="b587cd48-2062-414e-91d2-d422ef6856bb" qual:compartment="cytosol" qual:constant="false" qual:id="S_10" qual:initialLevel="0" qual:maxLevel="1" qual:name="Cdc20">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;font face="Georgia" style="font-weight: normal; font-style: normal;">&lt;span style="font-style: normal; line-height: 16px; background-color: rgb(255, 255, 255);">APC/C activator protein CDC20 (&lt;/span>&lt;i style="line-height: 19.1875px; background-color: rgb(255, 255, 255);">Saccharomyces cerevisiae&lt;/i>&lt;i style="font-style: normal; line-height: 19.1875px; background-color: rgb(255, 255, 255);">)&lt;/i>&lt;/font>&lt;div style="font-weight: normal; font-style: normal;">&lt;font face="Georgia">&lt;span style="line-height: 19.1875px; background-color: rgb(255, 255, 255);">UniProt ID:&amp;nbsp;&lt;/span>&lt;span style="background-color: rgb(255, 255, 255);">P26309&lt;/span>&lt;/font>&lt;/div>&lt;div style="font-weight: normal; font-style: normal;">&lt;strong style="background-color: rgb(255, 255, 255);">&lt;font face="Georgia">&lt;br/>&lt;/font>&lt;/strong>&lt;/div>&lt;div>&lt;span style="line-height: 16px; background-color: rgb(255, 255, 255);">&lt;font face="Georgia">Cell division cycle protein 20 homolog (&lt;em>Homo sapiens)&lt;/em>&lt;/font>&lt;/span>&lt;/div>&lt;div>&lt;font face="Georgia">&lt;span style="line-height: 16px; background-color: rgb(255, 255, 255);">UniProt ID&lt;em>:&amp;nbsp;&lt;/em>&lt;/span>&lt;span style="background-color: rgb(255, 255, 255);">Q12834&lt;/span>&lt;/font>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#b587cd48-2062-414e-91d2-d422ef6856bb">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-03-29T12:47:17Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:15838511"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:10871279"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:1752436"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:19185585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="f349cdf8-9fd2-4e46-b9cb-a3a1b26e7bfc" qual:compartment="cytosol" qual:constant="false" qual:id="S_11" qual:initialLevel="0" qual:maxLevel="1" qual:name="M">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Entry into mitosis-- a cell cycle event (from Budding Yeast Cell Cycle 2009)</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#f349cdf8-9fd2-4e46-b9cb-a3a1b26e7bfc">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:18:34Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:1849457"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:1427070"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:17245415"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:19185585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_0e2c26a7-91c9-45a6-a147-3dc1dc923a6e" qual:compartment="cytosol" qual:constant="false" qual:id="S_12" qual:initialLevel="0" qual:maxLevel="1" qual:name="S">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>DNA synthesis-- a cell cycle event (from the Budding Yeast Cell Cycle 2009)</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_0e2c26a7-91c9-45a6-a147-3dc1dc923a6e">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:18:34Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:8319908"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:15956196"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:19185585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="b161bd73-b0e2-495f-bcf3-95bd83de19bc" qual:compartment="cytosol" qual:constant="false" qual:id="S_13" qual:initialLevel="0" qual:maxLevel="1" qual:name="MEN">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>This node represents the MEN (miototic exit network) [1].&amp;nbsp;&lt;div>&lt;br/>&lt;/div>&lt;div>A mitotic pathway [2]&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#b161bd73-b0e2-495f-bcf3-95bd83de19bc">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:18:34Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:16713564"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:11733064"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:19185585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:16303563"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_0ad43fba-03dc-497e-a9f1-a24b133dbf42" qual:compartment="cytosol" qual:constant="false" qual:id="S_14" qual:initialLevel="0" qual:maxLevel="1" qual:name="Clb5">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;font face="Georgia">&lt;span style="line-height: 16px; background-color: rgb(255, 255, 255);">S-phase entry cyclin-5 (&lt;/span>&lt;i style="line-height: 19.1875px; background-color: rgb(255, 255, 255);">Saccharomyces cerevisiae)&lt;/i>&lt;/font>&lt;div>&lt;font face="Georgia">&lt;span style="line-height: 16px; background-color: rgb(255, 255, 255);">UniProt ID:&amp;nbsp;&lt;/span>&lt;span style="background-color: rgb(255, 255, 255);">P30283&lt;/span>&lt;/font>&lt;/div>&lt;div>&lt;font face="Georgia">&lt;span style="background-color: rgb(255, 255, 255);">&lt;br/>&lt;/span>&lt;/font>&lt;/div>&lt;div>&lt;div style="font-size: 12px; color: rgb(79, 79, 79); font-family: Arial, sans-serif; line-height: 14.4000005722046px; background-color: rgb(255, 255, 255);">&lt;div>For Budding Yeast Cell Cycle 2009 [1]:&lt;/div>&lt;div>Clb5 includes the following genes, proteins, events:&lt;/div>&lt;div>&lt;br/>&lt;/div>&lt;div>Clb5&lt;/div>&lt;div>UniProt ID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/P30283" style="text-decoration: none; color: rgb(64, 148, 180); border-bottom-width: 0px; cursor: pointer; font-family: Verdana, Arial, sans-serif; font-size: 13px; line-height: 20.0819721221924px;">P30283&lt;/a>&lt;/div>&lt;div>&lt;br/>&lt;/div>&lt;div>&lt;div style="line-height: 14.4000005722046px;">Clb6&lt;/div>&lt;div style="line-height: 14.4000005722046px;">UniProt ID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/P32943" style="text-decoration: none; color: rgb(64, 148, 180); border-bottom-width: 0px; cursor: pointer; font-family: Verdana, Arial, sans-serif; font-size: 13px; line-height: 20.0819721221924px;">P32943&lt;/a>&lt;/div>&lt;/div>&lt;div style="line-height: 14.4000005722046px;">&lt;br/>&lt;/div>&lt;div style="line-height: 14.4000005722046px;">&lt;div style="line-height: 14.4000005722046px;">Clb5-Cdc28 complex&lt;/div>&lt;div style="line-height: 14.4000005722046px;">&lt;br/>&lt;/div>&lt;div style="line-height: 14.4000005722046px;">&lt;div style="line-height: 14.4000005722046px;">Clb6-Cdc28 complex&lt;/div>&lt;div style="line-height: 14.4000005722046px;">&lt;br/>&lt;/div>&lt;/div>&lt;/div>&lt;/div>&lt;div style="font-size: 12px; color: rgb(79, 79, 79); font-family: Arial, sans-serif; line-height: 14.4000005722046px; background-color: rgb(255, 255, 255);">&lt;/div>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_0ad43fba-03dc-497e-a9f1-a24b133dbf42">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-03-29T15:01:01Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:7954792"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:19185585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:10647015"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_78238472-9e69-4fea-8b31-5bd34ddc7243" qual:compartment="cytosol" qual:constant="false" qual:id="S_15" qual:initialLevel="0" qual:maxLevel="1" qual:name="Swi5">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;font face="Georgia">&lt;span style="font-style: normal; line-height: 16px; background-color: rgb(255, 255, 255);">Transcriptional factor SWI5 (&lt;/span>&lt;i style="line-height: 19.1875px; background-color: rgb(255, 255, 255);">Saccharomyces cerevisiae&lt;/i>&lt;i style="font-style: normal; line-height: 19.1875px; background-color: rgb(255, 255, 255);">)&lt;/i>&lt;/font>&lt;div>&lt;font face="Georgia">&lt;span style="line-height: 19.1875px; background-color: rgb(255, 255, 255);">UniProt ID:&amp;nbsp;&lt;/span>&lt;span style="background-color: rgb(255, 255, 255);">P08153&lt;/span>&lt;/font>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_78238472-9e69-4fea-8b31-5bd34ddc7243">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:18:34Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:9885559"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:1752436"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:15838511"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:19185585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:16285853"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="a8453aa1-a34f-42b7-890e-ff52a5fbfd4a" qual:compartment="cytosol" qual:constant="false" qual:id="S_16" qual:initialLevel="0" qual:maxLevel="1" qual:name="CD">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Cell Division-- a cell cycle event (from Budding Yeast Cell Cycle 2009)</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#a8453aa1-a34f-42b7-890e-ff52a5fbfd4a">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:18:34Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:15520278"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:19185585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="bf1a2405-0506-4e7a-9088-6d74122a38f7" qual:compartment="cytosol" qual:constant="false" qual:id="S_17" qual:initialLevel="0" qual:maxLevel="1" qual:name="Yhp1">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Homeobox protein&lt;strong style="font-family: Verdana, Arial, sans-serif; font-size: 13.0571994781494px; font-style: normal; font-variant: normal; font-weight: normal; line-height: 20.081974029541px; color: rgb(68, 68, 68); background-color: rgb(255, 255, 255);">&amp;nbsp;&lt;/strong>&lt;font face="Georgia" size="2" style="font-family: Arial, Verdana; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">Yhp1p [&lt;/span>&lt;em style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">Saccharomyces cerevisiae S288c&lt;/em>&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">]&lt;/span>&lt;/font>&lt;div style="font-family: Arial, Verdana; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&lt;font face="Georgia" size="2">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">UniProt ID:&amp;nbsp;&lt;/span>&lt;a href="http://www.uniprot.org/uniprot/Q04116" style="text-decoration: none; background-color: rgb(255, 255, 255);">Q04116&lt;/a>&lt;/font>&lt;/div>&lt;div style="font-family: Arial, Verdana; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&lt;font face="Georgia" size="2">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">Gene Name:&amp;nbsp;&lt;/span>&lt;a href="http://www.ncbi.nlm.nih.gov/gene/852062" ref="ordinalpos=1&amp;amp;ncbi_uid=852062&amp;amp;link_uid=852062" style="line-height: 17.999801635742188px; white-space: nowrap; background-color: rgb(255, 255, 255);">&lt;span class="highlight">YHP1&lt;/span>&lt;/a>&lt;/font>&lt;/div>&lt;div style="font-family: Arial, Verdana; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&lt;font face="Georgia" size="2">&lt;span style="line-height: 17.999801635742188px; background-color: rgb(255, 255, 255);">NCBI Gene ID:&amp;nbsp;&lt;/span>&lt;span style="background-color: rgb(255, 255, 255); line-height: 16.19982147216797px;">852062&lt;/span>&lt;/font>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#bf1a2405-0506-4e7a-9088-6d74122a38f7">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:18:34Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:12464632"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:16285853"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:12464633"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:19185585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_6ef93343-a948-4264-9179-815326ca35df" qual:compartment="cytosol" qual:constant="false" qual:id="S_18" qual:initialLevel="0" qual:maxLevel="1" qual:name="SMBF">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;div>&lt;font face="Arial, Verdana" size="2">Budding Yeast Cell Cycle 2009 includes:&lt;/font>&lt;/div>&lt;div>&lt;font face="Arial, Verdana" size="2">&lt;br/>&lt;/font>&lt;/div>&lt;font face="Arial, Verdana" size="2">two transcription factor complexes (Swi6-Swi4) and MBF (Swi6-Mbp1)&lt;/font>&lt;div>&lt;br/>&lt;/div>&lt;div>(Swi6)&lt;/div>&lt;div>UniProt AccessionID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/P09959" style="border-bottom-width: 0px; cursor: pointer;">P09959&lt;/a>&lt;/div>&lt;div>&lt;br/>&lt;/div>&lt;div>MBF (Mbp1)&lt;/div>&lt;div>UniProt AccessionID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/P39678" style="border-bottom-width: 0px; cursor: pointer;">P39678&lt;/a>&lt;/div>&lt;div style="font-family: Arial, Verdana; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&lt;br/>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_6ef93343-a948-4264-9179-815326ca35df">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-03-29T23:24:54Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:15838511"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:19185585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+    </qual:listOfQualitativeSpecies>
+    <qual:listOfTransitions xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:transition qual:id="tr_S_1">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Cdc14 activates Cdh1 [1, 3]. Clb2 inhibits Cdh1 [1].&amp;nbsp;Clb5 inhibits Cdh1 [1, 2].&amp;nbsp;Cln2 inhibits Cdh1 [1, 2].</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_1_in_S_9" qual:qualitativeSpecies="S_9" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;span style="font-family: Arial, Verdana; font-size: small;">Cln2, Clb5 or Clb2 can inhibit Cdh1 [1]&lt;/span></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_1_in_S_4" qual:qualitativeSpecies="S_4" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;font face="Arial, Verdana" size="2">Clb5 and Clb2 have also been shown to phosphorylate and inhibit&amp;nbsp;&lt;/font>&lt;span style="font-size: small;">another key protein Cdh1 [1, 2]&lt;/span></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_1_in_S_14" qual:qualitativeSpecies="S_14" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;div>&lt;font face="Arial, Verdana" size="2">Clb5 and Clb2 have also been shown to phosphorylate and inhibit&amp;nbsp;&lt;/font>&lt;span style="font-family: Arial, Verdana; font-size: small;">another key protein Cdh1 [1, 2]&lt;/span>&lt;/div></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_1_in_S_3" qual:qualitativeSpecies="S_3" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;div>&lt;font face="Arial, Verdana" size="2">Cdc14 can de-phosphorylate and activate Cdh1-APC, Swi5 and&amp;nbsp;&lt;/font>&lt;span style="font-family: Arial, Verdana; font-size: small;">Sic1 (CKI) [1, 3]&lt;/span>&lt;/div></p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_1" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> S_3 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <not/>
+                  <apply>
+                    <or/>
+                    <apply>
+                      <or/>
+                      <apply>
+                        <or/>
+                        <apply>
+                          <eq/>
+                          <ci> S_9 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci> S_4 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <eq/>
+                        <ci> S_14 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> S_3 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_2">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;span style="color: rgb(79, 79, 79); font-family: Arial, sans-serif; font-size: small; line-height: 18px; orphans: 3; widows: 3; background-color: rgb(255, 255, 255);">CKI positively regulates itself [1].&amp;nbsp;&lt;/span>Cdc14 positively regulates CKI [1, 2].&amp;nbsp;&lt;span style="color: rgb(79, 79, 79); font-family: Arial, sans-serif; font-size: small; line-height: 18px; orphans: 3; widows: 3; background-color: rgb(255, 255, 255);">Swi5 positively regulates CKI [1, 2, 3].&amp;nbsp;&lt;/span>&lt;span style="font-size: small; color: rgb(79, 79, 79); font-family: Arial, sans-serif; line-height: 18px; orphans: 3; widows: 3; background-color: rgb(255, 255, 255);">Cln2, Clb5 or Clb2 inhibit CKI [1].&lt;/span></p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_2_in_S_9" qual:qualitativeSpecies="S_9" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;span style="font-size: small;">Cln2, Clb5 or Clb2 can inhibit CKI [1]&lt;/span></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_2_in_S_15" qual:qualitativeSpecies="S_15" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Swi5 can activate target genes of CKI [1, 2, 3]</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_2_in_S_14" qual:qualitativeSpecies="S_14" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;font face="Arial, Verdana" size="2">Cln2, Clb5 or Clb2 can inhibit CKI [1]&lt;/font></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_2_in_S_4" qual:qualitativeSpecies="S_4" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;span style="font-size: small;">Cln2, Clb5 or Clb2 can inhibit CKI [1]&lt;/span></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_2_in_S_3" qual:qualitativeSpecies="S_3" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;font face="Arial, Verdana" size="2" style="color: rgb(79, 79, 79); orphans: 3; widows: 3; line-height: 14.4000005722046px; background-color: rgb(255, 255, 255);">Cdc14 can de-phosphorylate and activate Cdh1-APC, Swi5 and&amp;nbsp;&lt;/font>&lt;span style="color: rgb(79, 79, 79); font-family: Arial, sans-serif; orphans: 3; widows: 3; line-height: 14.4000005722046px; font-size: small; background-color: rgb(255, 255, 255);">Sic1 (CKI) [1, 2]&lt;/span></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_2_in_S_2" qual:qualitativeSpecies="S_2" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;div>&lt;font face="Arial, Verdana" size="2">S/MBF, CKI, S, B and M can all maintains their own activity in the&amp;nbsp;&lt;/font>&lt;span style="font-family: Arial, Verdana; font-size: small;">absence of inhibitors. [1]&lt;/span>&lt;/div></p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_2" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <or/>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci> S_2 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <not/>
+                      <apply>
+                        <or/>
+                        <apply>
+                          <or/>
+                          <apply>
+                            <eq/>
+                            <ci> S_9 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                          <apply>
+                            <eq/>
+                            <ci> S_14 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci> S_4 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci> S_15 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <not/>
+                      <apply>
+                        <or/>
+                        <apply>
+                          <or/>
+                          <apply>
+                            <eq/>
+                            <ci> S_9 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                          <apply>
+                            <eq/>
+                            <ci> S_14 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci> S_4 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_3 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> S_15 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_3">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Cdc14 is positively regulates by FEAR and MEN [1, 2, 3].</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_3_in_S_13" qual:qualitativeSpecies="S_13" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;div>&lt;font face="Arial, Verdana" size="2">Once FEAR and MEN pathways are both active, they combine to&amp;nbsp;&lt;/font>&lt;span style="font-family: Arial, Verdana; font-size: small;">activate Cdc15 and Cdc14 [1, 2, 3]&lt;/span>&lt;/div></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_3_in_S_7" qual:qualitativeSpecies="S_7" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;font face="Arial, Verdana" size="2">Once FEAR and MEN pathways are both active, they combine to&amp;nbsp;&lt;/font>&lt;span style="font-size: small;">activate Cdc15 and Cdc14 [1, 2, 3]&lt;/span></p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_3" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> S_7 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_13 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_4">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>S_MBF positively regulates Cln2 [1]</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_4_in_S_18" qual:qualitativeSpecies="S_18" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_4" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_18 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_5">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>B positively regulates SFF [1]. Clb2 positively regulates SFF [1, 2, 3]. SFF positively regulates itself [1].&amp;nbsp;Cdc20 inhibits SFF [1].&amp;nbsp;Cdh1 inhibits SFF [1]. CKI inhibits SFF [1].</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_5_in_S_1" qual:qualitativeSpecies="S_1" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Cdh1 inhibits SFF [1].</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_5_in_S_9" qual:qualitativeSpecies="S_9" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;div>&lt;font face="Arial, Verdana" size="2">In G2 phase, CLB2 is activated by the transcription factor complex&amp;nbsp;&lt;/font>&lt;span style="font-family: Arial, Verdana; font-size: small;">SFF (consisting of the proteins Fkh2 and Ndd1) that function&amp;nbsp;&lt;/span>&lt;span style="font-family: Arial, Verdana; font-size: small;">alongside Mcm1.&lt;/span>&lt;span style="font-family: Arial, Verdana; font-size: small;">&amp;nbsp;Under normal conditions, Mcm1 and Fkh2 are&amp;nbsp;&lt;/span>&lt;span style="font-family: Arial, Verdana; font-size: small;">assumed present throughout the relevant phases of the cell cycle,&amp;nbsp;&lt;/span>&lt;span style="font-family: Arial, Verdana; font-size: small;">and the crucial regulatory step is the recruitment of Ndd1, which&amp;nbsp;&lt;/span>&lt;span style="font-family: Arial, Verdana; font-size: small;">primarily requires Clb2 itself (1, 2, 3)&lt;/span>&lt;/div></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_5_in_S_5" qual:qualitativeSpecies="S_5" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>SFF must regulate itself [1].</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_5_in_S_6" qual:qualitativeSpecies="S_6" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;div>&lt;font face="Arial, Verdana" size="2">Clb2 and&amp;nbsp;&lt;/font>&lt;span style="font-family: Arial, Verdana; font-size: small;">SFF are not initially activated until Bud formation has occurred. [1]&lt;/span>&lt;/div></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_5_in_S_10" qual:qualitativeSpecies="S_10" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Cdc20 inhibits SFF [1].</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_5_in_S_2" qual:qualitativeSpecies="S_2" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>CKI inhibits SFF [1].</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_5" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_9 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> S_5 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci> S_6 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <or/>
+                      <apply>
+                        <not/>
+                        <apply>
+                          <eq/>
+                          <ci> S_10 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <not/>
+                        <apply>
+                          <eq/>
+                          <ci> S_1 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <eq/>
+                      <ci> S_2 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_6">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Cln2 positively regulates B [1].&amp;nbsp;Clb5 positively regulates B [1]. B positively regulates B [1]. CD negatively regulates B [1].</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_6_in_S_16" qual:qualitativeSpecies="S_16" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;font face="Arial, Verdana" size="2">CD resets S, B, M and CD [1]&lt;/font></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_6_in_S_6" qual:qualitativeSpecies="S_6" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;div>&lt;font face="Arial, Verdana" size="2">S/MBF, CKI, S, B and M can all maintains their own activity in the&amp;nbsp;&lt;/font>&lt;span style="font-family: Arial, Verdana; font-size: small;">absence of inhibitors. [1]&lt;/span>&lt;/div></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_6_in_S_14" qual:qualitativeSpecies="S_14" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;font face="Arial, Verdana" size="2">Cln2 and Clb5 promote Bud formation [1]&lt;/font></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_6_in_S_4" qual:qualitativeSpecies="S_4" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;span style="font-size: small;">Cln2 and Clb5 promote Bud formation [1]&lt;/span></p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_6" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <or/>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci> S_14 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <not/>
+                      <apply>
+                        <eq/>
+                        <ci> S_16 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci> S_4 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <not/>
+                      <apply>
+                        <eq/>
+                        <ci> S_16 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_6 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <eq/>
+                      <ci> S_16 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_7">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Cdc20 positively regulates FEAR [1, 2].</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_7_in_S_10" qual:qualitativeSpecies="S_10" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;div style="font-family: Arial, Verdana; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&lt;font face="Arial, Verdana" size="2">Cdc20 becomes functionally active and&amp;nbsp;&lt;/font>&lt;span style="font-family: Arial, Verdana; font-size: small;">triggers a chain of events that activates two important mitotic&amp;nbsp;&lt;/span>&lt;span style="font-family: Arial, Verdana; font-size: small;">pathways, FEAR (?Cdc fourteen early anaphase release?) and MEN&amp;nbsp;&lt;/span>&lt;span style="font-family: Arial, Verdana; font-size: small;">(?mitotic exit network?). [1]&lt;/span>&lt;/div>&lt;div style="font-family: Arial, Verdana; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">&lt;span style="font-family: Arial, Verdana; font-size: small;">&lt;br/>&lt;/span>&lt;/div>&lt;div>&lt;div>&lt;font face="Arial, Verdana" size="2">Once active, Cdc20-APC leads to the degradation of Clb5 and Pds1&lt;/font>&lt;span style="font-family: Arial, Verdana; font-size: small;">. The degradation of Pds1 (Securin) then&amp;nbsp;&lt;/span>&lt;span style="font-family: Arial, Verdana; font-size: small;">leads to the activation of the FEAR pathway [1, 2]&lt;/span>&lt;/div>&lt;/div></p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_7" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_10 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_8">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Yhp1 inhibits Cln3 [1]</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_8_in_S_17" qual:qualitativeSpecies="S_17" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;div>&lt;font face="Arial, Verdana" size="2">In the model Yhp1 corresponds to the two proteins Yox1&amp;nbsp;&lt;/font>&lt;span style="font-family: Arial, Verdana; font-size: small;">and Yhp1 that inhibit Cln3 up until late M phase [1]&lt;/span>&lt;/div></p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_8" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <not/>
+                <apply>
+                  <eq/>
+                  <ci> S_17 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_9">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>B positively regulates Clb2 [1]. SFF positively regulates Clb2 [1, 2, 3, 4]. Clb2 positively regulates itself [1]. Cdc20 inhibits Clb2 [1, 5, 6, 7]. &amp;nbsp;Cdh1 inhibits Clb2 [1, 5, 6, 7]. CKI inhibits Clb2 [1, 8].</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_9_in_S_1" qual:qualitativeSpecies="S_1" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;font face="Arial, Verdana" size="2">Cdc20-APC reduces&amp;nbsp;&lt;/font>&lt;span style="font-size: small;">Clb2 to low/medium levels, whereas Cdh1 can degrade low levels&amp;nbsp;&lt;/span>&lt;span style="font-size: small;">of Clb2 [1, 5, 6, 7]&lt;/span></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_9_in_S_9" qual:qualitativeSpecies="S_9" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;div>In the absence of inhibition, low levels of Clb2&amp;nbsp;can activate a positive feedback loop that is capable of maintaining its activation [1]&lt;/div></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_9_in_S_5" qual:qualitativeSpecies="S_5" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;div>&lt;font face="Arial, Verdana" size="2">In G2 phase, CLB2 is activated by the transcription factor complex&amp;nbsp;&lt;/font>&lt;span style="font-family: Arial, Verdana; font-size: small;">SFF [1, 2, 3, 4]&lt;/span>&lt;/div></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_9_in_S_6" qual:qualitativeSpecies="S_6" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;font face="Arial, Verdana" size="2">Clb2 and&amp;nbsp;&lt;/font>&lt;span style="font-size: small;">SFF are not initially activated until Bud formation has occurred. [1]&lt;/span></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_9_in_S_10" qual:qualitativeSpecies="S_10" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;div>&lt;font face="Arial, Verdana" size="2">Cdc20-APC reduces&amp;nbsp;&lt;/font>&lt;span style="font-family: Arial, Verdana; font-size: small;">Clb2 to low/medium levels, whereas Cdh1 can degrade low levels&amp;nbsp;&lt;/span>&lt;span style="font-family: Arial, Verdana; font-size: small;">of Clb2 [1, 5, 6, 7]&lt;/span>&lt;/div></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_9_in_S_2" qual:qualitativeSpecies="S_2" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;div>&lt;font face="Arial, Verdana" size="2">CKIs, such as Sic1, can bind and inhibit Clb2 [1, 8]&lt;/font>&lt;/div></p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_9" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci> S_6 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <or/>
+                      <apply>
+                        <not/>
+                        <apply>
+                          <eq/>
+                          <ci> S_1 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <not/>
+                        <apply>
+                          <eq/>
+                          <ci> S_10 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <eq/>
+                      <ci> S_2 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci> S_9 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <and/>
+                      <apply>
+                        <eq/>
+                        <ci> S_5 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                      <apply>
+                        <or/>
+                        <apply>
+                          <not/>
+                          <apply>
+                            <eq/>
+                            <ci> S_1 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <not/>
+                          <apply>
+                            <eq/>
+                            <ci> S_10 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <eq/>
+                      <ci> S_2 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_10">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>M positively regulates Cdc20 [1]. Clb2 positively regulates Cdc20 [1, 4]. SFF activates Cdc20 [1, 2, 3].</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_10_in_S_11" qual:qualitativeSpecies="S_11" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>The cell must enter M phase before Cdc20 can become activated [1]</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_10_in_S_9" qual:qualitativeSpecies="S_9" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;div>&lt;font face="Arial, Verdana" size="2">phosphorylation by Clb2 has also been shown to be necessary for&amp;nbsp;&lt;/font>&lt;span style="font-family: Arial, Verdana; font-size: small;">Cdc20-APC activation [1, 4]&lt;/span>&lt;/div></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_10_in_S_5" qual:qualitativeSpecies="S_5" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;div>&lt;font face="Arial, Verdana" size="2">SFF transcriptionally&amp;nbsp;&lt;/font>&lt;span style="font-family: Arial, Verdana; font-size: small;">activates CDC20 and SWI5 [1, 2, 3]&lt;/span>&lt;/div></p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_10" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> S_11 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_9 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> S_5 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_11">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Clb2 positively regulates M [1, 2, 3, 4]. S positively regulates M [1]. M positively regulates itself [1]. CD negatively regulates M [1].</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_11_in_S_11" qual:qualitativeSpecies="S_11" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;font face="Arial, Verdana" size="2">S/MBF, CKI, S, B and M can all maintains their own activity in the&amp;nbsp;&lt;/font>&lt;span style="font-size: small;">absence of inhibitors. [1]&lt;/span></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_11_in_S_16" qual:qualitativeSpecies="S_16" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;font face="Arial, Verdana" size="2">CD resets S, B, M and CD [1]&lt;/font></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_11_in_S_9" qual:qualitativeSpecies="S_9" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;font face="Arial, Verdana" size="2">The main protein responsible for promoting mitotic entry is Clb2 [1, 2, 3, 4]&lt;/font></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_11_in_S_12" qual:qualitativeSpecies="S_12" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;font face="Arial, Verdana" size="2">Clb2 and S are necessary for M [1]&lt;/font></p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_11" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci> S_12 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> S_9 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <eq/>
+                      <ci> S_16 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_11 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <eq/>
+                      <ci> S_16 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_12">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>S positively regulates itself [1]. Clb2 positively regulates S [1, 2, 3]. Clb5 positively regulates S [1]. CD inhibits S [1].</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_12_in_S_16" qual:qualitativeSpecies="S_16" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;span style="font-size: small;">CD resets S, B, M and CD [1]&lt;/span></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_12_in_S_9" qual:qualitativeSpecies="S_9" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;div>&lt;font face="Arial, Verdana" size="2">Clbs (e.g. Clb2) can initiate S phase once they are&amp;nbsp;&lt;/font>&lt;span style="font-family: Arial, Verdana; font-size: small;">expressed [1, 2, 3]&lt;/span>&lt;/div></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_12_in_S_14" qual:qualitativeSpecies="S_14" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;font face="Arial, Verdana" size="2">Clb5 and Clb2 activate S [1]&lt;/font></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_12_in_S_12" qual:qualitativeSpecies="S_12" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;font face="Arial, Verdana" size="2">S/MBF, CKI, S, B and M can all maintains their own activity in the&amp;nbsp;&lt;/font>&lt;span style="font-size: small;">absence of inhibitors. [1]&lt;/span></p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_12" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <or/>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci> S_14 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <not/>
+                      <apply>
+                        <eq/>
+                        <ci> S_16 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci> S_12 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <not/>
+                      <apply>
+                        <eq/>
+                        <ci> S_16 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_9 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <eq/>
+                      <ci> S_16 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_13">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Clb2 positively regulates MEN [1, 2, 3, 4]. FEAR positively regulates MEN [1].</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_13_in_S_7" qual:qualitativeSpecies="S_7" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;font face="Arial, Verdana" size="2">Cdc20 becomes functionally active and&amp;nbsp;&lt;/font>&lt;span style="font-size: small;">triggers a chain of events that activates two important mitotic&amp;nbsp;&lt;/span>&lt;span style="font-size: small;">pathways, FEAR (?Cdc fourteen early anaphase release?) and MEN&amp;nbsp;&lt;/span>&lt;span style="font-size: small;">(?mitotic exit network?). [1]&lt;/span></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_13_in_S_9" qual:qualitativeSpecies="S_9" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;div>&lt;font face="Arial, Verdana" size="2">FEAR and Clb2 then combine to a&lt;/font>&lt;span style="font-family: Arial, Verdana; font-size: small;">ctivate the MEN signalling cascade (via Tem1). [1, 2, 3, 4]&lt;/span>&lt;/div></p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_13" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> S_7 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_9 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_14">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>S_MBF positively regulates Clb5 [1]. Cdc20 negatively regulates Clb5 [1, 2].&amp;nbsp;CKI negatively regulates Clb5 [1, 3].</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_14_in_S_18" qual:qualitativeSpecies="S_18" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_S_14_in_S_10" qual:qualitativeSpecies="S_10" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;font face="Arial, Verdana" size="2">Cdc20-APC leads to the degradation of Clb5 [1, 2]&lt;/font></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_14_in_S_2" qual:qualitativeSpecies="S_2" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;div>&lt;font face="Arial, Verdana" size="2">CKIs, such as Sic1, can bind and inhibit &lt;/font>&lt;span style="font-family: Arial, Verdana; font-size: small;">Clb5 [1, 3]&lt;/span>&lt;/div></p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_14" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> S_18 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <or/>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <eq/>
+                      <ci> S_10 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <not/>
+                      <apply>
+                        <eq/>
+                        <ci> S_10 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <not/>
+                      <apply>
+                        <eq/>
+                        <ci> S_2 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_15">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>SFF activates Swi5 [1, 2, 3]. Cdc14 activates Swi5 [1, 5].&amp;nbsp;Clb2 ihhibits Swi5 [1, 4].</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_15_in_S_9" qual:qualitativeSpecies="S_9" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;div>&lt;font face="Arial, Verdana" size="2">Swi5 protein is then phosphorylated&amp;nbsp;&lt;/font>&lt;span style="font-family: Arial, Verdana; font-size: small;">and removed from the nucleus because of Clb2 activity [1, 4]&lt;/span>&lt;/div></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_15_in_S_5" qual:qualitativeSpecies="S_5" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;font face="Arial, Verdana" size="2" style="color: rgb(79, 79, 79); line-height: 14.4000005722046px; background-color: rgb(255, 255, 255);">SFF transcriptionally&amp;nbsp;&lt;/font>&lt;span style="color: rgb(79, 79, 79); line-height: 14.4000005722046px; font-size: small; background-color: rgb(255, 255, 255);">activates CDC20 and SWI5 [1, 2, 3]&lt;/span></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_15_in_S_3" qual:qualitativeSpecies="S_3" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;font face="Arial, Verdana" size="2" style="color: rgb(79, 79, 79); line-height: 14.4000005722046px; background-color: rgb(255, 255, 255);">Cdc14 can de-phosphorylate and activate Cdh1-APC, Swi5 and&amp;nbsp;&lt;/font>&lt;span style="color: rgb(79, 79, 79); line-height: 14.4000005722046px; font-size: small; background-color: rgb(255, 255, 255);">Sic1 (CKI) [1, 5]&lt;/span></p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_15" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_3 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> S_5 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_5 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <eq/>
+                      <ci> S_9 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_16">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>M positively regulates CD [1, 2]. FEAR positively regulates CD [1, 2]. Cdc14 positively regulates CD [1, 2]. CD negatively regulates itself [1]</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_16_in_S_11" qual:qualitativeSpecies="S_11" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;font face="Arial, Verdana" size="2">Cell division is dependent on&amp;nbsp;&lt;/font>&lt;span style="font-size: small;">mitotic entry (M), FEAR and Cdc14, since they are essential for&amp;nbsp;&lt;/span>&lt;span style="font-size: small;">completing anaphase and providing a safe passage to mitotic exit [1, 2]&lt;/span></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_16_in_S_16" qual:qualitativeSpecies="S_16" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;span style="font-size: small;">CD resets S, B, M and CD [1]&lt;/span></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_16_in_S_7" qual:qualitativeSpecies="S_7" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;font face="Arial, Verdana" size="2">Cell division is dependent on&amp;nbsp;&lt;/font>&lt;span style="font-size: small;">mitotic entry (M), FEAR and Cdc14, since they are essential for&amp;nbsp;&lt;/span>&lt;span style="font-size: small;">completing anaphase and providing a safe passage to mitotic exit [1, 2]&lt;/span></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_16_in_S_3" qual:qualitativeSpecies="S_3" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;div>&lt;font face="Arial, Verdana" size="2">Cell division is dependent on&amp;nbsp;&lt;/font>&lt;span style="font-family: Arial, Verdana; font-size: small;">mitotic entry (M), FEAR and Cdc14, since they are essential for&amp;nbsp;&lt;/span>&lt;span style="font-family: Arial, Verdana; font-size: small;">completing anaphase and providing a safe passage to mitotic exit [1, 2]&lt;/span>&lt;/div></p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_16" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_11 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci> S_7 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> S_3 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <not/>
+                  <apply>
+                    <eq/>
+                    <ci> S_16 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_17">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Yhp1 is positively regulates by S_MBF [1, 2, 3, 4].</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_17_in_S_18" qual:qualitativeSpecies="S_18" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_17" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_18 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_18">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;span style="color: rgb(79, 79, 79); font-family: Arial, sans-serif; font-size: small; line-height: 18px; orphans: 3; widows: 3; background-color: rgb(255, 255, 255);">Cln3 or Cln2 can activate S/MBF [1]. S_MBF positively regulates itself [1]. Clb2 negatively regulates S_MBF [1, 2].&lt;/span></p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_18_in_S_18" qual:qualitativeSpecies="S_18" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_S_18_in_S_9" qual:qualitativeSpecies="S_9" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;div>&lt;font face="Arial, Verdana" size="2">Clb2 leads to the inhibition of G1/S phase proteins by&amp;nbsp;&lt;/font>&lt;span style="font-family: Arial, Verdana; font-size: small;">inhibiting SBF [1, 2]&lt;/span>&lt;/div></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_18_in_S_4" qual:qualitativeSpecies="S_4" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;font face="Arial, Verdana" size="2">Cln3 or Cln2 can activate S/MBF [1]&lt;/font></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_18_in_S_8" qual:qualitativeSpecies="S_8" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;span style="font-size: small;">Cln3 or Cln2 can activate S/MBF [1]&lt;/span></p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_18" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <or/>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci> S_18 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <not/>
+                      <apply>
+                        <eq/>
+                        <ci> S_9 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci> S_4 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <not/>
+                      <apply>
+                        <eq/>
+                        <ci> S_9 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_8 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <eq/>
+                      <ci> S_9 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+    </qual:listOfTransitions>
+    <listOfCompartments>
+      <compartment constant="true" id="cytosol" name="cytosol"/>
+    </listOfCompartments>
+  </model>
+</sbml>

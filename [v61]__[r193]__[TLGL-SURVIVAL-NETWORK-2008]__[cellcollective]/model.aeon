@@ -1,0 +1,254 @@
+Apoptosis -> Apoptosis
+Caspase -> Apoptosis
+Apoptosis -| BclxL
+GZMB -| BclxL
+STAT3 -> BclxL
+NFKB -> BclxL
+BID -| BclxL
+DISC -| BclxL
+Apoptosis -| GZMB
+CREB -> GZMB
+IFNG -> GZMB
+TBET -> GZMB
+Apoptosis -| STAT3
+JAK -> STAT3
+Apoptosis -| NFKB
+FLIP -> NFKB
+PI3K -> NFKB
+TPL2 -> NFKB
+IAP -> NFKB
+TRADD -> NFKB
+BclxL -| BID
+MCL1 -| BID
+Apoptosis -| BID
+GZMB -> BID
+Caspase -> BID
+FasT -> DISC
+Apoptosis -| DISC
+FLIP -| DISC
+Ceramide -> DISC
+IL2 -> DISC
+Fas -> DISC
+Apoptosis -| SMAD
+GPCR -> SMAD
+Apoptosis -| GPCR
+S1P -> GPCR
+Apoptosis -| SPHK1
+PDGFR -> SPHK1
+Apoptosis -| PDGFR
+PDGF -> PDGFR
+S1P -> PDGFR
+Apoptosis -| Ceramide
+S1P -| Ceramide
+Fas -> Ceramide
+Apoptosis -| S1P
+Ceramide -| S1P
+SPHK1 -> S1P
+FasT -> Fas
+Apoptosis -| Fas
+FasL -> Fas
+sFas -| Fas
+Apoptosis -| CTLA4
+TCR -> CTLA4
+Apoptosis -| TCR
+CTLA4 -| TCR
+Stimuli -> TCR
+Apoptosis -| PI3K
+RAS -> PI3K
+PDGFR -> PI3K
+Apoptosis -| RAS
+GRB2 -> RAS
+PLCG1 -> RAS
+GAP -| RAS
+Apoptosis -| Proliferation
+STAT3 -> Proliferation
+P27 -| Proliferation
+Apoptosis -| P27
+STAT3 -> P27
+IL15 -> IL2RB
+Apoptosis -| IL2RB
+IL2RBT -> IL2RB
+IL2 -> IL2RB
+Apoptosis -| IL2RBT
+ERK -> IL2RBT
+TBET -> IL2RBT
+Apoptosis -| IL2
+NFAT -> IL2
+NFKB -> IL2
+STAT3 -> IL2
+TBET -| IL2
+Apoptosis -| FasT
+NFKB -> FasT
+FasT -> sFas
+Apoptosis -| sFas
+IL15 -| SOCS
+Apoptosis -| SOCS
+JAK -> SOCS
+IL2 -| SOCS
+SOCS -| JAK
+IL2RA -> JAK
+Apoptosis -| JAK
+IFNG -> JAK
+RANTES -> JAK
+CD45 -| JAK
+IL2RB -> JAK
+Apoptosis -| P2
+P2 -> P2
+IFNG -> P2
+Stimuli2 -| P2
+IFNGT -> IFNG
+IL15 -> IFNG
+Apoptosis -| IFNG
+P2 -| IFNG
+Stimuli -> IFNG
+IL2 -> IFNG
+SMAD -| IFNG
+Apoptosis -| FYN
+TCR -> FYN
+IL2RB -> FYN
+Apoptosis -| GRB2
+ZAP70 -> GRB2
+IL2RB -> GRB2
+Apoptosis -| PLCG1
+GRB2 -> PLCG1
+PDGFR -> PLCG1
+IL15 -| GAP
+Apoptosis -| GAP
+RAS -> GAP
+IL2 -| GAP
+GAP -> GAP
+PDGFR -> GAP
+Apoptosis -| TPL2
+TNF -> TPL2
+PI3K -> TPL2
+TAX -> TPL2
+Apoptosis -| TNF
+NFKB -> TNF
+Apoptosis -| MCL1
+PI3K -> MCL1
+NFKB -> MCL1
+STAT3 -> MCL1
+IL2RB -> MCL1
+Apoptosis -| Caspase
+GZMB -> Caspase
+BID -> Caspase
+DISC -> Caspase
+TRADD -> Caspase
+IAP -| Caspase
+Apoptosis -| TRADD
+TNF -> TRADD
+A20 -| TRADD
+IAP -| TRADD
+Apoptosis -| IAP
+NFKB -> IAP
+BID -| IAP
+Apoptosis -| MEK
+RAS -> MEK
+Apoptosis -| IFNGT
+NFAT -> IFNGT
+STAT3 -> IFNGT
+TBET -> IFNGT
+Apoptosis -| NFAT
+PI3K -> NFAT
+Apoptosis -| TBET
+JAK -> TBET
+TBET -> TBET
+IL2RA -| IL2RA
+Apoptosis -| IL2RA
+IL2 -> IL2RA
+IL2RAT -> IL2RA
+Apoptosis -| RANTES
+NFKB -> RANTES
+Apoptosis -| A20
+NFKB -> A20
+Apoptosis -| FasL
+ERK -> FasL
+NFAT -> FasL
+STAT3 -> FasL
+NFKB -> FasL
+Apoptosis -| ERK
+PI3K -> ERK
+MEK -> ERK
+Apoptosis -| CREB
+ERK -> CREB
+IFN -> CREB
+Apoptosis -| IL2RAT
+IL2 -> IL2RAT
+NFKB -> IL2RAT
+STAT3 -> IL2RAT
+Apoptosis -| FLIP
+NFKB -> FLIP
+DISC -| FLIP
+CREB -> FLIP
+IFNG -> FLIP
+Apoptosis -| Cytoskeleton_signaling
+FYN -> Cytoskeleton_signaling
+Apoptosis -| LCK
+ZAP70 -| LCK
+CD45 -> LCK
+TCR -> LCK
+IL2RB -> LCK
+LCK -> ZAP70
+Apoptosis -| ZAP70
+FYN -| ZAP70
+$A20: (NFKB & !Apoptosis)
+$Apoptosis: (Apoptosis | Caspase)
+$BID: ((Caspase & !((BclxL | Apoptosis) | MCL1)) | (GZMB & !((BclxL | Apoptosis) | MCL1)))
+$BclxL: ((STAT3 & !(((GZMB | BID) | DISC) | Apoptosis)) | (NFKB & !(((GZMB | BID) | DISC) | Apoptosis)))
+$CD45: true
+$CREB: ((ERK & IFN) & !Apoptosis)
+$CTLA4: (TCR & !Apoptosis)
+$Caspase: ((((GZMB & BID) & !(Apoptosis | IAP)) | ((TRADD & BID) & !(Apoptosis | IAP))) | (DISC & !Apoptosis))
+$Ceramide: (Fas & !(Apoptosis | S1P))
+$Cytoskeleton_signaling: (FYN & !Apoptosis)
+$DISC: ((FasT & (((IL2 & Fas) | (Fas & !FLIP)) | Ceramide)) & !Apoptosis)
+$ERK: ((MEK & PI3K) & !Apoptosis)
+$FLIP: ((NFKB & !(DISC | Apoptosis)) | ((CREB & IFNG) & !(DISC | Apoptosis)))
+$FYN: ((TCR & !Apoptosis) | (IL2RB & !Apoptosis))
+$Fas: ((FasT & FasL) & !(Apoptosis | sFas))
+$FasL: ((((NFAT & !Apoptosis) | (NFKB & !Apoptosis)) | (STAT3 & !Apoptosis)) | (ERK & !Apoptosis))
+$FasT: (NFKB & !Apoptosis)
+$GAP: (((PDGFR & GAP) & !((IL15 | Apoptosis) | IL2)) | (RAS & !((IL15 | Apoptosis) | IL2)))
+$GPCR: (S1P & !Apoptosis)
+$GRB2: ((ZAP70 & !Apoptosis) | (IL2RB & !Apoptosis))
+$GZMB: ((TBET & !Apoptosis) | ((CREB & IFNG) & !Apoptosis))
+$IAP: (NFKB & !(Apoptosis | BID))
+$IFN: true
+$IFNG: ((((IL15 & IFNGT) & !((SMAD | Apoptosis) | P2)) | ((IL2 & IFNGT) & !((SMAD | Apoptosis) | P2))) | ((Stimuli & IFNGT) & !((SMAD | Apoptosis) | P2)))
+$IFNGT: (((NFAT & !Apoptosis) | (STAT3 & !Apoptosis)) | (TBET & !Apoptosis))
+$IL15: true
+$IL2: (((NFAT & !(Apoptosis | TBET)) | (STAT3 & !(Apoptosis | TBET))) | (NFKB & !(Apoptosis | TBET)))
+$IL2RA: ((IL2 & IL2RAT) & !(IL2RA | Apoptosis))
+$IL2RAT: ((IL2 & (NFKB | STAT3)) & !Apoptosis)
+$IL2RB: ((IL2RBT & (IL15 | IL2)) & !Apoptosis)
+$IL2RBT: ((ERK & TBET) & !Apoptosis)
+$JAK: ((((IL2RB & !((CD45 | SOCS) | Apoptosis)) | (IL2RA & !((CD45 | SOCS) | Apoptosis))) | (RANTES & !((CD45 | SOCS) | Apoptosis))) | (IFNG & !((CD45 | SOCS) | Apoptosis)))
+$LCK: (((TCR & !(Apoptosis | ZAP70)) | (CD45 & !Apoptosis)) | (IL2RB & !(Apoptosis | ZAP70)))
+$MCL1: ((IL2RB & ((PI3K & NFKB) & STAT3)) & !Apoptosis)
+$MEK: (RAS & !Apoptosis)
+$NFAT: (PI3K & !Apoptosis)
+$NFKB: ((((FLIP & (IAP & TRADD)) & !Apoptosis) | (PI3K & !Apoptosis)) | (TPL2 & !Apoptosis))
+$P2: ((IFNG & !(Apoptosis | Stimuli2)) | (P2 & !(Apoptosis | Stimuli2)))
+$P27: (STAT3 & !Apoptosis)
+$PDGF: true
+$PDGFR: ((PDGF & !Apoptosis) | (S1P & !Apoptosis))
+$PI3K: ((PDGFR & !Apoptosis) | (RAS & !Apoptosis))
+$PLCG1: ((GRB2 & !Apoptosis) | (PDGFR & !Apoptosis))
+$Proliferation: (STAT3 & !(Apoptosis | P27))
+$RANTES: (NFKB & !Apoptosis)
+$RAS: ((PLCG1 & !(GAP | Apoptosis)) | (GRB2 & !(GAP | Apoptosis)))
+$S1P: (SPHK1 & !(Apoptosis | Ceramide))
+$SMAD: (GPCR & !Apoptosis)
+$SOCS: (JAK & !((IL15 | IL2) | Apoptosis))
+$SPHK1: (PDGFR & !Apoptosis)
+$STAT3: (JAK & !Apoptosis)
+$Stimuli: true
+$Stimuli2: true
+$TAX: true
+$TBET: ((JAK & !Apoptosis) | (TBET & !Apoptosis))
+$TCR: (Stimuli & !(CTLA4 | Apoptosis))
+$TNF: (NFKB & !Apoptosis)
+$TPL2: ((TAX & !Apoptosis) | ((PI3K & TNF) & !Apoptosis))
+$TRADD: (TNF & !((A20 | Apoptosis) | IAP))
+$ZAP70: (LCK & !(FYN | Apoptosis))
+$sFas: (FasT & !Apoptosis)

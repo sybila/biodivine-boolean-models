@@ -1,0 +1,34 @@
+#position:Ap:33,83
+$Ap:false
+#position:Dl:193,153
+$Dl:(!Ap & N)
+Ap -| Dl
+N -> Dl
+#position:N:193,83
+$N:((!Fng & Ser2) | (Fng & Dl2))
+Fng -? N
+Dl2 -> N
+Ser2 -> N
+#position:Fng:113,83
+$Fng:Ap
+Ap -> Fng
+#position:Dl2:283,153
+$Dl2:(!Ap2 & N2)
+Ap2 -| Dl2
+N2 -> Dl2
+#position:Ser2:283,13
+$Ser2:Ap2
+Ap2 -> Ser2
+#position:Ser:193,13
+$Ser:Ap
+Ap -> Ser
+#position:Ap2:453,83
+$Ap2:false
+#position:N2:283,83
+$N2:((((!Dl & Ser) & !Fng2) | ((Dl & !Ser) & Fng2)) | (Dl & Ser))
+Dl -> N2
+Ser -> N2
+Fng2 -? N2
+#position:Fng2:363,83
+$Fng2:Ap2
+Ap2 -> Fng2

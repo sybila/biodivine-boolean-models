@@ -1,0 +1,3781 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" layout:required="false" level="3" qual:required="true" version="1" xmlns:layout="http://www.sbml.org/sbml/level3/version1/layout/version1" xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+  <model id="M4775" metaid="aaa1fc68-2b23-4d1d-8d8d-cd3b97da9ed9" name="PC12 Cell Differentiation">
+    <notes>
+      <body xmlns="http://www.w3.org/1999/xhtml">The nerve growth factor NGF has been shown to cause cell fate decisions toward either differentiation or proliferation depending on the relative activity of downstream pERK, pAKT, or pJNK signaling. However, how these protein signals are translated into and fed back from transcriptional activity to complete cellular differentiation over a time span of hours to days is still an open question. Comparing the time-resolved transcriptome response of NGF- or EGF-stimulated PC12 cells over 24 h in combination with protein and phenotype data we inferred a dynamic Boolean model capturing the temporal sequence of protein signaling, transcriptional response and subsequent autocrine feedback. Network topology was optimized by fitting the model to time-resolved transcriptome data under MEK, PI3K, or JNK inhibition. The integrated model confirmed the parallel use of MAPK/ERK, PI3K/AKT, and JNK/JUN for PC12 cell differentiation. Redundancy of cell signaling is demonstrated from the inhibition of the different MAPK pathways. As suggested in silico and confirmed in vitro, differentiation was substantially suppressed under JNK inhibition, yet delayed only under MEK/ERK inhibition. Most importantly, we found that positive transcriptional feedback induces bistability in the cell fate switch. De novo gene expression was necessary to activate autocrine feedback that caused Urokinase-Type Plasminogen Activator (uPA) Receptor signaling to perpetuate the MAPK activity, finally resulting in the expression of late, differentiation related genes. Thus, the cellular decision toward differentiation depends on the establishment of a transcriptome-induced positive feedback between protein signaling and gene expression thereby constituting a robust control between proliferation and differentiation.</body>
+    </notes>
+    <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#aaa1fc68-2b23-4d1d-8d8d-cd3b97da9ed9">
+	<dc:creator>
+	<rdf:Bag>
+	<rdf:li rdf:parseType="Resource">
+	<vCard:N rdf:parseType="Resource">
+	<vCard:Family>Crowther</vCard:Family>
+	<vCard:Given>Audrey</vCard:Given>
+	</vCard:N>
+	<vCard:EMAIL>audrey.crowther@huskers.unl.edu</vCard:EMAIL>
+	<vCard:ORG rdf:parseType="Resource">
+	<vCard:Orgname>University of Nebraska-Lincoln</vCard:Orgname>
+	</vCard:ORG>
+	</rdf:li>
+	</rdf:Bag>
+	</dc:creator>
+	<dcterms:created rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-17T11:57:51Z</dcterms:W3CDTF>
+	</dcterms:created>
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2017-03-03T13:57:42Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:27148350"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+      <layout:listOfLayouts xmlns:layout="http://www.sbml.org/sbml/level3/version1/layout/version1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <layout:layout layout:name="New Layout 1">
+        <layout:listOfAdditionalGraphicalObjects>
+          <layout:generalGlyph layout:id="S_3_glyph" layout:reference="S_3">
+            <layout:boundingBox>
+              <layout:position layout:x="-5.009354739840693" layout:y="-44.75070996355887" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_40_glyph" layout:reference="S_40">
+            <layout:boundingBox>
+              <layout:position layout:x="-24.988721604539823" layout:y="-49.009262310658734" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_7_glyph" layout:reference="S_7">
+            <layout:boundingBox>
+              <layout:position layout:x="16.925884503537272" layout:y="-42.017575439900405" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_35_glyph" layout:reference="S_35">
+            <layout:boundingBox>
+              <layout:position layout:x="39.26258150714028" layout:y="-42.19101889246224" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_53_glyph" layout:reference="S_53">
+            <layout:boundingBox>
+              <layout:position layout:x="50.295318746307466" layout:y="-27.208827434436557" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_60_glyph" layout:reference="S_60">
+            <layout:boundingBox>
+              <layout:position layout:x="-36.240507526623496" layout:y="-24.284235590735737" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_26_glyph" layout:reference="S_26">
+            <layout:boundingBox>
+              <layout:position layout:x="-51.5731531745863" layout:y="-30.968591648104812" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_15_glyph" layout:reference="S_15">
+            <layout:boundingBox>
+              <layout:position layout:x="-42.036953626161115" layout:y="-46.17846530491957" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_61_glyph" layout:reference="S_61">
+            <layout:boundingBox>
+              <layout:position layout:x="31.836540243744427" layout:y="-33.98274851543985" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_21_glyph" layout:reference="S_21">
+            <layout:boundingBox>
+              <layout:position layout:x="24.940173302137758" layout:y="-51.95817502655342" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_34_glyph" layout:reference="S_34">
+            <layout:boundingBox>
+              <layout:position layout:x="16.797534837306014" layout:y="-16.745098532970005" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_18_glyph" layout:reference="S_18">
+            <layout:boundingBox>
+              <layout:position layout:x="-1.7544205626489495" layout:y="7.285723813097517" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_32_glyph" layout:reference="S_32">
+            <layout:boundingBox>
+              <layout:position layout:x="-21.495429936654702" layout:y="-35.52077455107683" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_51_glyph" layout:reference="S_51">
+            <layout:boundingBox>
+              <layout:position layout:x="-23.76634734482289" layout:y="12.294368419242685" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_52_glyph" layout:reference="S_52">
+            <layout:boundingBox>
+              <layout:position layout:x="-18.253317926096173" layout:y="-14.567748314992407" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_30_glyph" layout:reference="S_30">
+            <layout:boundingBox>
+              <layout:position layout:x="55.63222050927344" layout:y="-6.669405232957162" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_17_glyph" layout:reference="S_17">
+            <layout:boundingBox>
+              <layout:position layout:x="-26.720210258238353" layout:y="-12.265192804787416" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_44_glyph" layout:reference="S_44">
+            <layout:boundingBox>
+              <layout:position layout:x="-9.388622026247116" layout:y="-34.697365160648324" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_57_glyph" layout:reference="S_57">
+            <layout:boundingBox>
+              <layout:position layout:x="-10.379758383657723" layout:y="-52.788351254800354" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_27_glyph" layout:reference="S_27">
+            <layout:boundingBox>
+              <layout:position layout:x="7.0937333171415435" layout:y="-60.121019709372085" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_23_glyph" layout:reference="S_23">
+            <layout:boundingBox>
+              <layout:position layout:x="7.990454087267282" layout:y="-50.40585699404329" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_13_glyph" layout:reference="S_13">
+            <layout:boundingBox>
+              <layout:position layout:x="-9.841301643870786" layout:y="42.752277150841365" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_16_glyph" layout:reference="S_16">
+            <layout:boundingBox>
+              <layout:position layout:x="-34.036840454307224" layout:y="42.13343117614307" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_12_glyph" layout:reference="S_12">
+            <layout:boundingBox>
+              <layout:position layout:x="-51.32537644135593" layout:y="24.233145872529725" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_36_glyph" layout:reference="S_36">
+            <layout:boundingBox>
+              <layout:position layout:x="-58.405386457711394" layout:y="9.879844894487787" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_24_glyph" layout:reference="S_24">
+            <layout:boundingBox>
+              <layout:position layout:x="-54.75414806765748" layout:y="-4.060053065503438" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_50_glyph" layout:reference="S_50">
+            <layout:boundingBox>
+              <layout:position layout:x="-49.68275710151862" layout:y="-18.383533573911862" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_19_glyph" layout:reference="S_19">
+            <layout:boundingBox>
+              <layout:position layout:x="-37.85364080843247" layout:y="-35.28733189345175" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_54_glyph" layout:reference="S_54">
+            <layout:boundingBox>
+              <layout:position layout:x="46.68387098067193" layout:y="14.542495215823358" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_47_glyph" layout:reference="S_47">
+            <layout:boundingBox>
+              <layout:position layout:x="41.590441277414" layout:y="-14.424162930818088" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_33_glyph" layout:reference="S_33">
+            <layout:boundingBox>
+              <layout:position layout:x="51.441026021703706" layout:y="28.38391019225724" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_11_glyph" layout:reference="S_11">
+            <layout:boundingBox>
+              <layout:position layout:x="47.46678522679684" layout:y="34.885314043179456" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_14_glyph" layout:reference="S_14">
+            <layout:boundingBox>
+              <layout:position layout:x="42.20940213255605" layout:y="4.367837516214381" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_59_glyph" layout:reference="S_59">
+            <layout:boundingBox>
+              <layout:position layout:x="31.87865900200389" layout:y="38.136900155931826" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_22_glyph" layout:reference="S_22">
+            <layout:boundingBox>
+              <layout:position layout:x="31.174970715143736" layout:y="13.365839096437872" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_1_glyph" layout:reference="S_1">
+            <layout:boundingBox>
+              <layout:position layout:x="-12.765377857586907" layout:y="6.925664897951931" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_29_glyph" layout:reference="S_29">
+            <layout:boundingBox>
+              <layout:position layout:x="-0.10972683929255846" layout:y="38.2694117893152" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_6_glyph" layout:reference="S_6">
+            <layout:boundingBox>
+              <layout:position layout:x="-21.150707989480996" layout:y="46.688482529262004" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_39_glyph" layout:reference="S_39">
+            <layout:boundingBox>
+              <layout:position layout:x="-0.9111603475735365" layout:y="28.014503729787023" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_38_glyph" layout:reference="S_38">
+            <layout:boundingBox>
+              <layout:position layout:x="22.41959308565255" layout:y="18.24387083433889" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_45_glyph" layout:reference="S_45">
+            <layout:boundingBox>
+              <layout:position layout:x="-29.872422135010677" layout:y="7.510059136431841" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_8_glyph" layout:reference="S_8">
+            <layout:boundingBox>
+              <layout:position layout:x="10.635718360340919" layout:y="36.515290497478595" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_9_glyph" layout:reference="S_9">
+            <layout:boundingBox>
+              <layout:position layout:x="0.11260854469802362" layout:y="21.816269304744882" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_28_glyph" layout:reference="S_28">
+            <layout:boundingBox>
+              <layout:position layout:x="8.974926386442261" layout:y="11.353681697084886" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_56_glyph" layout:reference="S_56">
+            <layout:boundingBox>
+              <layout:position layout:x="9.7537135224033" layout:y="2.8375605048934465" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_31_glyph" layout:reference="S_31">
+            <layout:boundingBox>
+              <layout:position layout:x="-22.608238932752485" layout:y="17.702127090947936" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_42_glyph" layout:reference="S_42">
+            <layout:boundingBox>
+              <layout:position layout:x="18.133319088583576" layout:y="6.9228247100267195" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_25_glyph" layout:reference="S_25">
+            <layout:boundingBox>
+              <layout:position layout:x="2.0553367274585037" layout:y="-5.153973832374894" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_2_glyph" layout:reference="S_2">
+            <layout:boundingBox>
+              <layout:position layout:x="-27.94954219285799" layout:y="28.096405588166828" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_46_glyph" layout:reference="S_46">
+            <layout:boundingBox>
+              <layout:position layout:x="-17.267222893134782" layout:y="25.615084475024727" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_58_glyph" layout:reference="S_58">
+            <layout:boundingBox>
+              <layout:position layout:x="6.866385528230882" layout:y="29.583218912458303" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_37_glyph" layout:reference="S_37">
+            <layout:boundingBox>
+              <layout:position layout:x="15.508603115993465" layout:y="26.507978933594813" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_55_glyph" layout:reference="S_55">
+            <layout:boundingBox>
+              <layout:position layout:x="8.045333914935672" layout:y="-3.295689881475388" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_49_glyph" layout:reference="S_49">
+            <layout:boundingBox>
+              <layout:position layout:x="19.30659352465117" layout:y="-4.593351526005584" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_5_glyph" layout:reference="S_5">
+            <layout:boundingBox>
+              <layout:position layout:x="30.204709612278368" layout:y="-20.98716875886862" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_4_glyph" layout:reference="S_4">
+            <layout:boundingBox>
+              <layout:position layout:x="-7.487722289411314" layout:y="26.67306659223222" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_48_glyph" layout:reference="S_48">
+            <layout:boundingBox>
+              <layout:position layout:x="20.661561192434135" layout:y="32.33435423109911" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_41_glyph" layout:reference="S_41">
+            <layout:boundingBox>
+              <layout:position layout:x="25.201446634664485" layout:y="0.34449566045125896" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_20_glyph" layout:reference="S_20">
+            <layout:boundingBox>
+              <layout:position layout:x="6.039351318183174" layout:y="22.254945938574153" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_10_glyph" layout:reference="S_10">
+            <layout:boundingBox>
+              <layout:position layout:x="-42.33102827086614" layout:y="26.021062493612913" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_62_glyph" layout:reference="S_62">
+            <layout:boundingBox>
+              <layout:position layout:x="-3.879265073212185" layout:y="17.25578362846231" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="S_43_glyph" layout:reference="S_43">
+            <layout:boundingBox>
+              <layout:position layout:x="-7.527521047732313" layout:y="-26.201564490849943" layout:z="0"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+        </layout:listOfAdditionalGraphicalObjects>
+      </layout:layout>
+    </layout:listOfLayouts>
+    <qual:listOfQualitativeSpecies xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:qualitativeSpecies metaid="_0d24892c-b5f5-4944-a998-02e516dfc21a" qual:compartment="extracellular" qual:constant="true" qual:id="S_43" qual:name="NGF">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>nerve growth factor</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_0d24892c-b5f5-4944-a998-02e516dfc21a">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-21T08:34:21Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="b7fdc539-af9a-4752-869d-4e29a45e6267" qual:compartment="cytosol" qual:constant="false" qual:id="S_1" qual:initialLevel="0" qual:maxLevel="1" qual:name="AKT">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>protein kinase B</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#b7fdc539-af9a-4752-869d-4e29a45e6267">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-19T13:35:02Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_7e35a0ce-f804-433e-bf8d-268c3af802e3" qual:compartment="cytosol" qual:constant="false" qual:id="S_2" qual:initialLevel="0" qual:maxLevel="1" qual:name="CREB">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Cyclic AMP-responsive element-binding protein</p><p>Gene: CREB1</p><p>UniProt ID: P16220</p><p>Gene ID: 1385</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_7e35a0ce-f804-433e-bf8d-268c3af802e3">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-18T12:46:18Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_77cc323d-f92d-4696-84a8-2e627bea3c83" qual:compartment="cytosol" qual:constant="false" qual:id="S_3" qual:initialLevel="0" qual:maxLevel="1" qual:name="SHC">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>SHC-transforming protein</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_77cc323d-f92d-4696-84a8-2e627bea3c83">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-17T16:14:33Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_01b584ab-5beb-4587-aa15-80fe0922a03e" qual:compartment="cytosol" qual:constant="false" qual:id="S_4" qual:initialLevel="0" qual:maxLevel="1" qual:name="Egr1">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Early growth response protein 1</p><p>Gene: EGR1</p><p>UniProt ID: P18146</p><p>Gene ID: 1958</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_01b584ab-5beb-4587-aa15-80fe0922a03e">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-28T16:37:59Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="bcaeeee2-501a-466b-91e2-d4e595cfbee3" qual:compartment="cytosol" qual:constant="false" qual:id="S_5" qual:initialLevel="0" qual:maxLevel="1" qual:name="Dusp6">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Dual specificity protein phosphatase 6</p><p>Gene: DUSP6</p><p>UniProt ID: Q16828</p><p>Gene ID: 1848</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#bcaeeee2-501a-466b-91e2-d4e595cfbee3">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-18T13:21:55Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="ea2d5538-edcc-4718-a90c-948148b28be8" qual:compartment="cytosol" qual:constant="false" qual:id="S_6" qual:initialLevel="0" qual:maxLevel="1" qual:name="ARC">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Activity-regulated cytoskeleton-associated protein</p><p>Gene: ARC</p><p>UniProt ID: Q7LC44</p><p>Gene ID: 23237</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#ea2d5538-edcc-4718-a90c-948148b28be8">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-28T16:37:59Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="f5e37590-42d2-4199-9456-8afc0fc77d76" qual:compartment="cytosol" qual:constant="false" qual:id="S_7" qual:initialLevel="0" qual:maxLevel="1" qual:name="GRB2">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Growth factor receptor-bound protein 2</p><p>Gene: GRB2</p><p>UniProt ID: P62993</p><p>Gene ID: 2885</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#f5e37590-42d2-4199-9456-8afc0fc77d76">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-17T16:14:58Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="f63f707a-9714-499b-baf2-eadf4e004504" qual:compartment="cytosol" qual:constant="false" qual:id="S_8" qual:initialLevel="0" qual:maxLevel="1" qual:name="JUND">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Transcription factor jun-D</p><p>Gene: JUND</p><p>UniProt ID: P17535</p><p>Gene ID: 3727</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#f63f707a-9714-499b-baf2-eadf4e004504">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-17T20:28:19Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_38178657-30c8-448b-9e3d-5dbb8fab026b" qual:compartment="cytosol" qual:constant="false" qual:id="S_9" qual:initialLevel="0" qual:maxLevel="1" qual:name="FOS">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Proto-oncogene c-Fos</p><p>Gene: FOS</p><p>UniProt OD: P01100</p><p>Gene ID: 2353</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_38178657-30c8-448b-9e3d-5dbb8fab026b">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-19T13:23:47Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="d92c554f-1ba1-46e0-956d-9ffd8ff13aa1" qual:compartment="cytosol" qual:constant="false" qual:id="S_10" qual:initialLevel="0" qual:maxLevel="1" qual:name="SRF">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Serum response factor</p><p>Gene: SRF</p><p>UniProt ID: P11831</p><p>Gene ID: 6722</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#d92c554f-1ba1-46e0-956d-9ffd8ff13aa1">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-17T19:56:34Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_4a7ec761-8658-4b9b-9870-425b14aeb329" qual:compartment="cytosol" qual:constant="false" qual:id="S_11" qual:initialLevel="0" qual:maxLevel="1" qual:name="Mapk3k">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Mitogen-activated protein kinase kinase kinase 3</p><p>Gene: MAP3K3</p><p>UniProt D: Q99759</p><p>Gene ID: 4215</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_4a7ec761-8658-4b9b-9870-425b14aeb329">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-17T19:40:12Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_1745f7ae-af70-4c9b-a4c6-3b8d0ecf90ec" qual:compartment="cytosol" qual:constant="false" qual:id="S_12" qual:initialLevel="0" qual:maxLevel="1" qual:name="uPA/PLAT">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Urokinase plasminogen activator/Tissue-type plasminogen activator</p><p>Gene: PLAU/PLAT</p><p>UniProt ID: P00749/P00750</p><p>Gene ID: 5328/5327</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_1745f7ae-af70-4c9b-a4c6-3b8d0ecf90ec">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-17T18:49:52Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_5072bf79-bcd1-4c70-ac8a-80b16891b0b0" qual:compartment="cytosol" qual:constant="false" qual:id="S_13" qual:initialLevel="0" qual:maxLevel="1" qual:name="AP1">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Activator Protein-1</p><p>AP1 is a general term for a dimeric transcription factor composed of Jun, Fos, or ATF.</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_5072bf79-bcd1-4c70-ac8a-80b16891b0b0">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-28T16:45:12Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="ee6a660f-1deb-47ff-a3f8-a7048f94b8b1" qual:compartment="cytosol" qual:constant="false" qual:id="S_14" qual:initialLevel="0" qual:maxLevel="1" qual:name="MKK7">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Dual specificity mitogen-activated protein kinase kinase 7</p><p>Gene: MAP2K7</p><p>UniProt ID: O14733</p><p>Gene ID: 6885</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#ee6a660f-1deb-47ff-a3f8-a7048f94b8b1">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-12-15T15:11:43Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="b07d4d3e-1981-4c90-94fc-9dc234e443ed" qual:compartment="cytosol" qual:constant="false" qual:id="S_15" qual:initialLevel="0" qual:maxLevel="1" qual:name="RAP1">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Telomeric repeat-binding factor 2-interacting protein 1</p><p>Gene: TERF2IP</p><p>UniProt ID: Q9NYB0</p><p>Gene ID: 54386</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#b07d4d3e-1981-4c90-94fc-9dc234e443ed">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-09-15T14:00:55Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="dff59729-6ee2-4f63-95de-4082d3bff52c" qual:compartment="cytosol" qual:constant="false" qual:id="S_16" qual:initialLevel="0" qual:maxLevel="1" qual:name="uPAR">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Urokinase plasminogen activator receptor.</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#dff59729-6ee2-4f63-95de-4082d3bff52c">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-17T18:49:52Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_33a3fa77-9133-4584-b052-8348a9195872" qual:compartment="cytosol" qual:constant="false" qual:id="S_17" qual:initialLevel="0" qual:maxLevel="1" qual:name="PI3K">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>phosphoinositide 3-kinase</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_33a3fa77-9133-4584-b052-8348a9195872">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-17T16:38:38Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_3edd6d25-9bc8-490c-9e9f-fbcfc8581bf9" qual:compartment="cytosol" qual:constant="false" qual:id="S_18" qual:initialLevel="0" qual:maxLevel="1" qual:name="ERK">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>extracellular signal-regulated kinase</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_3edd6d25-9bc8-490c-9e9f-fbcfc8581bf9">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-19T13:35:02Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="c62ebc33-bfc2-46f8-ad05-dfde605c1702" qual:compartment="cytosol" qual:constant="false" qual:id="S_19" qual:initialLevel="0" qual:maxLevel="1" qual:name="Itga1">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Integrin, Alpha 1</p><p>Gene: ITGA1</p><p>UniProt ID: P56199</p><p>Gene ID: 3672</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#c62ebc33-bfc2-46f8-ad05-dfde605c1702">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-17T18:54:44Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_91358977-a27b-4c6d-a5ab-0a0bf733b327" qual:compartment="cytosol" qual:constant="false" qual:id="S_20" qual:initialLevel="0" qual:maxLevel="1" qual:name="Fosl1">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Fos-related antigen 1</p><p>Gene: FOSL1</p><p>UniProt ID: P15407</p><p>Gene ID: 8061</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_91358977-a27b-4c6d-a5ab-0a0bf733b327">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-28T16:45:12Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_0532d3da-4f7f-4711-8db4-c26ed48e6679" qual:compartment="cytosol" qual:constant="false" qual:id="S_21" qual:initialLevel="0" qual:maxLevel="1" qual:name="PKC">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>protein kinase C</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_0532d3da-4f7f-4711-8db4-c26ed48e6679">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-17T18:40:35Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_08367cd4-fd04-4e85-a7b7-733b5cab5976" qual:compartment="cytosol" qual:constant="false" qual:id="S_22" qual:initialLevel="0" qual:maxLevel="1" qual:name="ATF2">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Cyclic AMP-dependent transcription factor ATF-2</p><p>Gene: ATF2</p><p>UniProt ID: P15336</p><p>Gene ID: 1386</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_08367cd4-fd04-4e85-a7b7-733b5cab5976">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-19T13:27:44Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="de0ea15b-a62e-4ace-b719-e648eb59bfb9" qual:compartment="cytosol" qual:constant="false" qual:id="S_23" qual:initialLevel="0" qual:maxLevel="1" qual:name="Ca2+">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Calcium ion</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#de0ea15b-a62e-4ace-b719-e648eb59bfb9">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-17T18:40:35Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="be18a56f-7fd3-4749-a20f-4edd68d9a976" qual:compartment="cytosol" qual:constant="false" qual:id="S_24" qual:initialLevel="0" qual:maxLevel="1" qual:name="Mmp3/10">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>matrix metallopeptidase 3/matrix metallopeptidase 10 (stromelysin 2)</p><p>Stromelysin-1/Stromelysin-2</p><p>Gene: MMP3/MMP10</p><p>UniProt ID: P08254/P09238</p><p>Gene ID: 4314/4319</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#be18a56f-7fd3-4749-a20f-4edd68d9a976">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-17T18:49:52Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_73bb4983-09e6-4b86-a681-c27362d72d46" qual:compartment="cytosol" qual:constant="false" qual:id="S_25" qual:initialLevel="0" qual:maxLevel="1" qual:name="KLF10">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Krueppel-like factor 10</p><p>Gene: KLF10</p><p>UniProt ID:  Q13118</p><p>Gene ID: 7071</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_73bb4983-09e6-4b86-a681-c27362d72d46">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-18T12:07:38Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_3772ede0-c635-4518-bf39-cb912df3a70e" qual:compartment="cytosol" qual:constant="false" qual:id="S_26" qual:initialLevel="0" qual:maxLevel="1" qual:name="C3G">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Rap guanine nucleotide exchange factor 1</p><p>Gene: RAPGEF1</p><p>UniProt ID: Q13905</p><p>Gene ID: 2889</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_3772ede0-c635-4518-bf39-cb912df3a70e">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-17T16:24:57Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="c31479ea-909e-44b0-8cb2-0a687ffb87ff" qual:compartment="cytosol" qual:constant="false" qual:id="S_27" qual:initialLevel="0" qual:maxLevel="1" qual:name="DAG">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>diacylglycerol</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#c31479ea-909e-44b0-8cb2-0a687ffb87ff">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-17T18:40:35Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="dd3cbd3a-82b0-4bd1-89c3-f1b83581d85f" qual:compartment="cytosol" qual:constant="false" qual:id="S_28" qual:initialLevel="0" qual:maxLevel="1" qual:name="KLF4">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Krueppel-like factor 4</p><p>Gene: KLF4</p><p>UniProt ID: O43474</p><p>Gene ID: 9314</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#dd3cbd3a-82b0-4bd1-89c3-f1b83581d85f">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-17T20:33:51Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="a0347da9-03fe-481c-acf1-74598504574a" qual:compartment="cytosol" qual:constant="false" qual:id="S_29" qual:initialLevel="0" qual:maxLevel="1" qual:name="MSK1/2">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Ribosomal protein S6 kinase alpha-5/Ribosomal protein S6 kinase alpha-4</p><p>Gene: RPS6KA5/RPS6KA4</p><p>UniProt ID: O75582/O75676</p><p>Gene ID: 9252/8986</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#a0347da9-03fe-481c-acf1-74598504574a">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-17T20:20:56Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="d3bfca49-9fea-4e0a-8fa0-c4edf503f30d" qual:compartment="cytosol" qual:constant="false" qual:id="S_30" qual:initialLevel="0" qual:maxLevel="1" qual:name="RAC1">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Ras-related C3 botulinum toxin substrate 1</p><p>Gene: RAC1</p><p>UniProt ID: P63000</p><p>Gene ID: 5879</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#d3bfca49-9fea-4e0a-8fa0-c4edf503f30d">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-17T19:20:16Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_695ce229-2f5a-43e8-8d7a-8bf839920687" qual:compartment="cytosol" qual:constant="false" qual:id="S_31" qual:initialLevel="0" qual:maxLevel="1" qual:name="KLF5">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Krueppel-like factor 5</p><p>Gene: KLF5</p><p>UniProt ID: Q13887</p><p>Gene ID: 688</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_695ce229-2f5a-43e8-8d7a-8bf839920687">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-17T20:39:03Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_9afd1a9d-f5d9-4b6c-a1e7-bd082078100e" qual:compartment="cytosol" qual:constant="false" qual:id="S_32" qual:initialLevel="0" qual:maxLevel="1" qual:name="TrkA">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>tyrosine kinase receptor A</p><p>Gene: NTRK1</p><p>UniProt ID: P04629</p><p>Gene ID: 4914</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_9afd1a9d-f5d9-4b6c-a1e7-bd082078100e">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-21T08:34:21Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_4b9a552c-9c2e-4d77-84a0-f768584cfd78" qual:compartment="cytosol" qual:constant="false" qual:id="S_33" qual:initialLevel="0" qual:maxLevel="1" qual:name="MKK6">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Dual specificity mitogen-activated protein kinase kinase 6</p><p>Gene: MAP2K6</p><p>UniProt ID: P52564</p><p>Gene ID: 9064</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_4b9a552c-9c2e-4d77-84a0-f768584cfd78">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-12-15T15:10:31Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_7ba2f2aa-9e95-4da6-989d-5ea1205cb37c" qual:compartment="cytosol" qual:constant="false" qual:id="S_34" qual:initialLevel="0" qual:maxLevel="1" qual:name="MEK">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>mitogen-activated protein kinase kinase</p><p>Gene: MAP2K1</p><p>UniProt ID: Q02750</p><p>Gene ID: 5604</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_7ba2f2aa-9e95-4da6-989d-5ea1205cb37c">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-17T16:29:32Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="ad41900a-5dc8-417a-974f-9b4e4eb98fa3" qual:compartment="cytosol" qual:constant="false" qual:id="S_35" qual:initialLevel="0" qual:maxLevel="1" qual:name="SOS">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Son of sevenless</p><p>Gene: SOS1</p><p>UniProt ID: Q07889</p><p>Gene ID: 6654</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#ad41900a-5dc8-417a-974f-9b4e4eb98fa3">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-17T16:15:35Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_531d5415-b202-45e6-9395-dc914d89d456" qual:compartment="cytosol" qual:constant="false" qual:id="S_36" qual:initialLevel="0" qual:maxLevel="1" qual:name="Plasmin">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Plasminogen</p><p>Gene: PLG</p><p>UniProt ID: P00747</p><p>Gene ID: 5340</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_531d5415-b202-45e6-9395-dc914d89d456">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-17T18:49:52Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_9661f6ba-1246-4777-bcc1-66151b7715bd" qual:compartment="cytosol" qual:constant="false" qual:id="S_37" qual:initialLevel="0" qual:maxLevel="1" qual:name="ZFP36">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Tristetraprolin</p><p>Gene: ZFP36</p><p>UniProt ID: P26651</p><p>Gene ID: 7538</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_9661f6ba-1246-4777-bcc1-66151b7715bd">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-18T13:06:02Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_0113f58e-57fa-45c9-9d1f-027e290f3da1" qual:compartment="cytosol" qual:constant="false" qual:id="S_38" qual:initialLevel="0" qual:maxLevel="1" qual:name="JNK">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>c-Jun N-terminal kinase</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_0113f58e-57fa-45c9-9d1f-027e290f3da1">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-19T13:35:02Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="ca919a1d-0fda-4c22-bbff-310193d57db4" qual:compartment="cytosol" qual:constant="false" qual:id="S_39" qual:initialLevel="0" qual:maxLevel="1" qual:name="JUNB">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Transcription factor jun-B</p><p>Gene: JUNB</p><p>UniProt ID: P17275</p><p>Gene ID: 3726</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#ca919a1d-0fda-4c22-bbff-310193d57db4">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-17T20:28:19Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="a35e65af-abbc-469a-a092-a40fd091c81c" qual:compartment="cytosol" qual:constant="false" qual:id="S_40" qual:initialLevel="0" qual:maxLevel="1" qual:name="FAK">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Focal adhesion kinase 1</p><p>Gene: PTK2</p><p>UniProt ID: Q05397</p><p>Gene ID: 5747</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#a35e65af-abbc-469a-a092-a40fd091c81c">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-09-15T14:00:55Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="a788b511-98d5-4947-8116-6849bdf164be" qual:compartment="cytosol" qual:constant="false" qual:id="S_41" qual:initialLevel="0" qual:maxLevel="1" qual:name="Maff">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Transcription factor MafF</p><p>Gene: MAFF</p><p>UniProt ID: Q9ULX9</p><p>Gene ID: 23764</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#a788b511-98d5-4947-8116-6849bdf164be">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-19T13:27:44Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_2c64ffa6-fffd-4ba7-911a-d514f7616f2c" qual:compartment="cytosol" qual:constant="false" qual:id="S_42" qual:initialLevel="0" qual:maxLevel="1" qual:name="KLF6">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Krueppel-like factor 6</p><p>Gene: KLF6</p><p>UniProt ID: Q99612</p><p>Gene ID: 1316</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_2c64ffa6-fffd-4ba7-911a-d514f7616f2c">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-18T11:57:16Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="ab45e225-15fa-4cd9-bf59-d6f4edd4bdb9" qual:compartment="cytosol" qual:constant="false" qual:id="S_44" qual:initialLevel="0" qual:maxLevel="1" qual:name="G(i/o)">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Family of heterotrimeric G-proteins</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#ab45e225-15fa-4cd9-bf59-d6f4edd4bdb9">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-17T19:14:58Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="bb8e2214-66af-4c3c-907e-31b70320f151" qual:compartment="cytosol" qual:constant="false" qual:id="S_45" qual:initialLevel="0" qual:maxLevel="1" qual:name="RSK">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>ribosomal s6 kinase</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#bb8e2214-66af-4c3c-907e-31b70320f151">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-17T20:20:56Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="e94b8354-2980-4555-a309-369d2189dfd6" qual:compartment="cytosol" qual:constant="false" qual:id="S_46" qual:initialLevel="0" qual:maxLevel="1" qual:name="CITED2">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Cbp/p300-interacting transactivator 2</p><p>Gene: CITED2</p><p>UniProt ID: Q99967</p><p>Gene ID: 10370</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#e94b8354-2980-4555-a309-369d2189dfd6">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-18T12:51:42Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_1fc7fbc2-8f47-4b94-9fe3-b42da679e69b" qual:compartment="cytosol" qual:constant="false" qual:id="S_47" qual:initialLevel="0" qual:maxLevel="1" qual:name="MEKK1">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Mitogen-activated protein kinase kinase 1</p><p>Gene: MAP3K1</p><p>UniProt ID: Q13233</p><p>Gene ID: 4214</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_1fc7fbc2-8f47-4b94-9fe3-b42da679e69b">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-17T19:34:55Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_3141a340-3992-469c-9f1f-f9b864ca8d3f" qual:compartment="cytosol" qual:constant="false" qual:id="S_48" qual:initialLevel="0" qual:maxLevel="1" qual:name="Stat3">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Signal transducer and activator of transcription 3</p><p>Gene: STAT3</p><p>UniProt ID: P40763</p><p>Gene ID: 6774</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_3141a340-3992-469c-9f1f-f9b864ca8d3f">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-19T13:24:51Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_17eba9fe-70af-4dc8-bdaa-71dcd349ea4c" qual:compartment="cytosol" qual:constant="false" qual:id="S_49" qual:initialLevel="0" qual:maxLevel="1" qual:name="ETS1">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Protein C-ets-1</p><p>Gene: ETS1</p><p>UniProt ID: P14921</p><p>Gene ID: 2113</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_17eba9fe-70af-4dc8-bdaa-71dcd349ea4c">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-18T13:21:55Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="d98e116d-ce67-4fe2-b8c8-1ae9f3149371" qual:compartment="cytosol" qual:constant="false" qual:id="S_50" qual:initialLevel="0" qual:maxLevel="1" qual:name="ECM">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>extracellular matrix</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#d98e116d-ce67-4fe2-b8c8-1ae9f3149371">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-17T18:52:55Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_3cb779a6-d218-4f6c-8a03-cee05f1519ba" qual:compartment="cytosol" qual:constant="false" qual:id="S_51" qual:initialLevel="0" qual:maxLevel="1" qual:name="Npy">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Pro-neuropeptide Y</p><p>Gene: NPY</p><p>UniProt ID: P01303</p><p>Gene ID: 4852</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_3cb779a6-d218-4f6c-8a03-cee05f1519ba">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-17T19:14:58Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_26bce2ec-3449-43ca-96eb-877d4b944f51" qual:compartment="cytosol" qual:constant="false" qual:id="S_52" qual:initialLevel="0" qual:maxLevel="1" qual:name="NPYY1">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Neuropeptide Y receptor type 1</p><p>Gene: NPY1R</p><p>UniProt ID: P25929</p><p>Gene ID: 4886</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_26bce2ec-3449-43ca-96eb-877d4b944f51">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-17T19:14:58Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="bbcd4dab-3b23-4b63-800e-b40dcfc36152" qual:compartment="cytosol" qual:constant="false" qual:id="S_53" qual:initialLevel="0" qual:maxLevel="1" qual:name="RAS">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>GTPase Ras</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#bbcd4dab-3b23-4b63-800e-b40dcfc36152">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-17T19:20:16Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_9828efaf-d820-4d6f-8d99-b9f419be3a74" qual:compartment="cytosol" qual:constant="false" qual:id="S_54" qual:initialLevel="0" qual:maxLevel="1" qual:name="MEKK4">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Mitogen-activated protein kinase kinase 4</p><p>Gene: MAP3K4</p><p>UniProt ID: Q9Y6R4</p><p>Gene ID: 4216</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_9828efaf-d820-4d6f-8d99-b9f419be3a74">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-17T19:40:12Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_61bc0a33-928e-4b1b-a99d-1df0ba9dc442" qual:compartment="cytosol" qual:constant="false" qual:id="S_55" qual:initialLevel="0" qual:maxLevel="1" qual:name="MYC">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Myc proto-oncogene protein</p><p>Gene: MYC</p><p>UniProt ID: P01106</p><p>Gene ID: 4609</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_61bc0a33-928e-4b1b-a99d-1df0ba9dc442">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-18T13:10:15Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="ae7baeae-d443-49bd-862a-3ce2c036542e" qual:compartment="cytosol" qual:constant="false" qual:id="S_56" qual:initialLevel="0" qual:maxLevel="1" qual:name="KLF2">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Krueppel-like factor 2</p><p>Gene: KLF2</p><p>UniProt ID: Q9Y5W3</p><p>Gene ID: 10365</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#ae7baeae-d443-49bd-862a-3ce2c036542e">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-17T20:36:41Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_40685609-a106-4635-a247-bc57b01a9fab" qual:compartment="cytosol" qual:constant="false" qual:id="S_57" qual:initialLevel="0" qual:maxLevel="1" qual:name="PLC">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>phospholipase C</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_40685609-a106-4635-a247-bc57b01a9fab">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-17T18:38:11Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="d9770236-4fe3-4ccb-8744-99f5d02339b5" qual:compartment="cytosol" qual:constant="false" qual:id="S_58" qual:initialLevel="0" qual:maxLevel="1" qual:name="BTG2">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>BTG Family Member 2</p><p>Gene: BTG2</p><p>UniProt ID: P78543</p><p>Gene ID: 7832</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#d9770236-4fe3-4ccb-8744-99f5d02339b5">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-18T12:54:26Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_0f325a4a-af9e-41a7-a322-c3719977f500" qual:compartment="cytosol" qual:constant="false" qual:id="S_59" qual:initialLevel="0" qual:maxLevel="1" qual:name="P38">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>P38 mitogen-activated protein kinases</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_0f325a4a-af9e-41a7-a322-c3719977f500">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-17T19:53:57Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_18078dad-462e-429f-89ba-69f1f80a00f0" qual:compartment="cytosol" qual:constant="false" qual:id="S_60" qual:initialLevel="0" qual:maxLevel="1" qual:name="FRS2">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Fibroblast growth factor receptor substrate 2</p><p>Gene: FRS2</p><p>UniProt ID: Q8WU20</p><p>Gene ID: 10818</p><p>Gene ID: 10818</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_18078dad-462e-429f-89ba-69f1f80a00f0">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-17T16:24:57Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_7ab81fda-bfc2-4b2b-bda2-538b26d22e3b" qual:compartment="cytosol" qual:constant="false" qual:id="S_61" qual:initialLevel="0" qual:maxLevel="1" qual:name="RAF">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>RAF proto-oncogene serine/threonine-protein kinase</p><p>Gene: RAF1</p><p>UniProt ID: P04049</p><p>Gene ID: 5894</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_7ab81fda-bfc2-4b2b-bda2-538b26d22e3b">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-17T16:27:39Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_0c8a74b8-be03-4f83-a1f0-b281d3639249" qual:compartment="cytosol" qual:constant="false" qual:id="S_62" qual:initialLevel="0" qual:maxLevel="1" qual:name="P53">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Cellular tumor antigen p53</p><p>Gene: TP53</p><p>UniProt ID: P04637</p><p>Gene ID: 7157</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_0c8a74b8-be03-4f83-a1f0-b281d3639249">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-08-18T12:51:42Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+    </qual:listOfQualitativeSpecies>
+    <qual:listOfTransitions xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:transition qual:id="tr_S_1">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>PI3K activates AKT.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_1_in_S_17" qual:qualitativeSpecies="S_17" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>PI3K activates AKT by catalyzing the production of PtdIns-3,4-P2 and PtdIns-3,4,5-P3, which help recruit AKT to the membrane.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_1" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_17 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_2">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>RSK activates CREB.</p><p>MSK1/2 activates CREB.</p><p>AKT activates CREB.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_2_in_S_45" qual:qualitativeSpecies="S_45" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>RSK activates CREB through phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_2_in_S_1" qual:qualitativeSpecies="S_1" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>AKT induces CREB phosphorylation via SKF38393.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_2_in_S_29" qual:qualitativeSpecies="S_29" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>MSK1/2 is required for the stress-induced phosphorylation of CREB.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_2" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <or/>
+                  <apply>
+                    <eq/>
+                    <ci> S_29 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> S_1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_45 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_3">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>FAK activates SHC.</p><p>TrkA activates SHC.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_3_in_S_32" qual:qualitativeSpecies="S_32" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>TrkA activates SHC through phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_3_in_S_40" qual:qualitativeSpecies="S_40" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>The SHC PI domain binds to FAK.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_3" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> S_32 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_40 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_4">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>JNK activates Egr1.</p><p>AKT activates Egr1.</p><p>ERK activates Egr1.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_4_in_S_38" qual:qualitativeSpecies="S_38" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>H2O2-induced upregulation of Egr1 mRNA and protein was inhibited in the presence of agents inhibiting the JNK pathway</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_4_in_S_1" qual:qualitativeSpecies="S_1" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>AKT phosphorylates the Egr1 inhibitor, FoxO1.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_4_in_S_18" qual:qualitativeSpecies="S_18" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>H2O2-induced upregulation of Egr-1 mRNA and protein was inhibited in the presence of agents inhibiting the ERK pathway.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_4" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <or/>
+                  <apply>
+                    <eq/>
+                    <ci> S_38 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> S_18 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_5">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>ETS1 activates Dusp6.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_5_in_S_49" qual:qualitativeSpecies="S_49" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>ETS1 activates Dusp6 through binding to the Dusp6/MKP-3 promoter.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_5" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_49 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_6">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Egr1 activates ARC.</p><p>CREB activates ARC.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_6_in_S_2" qual:qualitativeSpecies="S_2" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>CREB binds to the critical synaptic activity-responsive elements (SARE) of the ARC gene.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_6_in_S_4" qual:qualitativeSpecies="S_4" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Egr1 activates ARC by binding to a ERE sequence in the ARC promoter.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_6" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> S_2 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_4 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_7">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>SHC activates GRB2.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_7_in_S_3" qual:qualitativeSpecies="S_3" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Phosphorylated SHC binds to GRB2.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_7" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_3 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_8">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>ERK activates JUND.</p><p>JNK activates JUND.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_8_in_S_38" qual:qualitativeSpecies="S_38" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>JNK activates JUND through phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_8_in_S_18" qual:qualitativeSpecies="S_18" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>ERK activates JUND through phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_8" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> S_38 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_18 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_9">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>AKT activates FOS.</p><p>ERK activates FOS.</p><p>JNK activates FOS.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_9_in_S_1" qual:qualitativeSpecies="S_1" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Akt activated the SRE region of the FOS promoter through the TCF site.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_9_in_S_38" qual:qualitativeSpecies="S_38" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>JNK activates FOS through phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_9_in_S_18" qual:qualitativeSpecies="S_18" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>ERK activates FOS through phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_9" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <or/>
+                  <apply>
+                    <eq/>
+                    <ci> S_1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> S_38 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_18 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_10">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>RSK activates SRF.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_10_in_S_45" qual:qualitativeSpecies="S_45" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>RSK activates SRF through phosphorylation at Ser-103.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_10" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_45 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_11">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>MEKK4 activates Mapk3k.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_11_in_S_54" qual:qualitativeSpecies="S_54" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>MEKK4 indirectly activates Mapk3k.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_11" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_54 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_12">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>uPAR activates uPA/PLAT.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_12_in_S_16" qual:qualitativeSpecies="S_16" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>uPAR binds to uPA/PLAT.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_12" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_16 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_13">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>FOS activates AP1.</p><p>Fosl1 activates AP1.</p><p>JUNB activates AP1.</p><p>JUND activates AP1.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_13_in_S_9" qual:qualitativeSpecies="S_9" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>FOS binds to AP1</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_13_in_S_8" qual:qualitativeSpecies="S_8" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>JUND binds to AP1.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_13_in_S_39" qual:qualitativeSpecies="S_39" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>JUNB binds to AP1.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_13_in_S_20" qual:qualitativeSpecies="S_20" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Fosl1 binds to AP1.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_13" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <or/>
+                  <apply>
+                    <or/>
+                    <apply>
+                      <eq/>
+                      <ci> S_39 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> S_8 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> S_20 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_9 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_14">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>MEKK1 activates MKK7.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_14_in_S_47" qual:qualitativeSpecies="S_47" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>MEKK1 activates MKK7 through phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_14" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_47 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_15">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>C3G activates RAP1.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_15_in_S_26" qual:qualitativeSpecies="S_26" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>C3G stimulates the nucleotide exchange of RAP1.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_15" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_26 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_16">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>AP1 activates uPAR.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_16_in_S_13" qual:qualitativeSpecies="S_13" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>AP1 binds to uPAR.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_16" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_13 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_17">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>TrkA activates PI3K.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_17_in_S_32" qual:qualitativeSpecies="S_32" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>PI3K binds to the Tyr751 residue of TrkA.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_17" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_32 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_18">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>MEK activates ERK.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_18_in_S_34" qual:qualitativeSpecies="S_34" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>MEK activates ERK through phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_18" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_34 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_19">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>ECM activates Itga1.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_19_in_S_50" qual:qualitativeSpecies="S_50" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>ECM components bind to Itga1.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_19" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_50 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_20">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>JNK activates Fosl1.</p><p>ERK activates Fosl1.</p><p>AKT activates Fosl1.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_20_in_S_1" qual:qualitativeSpecies="S_1" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>AKT activates Fosl1 through phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_20_in_S_38" qual:qualitativeSpecies="S_38" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>JNK activates Fosl1 through phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_20_in_S_18" qual:qualitativeSpecies="S_18" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>ERK activates Fosl1 through phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_20" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <or/>
+                  <apply>
+                    <eq/>
+                    <ci> S_1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> S_18 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_38 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_21">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Ca2+ activates PKC.</p><p>DAG activates PKC.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_21_in_S_27" qual:qualitativeSpecies="S_27" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>DAG binds to the C1 domain of PKC.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_21_in_S_23" qual:qualitativeSpecies="S_23" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Ca2+ indirectly activates PKC.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_21" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> S_27 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_23 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_22">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>JNK activates ATF2.</p><p>ERK activates ATF2.</p><p>P38 activates ATF2.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_22_in_S_59" qual:qualitativeSpecies="S_59" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>P38 activates ATF2 through phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_22_in_S_38" qual:qualitativeSpecies="S_38" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>JNK activates ATF2 through phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_22_in_S_18" qual:qualitativeSpecies="S_18" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>ERK activates ATF2 through phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_22" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <or/>
+                  <apply>
+                    <eq/>
+                    <ci> S_59 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> S_18 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_38 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_23">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>PLC activates Ca2+.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_23_in_S_57" qual:qualitativeSpecies="S_57" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>PLC activates Ca2+ by hydrolyzing phosphatidylinositol 4,5-bisphosphate to generate IP3 and DAG. IP3 then induces an increase in intracellular Ca2+.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_23" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_57 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_24">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Plasmin activates Mmp3/10.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_24_in_S_36" qual:qualitativeSpecies="S_36" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Plasmin-dependent branching was prevented by both plasmin and MMP inhibitors, suggesting that plasmin activates MMPs.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_24" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_36 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_25">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>AKT activates KLF10.</p><p>ERK activates KLF10.</p><p>JNK activates KLF10.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_25_in_S_1" qual:qualitativeSpecies="S_1" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>AKT activates KLF10 through phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_25_in_S_38" qual:qualitativeSpecies="S_38" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>JNK indirectly activates KLF10.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_25_in_S_18" qual:qualitativeSpecies="S_18" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>ERK indirectly activates KLF10.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_25" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <or/>
+                  <apply>
+                    <eq/>
+                    <ci> S_1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> S_18 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_38 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_26">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>FRS2 activates C3G.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_26_in_S_60" qual:qualitativeSpecies="S_60" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Phosporylated FRS2 scaffolds the assembly of a stable complex involving C3G, Crk, Rap1, and B-Raf.s..</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_26" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_60 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_27">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>PLC activates DAG.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_27_in_S_57" qual:qualitativeSpecies="S_57" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>PLC hydrolyzes phosphatidylinositol 4,5-bisphosphate to produce IP3 and DAG.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_27" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_57 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_28">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>JNK activates KLF4.</p><p>AKT activates KLF4.</p><p>ERK activates KLF4.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_28_in_S_38" qual:qualitativeSpecies="S_38" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>JNK indirectly activates KLF4.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_28_in_S_1" qual:qualitativeSpecies="S_1" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>AKT activates KLF4 through phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_28_in_S_18" qual:qualitativeSpecies="S_18" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>ERK activates KLF4 through phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_28" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <or/>
+                  <apply>
+                    <eq/>
+                    <ci> S_38 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> S_18 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_29">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>ERK activates MSK1/2.</p><p>P38 activates MSK1/2.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_29_in_S_59" qual:qualitativeSpecies="S_59" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>P38 activates MSK1/2 through phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_29_in_S_18" qual:qualitativeSpecies="S_18" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>ERK activates MSK1/2 through phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_29" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> S_18 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_59 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_30">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>RAS activates RAC1.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_30_in_S_53" qual:qualitativeSpecies="S_53" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>RAS stimulate the activity of the RAC1-specific GEF, Tiam1.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_30" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_53 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_31">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>AKT activates KLF5.</p><p>ERK activates KLF5.</p><p>P53 activates KKLF5.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_31_in_S_1" qual:qualitativeSpecies="S_1" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>The causal relationship between uPAR signaling and late gene expression (such as KLF5) remains unclear.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_31_in_S_62" qual:qualitativeSpecies="S_62" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>P53 binds to KKLF5.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_31_in_S_18" qual:qualitativeSpecies="S_18" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>ERK activates KLF5 through phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_31" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <or/>
+                  <apply>
+                    <eq/>
+                    <ci> S_62 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> S_1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_18 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_32">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>NGF binds to TrkA.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_32_in_S_43" qual:qualitativeSpecies="S_43" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>NGF binds to TrkA through phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_32" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_43 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_33">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>MEKK4 activates MEKK6.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_33_in_S_54" qual:qualitativeSpecies="S_54" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>MEKK4 activates MEKK6's downstream target, p38. MEKK4 and MEKK6 are also share an activating regulatory protein, MTK1.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_33" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_54 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_34">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>RAF activates MEK.</p><p>MEKK1 activates MEK.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_34_in_S_61" qual:qualitativeSpecies="S_61" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>RAF binds to MEK.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_34_in_S_47" qual:qualitativeSpecies="S_47" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>MEKK1 activates MEK through phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_34" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> S_47 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_61 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_35">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>GRB2 activates SOS.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_35_in_S_7" qual:qualitativeSpecies="S_7" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>GRB2 directly binds to SOS.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_35" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_7 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_36">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>uPA/PLAT activates Plasmin.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_36_in_S_12" qual:qualitativeSpecies="S_12" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>uPA/PLAT catalyzes conversion of plasminogen to Plasmin.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_36" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_12 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_37">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>ERK activates ZFP36.</p><p>JNK activates ZFP36.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_37_in_S_38" qual:qualitativeSpecies="S_38" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>JNK activates ZFP36 through phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_37_in_S_18" qual:qualitativeSpecies="S_18" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>ERK indirectly activates ZFP36.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_37" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> S_38 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_18 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_38">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>MEKK4 activates JNK.</p><p>MEKK7 activates JNK.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_38_in_S_54" qual:qualitativeSpecies="S_54" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>MEKK4 indirectly activates JNK due to environmental stress.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_38_in_S_14" qual:qualitativeSpecies="S_14" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>MEKK7 activates JNK through phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_38" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> S_54 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_14 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_39">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>AKT activates JUNB.</p><p>ERK activates JUNB.</p><p>JNK activates JUNB.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_39_in_S_1" qual:qualitativeSpecies="S_1" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>AKT activates JUNB via AIP4/Itch ubiquitination of JUNB.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_39_in_S_38" qual:qualitativeSpecies="S_38" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>JNK activates JUNB through phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_39_in_S_18" qual:qualitativeSpecies="S_18" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>ERK activates JUNB through phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_39" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <or/>
+                  <apply>
+                    <eq/>
+                    <ci> S_18 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> S_1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_38 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_40">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Itga1 activates FAK.</p><p>RAP1 activates FAK.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_40_in_S_19" qual:qualitativeSpecies="S_19" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Itga1 activates FAK by promoting tyrosine phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_40_in_S_15" qual:qualitativeSpecies="S_15" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>RAP1 activity blocked the effect of Csk, a negative regulator of the Src family.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_40" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> S_19 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_15 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_41">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>ATF2 actvivates Maff.</p><p>ERK activates Maff.</p><p>JNK activates Maff.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_41_in_S_22" qual:qualitativeSpecies="S_22" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>ATF2 forms a binding complex with Maff.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_41_in_S_38" qual:qualitativeSpecies="S_38" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>JNK may need to be active for NGF to stimulate Maff.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_41_in_S_18" qual:qualitativeSpecies="S_18" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Maff is a target of ERK signaling.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_41" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <or/>
+                  <apply>
+                    <eq/>
+                    <ci> S_18 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> S_38 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_22 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_42">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>P53 activates KLF6.</p><p>JNK activates KLF6.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_42_in_S_38" qual:qualitativeSpecies="S_38" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Inhibition of JNK activation decreased PMA-induced KLF6 induction.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_42_in_S_62" qual:qualitativeSpecies="S_62" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>P53 is suggested to enhances KLF6 stability.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_42" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> S_62 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_38 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_44">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>NPYY1 activates G(i/o).</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_44_in_S_52" qual:qualitativeSpecies="S_52" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>NPYY1 is a receptor for G-proteins and binds to G(i/o).</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_44" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_52 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_45">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>ERK activates RSK.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_45_in_S_18" qual:qualitativeSpecies="S_18" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>ERK activates RSK through phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_45" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_18 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_46">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>ERK activates CITED2.</p><p>CREB activates CITED2.</p><p>P53 activates CITED2.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_46_in_S_2" qual:qualitativeSpecies="S_2" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>CREB binds to CITED2.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_46_in_S_62" qual:qualitativeSpecies="S_62" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>P53 is generally indepentent of CITED2 regulation, but can be detected during CITED2 regulation.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_46_in_S_18" qual:qualitativeSpecies="S_18" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>ERK activates CITED2 through phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_46" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <or/>
+                  <apply>
+                    <eq/>
+                    <ci> S_2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> S_18 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_62 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_47">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>RAC1 activates MEKK1.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_47_in_S_30" qual:qualitativeSpecies="S_30" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>RAC1 indirectly activates MEKK1 through interaction with PAK.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_47" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_30 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_48">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>ERK activates Stat3.</p><p>JNK activates Stat3.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_48_in_S_38" qual:qualitativeSpecies="S_38" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>JNK activates Stat3 through phsophorylation.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_48_in_S_18" qual:qualitativeSpecies="S_18" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>ERK activates Stat3 through phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_48" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> S_18 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_38 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_49">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>JNK activates ETS1.</p><p>ERK activates ETS1.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_49_in_S_38" qual:qualitativeSpecies="S_38" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>JNK activates ETS1 through phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_49_in_S_18" qual:qualitativeSpecies="S_18" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>ERK activates ETS1 through phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_49" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> S_38 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_18 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_50">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Mmp3/10 activates ECM.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_50_in_S_24" qual:qualitativeSpecies="S_24" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Mmp3/10 play a role in ECM degradation. Loss of Mmp3 blocks side branching</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_50" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_24 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_51">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>AP1 activates Npy.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_51_in_S_13" qual:qualitativeSpecies="S_13" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>AP1 binds to the Npy promoter.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_51" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_13 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_52">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Npy activates NPYY1.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_52_in_S_51" qual:qualitativeSpecies="S_51" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Npy binds to NPYY1.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_52" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_51 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_53">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>SOS activates RAS.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_53_in_S_35" qual:qualitativeSpecies="S_35" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>SOS binds to RAS.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_53" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_35 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_54">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>RAC1 activates MEKK4.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_54_in_S_30" qual:qualitativeSpecies="S_30" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>RAC1 binds to MEKK4.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_54" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_30 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_55">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>AKT activates MYC.</p><p>ERK activates MYC.</p><p>JNK activates MYC.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_55_in_S_1" qual:qualitativeSpecies="S_1" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>AKT activates MYC through phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_55_in_S_38" qual:qualitativeSpecies="S_38" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>JNK activates MYC throguh phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_55_in_S_18" qual:qualitativeSpecies="S_18" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>ERK activates MYC through phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_55" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <or/>
+                  <apply>
+                    <eq/>
+                    <ci> S_38 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> S_1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_18 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_56">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>ERK activates KLF2.</p><p>AKT activates KLF2.</p><p>JNK activates KLF2.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_56_in_S_38" qual:qualitativeSpecies="S_38" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>JNK indirectly activates KLF2.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_56_in_S_1" qual:qualitativeSpecies="S_1" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>AKT activates KLF2 through phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_56_in_S_18" qual:qualitativeSpecies="S_18" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>ERK activates KLF2 through phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_56" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <or/>
+                  <apply>
+                    <eq/>
+                    <ci> S_18 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> S_38 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_57">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>TrkA activates PLC.</p><p>G(i/o) activates PLC.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_57_in_S_32" qual:qualitativeSpecies="S_32" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>TrkA activates PLC through phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_57_in_S_44" qual:qualitativeSpecies="S_44" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Experimental data showed that PLC-β1 and PLC-β2 were stimulated by free G protein βγ subunits.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_57" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> S_44 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_32 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_58">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>AKT activates BTG2.</p><p>JNK activates BTG2.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_58_in_S_1" qual:qualitativeSpecies="S_1" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>AKT indirectly activates BTG2.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_58_in_S_38" qual:qualitativeSpecies="S_38" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>JNK indirectly activates BTG2.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_58" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> S_1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_38 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_59">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>MKK6 activates P38.</p><p>Mapk3k activates P38.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_59_in_S_33" qual:qualitativeSpecies="S_33" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>MKK6 activates P38 through phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_59_in_S_11" qual:qualitativeSpecies="S_11" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Mapk3k activates P38 through phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_59" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> S_33 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_11 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_60">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>TrkA activates FRS2.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_60_in_S_32" qual:qualitativeSpecies="S_32" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>TrkA binds to FRS2.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_60" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_32 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_61">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>RAS activates RAF.</p><p>PKC activates RAF.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_61_in_S_53" qual:qualitativeSpecies="S_53" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>RAS binds to RAF.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_61_in_S_21" qual:qualitativeSpecies="S_21" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>PKC activates RAF through phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_61" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> S_53 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_21 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_62">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>ERK activates P53.</p><p>AKT activates P53.</p><p>JNK activates P53.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_62_in_S_38" qual:qualitativeSpecies="S_38" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>JNK activates P53 through phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_62_in_S_1" qual:qualitativeSpecies="S_1" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>AKT activates P53 through phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_62_in_S_18" qual:qualitativeSpecies="S_18" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>ERK activates P53 through phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_62" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <or/>
+                  <apply>
+                    <eq/>
+                    <ci> S_1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> S_18 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_38 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+    </qual:listOfTransitions>
+    <listOfCompartments>
+      <compartment constant="true" id="extracellular" name="extracellular"/>
+      <compartment constant="true" id="cytosol" name="cytosol"/>
+    </listOfCompartments>
+  </model>
+</sbml>

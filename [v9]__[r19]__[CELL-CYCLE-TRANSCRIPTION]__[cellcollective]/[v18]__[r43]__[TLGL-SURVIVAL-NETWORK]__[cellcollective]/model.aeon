@@ -1,0 +1,79 @@
+#position:S1P:282.85916530041453,411.74240826169626
+$S1P:!(Apoptosis_ | Ceramide_)
+Apoptosis_ -| S1P
+Ceramide_ -| S1P
+#position:GPCR_:152.0437930873162,434.6094408006443
+$GPCR_:(S1P & !Apoptosis_)
+S1P -> GPCR_
+Apoptosis_ -| GPCR_
+#position:Apoptosis_:188.67074745310816,232.1742573858155
+$Apoptosis_:(Apoptosis_ | Caspase)
+Apoptosis_ -> Apoptosis_
+Caspase -> Apoptosis_
+#position:SMAD_:71.34104996806002,361.63560206092586
+$SMAD_:(GPCR_ & !Apoptosis_)
+Apoptosis_ -| SMAD_
+GPCR_ -> SMAD_
+#position:TCR:139.80674842448713,43.971225834361235
+$TCR:!(Apoptosis_ | CTLA4_)
+Apoptosis_ -| TCR
+CTLA4_ -| TCR
+#position:CTLA4_:51.94485147025205,102.51840299832884
+$CTLA4_:(TCR & !Apoptosis_)
+Apoptosis_ -| CTLA4_
+TCR -> CTLA4_
+#position:MCL1:209.29131416491964,143.2489720730133
+$MCL1:!(Apoptosis_ | DISC_)
+Apoptosis_ -| MCL1
+DISC_ -| MCL1
+#position:DISC_:296.72548122725266,130.34215347680868
+$DISC_:((Ceramide_ & !Apoptosis_) | (Fas & !(Apoptosis_ | FLIP_)))
+Apoptosis_ -| DISC_
+Fas -> DISC_
+FLIP_ -| DISC_
+Ceramide_ -> DISC_
+#position:IAP_:204.98974346656445,374.55681051312877
+$IAP_:!(BID_ | Apoptosis_)
+Apoptosis_ -| IAP_
+BID_ -| IAP_
+#position:BID_:156.35337518167125,309.00855670692806
+$BID_:!(Apoptosis_ | MCL1)
+MCL1 -| BID_
+Apoptosis_ -| BID_
+#position:Caspase:268.1264166379521,256.20396979724455
+$Caspase:((DISC_ & !Apoptosis_) | (BID_ & !(Apoptosis_ | IAP_)))
+IAP_ -| Caspase
+Apoptosis_ -| Caspase
+BID_ -> Caspase
+DISC_ -> Caspase
+#position:Fas:344.9300861626618,184.33747488050733
+$Fas:!(sFas | Apoptosis_)
+Apoptosis_ -| Fas
+sFas -| Fas
+#position:FLIP_:238.75159306713653,29
+$FLIP_:!(Apoptosis_ | DISC_)
+Apoptosis_ -| FLIP_
+DISC_ -| FLIP_
+#position:Ceramide_:360.47044687539346,295.8782568023605
+$Ceramide_:(Fas & !(S1P | Apoptosis_))
+S1P -| Ceramide_
+Apoptosis_ -| Ceramide_
+Fas -> Ceramide_
+#position:P2:128.8412234133607,132.0422403343723
+$P2:((IFNG_ & !Apoptosis_) | (P2 & !Apoptosis_))
+Apoptosis_ -| P2
+IFNG_ -> P2
+P2 -> P2
+#position:IFNG_:97.66033178699541,234.02792349018807
+$IFNG_:!((Apoptosis_ | P2) | SMAD_)
+Apoptosis_ -| IFNG_
+SMAD_ -| IFNG_
+P2 -| IFNG_
+#position:sFas:283.9175341133008,318.4560180836452
+$sFas:(S1P & !Apoptosis_)
+S1P -> sFas
+Apoptosis_ -| sFas
+#position:CREB:19.5,235.62253612090228
+$CREB:(IFNG_ & !Apoptosis_)
+Apoptosis_ -| CREB
+IFNG_ -> CREB

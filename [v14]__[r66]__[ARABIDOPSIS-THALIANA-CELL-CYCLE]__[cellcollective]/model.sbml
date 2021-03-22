@@ -1,0 +1,2685 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" qual:required="true" version="1" xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+  <model id="M4837" metaid="_49716ff5-8272-4593-8d1f-d8d782925539" name="Arabidopsis thaliana Cell Cycle">
+    <notes>
+      <body xmlns="http://www.w3.org/1999/xhtml">Cell cycle control is fundamental in eukaryotic development. Several modeling efforts have been used to integrate the complex network of interacting molecular components involved in cell cycle dynamics. In this paper, we aimed at recovering the regulatory logic upstream of previously known components of cell cycle control, with the aim of understanding the mechanisms underlying the emergence of the cyclic behavior of such components. We focus on Arabidopsis thaliana, but given that many components of cell cycle regulation are conserved among eukaryotes, when experimental data for this system was not available, we considered experimental results from yeast and animal systems. We are proposing a Boolean gene regulatory network (GRN) that converges into only one robust limit cycle attractor that closely resembles the cyclic behavior of the key cell-cycle molecular components and other regulators considered here. We validate the model by comparing our in silico configurations with data from loss- and gain-of-function mutants, where the endocyclic behavior also was recovered. Additionally, we approximate a continuous model and recovered the temporal periodic expression profiles of the cell-cycle molecular components involved, thus suggesting that the single limit cycle attractor recovered with the Boolean model is not an artifact of its discrete and synchronous nature, but rather an emergent consequence of the inherent characteristics of the regulatory logic proposed here. This dynamical model, hence provides a novel theoretical framework to address cell cycle regulation in plants, and it can also be used to propose novel predictions regarding cell cycle regulation in other eukaryotes.</body>
+    </notes>
+    <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_49716ff5-8272-4593-8d1f-d8d782925539">
+	<dc:creator>
+	<rdf:Bag>
+	<rdf:li rdf:parseType="Resource">
+	<vCard:N rdf:parseType="Resource">
+	<vCard:Family>Bird</vCard:Family>
+	<vCard:Given>Shannyn</vCard:Given>
+	</vCard:N>
+	<vCard:EMAIL>birdgirl@arcticmail.com</vCard:EMAIL>
+	<vCard:ORG rdf:parseType="Resource">
+	<vCard:Orgname>University of Nebraska-Lincoln</vCard:Orgname>
+	</vCard:ORG>
+	</rdf:li>
+	</rdf:Bag>
+	</dc:creator>
+	<dcterms:created rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-09-12T08:51:56Z</dcterms:W3CDTF>
+	</dcterms:created>
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2017-10-13T13:09:34Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:26340681"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+      <qual:listOfQualitativeSpecies xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:qualitativeSpecies metaid="ff1665bf-e52a-4c93-a7dd-f36fad64d520" qual:compartment="cytosol" qual:constant="false" qual:id="S_1" qual:initialLevel="0" qual:maxLevel="1" qual:name="APC/C">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Anaphase-promoting complex/Cyclosome</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#ff1665bf-e52a-4c93-a7dd-f36fad64d520">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2017-10-12T16:10:40Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_6e5273de-ad1c-4032-b39d-0f813e406b5b" qual:compartment="cytosol" qual:constant="false" qual:id="S_2" qual:initialLevel="0" qual:maxLevel="1" qual:name="CYCB1;1">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Protein name: Cyclin-B1-1</p><p>Gene name: CYCB1-1</p><p>UniProt ID: P30183</p><p>Gene ID: 829904</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_6e5273de-ad1c-4032-b39d-0f813e406b5b">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2017-10-12T16:11:01Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="d676dfdb-09b0-4208-9b06-5489938aa528" qual:compartment="cytosol" qual:constant="false" qual:id="S_3" qual:initialLevel="0" qual:maxLevel="1" qual:name="CYCD3;1">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Protein name: Cyclin-D3-1</p><p>Gene name: CYCD3-1</p><p>UniProt ID: P42753</p><p>Gene ID: 829564</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#d676dfdb-09b0-4208-9b06-5489938aa528">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2017-10-12T21:30:02Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="c978fd4a-2bbf-465d-b511-c84b2d251761" qual:compartment="cytosol" qual:constant="false" qual:id="S_4" qual:initialLevel="0" qual:maxLevel="1" qual:name="MYB77">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Protein name:  MYB77</p><p>Gene name: AtMYB77</p><p>UniProt ID: O49745</p><p>Gene ID: 824168</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#c978fd4a-2bbf-465d-b511-c84b2d251761">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2017-10-12T15:59:44Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_6e7dd13c-0d07-4c07-b6d8-120594c507e5" qual:compartment="cytosol" qual:constant="false" qual:id="S_5" qual:initialLevel="0" qual:maxLevel="1" qual:name="E2Fe">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Protein name: E2F transcription factor-like E2FE</p><p>Gene name: E2FE</p><p>UniProt ID: Q8LSZ4</p><p>Gene ID: 823971</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_6e7dd13c-0d07-4c07-b6d8-120594c507e5">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2017-10-12T15:59:44Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="c2db1664-5e27-4121-be00-2494ae36774d" qual:compartment="cytosol" qual:constant="false" qual:id="S_6" qual:initialLevel="0" qual:maxLevel="1" qual:name="SCF">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Skp1/Cullin/F-box</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#c2db1664-5e27-4121-be00-2494ae36774d">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2017-03-24T12:52:43Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_12864555-34d1-4ba0-b382-00e53909fd7e" qual:compartment="cytosol" qual:constant="false" qual:id="S_7" qual:initialLevel="0" qual:maxLevel="1" qual:name="KRP1">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Protein name: Cyclin-dependent kinase inhibitor 1</p><p>Gene name: KRP1</p><p>UniProt ID: Q67Y93</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_12864555-34d1-4ba0-b382-00e53909fd7e">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2017-10-12T21:30:02Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="e32929db-cd41-4121-af84-a507fa3f843d" qual:compartment="cytosol" qual:constant="false" qual:id="S_8" qual:initialLevel="0" qual:maxLevel="1" qual:name="E2Fb">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Protein name: Transcription factor E2FB</p><p>Gene name: E2FB</p><p>UniProt ID: Q9FV71</p><p>Gene ID: 832283</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#e32929db-cd41-4121-af84-a507fa3f843d">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2017-10-12T15:59:44Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="f942eec9-a9ec-4aff-b44b-38d75bea569c" qual:compartment="cytosol" qual:constant="false" qual:id="S_9" qual:initialLevel="0" qual:maxLevel="1" qual:name="CYCA2;3">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Protein name: Cyclin-A2-3</p><p>Gene name: CYCA2-3</p><p>UniProt ID: Q38819</p><p>Gene ID: 838127</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#f942eec9-a9ec-4aff-b44b-38d75bea569c">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2017-10-12T16:11:01Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="a5977198-abfa-46e4-b0cd-92cea86e4ff8" qual:compartment="cytosol" qual:constant="false" qual:id="S_10" qual:initialLevel="0" qual:maxLevel="1" qual:name="E2Fa">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Protein name: Transcription factor E2FA</p><p>Gene ID: 818174</p><p>Gene name: E2FA</p><p>UniProt ID: Q9FNY0</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#a5977198-abfa-46e4-b0cd-92cea86e4ff8">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2017-07-18T14:27:47Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="c0ef6ed1-dcf0-49ee-bbe2-87d1676c380f" qual:compartment="cytosol" qual:constant="false" qual:id="S_11" qual:initialLevel="0" qual:maxLevel="1" qual:name="MYB3R1/4">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Protein name: Myb-related protein 3R-1/MYB transcription factor</p><p>Gene name: MYB3R-1/MYB3R4</p><p>UniProt ID: Q9S7G7/Q94FL9</p><p>Gene ID: 829409/831023</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#c0ef6ed1-dcf0-49ee-bbe2-87d1676c380f">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2017-10-12T16:11:01Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_3c7073cb-7369-4a75-9b81-8b2d7b2b85fc" qual:compartment="cytosol" qual:constant="false" qual:id="S_12" qual:initialLevel="0" qual:maxLevel="1" qual:name="CDKB1;1">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Protein name: Retinoblastoma-related protein 1</p><p>Gene name: RBR1</p><p>Uniprot ID: Q9LKZ3</p><p>Gene ID: 820408</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_3c7073cb-7369-4a75-9b81-8b2d7b2b85fc">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2017-10-12T16:11:01Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:9628022"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_85b41ea4-f67f-41e2-bddc-b7b4fec28493" qual:compartment="cytosol" qual:constant="false" qual:id="S_13" qual:initialLevel="0" qual:maxLevel="1" qual:name="RBR">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Retinoblastoma-related protein 1</p><p>Gene name: RBR1</p><p>UniProt ID: Q9LKZ3</p><p>Gene ID: 820408</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_85b41ea4-f67f-41e2-bddc-b7b4fec28493">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2017-10-12T15:59:44Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_91cdaa3c-e27f-4e1f-aa67-de4e44e73d8d" qual:compartment="cytosol" qual:constant="false" qual:id="S_14" qual:initialLevel="0" qual:maxLevel="1" qual:name="E2Fc">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Protein name: Transcription factor E2FC</p><p>Gene name: E2FC</p><p>UniProt ID: Q9FV70</p><p>Gene ID: 841202</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_91cdaa3c-e27f-4e1f-aa67-de4e44e73d8d">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2017-10-12T15:59:44Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+    </qual:listOfQualitativeSpecies>
+    <qual:listOfTransitions xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:transition qual:id="tr_S_1">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>E2Fa activates APC/C.</p><p>E2Fe inhibits APC/C.</p><p>MYB3R1/4 activates APC/C.</p><p>MYB77 activates APC/C.</p><p>RBR inhibits APC/C.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_1_in_S_4" qual:qualitativeSpecies="S_4" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>MYB transcription factors are important for the G2/M transition. APC/C plays a role in mitosis exit. In this model it is proposed that MYB77 is a transcription factor that links, either directly of indirectly, the start of M phase to the end of M phase through upregulation of APC/C.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_1_in_S_10" qual:qualitativeSpecies="S_10" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>E2Fa activates CCS5A2, a component of APC/C.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_1_in_S_13" qual:qualitativeSpecies="S_13" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>RBR is important in progressing the cell through G1. RBR activity implies that mitosis has ended and APC/C is no longer needed by the cell. Thus in this model it is poposed that RBR activity inhibits, either directly or indirectly, APC/C.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_1_in_S_11" qual:qualitativeSpecies="S_11" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>SKP2A, RBR, CDKB1;1, CYCA2;3, CCS52A2, KRP1, E2Fc, MYB3R1/4 and CYCB1;1 were found to contain consensus sites for MYB3R4.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_1_in_S_5" qual:qualitativeSpecies="S_5" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>E2F2 downregulates CCS5A2, a component of APC/C.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_1" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <or/>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci> S_10 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <not/>
+                      <apply>
+                        <or/>
+                        <apply>
+                          <eq/>
+                          <ci> S_5 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci> S_13 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci> S_11 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <not/>
+                      <apply>
+                        <eq/>
+                        <ci> S_5 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_4 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <eq/>
+                      <ci> S_5 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_2">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>MYB3R1/4 activates CYCB1;1.</p><p>KRP1 in conjunction with CYCD3;1 inhibits CYCB1;1.</p><p>APC/C inhibits CYCB1;1.</p><p>MYB77 activates CYCB1;1.</p><p>RBR inhibits CYCB1;1.</p><p>E2Fb activates CYCB1;1.</p><p>E2Fc inhibits CYCB1;1.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_2_in_S_1" qual:qualitativeSpecies="S_1" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>The APC/C complex ubiquitinates CYCB1;1, leading to its subsequent degradation.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_2_in_S_14" qual:qualitativeSpecies="S_14" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>E2Fc expression reduces CDKB1;1 levels.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_2_in_S_4" qual:qualitativeSpecies="S_4" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>MYB77 recognizes the sequence CNGTTR as a consensus site. This information was used to find possible targets in the cell cycle.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_2_in_S_8" qual:qualitativeSpecies="S_8" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Expression of E2Fb induces CYCB1;1 expression.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_2_in_S_3" qual:qualitativeSpecies="S_3" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>CyCD3;1, an indirect activator of CYCB1;1, is absent or inactive when KRP1 is present.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_2_in_S_13" qual:qualitativeSpecies="S_13" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>RBR represses E2Fb activity. Phosphorylation of RBR in G1 leads to an accumulation of E2Fb.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_2_in_S_11" qual:qualitativeSpecies="S_11" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>MYB3R1/4 recognizes the sequence AACGG found on CYCB1;1.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_2_in_S_7" qual:qualitativeSpecies="S_7" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>KRP1 binds to CDKA;1 to inhibit the activity of the CDKA–CYCB1;1 complex.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_2" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <or/>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci> S_4 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <not/>
+                      <apply>
+                        <eq/>
+                        <ci> S_1 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <and/>
+                      <apply>
+                        <eq/>
+                        <ci> S_8 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                      <apply>
+                        <or/>
+                        <apply>
+                          <not/>
+                          <apply>
+                            <eq/>
+                            <ci> S_13 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <and/>
+                          <apply>
+                            <eq/>
+                            <ci> S_3 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                          <apply>
+                            <not/>
+                            <apply>
+                              <eq/>
+                              <ci> S_7 </ci>
+                              <cn type="integer"> 1 </cn>
+                            </apply>
+                          </apply>
+                        </apply>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <not/>
+                      <apply>
+                        <or/>
+                        <apply>
+                          <eq/>
+                          <ci> S_14 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci> S_1 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_11 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <eq/>
+                      <ci> S_1 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_3">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>SCF inhibits CYCD3;1.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_3_in_S_6" qual:qualitativeSpecies="S_6" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>SCF is involved in the ubiquitination and subsequent degradation of CYCD3;1.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_3" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <not/>
+                <apply>
+                  <eq/>
+                  <ci> S_6 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_4">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>E2Fb activates MYB77 when CYCD3;1 is active and KRP1 is inactive or when RBR is inactive.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_4_in_S_8" qual:qualitativeSpecies="S_8" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>MYB77 is a predicted mediator between E2F and MYB. E2F has a binding site that is recognized by MYB77.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_4_in_S_3" qual:qualitativeSpecies="S_3" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>CYCD3;1 is required to progress the cell through G1, which activates E2Fb.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_4_in_S_13" qual:qualitativeSpecies="S_13" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>RBR represses E2Fb activity. Phosphorylation of RBR in G1 leads to an accumulation of E2Fb.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_4_in_S_7" qual:qualitativeSpecies="S_7" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>CyCD3;1, an indirect activator of MYB77, is absent or inactive when KRP1 is present.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_4" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> S_8 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <or/>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci> S_3 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <not/>
+                      <apply>
+                        <eq/>
+                        <ci> S_7 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <eq/>
+                      <ci> S_13 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_5">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>E2Fb activates E2Fe.</p><p>CYCD3;1 activates E2Fe when KRP1 is inactive.</p><p>MYB77 activates E2Fe.</p><p>E2Fc inhibits E2Fc.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_5_in_S_14" qual:qualitativeSpecies="S_14" qual:sign="dual" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>E2Fc inhibits gene that promote cell division. In this model the absence of E2Fc is sufficient to activate E2Fe.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_5_in_S_4" qual:qualitativeSpecies="S_4" qual:sign="dual" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>MYB77 recognizes the sequence CNGTTR as a consensus site. This information was used to find possible targets in the cell cycle.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_5_in_S_8" qual:qualitativeSpecies="S_8" qual:sign="dual" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>E2Fb activates E2Fe transcription.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_5_in_S_3" qual:qualitativeSpecies="S_3" qual:sign="dual" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>CYCD3;1 is required to progress the cell through G1, which activates E2Fb.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_5_in_S_13" qual:qualitativeSpecies="S_13" qual:sign="dual" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>RBR inhibits E2Fb targets.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_5_in_S_7" qual:qualitativeSpecies="S_7" qual:sign="dual" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>CyCD3;1, an indirect activator of E2Fe, is absent or inactive when KRP1 is present.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_5" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <or/>
+                  <apply>
+                    <or/>
+                    <apply>
+                      <or/>
+                      <apply>
+                        <or/>
+                        <apply>
+                          <or/>
+                          <apply>
+                            <or/>
+                            <apply>
+                              <or/>
+                              <apply>
+                                <or/>
+                                <apply>
+                                  <or/>
+                                  <apply>
+                                    <or/>
+                                    <apply>
+                                      <or/>
+                                      <apply>
+                                        <or/>
+                                        <apply>
+                                          <or/>
+                                          <apply>
+                                            <or/>
+                                            <apply>
+                                              <or/>
+                                              <apply>
+                                                <or/>
+                                                <apply>
+                                                  <and/>
+                                                  <apply>
+                                                    <eq/>
+                                                    <ci> S_3 </ci>
+                                                    <cn type="integer"> 1 </cn>
+                                                  </apply>
+                                                  <apply>
+                                                    <and/>
+                                                    <apply>
+                                                      <and/>
+                                                      <apply>
+                                                        <and/>
+                                                        <apply>
+                                                          <and/>
+                                                          <apply>
+                                                            <not/>
+                                                            <apply>
+                                                              <eq/>
+                                                              <ci> S_14 </ci>
+                                                              <cn type="integer"> 1 </cn>
+                                                            </apply>
+                                                          </apply>
+                                                          <apply>
+                                                            <not/>
+                                                            <apply>
+                                                              <eq/>
+                                                              <ci> S_4 </ci>
+                                                              <cn type="integer"> 1 </cn>
+                                                            </apply>
+                                                          </apply>
+                                                        </apply>
+                                                        <apply>
+                                                          <not/>
+                                                          <apply>
+                                                            <eq/>
+                                                            <ci> S_8 </ci>
+                                                            <cn type="integer"> 1 </cn>
+                                                          </apply>
+                                                        </apply>
+                                                      </apply>
+                                                      <apply>
+                                                        <not/>
+                                                        <apply>
+                                                          <eq/>
+                                                          <ci> S_13 </ci>
+                                                          <cn type="integer"> 1 </cn>
+                                                        </apply>
+                                                      </apply>
+                                                    </apply>
+                                                    <apply>
+                                                      <not/>
+                                                      <apply>
+                                                        <eq/>
+                                                        <ci> S_7 </ci>
+                                                        <cn type="integer"> 1 </cn>
+                                                      </apply>
+                                                    </apply>
+                                                  </apply>
+                                                </apply>
+                                                <apply>
+                                                  <and/>
+                                                  <apply>
+                                                    <and/>
+                                                    <apply>
+                                                      <eq/>
+                                                      <ci> S_3 </ci>
+                                                      <cn type="integer"> 1 </cn>
+                                                    </apply>
+                                                    <apply>
+                                                      <and/>
+                                                      <apply>
+                                                        <eq/>
+                                                        <ci> S_8 </ci>
+                                                        <cn type="integer"> 1 </cn>
+                                                      </apply>
+                                                      <apply>
+                                                        <eq/>
+                                                        <ci> S_13 </ci>
+                                                        <cn type="integer"> 1 </cn>
+                                                      </apply>
+                                                    </apply>
+                                                  </apply>
+                                                  <apply>
+                                                    <and/>
+                                                    <apply>
+                                                      <and/>
+                                                      <apply>
+                                                        <not/>
+                                                        <apply>
+                                                          <eq/>
+                                                          <ci> S_14 </ci>
+                                                          <cn type="integer"> 1 </cn>
+                                                        </apply>
+                                                      </apply>
+                                                      <apply>
+                                                        <not/>
+                                                        <apply>
+                                                          <eq/>
+                                                          <ci> S_4 </ci>
+                                                          <cn type="integer"> 1 </cn>
+                                                        </apply>
+                                                      </apply>
+                                                    </apply>
+                                                    <apply>
+                                                      <not/>
+                                                      <apply>
+                                                        <eq/>
+                                                        <ci> S_7 </ci>
+                                                        <cn type="integer"> 1 </cn>
+                                                      </apply>
+                                                    </apply>
+                                                  </apply>
+                                                </apply>
+                                              </apply>
+                                              <apply>
+                                                <and/>
+                                                <apply>
+                                                  <and/>
+                                                  <apply>
+                                                    <eq/>
+                                                    <ci> S_3 </ci>
+                                                    <cn type="integer"> 1 </cn>
+                                                  </apply>
+                                                  <apply>
+                                                    <and/>
+                                                    <apply>
+                                                      <and/>
+                                                      <apply>
+                                                        <eq/>
+                                                        <ci> S_8 </ci>
+                                                        <cn type="integer"> 1 </cn>
+                                                      </apply>
+                                                      <apply>
+                                                        <eq/>
+                                                        <ci> S_13 </ci>
+                                                        <cn type="integer"> 1 </cn>
+                                                      </apply>
+                                                    </apply>
+                                                    <apply>
+                                                      <eq/>
+                                                      <ci> S_7 </ci>
+                                                      <cn type="integer"> 1 </cn>
+                                                    </apply>
+                                                  </apply>
+                                                </apply>
+                                                <apply>
+                                                  <and/>
+                                                  <apply>
+                                                    <not/>
+                                                    <apply>
+                                                      <eq/>
+                                                      <ci> S_14 </ci>
+                                                      <cn type="integer"> 1 </cn>
+                                                    </apply>
+                                                  </apply>
+                                                  <apply>
+                                                    <not/>
+                                                    <apply>
+                                                      <eq/>
+                                                      <ci> S_4 </ci>
+                                                      <cn type="integer"> 1 </cn>
+                                                    </apply>
+                                                  </apply>
+                                                </apply>
+                                              </apply>
+                                            </apply>
+                                            <apply>
+                                              <and/>
+                                              <apply>
+                                                <and/>
+                                                <apply>
+                                                  <eq/>
+                                                  <ci> S_8 </ci>
+                                                  <cn type="integer"> 1 </cn>
+                                                </apply>
+                                                <apply>
+                                                  <and/>
+                                                  <apply>
+                                                    <eq/>
+                                                    <ci> S_14 </ci>
+                                                    <cn type="integer"> 1 </cn>
+                                                  </apply>
+                                                  <apply>
+                                                    <eq/>
+                                                    <ci> S_7 </ci>
+                                                    <cn type="integer"> 1 </cn>
+                                                  </apply>
+                                                </apply>
+                                              </apply>
+                                              <apply>
+                                                <and/>
+                                                <apply>
+                                                  <and/>
+                                                  <apply>
+                                                    <not/>
+                                                    <apply>
+                                                      <eq/>
+                                                      <ci> S_4 </ci>
+                                                      <cn type="integer"> 1 </cn>
+                                                    </apply>
+                                                  </apply>
+                                                  <apply>
+                                                    <not/>
+                                                    <apply>
+                                                      <eq/>
+                                                      <ci> S_3 </ci>
+                                                      <cn type="integer"> 1 </cn>
+                                                    </apply>
+                                                  </apply>
+                                                </apply>
+                                                <apply>
+                                                  <not/>
+                                                  <apply>
+                                                    <eq/>
+                                                    <ci> S_13 </ci>
+                                                    <cn type="integer"> 1 </cn>
+                                                  </apply>
+                                                </apply>
+                                              </apply>
+                                            </apply>
+                                          </apply>
+                                          <apply>
+                                            <and/>
+                                            <apply>
+                                              <and/>
+                                              <apply>
+                                                <eq/>
+                                                <ci> S_8 </ci>
+                                                <cn type="integer"> 1 </cn>
+                                              </apply>
+                                              <apply>
+                                                <eq/>
+                                                <ci> S_7 </ci>
+                                                <cn type="integer"> 1 </cn>
+                                              </apply>
+                                            </apply>
+                                            <apply>
+                                              <and/>
+                                              <apply>
+                                                <and/>
+                                                <apply>
+                                                  <and/>
+                                                  <apply>
+                                                    <not/>
+                                                    <apply>
+                                                      <eq/>
+                                                      <ci> S_14 </ci>
+                                                      <cn type="integer"> 1 </cn>
+                                                    </apply>
+                                                  </apply>
+                                                  <apply>
+                                                    <not/>
+                                                    <apply>
+                                                      <eq/>
+                                                      <ci> S_4 </ci>
+                                                      <cn type="integer"> 1 </cn>
+                                                    </apply>
+                                                  </apply>
+                                                </apply>
+                                                <apply>
+                                                  <not/>
+                                                  <apply>
+                                                    <eq/>
+                                                    <ci> S_3 </ci>
+                                                    <cn type="integer"> 1 </cn>
+                                                  </apply>
+                                                </apply>
+                                              </apply>
+                                              <apply>
+                                                <not/>
+                                                <apply>
+                                                  <eq/>
+                                                  <ci> S_13 </ci>
+                                                  <cn type="integer"> 1 </cn>
+                                                </apply>
+                                              </apply>
+                                            </apply>
+                                          </apply>
+                                        </apply>
+                                        <apply>
+                                          <and/>
+                                          <apply>
+                                            <and/>
+                                            <apply>
+                                              <eq/>
+                                              <ci> S_8 </ci>
+                                              <cn type="integer"> 1 </cn>
+                                            </apply>
+                                            <apply>
+                                              <eq/>
+                                              <ci> S_13 </ci>
+                                              <cn type="integer"> 1 </cn>
+                                            </apply>
+                                          </apply>
+                                          <apply>
+                                            <and/>
+                                            <apply>
+                                              <and/>
+                                              <apply>
+                                                <and/>
+                                                <apply>
+                                                  <not/>
+                                                  <apply>
+                                                    <eq/>
+                                                    <ci> S_14 </ci>
+                                                    <cn type="integer"> 1 </cn>
+                                                  </apply>
+                                                </apply>
+                                                <apply>
+                                                  <not/>
+                                                  <apply>
+                                                    <eq/>
+                                                    <ci> S_4 </ci>
+                                                    <cn type="integer"> 1 </cn>
+                                                  </apply>
+                                                </apply>
+                                              </apply>
+                                              <apply>
+                                                <not/>
+                                                <apply>
+                                                  <eq/>
+                                                  <ci> S_3 </ci>
+                                                  <cn type="integer"> 1 </cn>
+                                                </apply>
+                                              </apply>
+                                            </apply>
+                                            <apply>
+                                              <not/>
+                                              <apply>
+                                                <eq/>
+                                                <ci> S_7 </ci>
+                                                <cn type="integer"> 1 </cn>
+                                              </apply>
+                                            </apply>
+                                          </apply>
+                                        </apply>
+                                      </apply>
+                                      <apply>
+                                        <and/>
+                                        <apply>
+                                          <eq/>
+                                          <ci> S_13 </ci>
+                                          <cn type="integer"> 1 </cn>
+                                        </apply>
+                                        <apply>
+                                          <and/>
+                                          <apply>
+                                            <and/>
+                                            <apply>
+                                              <and/>
+                                              <apply>
+                                                <and/>
+                                                <apply>
+                                                  <not/>
+                                                  <apply>
+                                                    <eq/>
+                                                    <ci> S_14 </ci>
+                                                    <cn type="integer"> 1 </cn>
+                                                  </apply>
+                                                </apply>
+                                                <apply>
+                                                  <not/>
+                                                  <apply>
+                                                    <eq/>
+                                                    <ci> S_4 </ci>
+                                                    <cn type="integer"> 1 </cn>
+                                                  </apply>
+                                                </apply>
+                                              </apply>
+                                              <apply>
+                                                <not/>
+                                                <apply>
+                                                  <eq/>
+                                                  <ci> S_8 </ci>
+                                                  <cn type="integer"> 1 </cn>
+                                                </apply>
+                                              </apply>
+                                            </apply>
+                                            <apply>
+                                              <not/>
+                                              <apply>
+                                                <eq/>
+                                                <ci> S_3 </ci>
+                                                <cn type="integer"> 1 </cn>
+                                              </apply>
+                                            </apply>
+                                          </apply>
+                                          <apply>
+                                            <not/>
+                                            <apply>
+                                              <eq/>
+                                              <ci> S_7 </ci>
+                                              <cn type="integer"> 1 </cn>
+                                            </apply>
+                                          </apply>
+                                        </apply>
+                                      </apply>
+                                    </apply>
+                                    <apply>
+                                      <and/>
+                                      <apply>
+                                        <eq/>
+                                        <ci> S_8 </ci>
+                                        <cn type="integer"> 1 </cn>
+                                      </apply>
+                                      <apply>
+                                        <and/>
+                                        <apply>
+                                          <and/>
+                                          <apply>
+                                            <and/>
+                                            <apply>
+                                              <and/>
+                                              <apply>
+                                                <not/>
+                                                <apply>
+                                                  <eq/>
+                                                  <ci> S_14 </ci>
+                                                  <cn type="integer"> 1 </cn>
+                                                </apply>
+                                              </apply>
+                                              <apply>
+                                                <not/>
+                                                <apply>
+                                                  <eq/>
+                                                  <ci> S_4 </ci>
+                                                  <cn type="integer"> 1 </cn>
+                                                </apply>
+                                              </apply>
+                                            </apply>
+                                            <apply>
+                                              <not/>
+                                              <apply>
+                                                <eq/>
+                                                <ci> S_3 </ci>
+                                                <cn type="integer"> 1 </cn>
+                                              </apply>
+                                            </apply>
+                                          </apply>
+                                          <apply>
+                                            <not/>
+                                            <apply>
+                                              <eq/>
+                                              <ci> S_13 </ci>
+                                              <cn type="integer"> 1 </cn>
+                                            </apply>
+                                          </apply>
+                                        </apply>
+                                        <apply>
+                                          <not/>
+                                          <apply>
+                                            <eq/>
+                                            <ci> S_7 </ci>
+                                            <cn type="integer"> 1 </cn>
+                                          </apply>
+                                        </apply>
+                                      </apply>
+                                    </apply>
+                                  </apply>
+                                  <apply>
+                                    <eq/>
+                                    <ci> S_4 </ci>
+                                    <cn type="integer"> 1 </cn>
+                                  </apply>
+                                </apply>
+                                <apply>
+                                  <and/>
+                                  <apply>
+                                    <and/>
+                                    <apply>
+                                      <eq/>
+                                      <ci> S_3 </ci>
+                                      <cn type="integer"> 1 </cn>
+                                    </apply>
+                                    <apply>
+                                      <and/>
+                                      <apply>
+                                        <eq/>
+                                        <ci> S_13 </ci>
+                                        <cn type="integer"> 1 </cn>
+                                      </apply>
+                                      <apply>
+                                        <eq/>
+                                        <ci> S_7 </ci>
+                                        <cn type="integer"> 1 </cn>
+                                      </apply>
+                                    </apply>
+                                  </apply>
+                                  <apply>
+                                    <and/>
+                                    <apply>
+                                      <and/>
+                                      <apply>
+                                        <not/>
+                                        <apply>
+                                          <eq/>
+                                          <ci> S_14 </ci>
+                                          <cn type="integer"> 1 </cn>
+                                        </apply>
+                                      </apply>
+                                      <apply>
+                                        <not/>
+                                        <apply>
+                                          <eq/>
+                                          <ci> S_4 </ci>
+                                          <cn type="integer"> 1 </cn>
+                                        </apply>
+                                      </apply>
+                                    </apply>
+                                    <apply>
+                                      <not/>
+                                      <apply>
+                                        <eq/>
+                                        <ci> S_8 </ci>
+                                        <cn type="integer"> 1 </cn>
+                                      </apply>
+                                    </apply>
+                                  </apply>
+                                </apply>
+                              </apply>
+                              <apply>
+                                <and/>
+                                <apply>
+                                  <eq/>
+                                  <ci> S_8 </ci>
+                                  <cn type="integer"> 1 </cn>
+                                </apply>
+                                <apply>
+                                  <or/>
+                                  <apply>
+                                    <not/>
+                                    <apply>
+                                      <eq/>
+                                      <ci> S_13 </ci>
+                                      <cn type="integer"> 1 </cn>
+                                    </apply>
+                                  </apply>
+                                  <apply>
+                                    <and/>
+                                    <apply>
+                                      <not/>
+                                      <apply>
+                                        <eq/>
+                                        <ci> S_7 </ci>
+                                        <cn type="integer"> 1 </cn>
+                                      </apply>
+                                    </apply>
+                                    <apply>
+                                      <eq/>
+                                      <ci> S_3 </ci>
+                                      <cn type="integer"> 1 </cn>
+                                    </apply>
+                                  </apply>
+                                </apply>
+                              </apply>
+                            </apply>
+                            <apply>
+                              <and/>
+                              <apply>
+                                <and/>
+                                <apply>
+                                  <eq/>
+                                  <ci> S_8 </ci>
+                                  <cn type="integer"> 1 </cn>
+                                </apply>
+                                <apply>
+                                  <and/>
+                                  <apply>
+                                    <eq/>
+                                    <ci> S_13 </ci>
+                                    <cn type="integer"> 1 </cn>
+                                  </apply>
+                                  <apply>
+                                    <eq/>
+                                    <ci> S_7 </ci>
+                                    <cn type="integer"> 1 </cn>
+                                  </apply>
+                                </apply>
+                              </apply>
+                              <apply>
+                                <and/>
+                                <apply>
+                                  <and/>
+                                  <apply>
+                                    <not/>
+                                    <apply>
+                                      <eq/>
+                                      <ci> S_14 </ci>
+                                      <cn type="integer"> 1 </cn>
+                                    </apply>
+                                  </apply>
+                                  <apply>
+                                    <not/>
+                                    <apply>
+                                      <eq/>
+                                      <ci> S_4 </ci>
+                                      <cn type="integer"> 1 </cn>
+                                    </apply>
+                                  </apply>
+                                </apply>
+                                <apply>
+                                  <not/>
+                                  <apply>
+                                    <eq/>
+                                    <ci> S_3 </ci>
+                                    <cn type="integer"> 1 </cn>
+                                  </apply>
+                                </apply>
+                              </apply>
+                            </apply>
+                          </apply>
+                          <apply>
+                            <and/>
+                            <apply>
+                              <and/>
+                              <apply>
+                                <eq/>
+                                <ci> S_3 </ci>
+                                <cn type="integer"> 1 </cn>
+                              </apply>
+                              <apply>
+                                <eq/>
+                                <ci> S_7 </ci>
+                                <cn type="integer"> 1 </cn>
+                              </apply>
+                            </apply>
+                            <apply>
+                              <and/>
+                              <apply>
+                                <and/>
+                                <apply>
+                                  <and/>
+                                  <apply>
+                                    <not/>
+                                    <apply>
+                                      <eq/>
+                                      <ci> S_14 </ci>
+                                      <cn type="integer"> 1 </cn>
+                                    </apply>
+                                  </apply>
+                                  <apply>
+                                    <not/>
+                                    <apply>
+                                      <eq/>
+                                      <ci> S_4 </ci>
+                                      <cn type="integer"> 1 </cn>
+                                    </apply>
+                                  </apply>
+                                </apply>
+                                <apply>
+                                  <not/>
+                                  <apply>
+                                    <eq/>
+                                    <ci> S_8 </ci>
+                                    <cn type="integer"> 1 </cn>
+                                  </apply>
+                                </apply>
+                              </apply>
+                              <apply>
+                                <not/>
+                                <apply>
+                                  <eq/>
+                                  <ci> S_13 </ci>
+                                  <cn type="integer"> 1 </cn>
+                                </apply>
+                              </apply>
+                            </apply>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <and/>
+                          <apply>
+                            <and/>
+                            <apply>
+                              <eq/>
+                              <ci> S_3 </ci>
+                              <cn type="integer"> 1 </cn>
+                            </apply>
+                            <apply>
+                              <and/>
+                              <apply>
+                                <eq/>
+                                <ci> S_8 </ci>
+                                <cn type="integer"> 1 </cn>
+                              </apply>
+                              <apply>
+                                <eq/>
+                                <ci> S_7 </ci>
+                                <cn type="integer"> 1 </cn>
+                              </apply>
+                            </apply>
+                          </apply>
+                          <apply>
+                            <and/>
+                            <apply>
+                              <and/>
+                              <apply>
+                                <not/>
+                                <apply>
+                                  <eq/>
+                                  <ci> S_14 </ci>
+                                  <cn type="integer"> 1 </cn>
+                                </apply>
+                              </apply>
+                              <apply>
+                                <not/>
+                                <apply>
+                                  <eq/>
+                                  <ci> S_4 </ci>
+                                  <cn type="integer"> 1 </cn>
+                                </apply>
+                              </apply>
+                            </apply>
+                            <apply>
+                              <not/>
+                              <apply>
+                                <eq/>
+                                <ci> S_13 </ci>
+                                <cn type="integer"> 1 </cn>
+                              </apply>
+                            </apply>
+                          </apply>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <and/>
+                        <apply>
+                          <and/>
+                          <apply>
+                            <eq/>
+                            <ci> S_13 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                          <apply>
+                            <eq/>
+                            <ci> S_7 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <and/>
+                          <apply>
+                            <and/>
+                            <apply>
+                              <and/>
+                              <apply>
+                                <not/>
+                                <apply>
+                                  <eq/>
+                                  <ci> S_14 </ci>
+                                  <cn type="integer"> 1 </cn>
+                                </apply>
+                              </apply>
+                              <apply>
+                                <not/>
+                                <apply>
+                                  <eq/>
+                                  <ci> S_4 </ci>
+                                  <cn type="integer"> 1 </cn>
+                                </apply>
+                              </apply>
+                            </apply>
+                            <apply>
+                              <not/>
+                              <apply>
+                                <eq/>
+                                <ci> S_8 </ci>
+                                <cn type="integer"> 1 </cn>
+                              </apply>
+                            </apply>
+                          </apply>
+                          <apply>
+                            <not/>
+                            <apply>
+                              <eq/>
+                              <ci> S_3 </ci>
+                              <cn type="integer"> 1 </cn>
+                            </apply>
+                          </apply>
+                        </apply>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <and/>
+                      <apply>
+                        <and/>
+                        <apply>
+                          <eq/>
+                          <ci> S_3 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci> S_13 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <and/>
+                        <apply>
+                          <and/>
+                          <apply>
+                            <and/>
+                            <apply>
+                              <not/>
+                              <apply>
+                                <eq/>
+                                <ci> S_14 </ci>
+                                <cn type="integer"> 1 </cn>
+                              </apply>
+                            </apply>
+                            <apply>
+                              <not/>
+                              <apply>
+                                <eq/>
+                                <ci> S_4 </ci>
+                                <cn type="integer"> 1 </cn>
+                              </apply>
+                            </apply>
+                          </apply>
+                          <apply>
+                            <not/>
+                            <apply>
+                              <eq/>
+                              <ci> S_8 </ci>
+                              <cn type="integer"> 1 </cn>
+                            </apply>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <not/>
+                          <apply>
+                            <eq/>
+                            <ci> S_7 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci> S_7 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <and/>
+                      <apply>
+                        <and/>
+                        <apply>
+                          <and/>
+                          <apply>
+                            <and/>
+                            <apply>
+                              <not/>
+                              <apply>
+                                <eq/>
+                                <ci> S_14 </ci>
+                                <cn type="integer"> 1 </cn>
+                              </apply>
+                            </apply>
+                            <apply>
+                              <not/>
+                              <apply>
+                                <eq/>
+                                <ci> S_4 </ci>
+                                <cn type="integer"> 1 </cn>
+                              </apply>
+                            </apply>
+                          </apply>
+                          <apply>
+                            <not/>
+                            <apply>
+                              <eq/>
+                              <ci> S_8 </ci>
+                              <cn type="integer"> 1 </cn>
+                            </apply>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <not/>
+                          <apply>
+                            <eq/>
+                            <ci> S_3 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <not/>
+                        <apply>
+                          <eq/>
+                          <ci> S_13 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <not/>
+                  <apply>
+                    <or/>
+                    <apply>
+                      <or/>
+                      <apply>
+                        <or/>
+                        <apply>
+                          <or/>
+                          <apply>
+                            <or/>
+                            <apply>
+                              <eq/>
+                              <ci> S_14 </ci>
+                              <cn type="integer"> 1 </cn>
+                            </apply>
+                            <apply>
+                              <eq/>
+                              <ci> S_4 </ci>
+                              <cn type="integer"> 1 </cn>
+                            </apply>
+                          </apply>
+                          <apply>
+                            <eq/>
+                            <ci> S_8 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci> S_3 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <eq/>
+                        <ci> S_13 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> S_7 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_6">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>E2Fb activates SCF when CYCD3;1 is active and RBR is inactive or when RBR is inactive.</p><p>MYB3R1/4 activates SCF.</p><p>APC/C inhibits SCF.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_6_in_S_1" qual:qualitativeSpecies="S_1" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>The APC/C subunit Cdh1 aids in the degradation of Skp2, a subunit of SCF.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_6_in_S_8" qual:qualitativeSpecies="S_8" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>The F-box protein FBL17 is regulated by E2F factors.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_6_in_S_3" qual:qualitativeSpecies="S_3" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>CYCD3;1 is required to progress the cell through G1, which activates E2Fb.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_6_in_S_13" qual:qualitativeSpecies="S_13" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>RBR represses E2Fb activity. Phosphorylation of RBR in G1 leads to an accumulation of E2Fb.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_6_in_S_11" qual:qualitativeSpecies="S_11" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>SKP2A, RBR, CDKB1;1, CYCA2;3, CCS52A2, KRP1, E2Fc, MYB3R1/4 and CYCB1;1 were found to contain consensus sites for MYB3R4.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_6_in_S_7" qual:qualitativeSpecies="S_7" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>CyCD3;1, an indirect activator of SCF, is absent or inactive when KRP1 is present.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_6" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_11 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <eq/>
+                      <ci> S_1 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci> S_8 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <or/>
+                      <apply>
+                        <not/>
+                        <apply>
+                          <eq/>
+                          <ci> S_13 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <and/>
+                        <apply>
+                          <eq/>
+                          <ci> S_3 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                        <apply>
+                          <not/>
+                          <apply>
+                            <eq/>
+                            <ci> S_7 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <eq/>
+                      <ci> S_1 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_7">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>CDKB1;1 in conjunction with CYCA2;3 and SCF inhibits KRP1.</p><p>MYB77 activates KRP1.</p><p>MYB3R1/4 activates KRP1.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_7_in_S_12" qual:qualitativeSpecies="S_12" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>CDKB1;1 in complex with CYCA2;3, promotes proteolysis of KRP1.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_7_in_S_9" qual:qualitativeSpecies="S_9" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>CDKB1;1 in complex with CYCA2;3, promotes proteolysis of KRP1.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_7_in_S_4" qual:qualitativeSpecies="S_4" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>MYB77 recognizes the sequence CNGTTR as a consensus site. This information was used to find possible targets in the cell cycle.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_7_in_S_11" qual:qualitativeSpecies="S_11" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>SKP2A, RBR, CDKB1;1, CYCA2;3, CCS52A2, KRP1, E2Fc, MYB3R1/4 and CYCB1;1 were found to contain consensus sites for MYB3R4. KRP1 may be induced by MYB3R1/4.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_7_in_S_6" qual:qualitativeSpecies="S_6" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>SCF ubiquitinates KRP1, leading to its degradation.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_7" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_4 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <and/>
+                      <apply>
+                        <eq/>
+                        <ci> S_12 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                      <apply>
+                        <and/>
+                        <apply>
+                          <eq/>
+                          <ci> S_9 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci> S_6 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_11 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <and/>
+                      <apply>
+                        <eq/>
+                        <ci> S_12 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                      <apply>
+                        <and/>
+                        <apply>
+                          <eq/>
+                          <ci> S_9 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci> S_6 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_8">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>RBR inhibits E2Fb.</p><p>E2Fa activates E2Fb.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_8_in_S_10" qual:qualitativeSpecies="S_10" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>E2Fa activates E2Fb transcription.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_8_in_S_13" qual:qualitativeSpecies="S_13" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>RBR inhibits E2Fb.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_8" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> S_10 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <not/>
+                  <apply>
+                    <eq/>
+                    <ci> S_13 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_9">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>MYB77 activates CYCA2;3.</p><p>MYB3R1/4 activates CYCA2;3.</p><p>APC/C inhibits CYCA2;3.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_9_in_S_1" qual:qualitativeSpecies="S_1" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>CYCA2;3 is stabilized by a loss-of-function mutation in the APC/C complex.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_9_in_S_4" qual:qualitativeSpecies="S_4" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>MYB77 recognizes the sequence CNGTTR as a consensus site. This information was used to find possible targets in the cell cycle.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_9_in_S_11" qual:qualitativeSpecies="S_11" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>SKP2A, RBR, CDKB1;1, CYCA2;3, CCS52A2, KRP1, E2Fc, MYB3R1/4 and CYCB1;1 were found to contain consensus sites for MYB3R4.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_9" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_4 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <eq/>
+                      <ci> S_1 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_11 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <eq/>
+                      <ci> S_1 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_10">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>E2Fc inhibits E2Fa.</p><p>E2Fa activates E2Fa.</p><p>CDK1;1 in conjunction with CYCA2;3 inhibits E2Fa.</p><p>CDKB1;1 and CYCA2;3 are listed as positive regulators when the other three nodes are inactive in order to match the Boolean logic E2Fa = (E2Fa ∨ ¬E2Fc) ∧ ¬(CDKB1; 1 ∧ CYCA2; 3). These interactions are added in order to match the behavior in the original equation.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_10_in_S_14" qual:qualitativeSpecies="S_14" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>E2Fa mRNA increases when E2Fc is silenced.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_10_in_S_9" qual:qualitativeSpecies="S_9" qual:sign="dual" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>EF2 has a CDK-phosphorylation sites. Additionally, high CDK activity inversely correlates with E2Fa DNA binding activity.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_10_in_S_12" qual:qualitativeSpecies="S_12" qual:sign="dual" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>EF2 has a CDK-phosphorylation sites. Additionally, high CDK activity inversely correlates with E2Fa DNA binding activity.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_10_in_S_10" qual:qualitativeSpecies="S_10" qual:sign="dual" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>A positive feedback loop (modeled here as a self-feedback loop) amplifies E2Fa activity.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_10" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <or/>
+                  <apply>
+                    <or/>
+                    <apply>
+                      <and/>
+                      <apply>
+                        <eq/>
+                        <ci> S_9 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                      <apply>
+                        <and/>
+                        <apply>
+                          <and/>
+                          <apply>
+                            <not/>
+                            <apply>
+                              <eq/>
+                              <ci> S_14 </ci>
+                              <cn type="integer"> 1 </cn>
+                            </apply>
+                          </apply>
+                          <apply>
+                            <not/>
+                            <apply>
+                              <eq/>
+                              <ci> S_12 </ci>
+                              <cn type="integer"> 1 </cn>
+                            </apply>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <not/>
+                          <apply>
+                            <eq/>
+                            <ci> S_10 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                        </apply>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <and/>
+                      <apply>
+                        <eq/>
+                        <ci> S_10 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                      <apply>
+                        <not/>
+                        <apply>
+                          <and/>
+                          <apply>
+                            <eq/>
+                            <ci> S_12 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                          <apply>
+                            <eq/>
+                            <ci> S_9 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci> S_12 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <and/>
+                      <apply>
+                        <and/>
+                        <apply>
+                          <not/>
+                          <apply>
+                            <eq/>
+                            <ci> S_14 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <not/>
+                          <apply>
+                            <eq/>
+                            <ci> S_9 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <not/>
+                        <apply>
+                          <eq/>
+                          <ci> S_10 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <not/>
+                  <apply>
+                    <or/>
+                    <apply>
+                      <or/>
+                      <apply>
+                        <or/>
+                        <apply>
+                          <eq/>
+                          <ci> S_14 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci> S_9 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <eq/>
+                        <ci> S_12 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> S_10 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_11">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>MYB3R1/4 in conjunction with CYCB1;1 actuvates MYB3R1/4.</p><p>MYB77 activates MYB3R1/4.</p><p>KRP1 inhibits MYB3R1/4.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_11_in_S_4" qual:qualitativeSpecies="S_4" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>MYB77 recognizes the sequence CNGTTR as a consensus site. This information was used to find possible targets in the cell cycle.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_11_in_S_11" qual:qualitativeSpecies="S_11" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>SKP2A, RBR, CDKB1;1, CYCA2;3, CCS52A2, KRP1, E2Fc, MYB3R1/4 and CYCB1;1 were found to contain consensus sites for MYB3R4.</p><p>Coexpression of CYCB1;1 and MY3R4 enhances activity of MY3R4 targer promoters by 4-fold.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_11_in_S_7" qual:qualitativeSpecies="S_7" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>KRP1 indirectly inhibits MYB3R1/4.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_11_in_S_2" qual:qualitativeSpecies="S_2" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Coexpression of CYCB1;1 and MY3R4 enhances activity of MY3R4 targer promoters by 4-fold.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_11" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> S_4 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci> S_11 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> S_2 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <eq/>
+                      <ci> S_7 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_12">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>MYB77 activates CDKB1;1.</p><p>E2Fb activates CDKB1;1 when KRP1 is inactive and CYCD3;1 is active or when RBR is inactive.</p><p>MYB3R1/4 activates CDKB1;1.</p><p>E2Fc inhibits CDKB1;1.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_12_in_S_14" qual:qualitativeSpecies="S_14" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>E2Fc destabilizes CDKB1;1.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_12_in_S_4" qual:qualitativeSpecies="S_4" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>MYB77 recognizes the sequence CNGTTR as a consensus site. This information was used to find possible targets in the cell cycle.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_12_in_S_8" qual:qualitativeSpecies="S_8" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Expression of E2Fb promotes CDKB1;1 expression.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_12_in_S_3" qual:qualitativeSpecies="S_3" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>CYCD3;1 is required to progress the cell through G1, which activates E2Fb. CyCD3;1 is absent or inactive when KRP1 is present.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_12_in_S_13" qual:qualitativeSpecies="S_13" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>RBR represses E2Fb activity. Phosphorylation of RBR in G1 leads to an accumulation of E2Fb.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_12_in_S_11" qual:qualitativeSpecies="S_11" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>SKP2A, RBR, CDKB1;1, CYCA2;3, CCS52A2, KRP1, E2Fc, MYB3R1/4 and CYCB1;1 were found to contain consensus sites for MYB3R4.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_12_in_S_7" qual:qualitativeSpecies="S_7" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>CyCD3;1, an indirect activator of CDKB1;1, is absent or inactive when KRP1 is present.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_12" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <or/>
+                  <apply>
+                    <eq/>
+                    <ci> S_4 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <and/>
+                      <apply>
+                        <eq/>
+                        <ci> S_8 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                      <apply>
+                        <or/>
+                        <apply>
+                          <not/>
+                          <apply>
+                            <eq/>
+                            <ci> S_13 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <and/>
+                          <apply>
+                            <eq/>
+                            <ci> S_3 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                          <apply>
+                            <not/>
+                            <apply>
+                              <eq/>
+                              <ci> S_7 </ci>
+                              <cn type="integer"> 1 </cn>
+                            </apply>
+                          </apply>
+                        </apply>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <not/>
+                      <apply>
+                        <eq/>
+                        <ci> S_14 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_11 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_13">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>E2Fa (when KRP1 is active and CYCD3;1 is inactive) activates RBR.</p><p>MYB3R1/4 (when KRP1 is active and CYCD3;1 is inactive) activates RBR.</p><p>RBR (when KRP1 is active and CYCD3;1 is inactive) inhibits RBR.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_13_in_S_10" qual:qualitativeSpecies="S_10" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>E2Fa upregulates RBR transcription.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_13_in_S_3" qual:qualitativeSpecies="S_3" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Complexes formed by CDKA;1 and D-type cyclins inactivate RBR via phosphorylation.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_13_in_S_13" qual:qualitativeSpecies="S_13" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>A negative feedback loop (modeled as a self feedback loop) regulates RBR activity.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_13_in_S_11" qual:qualitativeSpecies="S_11" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>SKP2A, RBR, CDKB1;1, CYCA2;3, CCS52A2, KRP1, E2Fc, MYB3R1/4 and CYCB1;1 were found to contain consensus sites for MYB3R4.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_13_in_S_7" qual:qualitativeSpecies="S_7" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>CyCD3;1 phosphorylates and inhibits RBR. CyCD3;1 is absent or inactive when KRP1 is present.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_13" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_11 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <or/>
+                    <apply>
+                      <eq/>
+                      <ci> S_7 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <not/>
+                      <apply>
+                        <eq/>
+                        <ci> S_3 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci> S_10 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <or/>
+                      <apply>
+                        <eq/>
+                        <ci> S_7 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                      <apply>
+                        <not/>
+                        <apply>
+                          <eq/>
+                          <ci> S_3 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <and/>
+                      <apply>
+                        <eq/>
+                        <ci> S_13 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                      <apply>
+                        <or/>
+                        <apply>
+                          <not/>
+                          <apply>
+                            <eq/>
+                            <ci> S_3 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci> S_7 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_14">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>SCF (when KRP1 is inactve and CYCD3;1 is active) inhibits E2Fc.</p><p>MYB3R1/4 activates E2Fc.</p><p>E2Fa binds to and activates E2Fc.</p><p>RBR inhibits E2Fc.</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_14_in_S_10" qual:qualitativeSpecies="S_10" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>E2Fa binds to and activates E2Fc.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_14_in_S_3" qual:qualitativeSpecies="S_3" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>CDKA;1 bound to D-type cyclin phosphorylates E2Fc so that it can be recognized by the SCF complex.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_14_in_S_13" qual:qualitativeSpecies="S_13" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>RBR inhibits E2Fc.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_14_in_S_11" qual:qualitativeSpecies="S_11" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>SKP2A, RBR, CDKB1;1, CYCA2;3, CCS52A2, KRP1, E2Fc, MYB3R1/4 and CYCB1;1 were found to contain consensus sites for MYB3R4.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_14_in_S_6" qual:qualitativeSpecies="S_6" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>SKP2A is a subunit of SCF. SKP2A overexpression reduces E2Fc levels.</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_14_in_S_7" qual:qualitativeSpecies="S_7" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>CyCD3;1, an indirect activator of E2Fc, is absent or inactive when KRP1 is present.</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_14" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_11 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <and/>
+                      <apply>
+                        <and/>
+                        <apply>
+                          <eq/>
+                          <ci> S_6 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci> S_3 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <not/>
+                        <apply>
+                          <eq/>
+                          <ci> S_7 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_10 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <or/>
+                      <apply>
+                        <and/>
+                        <apply>
+                          <and/>
+                          <apply>
+                            <eq/>
+                            <ci> S_6 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                          <apply>
+                            <eq/>
+                            <ci> S_3 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <not/>
+                          <apply>
+                            <eq/>
+                            <ci> S_7 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <eq/>
+                        <ci> S_13 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+    </qual:listOfTransitions>
+    <listOfCompartments>
+      <compartment constant="true" id="cytosol" name="cytosol"/>
+    </listOfCompartments>
+  </model>
+</sbml>

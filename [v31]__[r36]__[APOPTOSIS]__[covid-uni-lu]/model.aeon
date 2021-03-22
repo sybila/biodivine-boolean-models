@@ -1,0 +1,67 @@
+Orf7a -> BCL2_MCL1_BCL2L1_complex
+E -> BCL2_MCL1_BCL2L1_complex
+BAD -| BCL2_MCL1_BCL2L1_complex
+BCL2_MCL1_BCL2L1_complex -> BAD_BBC3_BCL2L11_complex
+MAPK14 -> CYCS
+CYCS -> Apoptosome_complex
+APAF1 -> Apoptosome_complex
+sa47_CASP9_Cytoplasm -> Apoptosome_complex
+AKT1 -| Apoptosome_complex
+M -| AKT1
+FAS_FASL_complex -> FADD
+FADD -> TRADD_FADD_complex
+TRADD -> TRADD_FADD_complex
+TNF_TNFRSF1A_complex -> TRADD_FADD_complex
+AKT1 -| BAD
+FADD -> CASP8
+TRADD_FADD_complex -> CASP8
+CASP8 -> CASP3
+sa19_CASP9_Cytoplasm -> CASP3
+Apoptosome_complex -> sa19_CASP9_Cytoplasm
+AKT1 -| sa19_CASP9_Cytoplasm
+CASP8 -> BID
+Orf3a -> MAPK14
+BID -> BAX
+BAD_BBC3_BCL2L11_complex -> BAX
+BCL2_MCL1_BCL2L1_complex -| BAX
+sa19_CASP9_Cytoplasm -> CASP7
+CASP8 -> CASP7
+CASP7 -> Apoptosis_phenotype
+Orf3b -> Apoptosis_phenotype
+Orf8a -> Apoptosis_phenotype
+N -> Apoptosis_phenotype
+S -> Apoptosis_phenotype
+Orf9b -> Apoptosis_phenotype
+Orf6 -> Apoptosis_phenotype
+CASP3 -> Apoptosis_phenotype
+$AKT1: !M
+$APAF1: true
+$Apoptosis_phenotype: (((((((CASP7 | Orf3b) | Orf8a) | N) | S) | Orf9b) | Orf6) | CASP3)
+$Apoptosome_complex: (((CYCS & APAF1) & sa47_CASP9_Cytoplasm) & !AKT1)
+$BAD: !AKT1
+$BAD_BBC3_BCL2L11_complex: BCL2_MCL1_BCL2L1_complex
+$BAX: ((BID | BAD_BBC3_BCL2L11_complex) & !BCL2_MCL1_BCL2L1_complex)
+$BCL2_MCL1_BCL2L1_complex: ((Orf7a | E) & !BAD)
+$BID: CASP8
+$CASP3: (CASP8 | sa19_CASP9_Cytoplasm)
+$CASP7: (sa19_CASP9_Cytoplasm | CASP8)
+$CASP8: (FADD | TRADD_FADD_complex)
+$CYCS: MAPK14
+$E: true
+$FADD: FAS_FASL_complex
+$FAS_FASL_complex: true
+$M: true
+$MAPK14: Orf3a
+$N: true
+$Orf3a: true
+$Orf3b: true
+$Orf6: true
+$Orf7a: true
+$Orf8a: true
+$Orf9b: true
+$S: true
+$TNF_TNFRSF1A_complex: true
+$TRADD: true
+$TRADD_FADD_complex: ((FADD & TRADD) & TNF_TNFRSF1A_complex)
+$sa19_CASP9_Cytoplasm: (Apoptosome_complex & !AKT1)
+$sa47_CASP9_Cytoplasm: true

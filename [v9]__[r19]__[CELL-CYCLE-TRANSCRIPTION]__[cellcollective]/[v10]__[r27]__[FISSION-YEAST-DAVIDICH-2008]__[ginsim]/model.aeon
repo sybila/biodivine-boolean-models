@@ -1,0 +1,47 @@
+#position:Start:126,8
+$Start:false
+#position:SK:126,56
+$SK:Start
+Start -> SK
+#position:Ste9:70,101
+$Ste9:((((((((!SK & !Cdc2_Cdc13) & !Ste9) & !Cdc2_Cdc13_A) & PP) | (((!SK & !Cdc2_Cdc13) & Ste9) & !Cdc2_Cdc13_A)) | ((((!SK & !Cdc2_Cdc13) & Ste9) & Cdc2_Cdc13_A) & PP)) | ((((!SK & Cdc2_Cdc13) & Ste9) & !Cdc2_Cdc13_A) & PP)) | ((((SK & !Cdc2_Cdc13) & Ste9) & !Cdc2_Cdc13_A) & PP))
+SK -| Ste9
+Cdc2_Cdc13 -| Ste9
+Ste9 -> Ste9
+Cdc2_Cdc13_A -| Ste9
+PP -> Ste9
+#position:Cdc2_Cdc13:104,154
+$Cdc2_Cdc13:((!Ste9 & !Rum1) & !Slp1)
+Ste9 -| Cdc2_Cdc13
+Rum1 -| Cdc2_Cdc13
+Slp1 -| Cdc2_Cdc13
+#position:Rum1:176,101
+$Rum1:((((((((!SK & !Cdc2_Cdc13) & !Rum1) & !Cdc2_Cdc13_A) & PP) | (((!SK & !Cdc2_Cdc13) & Rum1) & !Cdc2_Cdc13_A)) | ((((!SK & !Cdc2_Cdc13) & Rum1) & Cdc2_Cdc13_A) & PP)) | ((((!SK & Cdc2_Cdc13) & Rum1) & !Cdc2_Cdc13_A) & PP)) | ((((SK & !Cdc2_Cdc13) & Rum1) & !Cdc2_Cdc13_A) & PP))
+SK -| Rum1
+Cdc2_Cdc13 -| Rum1
+Rum1 -> Rum1
+Cdc2_Cdc13_A -| Rum1
+PP -> Rum1
+#position:Slp1:11,273
+$Slp1:Cdc2_Cdc13_A
+Cdc2_Cdc13_A -> Slp1
+#position:Cdc2_Cdc13_A:78,311
+$Cdc2_Cdc13_A:((((!Ste9 & !Rum1) & !Slp1) & !Wee1_Mik1) & Cdc25)
+Ste9 -| Cdc2_Cdc13_A
+Rum1 -| Cdc2_Cdc13_A
+Slp1 -| Cdc2_Cdc13_A
+Wee1_Mik1 -| Cdc2_Cdc13_A
+Cdc25 -> Cdc2_Cdc13_A
+#position:PP:22,215
+$PP:Slp1
+Slp1 -> PP
+#position:Wee1_Mik1:226,296
+$Wee1_Mik1:((((!Cdc2_Cdc13 & !Wee1_Mik1) & PP) | (!Cdc2_Cdc13 & Wee1_Mik1)) | ((Cdc2_Cdc13 & Wee1_Mik1) & PP))
+Cdc2_Cdc13 -| Wee1_Mik1
+Wee1_Mik1 -> Wee1_Mik1
+PP -> Wee1_Mik1
+#position:Cdc25:152,210
+$Cdc25:((((!Cdc2_Cdc13 & Cdc25) & !PP) | ((Cdc2_Cdc13 & !Cdc25) & !PP)) | (Cdc2_Cdc13 & Cdc25))
+Cdc2_Cdc13 -> Cdc25
+Cdc25 -> Cdc25
+PP -| Cdc25

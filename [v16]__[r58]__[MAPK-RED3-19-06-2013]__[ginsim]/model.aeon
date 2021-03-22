@@ -1,0 +1,74 @@
+DNA_damage -> Apoptosis
+ERK -| Apoptosis
+p38 -> Apoptosis
+JNK -> Apoptosis
+MDM2 -| Apoptosis
+DNA_damage -> ERK
+ERK -| ERK
+p38 -| ERK
+JNK -| ERK
+PLCG -> ERK
+PI3K -| ERK
+RAS -> ERK
+MDM2 -| ERK
+TGFBR_stimulus -> p38
+DNA_damage -> p38
+ERK -| p38
+p38 -| p38
+GADD45 -> p38
+RAS -> p38
+TGFBR_stimulus -> JNK
+DNA_damage -> JNK
+ERK -| JNK
+p38 -| JNK
+GADD45 -> JNK
+RAS -> JNK
+DNA_damage -> MDM2
+ERK -| MDM2
+p38 -| MDM2
+PI3K -> MDM2
+MDM2 -| MDM2
+DNA_damage -> Growth_Arrest
+p38 -> Growth_Arrest
+MDM2 -| Growth_Arrest
+DNA_damage -| Proliferation
+ERK -> Proliferation
+p38 -| Proliferation
+PI3K -> Proliferation
+MDM2 -> Proliferation
+GRB2 -> PI3K
+PI3K -> PI3K
+EGFR_stimulus -> PLCG
+FGFR3_stimulus -> PLCG
+ERK -> PLCG
+GRB2 -| PLCG
+PLCG -| PLCG
+ERK -| RAS
+GRB2 -> RAS
+PLCG -> RAS
+TGFBR_stimulus -> GADD45
+DNA_damage -> GADD45
+p38 -> GADD45
+MDM2 -| GADD45
+EGFR_stimulus -> GRB2
+FGFR3_stimulus -> GRB2
+TGFBR_stimulus -> GRB2
+ERK -> GRB2
+GRB2 -| GRB2
+PLCG -| GRB2
+$Apoptosis: ((((((!DNA_damage & !ERK) & p38) & JNK) & !MDM2) | ((((DNA_damage & !ERK) & !p38) & JNK) & !MDM2)) | (((DNA_damage & !ERK) & p38) & JNK))
+$DNA_damage: true
+$EGFR_stimulus: true
+$ERK: (((((((((((((!DNA_damage & !ERK) & !p38) & !JNK) & !PLCG) & RAS) | (((((!DNA_damage & !ERK) & !p38) & !JNK) & PLCG) & !PI3K)) | ((((((!DNA_damage & !ERK) & !p38) & !JNK) & PLCG) & PI3K) & RAS)) | ((((!DNA_damage & ERK) & !p38) & !JNK) & RAS)) | (((((DNA_damage & !ERK) & !p38) & !JNK) & !PLCG) & RAS)) | (((((DNA_damage & !ERK) & !p38) & !JNK) & PLCG) & !PI3K)) | (((((((DNA_damage & !ERK) & !p38) & !JNK) & PLCG) & PI3K) & !RAS) & !MDM2)) | ((((((DNA_damage & !ERK) & !p38) & !JNK) & PLCG) & PI3K) & RAS)) | ((((DNA_damage & ERK) & !p38) & !JNK) & RAS))
+$FGFR3_stimulus: true
+$GADD45: ((((((!TGFBR_stimulus & !DNA_damage) & p38) & !MDM2) | (((!TGFBR_stimulus & DNA_damage) & !p38) & !MDM2)) | ((!TGFBR_stimulus & DNA_damage) & p38)) | TGFBR_stimulus)
+$GRB2: ((((((((((!EGFR_stimulus & !FGFR3_stimulus) & !TGFBR_stimulus) & ERK) & !GRB2) & !PLCG) | ((!EGFR_stimulus & !FGFR3_stimulus) & TGFBR_stimulus)) | ((((!EGFR_stimulus & FGFR3_stimulus) & !TGFBR_stimulus) & !GRB2) & !PLCG)) | ((!EGFR_stimulus & FGFR3_stimulus) & TGFBR_stimulus)) | (((EGFR_stimulus & !TGFBR_stimulus) & !GRB2) & !PLCG)) | (EGFR_stimulus & TGFBR_stimulus))
+$Growth_Arrest: ((((!DNA_damage & p38) & !MDM2) | ((DNA_damage & !p38) & !MDM2)) | (DNA_damage & p38))
+$JNK: (((((((((((((((((((!TGFBR_stimulus & !DNA_damage) & !ERK) & !p38) & !GADD45) & RAS) | ((((!TGFBR_stimulus & !DNA_damage) & !ERK) & !p38) & GADD45)) | (((((!TGFBR_stimulus & !DNA_damage) & !ERK) & p38) & GADD45) & RAS)) | ((((!TGFBR_stimulus & !DNA_damage) & ERK) & GADD45) & RAS)) | (((!TGFBR_stimulus & DNA_damage) & !ERK) & !p38)) | (((((!TGFBR_stimulus & DNA_damage) & !ERK) & p38) & !GADD45) & RAS)) | ((((!TGFBR_stimulus & DNA_damage) & !ERK) & p38) & GADD45)) | ((((!TGFBR_stimulus & DNA_damage) & ERK) & !GADD45) & RAS)) | (((!TGFBR_stimulus & DNA_damage) & ERK) & GADD45)) | (((TGFBR_stimulus & !DNA_damage) & !ERK) & !p38)) | (((((TGFBR_stimulus & !DNA_damage) & !ERK) & p38) & !GADD45) & RAS)) | ((((TGFBR_stimulus & !DNA_damage) & !ERK) & p38) & GADD45)) | ((((TGFBR_stimulus & !DNA_damage) & ERK) & !GADD45) & RAS)) | (((TGFBR_stimulus & !DNA_damage) & ERK) & GADD45)) | (TGFBR_stimulus & DNA_damage))
+$MDM2: ((((((!DNA_damage & !ERK) & !p38) & PI3K) | ((((DNA_damage & !ERK) & !p38) & !PI3K) & !MDM2)) | (((DNA_damage & !ERK) & !p38) & PI3K)) | (((DNA_damage & ERK) & !p38) & !MDM2))
+$PI3K: ((!GRB2 & PI3K) | GRB2)
+$PLCG: ((((((!EGFR_stimulus & !FGFR3_stimulus) & ERK) & !GRB2) & !PLCG) | (((!EGFR_stimulus & FGFR3_stimulus) & !GRB2) & !PLCG)) | ((EGFR_stimulus & !GRB2) & !PLCG))
+$Proliferation: (((((!DNA_damage & ERK) & !p38) & PI3K) | ((((!DNA_damage & ERK) & p38) & PI3K) & MDM2)) | ((((DNA_damage & ERK) & !p38) & PI3K) & MDM2))
+$RAS: ((((!ERK & !GRB2) & PLCG) | (!ERK & GRB2)) | (ERK & PLCG))
+$TGFBR_stimulus: true
+$p38: (((((((((((((((((((!TGFBR_stimulus & !DNA_damage) & !ERK) & !p38) & !GADD45) & RAS) | ((((!TGFBR_stimulus & !DNA_damage) & !ERK) & !p38) & GADD45)) | (((((!TGFBR_stimulus & !DNA_damage) & !ERK) & p38) & GADD45) & RAS)) | ((((!TGFBR_stimulus & !DNA_damage) & ERK) & GADD45) & RAS)) | (((!TGFBR_stimulus & DNA_damage) & !ERK) & !p38)) | (((((!TGFBR_stimulus & DNA_damage) & !ERK) & p38) & !GADD45) & RAS)) | ((((!TGFBR_stimulus & DNA_damage) & !ERK) & p38) & GADD45)) | ((((!TGFBR_stimulus & DNA_damage) & ERK) & !GADD45) & RAS)) | (((!TGFBR_stimulus & DNA_damage) & ERK) & GADD45)) | (((TGFBR_stimulus & !DNA_damage) & !ERK) & !p38)) | (((((TGFBR_stimulus & !DNA_damage) & !ERK) & p38) & !GADD45) & RAS)) | ((((TGFBR_stimulus & !DNA_damage) & !ERK) & p38) & GADD45)) | ((((TGFBR_stimulus & !DNA_damage) & ERK) & !GADD45) & RAS)) | (((TGFBR_stimulus & !DNA_damage) & ERK) & GADD45)) | (TGFBR_stimulus & DNA_damage))

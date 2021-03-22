@@ -1,0 +1,137 @@
+#position:CD45:11,31
+$CD45:CD45
+CD45 -> CD45
+#position:CD8:78,31
+$CD8:CD8
+CD8 -> CD8
+#position:TCRlig:195,29
+$TCRlig:TCRlig
+TCRlig -> TCRlig
+#position:TCRbind:192,76
+$TCRbind:(TCRlig & !cCbl)
+TCRlig -> TCRbind
+cCbl -| TCRbind
+#position:cCbl:335,301
+$cCbl:ZAP70
+ZAP70 -> cCbl
+#position:PAGCsk:115,108
+$PAGCsk:!TCRbind
+TCRbind -| PAGCsk
+#position:LCK:82,208
+$LCK:((CD45 & CD8) & !PAGCsk)
+CD45 -> LCK
+CD8 -> LCK
+PAGCsk -| LCK
+#position:Fyn:275,177
+$Fyn:(((CD45 & !TCRbind) & LCK) | (CD45 & TCRbind))
+CD45 -> Fyn
+TCRbind -> Fyn
+LCK -> Fyn
+#position:ZAP70:87,302
+$ZAP70:((LCK & !cCbl) & TCRphos)
+LCK -> ZAP70
+cCbl -| ZAP70
+TCRphos -> ZAP70
+#position:TCRphos:203,261
+$TCRphos:(((!TCRbind & Fyn) | ((TCRbind & !LCK) & Fyn)) | (TCRbind & LCK))
+TCRbind -> TCRphos
+LCK -> TCRphos
+Fyn -> TCRphos
+#position:Rlk:447,222
+$Rlk:LCK
+LCK -> Rlk
+#position:LATphosp:68,401
+$LATphosp:ZAP70
+ZAP70 -> LATphosp
+#position:Gads:145,402
+$Gads:LATphosp
+LATphosp -> Gads
+#position:Itk:242,355
+$Itk:(ZAP70 & Slp76)
+ZAP70 -> Itk
+Slp76 -> Itk
+#position:Slp76:242,402
+$Slp76:Gads
+Gads -> Slp76
+#position:PLCg_act_:416,469
+$PLCg_act_:(((((!Rlk & ZAP70) & Itk) & Slp76) & PLCg_bind_) | (((Rlk & ZAP70) & Slp76) & PLCg_bind_))
+Rlk -> PLCg_act_
+ZAP70 -> PLCg_act_
+Itk -> PLCg_act_
+Slp76 -> PLCg_act_
+PLCg_bind_ -> PLCg_act_
+#position:IP3:439,536
+$IP3:PLCg_act_
+PLCg_act_ -> IP3
+#position:Ca_:439,599
+$Ca_:IP3
+IP3 -> Ca_
+#position:Calcin:437,665
+$Calcin:Ca_
+Ca_ -> Calcin
+#position:NFAT:438,831
+$NFAT:Calcin
+Calcin -> NFAT
+#position:CREB:51,774
+$CREB:Rsk
+Rsk -> CREB
+#position:CRE:50,831
+$CRE:CREB
+CREB -> CRE
+#position:Fos:138,710
+$Fos:ERK
+ERK -> Fos
+#position:AP1:140,833
+$AP1:(Fos & Jun)
+Fos -> AP1
+Jun -> AP1
+#position:Jun:272,751
+$Jun:JNK
+JNK -> Jun
+#position:IkB:346,728
+$IkB:!IKKbeta
+IKKbeta -| IkB
+#position:NFkB:347,831
+$NFkB:!IkB
+IkB -| NFkB
+#position:Rsk:52,715
+$Rsk:ERK
+ERK -> Rsk
+#position:ERK:136,645
+$ERK:MEK
+MEK -> ERK
+#position:MEK:135,592
+$MEK:Raf
+Raf -> MEK
+#position:JNK:272,699
+$JNK:SEK
+SEK -> JNK
+#position:Raf:57,591
+$Raf:Ras
+Ras -> Raf
+#position:Ras:57,535
+$Ras:(Grb2Sos & RasGRP1)
+Grb2Sos -> Ras
+RasGRP1 -> Ras
+#position:Grb2Sos:54,484
+$Grb2Sos:LATphosp
+LATphosp -> Grb2Sos
+#position:RasGRP1:144,534
+$RasGRP1:(DAG & PKCth)
+DAG -> RasGRP1
+PKCth -> RasGRP1
+#position:PLCg_bind_:306,435
+$PLCg_bind_:LATphosp
+LATphosp -> PLCg_bind_
+#position:DAG:273,475
+$DAG:PLCg_act_
+PLCg_act_ -> DAG
+#position:PKCth:272,531
+$PKCth:DAG
+DAG -> PKCth
+#position:IKKbeta:345,646
+$IKKbeta:PKCth
+PKCth -> IKKbeta
+#position:SEK:273,637
+$SEK:PKCth
+PKCth -> SEK

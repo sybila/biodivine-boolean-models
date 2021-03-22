@@ -1,0 +1,95 @@
+#position:Clb2:161.91721523833337,341.06509045106407
+$Clb2:(((B & (!Cdh1 | !Cdc20)) & !CKI) | ((Clb2 & (SFF & (!Cdh1 | !Cdc20))) & !CKI))
+Cdh1 -| Clb2
+Clb2 -> Clb2
+SFF -> Clb2
+B -> Clb2
+Cdc20 -| Clb2
+CKI -| Clb2
+#position:Cdh1:277.0983407514698,277.2121145005896
+$Cdh1:(Cdc14 | !(((Clb2 | Cln2) | Clb5) | Cdc14))
+Clb2 -| Cdh1
+Cln2 -| Cdh1
+Clb5 -| Cdh1
+Cdc14 -> Cdh1
+#position:Cln2:162.8500369004746,173.16535440583644
+$Cln2:SMBF
+SMBF -> Cln2
+#position:Clb5:129.43404518433158,240.66710244397024
+$Clb5:(SMBF & (!Cdc20 | (!Cdc20 & !CKI)))
+SMBF -> Clb5
+Cdc20 -| Clb5
+CKI -|? Clb5
+#position:Cdc14:221.48357222776616,449.1744902484516
+$Cdc14:(FEAR & MEN)
+MEN -> Cdc14
+FEAR -> Cdc14
+#position:CKI:200.59979897671184,292.21694254435556
+$CKI:(((CKI & !((Clb2 | Clb5) | Cln2)) | (Swi5 & !((Clb2 | Clb5) | Cln2))) | (Cdc14 & Swi5))
+Clb2 -| CKI
+Swi5 -> CKI
+Clb5 -| CKI
+Cln2 -| CKI
+Cdc14 -> CKI
+CKI -> CKI
+#position:Swi5:307.59773501282507,397.5295032384766
+$Swi5:((Cdc14 & SFF) | (SFF & !Clb2))
+Clb2 -| Swi5
+SFF -> Swi5
+Cdc14 -> Swi5
+#position:MEN:105.3843436352783,512.2808738881203
+$MEN:(FEAR & Clb2)
+FEAR -> MEN
+Clb2 -> MEN
+#position:FEAR:182.29771785415505,564.0038529578437
+$FEAR:Cdc20
+Cdc20 -> FEAR
+#position:SMBF:241.6897677995783,165.83160207399013
+$SMBF:(((SMBF & !Clb2) | (Cln2 & !Clb2)) | (Cln3 & !Clb2))
+SMBF -> SMBF
+Clb2 -| SMBF
+Cln2 -> SMBF
+Cln3 -> SMBF
+#position:SFF:240.92735910106802,347.77366210083414
+$SFF:((Clb2 & SFF) | ((B & (!Cdc20 | !Cdh1)) & !CKI))
+Cdh1 -| SFF
+Clb2 -> SFF
+SFF -> SFF
+B -> SFF
+Cdc20 -| SFF
+CKI -| SFF
+#position:B:97.1451382925265,307.1499674532072
+$B:(((Clb5 & !CD) | (Cln2 & !CD)) | (B & !CD))
+CD -| B
+B -> B
+Clb5 -> B
+Cln2 -> B
+#position:Cdc20:142.9382805694691,400.44617193824047
+$Cdc20:(M & (Clb2 & SFF))
+M -> Cdc20
+Clb2 -> Cdc20
+SFF -> Cdc20
+#position:CD:72.24875299937622,441.9077000393614
+$CD:((M & (FEAR & Cdc14)) & !CD)
+M -> CD
+CD -| CD
+FEAR -> CD
+Cdc14 -> CD
+#position:Yhp1:259.16815192113796,27
+$Yhp1:SMBF
+SMBF -> Yhp1
+#position:Cln3:349.10676250106303,94.31334579642424
+$Cln3:!Yhp1
+Yhp1 -| Cln3
+#position:M:24.752183120720474,387.908691687255
+$M:(((S & Clb2) & !CD) | (M & !CD))
+M -> M
+CD -| M
+Clb2 -> M
+S -> M
+#position:S:19.5,310.75072940300697
+$S:(((Clb5 & !CD) | (S & !CD)) | (Clb2 & !CD))
+CD -| S
+Clb2 -> S
+Clb5 -> S
+S -> S

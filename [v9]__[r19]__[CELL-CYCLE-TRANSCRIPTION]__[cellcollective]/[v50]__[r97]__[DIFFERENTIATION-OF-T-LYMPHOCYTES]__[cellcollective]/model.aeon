@@ -1,0 +1,147 @@
+STAT3 -| Foxp3
+SMAD2 -> Foxp3
+Foxp3 -> Foxp3
+Tbet -| Foxp3
+GATA3 -| Foxp3
+RORgt -| Foxp3
+Foxp3 -| Tbet
+Tbet -> Tbet
+GATA3 -| Tbet
+RORgt -| Tbet
+STAT1 -> Tbet
+Foxp3 -| GATA3
+Tbet -| GATA3
+GATA3 -> GATA3
+RORgt -| GATA3
+STAT6 -> GATA3
+STAT3 -> RORgt
+SMAD2 -> RORgt
+Foxp3 -| RORgt
+Tbet -| RORgt
+GATA3 -| RORgt
+RORgt -> RORgt
+JAK1 -> STAT1
+IL27R -> STAT1
+IFNBR -> STAT1
+GATA3 -| STAT4
+IL12R -> STAT4
+IL12 -> IL12R
+STAT6 -| IL12R
+IL4R -> STAT6
+Tbet -> Eomes
+IL27R -> Eomes
+Runx3 -> Eomes
+IL27 -> IL27R
+CD4 -| Runx3
+ThPOK -| Runx3
+STAT5 -> Runx3
+Runx3 -> Runx3
+CD8 -> Runx3
+IL2 -> IL2R
+TGFB -> TGFBR
+TGFBR -> SMAD2
+Foxp3 -> TGFB
+IFNgR -> JAK1
+IFNB -> IFNBR
+IL4 -> IL4R
+SOCS -| IL4R
+IL10R -> STAT3
+JAK3 -> STAT3
+IL23R -> STAT3
+Tbet -> SOCS
+STAT1 -> SOCS
+IL10 -> IL10R
+IL6R -> JAK3
+IL23 -> IL23R
+TCR -> NFAT
+CD4 -> CD4
+ThPOK -> CD4
+Runx3 -| CD4
+Notch1 -> CD4
+CD4 -> ThPOK
+ThPOK -> ThPOK
+TCR -> ThPOK
+Foxp3 -> ThPOK
+Tbet -> ThPOK
+GATA3 -> ThPOK
+RORgt -> ThPOK
+Runx3 -| ThPOK
+CD8 -| ThPOK
+ThPOK -| CD8
+TCR -| CD8
+Runx3 -> CD8
+Notch1 -> CD8
+CD8 -> CD8
+IL18 -> IL18R
+STAT6 -| IL18R
+IL18R -> IRAK
+TCR -| IL7R
+IL7 -> IL7R
+IL7R -> STAT5
+SOCS -| STAT5
+IL2R -> STAT5
+GATA3 -> IL10
+RORgt -> IL17
+Eomes -> Gzmb
+Dll1 -> Notch1
+RORgt -> IL6
+STAT3 -| IFNg
+Eomes -> IFNg
+STAT4 -> IFNg
+Tbet -> IFNg
+IRAK -> IFNg
+IFNg -> IFNgR
+GATA3 -> IL4
+STAT1 -| IL4
+IL6 -> IL6R
+Eomes -> Prf1
+$CD4: (((CD4 & !Runx3) | ThPOK) | Notch1)
+$CD8: (((Notch1 & !(TCR | ThPOK)) | (CD8 & !(TCR | ThPOK))) | (Runx3 & !(TCR | ThPOK)))
+$Dll1: true
+$Eomes: ((IL27R & Runx3) | (Tbet & Runx3))
+$Foxp3: ((Foxp3 & !(((STAT3 | RORgt) | Tbet) | GATA3)) | (SMAD2 & !(((STAT3 | RORgt) | Tbet) | GATA3)))
+$GATA3: ((STAT6 & !((RORgt | Foxp3) | Tbet)) | (GATA3 & !((RORgt | Foxp3) | Tbet)))
+$Gzmb: Eomes
+$IFNB: true
+$IFNBR: IFNB
+$IFNg: ((((IRAK & !STAT3) | (Eomes & !STAT3)) | (STAT4 & !STAT3)) | (Tbet & !STAT3))
+$IFNgR: IFNg
+$IL10: GATA3
+$IL10R: IL10
+$IL12: true
+$IL12R: (IL12 & !STAT6)
+$IL17: RORgt
+$IL18: true
+$IL18R: (IL18 & !STAT6)
+$IL2: true
+$IL23: true
+$IL23R: IL23
+$IL27: true
+$IL27R: IL27
+$IL2R: IL2
+$IL4: (GATA3 & !STAT1)
+$IL4R: (IL4 & !SOCS)
+$IL6: RORgt
+$IL6R: IL6
+$IL7: true
+$IL7R: (IL7 & !TCR)
+$IRAK: IL18R
+$JAK1: IFNgR
+$JAK3: IL6R
+$NFAT: TCR
+$Notch1: Dll1
+$Prf1: Eomes
+$RORgt: ((SMAD2 & STAT3) | (RORgt & !((Tbet | Foxp3) | GATA3)))
+$Runx3: (((Runx3 & !(CD4 | ThPOK)) | (CD8 & !CD4)) | STAT5)
+$SMAD2: TGFBR
+$SOCS: (STAT1 | Tbet)
+$STAT1: ((IFNBR | IL27R) | JAK1)
+$STAT3: ((IL10R | JAK3) | IL23R)
+$STAT4: (IL12R & !GATA3)
+$STAT5: ((IL2R & !SOCS) | (IL7R & !SOCS))
+$STAT6: IL4R
+$TCR: true
+$TGFB: Foxp3
+$TGFBR: TGFB
+$Tbet: ((STAT1 & !((RORgt | Foxp3) | GATA3)) | (Tbet & !((RORgt | Foxp3) | GATA3)))
+$ThPOK: ((((((RORgt | (Tbet & !Runx3)) | ThPOK) | (CD4 & !CD8)) | GATA3) | TCR) | Foxp3)

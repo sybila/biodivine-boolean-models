@@ -1,0 +1,95 @@
+ERBB2 -> AKT
+AKT -> AKT
+ERBB3 -> AKT
+ERBB1 -> AKT
+CyclinB1 -> AKT
+PTEN -| AKT
+AKT -> p38
+p38 -> p38
+p53 -> p53
+RB -> p53
+CyclinB1 -> p53
+p38 -> p53
+p53 -| CyclinB1
+CyclinB1 -> CyclinB1
+TSC2 -> TSC2
+ERK1_2 -| TSC2
+AKT -| TSC2
+GSKa_b -| TSC2
+RB -> TSC2
+ERK1_2 -> ERK1_2
+ERBB1 -> ERK1_2
+cRAF -> ERK1_2
+p53 -> GSKa_b
+GSKa_b -> GSKa_b
+p53 -> RB
+RB -> RB
+CyclinB1 -| RB
+ERBB2 -> ERBB2
+pertuzumab -| ERBB2
+erlotinib -| ERBB2
+stimulus -> ERBB2
+trastuzumab -| ERBB2
+RPS6 -> ERBB3
+ERBB3 -> ERBB3
+pertuzumab -| ERBB3
+erlotinib -| ERBB3
+stimulus -> ERBB3
+ERBB3 -> ERBB1
+cJUN -> ERBB1
+ERBB1 -> ERBB1
+pertuzumab -| ERBB1
+erlotinib -| ERBB1
+stimulus -> ERBB1
+GSKa_b -| PTEN
+PTEN -> PTEN
+cRAF -> PTEN
+RPS6 -> RPS6
+p70S6K -> RPS6
+AKT -| PRAS
+cJUN -> PRAS
+PRAS -> PRAS
+GSKa_b -| cJUN
+cJUN -> cJUN
+TSC2 -| p70S6K
+ERK1_2 -> p70S6K
+p70S6K -> p70S6K
+PRAS -| p70S6K
+ERBB2 -> cRAF
+ERK1_2 -| cRAF
+ERBB1 -> cRAF
+cRAF -> cRAF
+Nfkb -> Nfkb
+AKT -| FOXO1_3a
+FOXO1_3a -> FOXO1_3a
+BAX -> BAX
+ERK1_2 -> CyclinD1
+AKT -> CyclinD1
+cJUN -> CyclinD1
+CyclinD1 -> CyclinD1
+p70S6K -> CyclinD1
+$AKT: (((((ERBB2 & !PTEN) | (AKT & !PTEN)) | (CyclinB1 & !PTEN)) | (ERBB3 & !PTEN)) | (ERBB1 & !PTEN))
+$BAX: BAX
+$CyclinB1: (CyclinB1 & !p53)
+$CyclinD1: ((((CyclinD1 | ERK1_2) | cJUN) | AKT) | p70S6K)
+$ERBB1: ((((ERBB1 & !(pertuzumab | erlotinib)) | (cJUN & !(pertuzumab | erlotinib))) | (stimulus & !(pertuzumab | erlotinib))) | (ERBB3 & !(pertuzumab | erlotinib)))
+$ERBB2: ((ERBB2 & !((trastuzumab | pertuzumab) | erlotinib)) | (stimulus & !((trastuzumab | pertuzumab) | erlotinib)))
+$ERBB3: (((stimulus & !(erlotinib | pertuzumab)) | (RPS6 & !(erlotinib | pertuzumab))) | (ERBB3 & !(erlotinib | pertuzumab)))
+$ERK1_2: ((ERK1_2 | cRAF) | ERBB1)
+$FOXO1_3a: (FOXO1_3a & !AKT)
+$GSKa_b: (p53 | GSKa_b)
+$Nfkb: Nfkb
+$PRAS: ((PRAS & !AKT) | (cJUN & !AKT))
+$PTEN: ((cRAF & !GSKa_b) | (PTEN & !GSKa_b))
+$RB: ((p53 & !CyclinB1) | (RB & !CyclinB1))
+$RPS6: (p70S6K | RPS6)
+$TSC2: ((RB & !((GSKa_b | ERK1_2) | AKT)) | (TSC2 & !((GSKa_b | ERK1_2) | AKT)))
+$cJUN: (cJUN & !GSKa_b)
+$cRAF: (((ERBB2 & !ERK1_2) | (ERBB1 & !ERK1_2)) | (cRAF & !ERK1_2))
+$erlotinib: true
+$p38: (p38 | AKT)
+$p53: (((RB | p53) | p38) | CyclinB1)
+$p70S6K: ((p70S6K & !(TSC2 | PRAS)) | (ERK1_2 & !(TSC2 | PRAS)))
+$pertuzumab: true
+$stimulus: true
+$trastuzumab: true

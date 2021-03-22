@@ -1,0 +1,1378 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" qual:required="true" version="1" xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+  <model id="M2663" metaid="d48dc9a6-1d50-4d29-b033-f9230b2fd6f4" name="Wg Pathway of Drosophila Signalling Pathways">
+    <notes>
+      <body xmlns="http://www.w3.org/1999/xhtml">A limited number of signalling pathways are involved in the specification of cell fate during the development of all animals. Several of these pathways were originally identified in Drosophila. To clarify their roles, and possible cross-talk, we have built a logical model for the nine key signalling pathways recurrently used in metazoan development. In each case, we considered the associated ligands, receptors, signal transducers, modulators, and transcription factors reported in the literature. Implemented using the logical modelling software GINsim, the resulting models qualitatively recapitulate the main characteristics of each pathway, in wild type as well as in various mutant situations (e.g. loss-of-function or gain-of-function). These models constitute pluggable modules that can be used to assemble comprehensive models of complex developmental processes. Moreover, these models of Drosophila pathways could serve as scaffolds for more complicated models of orthologous mammalian pathways. Comprehensive model annotations and GINsim files are provided for each of the nine considered pathways.</body>
+    </notes>
+    <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#d48dc9a6-1d50-4d29-b033-f9230b2fd6f4">
+	<dc:creator>
+	<rdf:Bag>
+	<rdf:li rdf:parseType="Resource">
+	<vCard:N rdf:parseType="Resource">
+	<vCard:Family>Helikar</vCard:Family>
+	<vCard:Given>Tomas</vCard:Given>
+	</vCard:N>
+	<vCard:EMAIL>thelika@unmc.edu</vCard:EMAIL>
+	<vCard:ORG rdf:parseType="Resource">
+	<vCard:Orgname>University of Nebraska - Lincoln</vCard:Orgname>
+	</vCard:ORG>
+	</rdf:li>
+	</rdf:Bag>
+	</dc:creator>
+	<dcterms:created rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-01-22T11:06:24Z</dcterms:W3CDTF>
+	</dcterms:created>
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-01-22T07:08:46Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23868318"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+      <qual:listOfQualitativeSpecies xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:qualitativeSpecies metaid="_3994b831-0ca8-4611-90ff-d3b2bac616d8" qual:compartment="extracellular" qual:constant="true" qual:id="S_1" qual:name="Wg">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Wingless&lt;div>UniProt ID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/P09615" style="text-decoration: none; color: rgb(64, 148, 180); border-bottom-width: 0px; cursor: pointer; font-family: Verdana, Arial, sans-serif; font-size: 13.0571994781494px; line-height: 20.081974029541px; background-color: rgb(255, 255, 255);">P09615&lt;/a>&lt;/div>&lt;div>Gene Name: wg&lt;/div>&lt;div>Gene ID:&amp;nbsp;&lt;span style="color: rgb(87, 87, 87); font-family: arial, helvetica, clean, sans-serif; font-size: 11.6999998092651px; line-height: 16.199821472168px; background-color: rgb(213, 222, 227);">34009&lt;/span>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_3994b831-0ca8-4611-90ff-d3b2bac616d8">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:51:28Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23868318"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_94c28d1e-7b0b-4699-b7e7-28cfdb85c1c7" qual:compartment="extracellular" qual:constant="true" qual:id="S_5" qual:name="Boca">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;div>LDLR chaperone boca&lt;/div>&lt;div style="font-family: Arial, Verdana; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">UniProt ID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/Q8T9B6" style="text-decoration: none; color: rgb(64, 148, 180); border-bottom-width: 0px; cursor: pointer; font-family: Verdana, Arial, sans-serif; font-size: 13.0571994781494px; line-height: 20.081974029541px; background-color: rgb(255, 255, 255);">Q8T9B6&lt;/a>&lt;/div>&lt;div style="font-family: Arial, Verdana; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">Gene Name: boca&lt;/div>&lt;div style="font-family: Arial, Verdana; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">Gene ID:&amp;nbsp;&lt;span style="color: rgb(87, 87, 87); font-family: arial, helvetica, clean, sans-serif; font-size: 11.6999998092651px; line-height: 16.199821472168px; background-color: rgb(213, 222, 227);">48986&lt;/span>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_94c28d1e-7b0b-4699-b7e7-28cfdb85c1c7">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:51:28Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23868318"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="d09159de-eadf-4e22-8304-1017ebfbce3c" qual:compartment="extracellular" qual:constant="true" qual:id="S_6" qual:name="Slmb">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>F-box protein Supernumary limbs (SLMB)&lt;div>UniProt ID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/Q9VDE3" style="text-decoration: none; color: rgb(64, 148, 180); border-bottom-width: 0px; cursor: pointer; font-family: Verdana, Arial, sans-serif; font-size: 13.0571994781494px; line-height: 20.081974029541px; background-color: rgb(255, 255, 255);">Q9VDE3&lt;/a>&lt;br/>Gene Name: slmb&lt;/div>&lt;div>Gene ID:&amp;nbsp;&lt;span style="color: rgb(87, 87, 87); font-family: arial, helvetica, clean, sans-serif; font-size: 11.6999998092651px; line-height: 16.199821472168px; background-color: rgb(213, 222, 227);">42504&lt;/span>&lt;span style="font-size: 10pt;">&amp;nbsp;&lt;/span>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#d09159de-eadf-4e22-8304-1017ebfbce3c">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:51:28Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23868318"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="f2bda319-2289-4add-ad60-fb99819705fb" qual:compartment="extracellular" qual:constant="true" qual:id="S_7" qual:name="Nej">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Protein Nejire (NEJ)&lt;div>UniProt ID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/Q0ZIL3" style="text-decoration: none; color: rgb(64, 148, 180); border-bottom-width: 0px; cursor: pointer; font-family: Verdana, Arial, sans-serif; font-size: 13.0571994781494px; line-height: 20.081974029541px; background-color: rgb(255, 255, 255);">Q0ZIL3&lt;/a>&lt;/div>&lt;div>Gene Name: nej&lt;/div>&lt;div>Gene ID:&amp;nbsp;&lt;span style="color: rgb(87, 87, 87); font-family: arial, helvetica, clean, sans-serif; font-size: 11.6999998092651px; line-height: 16.199821472168px; background-color: rgb(213, 222, 227);">43856&lt;/span>&lt;span style="font-size: 10pt;">&amp;nbsp;&lt;/span>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#f2bda319-2289-4add-ad60-fb99819705fb">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:51:28Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23868318"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="e872abc7-4a52-4f42-a6f1-f349515d5a57" qual:compartment="extracellular" qual:constant="true" qual:id="S_8" qual:name="Gro">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Groucho (Gro)&lt;div>UniProt ID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/P16371" style="text-decoration: none; color: rgb(64, 148, 180); border-bottom-width: 0px; cursor: pointer; font-family: Verdana, Arial, sans-serif; font-size: 13.0571994781494px; line-height: 20.081974029541px; background-color: rgb(255, 255, 255);">P16371&lt;/a>&lt;/div>&lt;div>Gene Name: Gro&lt;/div>&lt;div>Gene ID:&amp;nbsp;&lt;span style="color: rgb(87, 87, 87); font-family: arial, helvetica, clean, sans-serif; font-size: 11.6999998092651px; line-height: 16.199821472168px; background-color: rgb(213, 222, 227);">43162&lt;/span>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#e872abc7-4a52-4f42-a6f1-f349515d5a57">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:51:28Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23868318"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_2ad1bcd5-babc-4478-adf8-34c980afbfdd" qual:compartment="extracellular" qual:constant="true" qual:id="S_9" qual:name="Wf">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;div>Wingful or Notum (Wf)&lt;/div>UniProt ID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/Q9VUX3" style="text-decoration: none; color: rgb(64, 148, 180); border-bottom-width: 0px; cursor: pointer; font-family: Verdana, Arial, sans-serif; font-size: 13.0571994781494px; line-height: 20.081974029541px; background-color: rgb(255, 255, 255);">Q9VUX3&lt;/a>&lt;div>Gene Name: Notum&lt;/div>&lt;div>Gene ID:&amp;nbsp;&lt;span style="color: rgb(87, 87, 87); font-family: arial, helvetica, clean, sans-serif; font-size: 11.6999998092651px; line-height: 16.199821472168px; background-color: rgb(213, 222, 227);">39751&lt;/span>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_2ad1bcd5-babc-4478-adf8-34c980afbfdd">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:51:28Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23868318"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="a93921b6-905e-423f-ba7e-fa491fdb602a" qual:compartment="extracellular" qual:constant="true" qual:id="S_11" qual:name="Hyx">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Hyrax (HYX)&lt;div>UniProt ID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/Q9VHI1" style="text-decoration: none; color: rgb(64, 148, 180); border-bottom-width: 0px; cursor: pointer; font-family: Verdana, Arial, sans-serif; font-size: 13.0571994781494px; line-height: 20.081974029541px; background-color: rgb(255, 255, 255);">Q9VHI1&lt;/a>&lt;/div>&lt;div>Gene Name: hyx&lt;/div>&lt;div>Gene ID:&amp;nbsp;&lt;span style="color: rgb(87, 87, 87); font-family: arial, helvetica, clean, sans-serif; font-size: 11.6999998092651px; line-height: 16.199821472168px; background-color: rgb(213, 222, 227);">41086&lt;/span>&lt;span style="font-size: 10pt;">&amp;nbsp;&lt;/span>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#a93921b6-905e-423f-ba7e-fa491fdb602a">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:51:28Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23868318"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_36a7f582-8963-422f-9710-5e3c5bc7b712" qual:compartment="extracellular" qual:constant="true" qual:id="S_12" qual:name="Nkd">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;div>Naked cuticle (Nkd)&lt;/div>UniProt ID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/P30974" style="text-decoration: none; color: rgb(64, 148, 180); border-bottom-width: 0px; cursor: pointer; font-family: Verdana, Arial, sans-serif; font-size: 13.0571994781494px; line-height: 20.081974029541px; background-color: rgb(255, 255, 255);">P30974&lt;/a>&lt;div>Gene Name: nkd&lt;/div>&lt;div>Gene ID:&amp;nbsp;&lt;span style="color: rgb(87, 87, 87); font-family: arial, helvetica, clean, sans-serif; font-size: 11.6999998092651px; line-height: 16.199821472168px; background-color: rgb(213, 222, 227);">44843&lt;/span>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_36a7f582-8963-422f-9710-5e3c5bc7b712">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:51:28Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23868318"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_5b5eb2cb-be4c-4832-abc5-1c48dd657e5d" qual:compartment="extracellular" qual:constant="true" qual:id="S_13" qual:name="Pygo">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Protein Pygopus (PYGO)&lt;div>UniProt ID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/Q9V9W8" style="text-decoration: none; color: rgb(64, 148, 180); border-bottom-width: 0px; cursor: pointer; font-family: Verdana, Arial, sans-serif; font-size: 13.0571994781494px; line-height: 20.081974029541px; background-color: rgb(255, 255, 255);">Q9V9W8&lt;/a>&lt;/div>&lt;div>Gene Name: pygo&lt;/div>&lt;div>Gene ID:&amp;nbsp;&lt;span style="color: rgb(87, 87, 87); font-family: arial, helvetica, clean, sans-serif; font-size: 11.6999998092651px; line-height: 16.199821472168px; background-color: rgb(213, 222, 227);">43718&lt;/span>&lt;span style="font-size: 10pt;">&amp;nbsp;&lt;/span>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_5b5eb2cb-be4c-4832-abc5-1c48dd657e5d">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:51:28Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23868318"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="b11084e0-d7af-4ee8-9856-7990017f7769" qual:compartment="extracellular" qual:constant="true" qual:id="S_14" qual:name="Proteasome">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Proteasome protein complex</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#b11084e0-d7af-4ee8-9856-7990017f7769">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:51:28Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23868318"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_71f0f8c7-1dd7-4ac1-8020-6aa7631de468" qual:compartment="extracellular" qual:constant="true" qual:id="S_16" qual:name="Ttv">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Tout-velu (TTV), a heparan sulphate\r\ncopolymerase&lt;div>UniProt ID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/Q9V730" style="text-decoration: none; color: rgb(64, 148, 180); border-bottom-width: 0px; cursor: pointer; font-family: Verdana, Arial, sans-serif; font-size: 13.0571994781494px; line-height: 20.081974029541px; background-color: rgb(255, 255, 255);">Q9V730&lt;/a>&lt;/div>&lt;div>Gene Name: ttv&lt;/div>&lt;div>Gene ID:&amp;nbsp;&lt;span style="color: rgb(87, 87, 87); font-family: arial, helvetica, clean, sans-serif; font-size: 11.6999998092651px; line-height: 16.199821472168px; background-color: rgb(213, 222, 227);">36614&lt;/span>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_71f0f8c7-1dd7-4ac1-8020-6aa7631de468">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:51:28Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23868318"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_05b5b0bd-52a5-4734-9309-b8307a89d07f" qual:compartment="extracellular" qual:constant="true" qual:id="S_22" qual:name="CK1alpha">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Casein kinase I alpha&lt;div>UniProt ID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/P54367" style="text-decoration: none; color: rgb(64, 148, 180); border-bottom-width: 0px; cursor: pointer; font-family: Verdana, Arial, sans-serif; font-size: 13.0571994781494px; line-height: 20.081974029541px; background-color: rgb(222, 239, 245);">P54367&lt;/a>&lt;/div>&lt;div>Gene Name:&amp;nbsp;&lt;a href="http://www.ncbi.nlm.nih.gov/gene/32221" ref="ordinalpos=1&amp;amp;ncbi_uid=32221&amp;amp;link_uid=32221" style="color: rgb(100, 42, 143); font-family: arial, helvetica, clean, sans-serif; font-size: 13px; line-height: 17.9998016357422px; white-space: nowrap; background-color: rgb(213, 222, 227);">CkIalpha&lt;/a>&lt;/div>&lt;div>Gene ID:&amp;nbsp;&lt;span style="color: rgb(87, 87, 87); font-family: arial, helvetica, clean, sans-serif; font-size: 11.6999998092651px; line-height: 16.199821472168px; background-color: rgb(213, 222, 227);">32221&lt;/span>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_05b5b0bd-52a5-4734-9309-b8307a89d07f">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:51:28Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23868318"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_12192b5d-4196-4374-bda7-18a6efbad189" qual:compartment="extracellular" qual:constant="true" qual:id="S_23" qual:name="Hipk">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>homeodomain interacting protein kinase (HIPk)&lt;div>UniProt ID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/Q9W0Q1" style="text-decoration: none; color: rgb(64, 148, 180); border-bottom-width: 0px; cursor: pointer; font-family: Verdana, Arial, sans-serif; font-size: 13.0571994781494px; line-height: 20.081974029541px; background-color: rgb(255, 255, 255);">Q9W0Q1&lt;/a>&lt;/div>&lt;div>Gene Name: hipk&lt;/div>&lt;div>Gene ID:&amp;nbsp;&lt;span style="color: rgb(87, 87, 87); font-family: arial, helvetica, clean, sans-serif; font-size: 11.6999998092651px; line-height: 16.199821472168px; background-color: rgb(213, 222, 227);">38070&lt;/span>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_12192b5d-4196-4374-bda7-18a6efbad189">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:51:28Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23868318"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="a2f733b8-cf3d-4efa-8445-267709c5bfb8" qual:compartment="extracellular" qual:constant="true" qual:id="S_26" qual:name="Lgs">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Legless&amp;nbsp;Protein BCL9 homolog&amp;nbsp;(LGS)&lt;div style="font-family: Arial, Verdana; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">UniProt ID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/Q961D9" style="text-decoration: none; color: rgb(64, 148, 180); border-bottom-width: 0px; cursor: pointer; font-family: Verdana, Arial, sans-serif; font-size: 13.0571994781494px; line-height: 20.081974029541px; background-color: rgb(255, 255, 255);">Q961D9&lt;/a>&lt;/div>&lt;div style="font-family: Arial, Verdana; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">Gene Name: lgs&lt;/div>&lt;div style="font-family: Arial, Verdana; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">Gene ID:&amp;nbsp;&lt;span style="color: rgb(87, 87, 87); font-family: arial, helvetica, clean, sans-serif; font-size: 11.6999998092651px; line-height: 16.199821472168px; background-color: rgb(213, 222, 227);">43791&lt;/span>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#a2f733b8-cf3d-4efa-8445-267709c5bfb8">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:51:28Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23868318"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_79082b42-628d-4d91-a909-03d644da2d3a" qual:compartment="cytosol" qual:constant="false" qual:id="S_2" qual:initialLevel="0" qual:maxLevel="1" qual:name="Fz">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Frizzled (Fz)&lt;div>UniProt ID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/Q24760" style="text-decoration: none; color: rgb(64, 148, 180); border-bottom-width: 0px; cursor: pointer; font-family: Verdana, Arial, sans-serif; font-size: 13.0571994781494px; line-height: 20.081974029541px; background-color: rgb(255, 255, 255);">Q24760&lt;/a>&lt;/div>&lt;div>Gene Name: fz&lt;/div>&lt;div>Gene ID:&amp;nbsp;&lt;span style="color: rgb(87, 87, 87); font-family: arial, helvetica, clean, sans-serif; font-size: 11.6999998092651px; line-height: 16.199821472168px; background-color: rgb(213, 222, 227);">45307&lt;/span>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_79082b42-628d-4d91-a909-03d644da2d3a">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:51:28Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:9875856"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23868318"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:9716412"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:8717036"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:10556068"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:10457026"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:11029006"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_352db11f-2fe6-48a4-ae9b-89647ca462cc" qual:compartment="cytosol" qual:constant="false" qual:id="S_3" qual:initialLevel="0" qual:maxLevel="1" qual:name="Targets">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Target nodes from the paper [1]</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_352db11f-2fe6-48a4-ae9b-89647ca462cc">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:51:28Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:18451032"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:8985186"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:16630820"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:18404694"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23868318"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:17113272"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="a626897d-251e-44c9-8c5b-d19dbdd9752e" qual:compartment="cytosol" qual:constant="false" qual:id="S_4" qual:initialLevel="0" qual:maxLevel="1" qual:name="APC">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Adenomatous Polyposis\r\nColi (APC)&lt;div>UniProt ID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/Q9Y1T2" style="text-decoration: none; color: rgb(64, 148, 180); border-bottom-width: 0px; cursor: pointer; font-family: Verdana, Arial, sans-serif; font-size: 13.0571994781494px; line-height: 20.081974029541px; background-color: rgb(255, 255, 255);">Q9Y1T2&lt;/a>&lt;/div>&lt;div>Gene Name: Apc&lt;/div>&lt;div>Gene ID:&amp;nbsp;&lt;span style="color: rgb(87, 87, 87); font-family: arial, helvetica, clean, sans-serif; font-size: 11.6999998092651px; line-height: 16.199821472168px; background-color: rgb(213, 222, 227);">11789&lt;/span>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#a626897d-251e-44c9-8c5b-d19dbdd9752e">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:51:28Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23868318"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_98e24e66-cafb-42dc-b4ec-01101352b604" qual:compartment="cytosol" qual:constant="false" qual:id="S_10" qual:initialLevel="0" qual:maxLevel="1" qual:name="Dsh">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>cytoplasmic protein Dishevelled\r\n(DSH)&lt;div>UniProt ID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/P51140" style="text-decoration: none; color: rgb(64, 148, 180); border-bottom-width: 0px; cursor: pointer; font-family: Verdana, Arial, sans-serif; font-size: 13.0571994781494px; line-height: 20.081974029541px; background-color: rgb(255, 255, 255);">P51140&lt;/a>&lt;/div>&lt;div>Gene Name: dsh&lt;/div>&lt;div>Gene ID:&amp;nbsp;&lt;span style="color: rgb(87, 87, 87); font-family: arial, helvetica, clean, sans-serif; font-size: 11.6999998092651px; line-height: 16.199821472168px; background-color: rgb(213, 222, 227);">32078&lt;/span>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_98e24e66-cafb-42dc-b4ec-01101352b604">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:51:28Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23868318"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:11274052"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:8717036"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_06ed55a8-fff5-4449-844c-ee963cb3c920" qual:compartment="cytosol" qual:constant="false" qual:id="S_15" qual:initialLevel="0" qual:maxLevel="1" qual:name="Pan">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Protein&amp;nbsp;Pangolin (PAN)&amp;nbsp;&lt;div>UniProt ID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/Q8IMA8" style="text-decoration: none; color: rgb(64, 148, 180); border-bottom-width: 0px; cursor: pointer; font-family: Verdana, Arial, sans-serif; font-size: 13.0571994781494px; line-height: 20.081974029541px; background-color: rgb(255, 255, 255);">Q8IMA8&lt;/a>&lt;/div>&lt;div>Gene Name: pan&lt;/div>&lt;div>Gene ID:&amp;nbsp;&lt;span style="color: rgb(87, 87, 87); font-family: arial, helvetica, clean, sans-serif; font-size: 11.6999998092651px; line-height: 16.199821472168px; background-color: rgb(213, 222, 227);">43769&lt;/span>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_06ed55a8-fff5-4449-844c-ee963cb3c920">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:51:28Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23868318"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="fc27f29b-d60f-4540-9558-1c6f41a394b5" qual:compartment="cytosol" qual:constant="false" qual:id="S_17" qual:initialLevel="0" qual:maxLevel="1" qual:name="Nemo">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;div>NF-kappa-B essential modulator (nemo)&lt;/div>&lt;font face="Arial, Verdana">&lt;span style="font-size: 10pt;">UniProt ID:&amp;nbsp;&lt;/span>&lt;/font>&lt;a href="http://www.uniprot.org/uniprot/Q9GYV5" style="font-family: Verdana, Arial, sans-serif; font-size: 13.0571994781494px; font-style: normal; font-variant: normal; font-weight: normal; line-height: 20.081974029541px; text-decoration: none; color: rgb(64, 148, 180); border-bottom-width: 0px; cursor: pointer; background-color: rgb(255, 255, 255);">Q9GYV5&lt;/a>&lt;div style="font-family: Arial, Verdana; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">Gene Name: nmo&lt;/div>&lt;div style="font-family: Arial, Verdana; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">Gene ID:&amp;nbsp;&lt;span style="color: rgb(87, 87, 87); font-family: arial, helvetica, clean, sans-serif; font-size: 11.6999998092651px; line-height: 16.199821472168px; background-color: rgb(213, 222, 227);">38890&lt;/span>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#fc27f29b-d60f-4540-9558-1c6f41a394b5">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:51:28Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23868318"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="ad9e60ea-8aad-4001-96d8-1aa65a968e44" qual:compartment="cytosol" qual:constant="false" qual:id="S_18" qual:initialLevel="0" qual:maxLevel="1" qual:name="Axin">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Axis inhibition protein (Axin)&lt;div>UniProt ID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/Q9V407" style="text-decoration: none; color: rgb(64, 148, 180); border-bottom-width: 0px; cursor: pointer; font-family: Verdana, Arial, sans-serif; font-size: 13.0571994781494px; line-height: 20.081974029541px; background-color: rgb(255, 255, 255);">Q9V407&lt;/a>&lt;/div>&lt;div>Gene Name: Axn&lt;/div>&lt;div>Gene ID:&amp;nbsp;&lt;span style="color: rgb(87, 87, 87); font-family: arial, helvetica, clean, sans-serif; font-size: 11.6999998092651px; line-height: 16.199821472168px; background-color: rgb(213, 222, 227);">43565&lt;/span>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#ad9e60ea-8aad-4001-96d8-1aa65a968e44">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:51:28Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:14729180"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23868318"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:9482734"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="e8c24391-c941-497f-af6e-6fc89a9403b6" qual:compartment="cytosol" qual:constant="false" qual:id="S_19" qual:initialLevel="0" qual:maxLevel="1" qual:name="Dally">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Division Abnormally Delayed&amp;nbsp;proteglycans&lt;div style="font-family: Arial, Verdana; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">UniProt ID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/Q966V5" style="text-decoration: none; color: rgb(64, 148, 180); border-bottom-width: 0px; cursor: pointer; font-family: Verdana, Arial, sans-serif; font-size: 13.0571994781494px; line-height: 20.081974029541px; background-color: rgb(255, 255, 255);">Q966V5&lt;/a>&lt;/div>&lt;div style="font-family: Arial, Verdana; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">Gene Name: dally&lt;/div>&lt;div style="font-family: Arial, Verdana; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">Gene ID:&amp;nbsp;&lt;span style="color: rgb(87, 87, 87); font-family: arial, helvetica, clean, sans-serif; font-size: 11.6999998092651px; line-height: 16.199821472168px; background-color: rgb(213, 222, 227);">39013&lt;/span>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#e8c24391-c941-497f-af6e-6fc89a9403b6">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:51:28Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:15056609"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:10421372"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:11092814"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:14998928"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23868318"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:10963990"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:10421371"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_5c665272-e757-4976-a855-8d0daa4b810b" qual:compartment="cytosol" qual:constant="false" qual:id="S_20" qual:initialLevel="0" qual:maxLevel="1" qual:name="Arm">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Armadillo&amp;nbsp;segment polarity protein&lt;font face="Arial, Verdana">&lt;span style="font-size: 10pt;">&amp;nbsp;(Arm)&lt;/span>&lt;/font>&lt;div style="font-family: Arial, Verdana; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">UniProt ID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/P18824" style="text-decoration: none; color: rgb(64, 148, 180); border-bottom-width: 0px; cursor: pointer; font-family: Verdana, Arial, sans-serif; font-size: 13.0571994781494px; line-height: 20.081974029541px; background-color: rgb(222, 239, 245);">P18824&lt;/a>&lt;/div>&lt;div style="font-family: Arial, Verdana; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">Gene Name: Arm&lt;/div>&lt;div style="font-family: Arial, Verdana; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">Gene ID:&amp;nbsp;&lt;span style="color: rgb(87, 87, 87); font-family: arial, helvetica, clean, sans-serif; font-size: 11.6999998092651px; line-height: 16.199821472168px; background-color: rgb(213, 222, 227);">31151&lt;/span>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_5c665272-e757-4976-a855-8d0daa4b810b">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:51:28Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:14729180"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:11927557"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:9482734"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:17881495"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:10391247"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23868318"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:14966281"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="ad15de94-2d84-4296-a493-605b41608f15" qual:compartment="cytosol" qual:constant="false" qual:id="S_21" qual:initialLevel="0" qual:maxLevel="1" qual:name="Dlp">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Dally-like proteoglycans&amp;nbsp;&lt;span style="font-size: 13.3333330154419px;">(DLP)&lt;/span>&lt;div>&lt;span style="font-size: 13.3333330154419px;">UniProt ID:&amp;nbsp;&lt;/span>&lt;a href="http://www.uniprot.org/uniprot/Q9GPL5" style="text-decoration: none; color: rgb(64, 148, 180); border-bottom-width: 0px; cursor: pointer; font-family: Verdana, Arial, sans-serif; font-size: 13.0571994781494px; line-height: 20.081974029541px; background-color: rgb(255, 255, 255);">Q9GPL5&lt;/a>&lt;/div>&lt;div>&lt;span style="font-size: 13.3333330154419px;">Gene Name: dlp&lt;/span>&lt;/div>&lt;div>&lt;span style="font-size: 13.3333330154419px;">Gene ID:&amp;nbsp;&lt;/span>&lt;span style="color: rgb(87, 87, 87); font-family: arial, helvetica, clean, sans-serif; font-size: 11.6999998092651px; line-height: 16.199821472168px; background-color: rgb(213, 222, 227);">39596&lt;/span>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#ad15de94-2d84-4296-a493-605b41608f15">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:51:28Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:15056609"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:10421372"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:11092814"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:14998928"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23868318"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:10963990"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:10421371"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_8ad86594-a616-4312-a156-8bf3fe4a2855" qual:compartment="cytosol" qual:constant="false" qual:id="S_24" qual:initialLevel="0" qual:maxLevel="1" qual:name="Sgg">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Protein Kinase Shaggy (Sgg)&lt;div>UniProt ID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/Q6A4W4" style="text-decoration: none; color: rgb(64, 148, 180); border-bottom-width: 0px; cursor: pointer; font-family: Verdana, Arial, sans-serif; font-size: 13.0571994781494px; line-height: 20.081974029541px; background-color: rgb(255, 255, 255);">Q6A4W4&lt;/a>&lt;/div>&lt;div>Gene Name: Sgg&lt;/div>&lt;div>Gene ID:&amp;nbsp;&lt;span style="color: rgb(87, 87, 87); font-family: arial, helvetica, clean, sans-serif; font-size: 11.6999998092651px; line-height: 16.199821472168px; background-color: rgb(213, 222, 227);">31248&lt;/span>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_8ad86594-a616-4312-a156-8bf3fe4a2855">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:51:28Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23868318"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_9053f36f-533b-44b3-937b-47a9458e3669" qual:compartment="cytosol" qual:constant="false" qual:id="S_25" qual:initialLevel="0" qual:maxLevel="1" qual:name="Arr">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Arrow (Arr)&lt;div>UniProt ID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/A1Z9D7" style="text-decoration: none; color: rgb(64, 148, 180); border-bottom-width: 0px; cursor: pointer; font-family: Verdana, Arial, sans-serif; font-size: 13.0571994781494px; line-height: 20.081974029541px; background-color: rgb(222, 239, 245);">A1Z9D7&lt;/a>&lt;/div>&lt;div>Gene Name: arr&lt;/div>&lt;div>Gene ID:&amp;nbsp;&lt;span style="color: rgb(87, 87, 87); font-family: arial, helvetica, clean, sans-serif; font-size: 11.6999998092651px; line-height: 16.199821472168px; background-color: rgb(213, 222, 227);">44279&lt;/span>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_9053f36f-533b-44b3-937b-47a9458e3669">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-11-15T20:51:28Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:11029007"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:14729180"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:23868318"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+    </qual:listOfQualitativeSpecies>
+    <qual:listOfTransitions xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:transition qual:id="tr_S_2">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Wg positively regulates Fz [1, 2]. Boca&lt;span style="font-size: 13.3333330154419px;">&amp;nbsp;positively regulates Fz [1, 3, 4, 5, 6, 7].&lt;/span></p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_2_in_S_1" qual:qualitativeSpecies="S_1" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>"WG can associate with members of the Frizzled family of\r\nseven transmembrane-domain receptors" [1, 2]</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_2_in_S_5" qual:qualitativeSpecies="S_5" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>WG requires two transmembrane receptors, Arrow, a member\r\nof the LDLR family, and either Frizzled or Fz2.\r\nExperimental localization of Boca and epistasis experiments\r\nsuggest a potential role for Boca in the processing and/or\r\ntransport of one of these receptors. [1, 3, 4, 5, 6, 7]</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_2" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> S_1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_5 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_3">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;span style="font-size: 13.3333330154419px;">Hyx activates Targets [1, 2].&amp;nbsp;&lt;/span>&lt;span style="font-size: 13.3333330154419px;">Lgs activates Targets [1, 3, 4, 5, 6]. Nej&lt;/span>&lt;span style="font-size: 13.3333330154419px;">&amp;nbsp;activates Targets [1]. Pan&lt;/span>&lt;span style="font-size: 13.3333330154419px;">&amp;nbsp;activates Targets [1]. Pygo&lt;/span>&lt;span style="font-size: 13.3333330154419px;">&amp;nbsp;activates Targets [1].&amp;nbsp;&lt;/span>&lt;span style="font-size: 13.3333330154419px;">Gro inhibits Targets [1]&lt;/span></p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_3_in_S_13" qual:qualitativeSpecies="S_13" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Next, ARM translocates into the nucleus and binds Pangolin (PAN). Then, the ARM/PAN\r\ncomplex with the help of other cofactors (LGS, Nej, Pygo and Hyx) activates the transcription of\r\nWG targets [1]</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_3_in_S_8" qual:qualitativeSpecies="S_8" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Gro inhibits Targets [1]</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_3_in_S_11" qual:qualitativeSpecies="S_11" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>HYX plays a key role in mediating the transcriptional output\r\nof ARM in response to WG pathway activation [1, 2]</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_3_in_S_7" qual:qualitativeSpecies="S_7" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Next, ARM translocates into the nucleus and binds Pangolin (PAN). Then, the ARM/PAN\r\ncomplex with the help of other cofactors (LGS, Nej, Pygo and Hyx) activates the transcription of\r\nWG targets [1]</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_3_in_S_15" qual:qualitativeSpecies="S_15" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Next, ARM translocates into the nucleus and binds Pangolin (PAN). Then, the ARM/PAN\r\ncomplex with the help of other cofactors (LGS, Nej, Pygo and Hyx) activates the transcription of\r\nWG targets [1]</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_3_in_S_26" qual:qualitativeSpecies="S_26" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>[The adaptor protein Legless (LGS) links ARM N-terminalhomology domain (NHD) and PYGO, is essential for WGregulated\r\ntranscriptional activation" [1, 3, 4, 5, 6]</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_3" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_13 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <and/>
+                      <apply>
+                        <and/>
+                        <apply>
+                          <eq/>
+                          <ci> S_11 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci> S_7 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <eq/>
+                        <ci> S_15 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> S_26 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <not/>
+                  <apply>
+                    <eq/>
+                    <ci> S_8 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_4">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Dsh inhibits APC [1]</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_4_in_S_10" qual:qualitativeSpecies="S_10" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;span style="font-size: 13.3333330154419px;">Dsh inhibits APC [1]&lt;/span></p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_4" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <not/>
+                <apply>
+                  <eq/>
+                  <ci> S_10 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_10">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;span style="font-size: 13.3333330154419px;">Arr activates Dsh [1]. Fz&lt;/span>&lt;span style="font-size: 13.3333330154419px;">&amp;nbsp;activates Dsh [1, 2]. Nkd&lt;/span>&lt;span style="font-size: 13.3333330154419px;">&amp;nbsp;inhibits Dsh [1, 3].&lt;/span></p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_10_in_S_25" qual:qualitativeSpecies="S_25" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Arr activates Dsh [1]</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_10_in_S_12" qual:qualitativeSpecies="S_12" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>"NKD regulates embryonic WG activity by acting as an\r\ninducible antagonist of the WG transduction component DSH" [1, 3]</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_10_in_S_2" qual:qualitativeSpecies="S_2" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>"Frizzled proteins are receptors for WG and functions\r\nupstream of Dishevelled (Dsh), recruiting this cytoplasmic protein\r\nto the cell membrane" [1, 2]&amp;nbsp;</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_10" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <eq/>
+                      <ci> S_12 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_25 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <eq/>
+                      <ci> S_12 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_15">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Arm activates Pan [1]. Nemo inactives Pan [1].</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_15_in_S_20" qual:qualitativeSpecies="S_20" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>"ARM translocates into the nucleus and binds Pangolin (PAN)." [1]</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_15_in_S_17" qual:qualitativeSpecies="S_17" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>"Nemo can inhibit PAN and thereby controls\r\nthe level of WG signalling." [1]&amp;nbsp;</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_15" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> S_20 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <not/>
+                  <apply>
+                    <eq/>
+                    <ci> S_17 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_17">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;span style="font-size: 13.3333330154419px;">Pan inhibits Nemo [1]&lt;/span></p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_17_in_S_15" qual:qualitativeSpecies="S_15" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Pan inhibits Nemo [1]</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_17" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_15 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_18">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Dsh inhibits Axin [1, 2, 3].</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_18_in_S_10" qual:qualitativeSpecies="S_10" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>"In the presence of WG ligand, DSH inhibits the\r\nphosphorylation of ARM by the complex APC/SGG/Axin,\r\nthereby stabilizing it." [1, 2, 3]</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_18" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <not/>
+                <apply>
+                  <eq/>
+                  <ci> S_10 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_19">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Ttv activates Dally [1, 2, 3, 4]. Wf inhibits Dally [1, 5, 6, 7].</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_19_in_S_9" qual:qualitativeSpecies="S_9" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>WF presumably inhibits the activity of a co-receptor\r\ncomponent, such as Dally [1, 5, 6, 7].</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_19_in_S_16" qual:qualitativeSpecies="S_16" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>The production of heparan sulfate proteoglycans (HSPG)\r\ninvolved in WG movement, such as Dally and Dally-like\r\n(DLP), requires Tout-velu (TTV), a heparan sulphate\r\ncopolymerase [1, 2, 3, 4].</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_19" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> S_16 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <not/>
+                  <apply>
+                    <eq/>
+                    <ci> S_9 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_20">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;span style="font-size: 13.3333330154419px;">CK1alpha activates Arm [1, 4, 5]. Hipk activates Arm [1, 6, 7].&amp;nbsp;&lt;/span>Slmb inhibits Arm [1].&amp;nbsp;&lt;span style="font-size: 13.3333330154419px;">Sgg inhibits Arm [1, 2].&amp;nbsp;&lt;/span>&lt;span style="font-size: 13.3333330154419px;">APC inhibits Arm [1, 2].&amp;nbsp;&lt;/span>&lt;span style="font-size: 13.3333330154419px;">Axin inhibits Arm [1, 3].&amp;nbsp;&lt;/span>&lt;span style="font-size: 13.3333330154419px;">Proteasome inhibits Arm [1, 2, 3].&lt;/span></p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_20_in_S_24" qual:qualitativeSpecies="S_24" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>SGG, a serine threonine kinase, lies upstream of ARM, and\r\npositively regulates the phosphorylation of ARM, while APC\r\nis a member of this complex. [1, 2]</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_20_in_S_4" qual:qualitativeSpecies="S_4" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>"APC is a component of the WG pathway functioning as a\r\nnegative regulator in signal transduction.\r\nThe cytoplasmic localization of ARM is regulated by\r\nphosphorylation.\r\nSGG, a serine threonine kinase, lies upstream of ARM, and\r\npositively regulates the phosphorylation of ARM, while APC\r\nis a member of this complex.\r\nThis complex leads to the degradation of ARM in the absence\r\nof WG signalling" [1, 2]</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_20_in_S_6" qual:qualitativeSpecies="S_6" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;span style="font-size: 13.3333330154419px;">Slmb inhibits Arm [1]&lt;/span></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_20_in_S_23" qual:qualitativeSpecies="S_23" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>"HIPK can promote ARM stabilization in regions of the wing\r\ndisc receiving lower levels of WG signalling. Stabilized\r\nARM can induce gene expression of WG targets." [1, 6, 7]</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_20_in_S_22" qual:qualitativeSpecies="S_22" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>"RNAi knockdown of CKI alpha inhibits ARM\r\nphosphorylation and degradation, and induces PAN-mediated\r\nluciferase expression" [1, 4, 5]</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_20_in_S_18" qual:qualitativeSpecies="S_18" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Together, Axin, APC and Zeste-white 3 form a protein\r\ncomplex, which signals ARM for destruction by the\r\nproteasome. [1, 3]</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_20_in_S_14" qual:qualitativeSpecies="S_14" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Together, Axin, APC and Zeste-white 3 form a protein\r\ncomplex, which signals ARM for destruction by the\r\nproteasome [1, 2, 3]</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_20" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_23 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> S_22 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <not/>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci> S_24 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <and/>
+                      <apply>
+                        <and/>
+                        <apply>
+                          <and/>
+                          <apply>
+                            <eq/>
+                            <ci> S_4 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                          <apply>
+                            <eq/>
+                            <ci> S_6 </ci>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <eq/>
+                          <ci> S_18 </ci>
+                          <cn type="integer"> 1 </cn>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <eq/>
+                        <ci> S_14 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_21">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Ttv activates dlp [1, 2, 3, 4]. Wf inhibits Dlp [1, 5, 6, 7].</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_21_in_S_9" qual:qualitativeSpecies="S_9" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>WF presumably inhibits the activity of a co-receptor\r\ncomponent, such as Dally or Dally-like (DLP) proteoglycans\r\nthat appear to participate in WG reception [1, 5, 6, 7]</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_21_in_S_16" qual:qualitativeSpecies="S_16" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>The production of heparan sulfate proteoglycans (HSPG)\r\ninvolved in WG movement, such as Dally and Dally-like\r\n(DLP), requires Tout-velu (TTV), a heparan sulphate\r\ncopolymerase [1, 2, 3, 4]</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_21" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> S_16 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <not/>
+                  <apply>
+                    <eq/>
+                    <ci> S_9 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_24">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Dsh inhibits Sgg [1]</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_24_in_S_10" qual:qualitativeSpecies="S_10" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;span style="font-size: 13.3333330154419px;">Dsh inhibits Sgg [1]&lt;/span></p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_24" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <not/>
+                <apply>
+                  <eq/>
+                  <ci> S_10 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_25">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Wg activates Arr [1, 2, 3, 4]</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_25_in_S_1" qual:qualitativeSpecies="S_1" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Secreted Wingless initiates signaling through the Frizzled\r\nfamily of receptors and Arrow. [1, 2, 3, 4]&amp;nbsp;</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_25" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_1 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+    </qual:listOfTransitions>
+    <listOfCompartments>
+      <compartment constant="true" id="extracellular" name="extracellular"/>
+      <compartment constant="true" id="cytosol" name="cytosol"/>
+    </listOfCompartments>
+  </model>
+</sbml>

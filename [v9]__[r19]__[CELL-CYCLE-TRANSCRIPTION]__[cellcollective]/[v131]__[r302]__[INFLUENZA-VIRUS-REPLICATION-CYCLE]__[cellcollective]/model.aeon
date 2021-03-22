@@ -1,0 +1,433 @@
+cRNA_NP -> vRNA_NP
+vRNA_NP -> vRNA_NP_M1
+M1_nuc -> vRNA_NP_M1
+M1_cyto -> M1_nuc
+vRNA_PA_M1 -> pro_vRNP_PA_M1_nuc
+PB2_nuc -> pro_vRNP_PA_M1_nuc
+PB1_PA_nuc -> pro_vRNP_PA_M1_nuc
+NP_nuc -> pro_vRNP_PA_M1_nuc
+pro_vRNP_PA_M1_cyto -| pro_vRNP_PA_M1_nuc
+pro_vRNP_PA_M1_nuc -> pro_vRNP_PA_M1_cyto
+NS2_CellularFactor -> pro_vRNP_PA_M1_cyto
+NS2_cyto -> pro_vRNP_PA_M1_cyto
+ERK -> NS2_CellularFactor
+mRNA_NS2_cyto -> NS2_cyto
+temp_vRNP_PA_nuc -> mRNA_PA_nuc
+mRNA_PA_nuc -> mRNA_PA_cyto
+MEK -> ERK
+mRNA_PB1_cyto -> PB1_cyto
+PB1_Inhibitor -| PB1_cyto
+PB1_cyto -> PB1_PA_cyto
+PA_cyto -> PB1_PA_cyto
+PB1_PA_Interface_Inhibitor -| PB1_PA_cyto
+mRNA_PA_cyto -> PA_cyto
+pro_vRNP_PB1_M1_cyto -| pro_vRNP_PB1_M1_nuc
+vRNA_PB1_M1 -> pro_vRNP_PB1_M1_nuc
+PB2_nuc -> pro_vRNP_PB1_M1_nuc
+PB1_PA_nuc -> pro_vRNP_PB1_M1_nuc
+NP_nuc -> pro_vRNP_PB1_M1_nuc
+pro_vRNP_PB1_M1_nuc -> pro_vRNP_PB1_M1_cyto
+NS2_CellularFactor -> pro_vRNP_PB1_M1_cyto
+NS2_cyto -> pro_vRNP_PB1_M1_cyto
+PB2_cyto -> PB2_nuc
+PB2_nuc -> cRNP_PB1
+PB1_PA_nuc -> cRNP_PB1
+cRNA_PB1 -> cRNP_PB1
+NP_nuc -> cRNP_PB1
+PB1_PA_cyto -> PB1_PA_nuc
+PB2_nuc -> cRNA_PB1
+temp_vRNP_PB1_nuc -> cRNA_PB1
+PB1_PA_nuc -> cRNA_PB1
+NP_nuc ->? cRNA_PB1
+cRNP_PB1 -> cRNA_PB1
+NP_cyto -> NP_nuc
+pro_vRNP_NA_M1_cyto -| pro_vRNP_NA_M1_nuc
+PB2_nuc -> pro_vRNP_NA_M1_nuc
+PB1_PA_nuc -> pro_vRNP_NA_M1_nuc
+vRNA_NA_M1 -> pro_vRNP_NA_M1_nuc
+NP_nuc -> pro_vRNP_NA_M1_nuc
+pro_vRNP_NA_M1_nuc -> pro_vRNP_NA_M1_cyto
+NS2_CellularFactor -> pro_vRNP_NA_M1_cyto
+NS2_cyto -> pro_vRNP_NA_M1_cyto
+vRNA_PA -> vRNA_PA_M1
+M1_nuc -> vRNA_PA_M1
+HA_SialicAcid_Affinity -> IVA_SialicAcid
+IVA_HA1_HA2 -> IVA_SialicAcid
+IVA_SialicAcid -> IVA_SialicAcid_CCP
+PKC -> IVA_LE
+M2_inhibitor -| IVA_LE
+IVA_ME -> IVA_LE
+IVA_LE -> par_vRNP_PB1_cyto
+temp_vRNP_M_nuc -> mRNA_M2_nuc
+mRNA_M2_nuc -> mRNA_M2_cyto
+IVA_LE -> par_vRNP_NA_cyto
+par_vRNP_NA_cyto -> temp_vRNP_NA_nuc
+PB2_nuc -> temp_vRNP_NA_nuc
+vRNA_NA -> temp_vRNP_NA_nuc
+PB1_PA_nuc -> temp_vRNP_NA_nuc
+NP_nuc -> temp_vRNP_NA_nuc
+temp_vRNP_NA_nuc -> cRNA_NA
+cRNP_NA -> cRNA_NA
+PB2_nuc -> cRNA_NA
+PB1_PA_nuc -> cRNA_NA
+NP_nuc ->? cRNA_NA
+PB2_nuc -> cRNP_NA
+cRNA_NA -> cRNP_NA
+PB1_PA_nuc -> cRNP_NA
+NP_nuc -> cRNP_NA
+par_vRNP_M_cyto -> temp_vRNP_M_nuc
+PB2_nuc -> temp_vRNP_M_nuc
+PB1_PA_nuc -> temp_vRNP_M_nuc
+vRNA_M -> temp_vRNP_M_nuc
+NP_nuc -> temp_vRNP_M_nuc
+temp_vRNP_M_nuc -> mRNA_M1_nuc
+IVA_LE -> par_vRNP_PA_cyto
+par_vRNP_PA_cyto -> temp_vRNP_PA_nuc
+vRNA_PA -> temp_vRNP_PA_nuc
+PB2_nuc -> temp_vRNP_PA_nuc
+PB1_PA_nuc -> temp_vRNP_PA_nuc
+NP_nuc -> temp_vRNP_PA_nuc
+cRNA_PA -> vRNA_PA
+Neuraminidase_inhibitor -| NA_LipidRafts
+HA_LipidRafts -> NA_LipidRafts
+Methyl_Beta_Cyclodextrin -| NA_LipidRafts
+NA_cyto -> NA_LipidRafts
+HA_cyto -> HA_LipidRafts
+Methyl_Beta_Cyclodextrin -| HA_LipidRafts
+mRNA_NA_cyto -> NA_cyto
+NS2_CellularFactor -> pro_vRNP_NS_M1_cyto
+pro_vRNP_NS_M1_nuc -> pro_vRNP_NS_M1_cyto
+NS2_cyto -> pro_vRNP_NS_M1_cyto
+pro_vRNP_NS_M1_cyto -| pro_vRNP_NS_M1_nuc
+vRNA_NS_M1 -> pro_vRNP_NS_M1_nuc
+PB2_nuc -> pro_vRNP_NS_M1_nuc
+PB1_PA_nuc -> pro_vRNP_NS_M1_nuc
+NP_nuc -> pro_vRNP_NS_M1_nuc
+temp_vRNP_PB1_nuc -> mRNA_PB1_nuc
+mRNA_PB1_nuc -> mRNA_PB1_cyto
+cRNA_HA -> vRNA_HA
+vRNA_HA -> vRNA_HA_M1
+M1_nuc -> vRNA_HA_M1
+Infected -> Raf
+PKC -> Raf
+Raf -> MEK
+U0126 -| MEK
+mRNA_M1_cyto -> M1_cyto
+IVA_SialicAcid -> Infected
+cRNP_HA -> Infected
+cRNA_HA -> cRNP_HA
+PB2_nuc -> cRNP_HA
+PB1_PA_nuc -> cRNP_HA
+NP_nuc -> cRNP_HA
+NS2_CellularFactor -> pro_vRNP_PB2_M1_cyto
+pro_vRNP_PB2_M1_nuc -> pro_vRNP_PB2_M1_cyto
+NS2_cyto -> pro_vRNP_PB2_M1_cyto
+pro_vRNP_PB2_M1_cyto -| pro_vRNP_PB2_M1_nuc
+vRNA_PB2_M1 -> pro_vRNP_PB2_M1_nuc
+PB2_nuc -> pro_vRNP_PB2_M1_nuc
+PB1_PA_nuc -> pro_vRNP_PB2_M1_nuc
+NP_nuc -> pro_vRNP_PB2_M1_nuc
+M1_nuc -> vRNA_PB2_M1
+vRNA_PB2 -> vRNA_PB2_M1
+temp_vRNP_PA_nuc -> cRNA_PA
+cRNP_PA -> cRNA_PA
+PB2_nuc -> cRNA_PA
+PB1_PA_nuc -> cRNA_PA
+NP_nuc ->? cRNA_PA
+cRNA_PA -> cRNP_PA
+PB2_nuc -> cRNP_PA
+PB1_PA_nuc -> cRNP_PA
+NP_nuc -> cRNP_PA
+mRNA_NS1_nuc -> mRNA_NS1_cyto
+mRNA_NS1_cyto -> NS1_cyto
+temp_vRNP_PB2_nuc -> mRNA_PB2_nuc
+mRNA_PB2_nuc -> mRNA_PB2_cyto
+Bisindolylmaleimide_I -| PKC
+HA_LipidRafts -> PKC
+PI3K -> PKC
+NS2_CellularFactor -> pro_vRNP_HA_M1_cyto
+pro_vRNP_HA_M1_nuc -> pro_vRNP_HA_M1_cyto
+NS2_cyto -> pro_vRNP_HA_M1_cyto
+vRNA_HA_M1 -> pro_vRNP_HA_M1_nuc
+pro_vRNP_HA_M1_cyto -| pro_vRNP_HA_M1_nuc
+PB2_nuc -> pro_vRNP_HA_M1_nuc
+PB1_PA_nuc -> pro_vRNP_HA_M1_nuc
+NP_nuc -> pro_vRNP_HA_M1_nuc
+mRNA_M1_nuc -> mRNA_M1_cyto
+temp_vRNP_NA_nuc -> mRNA_NA_nuc
+mRNA_NA_nuc -> mRNA_NA_cyto
+temp_vRNP_HA_nuc -> cRNA_HA
+PB2_nuc -> cRNA_HA
+PB1_PA_nuc -> cRNA_HA
+NP_nuc ->? cRNA_HA
+cRNP_HA -> cRNA_HA
+mRNA_HA_nuc -> mRNA_HA_cyto
+mRNA_HA_cyto -> HA_cyto
+cRNA_PB1 -> vRNA_PB1
+vRNA_PB1 -> temp_vRNP_PB1_nuc
+PB2_nuc -> temp_vRNP_PB1_nuc
+PB1_PA_nuc -> temp_vRNP_PB1_nuc
+NP_nuc -> temp_vRNP_PB1_nuc
+par_vRNP_PB1_cyto -> temp_vRNP_PB1_nuc
+par_vRNP_PB2_cyto -> temp_vRNP_PB2_nuc
+vRNA_PB2 -> temp_vRNP_PB2_nuc
+PB2_nuc -> temp_vRNP_PB2_nuc
+PB1_PA_nuc -> temp_vRNP_PB2_nuc
+NP_nuc -> temp_vRNP_PB2_nuc
+temp_vRNP_NS_nuc -> cRNA_NS
+cRNP_NS -> cRNA_NS
+PB2_nuc -> cRNA_NS
+PB1_PA_nuc -> cRNA_NS
+NP_nuc ->? cRNA_NS
+cRNA_NS -> vRNA_NS
+cRNA_PB2 -> cRNP_PB2
+PB2_nuc -> cRNP_PB2
+PB1_PA_nuc -> cRNP_PB2
+NP_nuc -> cRNP_PB2
+cRNP_PB2 -> cRNA_PB2
+temp_vRNP_PB2_nuc -> cRNA_PB2
+PB2_nuc -> cRNA_PB2
+PB1_PA_nuc -> cRNA_PB2
+NP_nuc ->? cRNA_PB2
+PI3K -> PIP2
+PIP2 -> PIP3
+NS2_CellularFactor -> pro_vRNP_NP_M1_cyto
+pro_vRNP_NP_M1_nuc -> pro_vRNP_NP_M1_cyto
+NS2_cyto -> pro_vRNP_NP_M1_cyto
+pro_vRNP_NP_M1_cyto -| pro_vRNP_NP_M1_nuc
+PB2_nuc -> pro_vRNP_NP_M1_nuc
+PB1_PA_nuc -> pro_vRNP_NP_M1_nuc
+NP_nuc -> pro_vRNP_NP_M1_nuc
+vRNA_NP_M1 -> pro_vRNP_NP_M1_nuc
+cRNA_NA -> vRNA_NA
+temp_vRNP_NP_nuc -> mRNA_NP_nuc
+mRNA_NP_nuc -> mRNA_NP_cyto
+M1_nuc -> vRNA_M_M1
+vRNA_M -> vRNA_M_M1
+vRNA_M_M1 -> pro_vRNP_M_M1_nuc
+PB2_nuc -> pro_vRNP_M_M1_nuc
+pro_vRNP_M_M1_cyto -| pro_vRNP_M_M1_nuc
+PB1_PA_nuc -> pro_vRNP_M_M1_nuc
+NP_nuc -> pro_vRNP_M_M1_nuc
+pro_vRNP_M_M1_nuc -> pro_vRNP_M_M1_cyto
+NS2_CellularFactor -> pro_vRNP_M_M1_cyto
+NS2_cyto -> pro_vRNP_M_M1_cyto
+PB2_nuc -> cRNP_NP
+cRNA_NP -> cRNP_NP
+PB1_PA_nuc -> cRNP_NP
+NP_nuc -> cRNP_NP
+cRNP_NP -> cRNA_NP
+PB2_nuc -> cRNA_NP
+PB1_PA_nuc -> cRNA_NP
+NP_nuc ->? cRNA_NP
+temp_vRNP_NP_nuc -> cRNA_NP
+vRNA_NP -> temp_vRNP_NP_nuc
+PB2_nuc -> temp_vRNP_NP_nuc
+PB1_PA_nuc -> temp_vRNP_NP_nuc
+NP_nuc -> temp_vRNP_NP_nuc
+par_vRNP_NP_cyto -> temp_vRNP_NP_nuc
+Viral_Dose -> IVA_HA1_HA2
+vRNA_NS -> temp_vRNP_NS_nuc
+PB2_nuc -> temp_vRNP_NS_nuc
+par_vRNP_NS_cyto -> temp_vRNP_NS_nuc
+PB1_PA_nuc -> temp_vRNP_NS_nuc
+NP_nuc -> temp_vRNP_NS_nuc
+temp_vRNP_NS_nuc -> mRNA_NS1_nuc
+PB2_nuc -> cRNA_M
+PB1_PA_nuc -> cRNA_M
+NP_nuc ->? cRNA_M
+cRNP_M -> cRNA_M
+temp_vRNP_M_nuc -> cRNA_M
+cRNA_M -> cRNP_M
+PB2_nuc -> cRNP_M
+PB1_PA_nuc -> cRNP_M
+NP_nuc -> cRNP_M
+vRNA_NS -> vRNA_NS_M1
+M1_nuc -> vRNA_NS_M1
+temp_vRNP_HA_nuc -> mRNA_HA_nuc
+PIP3 -> IVA_EE
+IVA_SialicAcid_CCV -> IVA_EE
+IVA_EE -> IVA_ME
+IVA_LE -> par_vRNP_PB2_cyto
+mRNA_PB2_cyto -> PB2_cyto
+RTK_Inhibitor -| RTK
+IVA_SialicAcid -> RTK
+Methyl_Beta_Cyclodextrin -| RTK
+RTK -> PI3K
+NS1_cyto -> PI3K
+Wortmannin -| PI3K
+IVA_SialicAcid_CCP -> IVA_SialicAcid_CCV
+vRNA_PB1 -> vRNA_PB1_M1
+M1_nuc -> vRNA_PB1_M1
+IVA_LE -> par_vRNP_NP_cyto
+mRNA_NS2_nuc -> mRNA_NS2_cyto
+pro_vRNP_HA_M1_cyto -> Progeny_Virion
+pro_vRNP_PB1_M1_cyto -> Progeny_Virion
+NA_LipidRafts -> Progeny_Virion
+pro_vRNP_NS_M1_cyto -> Progeny_Virion
+pro_vRNP_PB2_M1_cyto -> Progeny_Virion
+pro_vRNP_NA_M1_cyto -> Progeny_Virion
+pro_vRNP_NP_M1_cyto -> Progeny_Virion
+HA_LipidRafts -> Progeny_Virion
+pro_vRNP_M_M1_cyto -> Progeny_Virion
+M2_cyto -> Progeny_Virion
+pro_vRNP_PA_M1_cyto -> Progeny_Virion
+mRNA_M2_cyto -> M2_cyto
+vRNA_HA -> temp_vRNP_HA_nuc
+PB2_nuc -> temp_vRNP_HA_nuc
+PB1_PA_nuc -> temp_vRNP_HA_nuc
+NP_nuc -> temp_vRNP_HA_nuc
+par_vRNP_HA_cyto -> temp_vRNP_HA_nuc
+temp_vRNP_NS_nuc -> mRNA_NS2_nuc
+PB2_nuc -> cRNP_NS
+PB1_PA_nuc -> cRNP_NS
+NP_nuc -> cRNP_NS
+cRNA_NS -> cRNP_NS
+mRNA_NP_cyto -> NP_cyto
+cRNA_M -> vRNA_M
+M1_nuc -> vRNA_NA_M1
+vRNA_NA -> vRNA_NA_M1
+IVA_LE -> par_vRNP_M_cyto
+cRNA_PB2 -> vRNA_PB2
+IVA_LE -> par_vRNP_NS_cyto
+IVA_LE -> par_vRNP_HA_cyto
+vRNA_HA_M1 -| M1_M1
+vRNA_M_M1 -| M1_M1
+vRNA_PB1_M1 -| M1_M1
+vRNA_PA_M1 -| M1_M1
+vRNA_PB2_M1 -| M1_M1
+vRNA_NS_M1 -| M1_M1
+M1_cyto -> M1_M1
+vRNA_NA_M1 -| M1_M1
+vRNA_NP_M1 -| M1_M1
+$Bisindolylmaleimide_I: true
+$ERK: MEK
+$HA_LipidRafts: (HA_cyto & !Methyl_Beta_Cyclodextrin)
+$HA_SialicAcid_Affinity: true
+$HA_cyto: mRNA_HA_cyto
+$IVA_EE: (IVA_SialicAcid_CCV & PIP3)
+$IVA_HA1_HA2: Viral_Dose
+$IVA_LE: ((IVA_ME & PKC) & !M2_inhibitor)
+$IVA_ME: IVA_EE
+$IVA_SialicAcid: (IVA_HA1_HA2 & HA_SialicAcid_Affinity)
+$IVA_SialicAcid_CCP: IVA_SialicAcid
+$IVA_SialicAcid_CCV: IVA_SialicAcid_CCP
+$Infected: (IVA_SialicAcid & cRNP_HA)
+$M1_M1: (M1_cyto & !(((((((vRNA_PA_M1 | vRNA_HA_M1) | vRNA_NP_M1) | vRNA_NS_M1) | vRNA_PB2_M1) | vRNA_PB1_M1) | vRNA_M_M1) | vRNA_NA_M1))
+$M1_cyto: mRNA_M1_cyto
+$M1_nuc: M1_cyto
+$M2_cyto: mRNA_M2_cyto
+$M2_inhibitor: true
+$MEK: (Raf & !U0126)
+$Methyl_Beta_Cyclodextrin: true
+$NA_LipidRafts: ((NA_cyto & HA_LipidRafts) & !(Methyl_Beta_Cyclodextrin | Neuraminidase_inhibitor))
+$NA_cyto: mRNA_NA_cyto
+$NP_cyto: mRNA_NP_cyto
+$NP_nuc: NP_cyto
+$NS1_cyto: mRNA_NS1_cyto
+$NS2_CellularFactor: ERK
+$NS2_cyto: mRNA_NS2_cyto
+$Neuraminidase_inhibitor: true
+$PA_cyto: mRNA_PA_cyto
+$PB1_Inhibitor: true
+$PB1_PA_Interface_Inhibitor: true
+$PB1_PA_cyto: ((PB1_cyto & PA_cyto) & !PB1_PA_Interface_Inhibitor)
+$PB1_PA_nuc: PB1_PA_cyto
+$PB1_cyto: (mRNA_PB1_cyto & !PB1_Inhibitor)
+$PB2_cyto: mRNA_PB2_cyto
+$PB2_nuc: PB2_cyto
+$PI3K: ((NS1_cyto & !Wortmannin) | (RTK & !Wortmannin))
+$PIP2: PI3K
+$PIP3: PIP2
+$PKC: ((HA_LipidRafts & !Bisindolylmaleimide_I) | (PI3K & !Bisindolylmaleimide_I))
+$Progeny_Virion: (NA_LipidRafts & (((((((((pro_vRNP_HA_M1_cyto & pro_vRNP_PB1_M1_cyto) & pro_vRNP_NS_M1_cyto) & pro_vRNP_PB2_M1_cyto) & pro_vRNP_NA_M1_cyto) & pro_vRNP_NP_M1_cyto) & HA_LipidRafts) & pro_vRNP_M_M1_cyto) & M2_cyto) & pro_vRNP_PA_M1_cyto))
+$RTK: (IVA_SialicAcid & !(RTK_Inhibitor | Methyl_Beta_Cyclodextrin))
+$RTK_Inhibitor: true
+$Raf: (PKC & Infected)
+$U0126: true
+$Viral_Dose: true
+$Wortmannin: true
+$cRNA_HA: ((cRNP_HA & (((PB2_nuc & PB1_PA_nuc) & NP_nuc) | (PB2_nuc & PB1_PA_nuc))) | (temp_vRNP_HA_nuc & ((PB2_nuc & PB1_PA_nuc) | ((PB2_nuc & PB1_PA_nuc) & NP_nuc))))
+$cRNA_M: ((cRNP_M & ((PB2_nuc & PB1_PA_nuc) | ((PB2_nuc & PB1_PA_nuc) & NP_nuc))) | (temp_vRNP_M_nuc & (((PB2_nuc & PB1_PA_nuc) & NP_nuc) | (PB2_nuc & PB1_PA_nuc))))
+$cRNA_NA: ((temp_vRNP_NA_nuc & ((PB2_nuc & PB1_PA_nuc) | ((PB2_nuc & PB1_PA_nuc) & NP_nuc))) | (cRNP_NA & (((PB2_nuc & PB1_PA_nuc) & NP_nuc) | (PB2_nuc & PB1_PA_nuc))))
+$cRNA_NP: ((cRNP_NP & ((PB2_nuc & PB1_PA_nuc) | ((PB2_nuc & PB1_PA_nuc) & NP_nuc))) | (temp_vRNP_NP_nuc & ((PB2_nuc & PB1_PA_nuc) | ((PB2_nuc & PB1_PA_nuc) & NP_nuc))))
+$cRNA_NS: ((cRNP_NS & ((PB2_nuc & PB1_PA_nuc) | ((PB2_nuc & PB1_PA_nuc) & NP_nuc))) | (temp_vRNP_NS_nuc & (((PB2_nuc & PB1_PA_nuc) & NP_nuc) | (PB2_nuc & PB1_PA_nuc))))
+$cRNA_PA: ((cRNP_PA & (((PB2_nuc & PB1_PA_nuc) & NP_nuc) | (PB2_nuc & PB1_PA_nuc))) | (temp_vRNP_PA_nuc & (((PB2_nuc & PB1_PA_nuc) & NP_nuc) | (PB2_nuc & PB1_PA_nuc))))
+$cRNA_PB1: ((cRNP_PB1 & ((PB2_nuc & PB1_PA_nuc) | ((PB2_nuc & PB1_PA_nuc) & NP_nuc))) | (temp_vRNP_PB1_nuc & (((PB2_nuc & PB1_PA_nuc) & NP_nuc) | (PB2_nuc & PB1_PA_nuc))))
+$cRNA_PB2: ((temp_vRNP_PB2_nuc & ((PB2_nuc & PB1_PA_nuc) | ((PB2_nuc & PB1_PA_nuc) & NP_nuc))) | (cRNP_PB2 & ((PB2_nuc & PB1_PA_nuc) | ((PB2_nuc & PB1_PA_nuc) & NP_nuc))))
+$cRNP_HA: (cRNA_HA & ((PB2_nuc & PB1_PA_nuc) & NP_nuc))
+$cRNP_M: (cRNA_M & ((PB2_nuc & PB1_PA_nuc) & NP_nuc))
+$cRNP_NA: (cRNA_NA & ((PB2_nuc & PB1_PA_nuc) & NP_nuc))
+$cRNP_NP: (cRNA_NP & ((PB2_nuc & PB1_PA_nuc) & NP_nuc))
+$cRNP_NS: (cRNA_NS & ((PB2_nuc & PB1_PA_nuc) & NP_nuc))
+$cRNP_PA: (cRNA_PA & ((PB2_nuc & PB1_PA_nuc) & NP_nuc))
+$cRNP_PB1: (cRNA_PB1 & ((PB2_nuc & PB1_PA_nuc) & NP_nuc))
+$cRNP_PB2: (cRNA_PB2 & ((PB2_nuc & PB1_PA_nuc) & NP_nuc))
+$mRNA_HA_cyto: mRNA_HA_nuc
+$mRNA_HA_nuc: temp_vRNP_HA_nuc
+$mRNA_M1_cyto: mRNA_M1_nuc
+$mRNA_M1_nuc: temp_vRNP_M_nuc
+$mRNA_M2_cyto: mRNA_M2_nuc
+$mRNA_M2_nuc: temp_vRNP_M_nuc
+$mRNA_NA_cyto: mRNA_NA_nuc
+$mRNA_NA_nuc: temp_vRNP_NA_nuc
+$mRNA_NP_cyto: mRNA_NP_nuc
+$mRNA_NP_nuc: temp_vRNP_NP_nuc
+$mRNA_NS1_cyto: mRNA_NS1_nuc
+$mRNA_NS1_nuc: temp_vRNP_NS_nuc
+$mRNA_NS2_cyto: mRNA_NS2_nuc
+$mRNA_NS2_nuc: temp_vRNP_NS_nuc
+$mRNA_PA_cyto: mRNA_PA_nuc
+$mRNA_PA_nuc: temp_vRNP_PA_nuc
+$mRNA_PB1_cyto: mRNA_PB1_nuc
+$mRNA_PB1_nuc: temp_vRNP_PB1_nuc
+$mRNA_PB2_cyto: mRNA_PB2_nuc
+$mRNA_PB2_nuc: temp_vRNP_PB2_nuc
+$par_vRNP_HA_cyto: IVA_LE
+$par_vRNP_M_cyto: IVA_LE
+$par_vRNP_NA_cyto: IVA_LE
+$par_vRNP_NP_cyto: IVA_LE
+$par_vRNP_NS_cyto: IVA_LE
+$par_vRNP_PA_cyto: IVA_LE
+$par_vRNP_PB1_cyto: IVA_LE
+$par_vRNP_PB2_cyto: IVA_LE
+$pro_vRNP_HA_M1_cyto: (pro_vRNP_HA_M1_nuc & (NS2_CellularFactor & NS2_cyto))
+$pro_vRNP_HA_M1_nuc: ((vRNA_HA_M1 & ((PB2_nuc & PB1_PA_nuc) & NP_nuc)) & !pro_vRNP_HA_M1_cyto)
+$pro_vRNP_M_M1_cyto: (pro_vRNP_M_M1_nuc & (NS2_CellularFactor & NS2_cyto))
+$pro_vRNP_M_M1_nuc: ((vRNA_M_M1 & ((PB2_nuc & PB1_PA_nuc) & NP_nuc)) & !pro_vRNP_M_M1_cyto)
+$pro_vRNP_NA_M1_cyto: (pro_vRNP_NA_M1_nuc & (NS2_CellularFactor & NS2_cyto))
+$pro_vRNP_NA_M1_nuc: ((vRNA_NA_M1 & ((PB2_nuc & PB1_PA_nuc) & NP_nuc)) & !pro_vRNP_NA_M1_cyto)
+$pro_vRNP_NP_M1_cyto: (pro_vRNP_NP_M1_nuc & (NS2_CellularFactor & NS2_cyto))
+$pro_vRNP_NP_M1_nuc: ((vRNA_NP_M1 & ((PB2_nuc & PB1_PA_nuc) & NP_nuc)) & !pro_vRNP_NP_M1_cyto)
+$pro_vRNP_NS_M1_cyto: (pro_vRNP_NS_M1_nuc & (NS2_CellularFactor & NS2_cyto))
+$pro_vRNP_NS_M1_nuc: ((vRNA_NS_M1 & ((PB2_nuc & PB1_PA_nuc) & NP_nuc)) & !pro_vRNP_NS_M1_cyto)
+$pro_vRNP_PA_M1_cyto: (pro_vRNP_PA_M1_nuc & (NS2_CellularFactor & NS2_cyto))
+$pro_vRNP_PA_M1_nuc: ((vRNA_PA_M1 & ((PB2_nuc & PB1_PA_nuc) & NP_nuc)) & !pro_vRNP_PA_M1_cyto)
+$pro_vRNP_PB1_M1_cyto: (pro_vRNP_PB1_M1_nuc & (NS2_CellularFactor & NS2_cyto))
+$pro_vRNP_PB1_M1_nuc: ((vRNA_PB1_M1 & ((PB2_nuc & PB1_PA_nuc) & NP_nuc)) & !pro_vRNP_PB1_M1_cyto)
+$pro_vRNP_PB2_M1_cyto: (pro_vRNP_PB2_M1_nuc & (NS2_CellularFactor & NS2_cyto))
+$pro_vRNP_PB2_M1_nuc: ((vRNA_PB2_M1 & ((PB2_nuc & PB1_PA_nuc) & NP_nuc)) & !pro_vRNP_PB2_M1_cyto)
+$temp_vRNP_HA_nuc: (par_vRNP_HA_cyto | (vRNA_HA & ((PB2_nuc & PB1_PA_nuc) & NP_nuc)))
+$temp_vRNP_M_nuc: (par_vRNP_M_cyto | (vRNA_M & ((PB2_nuc & PB1_PA_nuc) & NP_nuc)))
+$temp_vRNP_NA_nuc: (par_vRNP_NA_cyto | (vRNA_NA & ((PB2_nuc & PB1_PA_nuc) & NP_nuc)))
+$temp_vRNP_NP_nuc: (par_vRNP_NP_cyto | (vRNA_NP & ((PB2_nuc & PB1_PA_nuc) & NP_nuc)))
+$temp_vRNP_NS_nuc: ((vRNA_NS & ((PB2_nuc & PB1_PA_nuc) & NP_nuc)) | par_vRNP_NS_cyto)
+$temp_vRNP_PA_nuc: ((vRNA_PA & ((PB2_nuc & PB1_PA_nuc) & NP_nuc)) | par_vRNP_PA_cyto)
+$temp_vRNP_PB1_nuc: ((vRNA_PB1 & ((PB2_nuc & PB1_PA_nuc) & NP_nuc)) | par_vRNP_PB1_cyto)
+$temp_vRNP_PB2_nuc: (par_vRNP_PB2_cyto | (vRNA_PB2 & ((PB2_nuc | PB1_PA_nuc) | NP_nuc)))
+$vRNA_HA: cRNA_HA
+$vRNA_HA_M1: (vRNA_HA & M1_nuc)
+$vRNA_M: cRNA_M
+$vRNA_M_M1: (vRNA_M & M1_nuc)
+$vRNA_NA: cRNA_NA
+$vRNA_NA_M1: (vRNA_NA & M1_nuc)
+$vRNA_NP: cRNA_NP
+$vRNA_NP_M1: (vRNA_NP & M1_nuc)
+$vRNA_NS: cRNA_NS
+$vRNA_NS_M1: (vRNA_NS & M1_nuc)
+$vRNA_PA: cRNA_PA
+$vRNA_PA_M1: (vRNA_PA & M1_nuc)
+$vRNA_PB1: cRNA_PB1
+$vRNA_PB1_M1: (vRNA_PB1 & M1_nuc)
+$vRNA_PB2: cRNA_PB2
+$vRNA_PB2_M1: (vRNA_PB2 & M1_nuc)

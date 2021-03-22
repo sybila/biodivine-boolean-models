@@ -1,0 +1,92 @@
+MAPK -> p16
+p53 -| p16
+E2F1 -| p16
+PRC -| p16
+p16 -> Senescence
+p21 -> Senescence
+mTORC1_S6K1 -> Senescence
+p53 -> p21
+AKT -| p21
+MYC -| p21
+FOXO -> p21
+AMPK -| mTORC1_S6K1
+TSC -| mTORC1_S6K1
+p21 -| G1_S
+CDK2 -> G1_S
+E2F1 -> G1_S
+Metabolism -> G1_S
+p21 -| CDK2
+mTORC1_S6K1 -> CDK2
+MYC -> CDK2
+E2F1 -> CDK2
+GF -> E2F1
+MYC -> E2F1
+pRB -| E2F1
+E2F1 -> E2F1
+MAPK -> Metabolism
+AKT -> Metabolism
+mTORC1_S6K1 -> Metabolism
+PP1C -> Metabolism
+GF -> MAPK
+PP2A -| MAPK
+mTORC1_S6K1 -| PP2A
+MDM2 -| p53
+AKT -| PRC
+MYC -> PRC
+p16 -> MDM2
+p53 -> MDM2
+AKT -> MDM2
+mTORC1_S6K1 -| MDM2
+MYC -| MDM2
+E2F1 -| MDM2
+IRS_PIK3CA -> AKT
+PTEN -| AKT
+CDK2 -> AKT
+PP2A -| AKT
+MAPK -> MYC
+p53 -| MYC
+mTORC1_S6K1 -> MYC
+E2F1 -> MYC
+MAPK -| FOXO
+p16 -> FOXO
+AKT -| FOXO
+AMPK -> FOXO
+Metabolism -> FOXO
+Insulin -> IRS_PIK3CA
+mTORC1_S6K1 -| IRS_PIK3CA
+p53 -> PTEN
+AKT -| PTEN
+p53 -> AMPK
+ATP -| AMPK
+MAPK -| TSC
+AKT -| TSC
+AMPK -> TSC
+Metabolism -> ATP
+CDK2 -| pRB
+MAPK -> PP1C
+AKT -> PP1C
+$AKT: ((((!IRS_PIK3CA & !PTEN) & CDK2) & !PP2A) | ((IRS_PIK3CA & !PTEN) & !PP2A))
+$AMPK: (p53 & !ATP)
+$ATP: Metabolism
+$CDK2: ((((!p21 & mTORC1_S6K1) & !MYC) & E2F1) | ((!p21 & mTORC1_S6K1) & MYC))
+$E2F1: ((((!GF & MYC) & !pRB) & E2F1) | ((GF & !pRB) & E2F1))
+$FOXO: ((((((!MAPK & !p16) & !AKT) & !AMPK) & Metabolism) | (((!MAPK & !p16) & !AKT) & AMPK)) | ((!MAPK & p16) & !AKT))
+$G1_S: (((!p21 & CDK2) & E2F1) & Metabolism)
+$GF: true
+$IRS_PIK3CA: (Insulin & !mTORC1_S6K1)
+$Insulin: true
+$MAPK: (GF & !PP2A)
+$MDM2: (((((((!p16 & !p53) & AKT) & !mTORC1_S6K1) & !MYC) & !E2F1) | ((((!p16 & p53) & !mTORC1_S6K1) & !MYC) & !E2F1)) | (((p16 & !mTORC1_S6K1) & !MYC) & !E2F1))
+$MYC: (((MAPK & !p53) & mTORC1_S6K1) & E2F1)
+$Metabolism: ((((((!MAPK & !AKT) & mTORC1_S6K1) & PP1C) | ((!MAPK & AKT) & mTORC1_S6K1)) | ((MAPK & !AKT) & PP1C)) | (MAPK & AKT))
+$PP1C: ((!MAPK & AKT) | MAPK)
+$PP2A: !mTORC1_S6K1
+$PRC: (!AKT & MYC)
+$PTEN: (p53 & !AKT)
+$Senescence: (((!p16 & p21) & mTORC1_S6K1) | p16)
+$TSC: ((!MAPK & !AKT) & AMPK)
+$mTORC1_S6K1: (!AMPK & !TSC)
+$p16: (((MAPK & !p53) & !E2F1) & !PRC)
+$p21: ((((!p53 & !AKT) & !MYC) & FOXO) | ((p53 & !AKT) & !MYC))
+$p53: !MDM2
+$pRB: !CDK2

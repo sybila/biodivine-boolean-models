@@ -1,0 +1,23 @@
+#position:her6:137,194
+$her6:(!miR_9 & !Neural_Precursor)
+miR_9 -| her6
+Neural_Precursor -| her6
+#position:miR_9:285,76
+$miR_9:(!her6 & !Neural_Precursor)
+her6 -| miR_9
+Neural_Precursor -| miR_9
+#position:Neural_Precursor:420,331
+$Neural_Precursor:elavl3_HuC
+elavl3_HuC -> Neural_Precursor
+#position:zic5:285,198
+$zic5:(!miR_9 & !Neural_Precursor)
+miR_9 -| zic5
+Neural_Precursor -| zic5
+#position:elavl3_HuC:429,199
+$elavl3_HuC:(!miR_9 & !Progenitor)
+miR_9 -| elavl3_HuC
+Progenitor -| elavl3_HuC
+#position:Progenitor:139,329
+$Progenitor:((!her6 & zic5) | her6)
+her6 -> Progenitor
+zic5 -> Progenitor

@@ -1,0 +1,40 @@
+csa12_JNK_complex_Cytoplasm -> csa1_JNK_complex_Cytoplasm
+MAP2K4_phosphorylated -> csa1_JNK_complex_Cytoplasm
+MAP2K7_phosphorylated -> csa1_JNK_complex_Cytoplasm
+7a -> csa1_JNK_complex_Cytoplasm
+3a -> csa1_JNK_complex_Cytoplasm
+S -> csa1_JNK_complex_Cytoplasm
+MEKK1_4_complex -> MAP2K4_phosphorylated
+SARS_CoV_1_proteins_complex -> MAP2K4_phosphorylated
+MLK1_2_3_complex -> MAP2K7_phosphorylated
+SARS_CoV_1_proteins_complex -> MAP2K7_phosphorylated
+SARS_CoV_1_proteins_complex -> MLK1_2_3_complex
+csa1_JNK_complex_Cytoplasm -> AP_1_complex
+3b -> AP_1_complex
+SARS_CoV_1_proteins_complex -> MEKK1_4_complex
+csa1_JNK_complex_Cytoplasm -> BCL2_phosphorylated
+AP_1_complex -> Innate_Immunity_phenotype
+BCL2_phosphorylated -| Apoptosis_phenotype
+BCL2_phosphorylated -> Autophagy_phenotype
+csa1_JNK_complex_Cytoplasm -> ATF2_phosphorylated
+csa1_JNK_complex_Cytoplasm -> TP53_phosphorylated
+TP53_phosphorylated -> TP53_signalling_phenotype
+$3a: true
+$3b: true
+$7a: true
+$AP_1_complex: (csa1_JNK_complex_Cytoplasm | 3b)
+$ATF2_phosphorylated: csa1_JNK_complex_Cytoplasm
+$Apoptosis_phenotype: !BCL2_phosphorylated
+$Autophagy_phenotype: BCL2_phosphorylated
+$BCL2_phosphorylated: csa1_JNK_complex_Cytoplasm
+$Innate_Immunity_phenotype: AP_1_complex
+$MAP2K4_phosphorylated: (MEKK1_4_complex | SARS_CoV_1_proteins_complex)
+$MAP2K7_phosphorylated: (MLK1_2_3_complex | SARS_CoV_1_proteins_complex)
+$MEKK1_4_complex: SARS_CoV_1_proteins_complex
+$MLK1_2_3_complex: SARS_CoV_1_proteins_complex
+$S: true
+$SARS_CoV_1_proteins_complex: true
+$TP53_phosphorylated: csa1_JNK_complex_Cytoplasm
+$TP53_signalling_phenotype: TP53_phosphorylated
+$csa12_JNK_complex_Cytoplasm: true
+$csa1_JNK_complex_Cytoplasm: (((((MAP2K4_phosphorylated | MAP2K7_phosphorylated) | 7a) | 3a) & csa12_JNK_complex_Cytoplasm) | (csa12_JNK_complex_Cytoplasm & S))
