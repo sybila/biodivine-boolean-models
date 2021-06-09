@@ -1,0 +1,63 @@
+targets,factors
+AP1, (cFOS & cJUN)
+ATF2, (JNK & p38)
+Akt, (PI3K & !PTEN)
+C3G, CRKL
+CCL20, Erk
+CDK2, (CyclinD & (!CDKN1A | !CDKN2A))
+CDKN1A, STAT3
+CDKN2A, (Elk1 | ETS)
+CREB, RSK
+CRKL, Grb2
+CTGF, (Erk | p38)
+Ca, IP3
+Cdc42_Rac1, (Akt & (Ras & DOCK180))
+CellMigration, (IL8 & ((CTGF & CCL20) & PTGS2))
+CyclinD, (Elk1 | ATF2)
+DAG, PLC_g
+DOCK180, CRKL
+ECM, MMP1_10
+EGFR, (HBEGF | EGF)
+EGR1, Erk
+ETS, Erk
+Elk1, (JNK | Erk)
+Erk, Mek
+Fak, ((Integrins & Rap1) & !PTEN)
+Grb2, Shc
+HBEGF, (p38 | Erk)
+IL8, (Erk | p38)
+IP3, PLC_g
+Integrins, ECM
+JNK, (PAK2 | (Mekk7 & Mkk4))
+MET, HGF
+MLK3, Cdc42_Rac1
+MMP1_10, Plasmin
+Mek, (Mekk1 | Raf)
+Mekk1, Cdc42_Rac1
+Mekk4, Cdc42_Rac1
+Mekk7, Mekk1
+Mkk3, MLK3
+Mkk4, ((MLK3 | Mekk1) | Mekk4)
+Mkk6, MLK3
+PAK1, Cdc42_Rac1
+PAK2, Cdc42_Rac1
+PAK3, Cdc42_Rac1
+PI3K, (MET | (EGFR & Fak))
+PKC, ((DAG & Ca) & !AKAP12)
+PLC_g, (MET | EGFR)
+PTGS2, (ATF2 | (cFOS & cJUN))
+Plasmin, (uPA & PAI_1)
+Proliferation, (CDK2 & CyclinD)
+RSK, Erk
+Raf, (Ras & (PAK3 & PKC))
+Rap1, C3G
+Ras, SOS
+SOS, Grb2
+STAT3, Erk
+Shc, ((MET | Fak) | EGFR)
+cFOS, Erk
+cJUN, (JNK & p38)
+cMYC, Erk
+p38, (((Mkk3 & Mkk6) & !DUSP1) | PAK1)
+uPA, uPAR
+uPAR, AP1
