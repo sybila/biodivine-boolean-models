@@ -84,6 +84,8 @@ fn main() {
                 write_network(&free_network_inputs(&network), &output_dir, "model_inputs_free");
                 println!(" - model has {} inputs, input specific translations created.", network_inputs(&network).len());
             }
+        } else {
+            println!(" - model has no inputs.");
         }
     }
 
