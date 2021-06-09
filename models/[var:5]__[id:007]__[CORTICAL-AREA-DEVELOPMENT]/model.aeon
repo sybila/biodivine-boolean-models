@@ -1,0 +1,19 @@
+Sp8 -| Emx2
+Coup_fti -> Emx2
+Pax6 -| Emx2
+Fgf8 -| Emx2
+Emx2 -| Sp8
+Fgf8 -> Sp8
+Sp8 -| Coup_fti
+Fgf8 -| Coup_fti
+Sp8 -> Pax6
+Coup_fti -| Pax6
+Emx2 -| Pax6
+Sp8 -> Fgf8
+Emx2 -| Fgf8
+Fgf8 -> Fgf8
+$Coup_fti: (!(Fgf8 | Sp8) | !(Sp8 | Fgf8))
+$Emx2: (Coup_fti & !((Fgf8 | Sp8) | Pax6))
+$Fgf8: ((Fgf8 & Sp8) & !Emx2)
+$Pax6: (Sp8 & !(Emx2 | Coup_fti))
+$Sp8: (Fgf8 & !Emx2)
