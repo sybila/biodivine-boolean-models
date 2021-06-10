@@ -1,0 +1,216 @@
+Kc -> Kv
+ABA -> PLC
+Cac -> PLC
+BL -> PLC
+Cac -> CaATPase
+PP1cc_1 -> PK_3
+PP1cc_3 -? PK_3
+PP1cc_2 -? PK_3
+Ci -? PK_3
+Ci_sup -? PK_3
+PMV_pos_ -> Kout
+ABA -> Kout
+NO -| Kout
+ROS -| Kout
+Ci -> Kout
+FFA -| Kout
+Ci_sup -> Kout
+ABA -> AnionCh_high
+Ci -> AnionCh_high
+Cac_high -> AnionCh_high
+ABI1 -| AnionCh_high
+Ci_sup -> AnionCh_high
+phph -> carbfix
+CO2 -> carbfix
+Ci -> carbfix
+BL -> phph
+RL -> phph
+PLA2 -> FFA
+phot1_complex -? AnionCh
+ABA -? AnionCh
+BL -| AnionCh
+Ci -? AnionCh
+ABI1 -? AnionCh
+Cac_high -? AnionCh
+Ci_sup -? AnionCh
+BL -> phph_high
+RL -> phph_high
+PK_1 -? HATPase_2
+phph -? HATPase_2
+FFA -? HATPase_2
+phph_high -> HATPase_2
+PLA2 -> HATPase_2
+Cac_high -| HATPase_2
+PK_3 -? HATPase_2
+PK_2 -? HATPase_2
+CaIc -> Cac
+ABA -> Cac
+CaR -> Cac
+CaATPase -| Cac
+NO -> CaR
+PLC -> CaR
+PK_1 -? HATPase_1
+phph -> HATPase_1
+FFA -? HATPase_1
+PLA2 -> HATPase_1
+Cac_high -| HATPase_1
+PK_3 -? HATPase_1
+PK_2 -? HATPase_1
+CO2 -> carbfix_high
+Ci -> carbfix_high
+phph_high -> carbfix_high
+CO2_high -? Ci
+CO2 -> Ci
+carbfix_high -| Ci
+MCPS_high -| Ci
+PMV_pos_ -> PMV_pos_
+HATPase_2 -? PMV_pos_
+KEV -? PMV_pos_
+PMV_neg -| PMV_pos_
+Cac_high -? PMV_pos_
+HATPase_1 -? PMV_pos_
+HATPase_3 -? PMV_pos_
+AnionCh -? PMV_pos_
+phot1_complex -> PLA2
+BL -> PLA2
+RL -> PLA2
+phph -> ROS
+ABI1 -| ROS
+PLD -> ROS
+PMV_neg -> Kin
+ABA -? Kin
+FFA -? Kin
+Ci -? Kin
+Cac_high -| Kin
+Ci_sup -? Kin
+PP1cc_1 -? PK_1
+PP1cc_3 -? PK_1
+PP1cc_2 -? PK_1
+Ci -? PK_1
+Ci_sup -? PK_1
+HATPase_3 -> SO_3
+Kv -> SO_3
+HATPase_1 -> SO_1
+Kv -> SO_1
+Cac_high -> KEV
+Kv -> KEV
+Kin -> Kc
+HATPase_2 -> Kc
+KEV -> Kc
+HATPase_1 -> Kc
+AnionCh_high -| Kc
+HATPase_3 -> Kc
+AnionCh -? Kc
+Kv -> Kc
+Kout -| Kc
+BL -> MCPS
+Ci -> MCPS
+RL -> MCPS
+Ci_sup -> MCPS
+HATPase_2 -> SO_2
+sucrose -> SO_2
+Kv -? SO_2
+phot1_complex -? PP1cc_3
+BL -? PP1cc_3
+PLD -? PP1cc_3
+PLD_high -? PP1cc_3
+PMV_neg -> CaIc
+ROS -> CaIc
+phot1_complex -> PP1cc_1
+BL -> PP1cc_1
+phph -> NO
+ROS -> NO
+PMV_pos_ -? PMV_neg
+HATPase_2 -? PMV_neg
+KEV -| PMV_neg
+PMV_neg -> PMV_neg
+Cac_high -? PMV_neg
+HATPase_1 -? PMV_neg
+AnionCh -? PMV_neg
+HATPase_3 -? PMV_neg
+ABA -> PLD
+NO -> PLD
+BL -> MCPS_high
+Ci -> MCPS_high
+RL -> MCPS_high
+Ci_sup -> MCPS_high
+ABA -| sucrose
+PLD -> sucrose
+ABA -| ABI1
+CO2_high -> Ci_sup
+CO2 -> Ci_sup
+carbfix_high -> Ci_sup
+MCPS_high -> Ci_sup
+PK_1 -? HATPase_3
+phph -? HATPase_3
+FFA -? HATPase_3
+phph_high -? HATPase_3
+PLA2 -? HATPase_3
+Cac_high -| HATPase_3
+PK_3 -? HATPase_3
+PK_2 -? HATPase_3
+BL -> phot1_complex
+phot1_complex -? PP1cc_2
+BL -? PP1cc_2
+PLD -? PP1cc_2
+PLD_high -| PP1cc_2
+ABA -> PLD_high
+NO -> PLD_high
+CaIc -> Cac_high
+ABA -> Cac_high
+CaR -> Cac_high
+CaATPase -| Cac_high
+PP1cc_1 -? PK_2
+PP1cc_3 -? PK_2
+PP1cc_2 -? PK_2
+Ci -? PK_2
+Ci_sup -? PK_2
+$ABA: false
+$ABI1: !ABA
+$AnionCh: (((((((((Ci_sup & ((((!phot1_complex & !BL) & !ABA) & !ABI1) & !Cac_high)) | ((ABA & (((!ABI1 & (Ci | Ci_sup)) | (ABI1 & (!phot1_complex & !BL))) | (((!Ci & !ABI1) & !Cac_high) & !Ci_sup))) & !(ABI1 | ((ABI1 & (phot1_complex | Ci)) & (!BL & !Cac_high))))) | (ABI1 & ((!phot1_complex & !BL) & !ABA))) | (Ci & (((((!phot1_complex & !BL) & !ABA) & !ABI1) & !Cac_high) & !Ci_sup))) | (Ci & Ci_sup)) | ((ABA & ABI1) & (((!phot1_complex & !BL) & !Cac_high) | (!phot1_complex & !BL)))) | ((Ci & (((!phot1_complex & !BL) & !Cac_high) & !Ci_sup)) & (ABA & ABI1))) | (Cac_high & !ABI1)) | !((((((phot1_complex | ABA) | BL) | Ci) | ABI1) | Cac_high) | Ci_sup))
+$AnionCh_high: (((Ci & Ci_sup) | (ABA & !ABI1)) | (Cac_high & !ABI1))
+$BL: false
+$CO2: false
+$CO2_high: false
+$CaATPase: Cac
+$CaIc: (PMV_neg | ROS)
+$CaR: (NO | PLC)
+$Cac: (((CaR & !CaATPase) | (CaIc & !CaATPase)) | ABA)
+$Cac_high: (((CaR & ABA) & !CaATPase) | ((CaIc & ABA) & !CaATPase))
+$Ci: (CO2 & (CO2_high | ((!CO2_high & !carbfix_high) & !MCPS_high)))
+$Ci_sup: (CO2 & ((CO2_high | carbfix_high) | MCPS_high))
+$FFA: PLA2
+$HATPase_1: (((PLA2 & ((((((((PK_1 & phph) & PK_3) & PK_2) & !FFA) | ((PK_1 & phph) & ((!FFA & !PK_3) & !PK_2))) | ((PK_1 & PK_3) & (!FFA & !PK_2))) | ((PK_1 & PK_2) & !FFA)) | (((phph & PK_3) & PK_2) & (!PK_1 & !FFA)))) & !Cac_high) | ((FFA & ((((((PK_1 & PK_2) & !PK_3) | (((phph & PK_3) & PK_2) & !PK_1)) | ((PK_1 & PK_3) & !PK_2)) | ((PK_1 & phph) & !PK_2)) | ((PK_1 & PK_3) & PK_2))) & !Cac_high))
+$HATPase_2: (((((((((((FFA & ((PK_1 & phph_high) & PK_2)) & !PK_3) & !Cac_high) | (((PLA2 & (phph & PK_2)) & ((!PK_1 & !FFA) & !PK_3)) & !Cac_high)) | (((FFA & PK_1) & ((!phph & !PK_3) & !PK_2)) & !Cac_high)) | (((FFA & (phph & PK_2)) & (!PK_1 & !PK_3)) & !Cac_high)) | (((PLA2 & (((PK_1 & phph) & PK_3) & PK_2)) & !FFA) & !Cac_high)) | ((FFA & ((((PK_1 & phph) & phph_high) & PK_3) & PK_2)) & !Cac_high)) | (((PLA2 & PK_1) & (((!phph & !FFA) & !PK_3) & !PK_2)) & !Cac_high)) | ((FFA & (((PK_1 & phph) & PK_3) & PK_2)) & !Cac_high)) | (((PLA2 & ((PK_1 & phph_high) & PK_2)) & (!FFA & !PK_3)) & !Cac_high))
+$HATPase_3: (((((((((((((((((((FFA & ((PK_1 & phph) & PK_3)) & !(Cac_high | (phph & !phph_high))) | (((FFA & ((phph_high & PK_3) & PK_2)) & (!PK_1 & !PLA2)) & !Cac_high)) | (((FFA & ((PK_1 & phph) & PK_2)) & !PK_3) & !(phph_high | Cac_high))) | (((PLA2 & (PK_1 & phph)) & ((!FFA & !PK_3) & !PK_2)) & !Cac_high)) | (((PLA2 & (PK_1 & PK_3)) & (!FFA & !PK_2)) & !Cac_high)) | (((FFA & (PK_1 & phph)) & (!phph_high & !PK_2)) & !Cac_high)) | (((PLA2 & PK_2) & (!PK_1 | !PK_3)) & !((phph_high | Cac_high) | (phph & !phph_high)))) | (((PLA2 & ((PK_1 & phph) & PK_2)) & (!FFA & !PK_3)) & !(phph_high | Cac_high))) | (((PLA2 & (phph_high & PK_2)) & ((!PK_1 & !FFA) & !PK_3)) & !Cac_high)) | (((FFA & PK_2) & !PK_3) & !((phph_high | Cac_high) | (phph & !phph_high)))) | ((PLA2 & ((PK_1 & phph) & PK_2)) & !((phph_high | Cac_high) | (phph & !phph_high)))) | (((PLA2 & (PK_1 & phph)) & (!PK_3 & !PK_2)) & !((phph_high | Cac_high) | (phph & !phph_high)))) | ((FFA & (PK_1 & PK_3)) & !(Cac_high | (phph & !phph_high)))) | (((FFA & (phph_high & PK_2)) & (!PK_1 & !PK_3)) & !Cac_high)) | (((FFA & (PK_1 & phph)) & (!PK_3 & !PK_2)) & !(Cac_high | (phph & !phph_high)))) | ((FFA & (PK_3 & PK_2)) & !((phph_high | Cac_high) | (phph & !phph_high)))) | ((PLA2 & (PK_1 & PK_3)) & !((phph_high | Cac_high) | (phph & !phph_high)))) | ((PLA2 & (PK_3 & PK_2)) & !(Cac_high | (phph & !phph_high))))
+$KEV: (Cac_high & Kv)
+$Kc: (((((HATPase_1 & ((Kv & KEV) | Kin)) & !Kout) | ((HATPase_3 & ((KEV & Kv) | Kin)) & !((AnionCh | Kout) | AnionCh_high))) | ((HATPase_3 & ((((HATPase_2 & KEV) & AnionCh) & Kv) | ((Kin & HATPase_2) & AnionCh))) & !(Kout | AnionCh_high))) | ((HATPase_2 & (Kin | (KEV & Kv))) & !((AnionCh | Kout) | AnionCh_high)))
+$Kin: (((((FFA & (!Ci | !Ci_sup)) & PMV_neg) | ((PMV_neg & Ci_sup) & (((!ABA & !Ci) & !FFA) & !Cac_high))) | ((ABA & (!Ci | !Ci_sup)) & PMV_neg)) | (PMV_neg & (((!ABA & !FFA) & !Cac_high) & !Ci_sup)))
+$Kout: (PMV_pos_ & ((((!ROS | !NO) | ABA) | (Ci & Ci_sup)) | !FFA))
+$Kv: Kc
+$MCPS: ((Ci & (BL | RL)) | (Ci_sup & (BL | RL)))
+$MCPS_high: ((Ci & (BL & RL)) | (Ci_sup & (BL & RL)))
+$NO: (phph & ROS)
+$PK_1: (((((PP1cc_1 & (!PP1cc_2 | (PP1cc_2 & !PP1cc_3))) & !(Ci_sup | Ci)) | (((PP1cc_2 & PP1cc_3) & !PP1cc_1) & !(Ci_sup | Ci))) | ((Ci & ((PP1cc_1 & PP1cc_2) & !PP1cc_3)) & !Ci_sup)) | ((Ci_sup & (((PP1cc_1 & PP1cc_3) & !PP1cc_2) | ((PP1cc_1 & PP1cc_2) & !PP1cc_3))) & !Ci))
+$PK_2: ((((((PP1cc_3 & (!PP1cc_1 & !PP1cc_2)) & !(Ci_sup | Ci)) | ((PP1cc_1 & Ci) & (!PP1cc_2 & !Ci_sup))) | ((Ci_sup & (((PP1cc_1 & (!PP1cc_3 & !PP1cc_2)) | ((PP1cc_3 & PP1cc_2) & !PP1cc_1)) | ((PP1cc_1 & PP1cc_2) & !PP1cc_3))) & !Ci)) | ((PP1cc_2 & (((!PP1cc_1 & !PP1cc_3) | (PP1cc_1 & PP1cc_3)) | (PP1cc_1 & !PP1cc_3))) & !(Ci_sup | Ci))) | !((((PP1cc_1 | PP1cc_3) | PP1cc_2) | Ci) | Ci_sup))
+$PK_3: (PP1cc_1 & ((((PP1cc_3 & Ci) & (!PP1cc_2 & !Ci_sup)) | (PP1cc_2 & ((!PP1cc_3 & !Ci) & !Ci_sup))) | ((PP1cc_3 & Ci_sup) & (!PP1cc_2 & !Ci))))
+$PLA2: ((BL | RL) | phot1_complex)
+$PLC: ((ABA & Cac) | BL)
+$PLD: (ABA | NO)
+$PLD_high: (ABA & NO)
+$PMV_neg: (((((HATPase_1 & (!PMV_pos_ | (PMV_neg & AnionCh))) & !(KEV | Cac_high)) | ((HATPase_2 & ((PMV_neg & AnionCh) | !PMV_pos_)) & !(KEV | Cac_high))) | ((PMV_neg & (((((((((!PMV_pos_ & !HATPase_2) & !KEV) & !Cac_high) & !HATPase_1) & !AnionCh) & !HATPase_3) | (!Cac_high & ((HATPase_2 | HATPase_1) | HATPase_3))) | (Cac_high & ((HATPase_2 | HATPase_1) | HATPase_3))) | (PMV_pos_ & (((((!HATPase_2 & !KEV) & !Cac_high) & !HATPase_1) & !HATPase_3) & !AnionCh)))) & !AnionCh)) | ((HATPase_3 & ((PMV_neg & AnionCh) | !PMV_pos_)) & !(KEV | Cac_high)))
+$PMV_pos_: ((((((PMV_pos_ & (((Cac_high & AnionCh) & ((HATPase_2 | HATPase_1) | HATPase_3)) | ((KEV & AnionCh) & ((HATPase_2 | HATPase_1) | HATPase_3)))) & !PMV_neg) | (AnionCh & (((KEV & (((!HATPase_2 & !Cac_high) & !HATPase_1) & !HATPase_3)) | (((!HATPase_2 & !HATPase_1) & !HATPase_3) & Cac_high)) | (PMV_pos_ & ((((!HATPase_2 & !PMV_neg) & !Cac_high) & !HATPase_1) & !HATPase_3))))) | ((PMV_pos_ & ((((((!HATPase_2 & !KEV) & !Cac_high) & !HATPase_1) & !HATPase_3) | (KEV & ((HATPase_2 | HATPase_1) | HATPase_3))) | (Cac_high & ((HATPase_2 | HATPase_1) | HATPase_3)))) & !(AnionCh | PMV_neg))) | ((Cac_high & ((!HATPase_2 & !HATPase_1) & !HATPase_3)) & !(AnionCh | PMV_neg))) | ((KEV & ((!HATPase_2 & !HATPase_1) & !HATPase_3)) & !(AnionCh | PMV_neg)))
+$PP1cc_1: (BL | phot1_complex)
+$PP1cc_2: (((((PLD & (!phot1_complex & !BL)) & !PLD_high) | ((phot1_complex & !PLD) & !PLD_high)) | ((BL & !PLD) & !PLD_high)) | !(((phot1_complex | BL) | PLD) | PLD_high))
+$PP1cc_3: (((((BL & PLD) & !PLD_high) | (PLD_high & (!phot1_complex & !BL))) | ((phot1_complex & PLD) & !PLD_high)) | !(((phot1_complex | BL) | PLD) | PLD_high))
+$RL: false
+$ROS: ((phph & PLD) & !ABI1)
+$SO_1: (HATPase_1 & Kv)
+$SO_2: ((HATPase_2 & Kv) | (sucrose & !Kv))
+$SO_3: (HATPase_3 & Kv)
+$carbfix: ((Ci & phph) | (CO2 & phph))
+$carbfix_high: ((CO2 & phph_high) | (Ci & phph_high))
+$phot1_complex: BL
+$phph: (BL | RL)
+$phph_high: (RL & BL)
+$sucrose: (PLD & !ABA)
