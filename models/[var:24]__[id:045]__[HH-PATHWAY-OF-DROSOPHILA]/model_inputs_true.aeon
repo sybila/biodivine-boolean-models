@@ -1,0 +1,56 @@
+Sgg -> Ci_rep
+Slmb -> Ci_rep
+Cos -> Ci_rep
+CK1a -> Ci_rep
+SuFu -> Ci_rep
+Pka -> Ci_rep
+Smo -| Cos
+Fu -| Cos
+Gprk2 -> Smo
+Ptc -| Smo
+Tow -| Smo
+Fu -| SuFu
+Ttv -> Dlp
+Hh -| Ptc
+Smo -> Fu
+Ci_rep -| Targets
+Ci_act -> Targets
+Sgg -| Ci_act
+Slmb -| Ci_act
+Cos -| Ci_act
+CK1a -| Ci_act
+SuFu -| Ci_act
+Pka -| Ci_act
+Ttv -> Dally
+Shf -> Hh
+Lipophorin -> Hh
+Dally -> Hh
+Disp -> Hh
+Rasp -> Hh
+iHog -> Hh
+Dlp -> Hh
+Boi -> Hh
+$Boi: true
+$CK1a: true
+$Ci_act: !((Cos & (Slmb & SuFu)) & ((Sgg | CK1a) | Pka))
+$Ci_rep: (CK1a & ((((Sgg & Slmb) & Cos) & SuFu) & Pka))
+$Cos: !(Fu & Smo)
+$Dally: Ttv
+$Disp: true
+$Dlp: Ttv
+$Fu: Smo
+$Gprk2: true
+$Hh: (iHog & ((((((Shf & Lipophorin) & Dally) & Disp) & Rasp) & Dlp) & Boi))
+$Lipophorin: true
+$Pka: true
+$Ptc: !Hh
+$Rasp: true
+$Sgg: true
+$Shf: true
+$Slmb: true
+$Smo: (Gprk2 & !(Ptc & Tow))
+$SuFu: !Fu
+$Targets: (Ci_act & !Ci_rep)
+$Tow: true
+$Ttv: true
+$iHog: true
