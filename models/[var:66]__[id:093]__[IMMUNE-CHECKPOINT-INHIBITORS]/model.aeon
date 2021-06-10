@@ -1,0 +1,209 @@
+MAPKs -? AP1
+Antigen -? Antigen
+TIGIT -? CD226
+TIGIT_L -? CD226
+CD80_86 -? CD28
+CTLA4 -? CD28
+SHP -? CD28
+LAG3 -? CD4
+MHCII -? CD4
+MHCI -? CD8
+CD80_86 -? CD80_86
+PD1 -? CK2
+CD80_86 -? CTLA4
+Ca_NFAT -? CTLA4
+FOXP3 -? CTLA4
+NFIL3 -? CTLA4
+anti_CTLA4 -? CTLA4
+ICOS -? Ca_NFAT
+LAG3 -? Ca_NFAT
+PLCG -? Ca_NFAT
+PI3K_AKT -? FOXO1
+AP1 -? FOXP3
+CTLA4 -? FOXP3
+Ca_NFAT -? FOXP3
+FOXO1 -? FOXP3
+MAPKs -? FOXP3
+NFIL3 -? FOXP3
+NFkB -? FOXP3
+PI3K_AKT -? FOXP3
+SMAD2_3 -? FOXP3
+STAT1 -? FOXP3
+STAT3 -? FOXP3
+CD28 -? GRB2
+PI3K_AKT -? GSK3
+Ca_NFAT -? ICOS
+FOXP3 -? ICOS
+ICOS_L -? ICOS
+MAPKs -? ICOS
+NFAT -? ICOS
+NFIL3 -? ICOS
+PRDM1 -? ICOS
+ICOS_L -? ICOS_L
+IFNG -? IFNG
+IFNG -? IFNGR
+IL12 -? IL12
+IL12 -? IL12R
+AP1 -? IL2
+NFAT -? IL2
+NFkB -? IL2
+IL27 -? IL27
+IL27 -? IL27R
+LAG3_L -? LAG3
+MAF -? LAG3
+MHCII -? LAG3
+PRDM1 -? LAG3
+Tbet -? LAG3
+YY1 -? LAG3
+LAG3_L -? LAG3_L
+TCR -? LAT_complex
+CD4 -? LCK_FYN
+CD8 -? LCK_FYN
+TIM3 -? LCK_FYN
+STAT3 -? MAF
+ICOS -? MAPKs
+LAT_complex -? MAPKs
+VAV -? MAPKs
+MHCI -? MHCI
+MHCII -? MHCII
+Ca_NFAT -? NFAT
+GSK3 -? NFAT
+SMAD2_3 -? NFIL3
+STAT3 -? NFIL3
+LAT_complex -? NFkB
+PKC_teta -? NFkB
+TRAFs -? NFkB
+AP1 -? PD1
+Ca_NFAT -? PD1
+FOXO1 -? PD1
+MAF -? PD1
+NFAT -? PD1
+PD1_L -? PD1
+PRDM1 -? PD1
+Tbet -? PD1
+YY1 -? PD1
+PD1_L -? PD1_L
+CD28 -? PI3K_AKT
+ICOS -? PI3K_AKT
+LAT_complex -? PI3K_AKT
+PP2A -? PI3K_AKT
+PTEN -? PI3K_AKT
+SHIP -? PI3K_AKT
+TRAFs -? PI3K_AKT
+VAV -? PKC_teta
+LAT_complex -? PLCG
+CTLA4 -? PP2A
+STAT3 -? PRDM1
+CK2 -? PTEN
+IL2 -? Proliferation_Survival
+PI3K_AKT -? Proliferation_Survival
+TIGIT -? SHIP
+PD1 -? SHP
+SMAD7 -? SMAD2_3
+TGFbR -? SMAD2_3
+FOXP3 -? SMAD7
+IFNGR -? STAT1
+IL27R -? STAT1
+IL27R -? STAT3
+IL12R -? STAT4
+Antigen -? TCR
+LCK_FYN -? TCR
+SHP -? TCR
+TGFb -? TGFb
+TGFb -? TGFbR
+FOXP3 -? TIGIT
+MAF -? TIGIT
+PRDM1 -? TIGIT
+TIGIT_L -? TIGIT
+TIGIT_L -? TIGIT_L
+MAF -? TIM3
+NFIL3 -? TIM3
+PRDM1 -? TIM3
+TIM3_L -? TIM3
+Tbet -? TIM3
+TIM3_L -? TIM3_L
+AP1 -? TNFRs
+Ca_NFAT -? TNFRs
+FOXP3 -? TNFRs
+MAPKs -? TNFRs
+NFIL3 -? TNFRs
+NFkB -? TNFRs
+TNFRs_L -? TNFRs
+TNFRs_L -? TNFRs_L
+TNFRs -? TRAFs
+GSK3 -? Tbet
+STAT1 -? Tbet
+STAT4 -? Tbet
+Ca_NFAT -? Th1_CTL
+Tbet -? Th1_CTL
+FOXP3 -? Treg
+CD226 -? VAV
+GRB2 -? VAV
+MAPKs -? YY1
+anti_CTLA4 -? anti_CTLA4
+$AP1: MAPKs
+$Antigen: Antigen
+$CD226: (!TIGIT & TIGIT_L)
+$CD28: (!CTLA4 & (!SHP & CD80_86))
+$CD4: (!LAG3 & MHCII)
+$CD8: MHCI
+$CD80_86: CD80_86
+$CK2: !PD1
+$CTLA4: ((!Ca_NFAT & (FOXP3 & (!NFIL3 & (CD80_86 & !anti_CTLA4)))) | (Ca_NFAT & (!NFIL3 & (CD80_86 & !anti_CTLA4))))
+$Ca_NFAT: ((!PLCG & (ICOS & !LAG3)) | (PLCG & !LAG3))
+$FOXO1: !PI3K_AKT
+$FOXP3: ((!CTLA4 & (!NFkB & (!MAPKs & (!Ca_NFAT & (!PI3K_AKT & (!FOXO1 & (!AP1 & (!STAT1 & (SMAD2_3 & (!STAT3 & !NFIL3)))))))))) | ((!CTLA4 & (!NFkB & (!MAPKs & (!Ca_NFAT & (!PI3K_AKT & (!FOXO1 & (!AP1 & (STAT1 & (!STAT3 & !NFIL3))))))))) | ((!CTLA4 & (!NFkB & (!MAPKs & (!Ca_NFAT & (!PI3K_AKT & (!FOXO1 & (AP1 & (!STAT3 & !NFIL3)))))))) | ((!CTLA4 & (!NFkB & (!MAPKs & (!Ca_NFAT & (!PI3K_AKT & (FOXO1 & (!STAT3 & !NFIL3))))))) | ((!CTLA4 & (!NFkB & (!MAPKs & (Ca_NFAT & (!PI3K_AKT & (!STAT3 & !NFIL3)))))) | ((!CTLA4 & (!NFkB & (MAPKs & (!PI3K_AKT & (!STAT3 & !NFIL3))))) | ((!CTLA4 & (NFkB & (!PI3K_AKT & (!STAT3 & !NFIL3)))) | (CTLA4 & (!PI3K_AKT & (!STAT3 & !NFIL3))))))))))
+$GRB2: CD28
+$GSK3: !PI3K_AKT
+$ICOS: ((!MAPKs & (!Ca_NFAT & (!FOXP3 & (!NFAT & (!NFIL3 & (ICOS_L & PRDM1)))))) | ((!MAPKs & (!Ca_NFAT & (!FOXP3 & (NFAT & (!NFIL3 & ICOS_L))))) | ((!MAPKs & (!Ca_NFAT & (FOXP3 & (!NFIL3 & ICOS_L)))) | ((!MAPKs & (Ca_NFAT & (!NFIL3 & ICOS_L))) | (MAPKs & (!NFIL3 & ICOS_L))))))
+$ICOS_L: ICOS_L
+$IFNG: IFNG
+$IFNGR: IFNG
+$IL12: IL12
+$IL12R: IL12
+$IL2: (NFkB & (AP1 & NFAT))
+$IL27: IL27
+$IL27R: IL27
+$LAG3: ((!Tbet & (!YY1 & (!LAG3_L & (MHCII & (!PRDM1 & MAF))))) | ((!Tbet & (!YY1 & (!LAG3_L & (MHCII & PRDM1)))) | ((!Tbet & (!YY1 & (LAG3_L & (!PRDM1 & MAF)))) | ((!Tbet & (!YY1 & (LAG3_L & PRDM1))) | ((!Tbet & (YY1 & (!LAG3_L & MHCII))) | (!Tbet & (YY1 & LAG3_L)))))))
+$LAG3_L: LAG3_L
+$LAT_complex: TCR
+$LCK_FYN: ((!CD4 & (!TIM3 & CD8)) | (CD4 & !TIM3))
+$MAF: STAT3
+$MAPKs: ((!LAT_complex & (!VAV & ICOS)) | ((!LAT_complex & VAV) | LAT_complex))
+$MHCI: MHCI
+$MHCII: MHCII
+$NFAT: (Ca_NFAT & !GSK3)
+$NFIL3: (!SMAD2_3 & STAT3)
+$NFkB: ((!LAT_complex & (!PKC_teta & TRAFs)) | ((!LAT_complex & PKC_teta) | LAT_complex))
+$PD1: ((!Ca_NFAT & (!Tbet & (!FOXO1 & (!AP1 & (!YY1 & (!NFAT & (PD1_L & (!PRDM1 & MAF)))))))) | ((!Ca_NFAT & (!Tbet & (!FOXO1 & (!AP1 & (!YY1 & (!NFAT & (PD1_L & PRDM1))))))) | ((!Ca_NFAT & (!Tbet & (!FOXO1 & (!AP1 & (!YY1 & (NFAT & PD1_L)))))) | ((!Ca_NFAT & (!Tbet & (!FOXO1 & (!AP1 & (YY1 & PD1_L))))) | ((!Ca_NFAT & (!Tbet & (!FOXO1 & (AP1 & PD1_L)))) | ((!Ca_NFAT & (!Tbet & (FOXO1 & PD1_L))) | (Ca_NFAT & (!Tbet & PD1_L))))))))
+$PD1_L: PD1_L
+$PI3K_AKT: ((!CD28 & (!LAT_complex & (!ICOS & (TRAFs & (!PTEN & (!PP2A & !SHIP)))))) | ((!CD28 & (!LAT_complex & (ICOS & (!PTEN & (!PP2A & !SHIP))))) | ((!CD28 & (LAT_complex & (!PTEN & (!PP2A & !SHIP)))) | (CD28 & (!PTEN & (!PP2A & !SHIP))))))
+$PKC_teta: VAV
+$PLCG: LAT_complex
+$PP2A: CTLA4
+$PRDM1: STAT3
+$PTEN: !CK2
+$Proliferation_Survival: (PI3K_AKT & IL2)
+$SHIP: TIGIT
+$SHP: PD1
+$SMAD2_3: (TGFbR & !SMAD7)
+$SMAD7: !FOXP3
+$STAT1: ((!IFNGR & IL27R) | IFNGR)
+$STAT3: IL27R
+$STAT4: IL12R
+$TCR: (!SHP & (LCK_FYN & Antigen))
+$TGFb: TGFb
+$TGFbR: TGFb
+$TIGIT: ((!FOXP3 & (TIGIT_L & (!PRDM1 & MAF))) | ((!FOXP3 & (TIGIT_L & PRDM1)) | (FOXP3 & TIGIT_L)))
+$TIGIT_L: TIGIT_L
+$TIM3: ((!Tbet & (!NFIL3 & (TIM3_L & (!PRDM1 & MAF)))) | ((!Tbet & (!NFIL3 & (TIM3_L & PRDM1))) | ((!Tbet & (NFIL3 & TIM3_L)) | (Tbet & TIM3_L))))
+$TIM3_L: TIM3_L
+$TNFRs: ((!NFkB & (!MAPKs & (!Ca_NFAT & (!FOXP3 & (AP1 & (!NFIL3 & TNFRs_L)))))) | ((!NFkB & (!MAPKs & (!Ca_NFAT & (FOXP3 & (!NFIL3 & TNFRs_L))))) | ((!NFkB & (MAPKs & (!Ca_NFAT & (!NFIL3 & TNFRs_L)))) | (NFkB & (!Ca_NFAT & (!NFIL3 & TNFRs_L))))))
+$TNFRs_L: TNFRs_L
+$TRAFs: TNFRs
+$Tbet: ((!STAT1 & !GSK3) | ((!STAT1 & (GSK3 & STAT4)) | STAT1))
+$Th1_CTL: (Ca_NFAT & Tbet)
+$Treg: FOXP3
+$VAV: ((!GRB2 & CD226) | GRB2)
+$YY1: MAPKs
+$anti_CTLA4: anti_CTLA4
