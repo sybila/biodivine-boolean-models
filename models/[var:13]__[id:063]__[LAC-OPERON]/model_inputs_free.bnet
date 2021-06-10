@@ -1,0 +1,11 @@
+targets,factors
+A, (L & B)
+Am, (Lm | L)
+B, M
+C, !Ge
+L, ((Le & P) & !Ge)
+Lm, (((Lem & P) & !Ge) | (Le & !Ge))
+M, (C & !(R | Rm))
+P, M
+R, !(Am | A)
+Rm, (R | !((R | Am) | A))
