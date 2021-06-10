@@ -1,0 +1,27 @@
+targets,factors
+AD, ((IS & !(IgG & NE)) | (AD & !(IgG & NE)))
+BC, (T0 | BC)
+DCI, PIC
+DCII, DCI
+EC, (AD | IS)
+EL, (IS & !EL2)
+EL2, ((IgE & IL5) | (IL13 & IL5))
+IFNgI, (DCI | Th1I)
+IL10I, Th2I
+IL12II, ((DCII & T0) & !IL4II)
+IL13, (((EL & IS) | EL2) | Th2I)
+IL4I, IL4II
+IL4II, (((Th2II & !IL12II) | EL2) | ((DCII & T0) & !IL12II))
+IL5, (EL2 | Th2I)
+IS, (IS | !IS)
+IgA, (BC & IS)
+IgE, ((IL13 & BC) | (IL4II & BC))
+IgG, BC
+NE, ((IFNgI & !(IL4I | IL10I)) | ((PIC & AD) & !(IL4I | IL10I)))
+PIC, (EC & !(IL10I | IgA))
+T0, DCII
+TEL, (EL | EL2)
+Th1I, Th1II
+Th1II, (DCII & (T0 & IL12II))
+Th2I, Th2II
+Th2II, ((DCII & T0) & !IL12II)

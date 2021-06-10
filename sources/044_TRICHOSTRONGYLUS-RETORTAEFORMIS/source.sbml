@@ -1,0 +1,1960 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" qual:required="true" version="1" xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+  <model id="M3493" metaid="_43a5ee9b-ffef-4ee5-8735-ce4b79b82ac7" name="Trichostrongylus retortaeformis">
+    <notes>
+      <body xmlns="http://www.w3.org/1999/xhtml">Co-infections alter the host immune response but how the systemic and local processes at the site of infection interact is still unclear. The majority of studies on co-infections concentrate on one of the infecting species, an immune function or group of cells and often focus on the initial phase of the infection. Here, we used a combination of experiments and mathematical modelling to investigate the network of immune responses against single and co-infections with the respiratory bacterium Bordetella bronchiseptica and the gastrointestinal helminth Trichostrongylus retortaeformis. Our goal was to identify representative mediators and functions that could capture the essence of the host immune response as a whole, and to assess how their relative contribution dynamically changed over time and between single and co-infected individuals. Network-based discrete dynamic models of single infections were built using current knowledge of bacterial and helminth immunology; the two single infection models were combined into a co-infection model that was then verified by our empirical findings. Simulations showed that a T helper cell mediated antibody and neutrophil response led to phagocytosis and clearance of B. bronchiseptica from the lungs. This was consistent in single and co-infection with no significant delay induced by the helminth. In contrast, T. retortaeformis intensity decreased faster when co-infected with the bacterium. Simulations suggested that the robust recruitment of neutrophils in the co-infection, added to the activation of IgG and eosinophil driven reduction of larvae, which also played an important role in single infection, contributed to this fast clearance. Perturbation analysis of the models, through the knockout of individual nodes (immune cells), identified the cells critical to parasite persistence and clearance both in single and co-infections. Our integrated approach captured the within-host immuno-dynamics of bacteria-helminth infection and identified key components that can be crucial for explaining individual variability between single and co-infections in natural populations.</body>
+    </notes>
+    <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_43a5ee9b-ffef-4ee5-8735-ce4b79b82ac7">
+	<dc:creator>
+	<rdf:Bag>
+	<rdf:li rdf:parseType="Resource">
+	<vCard:N rdf:parseType="Resource">
+	<vCard:Family>Helikar</vCard:Family>
+	<vCard:Given>Tomas</vCard:Given>
+	</vCard:N>
+	<vCard:EMAIL>thelika@unmc.edu</vCard:EMAIL>
+	<vCard:ORG rdf:parseType="Resource">
+	<vCard:Orgname>University of Nebraska - Lincoln</vCard:Orgname>
+	</vCard:ORG>
+	</rdf:li>
+	</rdf:Bag>
+	</dc:creator>
+	<dcterms:created rdf:parseType="Resource">
+	<dcterms:W3CDTF>2013-06-16T09:37:54Z</dcterms:W3CDTF>
+	</dcterms:created>
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2016-01-22T07:08:46Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:22253585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+      <qual:listOfQualitativeSpecies xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:qualitativeSpecies metaid="_830072cc-4cfd-4a9d-9a4c-07d6c52a908c" qual:compartment="extracellular" qual:constant="true" qual:id="S_16" qual:name="IS">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;span lang="EN-GB">T. retortaeformis&lt;/span>&lt;span lang="EN-GB"> Larvae (mouse)&lt;/span></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+	<rdf:Description rdf:about="#_830072cc-4cfd-4a9d-9a4c-07d6c52a908c">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:13:11Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_9888d505-968d-49ac-a7a2-64c9c1f502d3" qual:compartment="cytosol" qual:constant="false" qual:id="S_1" qual:initialLevel="0" qual:maxLevel="1" qual:name="Th1I">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;span lang="EN-GB">T\r\nhelper cells subtype I in lungs/small intestine (mouse)&amp;nbsp;&lt;/span></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_9888d505-968d-49ac-a7a2-64c9c1f502d3">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:13:11Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:22253585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_7fd02d09-3dd1-4f76-a743-3621fa781509" qual:compartment="cytosol" qual:constant="false" qual:id="S_2" qual:initialLevel="0" qual:maxLevel="1" qual:name="NE">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;span lang="EN-GB" style="font-family: Arial, Verdana; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">Recruited\r\nneutrophils (mouse) for more info:&lt;/span>&lt;div>&lt;span lang="EN-GB">&lt;font face="Arial, Verdana" size="2">http://www.ncbi.nlm.nih.gov/mesh/68009504&lt;/font>&lt;/span>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_7fd02d09-3dd1-4f76-a743-3621fa781509">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:13:11Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:22253585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="bc0d1431-1517-4419-a39b-18ad19ab1c36" qual:compartment="cytosol" qual:constant="false" qual:id="S_3" qual:initialLevel="0" qual:maxLevel="1" qual:name="IgG">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Antibody G (mouse)</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#bc0d1431-1517-4419-a39b-18ad19ab1c36">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:13:11Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:22253585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_7ebfd1bd-6834-4203-aa96-b8cde0c9c000" qual:compartment="cytosol" qual:constant="false" qual:id="S_4" qual:initialLevel="0" qual:maxLevel="1" qual:name="IgE">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Antibody E (mouse)</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_7ebfd1bd-6834-4203-aa96-b8cde0c9c000">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:13:11Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:22253585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_80b6fa5a-493f-471d-8ebb-c449a3918c86" qual:compartment="cytosol" qual:constant="false" qual:id="S_5" qual:initialLevel="0" qual:maxLevel="1" qual:name="DCII">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Dendritic cells in the systemic compartment, more info:&lt;div>http://www.ncbi.nlm.nih.gov/mesh/68003713&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_80b6fa5a-493f-471d-8ebb-c449a3918c86">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:13:11Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:22253585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_343b8d07-b55d-4f9b-9f3a-703f8a136202" qual:compartment="cytosol" qual:constant="false" qual:id="S_6" qual:initialLevel="0" qual:maxLevel="1" qual:name="IFNgI">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Interferon gamma in lungs/small intestine (mouse)</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_343b8d07-b55d-4f9b-9f3a-703f8a136202">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:13:11Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:22253585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:21272036"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="ef7887df-b6c5-4668-9a02-3e433702f9f6" qual:compartment="cytosol" qual:constant="false" qual:id="S_7" qual:initialLevel="0" qual:maxLevel="1" qual:name="IgA">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Antibody A (mouse)</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#ef7887df-b6c5-4668-9a02-3e433702f9f6">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:13:11Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:22253585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_951c6764-bb0c-4e52-adea-e5af8886ddb2" qual:compartment="cytosol" qual:constant="false" qual:id="S_8" qual:initialLevel="0" qual:maxLevel="1" qual:name="PIC">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Pro-inflammatory cytokines (mouse) for more info:&lt;div>http://www.ncbi.nlm.nih.gov/mesh/68016207&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_951c6764-bb0c-4e52-adea-e5af8886ddb2">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:13:11Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:22253585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_204c1b01-61ee-4d45-9392-cd8d1ba54b96" qual:compartment="cytosol" qual:constant="false" qual:id="S_9" qual:initialLevel="0" qual:maxLevel="1" qual:name="T0">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Naive T cells (mouse)</p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_204c1b01-61ee-4d45-9392-cd8d1ba54b96">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:13:11Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:22253585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="e258cc9b-96e5-4c3f-a580-ae9b34b42fca" qual:compartment="cytosol" qual:constant="false" qual:id="S_10" qual:initialLevel="0" qual:maxLevel="1" qual:name="Th2II">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;span lang="EN-GB">Th2\r\ncells in systemic compartment (mouse) for more info:&lt;/span>&lt;div>&lt;span lang="EN-GB">http://www.ncbi.nlm.nih.gov/mesh/68018418&lt;/span>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#e258cc9b-96e5-4c3f-a580-ae9b34b42fca">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:13:11Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:22253585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_72044c3f-f75c-4005-b80a-2f6a9884caff" qual:compartment="cytosol" qual:constant="false" qual:id="S_11" qual:initialLevel="0" qual:maxLevel="1" qual:name="DCI">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;font face="Arial, Verdana" size="2">Dendritic cells in lungs/small intestine, for more info:&lt;/font>&lt;div>&lt;font face="Arial, Verdana" size="2">http://www.ncbi.nlm.nih.gov/mesh/68003713&lt;/font>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_72044c3f-f75c-4005-b80a-2f6a9884caff">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:13:11Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:22253585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_09bda0ac-fcd0-4ed4-abe4-e83ebd6b0416" qual:compartment="cytosol" qual:constant="false" qual:id="S_12" qual:initialLevel="0" qual:maxLevel="1" qual:name="IL4II">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;span lang="EN-GB">Interleukin\r\n4 in systemic compartment (mouse)&lt;/span>&lt;div>&lt;span lang="EN-GB">UniProt AccessionID:&amp;nbsp;&lt;/span>&lt;a href="http://www.uniprot.org/uniprot/P07750" style="text-decoration: none; font-family: sans-serif; font-size: small; background-color: rgb(255, 255, 255);">P07750&lt;/a>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_09bda0ac-fcd0-4ed4-abe4-e83ebd6b0416">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:13:11Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:22253585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_657a0f98-f000-4c8b-b66c-9dd39f40e473" qual:compartment="cytosol" qual:constant="false" qual:id="S_13" qual:initialLevel="0" qual:maxLevel="1" qual:name="BC">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;font face="Arial, Verdana" size="2">B-Lymphocytes. See link:&lt;/font>&lt;div>&lt;font face="Arial, Verdana" size="2">http://www.ncbi.nlm.nih.gov/mesh/68001402&lt;/font>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_657a0f98-f000-4c8b-b66c-9dd39f40e473">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:13:11Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:22253585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="b8909916-a62c-4ac6-abdd-fe9f3f9fdcc4" qual:compartment="cytosol" qual:constant="false" qual:id="S_14" qual:initialLevel="0" qual:maxLevel="1" qual:name="IL13">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;span lang="EN-GB">Interleukin\r\n13 (mouse)&lt;/span>&lt;div>&lt;span lang="EN-GB">UniProt AccessionID:&amp;nbsp;&lt;/span>&lt;a href="http://www.uniprot.org/uniprot/P20109" style="text-decoration: none; font-family: sans-serif; font-size: small; background-color: rgb(255, 255, 255);">P20109&lt;/a>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#b8909916-a62c-4ac6-abdd-fe9f3f9fdcc4">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:13:11Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:10782080"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:10448138"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:21173234"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:16684572"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:18097048"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:9531306"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:22253585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:16701066"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:12753437"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="f881ebe5-1b2d-4a37-878c-ae1ccedec390" qual:compartment="cytosol" qual:constant="false" qual:id="S_15" qual:initialLevel="0" qual:maxLevel="1" qual:name="EL2">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;span lang="EN-GB">recruited\r\neosinophils (mouse) for more info:&lt;/span>&lt;div>&lt;span lang="EN-GB">http://www.ncbi.nlm.nih.gov/mesh/68004804&lt;/span>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#f881ebe5-1b2d-4a37-878c-ae1ccedec390">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:13:11Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:21173234"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:22253585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_8cbe0485-2767-4762-bb92-351bcddcff46" qual:compartment="cytosol" qual:constant="false" qual:id="S_17" qual:initialLevel="0" qual:maxLevel="1" qual:name="IL5">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Interleukin 5 (mouse)&lt;div>UniProt AccessionID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/P04401" style="font-size: small; text-decoration: none; font-family: sans-serif; background-color: rgb(255, 255, 255);">P04401&lt;/a>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_8cbe0485-2767-4762-bb92-351bcddcff46">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:13:11Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:9531306"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:10782080"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:22253585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:10448138"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:16701066"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:16684572"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:18097048"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:12753437"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_47c450b6-cb2d-4501-aeba-8ae7ad33876a" qual:compartment="cytosol" qual:constant="false" qual:id="S_18" qual:initialLevel="0" qual:maxLevel="1" qual:name="IL4I">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Interleukin 4 in the small intestines/lungs (mouse)&lt;div>UniProt AccessionID:&amp;nbsp;&lt;a href="http://www.uniprot.org/uniprot/P07750" style="font-size: small; text-decoration: none; font-family: sans-serif; background-color: rgb(255, 255, 255);">P07750&lt;/a>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_47c450b6-cb2d-4501-aeba-8ae7ad33876a">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:13:11Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:22253585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="d0d72e93-80dd-4c9c-8c98-ec7e0e772c40" qual:compartment="cytosol" qual:constant="false" qual:id="S_19" qual:initialLevel="0" qual:maxLevel="1" qual:name="EL">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;span lang="EN-GB">resident\r\neosinophils (mouse) for more info:&lt;/span>&lt;div>&lt;span lang="EN-GB">http://www.ncbi.nlm.nih.gov/mesh/68004804&lt;/span>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#d0d72e93-80dd-4c9c-8c98-ec7e0e772c40">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:13:11Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:21173234"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:22253585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_9f1e21bf-fe74-4357-bc34-ac4400faa895" qual:compartment="cytosol" qual:constant="false" qual:id="S_20" qual:initialLevel="0" qual:maxLevel="1" qual:name="IL10I">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;span lang="EN-GB">Interleukin\r\n10 in lungs/small intestine (mouse)&lt;/span>&lt;div>&lt;span lang="EN-GB">UniProt AccessionID:&amp;nbsp;&lt;/span>&lt;a href="http://www.uniprot.org/uniprot/P18893" style="font-size: small; text-decoration: none; font-family: sans-serif; background-color: rgb(255, 255, 255);">P18893&lt;/a>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_9f1e21bf-fe74-4357-bc34-ac4400faa895">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:13:11Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:22253585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_0183bf45-8697-4f89-a918-8b593afd56b4" qual:compartment="cytosol" qual:constant="false" qual:id="S_21" qual:initialLevel="0" qual:maxLevel="1" qual:name="AD">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;span lang="EN-GB">T. retortaeformis- a gastrointestinal helmith (mouse)&lt;/span></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_0183bf45-8697-4f89-a918-8b593afd56b4">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:13:11Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:2014134"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:22253585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:14742524"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_4ade9960-0aeb-4679-a4fe-b5e872040a4c" qual:compartment="cytosol" qual:constant="false" qual:id="S_22" qual:initialLevel="0" qual:maxLevel="1" qual:name="EC">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;font face="Arial, Verdana" size="2">Epithelial cells in lung/intestine (mouse) for more info:&lt;/font>&lt;div>&lt;font face="Arial, Verdana" size="2">http://www.ncbi.nlm.nih.gov/mesh/68004847&lt;/font>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_4ade9960-0aeb-4679-a4fe-b5e872040a4c">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:13:11Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:22253585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="da315e7b-37d8-4f94-83b5-aead4b1ef156" qual:compartment="cytosol" qual:constant="false" qual:id="S_23" qual:initialLevel="0" qual:maxLevel="1" qual:name="Th2I">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;span lang="EN-GB" style="font-size:12.0pt;line-height:\r\n115%;font-family:"Times New Roman","serif";mso-fareast-font-family:"Times New Roman";\r\nmso-ansi-language:EN-GB;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">Th2\r\ncells in lungs/small intestine (mouse)&lt;/span></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#da315e7b-37d8-4f94-83b5-aead4b1ef156">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:13:11Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:22253585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="_2471001a-4aac-467b-86b6-d1bb1f57dfdf" qual:compartment="cytosol" qual:constant="false" qual:id="S_24" qual:initialLevel="0" qual:maxLevel="1" qual:name="TEL">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;span lang="EN-GB">total\r\neosinophils (mouse) for more info:&lt;/span>&lt;div>&lt;span lang="EN-GB">http://www.ncbi.nlm.nih.gov/mesh/68004804&lt;/span>&lt;/div></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_2471001a-4aac-467b-86b6-d1bb1f57dfdf">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:13:11Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:22253585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="e2d0229d-e201-4029-b98e-4566ee06b683" qual:compartment="cytosol" qual:constant="false" qual:id="S_25" qual:initialLevel="0" qual:maxLevel="1" qual:name="IL12II">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;span lang="EN-GB">Interleukin\r\n12 in systemic compartment (mouse)&lt;/span></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#e2d0229d-e201-4029-b98e-4566ee06b683">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:13:11Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:22253585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies metaid="bf9f1013-e002-440a-a3c3-86a804270d78" qual:compartment="cytosol" qual:constant="false" qual:id="S_26" qual:initialLevel="0" qual:maxLevel="1" qual:name="Th1II">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;span lang="EN-GB">T\r\nhelper cells subtype I in systemic compartment (mouse)&lt;/span></p></body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#bf9f1013-e002-440a-a3c3-86a804270d78">
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2015-12-19T22:13:11Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqbiol:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="urn:miriam:pubmed:22253585"/>
+	</rdf:Bag>
+	</bqbiol:isDescribedBy>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+    </qual:listOfQualitativeSpecies>
+    <qual:listOfTransitions xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:transition qual:id="tr_S_1">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Th1II positively regulates Th1I [1].</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_1_in_S_26" qual:qualitativeSpecies="S_26" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Th1II positively regulates Th1I [1]</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_1" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_26 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_2">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;div>PIC in conjunction with AD activate NE [1]. IFNgI positively regulates NE [1]. IL4I negatively regulates NE [1]. IL10I inhibits NE [1].&lt;/div></p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_2_in_S_20" qual:qualitativeSpecies="S_20" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>"IL4 and IL10, produced by Th2 cells, have anti-inflammatory properties and inhibit pro-inflammatory cytokines and neutrophils" [1]</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_2_in_S_8" qual:qualitativeSpecies="S_8" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;span style="color: rgb(79, 79, 79); font-family: Arial, sans-serif; font-size: 12px; line-height: 14.40000057220459px; background-color: rgb(255, 255, 255);">PIC in conjunction with AD activate NE [1]&lt;/span></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_2_in_S_18" qual:qualitativeSpecies="S_18" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>"IL4 contributed to inhibit neutrophils (via the inhibition of the IL12 node)" [1]&lt;div>"IL4 and IL10, produced by Th2 cells, have anti-inflammatory properties and inhibit pro-inflammatory cytokines and neutrophils" [1]&lt;/div></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_2_in_S_6" qual:qualitativeSpecies="S_6" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;span style="color: rgb(79, 79, 79); font-family: Arial, sans-serif; font-size: 12px; line-height: 14.40000057220459px; background-color: rgb(255, 255, 255);">&amp;nbsp;IFNgI positively regulates NE [1]&lt;/span></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_2_in_S_21" qual:qualitativeSpecies="S_21" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;span style="color: rgb(79, 79, 79); font-family: Arial, sans-serif; font-size: 12px; line-height: 14.40000057220459px; background-color: rgb(255, 255, 255);">PIC in conjunction with AD activate NE [1]&lt;/span></p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_2" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_6 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <or/>
+                      <apply>
+                        <eq/>
+                        <ci> S_18 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                      <apply>
+                        <eq/>
+                        <ci> S_20 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci> S_8 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> S_21 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <or/>
+                      <apply>
+                        <eq/>
+                        <ci> S_18 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                      <apply>
+                        <eq/>
+                        <ci> S_20 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_3">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>BC positively regulates IgG [1].</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_3_in_S_13" qual:qualitativeSpecies="S_13" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>"Naive T cells stimulate clonal expansion of B cells and these lead to the production of antibodies such as IgG" [1]</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_3" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_13 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_4">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>BC in conjunction with IL13 positively regulate IgE [1].&amp;nbsp;BC in conjunction with IL4II positively regulate IgE [1].</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_4_in_S_14" qual:qualitativeSpecies="S_14" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>"The IgE isotype is produced upon signalling from either IL4 or IL13" [1]</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_4_in_S_13" qual:qualitativeSpecies="S_13" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Naïve T cell-initiated B cell proliferation stimulated the prompt increase of mucus IgE [1]</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_4_in_S_12" qual:qualitativeSpecies="S_12" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>"The IgE isotype is produced upon signalling from either IL4 or IL13" [1]</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_4" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_14 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> S_13 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_12 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> S_13 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_5">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;span style="color: rgb(79, 79, 79); font-family: Arial, sans-serif; font-size: 12px; line-height: 18px; orphans: 3; widows: 3; background-color: rgb(255, 255, 255);">DCI positively regulates DCII [1].&lt;/span></p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_5_in_S_11" qual:qualitativeSpecies="S_11" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;span style="color: rgb(79, 79, 79); font-family: Arial, sans-serif; font-size: 12px; line-height: 18px; orphans: 3; widows: 3; background-color: rgb(255, 255, 255);">DCI positively regulates DCII [1].&lt;/span></p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_5" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_11 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_6">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>DCI positively regulates IFNgI [1,2]. Th1I activates IFNgI [1].</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_6_in_S_11" qual:qualitativeSpecies="S_11" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;span style="color: rgb(51, 51, 51); font-family: arial, sans-serif; line-height: 18.0049991607666px; background-color: rgb(255, 255, 255);">"The initial vigorous expression of IFN? was driven by dendritic cells, probably as an inflammatory response to the infiltration of microflora and bacteria into the damaged mucosa during the establishment of larvae" [1, 2]&lt;/span></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_6_in_S_1" qual:qualitativeSpecies="S_1" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Th1 cells initiated IFNgI response [1].</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_6" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> S_11 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_7">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>BC activates IgA [1]. IS activates IgA [1].</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_7_in_S_16" qual:qualitativeSpecies="S_16" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IS activates IgA [1].</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_7_in_S_13" qual:qualitativeSpecies="S_13" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>"Naïve T cell-initiated B cell proliferation stimulated the prompt increase of mucus IgA" [1]</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_7" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> S_13 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_16 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_8">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>EC positively regulates PIC [1]. IgA negatively regulates PIC [1]. IL10I negatively regulates PIC [1].</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_8_in_S_22" qual:qualitativeSpecies="S_22" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>"Both parasite stages activate epithelial cells that lead to the production of pro-inflammatory cytokines" [1]</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_8_in_S_20" qual:qualitativeSpecies="S_20" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>"IL4 and IL10, produced by Th2 cells, have anti-inflammatory properties and inhibit pro-inflammatory cytokines and neutrophils" [1]</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_8_in_S_7" qual:qualitativeSpecies="S_7" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;div>IgA is involved in inhibiting pro-inflammatory cytokines [1]&lt;/div></p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_8" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> S_22 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <not/>
+                  <apply>
+                    <or/>
+                    <apply>
+                      <eq/>
+                      <ci> S_20 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> S_7 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_9">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>DCII positively regulates T0 [1].</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_9_in_S_5" qual:qualitativeSpecies="S_5" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>"Pro-inflammatory cytokines activate dendritic cells that stimulate naïve T cells (T0)" [1]</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_9" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_5 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_10">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;span style="color: rgb(79, 79, 79); font-family: Arial, sans-serif; font-size: 12px; line-height: 14.40000057220459px; background-color: rgb(255, 255, 255);">DCII in conjunction with T0 activates Th2II [1]. IL12II inhibites Th2II [1].&lt;/span></p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_10_in_S_5" qual:qualitativeSpecies="S_5" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;span style="color: rgb(79, 79, 79); font-family: Arial, sans-serif; font-size: 12px; line-height: 14.40000057220459px; background-color: rgb(255, 255, 255);">DCII in conjunction with T0 activates Th2II [1].&amp;nbsp;&lt;/span></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_10_in_S_25" qual:qualitativeSpecies="S_25" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;span style="color: rgb(79, 79, 79); font-family: Arial, sans-serif; font-size: 12px; line-height: 14.40000057220459px; background-color: rgb(255, 255, 255);">IL12II inhibites Th2II [1].&lt;/span></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_10_in_S_9" qual:qualitativeSpecies="S_9" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;span style="color: rgb(79, 79, 79); font-family: Arial, sans-serif; font-size: 12px; line-height: 14.40000057220459px; background-color: rgb(255, 255, 255);">DCII in conjunction with T0 activates Th2II [1].&amp;nbsp;&lt;/span></p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_10" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_5 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> S_9 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <not/>
+                  <apply>
+                    <eq/>
+                    <ci> S_25 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_11">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>PIC positively regulates DCI [1].</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_11_in_S_8" qual:qualitativeSpecies="S_8" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>PIC positively regulates DCI [1].</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_11" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_8 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_12">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;div>DCII in conjunction T0 positively regulates IL4II [1]. Th2II positively regulates IL4II [1]. IL12II negatively regulates IL4II [1].&amp;nbsp;&lt;span style="font-size: 10pt;">EL2 negatively regulates IL4II [1].&lt;/span>&lt;/div>&lt;div>&lt;br/>&lt;/div></p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_12_in_S_5" qual:qualitativeSpecies="S_5" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;div>"As described for&amp;nbsp;B. bronchiseptica, dendritic cells interact with naïve T cells (T0) leading to the activation of T cell subtypes Th1 and Th2 through the production of IL12 and IL4" [1]&lt;/div></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_12_in_S_25" qual:qualitativeSpecies="S_25" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>"IL4 and IL12 inhibit each other" [1]</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_12_in_S_9" qual:qualitativeSpecies="S_9" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>"As described for&amp;nbsp;B. bronchiseptica, dendritic cells interact with naïve T cells (T0) leading to the activation of T cell subtypes Th1 and Th2 through the production of IL12 and IL4" [1]</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_12_in_S_10" qual:qualitativeSpecies="S_10" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>"Dendritic cells also activated the Th2 cell mediated expression of IL4" [1]</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_12_in_S_15" qual:qualitativeSpecies="S_15" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>EL2 negatively regulates IL4II [1]</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_12" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <or/>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci> S_10 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <not/>
+                      <apply>
+                        <eq/>
+                        <ci> S_25 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> S_15 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci> S_5 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> S_9 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <eq/>
+                      <ci> S_25 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_13">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;span style="color: rgb(79, 79, 79); font-family: Arial, sans-serif; font-size: 12px; line-height: 18px; orphans: 3; widows: 3; background-color: rgb(255, 255, 255);">T0 positively regulates BC. BC positively regulates itself [1].&lt;/span></p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_13_in_S_13" qual:qualitativeSpecies="S_13" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;span style="color: rgb(79, 79, 79); font-family: Arial, sans-serif; font-size: 12px; line-height: 18px; orphans: 3; widows: 3; background-color: rgb(255, 255, 255);">BC positively regulates itself [1].&lt;/span></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_13_in_S_9" qual:qualitativeSpecies="S_9" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;span style="color: rgb(79, 79, 79); font-family: Arial, sans-serif; font-size: 12px; line-height: 18px; orphans: 3; widows: 3; background-color: rgb(255, 255, 255);">T0 positively regulates BC [1].&lt;/span></p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_13" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> S_9 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_13 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_14">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;div>IS and EL in conjunction activate IL13 [1,9]. EL2 positively regulates IL13 [1]. Th2I activates IL13 [1,2,3,4,5,6,7,8]&lt;/div></p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_14_in_S_16" qual:qualitativeSpecies="S_16" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>"Infective larvae stimulate IL13 production by resident eosinophils and these recruit additional eosinophils from the progenitor cells in the peripheral blood" [1,9]</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_14_in_S_19" qual:qualitativeSpecies="S_19" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>I&lt;span style="color: rgb(79, 79, 79); font-family: Arial, sans-serif; font-size: 12px; line-height: 14.40000057220459px; background-color: rgb(255, 255, 255);">S and EL in conjunction activate IL13 [1,9]&lt;/span></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_14_in_S_23" qual:qualitativeSpecies="S_23" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IL13 is mediated by Th2I [1,2,3,4,5,6,7,8]</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_14_in_S_15" qual:qualitativeSpecies="S_15" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;span style="color: rgb(79, 79, 79); font-family: Arial, sans-serif; font-size: 12px; line-height: 14.40000057220459px; background-color: rgb(255, 255, 255);">EL2 positively regulates IL13 [1]&lt;/span></p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_14" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <or/>
+                  <apply>
+                    <and/>
+                    <apply>
+                      <eq/>
+                      <ci> S_19 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <eq/>
+                      <ci> S_16 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> S_15 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_23 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_15">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;div>IL5 in conjunction with IgE activates EL2 [1].&amp;nbsp;&lt;span style="font-size: 10pt;">IL5 in conjunction with IL13 activates EL2 [1].&lt;/span>&lt;/div></p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_15_in_S_14" qual:qualitativeSpecies="S_14" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>progenitor eosinophils (i.e. resident eosinophils) are modulated by IL5 and IL13 [1]&lt;div>Infective larvae stimulate IL13 production by resident eosinophils and these recruit additional eosinophils from the progenitor cells in the peripheral blood [1,2]&lt;/div></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_15_in_S_17" qual:qualitativeSpecies="S_17" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;span style="color: rgb(51, 51, 51); font-family: arial, sans-serif; line-height: 18.0049991607666px; background-color: rgb(255, 255, 255);">progenitor eosinophils (i.e. resident eosinophils) are modulated by IL5 and IL13 [1]&lt;/span></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_15_in_S_4" qual:qualitativeSpecies="S_4" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IgE is involved in activating eosinophils [1]</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_15" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_4 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> S_17 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_14 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> S_17 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_17">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>EL2 activates IL5 [1].&amp;nbsp;Th2I activates IL5 [1,2,3,4,5,6,7,8].</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_17_in_S_23" qual:qualitativeSpecies="S_23" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>IL5 is mediated by Th2I [1,2,3,4,5,6,7,8]</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_17_in_S_15" qual:qualitativeSpecies="S_15" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>EL2 activates IL5 [1]</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_17" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> S_15 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_23 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_18">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;span style="color: rgb(79, 79, 79); font-family: Arial, sans-serif; font-size: 12px; line-height: 18px; orphans: 3; widows: 3; background-color: rgb(255, 255, 255);">IL4II positively regulates IL4I [1].&lt;/span></p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_18_in_S_12" qual:qualitativeSpecies="S_12" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;span style="color: rgb(79, 79, 79); font-family: Arial, sans-serif; font-size: 12px; line-height: 18px; orphans: 3; widows: 3; background-color: rgb(255, 255, 255);">IL4II positively regulates IL4I [1]&lt;/span></p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_18" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_12 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_19">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>IS positively regulates EL [1,2]. El2 negatively regulates EL [1].</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_19_in_S_16" qual:qualitativeSpecies="S_16" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;span style="color: rgb(79, 79, 79); font-family: Arial, sans-serif; font-size: 12px; line-height: 18px; orphans: 3; widows: 3; background-color: rgb(255, 255, 255);">"&lt;/span>&lt;span style="color: rgb(51, 51, 51); font-family: arial, sans-serif; line-height: 18.0049991607666px; background-color: rgb(255, 255, 255);">Infective larvae stimulate IL13 production by resident eosinophils and these recruit additional eosinophils from the progenitor cells in the peripheral blood" [1,2]&lt;/span></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_19_in_S_15" qual:qualitativeSpecies="S_15" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;span style="color: rgb(79, 79, 79); font-family: Arial, sans-serif; font-size: 12px; line-height: 18px; orphans: 3; widows: 3; background-color: rgb(255, 255, 255);">El2 negatively regulates EL [1]&lt;/span></p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_19" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> S_16 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <not/>
+                  <apply>
+                    <eq/>
+                    <ci> S_15 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_20">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;div>Th2I positively regulates Il10I [1].&lt;/div>&lt;div>&lt;br/>&lt;/div></p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_20_in_S_23" qual:qualitativeSpecies="S_23" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Th2I positively regulates Il10I [1]</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_20" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_23 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_21">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;div>IS positively regulates AD [1]. AD&lt;span style="font-size: 10pt;">&amp;nbsp;positively regulates AD [1,2,3].&lt;/span>&lt;span style="font-size: 10pt;">&amp;nbsp;&amp;nbsp;&lt;/span>&lt;span style="font-size: 10pt;">NE negatively regulates AD [1,2,3].&amp;nbsp;&lt;/span>&lt;span style="font-size: 10pt;">IgG negatively regulates AD [1].&amp;nbsp;&lt;/span>&lt;/div></p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_21_in_S_16" qual:qualitativeSpecies="S_16" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;span style="color: rgb(79, 79, 79); font-family: Arial, sans-serif; font-size: 12px; line-height: 14.40000057220459px; background-color: rgb(255, 255, 255);">IS positively regulates AD [1]&lt;/span></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_21_in_S_3" qual:qualitativeSpecies="S_3" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;span style="color: rgb(79, 79, 79); font-family: Arial, sans-serif; line-height: 14.40000057220459px; background-color: rgb(255, 255, 255);">IgG negatively regulates AD [1]&lt;/span></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_21_in_S_21" qual:qualitativeSpecies="S_21" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>"Ingested larvae were either killed by eosinophils, in a probabilistic manner, or successfully developed into adults" [1,2,3]</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_21_in_S_2" qual:qualitativeSpecies="S_2" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>"Ingested larvae were either killed by eosinophils, in a probabilistic manner, or successfully developed into adults" [1,2,3]</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_21" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_16 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <and/>
+                      <apply>
+                        <eq/>
+                        <ci> S_3 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                      <apply>
+                        <eq/>
+                        <ci> S_2 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_21 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <not/>
+                    <apply>
+                      <and/>
+                      <apply>
+                        <eq/>
+                        <ci> S_3 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                      <apply>
+                        <eq/>
+                        <ci> S_2 </ci>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_22">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>AD positively regulates EC [1]. IS positively regulates EC [1].</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_22_in_S_16" qual:qualitativeSpecies="S_16" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;span lang="EN-GB">T. retortaeformis&lt;/span>&lt;span lang="EN-GB">&amp;nbsp;Larvae activates EC [1].&lt;/span></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_22_in_S_21" qual:qualitativeSpecies="S_21" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;span lang="EN-GB">T. retortaeformis activate EC [1].&lt;/span></p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_22" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> S_21 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_16 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_23">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Th2II positively regulates Th2I [1].</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_23_in_S_10" qual:qualitativeSpecies="S_10" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>Th2II positively regulates Th2I [1].</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_23" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> S_10 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_24">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>EL positively regulates TEL [1].&amp;nbsp;EL2 positively regulates TEL [1].</p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_24_in_S_19" qual:qualitativeSpecies="S_19" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>EL positively regulates TEL [1]</p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_24_in_S_15" qual:qualitativeSpecies="S_15" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>EL2 positively regulates TEL [1].</p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_24" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> S_19 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> S_15 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_25">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;span style="color: rgb(79, 79, 79); font-family: Arial, sans-serif; font-size: 12px; line-height: 14.40000057220459px; background-color: rgb(255, 255, 255);">DCII in conjunction with T0 positively regulates IL12II [1]. IL4II negatively regulates IL12II [1].&lt;/span></p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_25_in_S_5" qual:qualitativeSpecies="S_5" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;span style="color: rgb(79, 79, 79); font-family: Arial, sans-serif; font-size: 12px; line-height: 14.40000057220459px; background-color: rgb(255, 255, 255);">DCII in conjunction with T0 positively regulates IL12II [1]&lt;/span></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_25_in_S_9" qual:qualitativeSpecies="S_9" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;span style="color: rgb(79, 79, 79); font-family: Arial, sans-serif; font-size: 12px; line-height: 14.40000057220459px; background-color: rgb(255, 255, 255);">DCII in conjunction with T0 positively regulates IL12II [1]&lt;/span></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_25_in_S_12" qual:qualitativeSpecies="S_12" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;span style="color: rgb(79, 79, 79); font-family: Arial, sans-serif; font-size: 12px; line-height: 14.40000057220459px; background-color: rgb(255, 255, 255);">IL4II negatively regulates IL12II [1]&lt;/span></p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_25" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_5 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> S_9 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <not/>
+                  <apply>
+                    <eq/>
+                    <ci> S_12 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_S_26">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>&lt;span style="color: rgb(79, 79, 79); font-family: Arial, sans-serif; font-size: 12px; line-height: 14.40000057220459px; background-color: rgb(255, 255, 255);">DCII in conjuction with T0 and Il12II positively regulates Th1II [1].&amp;nbsp;&lt;/span></p></body>
+        </notes>
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_S_26_in_S_5" qual:qualitativeSpecies="S_5" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;span style="color: rgb(79, 79, 79); font-family: Arial, sans-serif; font-size: 12px; line-height: 14.40000057220459px; background-color: rgb(255, 255, 255);">DCII in conjuction with T0 and Il12II positively regulates Th1II [1].&amp;nbsp;&lt;/span></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_26_in_S_25" qual:qualitativeSpecies="S_25" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;span style="color: rgb(79, 79, 79); font-family: Arial, sans-serif; font-size: 12px; line-height: 14.40000057220459px; background-color: rgb(255, 255, 255);">DCII in conjuction with T0 and Il12II positively regulates Th1II [1].&amp;nbsp;&lt;/span></p></body>
+            </notes>
+          </qual:input>
+          <qual:input qual:id="tr_S_26_in_S_9" qual:qualitativeSpecies="S_9" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
+            <notes>
+              <body xmlns="http://www.w3.org/1999/xhtml">
+                <p>&lt;span style="color: rgb(79, 79, 79); font-family: Arial, sans-serif; font-size: 12px; line-height: 14.40000057220459px; background-color: rgb(255, 255, 255);">DCII in conjuction with T0 and Il12II positively regulates Th1II [1].&amp;nbsp;&lt;/span></p></body>
+            </notes>
+          </qual:input>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="S_26" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> S_5 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> S_9 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> S_25 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+    </qual:listOfTransitions>
+    <listOfCompartments>
+      <compartment constant="true" id="extracellular" name="extracellular"/>
+      <compartment constant="true" id="cytosol" name="cytosol"/>
+    </listOfCompartments>
+  </model>
+</sbml>
