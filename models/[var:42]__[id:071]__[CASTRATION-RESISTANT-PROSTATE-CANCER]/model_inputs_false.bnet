@@ -1,0 +1,43 @@
+targets,factors
+AKT, ((((NKX3_1 & (!PTEN & !PDPK1)) | PDPK1) | (PTEN & (!PDPK1 & !NKX3_1))) | !((PTEN | PDPK1) | NKX3_1))
+AR_AR, (AKT | AR_HSP)
+AR_HSP, Androgens
+AZD5363, (AZD5363 & !AZD5363)
+AZD6244, (AZD6244 & !AZD6244)
+Androgens, (Androgens & !Androgens)
+BAD, !(RP6SKB1 | AKT)
+BCL2, !BAD
+BKM120, (BKM120 & !BKM120)
+CDK2_Cyclin_E, !p21
+Cixutumumab, (Cixutumumab & !Cixutumumab)
+EFGR, (EGF | HBEGF)
+EGF, (EGF & !EGF)
+EGFR_ERBB2, EGF
+ERBB2_3, NRG1
+ERK1_2, (MEK1 & !AZD6244)
+Enzalutamide, (Enzalutamide & !Enzalutamide)
+GRB2_SOS, ((((EFGR & !Lapatinib) | (EGFR_ERBB2 & !Lapatinib)) | IGFR1A_B) | (ERBB2_3 & !Lapatinib))
+HBEGF, (HBEGF & !HBEGF)
+IGF, (IGF & !IGF)
+IGFR1A_B, IGF
+IRS1, (IGFR1A_B & !Cixutumumab)
+Lapatinib, (Lapatinib & !Lapatinib)
+MEK1, Raf
+NKX3_1, (NKX3_1 & !NKX3_1)
+NRG1, (NRG1 & !NRG1)
+PDPK1, PIP3
+PIK3CA, ((ERBB2_3 | Ras) | IRS1)
+PIP3, (PIK3CA & !PTEN)
+PSA, (AR_AR & !Enzalutamide)
+PTEN, (PTEN & !PTEN)
+RHEB, !TSC_1_2
+RP6SKB1, (((mTOR & !Temsirolimus) | ERK1_2) | PDPK1)
+Raf, ((PIK3CA & !BKM120) | Ras)
+Ras, GRB2_SOS
+SP1, ERK1_2
+SRF___ELK1, (ERK1_2 & RP6SKB1)
+TMPRSS2, (AR_AR & !Enzalutamide)
+TSC_1_2, !(AKT & !AZD5363)
+Temsirolimus, (Temsirolimus & !Temsirolimus)
+mTOR, RHEB
+p21, !AKT
