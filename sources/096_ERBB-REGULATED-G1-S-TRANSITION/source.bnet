@@ -1,0 +1,24 @@
+# model in BoolNet format
+# the header targets, factors is mandatory to be importable in the R package BoolNet
+
+targets, factors
+AKT1,     !IGF1R&!ERBB1&!ERBB2_3&!ERBB1_2&ERBB1_3 | !IGF1R&!ERBB1&!ERBB2_3&ERBB1_2 | !IGF1R&!ERBB1&ERBB2_3 | !IGF1R&ERBB1 | IGF1R
+CDK2,     !p21&!p27&CyclinE1
+CDK4,     !p21&CyclinD1&!p27
+CDK6,     CyclinD1
+CyclinD1, !MEK1&ERalpha&AKT1&MYC | MEK1&ERalpha&MYC
+CyclinE1, MYC
+EGF,      1
+ERBB1,    EGF
+ERBB1_2,  ERBB1&ERBB2
+ERBB1_3,  ERBB1&ERBB3
+ERBB2,    EGF
+ERBB2_3,  ERBB2&ERBB3
+ERBB3,    EGF
+ERalpha,  !MEK1&AKT1 | MEK1
+IGF1R,    !ERalpha&AKT1&!ERBB2_3 | ERalpha&!ERBB2_3
+MEK1,     !IGF1R&!ERBB1&!ERBB2_3&!ERBB1_2&ERBB1_3 | !IGF1R&!ERBB1&!ERBB2_3&ERBB1_2 | !IGF1R&!ERBB1&ERBB2_3 | !IGF1R&ERBB1 | IGF1R
+MYC,      !MEK1&!ERalpha&AKT1 | !MEK1&ERalpha | MEK1
+p21,      !CDK4&!AKT1&!MYC
+p27,      !CDK4&!CDK2&!AKT1&!MYC
+pRB1,     CDK4&CDK6
