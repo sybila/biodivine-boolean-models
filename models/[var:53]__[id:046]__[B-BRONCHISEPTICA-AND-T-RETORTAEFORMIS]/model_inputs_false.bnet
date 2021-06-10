@@ -1,0 +1,54 @@
+targets,factors
+AD, ((IgG & (AD | IS)) & !(NE_TRetortaeformis | MPI_Bacterium))
+AP, ((IgG_Bacterium & ((Bb & (Th1I_Bacterium & MPI_Bacterium)) & Cb)) | (AgAb_Bacterium & ((Th1I_Bacterium & MPI_Bacterium) & Bb)))
+AgAb_Bacterium, ((IgG_Bacterium & Bb) | (IgA_Bacterium & Bb))
+BC_Bacterium, (T0 | BC_Bacterium)
+BC_TRetortaeformis, (T0 | BC_TRetortaeformis)
+Bb, (Bb & !PH)
+Cb, ((Bb & !Oag) | (AgAb_Bacterium & IgG_Bacterium))
+DCII_Bacterium, DCI_Bacterium
+DCII_TRetortaeformis, DCI_TRetortaeformis
+DCI_Bacterium, ((PIC & Bb) | (IFNg_Bacterium & Bb))
+DCI_TRetortaeformis, PIC
+DP, (NE_Bacterium & TTSSI)
+EC_Bacterium, Bb
+EC_TRetortaeformis, (AD | IS)
+EL, (IS & !EL2)
+EL2, ((IL13 & IL5) | (IgE & IL5))
+IFNgI, ((IFNg_Bacterium | Th1I_TRetortaeformis) | DCI_TRetortaeformis)
+IFNgII, (IFNg_Bacterium | IFNgI)
+IFNg_Bacterium, (((Th1I_Bacterium & !(IL4I | IL10I_Bacterium)) | DCI_Bacterium) | MPI_Bacterium)
+IL10I, (IL10I_Bacterium | Th2I_TRetortaeformis)
+IL10I_Bacterium, ((MPI_Bacterium | (Th2I_Bacterium & TTSSI)) | TrI_Bacterium)
+IL12II, (((DCII_Bacterium & T0) & !IL4II) | ((DCII_TRetortaeformis & T0) & !IL4II))
+IL13, ((((EL & IS) | Th2I_Bacterium) | Th2I_TRetortaeformis) | EL2)
+IL4I, IL4II
+IL4II, (((((Th2II_Bacterium & !(IFNgI | IL12II)) | EL2) | ((DCII_Bacterium & T0) & !(IFNgI | IL12II))) | ((DCII_TRetortaeformis & T0) & !(IFNgI | IL12II))) | (Th2II_TRetortaeformis & !(IFNgI | IL12II)))
+IL5, (Th2II_TRetortaeformis | EL2)
+IS, (IS & !IS)
+IgA_Bacterium, ((BC_Bacterium & Bb) | (IgA_Bacterium & Bb))
+IgA_TRetortaeformis, (IS & BC_TRetortaeformis)
+IgE, ((IL13 & BC_TRetortaeformis) | (IL4II & BC_TRetortaeformis))
+IgG, BC_TRetortaeformis
+IgG_Bacterium, (BC_Bacterium | IgG_Bacterium)
+MPI_Bacterium, ((IFNg_Bacterium & Bb) | (PIC & Bb))
+NE_Bacterium, PIC
+NE_TRetortaeformis, ((PIC & AD) | (IFNgI & !(IL4I | IL10I)))
+Oag, Bb
+PH, (AP & Bb)
+PIC, ((((AP & !(IL10I | IgA_TRetortaeformis)) | (EC_Bacterium & !(IL10I | IgA_TRetortaeformis))) | (AD & !(IL10I | IgA_TRetortaeformis))) | (EC_TRetortaeformis & !(IL10I | IgA_TRetortaeformis)))
+T0, (DCII_Bacterium | DCII_TRetortaeformis)
+TEL, (EL | EL2)
+TNE, (NE_Bacterium | NE_TRetortaeformis)
+TTSSI, (Bb & !(IgA_Bacterium | IgG_Bacterium))
+TTSSII, TTSSI
+Th1II_Bacterium, (DCII_Bacterium & (T0 & IL12II))
+Th1II_TRetortaeformis, (DCII_TRetortaeformis & ((IL12II & T0) & DCII_TRetortaeformis))
+Th1I_Bacterium, Th1II_Bacterium
+Th1I_TRetortaeformis, Th1II_TRetortaeformis
+Th2II_Bacterium, ((DCII_Bacterium & T0) & !IL12II)
+Th2II_TRetortaeformis, ((DCII_TRetortaeformis & T0) & !IL12II)
+Th2I_Bacterium, Th2II_Bacterium
+Th2I_TRetortaeformis, Th2II_TRetortaeformis
+TrII, (DCII_Bacterium & (T0 & TTSSII))
+TrI_Bacterium, TrII
