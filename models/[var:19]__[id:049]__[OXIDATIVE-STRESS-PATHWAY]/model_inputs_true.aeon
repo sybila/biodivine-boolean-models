@@ -1,0 +1,51 @@
+Akt -| Bad
+Ras -> PI3K
+GSK3b -| ARE
+Bach1 -| ARE
+ARE -| ARE
+Nrf2 -> ARE
+PIP2 -> PIP3
+PTEN -| PIP3
+ROS -> PKC
+ARE -| PKC
+ROS -> Ras
+Akt -> Mdm2
+p53 -> Mdm2
+ATM -| Mdm2
+Mdm2 -| p53
+ATM -> p53
+PI3K -> PIP2
+Bad -| Bcl2
+p53 -| Bcl2
+Akt -| GSK3b
+Akt -> Nrf2
+Keap1 -| Nrf2
+PKC -> Nrf2
+ROS -> ATM
+Keap1 -> Keap1
+Bach1 -| Keap1
+Nrf2 -> Keap1
+ARE -| ROS
+Stress -> ROS
+PIP3 -> Akt
+ROS -| PTEN
+ROS -| Bach1
+$ARE: (Nrf2 & !((GSK3b | Bach1) | ARE))
+$ATM: ROS
+$Akt: PIP3
+$Bach1: !ROS
+$Bad: !Akt
+$Bcl2: !(p53 | Bad)
+$GSK3b: !Akt
+$Keap1: ((Nrf2 & !Bach1) | (Keap1 & !Bach1))
+$Mdm2: ((p53 & !ATM) | (Akt & !ATM))
+$Nrf2: ((PKC | Akt) | !((Akt | Keap1) | PKC))
+$PI3K: Ras
+$PIP2: PI3K
+$PIP3: (PIP2 & !PTEN)
+$PKC: (ROS & (!ARE | !ARE))
+$PTEN: !ROS
+$ROS: (Stress & !ARE)
+$Ras: ROS
+$Stress: true
+$p53: (ATM & !Mdm2)
