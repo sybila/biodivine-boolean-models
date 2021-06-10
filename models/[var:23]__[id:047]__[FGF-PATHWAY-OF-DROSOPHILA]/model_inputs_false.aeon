@@ -1,0 +1,47 @@
+Cnk -> Raf
+Ras -> Raf
+Src42 -> Raf
+Ksr -> Raf
+Btl -> Stumps
+Htl -> Stumps
+Rl -> Pnt
+PLCg -> Gap
+Stumps -> Drk
+Csw -> Drk
+Pnt -> Targets
+Aop -| Targets
+Drk -> PLCg
+Drk -> Sos
+Raf -> Dsor1
+Bnl -> Btl
+Rl -| Aop
+Ths -> Htl
+Pyr -> Htl
+Dsor1 -> Rl
+Msk -> Rl
+Sos -> Ras
+Gap -?? Ras
+Sty -?? Ras
+$Aop: !Rl
+$Bnl: false
+$Btl: Bnl
+$Cnk: false
+$Csw: false
+$Drk: (Stumps & Csw)
+$Dsor1: Raf
+$Gap: PLCg
+$Htl: (Pyr | Ths)
+$Ksr: false
+$Msk: false
+$PLCg: Drk
+$Pnt: Rl
+$Pyr: false
+$Raf: (Ras & ((Cnk & Src42) & Ksr))
+$Ras: (((Sos & Sos) | ((Sty & (!Gap & !Sty)) & !Gap)) | ((Gap & Sos) & !Sty))
+$Rl: (Dsor1 & Msk)
+$Sos: Drk
+$Src42: false
+$Stumps: (Htl | Btl)
+$Sty: false
+$Targets: (Pnt & !Aop)
+$Ths: false
