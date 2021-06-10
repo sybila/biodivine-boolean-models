@@ -1,0 +1,56 @@
+Rl -? Aop
+Bnl -? Bnl
+Bnl -? Btl
+Cnk -? Cnk
+Csw -? Csw
+Csw -? Drk
+stumps -? Drk
+Raf -? Dsor1
+PLCg -? Gap1
+Pyr -? Htl
+Ths -? Htl
+Ksr -? Ksr
+Msk -? Msk
+Drk -? PLCg
+Rl -? Pnt
+Pyr -? Pyr
+Cnk -? Raf
+Ksr -? Raf
+Ras -? Raf
+Src42 -? Raf
+Gap1 -? Ras
+Sos -? Ras
+Sty -? Ras
+Dsor1 -? Rl
+Msk -? Rl
+Drk -? Sos
+Src42 -? Src42
+Sty -? Sty
+Aop -? Targets
+Pnt -? Targets
+Ths -? Ths
+Btl -? stumps
+Htl -? stumps
+$Aop: !Rl
+$Bnl: Bnl
+$Btl: Bnl
+$Cnk: Cnk
+$Csw: Csw
+$Drk: (stumps & Csw)
+$Dsor1: Raf
+$Gap1: PLCg
+$Htl: ((!Ths & Pyr) | Ths)
+$Ksr: Ksr
+$Msk: Msk
+$PLCg: Drk
+$Pnt: Rl
+$Pyr: Pyr
+$Raf: (Ras & (Cnk & (Src42 & Ksr)))
+$Ras: ((Sos & !Gap1) | (Sos & (Gap1 & !Sty)))
+$Rl: (Dsor1 & Msk)
+$Sos: Drk
+$Src42: Src42
+$Sty: Sty
+$Targets: (!Aop & Pnt)
+$Ths: Ths
+$stumps: ((!Htl & Btl) | Htl)
