@@ -1,0 +1,29 @@
+targets,factors
+ATP, !MPT
+BAX, (CASP8 & !BCL2)
+BCL2, NFkB
+CASP3, (apoptosome & !XIAP)
+CASP8, (((CASP3 & !cFLIP) | (DISC_FAS & !cFLIP)) | (DISC_TNF & !cFLIP))
+Cyt_c, MOMP
+DISC_FAS, (FASL & FADD)
+DISC_TNF, (TNFR & FADD)
+FADD, (FADD | !FADD)
+FASL, (FASL | !FASL)
+IKK, RIP1ub
+MOMP, (BAX | MPT)
+MPT, (ROS & !BCL2)
+NFkB, (IKK & !CASP3)
+NonACD, (!ATP | !ATP)
+RIP1, ((TNFR & !CASP8) | (DISC_FAS & !CASP8))
+RIP1k, RIP1
+RIP1ub, (cIAP & RIP1)
+ROS, ((RIP1k & !NFkB) | (MPT & !NFkB))
+SMAC, MOMP
+TNF, (TNF | !TNF)
+TNFR, TNF
+XIAP, (NFkB & !SMAC)
+apoptosis, CASP3
+apoptosome, ((Cyt_c & ATP) & !XIAP)
+cFLIP, NFkB
+cIAP, ((NFkB & !SMAC) | (cIAP & !SMAC))
+survival, NFkB
