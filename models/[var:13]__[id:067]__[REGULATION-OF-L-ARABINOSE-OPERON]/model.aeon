@@ -1,0 +1,27 @@
+MS -> E
+L -|? MS
+S_7_Ara_ -> MS
+C -> MS
+S_2_Ara_ -> L
+S_7_Ara_ -| L
+A -> S_7_Ara_
+S_2_Ara_ -> S_7_Ara_
+Am -> S_7_Ara_
+MT -> T
+Aem -> Am
+Ae -> Am
+T -> Am
+Ae -> A
+T -> A
+S_7_Ara_ -> MT
+C -> MT
+Ge -| C
+$A: (Ae & T)
+$Am: ((Aem & T) | Ae)
+$C: !Ge
+$E: MS
+$L: (S_2_Ara_ & !S_7_Ara_)
+$MS: (S_7_Ara_ & C)
+$MT: (S_7_Ara_ & C)
+$S_7_Ara_: (S_2_Ara_ & (A | Am))
+$T: MT
