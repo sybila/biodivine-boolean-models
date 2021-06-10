@@ -1,0 +1,67 @@
+targets,factors
+3_hydroxybutyryl_CoA, ((hbd | acetoacetyl_CoA) | crt)
+AbrB, !spo0A_p
+EtfAB, NADH
+NADH, (NADH & !NADH)
+NAD_P_H, (NAD_P_H & !NAD_P_H)
+PTS, (PTS & !PTS)
+Rnf, (Rnf & !Rnf)
+acetaldehyde, (ald | acetyl_CoA)
+acetate, ((ack | (glucose___PTS & acetone)) | (pta & acetone))
+acetic_acid, ((acetyl_p & acetate) & !sporulation)
+acetoacetate, ((acetoacetyl_CoA | ctfA) | ctfB)
+acetoacetyl_CoA, (((acetyl_CoA | hbd) | ctfB) | thlA)
+acetone, ((adc & !sporulation) | (acetoacetate & !sporulation))
+acetyl_CoA, (((thlA | pyruvate) | (acetate & acetoacetyl_CoA)) | pfo)
+acetyl_p, acetyl_CoA
+ack, !(spo0A_p | sporulation)
+adc, spo0A_p
+adhA, spo0A_p
+adhB, spo0A_p
+ald, (sigK | spo0A_p)
+bcd, !(spo0A_p | sporulation)
+bdhAB, spo0A_p
+buk1, !(spo0A_p | sporulation)
+butanal, ((butyryl_CoA | bdhAB) | ald)
+butanol, (((((bdhAB & !sporulation) | (adhB & !sporulation)) | (NAD_P_H & !sporulation)) | (butanal & !sporulation)) | (adhA & !sporulation))
+butyrate, (((buk1 & !butyrate) | (ptb & !butyrate)) | (glucose___PTS & !butyrate))
+butyric_acid, ((butyryl_p & butyrate) & !sporulation)
+butyryl_CoA, ((((bcd | (butyrate & acetoacetyl_CoA)) | ald) | EtfAB) | crotonoyl_CoA)
+butyryl_p, butyryl_CoA
+cell_membrane, ((butyrate & !(acetone | ethanol)) | (glucose & !((butanol | acetone) | ethanol)))
+crotonoyl_CoA, ((crt | ferredoxin) | 3_hydroxybutyryl_CoA)
+crt, !(sporulation | spo0A_p)
+ctfA, spo0A_p
+ctfB, spo0A_p
+ethanol, (((adhA & !(ald | sporulation)) | (acetaldehyde & !(ald | sporulation))) | (adhB & !(ald | sporulation)))
+fba, (fba & !fba)
+ferredoxin, Rnf
+gap_pgk_tpi_pgm__X276_23705_eno, (gap_pgk_tpi_pgm__X276_23705_eno & !gap_pgk_tpi_pgm__X276_23705_eno)
+glucose, (glucose & !glucose)
+glucose___PTS, (((PTS & (cell_membrane & glucose)) & !(sporulation & !cell_membrane)) | ((glucose & (cell_membrane & PTS)) & !(sporulation & !cell_membrane)))
+hbd, !(sporulation | spo0A_p)
+lactate, (pyruvate & !ferredoxin)
+lactic_acid, (lactate & !sporulation)
+pfk, (pfk & !pfk)
+pfo, (pfo & !pfo)
+pgi, (pgi & !pgi)
+phosphorylation, (phosphorylation & !phosphorylation)
+pta, !(spo0A_p | sporulation)
+ptb, !(sporulation | spo0A_p)
+pyk, pfk
+pyruvate, ((((fba | pgi) | glucose___PTS) | pyk) | gap_pgk_tpi_pgm__X276_23705_eno)
+sigA, (sigA & !sigA)
+sigE, (sigF | spo0A_p)
+sigF, ((spoIIE & !(spoIIAB & !spoIIE)) | (sigH & !(spoIIAB & !spoIIE)))
+sigG, sigE
+sigH, sigA
+sigK, sigG
+spo0A, (sigK | spo0A_p)
+spo0A_p, ((((spo0A & phosphorylation) & !sporulation) | ((sigA & (spo0A & phosphorylation)) & !sporulation)) | ((phosphorylation & spo0A) & !sporulation))
+spoIIAA, (spoIIE | (spo0A_p & sigH))
+spoIIAB, ((spo0A_p & sigH) & !(spoIIAA & spoIIE))
+spoIIAB_p, ((spoIIAB & phosphorylation) | (phosphorylation & spoIIAB))
+spoIIA_p, (spoIIAB & spoIIAA)
+spoIIE, (spoIIE & !spoIIE)
+sporulation, (((((spo0A_p & !cell_membrane) | (sigE & (sigA & !cell_membrane))) | (sigG & (sigA & !cell_membrane))) | (sigH & !cell_membrane)) | (sigK & (!cell_membrane & sigA)))
+thlA, spo0A_p
