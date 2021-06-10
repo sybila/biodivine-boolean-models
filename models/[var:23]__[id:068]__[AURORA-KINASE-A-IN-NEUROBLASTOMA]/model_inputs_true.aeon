@@ -1,0 +1,66 @@
+STMN -| MT
+AURKAActive -> hCPEB
+PP2A -| AURKAPresent
+GWL_MASTL -> ENSA
+SpindleAssembly -> Cytokinesis
+CentrosomeMat -| Cytokinesis
+PLK1 -| BORA
+Cytokinesis -| BORA
+GSK3B -> BORA
+AURKAActive -> NEDD9
+hCPEB -> CDK1CCNBComplex
+CDC25B -> CDK1CCNBComplex
+Cytokinesis -| CDK1CCNBComplex
+WEE1 -| CDK1CCNBComplex
+PLK1 -| WEE1
+PLK1 -> CDC25B
+AURKAActive -> CDC25B
+Cytokinesis -| CDC25B
+CentrosomeMat -> SpindleAssembly
+Cytokinesis -| SpindleAssembly
+PLK1 -> TPX2
+SpindleAssembly -| CentrosomeMat
+CDK1CCNBComplex -> CentrosomeMat
+PP1 -| AURKAActive
+AJUBA -> AURKAActive
+AURKAActive -| AURKAActive
+BORA -> AURKAActive
+NEDD9 -> AURKAActive
+AURKAPresent -> AURKAActive
+TPX2 -> AURKAActive
+AURKAActive -| STMN
+AURKAActive -| PP1
+CDK1CCNBComplex -| PP1
+Cytokinesis -| PP1
+PP2A -| GWL_MASTL
+CDK1CCNBComplex -> GWL_MASTL
+STMN -| PLK1
+MTCanAct -> PLK1
+AURKAActive -> PLK1
+STMNCanAct -> PLK1
+MT -> PLK1
+PP1 -> PP2A
+ENSA -| PP2A
+$AJUBA: true
+$AURKAActive: (((TPX2 & AURKAPresent) & !(PP1 & AURKAActive)) | ((AJUBA & ((BORA & AURKAPresent) | (NEDD9 & AURKAPresent))) & !(PP1 & AURKAActive)))
+$AURKAPresent: !PP2A
+$BORA: (GSK3B & !(PLK1 & Cytokinesis))
+$CDC25B: ((PLK1 & !Cytokinesis) | (AURKAActive & !Cytokinesis))
+$CDK1CCNBComplex: (((hCPEB & !Cytokinesis) | (CDC25B & !Cytokinesis)) | !(((hCPEB | CDC25B) | Cytokinesis) | WEE1))
+$CentrosomeMat: (CDK1CCNBComplex & !SpindleAssembly)
+$Cytokinesis: (SpindleAssembly & !CentrosomeMat)
+$ENSA: GWL_MASTL
+$GSK3B: true
+$GWL_MASTL: (CDK1CCNBComplex & !PP2A)
+$MT: !STMN
+$MTCanAct: true
+$NEDD9: AURKAActive
+$PLK1: ((AURKAActive | (STMNCanAct & !STMN)) | (MT & MTCanAct))
+$PP1: !((AURKAActive | CDK1CCNBComplex) | Cytokinesis)
+$PP2A: (PP1 & !ENSA)
+$STMN: !AURKAActive
+$STMNCanAct: true
+$SpindleAssembly: (CentrosomeMat & !Cytokinesis)
+$TPX2: PLK1
+$WEE1: !PLK1
+$hCPEB: AURKAActive
