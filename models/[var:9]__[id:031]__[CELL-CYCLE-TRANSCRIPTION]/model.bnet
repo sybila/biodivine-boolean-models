@@ -1,0 +1,10 @@
+targets,factors
+ACE2, SFF
+CLN3, ((SWI5 & ACE2) & !(YOX1 | YHP1))
+HCM1, (MBF & SBF)
+MBF, CLN3
+SBF, ((MBF & !(YHP1 | YOX1)) | (CLN3 & !(YHP1 | YOX1)))
+SFF, (SBF & HCM1)
+SWI5, SFF
+YHP1, (SBF | MBF)
+YOX1, (MBF & SBF)
