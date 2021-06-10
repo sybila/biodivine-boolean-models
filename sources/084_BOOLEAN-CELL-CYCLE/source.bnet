@@ -1,0 +1,14 @@
+# model in BoolNet format
+# the header targets, factors is mandatory to be importable in the R package BoolNet
+
+targets, factors
+Cdc20,  CycB
+CycA,   !Rb&!E2F&CycA&!Cdc20&!cdh1 | !Rb&!E2F&CycA&!Cdc20&cdh1&!UbcH10 | !Rb&E2F&!Cdc20&!cdh1 | !Rb&E2F&!Cdc20&cdh1&!UbcH10
+CycB,   !Cdc20&!cdh1
+CycD,   CycD
+CycE,   !Rb&E2F
+E2F,    !Rb&!CycA&!CycB | !Rb&CycA&p27&!CycB
+Rb,     !CycD&!CycE&!CycA&!CycB | !CycD&!CycE&CycA&p27&!CycB | !CycD&CycE&p27&!CycB
+UbcH10, !CycA&!Cdc20&!cdh1 | !CycA&!Cdc20&cdh1&UbcH10&CycB | !CycA&Cdc20&!cdh1 | !CycA&Cdc20&cdh1&UbcH10 | CycA&!cdh1 | CycA&cdh1&UbcH10
+cdh1,   !CycA&!Cdc20&!CycB | !CycA&Cdc20 | CycA&!p27&Cdc20 | CycA&p27&!Cdc20&!CycB | CycA&p27&Cdc20
+p27,    !CycD&!CycE&!CycA&!CycB | !CycD&!CycE&CycA&p27&!CycB | !CycD&CycE&!CycA&p27&!CycB
