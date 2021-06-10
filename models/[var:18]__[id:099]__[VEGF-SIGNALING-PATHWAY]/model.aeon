@@ -1,0 +1,44 @@
+Rl -? Aop
+Cnk -? Cnk
+Pvr -? Drk
+Raf -? Dsor1
+Ksr -? Ksr
+Msk -? Msk
+Rl -? Pnt
+Pvf1 -? Pvf1
+Pvf2 -? Pvf2
+Pvf3 -? Pvf3
+Pvf1 -? Pvr
+Pvf2 -? Pvr
+Pvf3 -? Pvr
+Cnk -? Raf
+Ksr -? Raf
+Ras -? Raf
+Src42 -? Raf
+Sos -? Ras
+Sty -? Ras
+Dsor1 -? Rl
+Msk -? Rl
+Drk -? Sos
+Src42 -? Src42
+Sty -? Sty
+Aop -? Targets
+Pnt -? Targets
+$Aop: !Rl
+$Cnk: Cnk
+$Drk: Pvr
+$Dsor1: Raf
+$Ksr: Ksr
+$Msk: Msk
+$Pnt: Rl
+$Pvf1: Pvf1
+$Pvf2: Pvf2
+$Pvf3: Pvf3
+$Pvr: ((!Pvf1 & (!Pvf2 & Pvf3)) | ((!Pvf1 & Pvf2) | Pvf1))
+$Raf: (Ras & (Cnk & (Src42 & Ksr)))
+$Ras: (Sos & !Sty)
+$Rl: (Dsor1 & Msk)
+$Sos: Drk
+$Src42: Src42
+$Sty: Sty
+$Targets: (!Aop & Pnt)
