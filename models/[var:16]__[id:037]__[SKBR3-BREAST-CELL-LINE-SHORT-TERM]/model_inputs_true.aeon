@@ -1,0 +1,57 @@
+erlotinib -| ERBB1
+PLCg -> ERBB1
+pertuzumab -| ERBB1
+EGF -> ERBB1
+ERBB1 -> ERBB1
+mTOR -> AKT
+PDK1 -> AKT
+AKT -> AKT
+ERBB3 -> AKT
+erlotinib -| ERBB2
+pertuzumab -| ERBB2
+ERBB2 -> ERBB2
+trastuzumab -| ERBB2
+PDK1 -> PDK1
+ERBB2 -> PDK1
+ERBB3 -> PDK1
+ERBB1 -> PDK1
+mTOR -> mTOR
+AKT -> mTOR
+ERBB2 -> MEK1_2
+MEK1_2 -> MEK1_2
+ERBB3 -> MEK1_2
+ERBB1 -> MEK1_2
+mTOR -> p70S6K
+p70S6K -> p70S6K
+AKT -> p70S6K
+ERK1_2 -> p70S6K
+PLCg -> PKCa
+PKCa -> PKCa
+PDK1 -> ERK1_2
+ERK1_2 -> ERK1_2
+MEK1_2 -> ERK1_2
+ERBB3 -> ERK1_2
+erlotinib -| ERBB3
+pertuzumab -| ERBB3
+HRG -> ERBB3
+ERBB3 -> ERBB3
+PLCg -> PLCg
+ERBB2 -> PLCg
+ERBB3 -> PLCg
+ERBB1 -> PLCg
+$AKT: (((mTOR | PDK1) | AKT) | ERBB3)
+$EGF: true
+$ERBB1: (((ERBB1 & !(pertuzumab | erlotinib)) | (EGF & !(pertuzumab | erlotinib))) | (PLCg & !(pertuzumab | erlotinib)))
+$ERBB2: (ERBB2 & !((trastuzumab | pertuzumab) | erlotinib))
+$ERBB3: ((ERBB3 & !(erlotinib | pertuzumab)) | (HRG & !(erlotinib | pertuzumab)))
+$ERK1_2: (((PDK1 | ERBB3) | MEK1_2) | ERK1_2)
+$HRG: true
+$MEK1_2: (((ERBB2 | ERBB3) | ERBB1) | MEK1_2)
+$PDK1: (((ERBB2 | ERBB1) | PDK1) | ERBB3)
+$PKCa: (PLCg | PKCa)
+$PLCg: (((ERBB2 | ERBB3) | ERBB1) | PLCg)
+$erlotinib: true
+$mTOR: (mTOR | AKT)
+$p70S6K: (((p70S6K | AKT) | mTOR) | ERK1_2)
+$pertuzumab: true
+$trastuzumab: true

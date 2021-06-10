@@ -1,0 +1,12 @@
+targets,factors
+AKT, (((mTOR | PDK1) | AKT) | ERBB3)
+ERBB1, (((ERBB1 & !(pertuzumab | erlotinib)) | (EGF & !(pertuzumab | erlotinib))) | (PLCg & !(pertuzumab | erlotinib)))
+ERBB2, (ERBB2 & !((trastuzumab | pertuzumab) | erlotinib))
+ERBB3, ((ERBB3 & !(erlotinib | pertuzumab)) | (HRG & !(erlotinib | pertuzumab)))
+ERK1_2, (((PDK1 | ERBB3) | MEK1_2) | ERK1_2)
+MEK1_2, (((ERBB2 | ERBB3) | ERBB1) | MEK1_2)
+PDK1, (((ERBB2 | ERBB1) | PDK1) | ERBB3)
+PKCa, (PLCg | PKCa)
+PLCg, (((ERBB2 | ERBB3) | ERBB1) | PLCg)
+mTOR, (mTOR | AKT)
+p70S6K, (((p70S6K | AKT) | mTOR) | ERK1_2)
