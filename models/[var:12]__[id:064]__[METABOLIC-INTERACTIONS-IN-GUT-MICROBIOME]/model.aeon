@@ -1,0 +1,41 @@
+Enterobacteriaceae -> Enterococcus
+Clostridium_difficile -> Enterococcus
+Coprobacillus -| Enterococcus
+Blautia -> Enterococcus
+Mollicutes -> Enterococcus
+Coprobacillus -? Blautia
+Enterococcus -> Blautia
+Blautia -? Blautia
+Lachnospiraceae_other_ -> Lachnospiraceae
+Other -> Lachnospiraceae
+Clindamycin_ -| Lachnospiraceae
+Lachnospiraceae -> Lachnospiraceae
+Lachnospiraceae_other_ -> Barnesiella
+Other -> Barnesiella
+Clindamycin_ -| Barnesiella
+Lachnospiraceae -> Barnesiella
+Lachnospiraceae_other_ -> Lachnospiraceae_other_
+Other -> Lachnospiraceae_other_
+Clindamycin_ -| Lachnospiraceae_other_
+Lachnospiraceae -> Lachnospiraceae_other_
+Lachnospiraceae_other_ -> Other
+Other -> Other
+Clindamycin_ -| Other
+Lachnospiraceae -> Other
+Clostridium_difficile -> Clostridium_difficile
+Barnesiella -| Clostridium_difficile
+Coprobacillus -> Akkermansia_
+Enterobacteriaceae -> Enterobacteriaceae
+Mollicutes -> Mollicutes
+Clindamycin_ -> Clindamycin_
+$Akkermansia_: Coprobacillus
+$Barnesiella: (((Lachnospiraceae_other_ & !Clindamycin_) | (Other & !Clindamycin_)) | (Lachnospiraceae & !Clindamycin_))
+$Blautia: ((((Coprobacillus & !Blautia) | Enterococcus) | (Blautia & !Coprobacillus)) | Blautia)
+$Clindamycin_: Clindamycin_
+$Clostridium_difficile: (Clostridium_difficile & !Barnesiella)
+$Enterobacteriaceae: Enterobacteriaceae
+$Enterococcus: ((((Enterobacteriaceae | Mollicutes) | Blautia) | Clostridium_difficile) | !((((Enterobacteriaceae | Clostridium_difficile) | Coprobacillus) | Blautia) | Mollicutes))
+$Lachnospiraceae: (((Lachnospiraceae & !Clindamycin_) | (Lachnospiraceae_other_ & !Clindamycin_)) | (Other & !Clindamycin_))
+$Lachnospiraceae_other_: (((Lachnospiraceae & !Clindamycin_) | (Other & !Clindamycin_)) | (Lachnospiraceae_other_ & !Clindamycin_))
+$Mollicutes: Mollicutes
+$Other: (((Other & !Clindamycin_) | (Lachnospiraceae_other_ & !Clindamycin_)) | (Lachnospiraceae & !Clindamycin_))
