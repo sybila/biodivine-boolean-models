@@ -1,0 +1,24 @@
+# model in BoolNet format
+# the header targets, factors is mandatory to be importable in the R package BoolNet
+
+targets, factors
+AKT1,       !GF&!TGFb_pthw&!Notch_pthw&WNT_pthw&!p53&EMTreg&!miRNA&!Ecadh | !GF&!TGFb_pthw&Notch_pthw&WNT_pthw&!p53&!miRNA&!Ecadh | !GF&TGFb_pthw&WNT_pthw&!p53&!miRNA&!Ecadh | GF&WNT_pthw&!p53&!miRNA&!Ecadh
+AKT2,       !p53&EMTreg&!miRNA
+Apoptosis,  !p53&!EMTreg&!p63_73&!AKT1&!ERK_pthw&miRNA | !p53&!EMTreg&p63_73&!AKT1&!ERK_pthw | p53&!EMTreg&!AKT1&!ERK_pthw
+CCA,        !TGFb_pthw&!p53&!EMTreg&!p63_73&!AKT1&!AKT2&miRNA | !TGFb_pthw&!p53&!EMTreg&!p63_73&!AKT1&AKT2&!ERK_pthw | !TGFb_pthw&!p53&!EMTreg&!p63_73&!AKT1&AKT2&ERK_pthw&miRNA | !TGFb_pthw&!p53&!EMTreg&p63_73&!AKT1&!ERK_pthw | !TGFb_pthw&!p53&!EMTreg&p63_73&!AKT1&ERK_pthw&miRNA | !TGFb_pthw&!p53&EMTreg&!AKT1 | !TGFb_pthw&p53&!EMTreg&!AKT1&!ERK_pthw | !TGFb_pthw&p53&!EMTreg&!AKT1&ERK_pthw&miRNA | !TGFb_pthw&p53&EMTreg&!AKT1 | TGFb_pthw&!Notch_pthw&!p53&!EMTreg&!p63_73&!AKT1&!AKT2&miRNA | TGFb_pthw&!Notch_pthw&!p53&!EMTreg&!p63_73&!AKT1&AKT2&!ERK_pthw | TGFb_pthw&!Notch_pthw&!p53&!EMTreg&!p63_73&!AKT1&AKT2&ERK_pthw&miRNA | TGFb_pthw&!Notch_pthw&!p53&!EMTreg&p63_73&!AKT1&!ERK_pthw | TGFb_pthw&!Notch_pthw&!p53&!EMTreg&p63_73&!AKT1&ERK_pthw&miRNA | TGFb_pthw&!Notch_pthw&!p53&EMTreg&!AKT1 | TGFb_pthw&!Notch_pthw&p53&!EMTreg&!AKT1&!ERK_pthw | TGFb_pthw&!Notch_pthw&p53&!EMTreg&!AKT1&ERK_pthw&miRNA | TGFb_pthw&!Notch_pthw&p53&EMTreg&!AKT1 | TGFb_pthw&Notch_pthw&!EMTreg&!AKT1&!ERK_pthw | TGFb_pthw&Notch_pthw&!EMTreg&!AKT1&ERK_pthw&miRNA | TGFb_pthw&Notch_pthw&EMTreg&!AKT1
+DNAdamage,  DNAdamage
+ECMicroenv, ECMicroenv
+EMT,        EMTreg&!Ecadh
+EMTreg,     !Notch_pthw&!WNT_pthw&!p53&EMTreg&!miRNA | !Notch_pthw&WNT_pthw&!p53&!miRNA | Notch_pthw&!p53&!miRNA
+ERK_pthw,   !GF&!TGFb_pthw&!Notch_pthw&EMTreg&!AKT1 | !GF&!TGFb_pthw&Notch_pthw&!AKT1 | !GF&TGFb_pthw&!AKT1 | GF&!AKT1
+Ecadh,      !EMTreg&!AKT2
+GF,         !GF&EMTreg&!Ecadh | GF&!Ecadh
+Invasion,   !TGFb_pthw&WNT_pthw | TGFb_pthw&!WNT_pthw&EMTreg | TGFb_pthw&WNT_pthw
+Metastasis, Migration
+Migration,  Invasion&EMT&!p63_73&!AKT1&AKT2&ERK_pthw&!miRNA
+Notch_pthw, ECMicroenv&!p53&!p63_73&!miRNA
+TGFb_pthw,  !ECMicroenv&Notch_pthw&!WNT_pthw&!miRNA | ECMicroenv&!WNT_pthw&!miRNA
+WNT_pthw,   !Notch_pthw&!WNT_pthw&!p53&!EMTreg&!p63_73&!AKT1&!miRNA&!Ecadh
+miRNA,      !p53&!EMTreg&p63_73&!AKT1&!AKT2 | p53&!EMTreg&!AKT1&!AKT2
+p53,        !DNAdamage&!Notch_pthw&WNT_pthw&!EMTreg&!p63_73&!AKT1&!AKT2 | !DNAdamage&Notch_pthw&!EMTreg&!p63_73&!AKT1&!AKT2 | DNAdamage&!EMTreg&!p63_73&!AKT1&!AKT2
+p63_73,     DNAdamage&!Notch_pthw&!p53&!EMTreg&!AKT1&!AKT2
