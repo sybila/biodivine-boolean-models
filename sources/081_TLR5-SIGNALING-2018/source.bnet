@@ -1,0 +1,46 @@
+# model in BoolNet format
+# the header targets, factors is mandatory to be importable in the R package BoolNet
+
+targets, factors
+AICytokines, AP1&CREB1&!ZFP36
+AP1,         JUN&FOS
+Akt,         PDPK1
+CREB1,       !RPS6KA2&!GSK3b&RPS6KA5 | RPS6KA2&!GSK3b
+DUSP,        AP1&CREB1
+ERK,         MAP2K2
+FOS,         RPS6KA5
+GSK3b,       !Akt
+IKBKB,       TAK1c&IKBKG
+IKBKG,       TRAF6&TAK1c
+IRAK1,       !MyD88&TICAM1&IRAK4 | MyD88&IRAK4
+IRAK4,       !MyD88&TICAM1 | MyD88
+JNK,         MAP2K7
+JUN,         !GSK3b&JNK
+MAP2K2,      MAP3K8
+MAP2K3,      TAK1c
+MAP2K7,      TAK1c
+MAP3K8,      IKBKB&!NFKB1
+MAPKAPK2,    P38a
+MKNK1,       !P38a&ERK | P38a
+MyD88,       TLR5
+NFKB1,       !IKBKB
+NFKBIA,      !SCFbTrCP | SCFbTrCP&!IKBKB
+NFkB,        Akt&IKBKB&!NFKBIA
+P38a,        MAP2K3
+PDPK1,       PI3K&MAPKAPK2
+PI3K,        PIK3R1
+PICytokines, NFkB&AP1&!ZFP36
+PIK3AP1,     MyD88
+PIK3R1,      PIK3AP1
+RPS6KA2,     !ERK&MAPKAPK2 | ERK
+RPS6KA5,     !P38a&ERK | P38a
+SCFbTrCP,    1
+Survival,    NFkB&AP1&CREB1
+TAB,         TRAF6
+TAK1,        TRAF6&TAB
+TAK1c,       TAK1&SCFbTrCP
+TICAM1,      TLR5
+TLR5,        TLR5
+TNFAIP3,     NFkB
+TRAF6,       IRAK1
+ZFP36,       !MAPKAPK2&CREB1&!ZFP36
