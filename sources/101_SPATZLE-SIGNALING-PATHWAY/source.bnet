@@ -1,0 +1,28 @@
+# model in BoolNet format
+# the header targets, factors is mandatory to be importable in the R package BoolNet
+
+targets, factors
+DAP,           GramN_Bact
+DV_patterning, DV_patterning
+Easter,        Pipe&Snk
+Fungi,         Fungi
+GNBP1,         GramP_Bact
+GNBP3,         Fungi
+Gd,            Ndl
+GramN_Bact,    GramN_Bact
+GramP_Bact,    GramP_Bact
+Grass,         ModSP
+ModSP,         !GNBP1&!GNBP3&PGRP_SD | !GNBP1&GNBP3&!PGRP_SA&PGRP_SD | !GNBP1&GNBP3&PGRP_SA | GNBP1&!PGRP_SA&PGRP_SD | GNBP1&PGRP_SA
+Ndl,           DV_patterning
+Nec,           Nec
+PGRP_SA,       GramP_Bact
+PGRP_SD,       DAP
+Pipe,          Pipe
+Psh,           !Nec&Viru_Fact
+SPE,           !Easter&!Psh&!Spheroide&!Sphinx&Spirit | !Easter&!Psh&!Spheroide&Sphinx | !Easter&!Psh&Spheroide | !Easter&Psh | Easter
+Snk,           Gd
+Spheroide,     Grass
+Sphinx,        Grass
+Spirit,        Grass
+Spz,           SPE
+Viru_Fact,     !Fungi&GramP_Bact | Fungi
