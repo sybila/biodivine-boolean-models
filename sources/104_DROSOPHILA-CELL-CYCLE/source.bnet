@@ -1,0 +1,18 @@
+# model in BoolNet format
+# the header targets, factors is mandatory to be importable in the R package BoolNet
+
+targets, factors
+Ago,   0
+CycA,  !Rb&E2F&!Fzy&!Fzr
+CycB,  !Fzy&!Fzr&!Wee1 | !Fzy&!Fzr&Wee1&Stg
+CycD,  0
+CycE,  !Rb&E2F&!Dap | !Rb&E2F&Dap&!Ago
+Dap,   !CycE&!Notch | CycE
+E2F,   !Rb&!CycA&!Rux&!CycB | !Rb&!CycA&Rux | !Rb&CycA&Rux
+Fzr,   !CycE&!CycA&!Rux&!CycB | !CycE&!CycA&Rux | !CycE&CycA&Rux | CycE&!CycA&!Rux&!CycB&Notch | CycE&!CycA&Rux&Notch | CycE&CycA&Rux&Notch
+Fzy,   !Rux&CycB
+Notch, 0
+Rb,    !CycD&!CycE&!CycA&!Rux&!CycB | !CycD&!CycE&!CycA&Rux | !CycD&!CycE&CycA&Rux
+Rux,   !CycD&!CycA&!Rux&!CycB | !CycD&!CycA&Rux | !CycD&CycA&Rux&!CycB | CycD&!CycE&!CycA&!Rux&!CycB | CycD&!CycE&!CycA&Rux | CycD&!CycE&CycA&Rux&!CycB
+Stg,   !Rb&!E2F&!Rux&CycB&!Notch | !Rb&E2F&!Notch | Rb&!Rux&CycB&!Notch
+Wee1,  !Rux&!CycB | Rux
