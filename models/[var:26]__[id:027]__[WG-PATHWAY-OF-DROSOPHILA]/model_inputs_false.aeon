@@ -1,0 +1,55 @@
+Pan -> Nemo
+Wf -| Dlp
+Ttv -> Dlp
+Pygo -> Targets
+Gro -| Targets
+Nej -> Targets
+Hyx -> Targets
+Pan -> Targets
+Lgs -> Targets
+Dsh -| Axin
+APC -| Arm
+Hipk -> Arm
+Proteasome -| Arm
+Sgg -| Arm
+Axin -| Arm
+Slmb -| Arm
+CK1alpha -> Arm
+Dsh -| Sgg
+Wf -| Dally
+Ttv -> Dally
+Dsh -| APC
+Wg -> Arr
+Nkd -| Dsh
+Arr -> Dsh
+Fz -> Dsh
+Arm -> Pan
+Nemo -| Pan
+Wg -> Fz
+Boca -> Fz
+$APC: !Dsh
+$Arm: ((Hipk & CK1alpha) & !(Sgg & (((APC & Proteasome) & Axin) & Slmb)))
+$Arr: Wg
+$Axin: !Dsh
+$Boca: false
+$CK1alpha: false
+$Dally: (Ttv & !Wf)
+$Dlp: (Ttv & !Wf)
+$Dsh: ((Arr & !Nkd) | (Fz & !Nkd))
+$Fz: (Wg & Boca)
+$Gro: false
+$Hipk: false
+$Hyx: false
+$Lgs: false
+$Nej: false
+$Nemo: Pan
+$Nkd: false
+$Pan: (Arm & !Nemo)
+$Proteasome: false
+$Pygo: false
+$Sgg: !Dsh
+$Slmb: false
+$Targets: ((Pygo & (((Nej & Hyx) & Pan) & Lgs)) & !Gro)
+$Ttv: false
+$Wf: false
+$Wg: false
