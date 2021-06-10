@@ -1,0 +1,56 @@
+NF_kB -> Irf4
+Irf4 -> Irf4
+Blimp1 -> Irf4
+Bcl6 -| Irf4
+CD40L -> CD40
+STAT6 -> AID
+NF_kB -> AID
+Blimp1 -| AID
+Pax5 -> AID
+IL_4R -> STAT6
+Ag -> BCR
+IL_2 -> IL_2R
+BCR -> ERK
+IL_4 -> IL_4R
+Blimp1 -| Bach2
+Pax5 -> Bach2
+Irf4 -> Blimp1
+ERK -> Blimp1
+Bcl6 -| Blimp1
+STAT3 -> Blimp1
+Bach2 -| Blimp1
+Pax5 -| Blimp1
+STAT5 -> Bcl6
+STAT6 -> Bcl6
+ERK -| Bcl6
+Irf4 -| Bcl6
+Blimp1 -| Bcl6
+Bcl6 -> Bcl6
+Pax5 -> Bcl6
+IL_21R -> STAT3
+Blimp1 -> XBP1
+Pax5 -| XBP1
+CD40 -> NF_kB
+IL_2R -> STAT5
+IL_21 -> IL_21R
+ERK -| Pax5
+Irf4 -| Pax5
+Blimp1 -| Pax5
+Pax5 -> Pax5
+$AID: ((NF_kB & (Pax5 & !Blimp1)) | (STAT6 & !Blimp1))
+$BCR: Ag
+$Bach2: (Pax5 & !Blimp1)
+$Bcl6: ((((Bcl6 & Pax5) & !((Blimp1 | ERK) | Irf4)) | (STAT5 & !((Blimp1 | ERK) | Irf4))) | (STAT6 & !((Blimp1 | ERK) | Irf4)))
+$Blimp1: (((STAT3 & !((Bach2 | Pax5) | Bcl6)) | (ERK & !((Bach2 | Pax5) | Bcl6))) | ((Irf4 & ((!Bcl6 | !Pax5) | !Bach2)) & !((Bach2 | Pax5) | Bcl6)))
+$CD40: CD40L
+$ERK: BCR
+$IL_21R: IL_21
+$IL_2R: IL_2
+$IL_4R: IL_4
+$Irf4: (((Blimp1 & !Bcl6) | NF_kB) | (Irf4 & !Bcl6))
+$NF_kB: CD40
+$Pax5: (((Pax5 & (!Irf4 | Pax5)) & !(ERK | Blimp1)) | !(((ERK | Irf4) | Blimp1) | Pax5))
+$STAT3: IL_21R
+$STAT5: IL_2R
+$STAT6: IL_4R
+$XBP1: (Blimp1 & !Pax5)
