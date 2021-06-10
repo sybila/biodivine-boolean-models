@@ -1,0 +1,13 @@
+# model in BoolNet format
+# the header targets, factors is mandatory to be importable in the R package BoolNet
+
+targets, factors
+CckA,       DivL
+ChpT,       CckA
+ClpXP_RcdA, !CpdR
+CpdR,       ChpT
+CtrAb,      ChpT&!ClpXP_RcdA
+DivJ,       DivK&!PleC
+DivK,       !PleC&DivJ
+DivL,       !DivK
+PleC,       !DivK
