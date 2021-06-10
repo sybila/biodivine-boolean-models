@@ -1,0 +1,52 @@
+GramP_Bact -> GNBP1
+Viru_Fact -> Psh
+Nec -| Psh
+SPE -> Spz
+Grass -> Spirit
+GramP_Bact -> Viru_Fact
+Fungi -> Viru_Fact
+DAP -> PGRP_SD
+Gd -> Snk
+Fungi -> GNBP3
+ModSP -> Grass
+GramN_Bact -> DAP
+GramP_Bact -> PGRP_SA
+Pipe -> Easter
+Snk -> Easter
+PGRP_SA -> ModSP
+GNBP3 -> ModSP
+PGRP_SD -> ModSP
+GNBP1 -> ModSP
+DV_patterning -> Ndl
+Psh -> SPE
+Sphinx -> SPE
+Easter -> SPE
+Spirit -> SPE
+Spd -> SPE
+Ndl -> Gd
+Grass -> Spd
+Grass -> Sphinx
+$DAP: GramN_Bact
+$DV_patterning: false
+$Easter: (Snk & Pipe)
+$Fungi: false
+$GNBP1: GramP_Bact
+$GNBP3: Fungi
+$Gd: Ndl
+$GramN_Bact: false
+$GramP_Bact: false
+$Grass: ModSP
+$ModSP: (((PGRP_SD | GNBP3) | GNBP1) | PGRP_SA)
+$Ndl: DV_patterning
+$Nec: false
+$PGRP_SA: GramP_Bact
+$PGRP_SD: DAP
+$Pipe: false
+$Psh: (Viru_Fact & !Nec)
+$SPE: ((((Spirit | Spd) | Sphinx) | Easter) | Psh)
+$Snk: Gd
+$Spd: Grass
+$Sphinx: Grass
+$Spirit: Grass
+$Spz: SPE
+$Viru_Fact: (Fungi | GramP_Bact)
