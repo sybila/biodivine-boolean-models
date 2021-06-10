@@ -1,0 +1,32 @@
+targets,factors
+CK1, (CK1 | !CK1)
+Rga4, !pom1
+SIP, (cdk_H & !(cdk_0 & ppc89))
+byr4, (cdk_L & !(cdc42 | (cdk_H & plo1)))
+byr4_cdc16, (byr4 & cdc16)
+cdc11, (((cdc7 | (flp1 & sid4)) | sid4) | cdc16)
+cdc14_sid1, cdc7
+cdc16, !fin1
+cdc42, ((scd1 & !Rga4) | (gef1 & !Rga4))
+cdc7, (spg1 & cdc11)
+cdk_0, (cdk_0 | !cdk_0)
+cdk_H, (cdk_H | !cdk_H)
+cdk_L, (cdk_L | !cdk_L)
+dma1, (sid4 & CK1)
+etd1, (etd1 | !etd1)
+fin1, cdk_H
+flp1, ((sid2_mob1 & !cdk_H) | (cdk_0 & !cdk_H))
+gef1, orb6
+nak1, (pmo25 | (sid2_mob1 & cdk_H))
+orb6, (pak1 | nak1)
+pak1, cdc42
+plo1, ((sid4 & !(sid4 & dma1)) | (cdk_H & !((sid4 & dma1) | cdk_L)))
+pmo25, (cdc7 | cdc14_sid1)
+pom1, pak1
+ppc89, (ppc89 | !ppc89)
+ras1, (ras1 | !ras1)
+scd1, ras1
+sid2, ((cdc11 & (cdc7 & SIP)) | cdc7)
+sid2_mob1, (sid2_mob1 | !sid2_mob1)
+sid4, ppc89
+spg1, ((cdc11 & !byr4_cdc16) | (etd1 & !byr4_cdc16))
