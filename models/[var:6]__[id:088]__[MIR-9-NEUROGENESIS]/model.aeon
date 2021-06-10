@@ -1,0 +1,17 @@
+N -? Her6
+miR9 -? Her6
+P -? HuC
+miR9 -? HuC
+HuC -? N
+Her6 -? P
+Zic5 -? P
+N -? Zic5
+miR9 -? Zic5
+Her6 -? miR9
+N -? miR9
+$Her6: (!miR9 & !N)
+$HuC: (!miR9 & !P)
+$N: HuC
+$P: ((!Her6 & Zic5) | Her6)
+$Zic5: (!miR9 & !N)
+$miR9: (!Her6 & !N)
