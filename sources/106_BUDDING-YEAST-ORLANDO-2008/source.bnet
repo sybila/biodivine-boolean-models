@@ -1,0 +1,13 @@
+# model in BoolNet format
+# the header targets, factors is mandatory to be importable in the R package BoolNet
+
+targets, factors
+ACE2,  SFF
+CLN3,  !YOX1&ACE2&SWI5 | YOX1&!YHP1&ACE2&SWI5
+HCM1,  MBF&SBF
+MBF,   CLN3
+SBF,   !MBF&!YOX1&CLN3 | !MBF&YOX1&!YHP1&CLN3 | MBF&!YOX1 | MBF&YOX1&!YHP1
+SFF,   SBF&HCM1
+SWI5,  SFF
+YHP1,  !MBF&SBF | MBF
+YOX1,  MBF&SBF
