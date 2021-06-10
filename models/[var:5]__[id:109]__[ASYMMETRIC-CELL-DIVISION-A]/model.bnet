@@ -1,0 +1,6 @@
+targets,factors
+CcrM, (CtrA & (!CcrM & !SciP))
+CtrA, ((!CtrA & (GcrA & (!CcrM & !SciP))) | (CtrA & (!CcrM & !SciP)))
+DnaA, (CtrA & (!GcrA & (!DnaA & CcrM)))
+GcrA, (!CtrA & DnaA)
+SciP, (CtrA & !DnaA)

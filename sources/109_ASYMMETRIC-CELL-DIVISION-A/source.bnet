@@ -1,0 +1,9 @@
+# model in BoolNet format
+# the header targets, factors is mandatory to be importable in the R package BoolNet
+
+targets, factors
+CcrM,  CtrA&!CcrM&!SciP
+CtrA,  !CtrA&GcrA&!CcrM&!SciP | CtrA&!CcrM&!SciP
+DnaA,  CtrA&!GcrA&!DnaA&CcrM
+GcrA,  !CtrA&DnaA
+SciP,  CtrA&!DnaA

@@ -1,0 +1,20 @@
+CcrM -? CcrM
+CtrA -? CcrM
+SciP -? CcrM
+CcrM -? CtrA
+CtrA -? CtrA
+GcrA -? CtrA
+SciP -? CtrA
+CcrM -? DnaA
+CtrA -? DnaA
+DnaA -? DnaA
+GcrA -? DnaA
+CtrA -? GcrA
+DnaA -? GcrA
+CtrA -? SciP
+DnaA -? SciP
+$CcrM: (CtrA & (!CcrM & !SciP))
+$CtrA: ((!CtrA & (GcrA & (!CcrM & !SciP))) | (CtrA & (!CcrM & !SciP)))
+$DnaA: (CtrA & (!GcrA & (!DnaA & CcrM)))
+$GcrA: (!CtrA & DnaA)
+$SciP: (CtrA & !DnaA)
