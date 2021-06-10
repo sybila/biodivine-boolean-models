@@ -1,0 +1,170 @@
+Gal3p -| Gal80p
+GAL80 -> Gal80p
+Gal1p -| Gal80p
+Mig1p -| GAL1
+Gal4p -> GAL1
+Cat8p -> JEN1
+Sip4p -> FBP1
+Cat8p -> FBP1
+Rgt1p -| HXT8
+Snf1p -> Cat8p
+CAT8 -> Cat8p
+MIG2 -> Mig2p
+GAL3 -> Gal3p
+galactose_int -> Gal3p
+Cat8p -> SIP4
+Mig2p -| SUC2
+Mig1p -| SUC2
+Mig1p -| MALR
+Cat8p -> ACS1
+Snf1p -> Sip4p
+SIP4 -> Sip4p
+Cat8p -> SFC1
+GAL4 -> Gal4p
+Gal80p -| Gal4p
+glucose_ext -> Snf3p
+SNF3 -> Snf3p
+GRR1 -> SCF_grr1
+Mig1p -| GAL4
+Mth1p -> Rgt1p
+RGT1 -> Rgt1p
+Std1p -> Rgt1p
+Gal2p -> galactose_int
+galactose_ext -> galactose_int
+GAL4 -> GAL7
+Cat8p -> IDP2
+Sip4p -> MLS1
+Cat8p -> MLS1
+Mig1p -| GAL3
+GAL11 -> Gal11p
+Mth1p -| HXT3
+Rgt1p -| HXT3
+MIG3 -> Mig3p
+Snf1p -| Mig3p
+Gal4p -> GAL5
+YCK1_2 -> Yck1p
+Sip4p -> ICL1
+Cat8p -> ICL1
+glucose_ext -> Rgt2p
+RGT2 -> Rgt2p
+MALR -> MalRp
+maltose_int -> MalRp
+Snf1p -| Mig1p
+MIG1 -> Mig1p
+MTH1 -> Mth1p
+Yck1p -| Mth1p
+Snf3p -| Mth1p
+SCF_grr1 -| Mth1p
+Rgt2p -| Mth1p
+Mth1p -| HXT1
+Rgt1p -| HXT1
+Std1p -| HXT1
+Mig1p -| MALS
+MalRp -> MALS
+Mth1p -| HXT4
+Mig1p -| HXT4
+Rgt1p -| HXT4
+Mig1p -| MEL1
+Gal4p -> MEL1
+SNF1 -> Snf1p
+Glc7Reg1 -| Snf1p
+SNF4 -> Snf1p
+Rgt1p -| MIG3
+GAL1 -> Gal1p
+MALT -> MalTp
+MalTp -> maltose_int
+maltose_ext -> maltose_int
+Mig1p -| CAT8
+Cat8p -> PCK1
+Mig2p -| MTH1
+Mig1p -| MTH1
+RGT1 -| 4ORFs
+GAL4 -> GAL10
+Rgt1p -| MIG2
+Sip4p -> MDH2
+Cat8p -> MDH2
+Mig1p -| HXT2
+Rgt1p -| HXT2
+Yck1p -| Std1p
+STD1 -> Std1p
+Snf3p -| Std1p
+SCF_grr1 -| Std1p
+Rgt2p -| Std1p
+Rgt1p -| HXT5
+GAL2 -> Gal2p
+glucose_ext -> Glc7Reg1
+GLC7 -> Glc7Reg1
+REG1 -> Glc7Reg1
+$4ORFs: !RGT1
+$ACS1: Cat8p
+$CAT8: !Mig1p
+$Cat8p: (CAT8 & Snf1p)
+$FBP1: (Cat8p | Sip4p)
+$GAL1: (Gal4p & !Mig1p)
+$GAL10: GAL4
+$GAL11: false
+$GAL2: false
+$GAL3: !Mig1p
+$GAL4: !Mig1p
+$GAL5: Gal4p
+$GAL7: GAL4
+$GAL80: false
+$GLC7: false
+$GRR1: false
+$Gal11p: GAL11
+$Gal1p: GAL1
+$Gal2p: GAL2
+$Gal3p: (GAL3 & galactose_int)
+$Gal4p: (GAL4 & !Gal80p)
+$Gal80p: (GAL80 & !(Gal1p | Gal3p))
+$Glc7Reg1: (GLC7 & (glucose_ext & REG1))
+$HXT1: !(Rgt1p & (Mth1p | Std1p))
+$HXT2: !(Rgt1p | Mig1p)
+$HXT3: !(Rgt1p & Mth1p)
+$HXT4: !(Mig1p | (Rgt1p & Mth1p))
+$HXT5: !Rgt1p
+$HXT8: !Rgt1p
+$ICL1: (Cat8p | Sip4p)
+$IDP2: Cat8p
+$JEN1: Cat8p
+$MALR: !Mig1p
+$MALS: (MalRp & !Mig1p)
+$MALT: false
+$MDH2: (Cat8p | Sip4p)
+$MEL1: (Gal4p | !(Mig1p | Gal4p))
+$MIG1: false
+$MIG2: !Rgt1p
+$MIG3: !Rgt1p
+$MLS1: (Cat8p | Sip4p)
+$MTH1: !(Mig1p & Mig2p)
+$MalRp: (MALR & maltose_int)
+$MalTp: MALT
+$Mig1p: (MIG1 & !Snf1p)
+$Mig2p: MIG2
+$Mig3p: (MIG3 & !Snf1p)
+$Mth1p: (((MTH1 & !SCF_grr1) | (MTH1 & !(Rgt2p | Snf3p))) | (MTH1 & !Yck1p))
+$PCK1: Cat8p
+$REG1: false
+$RGT1: false
+$RGT2: false
+$Rgt1p: (RGT1 & (Mth1p | Std1p))
+$Rgt2p: (glucose_ext & RGT2)
+$SCF_grr1: GRR1
+$SFC1: Cat8p
+$SIP4: Cat8p
+$SNF1: false
+$SNF3: false
+$SNF4: false
+$STD1: false
+$SUC2: !(Mig1p | Mig2p)
+$Sip4p: (SIP4 & Snf1p)
+$Snf1p: ((SNF1 & SNF4) & !Glc7Reg1)
+$Snf3p: (glucose_ext & SNF3)
+$Std1p: (((STD1 & !SCF_grr1) | (STD1 & !Yck1p)) | (STD1 & !(Rgt2p | Snf3p)))
+$YCK1_2: false
+$Yck1p: YCK1_2
+$galactose_ext: false
+$galactose_int: (galactose_ext & Gal2p)
+$glucose_ext: false
+$maltose_ext: false
+$maltose_int: (maltose_ext & MalTp)
