@@ -1,0 +1,20 @@
+targets,factors
+AMH, ((SOX9 & (((GATA4 & WT1mKTS) & NR5A1) | (GATA4 & NR5A1))) & !(NR0B1 & CTNNB1))
+CBX2, (UGR & !(NR0B1 & (WNT4 & CTNNB1)))
+CTNNB1, ((RSPO1 & !(SRY | (SOX9 & AMH))) | (WNT4 & !(SRY | (SOX9 & AMH))))
+DHH, SOX9
+DKK1, (SRY | SOX9)
+DMRT1, ((SOX9 & !FOXL2) | (SRY & !FOXL2))
+FGF9, (SOX9 & !WNT4)
+FOXL2, ((WNT4 & CTNNB1) & !(SOX9 | DMRT1))
+GATA4, (((SRY | UGR) | WNT4) | NR5A1)
+NR0B1, ((WT1mKTS & !(NR5A1 & SOX9)) | ((WNT4 & CTNNB1) & !(NR5A1 & SOX9)))
+NR5A1, ((((GATA4 & !(NR0B1 & WNT4)) | (UGR & !(NR0B1 & WNT4))) | (CBX2 & !(NR0B1 & WNT4))) | (WT1mKTS & !(NR0B1 & WNT4)))
+PGD2, SOX9
+RSPO1, ((WNT4 & !DKK1) | (CTNNB1 & !DKK1))
+SOX9, ((((((GATA4 & (SRY & NR5A1)) & !((CTNNB1 | FOXL2) | WNT4)) | ((CBX2 & SRY) & !((CTNNB1 | FOXL2) | WNT4))) | ((FGF9 & SOX9) & !((CTNNB1 | FOXL2) | WNT4))) | (PGD2 & !((CTNNB1 | FOXL2) | WNT4))) | (SRY & !((CTNNB1 | FOXL2) | WNT4)))
+SRY, (((((GATA4 & ((NR5A1 & CBX2) & WT1pKTS)) & !CTNNB1) | (SRY & !CTNNB1)) | ((CBX2 & (WT1mKTS & NR5A1)) & !CTNNB1)) | (SOX9 & !CTNNB1))
+UGR, (UGR & !(NR5A1 | WNT4))
+WNT4, ((((GATA4 & !(FGF9 | DKK1)) | (CTNNB1 & !(FGF9 | DKK1))) | (RSPO1 & !(FGF9 | DKK1))) | (NR0B1 & !(FGF9 | DKK1)))
+WT1mKTS, (UGR | GATA4)
+WT1pKTS, ((UGR & !(WNT4 & CTNNB1)) | (GATA4 & !(WNT4 & CTNNB1)))
