@@ -1,0 +1,19 @@
+targets,factors
+B, ((!Cln2 & (!Clb5 & (B & !CD))) | ((!Cln2 & (Clb5 & !CD)) | (Cln2 & !CD)))
+CD, (FEAR & (Cdc14 & (M & !CD)))
+CKI, ((!Cln2 & (!Clb5 & (!Clb2 & (!Swi5 & CKI)))) | ((!Cln2 & (!Clb5 & (!Clb2 & Swi5))) | ((!Cln2 & (!Clb5 & (Clb2 & (Cdc14 & Swi5)))) | ((!Cln2 & (Clb5 & (Cdc14 & Swi5))) | (Cln2 & (Cdc14 & Swi5))))))
+Cdc14, (FEAR & MEN)
+Cdc20, (Clb2 & (SFF & M))
+Cdh1, ((!Cln2 & (!Clb5 & !Clb2)) | ((!Cln2 & (!Clb5 & (Clb2 & Cdc14))) | ((!Cln2 & (Clb5 & Cdc14)) | (Cln2 & Cdc14))))
+Clb2, ((!Clb2 & (!Cdc20 & (!CKI & B))) | ((!Clb2 & (Cdc20 & (!CKI & (!Cdh1 & B)))) | ((Clb2 & (!SFF & (!Cdc20 & (!CKI & B)))) | ((Clb2 & (!SFF & (Cdc20 & (!CKI & (!Cdh1 & B))))) | ((Clb2 & (SFF & (!Cdc20 & !CKI))) | (Clb2 & (SFF & (Cdc20 & (!CKI & !Cdh1)))))))))
+Clb5, (SMBF & !Cdc20)
+Cln2, SMBF
+Cln3, !Yhp1
+FEAR, Cdc20
+M, ((!Clb2 & (M & !CD)) | ((Clb2 & (!S & (M & !CD))) | (Clb2 & (S & !CD))))
+MEN, (Clb2 & FEAR)
+S, ((!Clb5 & (!Clb2 & (S & !CD))) | ((!Clb5 & (Clb2 & !CD)) | (Clb5 & !CD)))
+SFF, ((!Clb2 & (!Cdc20 & (!CKI & B))) | ((!Clb2 & (Cdc20 & (!CKI & (!Cdh1 & B)))) | ((Clb2 & (!SFF & (!Cdc20 & (!CKI & B)))) | ((Clb2 & (!SFF & (Cdc20 & (!CKI & (!Cdh1 & B))))) | (Clb2 & SFF)))))
+SMBF, ((!Cln3 & (!SMBF & (Cln2 & !Clb2))) | ((!Cln3 & (SMBF & !Clb2)) | (Cln3 & !Clb2)))
+Swi5, ((!Clb2 & SFF) | (Clb2 & (SFF & Cdc14)))
+Yhp1, SMBF
