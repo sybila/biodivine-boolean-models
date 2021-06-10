@@ -1,0 +1,14 @@
+# model in BoolNet format
+# the header targets, factors is mandatory to be importable in the R package BoolNet
+
+targets, factors
+Cdc25,        !Cdc2_Cdc13&Cdc25&!PP | Cdc2_Cdc13&!Cdc25&!PP | Cdc2_Cdc13&Cdc25
+Cdc2_Cdc13,   !Ste9&!Rum1&!Slp1
+Cdc2_Cdc13_A, !Ste9&!Rum1&!Slp1&!Wee1_Mik1&Cdc25
+PP,           Slp1
+Rum1,         !SK&!Cdc2_Cdc13&!Rum1&!Cdc2_Cdc13_A&PP | !SK&!Cdc2_Cdc13&Rum1&!Cdc2_Cdc13_A | !SK&!Cdc2_Cdc13&Rum1&Cdc2_Cdc13_A&PP | !SK&Cdc2_Cdc13&Rum1&!Cdc2_Cdc13_A&PP | SK&!Cdc2_Cdc13&Rum1&!Cdc2_Cdc13_A&PP
+SK,           Start
+Slp1,         Cdc2_Cdc13_A
+Start,        0
+Ste9,         !SK&!Cdc2_Cdc13&!Ste9&!Cdc2_Cdc13_A&PP | !SK&!Cdc2_Cdc13&Ste9&!Cdc2_Cdc13_A | !SK&!Cdc2_Cdc13&Ste9&Cdc2_Cdc13_A&PP | !SK&Cdc2_Cdc13&Ste9&!Cdc2_Cdc13_A&PP | SK&!Cdc2_Cdc13&Ste9&!Cdc2_Cdc13_A&PP
+Wee1_Mik1,    !Cdc2_Cdc13&!Wee1_Mik1&PP | !Cdc2_Cdc13&Wee1_Mik1 | Cdc2_Cdc13&Wee1_Mik1&PP
