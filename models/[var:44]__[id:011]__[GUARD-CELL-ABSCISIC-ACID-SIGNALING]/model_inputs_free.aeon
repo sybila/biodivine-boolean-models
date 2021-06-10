@@ -1,0 +1,118 @@
+ADPRc -> cADPR
+ABA -> PLC
+Ca2_c -> PLC
+GCR1 -| GPA1
+AGB1 -> GPA1
+S1P -> GPA1
+RAC1 -| Actin
+Ca2_c -> Actin
+ABA -| Malate
+PEPC -> Malate
+AnionEM -| Malate
+ABA -| RAC1
+ABI1 -| RAC1
+pH -| HTPase
+ROS -| HTPase
+Ca2_c -| HTPase
+RCN1 -> NIA12
+GPA1 -> AGB1
+Atrboh -> ROS
+pH -> KOUT
+Depolar -> KOUT
+ROS -| KOUT
+NO -| KOUT
+ABA -> RCN1
+ABA -> OST1
+InsPK -> InsP6
+Depolar -| CaIM
+ERA1 -? CaIM
+ROS -> CaIM
+ABH1 -? CaIM
+NO -> ADPRc
+pH -> ABI1
+PA -| ABI1
+ROS -| ABI1
+Ca2_c -> KEV
+pH -> Atrboh
+OST1 -> Atrboh
+ABI1 -| Atrboh
+ROP2 -> Atrboh
+GPA1 -> PLD
+ERA1 -> ROP10
+NOS -> NO
+NIA12 -> NO
+HTPase -? Depolar
+AnionEM -? Depolar
+KOUT -? Depolar
+Ca2_c -? Depolar
+KEV -? Depolar
+Ca2_c -> NOS
+SphK -> S1P
+ABA -> InsPK
+Ca2_c -> Ca2_ATPase
+ABA -> SphK
+ABA -| PEPC
+ABA -> pH
+NO -> GC
+PLD -> PA
+pH -| KAP
+Depolar -> KAP
+Ca2_c -| KAP
+GC -> cGMP
+CaIM -> Ca2_c
+Ca2_ATPase -| Ca2_c
+CIS -> Ca2_c
+InsP3 -> CIS
+cADPR -> CIS
+InsP6 -> CIS
+cGMP -> CIS
+pH -> AnionEM
+ABI1 -| AnionEM
+Ca2_c -> AnionEM
+PLC -> InsP3
+PA -> ROP2
+Malate -| Closure
+Actin -> Closure
+AnionEM -> Closure
+KOUT -> Closure
+KAP -> Closure
+$ABI1: (pH & !(PA | ROS))
+$ADPRc: NO
+$AGB1: GPA1
+$Actin: (Ca2_c | !(RAC1 | Ca2_c))
+$AnionEM: ((Ca2_c & (!ABI1 | pH)) | (pH & (!ABI1 | Ca2_c)))
+$Atrboh: ((OST1 & (pH & ROP2)) & !ABI1)
+$CIS: ((InsP3 & InsP6) | (cGMP & cADPR))
+$Ca2_ATPase: Ca2_c
+$Ca2_c: ((CIS & !Ca2_ATPase) | (CaIM & !Ca2_ATPase))
+$CaIM: (((((ABH1 & !ERA1) & !Depolar) | ((ERA1 & !ABH1) & !Depolar)) | (ROS & !Depolar)) | !(((Depolar | ERA1) | ROS) | ABH1))
+$Closure: (((KOUT & (Actin & AnionEM)) & !Malate) | ((KAP & (Actin & AnionEM)) & !Malate))
+$Depolar: (((((AnionEM | (KOUT & (((!HTPase & !AnionEM) & !Ca2_c) & !KEV))) | (HTPase & (((!AnionEM & !KOUT) & !Ca2_c) & !KEV))) | KEV) | Ca2_c) | !((((HTPase | AnionEM) | KOUT) | Ca2_c) | KEV))
+$GC: NO
+$GPA1: ((S1P & AGB1) | (AGB1 & !GCR1))
+$HTPase: !((pH | Ca2_c) | ROS)
+$InsP3: PLC
+$InsP6: InsPK
+$InsPK: ABA
+$KAP: (Depolar & !(Ca2_c & pH))
+$KEV: Ca2_c
+$KOUT: ((pH & Depolar) | (Depolar & !(ROS & NO)))
+$Malate: (PEPC & !(AnionEM | ABA))
+$NIA12: RCN1
+$NO: (NOS & NIA12)
+$NOS: Ca2_c
+$OST1: ABA
+$PA: PLD
+$PEPC: !ABA
+$PLC: (ABA & Ca2_c)
+$PLD: GPA1
+$RAC1: !(ABA | ABI1)
+$RCN1: ABA
+$ROP10: ERA1
+$ROP2: PA
+$ROS: Atrboh
+$S1P: SphK
+$SphK: ABA
+$cADPR: ADPRc
+$cGMP: GC
+$pH: ABA
