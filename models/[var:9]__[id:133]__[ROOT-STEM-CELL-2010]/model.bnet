@@ -1,0 +1,10 @@
+targets,factors
+ARF, !AUXIAA
+AUXIAA, !AUXIN
+AUXIN, AUXIN
+JKD, (SHR & SCR)
+MGP, ((SHR & SCR) & !WOX5)
+PLT, ARF
+SCR, ((SHR & SCR) & (JKD | !MGP))
+SHR, SHR
+WOX5, (((ARF & SHR) & SCR) & (!MGP | WOX5))
