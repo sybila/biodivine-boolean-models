@@ -1,0 +1,111 @@
+targets,factors
+A20, P65_p50_dimer
+ABL, ((!LCK & FYN) | LCK)
+ADAPT78_or_calcipressin, (ADAPT78_or_calcipressin | !ADAPT78_or_calcipressin)
+AICytokines, ((cJUN_cFOS & NFAT1_NFAT2) & CREB1)
+ARP2_3_or_ACTR2_3, (((!WASF2 & WASp) & HS1) | (WASF2 & HS1))
+ASH, ((!CD28_with_phosphorylated_ITAMs & LAT) | CD28_with_phosphorylated_ITAMs)
+Activated_CCBL, (FYN & CBL)
+Akap79, (Akap79 | !Akap79)
+Akt1_2, (((!PDK1 & Phosphatidylinositol_3_phosphate) & MTORC1_2_or_FRAP) | (PDK1 & Phosphatidylinositol_3_phosphate))
+Anergy, (!cJUN_cFOS & NFAT1_NFAT2)
+BCL2L1, (P65_p50_dimer & !BCL2L8)
+BCL2L8, !Akt1_2
+CAM_kinase_IV, Calmodulin_1
+CARD11a, ((Malt1 & CARMA1) & CIPER)
+CARMA1, PRKCQ
+CBL, (CBL | !CBL)
+CBP, (!TCR_complex & FYN)
+CD28, (CD28 | !CD28)
+CD28_with_phosphorylated_ITAMs, (((CD28 & !LCK) & FYN) | (CD28 & LCK))
+CD4, (CD4 | !CD4)
+CD6, (CD6 | !CD6)
+CHUK_IKBKB, (((((((!PRKCQ & NEMO) & !A20) & !Camk2a_b_or_CAMKA_B) & MAP3K8) | (((!PRKCQ & NEMO) & !A20) & Camk2a_b_or_CAMKA_B)) | ((PRKCQ & NEMO) & !A20)) | ((((PRKCQ & NEMO) & A20) & Camk2a_b_or_CAMKA_B) & MAP3K8))
+CIPER, (CIPER | !CIPER)
+CRBM__3BP2, (STD & LAT)
+CREB1, ((((!Camk2a_b_or_CAMKA_B & !CAM_kinase_IV) & RSK1) | (!Camk2a_b_or_CAMKA_B & CAM_kinase_IV)) | Camk2a_b_or_CAMKA_B)
+CSK, (!SHP2 & CBP)
+Ca, IP3
+Cabin1, !CAM_kinase_IV
+Calmodulin_1, Ca
+Camk2a_b_or_CAMKA_B, Calmodulin_1
+Cell_Cycle_Progression, ((((((P65_p50_dimer & cJUN_cFOS) & NFAT1_NFAT2) & CREB1) & SRF) & !P27K) & !P21C)
+Cyc1, !GSK3b
+DAG, PLC_gamma_1
+DGKz_DGKa, RASGRP
+DUSP14__DUSP16, cJUN_cFOS
+ERK1_2_or_MAPK1_3, ((!MAP2K1_2_or_MEK1_2 & MAP3K8) | MAP2K1_2_or_MEK1_2)
+FKHR, !Akt1_2
+FYN, ((TCR_complex & LCK) & !Shp_1)
+G25K, VAV1
+GADD45A, (GADD45A | !GADD45A)
+GADS, LAT
+GAP, (GAP | !GAP)
+GSK3b, !Akt1_2
+Glk, (LCK & PDK1)
+HPK1, LAT
+HS1, (ABL & LYK)
+IP3, PLC_gamma_1
+IkBa, !CHUK_IKBKB
+JNK1_2_or_MAPK8_9, ((((!MEKK1 & JNKK1_or_MEK4_or_MKK4) & !DUSP14__DUSP16) | ((MEKK1 & !JNKK1_or_MEK4_or_MKK4) & !DUSP14__DUSP16)) | (MEKK1 & JNKK1_or_MEK4_or_MKK4))
+JNKK1_or_MEK4_or_MKK4, ((!MEKK1 & MEKK11_or_MLK3) | MEKK1)
+KIAA0571, (((STD & LAT) & GADS) & ASH)
+Kinases, (Kinases | !Kinases)
+LAT, ((!LCK & STD) | LCK)
+LCK, ((TCR_complex & CD4) & LCK_reservoir)
+LCK_reservoir, ((!PTPRC & LCK_reservoir) | PTPRC)
+LYK, (((LCK & STD) & SLP_76) & Phosphatidylinositol_3_phosphate)
+LYP_or_PEP, (LYP_or_PEP | !LYP_or_PEP)
+MAP2K1_2_or_MEK1_2, ((((((!MEKK1 & !G25K) & !RAC1p2_Phosphorylated_RAC1) & RAF1) | ((!MEKK1 & !G25K) & RAC1p2_Phosphorylated_RAC1)) | (!MEKK1 & G25K)) | MEKK1)
+MAP3K8, Akt1_2
+MAPK14, ((((((!STD & !MEKK1) & RAC1p1_Phosphorylated_RAC1) | (!STD & MEKK1)) | (STD & !GADD45A)) | (((STD & GADD45A) & !MEKK1) & RAC1p1_Phosphorylated_RAC1)) | ((STD & GADD45A) & MEKK1))
+MEKK1, ((((!HPK1 & !G25K) & RAC1p2_Phosphorylated_RAC1) | (!HPK1 & G25K)) | HPK1)
+MEKK11_or_MLK3, ((!HPK1 & RAC1p1_Phosphorylated_RAC1) | HPK1)
+MTORC1_2_or_FRAP, MAPK14
+Malt1, (Malt1 | !Malt1)
+NEMO, CARD11a
+NFAT1_NFAT2, (PPP3CA_B_or_CALNA & !Kinases)
+P21C, !Akt1_2
+P27K, FKHR
+P65_p50_dimer, ((((((!IkBa & !CHUK_IKBKB) & !Akt1_2) & CAM_kinase_IV) & !p105) | (((!IkBa & !CHUK_IKBKB) & Akt1_2) & !p105)) | ((!IkBa & CHUK_IKBKB) & !p105))
+PDK1, Phosphatidylinositol_3_phosphate
+PICytokines, ((P65_p50_dimer & cJUN_cFOS) & NFAT1_NFAT2)
+PIK3CD__P110d, p85a
+PLC_gamma_1, ((((((!STD & LAT) & SLP_76) & !LYK) & RLK) | (((!STD & LAT) & SLP_76) & LYK)) | ((STD & LAT) & SLP_76))
+PPP3CA_B_or_CALNA, (((!ADAPT78_or_calcipressin & Calmodulin_1) & !Akap79) & !Cabin1)
+PRKCQ, ((((((((!LCK & DAG) & !Glk) & VAV1) & !PDK1) & Akt1_2) | ((((!LCK & DAG) & !Glk) & VAV1) & PDK1)) | (((!LCK & DAG) & Glk) & VAV1)) | ((LCK & DAG) & VAV1))
+PTPRC, (PTPRC | !PTPRC)
+Phosphatidylinositol_3_phosphate, ((!TEP1 & !SHIP1) & PIK3CD__P110d)
+RAC1p1_Phosphorylated_RAC1, (VAV1 & p21_RAC1_or_TC25)
+RAC1p2_Phosphorylated_RAC1, (VAV2 & p21_RAC1_or_TC25)
+RAF1, p21Ras
+RASGRP, ((DAG & PRKCQ) & Ca)
+RLK, LCK
+RNF56, (!LCK & !PRKCQ)
+RSK1, ERK1_2_or_MAPK1_3
+Remodeling_of_actin_cytoskeleton_, ARP2_3_or_ACTR2_3
+Rheb2, ((!PDK1 & Akt1_2) | PDK1)
+SHIP1, !LCK
+SHP2, KIAA0571
+SLP_76, (((((((((!Tp120 & STD) & LAT) & !GADS) & !Shp_1) | (((((!Tp120 & STD) & LAT) & GADS) & !VAV1) & !Shp_1)) | ((((!Tp120 & STD) & LAT) & GADS) & VAV1)) | (((Tp120 & STD) & !GADS) & !Shp_1)) | ((((Tp120 & STD) & GADS) & !VAV1) & !Shp_1)) | (((Tp120 & STD) & GADS) & VAV1))
+SOS1, ASH
+SRF, ((((!ERK1_2_or_MAPK1_3 & !G25K) & RAC1p2_Phosphorylated_RAC1) | (!ERK1_2_or_MAPK1_3 & G25K)) | ERK1_2_or_MAPK1_3)
+STD, (((((TCR_with_phosphorylated_ITAMs & !LCK) & !FYN) & ABL) | ((TCR_with_phosphorylated_ITAMs & !LCK) & FYN)) | (TCR_with_phosphorylated_ITAMs & LCK))
+Shp_1, (((!LCK & FYN) & !ERK1_2_or_MAPK1_3) | (LCK & !ERK1_2_or_MAPK1_3))
+Survival, (((((P65_p50_dimer & cJUN_cFOS) & NFAT1_NFAT2) & CREB1) & !FKHR) & BCL2L1)
+TCR_complex, (TCR_complex | !TCR_complex)
+TCR_with_phosphorylated_ITAMs, ((((((TCR_complex & !LCK) & FYN) & !Activated_CCBL) & !LYP_or_PEP) | ((((TCR_complex & LCK) & !FYN) & !Activated_CCBL) & !LYP_or_PEP)) | ((TCR_complex & LCK) & FYN))
+TEP1, (!LCK & FKHR)
+Tp120, (CD6 & STD)
+VAV1, ((STD & Phosphatidylinositol_3_phosphate) & CRBM__3BP2)
+VAV2, (Phosphatidylinositol_3_phosphate & CRBM__3BP2)
+WASF2, (ABL & RAC1p1_Phosphorylated_RAC1)
+WASp, G25K
+beta_catenin, !GSK3b
+cJUN_cFOS, (c_FOS & c_JUN)
+c_FOS, (ERK1_2_or_MAPK1_3 & SRF)
+c_JUN, (JNK1_2_or_MAPK8_9 & !GSK3b)
+p105, !MAP3K8
+p21Ras, ((((!GAP & !SOS1) & RASGRP) | (!GAP & SOS1)) | ((GAP & SOS1) & RASGRP))
+p21_RAC1_or_TC25, (p21_RAC1_or_TC25 | !p21_RAC1_or_TC25)
+p85a, (CD28_with_phosphorylated_ITAMs & SLP_76)
