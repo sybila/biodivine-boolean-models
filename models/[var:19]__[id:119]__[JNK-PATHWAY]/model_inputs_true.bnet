@@ -1,0 +1,20 @@
+targets,factors
+3a, (3a | !3a)
+3b, (3b | !3b)
+7a, (7a | !7a)
+AP_1_complex, (csa1_JNK_complex_cell | 3b)
+ATF2_phosphorylated, csa1_JNK_complex_cell
+Apoptosis_phenotype, !BCL2_phosphorylated
+Autophagy_phenotype, BCL2_phosphorylated
+BCL2_phosphorylated, csa1_JNK_complex_cell
+Innate_Immunity_phenotype, AP_1_complex
+MAP2K4_phosphorylated, (MEKK1_4_complex | SARS_CoV_1_proteins_complex)
+MAP2K7_phosphorylated, (MLK1_2_3_complex | SARS_CoV_1_proteins_complex)
+MEKK1_4_complex, SARS_CoV_1_proteins_complex
+MLK1_2_3_complex, SARS_CoV_1_proteins_complex
+S, (S | !S)
+SARS_CoV_1_proteins_complex, (SARS_CoV_1_proteins_complex | !SARS_CoV_1_proteins_complex)
+TP53_phosphorylated, csa1_JNK_complex_cell
+TP53_signalling_phenotype, TP53_phosphorylated
+csa12_JNK_complex_cell, (csa12_JNK_complex_cell | !csa12_JNK_complex_cell)
+csa1_JNK_complex_cell, (((((MAP2K4_phosphorylated | MAP2K7_phosphorylated) | 7a) | 3a) & csa12_JNK_complex_cell) | (csa12_JNK_complex_cell & S))
