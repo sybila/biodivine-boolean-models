@@ -1,0 +1,43 @@
+targets,factors
+BTRC, (BTRC & !TRIM9)
+CACTIN, (CACTIN & TRIM39)
+CASP1, ((PYCARD_ubiquitinated_ubiquitinated_ubiquitinated & NLRP3) & CASP1)
+E, (E | !E)
+Hops_Complex_complex, Orf3a
+IFNB1, (IFNB1 & SERPINF2)
+IKBKG_IKBKB_CHUK_complex, LPS_TNF___IL_1_complex
+IL1b, ((((CASP1 | P65_P015_complex) | E) & IL1b) | P65_P015_complex)
+IRF6, (IRF6 | !IRF6)
+LPS_TLR4_MYD88_complex, ((TLR4 & IRF6) & MYD88)
+LPS_TNF___IL_1_complex, (LPS_TNF___IL_1_complex | !LPS_TNF___IL_1_complex)
+MYD88, ((MYD88 & TLR7_8_9_complex) | (MYD88 & !TRIM59))
+NEMO_IKKA_IKKB_complex, ((((TAB2_TAB3_TAK1_complex | TRIM14_TRIM23_complex) & !TRIM22) & !TRIM29) & !TRIM27_TRIM21_complex)
+NFKB1, (NFKB1 | !NFKB1)
+NFKB1_NFKNIA_complex, ((NFKB1 & NFKBIA_phosphorylated_ubiquitinated_ubiquitinated_ubiquitinated) & !CACTIN)
+NFKBIA_phosphorylated_ubiquitinated_ubiquitinated_ubiquitinated, (BTRC | NEMO_IKKA_IKKB_complex)
+NLRP3, ORF8b
+ORF8b, (ORF8b | !ORF8b)
+Orf3a, (Orf3a | !Orf3a)
+P65_P015_complex, ((IKBKG_IKBKB_CHUK_complex & E) | ((TRAF3 | IKBKG_IKBKB_CHUK_complex) | Orf3a))
+PYCARD_ubiquitinated_ubiquitinated_ubiquitinated, (TRAF3 | Orf3a)
+S, Orf3a
+SERPINF2, TAB2_TAB3_TAK1_complex
+TAB2_TAB3_TAK1_complex, (TRAF6 & !TRIM30a_TRIM38_complex)
+TICAM1, ((TICAM1 & TLR3) & !TRIM38)
+TLR3, double_stranded_RNA_rna
+TLR4, (TLR4 | !TLR4)
+TLR7_8_9_complex, ssRNA_rna
+TRAF3, (TRAF3 & TICAM1)
+TRAF6, ((((MYD88 | TRIM23) & TRAF6) & !TRIM38) | (TRAF6 & LPS_TLR4_MYD88_complex))
+TRIM14_TRIM23_complex, (TRIM14_TRIM23_complex | !TRIM14_TRIM23_complex)
+TRIM22, (TRIM22 | !TRIM22)
+TRIM23, (TRIM23 | !TRIM23)
+TRIM27_TRIM21_complex, (TRIM27_TRIM21_complex | !TRIM27_TRIM21_complex)
+TRIM29, (TRIM29 | !TRIM29)
+TRIM30a_TRIM38_complex, (TRIM30a_TRIM38_complex | !TRIM30a_TRIM38_complex)
+TRIM38, (TRIM38 | !TRIM38)
+TRIM39, TRIM39
+TRIM59, (TRIM59 & Orf3a)
+TRIM9, (TRIM9 | !TRIM9)
+double_stranded_RNA_rna, (double_stranded_RNA_rna | !double_stranded_RNA_rna)
+ssRNA_rna, (ssRNA_rna | !ssRNA_rna)
