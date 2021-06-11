@@ -1,0 +1,63 @@
+csa2_histone_complex_nucleus -> csa1_histone_complex_nucleus
+BRD4 -> csa1_histone_complex_nucleus
+BRD2 -> csa1_histone_complex_nucleus
+H4C14 -> csa2_histone_complex_nucleus
+H4_16 -> csa2_histone_complex_nucleus
+H4C1 -> csa2_histone_complex_nucleus
+H3C15 -> csa2_histone_complex_nucleus
+H3C1 -> csa2_histone_complex_nucleus
+H4C9 -> csa2_histone_complex_nucleus
+H2BC21 -> csa2_histone_complex_nucleus
+H2A -> csa2_histone_complex_nucleus
+MPP5 -> CRB3_PALS1_PATJ_complex_complex
+CRB3 -> CRB3_PALS1_PATJ_complex_complex
+PATJ -> CRB3_PALS1_PATJ_complex_complex
+ASIC1 -> ASIC1_trimer_H__STOML3_complex
+STOML3 -> ASIC1_trimer_H__STOML3_complex
+E_cell -| ASIC1_trimer_H__STOML3_complex
+E_cell -| ATP1A_ATP1B_FXYDs_complex
+MPP5 -> E_PALS1_complex
+E_cell -> E_PALS1_complex
+CDK9 -> P_TEFb_complex
+BRD4 -> P_TEFb_complex
+CCNT1 -> P_TEFb_complex
+BRD4 -> BRD4
+E_nucleus -| BRD4
+TBP -> TBP
+BRD2 -> TBP
+BRD2 -> BRD2
+JQ_1_simple_molecule -| BRD2
+E_nucleus -| BRD2
+H__ion -> ASIC1
+PATJ -> PATJ
+CRB3 -> CRB3
+MPP5 -> MPP5
+ATP1A_ATP1B_FXYDs_complex -> K__ion
+ATP1A_ATP1B_FXYDs_complex -> Na__ion
+ATP1A_ATP1B_FXYDs_complex -> Activity_of_sodium_channels_phenotype
+STOML3 -| Activity_of_sodium_channels_phenotype
+ASIC1_trimer_H__STOML3_complex -> Activity_of_sodium_channels_phenotype
+CRB3_PALS1_PATJ_complex_complex -> Maintenance_of_tight_junction_phenotype
+E_PALS1_complex -> Maintenance_of_tight_junction_phenotype
+P_TEFb_complex -> RNA_Polymerase_II_dependent_Transcription__phenotype
+csa1_histone_complex_nucleus -> Chromatin_organization_phenotype
+$ASIC1: H__ion
+$ASIC1_trimer_H__STOML3_complex: ((ASIC1 & STOML3) & !E_cell)
+$ATP1A_ATP1B_FXYDs_complex: !E_cell
+$Activity_of_sodium_channels_phenotype: ((ATP1A_ATP1B_FXYDs_complex | !STOML3) | ASIC1_trimer_H__STOML3_complex)
+$BRD2: ((BRD2 & !JQ_1_simple_molecule) & !E_nucleus)
+$BRD4: (BRD4 & !E_nucleus)
+$CRB3: CRB3
+$CRB3_PALS1_PATJ_complex_complex: ((MPP5 & CRB3) & PATJ)
+$Chromatin_organization_phenotype: csa1_histone_complex_nucleus
+$E_PALS1_complex: (MPP5 & E_cell)
+$K__ion: ATP1A_ATP1B_FXYDs_complex
+$MPP5: MPP5
+$Maintenance_of_tight_junction_phenotype: (CRB3_PALS1_PATJ_complex_complex | E_PALS1_complex)
+$Na__ion: ATP1A_ATP1B_FXYDs_complex
+$PATJ: PATJ
+$P_TEFb_complex: ((CDK9 & BRD4) | (CCNT1 & BRD4))
+$RNA_Polymerase_II_dependent_Transcription__phenotype: P_TEFb_complex
+$TBP: (TBP & BRD2)
+$csa1_histone_complex_nucleus: ((BRD4 | BRD2) & csa2_histone_complex_nucleus)
+$csa2_histone_complex_nucleus: (((((((H4C14 & H4_16) & H4C1) & H3C15) & H3C1) & H4C9) & H2BC21) & H2A)
