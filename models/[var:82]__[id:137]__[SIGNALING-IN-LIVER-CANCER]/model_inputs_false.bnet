@@ -1,0 +1,83 @@
+targets,factors
+AKT, (pdk1 | !pp2a)
+CREB, (msk12 | p90RSKn)
+GSK3, AKT
+HSP27, prak
+HistH3, msk12
+IFNg, (IFNg & !IFNg)
+IFNgr, IFNg
+IGF1, (IGF1 & !IGF1)
+IKK, ((nik | map3k1) | cot)
+IL1a, (IL1a & !IL1a)
+IL6, (IL6 & !IL6)
+IL6r, IL6
+IRS1s, (erk12 | mTOR)
+Ikb, IKK
+JNK12, (mkk4 | mkk7)
+JNK12n, JNK12
+LPS, (LPS & !LPS)
+MEK12, (raf1 | traf6)
+PI3K, (((irs1t | egfr) | ras) | tnfr)
+STAT1, jak1
+STAT11, STAT1
+STAT13, (STAT3 | STAT1)
+STAT1n, ((p38n | STAT11) | erk12n)
+STAT3, jak2
+STAT33, STAT3
+STAT3n, (STAT33 | erk12n)
+TGFa, (TGFa & !TGFa)
+TNFa, (TNFa & !TNFa)
+a20, (a20 & !a20)
+ask1, traf2
+atf1, msk12
+atf2, (p38n | JNK12n)
+cJUN, (JNK12n | ck2)
+casp9, !AKT
+cfos, ((elk1 | p90RSKn) | cJUN)
+ck2, (ck2 & !ck2)
+cot, AKT
+egfr, TGFa
+elk1, ((p38n | JNK12n) | erk12n)
+erk12, MEK12
+erk12n, erk12
+grb2, (shc | egfr)
+igfr, IGF1
+il1r, IL1a
+irs1t, (igfr | !IRS1s)
+jak1, (IFNgr | egfr)
+jak2, IL6r
+mTOR, AKT
+map3k1, ((rac | sitpec) | ras)
+map3k7, (traf2 | traf6)
+mdm2, !AKT
+mkk3, map3k7
+mkk4, ((map3k1 | ask1) | map3k7)
+mkk6, map3k7
+mkk7, ((map3k1 | ask1) | map3k7)
+msk12, (p38n | erk12n)
+nfkb, Ikb
+nfkbn, nfkb
+nik, map3k7
+p38, ((mkk3 | mkk4) | mkk6)
+p38n, p38
+p53, (mdm2 | JNK12n)
+p70S6, ((erk12 | pdk1) | mTOR)
+p90RSK, MEK12
+p90RSKn, p90RSK
+pak, (rac | !AKT)
+pdk1, pip3
+pip2, (pip2 & !pip2)
+pip3, (pip2 | PI3K)
+pp2a, (pp2a & !pp2a)
+prak, ((erk12 | mkk3) | p38)
+rac, PI3K
+raf1, (pak | ras)
+ras, ((sos | !rasgap) | !AKT)
+rasgap, egfr
+shc, (igfr | egfr)
+sitpec, traf6
+sos, (!erk12 | grb2)
+tlr4, LPS
+tnfr, TNFa
+traf2, tnfr
+traf6, ((!a20 | il1r) | tlr4)
