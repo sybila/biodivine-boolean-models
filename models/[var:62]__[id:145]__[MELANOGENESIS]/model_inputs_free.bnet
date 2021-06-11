@@ -1,0 +1,62 @@
+targets,factors
+AC, MC1R
+ASK1, (UVB & (!Akt & !Melanin))
+ASK1_m, !Akt_m
+Akt, PDK1
+Akt_m, PDK1_m
+Bcl_2, ((Akt | (ERK | (RSK | (b_catenin | GSK3b)))) & !(P53 | (JNK | p38)))
+Bcl_2_m, ((MITFprotein | CREB) & ((Akt_m | (ERK_m | (RSK_m | (b_catenin_m | GSK3b_m)))) & !(p53_m | (JNK_m | p38_m))))
+COX_2, (!GSK3b & (b_catenin | (NFAT | p38)))
+CREB, (PKA | (Akt_m | MSK))
+EGFR, (UVB & !Melanin)
+EP4, PGE2
+ERK, (MEK & !p38)
+ERK_m, (MEK_m & !p38_m)
+ETR, ET_1
+ET_1, (IL_1 | P53)
+GSK3b, !Akt
+GSK3b_m, !Akt_m
+IL_1, (UVB & !Melanin)
+JNK, MKK4
+JNK_m, MKK4_m
+MC1R, a_MSH
+MDM2, Akt
+MDM2_m, Akt_m
+MEK, Raf
+MEK_m, Raf_m
+MITFmRNA, (b_catenin_m & CREB)
+MITFprotein, (ERK_m & MITFmRNA)
+MKK4, (ASK1 & !Akt)
+MKK4_m, (ASK1_m & !Akt_m)
+MKK6, ASK1
+MKK6_m, ASK1_m
+MSK, (p38_m | ERK_m)
+Melanin, MITFprotein
+NFAT, !GSK3b
+P53, (!MDM2 & (ERK | p38))
+PDE, PKA
+PDK1, (PI3K & !PTEN)
+PDK1_m, PI3K_m
+PGE2, (COX_2 | IL_1)
+PI3K, EGFR
+PI3K_m, ((PKC | Ras_m) & !cAMP)
+PKA, cAMP
+PKC, ETR
+PTEN, ((Melanin & (!Akt & !ERK)) | (!Melanin & (!UVB & (!Akt & !ERK))))
+RSK, ERK
+RSK_m, ERK_m
+Raf, (Ras & !Akt)
+Raf_m, (PKC | Ras_m)
+Ras, SG
+Ras_m, (SG_m | cAMP)
+SCF, (IL_1 | P53)
+SG, (EGFR & !ERK)
+SG_m, (c_Kit & !ERK_m)
+a_MSH, P53
+b_catenin, !GSK3b
+b_catenin_m, !GSK3b_m
+cAMP, (!PDE & (EP4 | AC))
+c_Kit, SCF
+p38, MKK6
+p38_m, MKK6_m
+p53_m, (p38_m & !(MDM2_m | MITFprotein))
