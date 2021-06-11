@@ -1,0 +1,34 @@
+targets,factors
+AKT1, !M
+APAF1, (APAF1 & !APAF1)
+Apoptosis_phenotype, (((((((Orf6 | S) | CASP3) | Orf8a) | N) | Orf3b) | Orf9b) | CASP7)
+Apoptosome_complex, (((CYCS & APAF1) & CASP9_cell) & !AKT1)
+BAD, !AKT1
+BAD_BBC3_BCL2L11_complex, !BCL2_MCL1_BCL2L1_complex
+BAX, ((BAD_BBC3_BCL2L11_complex | BID) & !BCL2_MCL1_BCL2L1_complex)
+BCL2_MCL1_BCL2L1_complex, ((!Orf7a & !E) & !BAD)
+BID, CASP8
+CASP3, (CASP8 | CASP9_cell_active)
+CASP7, (CASP9_cell_active | CASP8)
+CASP8, ((FADD | TRADD_FADD_complex) | Orf3a)
+CASP9_cell, (CASP9_cell & !CASP9_cell)
+CASP9_cell_active, (Apoptosome_complex & !AKT1)
+CYCS, (MAPK14 | BAX)
+E, (E & !E)
+FADD, FAS_FASL_complex
+FASLG, (FASLG & !FASLG)
+FAS_FASL_complex, FASLG
+M, (M & !M)
+MAPK14, Orf3a
+N, (N & !N)
+Orf3a, (Orf3a & !Orf3a)
+Orf3b, (Orf3b & !Orf3b)
+Orf6, (Orf6 & !Orf6)
+Orf7a, (Orf7a & !Orf7a)
+Orf8a, (Orf8a & !Orf8a)
+Orf9b, (Orf9b & !Orf9b)
+S, (S & !S)
+TNF, (TNF & !TNF)
+TNF_TNFRSF1A_complex, TNF
+TRADD, (TRADD & !TRADD)
+TRADD_FADD_complex, ((FADD & TRADD) & TNF_TNFRSF1A_complex)
