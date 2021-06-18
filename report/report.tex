@@ -1,0 +1,84 @@
+\documentclass{article}
+
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{array} % fixed with table cells
+
+\title{Biodivne Boolean Models: A Comprehensive Logical Modelling Benchmark}
+\author{Samuel Pastva}
+\date{}
+
+% Fixed width table columns
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+	Recent years have seen emergence of a wide variety of powerful tools for computational analysis of logical models represented as Boolean networks. However, assessment of validity, efficiency and scalability of such tools requires a comprehensive benchmark set of Boolean networks that can be used to obtain comparable results for different tools.
+	
+	At the moment, this need is largely served using databases of biological models such as CellCollective or GINsim database. However, these databases are more focused on human curated, biological aspects of the networks and are therefore limited in scope. Furthermore, the models in these databases are not available as a single dataset and often have to be manually obtained one by one.
+	
+	Here, we introduce a comprehensive benchmark dataset that has been created by surveying the aforementioned databases, as well as a large body of other literature to obtain as many biologically motivated Boolean networks as possible. To make the dataset useful to a wide range of tool maintainers, we provide the models in different machine-readable formats and ensure all models are valid and consistent using an automated validation procedure. At the moment, the dataset comprises 145 networks.
+\end{abstract}
+
+\section{Introduction}
+
+Logical models provide a very useful and simple framework for description of complex biological processes. The most common mechanism for describing executable logical models are Boolean networks. In recent years, we have seen a rapid development of new tools and algorithms for analysis of large Boolean networks. However, in many instances, it is hard to assess usefulness and scalability of such tools due to a lack of commonly recognised ``benchmark dataset'' of networks on which the tools can be compared.
+
+This purpose is often served by models obtained from databases maintained by the authors of some of the larger modelling tools, such as CellCollective~\cite{cell-collective} or GINsim~\cite{ginsim}. However, these models are often hard to obtain in bulk and have to be downloaded one by one. Additionally, authors often modify the models slightly, or assume non-standard values of inputs which prevents comparisons. Finally, these databases are far from comprehensive, so a wide range of models is often omitted.
+
+As a result, most papers develop an ad hoc benchmark set that is often partially proprietary and hard or impossible to replicate and compare to. Here, we propose a standardized comprehensive benchmark set that can be used for this purpose instead. To make the benchmark set as user friendly as possible, we provide the following benefits compared to existing solutions:
+
+\begin{itemize}
+	\item The dataset is open source and available on Github, so that anyone can propose new additions or modifications. Each tracked model is (primarily) referred to using a unique ID as opposed to name or citation. However, we also keep track of the original source (publication) where the model first appeared.
+	
+	\item Every model is provided in three formats that can be consumed by different tools or easily parsed by a new tool. Namely, we consider \texttt{bnet}, as popularised by PyBoolNet~\cite{pyboolnet}, \texttt{aeon} format as used in AEON~\cite{aeon}, and the universal SBML-qual~\cite{sbml-qual} format.
+	
+	\item If the model contains inputs (constants), aside from the model as published by the authors, we also generate two variants with all inputs fixed to \texttt{true} and \texttt{false}, and a variant where the values of all inputs are unspecified.
+	
+	\item For each model format and variant, we provide a single bundle with all available models that can be easily used for batch processing.
+	
+	\item We provide an automated procedure to check the validity and integrity of all included models, as well as generate different model bundles. This minimises possible user errors when adding new models.
+\end{itemize}
+
+This document then serves as a cumulative report of all the models included in the dataset and the sources of these models.
+
+\section{Models}
+
+\begin{center}
+	\begin{tabular}{ | C{20pt} | C{160pt} | C{30pt} | C{30pt} | C{40pt} | }
+		\hline
+		ID & Name & Vars. & Regs. & Source \\ \hline
+		001 & \texttt{SIGNALING IN MACROPHAGE ACTIVATION} & 321 & 533 & \cite{bbm-001, cell-collective} \\ \hline
+		002 & \texttt{SIGNAL TRANSDUCTION IN FIBROBLASTS} & & & \cite{bbm-002, cell-collective} \\ \hline
+		003 & \texttt{MAMMALIAN CELL CYCLE} & & & \cite{bbm-003, cell-collective} \\ \hline
+		004 & \texttt{ERBB RECEPTOR SIGNALING} & & & \cite{bbm-004, cell-collective}  \\ \hline
+		005 & \texttt{FA/BRCA PATHWAY} & & & \cite{bbm-005, cell-collective} \\ \hline
+		006 & \texttt{HGF SIGNALING IN KERATINOCYTES} & & & \cite{bbm-006, cell-collective} \\ \hline
+		007 & \texttt{CORTICAL AREA DEVELOPMENT} & & & \cite{bbm-007, cell-collective} \\ \hline
+		008 & \texttt{DEATH RECEPTOR SIGNALING} & & & \cite{bbm-008, cell-collective} \\ \hline
+		009 & \texttt{YEAST APOPTOSIS} & & & \cite{bbm-009, cell-collective} \\ \hline
+		010 & \texttt{CARDIAC-DEVELOPMENT} & & & \cite{bbm-010, cell-collective} \\ \hline
+		011 & \texttt{GUARD CELL ABSCISIC ACID SIGNALING} & & & \cite{bbm-011, cell-collective} \\ \hline
+		012 & & & & \\ \hline
+		013 & & & & \\ \hline
+		014 & & & & \\ \hline
+		015 & & & & \\ \hline
+		016 & & & & \\ \hline
+		017 & & & & \\ \hline
+		018 & & & & \\ \hline
+		019 & & & & \\ \hline				
+		020 & & & & \\ \hline																														
+		021 & & & & \\ \hline	
+		022 & & & & \\ \hline	
+	\end{tabular}	
+\end{center}
+
+\bibliographystyle{plain}
+\bibliography{report}
+
+\end{document}
