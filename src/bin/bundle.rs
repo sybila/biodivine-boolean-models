@@ -1,6 +1,6 @@
-use std::process::exit;
 use regex::Regex;
 use std::path::Path;
+use std::process::exit;
 
 /// This binary will try to analyse the files in `models` directory and group them into easily
 /// processable groups into the bundle directory. Specifically, it will produce the following:
@@ -57,36 +57,63 @@ fn main() {
 
         move_to_bundle(id.as_str(), &source.path(), "model", &bundle_dir, "all");
         if source.path().join("model_inputs_free.aeon").exists() {
-            move_to_bundle(id.as_str(), &source.path(), "model_inputs_free", &bundle_dir, "inputs-free");
-            move_to_bundle(id.as_str(), &source.path(), "model_inputs_false", &bundle_dir, "inputs-false");
-            move_to_bundle(id.as_str(), &source.path(), "model_inputs_true", &bundle_dir, "inputs-true");
+            move_to_bundle(
+                id.as_str(),
+                &source.path(),
+                "model_inputs_free",
+                &bundle_dir,
+                "inputs-free",
+            );
+            move_to_bundle(
+                id.as_str(),
+                &source.path(),
+                "model_inputs_false",
+                &bundle_dir,
+                "inputs-false",
+            );
+            move_to_bundle(
+                id.as_str(),
+                &source.path(),
+                "model_inputs_true",
+                &bundle_dir,
+                "inputs-true",
+            );
         }
         println!("Processed model id {}.", id);
     }
 }
 
 // Distribute an aeon/bnet/sbml file to the respective bundle directories.
-fn move_to_bundle(id: &str, model_dir: &Path, name_prefix: &str, bundle_dir: &Path, bundle_prefix: &str) {
+fn move_to_bundle(
+    id: &str,
+    model_dir: &Path,
+    name_prefix: &str,
+    bundle_dir: &Path,
+    bundle_prefix: &str,
+) {
     let model_path = model_dir.join(name_prefix);
 
     std::fs::copy(
         model_path.with_extension("aeon"),
         bundle_dir
             .join(&format!("{}-aeon", bundle_prefix))
-            .join(&format!("{}.aeon", id))
-    ).unwrap();
+            .join(&format!("{}.aeon", id)),
+    )
+    .unwrap();
 
     std::fs::copy(
         model_path.with_extension("bnet"),
         bundle_dir
             .join(&format!("{}-bnet", bundle_prefix))
-            .join(&format!("{}.bnet", id))
-    ).unwrap();
+            .join(&format!("{}.bnet", id)),
+    )
+    .unwrap();
 
     std::fs::copy(
         model_path.with_extension("sbml"),
         bundle_dir
             .join(&format!("{}-sbml", bundle_prefix))
-            .join(&format!("{}.sbml", id))
-    ).unwrap();
+            .join(&format!("{}.sbml", id)),
+    )
+    .unwrap();
 }

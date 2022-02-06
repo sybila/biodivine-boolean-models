@@ -1,9 +1,9 @@
-use std::process::exit;
-use regex::Regex;
-use biodivine_lib_param_bn::{BooleanNetwork, VariableId, FnUpdate, RegulatoryGraph};
-use std::path::Path;
-use std::convert::TryFrom;
 use biodivine_lib_param_bn::symbolic_async_graph::SymbolicAsyncGraph;
+use biodivine_lib_param_bn::{BooleanNetwork, FnUpdate, RegulatoryGraph, VariableId};
+use regex::Regex;
+use std::convert::TryFrom;
+use std::path::Path;
+use std::process::exit;
 
 fn main() {
     let arguments = std::env::args().collect::<Vec<_>>();
@@ -35,10 +35,15 @@ fn main() {
         let (id, name) = if let Some(matched) = source_dir_regex.captures(name.as_str()) {
             (matched[1].to_string(), matched[2].to_string())
         } else {
-            eprintln!("Unrecognized file/directory in sources directory: {}.", name);
+            eprintln!(
+                "Unrecognized file/directory in sources directory: {}.",
+                name
+            );
             eprintln!("Note that a model directory must be ID_NAME where:");
             eprintln!(" - ID is a number.");
-            eprintln!(" - NAME is a non-empty name containing uppercase letters, numbers, and dashes.");
+            eprintln!(
+                " - NAME is a non-empty name containing uppercase letters, numbers, and dashes."
+            );
             exit(128);
         };
 
@@ -76,15 +81,45 @@ fn main() {
 
         if !network_inputs(&network).is_empty() {
             if check {
-                check_network(&fix_network_inputs(&network, true), &output_dir, "model_inputs_true");
-                check_network(&fix_network_inputs(&network, false), &output_dir, "model_inputs_false");
-                check_network(&free_network_inputs(&network), &output_dir, "model_inputs_free");
-                println!(" - model has {} inputs, input specific translations checked.", network_inputs(&network).len());
+                check_network(
+                    &fix_network_inputs(&network, true),
+                    &output_dir,
+                    "model_inputs_true",
+                );
+                check_network(
+                    &fix_network_inputs(&network, false),
+                    &output_dir,
+                    "model_inputs_false",
+                );
+                check_network(
+                    &free_network_inputs(&network),
+                    &output_dir,
+                    "model_inputs_free",
+                );
+                println!(
+                    " - model has {} inputs, input specific translations checked.",
+                    network_inputs(&network).len()
+                );
             } else {
-                write_network(&fix_network_inputs(&network, true), &output_dir, "model_inputs_true");
-                write_network(&fix_network_inputs(&network, false), &output_dir, "model_inputs_false");
-                write_network(&free_network_inputs(&network), &output_dir, "model_inputs_free");
-                println!(" - model has {} inputs, input specific translations created.", network_inputs(&network).len());
+                write_network(
+                    &fix_network_inputs(&network, true),
+                    &output_dir,
+                    "model_inputs_true",
+                );
+                write_network(
+                    &fix_network_inputs(&network, false),
+                    &output_dir,
+                    "model_inputs_false",
+                );
+                write_network(
+                    &free_network_inputs(&network),
+                    &output_dir,
+                    "model_inputs_free",
+                );
+                println!(
+                    " - model has {} inputs, input specific translations created.",
+                    network_inputs(&network).len()
+                );
             }
         } else {
             println!(" - model has no inputs.");
@@ -106,7 +141,10 @@ fn read_source_model(source_dir: &Path) -> BooleanNetwork {
         let file = std::fs::read_to_string(source_dir.join("source.aeon")).unwrap();
         BooleanNetwork::try_from(file.as_str()).unwrap()
     } else {
-        eprintln!("No source model (.sbml/.aeon/.bnet) found in {}.", source_dir.display());
+        eprintln!(
+            "No source model (.sbml/.aeon/.bnet) found in {}.",
+            source_dir.display()
+        );
         exit(128);
     }
 }
@@ -150,7 +188,10 @@ fn check_network(network: &BooleanNetwork, path: &Path, name: &str) {
 fn check_consistency(network: &BooleanNetwork, source_dir: &Path) {
     let graph = SymbolicAsyncGraph::new(network.clone());
     if let Some(error) = graph.err() {
-        eprintln!("Cannot construct a graph from the model in {}. Problems:", source_dir.display());
+        eprintln!(
+            "Cannot construct a graph from the model in {}. Problems:",
+            source_dir.display()
+        );
         eprintln!("{}", error);
         exit(128);
     }
@@ -185,12 +226,14 @@ fn normalize_parameters(network: BooleanNetwork) -> BooleanNetwork {
             // Don't copy regulations for fake parameters.
             continue;
         }
-        new_graph.add_regulation(
-            network.get_variable_name(reg.get_regulator()),
-            network.get_variable_name(reg.get_target()),
-            reg.is_observable(),
-            reg.get_monotonicity()
-        ).unwrap();
+        new_graph
+            .add_regulation(
+                network.get_variable_name(reg.get_regulator()),
+                network.get_variable_name(reg.get_target()),
+                reg.is_observable(),
+                reg.get_monotonicity(),
+            )
+            .unwrap();
     }
 
     // Copy the rest of the network, but keep the update functions for fake parameters free.
@@ -207,19 +250,27 @@ fn normalize_parameters(network: BooleanNetwork) -> BooleanNetwork {
 
 /// Compute the network input variables.
 fn network_inputs(network: &BooleanNetwork) -> Vec<VariableId> {
-    network.variables().filter(|v| network.regulators(*v).is_empty()).collect()
+    network
+        .variables()
+        .filter(|v| network.regulators(*v).is_empty())
+        .collect()
 }
 
 /// Compute the network output variables.
 fn network_outputs(network: &BooleanNetwork) -> Vec<VariableId> {
-    network.variables().filter(|v| network.targets(*v).is_empty()).collect()
+    network
+        .variables()
+        .filter(|v| network.targets(*v).is_empty())
+        .collect()
 }
 
 /// Create a copy of the given network with all input variables fixed to a constant.
 fn fix_network_inputs(network: &BooleanNetwork, value: bool) -> BooleanNetwork {
     let mut result = network.clone();
     for v in network_inputs(network) {
-        result.set_update_function(v, Some(FnUpdate::Const(value))).unwrap();
+        result
+            .set_update_function(v, Some(FnUpdate::Const(value)))
+            .unwrap();
     }
     result
 }
@@ -248,7 +299,25 @@ fn get_metadata(network: &BooleanNetwork, url: &str) -> String {
     metadata.push_str(format!("variables: {}\n", network.num_vars()).as_str());
     metadata.push_str(format!("inputs: {}\n", network_inputs(network).len()).as_str());
     metadata.push_str(format!("outputs: {}\n", network_outputs(network).len()).as_str());
-    metadata.push_str(format!("regulations: {}\n", network.as_graph().regulations().count()).as_str());
-    metadata.push_str(format!("largest scc: {}\n", network.as_graph().components().into_iter().max_by_key(|scc| scc.len()).unwrap().len()).as_str());
+    metadata.push_str(
+        format!(
+            "regulations: {}\n",
+            network.as_graph().regulations().count()
+        )
+        .as_str(),
+    );
+    metadata.push_str(
+        format!(
+            "largest scc: {}\n",
+            network
+                .as_graph()
+                .components()
+                .into_iter()
+                .max_by_key(|scc| scc.len())
+                .unwrap()
+                .len()
+        )
+        .as_str(),
+    );
     metadata
 }
