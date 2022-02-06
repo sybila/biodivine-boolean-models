@@ -7,7 +7,7 @@ BRD2, ((BRD2 & !JQ_1_simple_molecule) & !E_nucleus)
 BRD4, (BRD4 & !E_nucleus)
 CCNT1, (CCNT1 & !CCNT1)
 CDK9, (CDK9 & !CDK9)
-CRB3, CRB3
+CRB3, (CRB3 & !CRB3)
 CRB3_PALS1_PATJ_complex_complex, ((MPP5 & CRB3) & PATJ)
 Chromatin_organization_phenotype, csa1_histone_complex_nucleus
 E_PALS1_complex, (MPP5 & E_cell)
@@ -24,10 +24,10 @@ H4_16, (H4_16 & !H4_16)
 H__ion, (H__ion & !H__ion)
 JQ_1_simple_molecule, (JQ_1_simple_molecule & !JQ_1_simple_molecule)
 K__ion, ATP1A_ATP1B_FXYDs_complex
-MPP5, MPP5
+MPP5, (MPP5 & !MPP5)
 Maintenance_of_tight_junction_phenotype, (CRB3_PALS1_PATJ_complex_complex | E_PALS1_complex)
 Na__ion, ATP1A_ATP1B_FXYDs_complex
-PATJ, PATJ
+PATJ, (PATJ & !PATJ)
 P_TEFb_complex, ((CDK9 & BRD4) | (CCNT1 & BRD4))
 RNA_Polymerase_II_dependent_Transcription__phenotype, P_TEFb_complex
 STOML3, (STOML3 & !STOML3)

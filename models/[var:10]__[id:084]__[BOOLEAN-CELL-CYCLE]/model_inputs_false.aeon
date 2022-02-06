@@ -1,0 +1,44 @@
+CycB -? Cdc20
+Cdc20 -? CycA
+CycA -? CycA
+E2F -? CycA
+Rb -? CycA
+UbcH10 -? CycA
+cdh1 -? CycA
+Cdc20 -? CycB
+cdh1 -? CycB
+E2F -? CycE
+Rb -? CycE
+CycA -? E2F
+CycB -? E2F
+Rb -? E2F
+p27 -? E2F
+CycA -? Rb
+CycB -? Rb
+CycD -? Rb
+CycE -? Rb
+p27 -? Rb
+Cdc20 -? UbcH10
+CycA -? UbcH10
+CycB -? UbcH10
+UbcH10 -? UbcH10
+cdh1 -? UbcH10
+Cdc20 -? cdh1
+CycA -? cdh1
+CycB -? cdh1
+p27 -? cdh1
+CycA -? p27
+CycB -? p27
+CycD -? p27
+CycE -? p27
+p27 -? p27
+$Cdc20: CycB
+$CycA: ((!Rb & (!E2F & (CycA & (!Cdc20 & !cdh1)))) | ((!Rb & (!E2F & (CycA & (!Cdc20 & (cdh1 & !UbcH10))))) | ((!Rb & (E2F & (!Cdc20 & !cdh1))) | (!Rb & (E2F & (!Cdc20 & (cdh1 & !UbcH10)))))))
+$CycB: (!Cdc20 & !cdh1)
+$CycD: false
+$CycE: (!Rb & E2F)
+$E2F: ((!Rb & (!CycA & !CycB)) | (!Rb & (CycA & (p27 & !CycB))))
+$Rb: ((!CycD & (!CycE & (!CycA & !CycB))) | ((!CycD & (!CycE & (CycA & (p27 & !CycB)))) | (!CycD & (CycE & (p27 & !CycB)))))
+$UbcH10: ((!CycA & (!Cdc20 & !cdh1)) | ((!CycA & (!Cdc20 & (cdh1 & (UbcH10 & CycB)))) | ((!CycA & (Cdc20 & !cdh1)) | ((!CycA & (Cdc20 & (cdh1 & UbcH10))) | ((CycA & !cdh1) | (CycA & (cdh1 & UbcH10)))))))
+$cdh1: ((!CycA & (!Cdc20 & !CycB)) | ((!CycA & Cdc20) | ((CycA & (!p27 & Cdc20)) | ((CycA & (p27 & (!Cdc20 & !CycB))) | (CycA & (p27 & Cdc20))))))
+$p27: ((!CycD & (!CycE & (!CycA & !CycB))) | ((!CycD & (!CycE & (CycA & (p27 & !CycB)))) | (!CycD & (CycE & (!CycA & (p27 & !CycB))))))

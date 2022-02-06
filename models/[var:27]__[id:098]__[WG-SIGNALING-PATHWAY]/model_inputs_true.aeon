@@ -8,7 +8,6 @@ Sgg -? Arm
 Slmb -? Arm
 Wg -? Arr
 Dsh -? Axin
-Boca -? Boca
 0 -? CK1alpha
 Ttv -? Dally
 Wf -? Dally
@@ -19,52 +18,39 @@ Fz -? Dsh
 Nkd -? Dsh
 Boca -? Fz
 Wg -? Fz
-Gro -? Gro
-Hipk -? Hipk
-Hyx -? Hyx
-Lgs -? Lgs
-Nej -? Nej
-Nemo -? Nemo
-Nkd -? Nkd
 Arm -? Pan
 Nemo -? Pan
-Proteasome -? Proteasome
-Pygo -? Pygo
 Dsh -? Sgg
-Slmb -? Slmb
 Gro -? Targets
 Hyx -? Targets
 Lgs -? Targets
 Nej -? Targets
 Pan -? Targets
 Pygo -? Targets
-Ttv -? Ttv
-Wf -? Wf
-Wg -? Wg
 $0: true
 $APC: !Dsh
 $Arm: ((!Axin & (!Sgg & (!APC & (CK1alpha & (!Proteasome & Hipk))))) | (!Axin & (!Sgg & (!APC & (CK1alpha & (Proteasome & (Hipk & !Slmb)))))))
 $Arr: Wg
 $Axin: !Dsh
-$Boca: Boca
+$Boca: true
 $CK1alpha: 0
 $Dally: (Ttv & !Wf)
 $Dlp: (Ttv & !Wf)
 $Dsh: ((!Fz & (Arr & !Nkd)) | (Fz & !Nkd))
 $Fz: (Wg & Boca)
-$Gro: Gro
-$Hipk: Hipk
-$Hyx: Hyx
-$Lgs: Lgs
-$Nej: Nej
-$Nemo: Nemo
-$Nkd: Nkd
+$Gro: true
+$Hipk: true
+$Hyx: true
+$Lgs: true
+$Nej: true
+$Nemo: true
+$Nkd: true
 $Pan: (Arm & !Nemo)
-$Proteasome: Proteasome
-$Pygo: Pygo
+$Proteasome: true
+$Pygo: true
 $Sgg: !Dsh
-$Slmb: Slmb
+$Slmb: true
 $Targets: (Pan & (Lgs & (Nej & (!Gro & (Hyx & Pygo)))))
-$Ttv: Ttv
-$Wf: Wf
-$Wg: Wg
+$Ttv: true
+$Wf: true
+$Wg: true

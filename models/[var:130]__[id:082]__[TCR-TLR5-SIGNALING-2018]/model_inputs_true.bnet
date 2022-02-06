@@ -18,7 +18,7 @@ CARD11a, (Malt1 & (CARD11 & Bcl10))
 CBLB, (!LCK & !PKCtheta)
 CCBL, 1
 CCBLp, (FYN & CCBL)
-CD28, CD28
+CD28, (CD28 | !CD28)
 CD28p, ((CD28 & (!LCK & FYN)) | (CD28 & LCK))
 CD4, 1
 CD45, 1
@@ -115,10 +115,10 @@ Survival, (!Foxo1 & (Bclxl & (NFkB & (AP1 & (NFAT & CREB1)))))
 TAB, TRAF6
 TAK1, (TRAF6 & TAB)
 TAK1c, TAK1
-TCR, TCR
+TCR, (TCR | !TCR)
 TCRp, ((TCR & (!LCK & (FYN & (!CCBLp & !PTPN22)))) | ((TCR & (LCK & (!FYN & (!CCBLp & !PTPN22)))) | (TCR & (LCK & FYN))))
 TICAM1, TLR5
-TLR5, TLR5
+TLR5, (TLR5 | !TLR5)
 TNFAIP3, NFkB
 TRAF6, IRAK1
 TXK, LCK

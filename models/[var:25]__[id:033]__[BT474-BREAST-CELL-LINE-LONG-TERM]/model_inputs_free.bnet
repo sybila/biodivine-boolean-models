@@ -1,6 +1,5 @@
 targets,factors
 AKT, ((((AKT & !PTEN) | (ERBB3 & !PTEN)) | (ERBB1 & !PTEN)) | (ERBB2 & !PTEN))
-BAX, BAX
 CyclinB1, (((CyclinB1 & !p53) | (ERBB1 & !p53)) | (ERBB3 & !p53))
 CyclinD1, ((((ERK1_2 & !GSK3a_b) | (AKT & !GSK3a_b)) | (CyclinD1 & !GSK3a_b)) | (RPS6 & !GSK3a_b))
 ERBB1, ((ERBB1 & !(erlotinib | pertuzumab)) | (stimulus & !(erlotinib | pertuzumab)))
@@ -9,7 +8,6 @@ ERBB3, (((stimulus & !((PTEN | erlotinib) | pertuzumab)) | (ERBB3 & !((PTEN | er
 ERK1_2, (ERK1_2 | cRAF)
 FoxO1_3a, (FoxO1_3a & !AKT)
 GSK3a_b, ((p53 | GSK3a_b) | CyclinD1)
-Nfkb, Nfkb
 PRAS, (PRAS & !AKT)
 PTEN, (PTEN & !GSK3a_b)
 RB, ((RB & !CyclinD1) | (Nfkb & !CyclinD1))

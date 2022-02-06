@@ -1,0 +1,95 @@
+PI3K -? AKT
+PTEN -? AKT
+AKT -? Apoptosis
+DNA_damage -? Apoptosis
+EGFR -? Apoptosis
+ERK -? Apoptosis
+FGFR3 -? Apoptosis
+FRS2 -? Apoptosis
+MSK -? Apoptosis
+TGFBR_stimulus -? Apoptosis
+p53 -? Apoptosis
+EGFR -? EGFR
+EGFR_stimulus -? EGFR
+ERK -? EGFR
+FGFR3 -? EGFR
+FRS2 -? EGFR
+TGFBR_stimulus -? EGFR
+DNA_damage -? ERK
+EGFR -? ERK
+ERK -? ERK
+FGFR3 -? ERK
+FRS2 -? ERK
+MSK -? ERK
+TGFBR_stimulus -? ERK
+p53 -? ERK
+EGFR -? FGFR3
+FGFR3 -? FGFR3
+FGFR3_stimulus -? FGFR3
+FRS2 -? FGFR3
+TGFBR_stimulus -? FGFR3
+EGFR -? FRS2
+ERK -? FRS2
+FGFR3 -? FRS2
+FRS2 -? FRS2
+TGFBR_stimulus -? FRS2
+AKT -? Growth_Arrest
+p53 -? Growth_Arrest
+DNA_damage -? MSK
+EGFR -? MSK
+ERK -? MSK
+FGFR3 -? MSK
+FRS2 -? MSK
+MSK -? MSK
+TGFBR_stimulus -? MSK
+p53 -? MSK
+EGFR -? PI3K
+FRS2 -? PI3K
+PI3K -? PI3K
+TGFBR_stimulus -? PI3K
+p53 -? PTEN
+AKT -? Proliferation
+DNA_damage -? Proliferation
+EGFR -? Proliferation
+ERK -? Proliferation
+FGFR3 -? Proliferation
+MSK -? Proliferation
+PI3K -? Proliferation
+TGFBR_stimulus -? Proliferation
+p53 -? Proliferation
+AKT -? p14
+DNA_damage -? p14
+EGFR -? p14
+ERK -? p14
+FGFR3 -? p14
+FRS2 -? p14
+MSK -? p14
+TGFBR_stimulus -? p14
+p53 -? p14
+AKT -? p53
+DNA_damage -? p53
+EGFR -? p53
+ERK -? p53
+FGFR3 -? p53
+FRS2 -? p53
+MSK -? p53
+TGFBR_stimulus -? p53
+p14 -? p53
+p53 -? p53
+$AKT: (PI3K & !PTEN)
+$Apoptosis: ((!TGFBR_stimulus & (!DNA_damage & (!ERK & (p53 & (!EGFR & (!FGFR3 & (!FRS2 & (!AKT & !MSK)))))))) | ((!TGFBR_stimulus & (!DNA_damage & (!ERK & (p53 & (!EGFR & (!FGFR3 & (FRS2 & !AKT))))))) | ((!TGFBR_stimulus & (!DNA_damage & (!ERK & (p53 & (!EGFR & (FGFR3 & !AKT)))))) | ((!TGFBR_stimulus & (!DNA_damage & (!ERK & (p53 & (EGFR & !AKT))))) | ((!TGFBR_stimulus & (DNA_damage & (!ERK & (p53 & !AKT)))) | (TGFBR_stimulus & (!ERK & (p53 & !AKT))))))))
+$DNA_damage: true
+$EGFR: ((!EGFR_stimulus & (!TGFBR_stimulus & (ERK & (!EGFR & (!FGFR3 & !FRS2))))) | (EGFR_stimulus & (!TGFBR_stimulus & (!EGFR & (!FGFR3 & !FRS2)))))
+$EGFR_stimulus: true
+$ERK: ((!TGFBR_stimulus & (!DNA_damage & (!ERK & (!p53 & (!EGFR & (!FGFR3 & (FRS2 & MSK))))))) | ((!TGFBR_stimulus & (!DNA_damage & (!ERK & (!p53 & (!EGFR & (FGFR3 & MSK)))))) | ((!TGFBR_stimulus & (!DNA_damage & (!ERK & (!p53 & (EGFR & MSK))))) | ((!TGFBR_stimulus & (!DNA_damage & (ERK & (!p53 & (!EGFR & (FGFR3 & MSK)))))) | (!TGFBR_stimulus & (!DNA_damage & (ERK & (!p53 & (EGFR & MSK)))))))))
+$FGFR3: (FGFR3_stimulus & (!TGFBR_stimulus & (!EGFR & (!FGFR3 & !FRS2))))
+$FGFR3_stimulus: true
+$FRS2: (!TGFBR_stimulus & (!ERK & (!EGFR & (FGFR3 & !FRS2))))
+$Growth_Arrest: (p53 & !AKT)
+$MSK: ((!TGFBR_stimulus & (!DNA_damage & (!ERK & (!p53 & (!EGFR & (!FGFR3 & (FRS2 & !MSK))))))) | ((!TGFBR_stimulus & (!DNA_damage & (!ERK & (!p53 & (!EGFR & (FGFR3 & !MSK)))))) | ((!TGFBR_stimulus & (!DNA_damage & (!ERK & (!p53 & (EGFR & !MSK))))) | ((!TGFBR_stimulus & (!DNA_damage & (!ERK & (p53 & (!EGFR & (!FGFR3 & (!FRS2 & !MSK))))))) | ((!TGFBR_stimulus & (!DNA_damage & (!ERK & (p53 & (!EGFR & (!FGFR3 & FRS2)))))) | ((!TGFBR_stimulus & (!DNA_damage & (!ERK & (p53 & (!EGFR & FGFR3))))) | ((!TGFBR_stimulus & (!DNA_damage & (!ERK & (p53 & EGFR)))) | ((!TGFBR_stimulus & (!DNA_damage & ERK)) | ((!TGFBR_stimulus & (DNA_damage & (!ERK & (!p53 & (!EGFR & (!FGFR3 & (!FRS2 & !MSK))))))) | ((!TGFBR_stimulus & (DNA_damage & (!ERK & (!p53 & (!EGFR & (!FGFR3 & FRS2)))))) | ((!TGFBR_stimulus & (DNA_damage & (!ERK & (!p53 & (!EGFR & FGFR3))))) | ((!TGFBR_stimulus & (DNA_damage & (!ERK & (!p53 & EGFR)))) | ((!TGFBR_stimulus & (DNA_damage & (!ERK & p53))) | ((!TGFBR_stimulus & (DNA_damage & ERK)) | TGFBR_stimulus))))))))))))))
+$PI3K: ((!TGFBR_stimulus & (!EGFR & (!FRS2 & PI3K))) | ((!TGFBR_stimulus & (!EGFR & FRS2)) | ((!TGFBR_stimulus & EGFR) | TGFBR_stimulus)))
+$PTEN: p53
+$Proliferation: ((!TGFBR_stimulus & (!DNA_damage & (ERK & (PI3K & (AKT & MSK))))) | ((!TGFBR_stimulus & (DNA_damage & (ERK & (!p53 & (!EGFR & (!FGFR3 & (PI3K & (AKT & MSK)))))))) | ((!TGFBR_stimulus & (DNA_damage & (ERK & (!p53 & (!EGFR & (FGFR3 & (PI3K & MSK))))))) | ((!TGFBR_stimulus & (DNA_damage & (ERK & (!p53 & (EGFR & (PI3K & MSK)))))) | ((!TGFBR_stimulus & (DNA_damage & (ERK & (p53 & (PI3K & (AKT & MSK)))))) | ((TGFBR_stimulus & (ERK & (!p53 & (PI3K & MSK)))) | (TGFBR_stimulus & (ERK & (p53 & (PI3K & (AKT & MSK)))))))))))
+$TGFBR_stimulus: true
+$p14: ((!TGFBR_stimulus & (!DNA_damage & (!ERK & (!p53 & (AKT & MSK))))) | ((!TGFBR_stimulus & (!DNA_damage & (!ERK & (p53 & (!EGFR & (!FGFR3 & (!FRS2 & (AKT & MSK)))))))) | ((!TGFBR_stimulus & (!DNA_damage & (!ERK & (p53 & (!EGFR & (!FGFR3 & (FRS2 & MSK))))))) | ((!TGFBR_stimulus & (!DNA_damage & (!ERK & (p53 & (!EGFR & (FGFR3 & MSK)))))) | ((!TGFBR_stimulus & (!DNA_damage & (!ERK & (p53 & (EGFR & MSK))))) | ((!TGFBR_stimulus & (!DNA_damage & (ERK & (!p53 & (AKT & MSK))))) | ((!TGFBR_stimulus & (!DNA_damage & (ERK & (p53 & (!EGFR & (!FGFR3 & (AKT & MSK))))))) | ((!TGFBR_stimulus & (!DNA_damage & (ERK & (p53 & (!EGFR & (FGFR3 & MSK)))))) | ((!TGFBR_stimulus & (!DNA_damage & (ERK & (p53 & (EGFR & MSK))))) | ((!TGFBR_stimulus & (DNA_damage & (!ERK & (!p53 & (!EGFR & (!FGFR3 & (!FRS2 & (AKT & MSK)))))))) | ((!TGFBR_stimulus & (DNA_damage & (!ERK & (!p53 & (!EGFR & (!FGFR3 & (FRS2 & MSK))))))) | ((!TGFBR_stimulus & (DNA_damage & (!ERK & (!p53 & (!EGFR & (FGFR3 & MSK)))))) | ((!TGFBR_stimulus & (DNA_damage & (!ERK & (!p53 & (EGFR & MSK))))) | ((!TGFBR_stimulus & (DNA_damage & (!ERK & (p53 & MSK)))) | ((!TGFBR_stimulus & (DNA_damage & (ERK & (!p53 & (!EGFR & (!FGFR3 & (AKT & MSK))))))) | ((!TGFBR_stimulus & (DNA_damage & (ERK & (!p53 & (!EGFR & (FGFR3 & MSK)))))) | ((!TGFBR_stimulus & (DNA_damage & (ERK & (!p53 & (EGFR & MSK))))) | ((!TGFBR_stimulus & (DNA_damage & (ERK & (p53 & MSK)))) | (TGFBR_stimulus & MSK)))))))))))))))))))
+$p53: ((!TGFBR_stimulus & (!DNA_damage & (!ERK & (!p53 & (!EGFR & (!FGFR3 & (FRS2 & (!AKT & !MSK)))))))) | ((!TGFBR_stimulus & (!DNA_damage & (!ERK & (!p53 & (!EGFR & (!FGFR3 & (FRS2 & (AKT & (!MSK & p14))))))))) | ((!TGFBR_stimulus & (!DNA_damage & (!ERK & (!p53 & (!EGFR & (FGFR3 & (!AKT & !MSK))))))) | ((!TGFBR_stimulus & (!DNA_damage & (!ERK & (!p53 & (!EGFR & (FGFR3 & (AKT & (!MSK & p14)))))))) | ((!TGFBR_stimulus & (!DNA_damage & (!ERK & (!p53 & (EGFR & (!AKT & !MSK)))))) | ((!TGFBR_stimulus & (!DNA_damage & (!ERK & (!p53 & (EGFR & (AKT & (!MSK & p14))))))) | ((!TGFBR_stimulus & (!DNA_damage & (!ERK & (p53 & (!EGFR & (!FGFR3 & (!FRS2 & (!MSK & p14)))))))) | ((!TGFBR_stimulus & (!DNA_damage & (!ERK & (p53 & (!EGFR & (!FGFR3 & (FRS2 & p14))))))) | ((!TGFBR_stimulus & (!DNA_damage & (!ERK & (p53 & (!EGFR & (FGFR3 & p14)))))) | ((!TGFBR_stimulus & (!DNA_damage & (!ERK & (p53 & (EGFR & p14))))) | ((!TGFBR_stimulus & (!DNA_damage & (ERK & (!p53 & (!EGFR & (FGFR3 & (!AKT & !MSK))))))) | ((!TGFBR_stimulus & (!DNA_damage & (ERK & (!p53 & (!EGFR & (FGFR3 & (AKT & (!MSK & p14)))))))) | ((!TGFBR_stimulus & (!DNA_damage & (ERK & (!p53 & (EGFR & (!AKT & !MSK)))))) | ((!TGFBR_stimulus & (!DNA_damage & (ERK & (!p53 & (EGFR & (AKT & (!MSK & p14))))))) | ((!TGFBR_stimulus & (!DNA_damage & (ERK & (p53 & (!EGFR & (!FGFR3 & (!MSK & p14))))))) | ((!TGFBR_stimulus & (!DNA_damage & (ERK & (p53 & (!EGFR & (FGFR3 & p14)))))) | ((!TGFBR_stimulus & (!DNA_damage & (ERK & (p53 & (EGFR & p14))))) | ((!TGFBR_stimulus & (DNA_damage & (!ERK & (!p53 & (!EGFR & (!FGFR3 & (!FRS2 & !AKT))))))) | ((!TGFBR_stimulus & (DNA_damage & (!ERK & (!p53 & (!EGFR & (!FGFR3 & (!FRS2 & (AKT & !MSK)))))))) | ((!TGFBR_stimulus & (DNA_damage & (!ERK & (!p53 & (!EGFR & (!FGFR3 & (!FRS2 & (AKT & (MSK & p14))))))))) | ((!TGFBR_stimulus & (DNA_damage & (!ERK & (!p53 & (!EGFR & (!FGFR3 & FRS2)))))) | ((!TGFBR_stimulus & (DNA_damage & (!ERK & (!p53 & (!EGFR & FGFR3))))) | ((!TGFBR_stimulus & (DNA_damage & (!ERK & (!p53 & EGFR)))) | ((!TGFBR_stimulus & (DNA_damage & (!ERK & p53))) | ((!TGFBR_stimulus & (DNA_damage & (ERK & (!p53 & (!EGFR & (!FGFR3 & !AKT)))))) | ((!TGFBR_stimulus & (DNA_damage & (ERK & (!p53 & (!EGFR & (!FGFR3 & (AKT & !MSK))))))) | ((!TGFBR_stimulus & (DNA_damage & (ERK & (!p53 & (!EGFR & (!FGFR3 & (AKT & (MSK & p14)))))))) | ((!TGFBR_stimulus & (DNA_damage & (ERK & (!p53 & (!EGFR & FGFR3))))) | ((!TGFBR_stimulus & (DNA_damage & (ERK & (!p53 & EGFR)))) | ((!TGFBR_stimulus & (DNA_damage & (ERK & p53))) | ((TGFBR_stimulus & (!DNA_damage & (!p53 & !AKT))) | ((TGFBR_stimulus & (!DNA_damage & (!p53 & (AKT & p14)))) | ((TGFBR_stimulus & (!DNA_damage & (p53 & p14))) | (TGFBR_stimulus & DNA_damage))))))))))))))))))))))))))))))))))

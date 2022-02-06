@@ -1,0 +1,22 @@
+Pelle -? Cactus
+Slmb -? Cactus
+Cactus -? Dif
+Cactus -? Dorsal
+Toll -? MyD88
+Tube -? Pelle
+Nec -? Spz
+Dif -? Targets
+Dorsal -? Targets
+Spz -? Toll
+MyD88 -? Tube
+$Cactus: (!Pelle | (Pelle & !Slmb))
+$Dif: !Cactus
+$Dorsal: !Cactus
+$MyD88: Toll
+$Nec: true
+$Pelle: Tube
+$Slmb: true
+$Spz: !Nec
+$Targets: ((!Dif & Dorsal) | Dif)
+$Toll: Spz
+$Tube: MyD88

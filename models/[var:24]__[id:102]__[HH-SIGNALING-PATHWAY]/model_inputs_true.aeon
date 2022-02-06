@@ -1,0 +1,56 @@
+CK1a -? Ci_act
+Cos -? Ci_act
+Pka -? Ci_act
+Sgg -? Ci_act
+Slmb -? Ci_act
+SuFu -? Ci_act
+CK1a -? Ci_rep
+Cos -? Ci_rep
+Pka -? Ci_rep
+Sgg -? Ci_rep
+Slmb -? Ci_rep
+SuFu -? Ci_rep
+Fu -? Cos
+Smo -? Cos
+Ttv -? Dally
+Ttv -? Dlp
+Smo -? Fu
+Boi -? Hh
+Dally -? Hh
+Dlp -? Hh
+Dsp -? Hh
+Lipophorin -? Hh
+Rasp -? Hh
+Shf -? Hh
+iHog -? Hh
+Hh -? Ptc
+Gprk2 -? Smo
+Ptc -? Smo
+Tow -? Smo
+Fu -? SuFu
+Ci_act -? Targets
+Ci_rep -? Targets
+$Boi: true
+$CK1a: true
+$Ci_act: (!Cos | ((Cos & !SuFu) | ((Cos & (SuFu & (!Sgg & (!Pka & !Slmb)))) | ((Cos & (SuFu & (!Sgg & (!Pka & (Slmb & !CK1a))))) | ((Cos & (SuFu & (!Sgg & (Pka & !Slmb)))) | (Cos & (SuFu & (Sgg & !Slmb))))))))
+$Ci_rep: (Cos & (SuFu & (Sgg & (Pka & (Slmb & CK1a)))))
+$Cos: (!Smo & !Fu)
+$Dally: Ttv
+$Dlp: Ttv
+$Dsp: true
+$Fu: Smo
+$Gprk2: true
+$Hh: (Dlp & (Dally & (Rasp & (Shf & (iHog & (Boi & (Dsp & Lipophorin)))))))
+$Lipophorin: true
+$Pka: true
+$Ptc: !Hh
+$Rasp: true
+$Sgg: true
+$Shf: true
+$Slmb: true
+$Smo: (!Ptc & (Gprk2 & !Tow))
+$SuFu: !Fu
+$Targets: (Ci_act & !Ci_rep)
+$Tow: true
+$Ttv: true
+$iHog: true

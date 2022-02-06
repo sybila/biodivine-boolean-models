@@ -1,0 +1,75 @@
+Lanosterol -> Septdehydrocholesterol
+Lanosterol -> Desmosterol
+FPP_Synthase_gene -> FPP_Synthase_RNA
+Isopentenyl_pyrophosphate -> Dimethyl_allyl_pyrophosphate
+Geranyl_pyrophosphate -> Farnesyl_pyrophosphate
+FPP_Synthase -| Farnesyl_pyrophosphate
+HMG_CoA_Synthase_RNA -> HMG_CoA_Synthase
+mSREBP -> HMG_CoA_Reductase_gene
+Acetyl_CoA_acetyltransferase_gene -> Acetyl_CoA_acetyltransferase_RNA
+FPP_Synthase_RNA -> FPP_Synthase
+SREBP_SCAP -> pSREBP
+Mevalonyl_pyrophosphate -> Isopentenyl_pyrophosphate
+Septdehydrocholesterol -> Cholesterol
+Desmosterol -> Cholesterol
+Acetyl_CoA_acetyltransferase -> Acetoacetyl_CoA
+Acetyl_CoA -> Acetoacetyl_CoA
+HMG_CoA_Reductase_gene -> HMG_CoA_Reductase_RNA
+Cholesterol -| Insig_SREBP_SCAP
+Acetyl_CoA_acetyltransferase_RNA -> Acetyl_CoA_acetyltransferase
+mSREBP -> Cyp51_gene
+pSREBP -> mSREBP
+HMG_CoA -> Mevalonic_Acid
+HMG_CoA_Reductase -> Mevalonic_Acid
+HMG_CoA_Synthase -> HMG_CoA
+Acetoacetyl_CoA -> HMG_CoA
+Acetyl_CoA -> HMG_CoA
+mSREBP -> HMG_CoA_Synthase_gene
+Farnesyl_pyrophosphate -> Squaline
+Cyp51_gene -> Cyp51_RNA
+Mevalonic_Acid -> Mevalonyl_pyrophosphate
+Statins -| SREBP_SCAP
+Insig_SREBP_SCAP -> SREBP_SCAP
+mSREBP -> Acetyl_CoA_acetyltransferase_gene
+Squaline -> Lanosterol
+Cyp51_RNA -> Cyp51
+Statins -| HMG_CoA_Reductase
+HMG_CoA_Reductase_RNA -> HMG_CoA_Reductase
+HMG_CoA_Synthase_gene -> HMG_CoA_Synthase_RNA
+Isopentenyl_pyrophosphate -> Geranyl_pyrophosphate
+Dimethyl_allyl_pyrophosphate -> Geranyl_pyrophosphate
+mSREBP -> FPP_Synthase_gene
+$Acetoacetyl_CoA: (Acetyl_CoA & Acetyl_CoA_acetyltransferase)
+$Acetyl_CoA: true
+$Acetyl_CoA_acetyltransferase: Acetyl_CoA_acetyltransferase_RNA
+$Acetyl_CoA_acetyltransferase_RNA: Acetyl_CoA_acetyltransferase_gene
+$Acetyl_CoA_acetyltransferase_gene: mSREBP
+$Cholesterol: (Desmosterol | Septdehydrocholesterol)
+$Cyp51: Cyp51_RNA
+$Cyp51_RNA: Cyp51_gene
+$Cyp51_gene: mSREBP
+$Desmosterol: Lanosterol
+$Dimethyl_allyl_pyrophosphate: Isopentenyl_pyrophosphate
+$FPP_Synthase: FPP_Synthase_RNA
+$FPP_Synthase_RNA: FPP_Synthase_gene
+$FPP_Synthase_gene: mSREBP
+$Farnesyl_pyrophosphate: (Geranyl_pyrophosphate & !FPP_Synthase)
+$Geranyl_pyrophosphate: (Isopentenyl_pyrophosphate | Dimethyl_allyl_pyrophosphate)
+$HMG_CoA: (Acetoacetyl_CoA & (HMG_CoA_Synthase & Acetyl_CoA))
+$HMG_CoA_Reductase: (HMG_CoA_Reductase_RNA & !Statins)
+$HMG_CoA_Reductase_RNA: HMG_CoA_Reductase_gene
+$HMG_CoA_Reductase_gene: mSREBP
+$HMG_CoA_Synthase: HMG_CoA_Synthase_RNA
+$HMG_CoA_Synthase_RNA: HMG_CoA_Synthase_gene
+$HMG_CoA_Synthase_gene: mSREBP
+$Insig_SREBP_SCAP: !Cholesterol
+$Isopentenyl_pyrophosphate: Mevalonyl_pyrophosphate
+$Lanosterol: Squaline
+$Mevalonic_Acid: (HMG_CoA & HMG_CoA_Reductase)
+$Mevalonyl_pyrophosphate: Mevalonic_Acid
+$SREBP_SCAP: (Insig_SREBP_SCAP & !Statins)
+$Septdehydrocholesterol: Lanosterol
+$Squaline: Farnesyl_pyrophosphate
+$Statins: true
+$mSREBP: pSREBP
+$pSREBP: SREBP_SCAP

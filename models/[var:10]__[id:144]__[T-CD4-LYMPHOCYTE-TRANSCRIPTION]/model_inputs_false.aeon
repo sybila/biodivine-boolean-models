@@ -1,0 +1,28 @@
+TBET -? TBET
+GATA3 -? TBET
+BCL6 -? TBET
+TH1e -? TBET
+TBET -? GATA3
+GATA3 -? GATA3
+BCL6 -? GATA3
+TH2e -? GATA3
+FOXP3 -? FOXP3
+RORGT -? FOXP3
+TREGe -? FOXP3
+TBET -? RORGT
+GATA3 -? RORGT
+FOXP3 -? RORGT
+BCL6 -? RORGT
+TH17e -? RORGT
+TBET -? BCL6
+TFHe -? BCL6
+$BCL6: (TFHe & !TBET)
+$FOXP3: ((TREGe | FOXP3) & !RORGT)
+$GATA3: ((TH2e | GATA3) & !(TBET | BCL6))
+$RORGT: (TH17e & !(((TBET | GATA3) | FOXP3) | BCL6))
+$TBET: ((TH1e | TBET) & !(GATA3 | BCL6))
+$TFHe: false
+$TH17e: false
+$TH1e: false
+$TH2e: false
+$TREGe: false

@@ -1,0 +1,44 @@
+Cdh1 -| CycB
+Cdc20 -| CycB
+E2F -> CycE
+Rb -| CycE
+p27 -> E2F
+Rb -| E2F
+CycB -| E2F
+CycA -| E2F
+CycB -> Cdc20
+CycE -| Rb
+p27 -> Rb
+CycB -| Rb
+CycD -| Rb
+CycA -| Rb
+UbcH10 -| CycA
+E2F -> CycA
+Cdh1 -| CycA
+Rb -| CycA
+CycA -> CycA
+Cdc20 -| CycA
+p27 -> Cdh1
+CycB -| Cdh1
+CycA -| Cdh1
+Cdc20 -> Cdh1
+CycE -| p27
+p27 -> p27
+CycB -| p27
+CycD -| p27
+CycA -| p27
+UbcH10 -> UbcH10
+Cdh1 -? UbcH10
+CycB -> UbcH10
+Cdc20 -> UbcH10
+CycA -> UbcH10
+$Cdc20: CycB
+$Cdh1: ((Cdc20 | (p27 & !CycB)) | !(((p27 | CycB) | CycA) | Cdc20))
+$CycA: ((CycA & !(((Cdh1 & UbcH10) | Cdc20) | Rb)) | (E2F & !(((Cdh1 & UbcH10) | Cdc20) | Rb)))
+$CycB: !(Cdc20 | Cdh1)
+$CycD: false
+$CycE: (E2F & !Rb)
+$E2F: ((p27 & !(CycB | Rb)) | !(((p27 | Rb) | CycB) | CycA))
+$Rb: ((p27 & !(CycD | CycB)) | !((((CycE | p27) | CycB) | CycD) | CycA))
+$UbcH10: (((((UbcH10 & ((Cdh1 & ((CycB | Cdc20) | CycA)) | !Cdh1)) | (CycA & !Cdh1)) | (Cdc20 & !Cdh1)) | (CycB & !Cdh1)) | !((((UbcH10 | Cdh1) | CycB) | Cdc20) | CycA))
+$p27: ((p27 & !((CycD | (CycA & CycE)) | CycB)) | !((((CycE | p27) | CycB) | CycD) | CycA))

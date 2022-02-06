@@ -1,0 +1,52 @@
+GramN_Bact -? DAP
+Pipe -? Easter
+Snk -? Easter
+GramP_Bact -? GNBP1
+Fungi -? GNBP3
+Ndl -? Gd
+ModSP -? Grass
+GNBP1 -? ModSP
+GNBP3 -? ModSP
+PGRP_SA -? ModSP
+PGRP_SD -? ModSP
+DV_patterning -? Ndl
+GramP_Bact -? PGRP_SA
+DAP -? PGRP_SD
+Nec -? Psh
+Viru_Fact -? Psh
+Easter -? SPE
+Psh -? SPE
+Spheroide -? SPE
+Sphinx -? SPE
+Spirit -? SPE
+Gd -? Snk
+Grass -? Spheroide
+Grass -? Sphinx
+Grass -? Spirit
+SPE -? Spz
+Fungi -? Viru_Fact
+GramP_Bact -? Viru_Fact
+$DAP: GramN_Bact
+$DV_patterning: false
+$Easter: (Pipe & Snk)
+$Fungi: false
+$GNBP1: GramP_Bact
+$GNBP3: Fungi
+$Gd: Ndl
+$GramN_Bact: false
+$GramP_Bact: false
+$Grass: ModSP
+$ModSP: ((!GNBP1 & (!GNBP3 & PGRP_SD)) | ((!GNBP1 & (GNBP3 & (!PGRP_SA & PGRP_SD))) | ((!GNBP1 & (GNBP3 & PGRP_SA)) | ((GNBP1 & (!PGRP_SA & PGRP_SD)) | (GNBP1 & PGRP_SA)))))
+$Ndl: DV_patterning
+$Nec: false
+$PGRP_SA: GramP_Bact
+$PGRP_SD: DAP
+$Pipe: false
+$Psh: (!Nec & Viru_Fact)
+$SPE: ((!Easter & (!Psh & (!Spheroide & (!Sphinx & Spirit)))) | ((!Easter & (!Psh & (!Spheroide & Sphinx))) | ((!Easter & (!Psh & Spheroide)) | ((!Easter & Psh) | Easter))))
+$Snk: Gd
+$Spheroide: Grass
+$Sphinx: Grass
+$Spirit: Grass
+$Spz: SPE
+$Viru_Fact: ((!Fungi & GramP_Bact) | Fungi)

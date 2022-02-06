@@ -24,7 +24,6 @@ CyclinD1 -> CyclinD1
 cJUN -> CyclinD1
 p70S6K -> CyclinD1
 AKT -> CyclinD1
-Nfkb -> Nfkb
 CyclinB1 -> CyclinB1
 p53 -| CyclinB1
 ERK1_2 -| TSC2
@@ -67,9 +66,7 @@ ERBB2 -> cRAF
 ERBB1 -> cRAF
 GSKa_b -| cJUN
 cJUN -> cJUN
-BAX -> BAX
 $AKT: (((((AKT & !PTEN) | (ERBB1 & !PTEN)) | (ERBB2 & !PTEN)) | (CyclinB1 & !PTEN)) | (ERBB3 & !PTEN))
-$BAX: BAX
 $CyclinB1: (CyclinB1 & !p53)
 $CyclinD1: ((((ERK1_2 | cJUN) | AKT) | p70S6K) | CyclinD1)
 $ERBB1: ((((stimulus & !(pertuzumab | erlotinib)) | (ERBB3 & !(pertuzumab | erlotinib))) | (cJUN & !(pertuzumab | erlotinib))) | (ERBB1 & !(pertuzumab | erlotinib)))
@@ -78,7 +75,6 @@ $ERBB3: (((ERBB3 & !(erlotinib | pertuzumab)) | (RPS6 & !(erlotinib | pertuzumab
 $ERK1_2: ((ERK1_2 | ERBB1) | cRAF)
 $FOXO1_3a: (FOXO1_3a & !AKT)
 $GSKa_b: (GSKa_b | p53)
-$Nfkb: Nfkb
 $PRAS: ((PRAS & !AKT) | (cJUN & !AKT))
 $PTEN: ((PTEN & !GSKa_b) | (cRAF & !GSKa_b))
 $RB: ((RB & !CyclinB1) | (p53 & !CyclinB1))

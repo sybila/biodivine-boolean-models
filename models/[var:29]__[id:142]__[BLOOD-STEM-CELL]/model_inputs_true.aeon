@@ -1,0 +1,155 @@
+Erg -? Bptf
+Ikzf1 -? Bptf
+Lmo2 -? Bptf
+Myb -? Bptf
+Nfe2 -? Bptf
+Smarcc1 -? Bptf
+Fli1 -? Cbfa2t3h
+Ikzf1 -? Cbfa2t3h
+Meis1 -? Cbfa2t3h
+Nfe2 -? Cbfa2t3h
+Bptf -? Erg
+Fli1 -? Erg
+Meis1 -? Erg
+Ets1 -? Ets1
+Notch -? Ets1
+Fli1 -? Etv6
+Meis1 -? Etv6
+Cbfa2t3h -? Fli1
+Erg -? Fli1
+Etv6 -? Fli1
+Meis1 -? Fli1
+Nfe2 -? Fli1
+Runx1 -? Fli1
+Smarcc1 -? Fli1
+Cbfa2t3h -? Gata1
+Erg -? Gata1
+Fli1 -? Gata1
+Gata2 -? Gata1
+Gfi1b -? Gata1
+Hoxa5 -? Gata1
+Hoxa9 -? Gata1
+Lyl1 -? Gata1
+Myb -? Gata1
+Nkx2pt3 -? Gata1
+Smarcc1 -? Gata1
+Tal1 -? Gata1
+Tcf7 -? Gata1
+Gata3 -? Gata3
+Tal1 -? Gata3
+Gata2 -? Gfi1b
+Gfi1b -? Gfi1b
+Notch -? Gfi1b
+Prdm16 -? Hoxa5
+Tcf7 -? Hoxa5
+Ets1 -? Hoxa9
+Hoxa5 -? Hoxa9
+Ikzf1 -? Hoxa9
+Lyl1 -? Hoxa9
+Meis1 -? Hoxa9
+Nkx2pt3 -? Hoxa9
+Tcf7 -? Hoxb4
+Bptf -? Ikzf1
+Cbfa2t3h -? Ikzf1
+Hoxa9 -? Ikzf1
+Myb -? Ikzf1
+Smarcc1 -? Ikzf1
+Ikzf1 -? Ldb1
+Lmo2 -? Ldb1
+Myb -? Ldb1
+Smarcc1 -? Ldb1
+Bptf -? Lmo2
+Ldb1 -? Lmo2
+Lyl1 -? Lmo2
+Meis1 -? Lmo2
+Nfe2 -? Lmo2
+Nkx2pt3 -? Lmo2
+Notch -? Lmo2
+Tal1 -? Lmo2
+Erg -? Lyl1
+Hoxa9 -? Lyl1
+Lmo2 -? Lyl1
+Myb -? Lyl1
+Nfe2 -? Lyl1
+Smarcc1 -? Lyl1
+Cbfa2t3h -? Meis1
+Erg -? Meis1
+Etv6 -? Meis1
+Fli1 -? Meis1
+Hoxa9 -? Meis1
+Lmo2 -? Meis1
+Nfe2 -? Meis1
+Nkx2pt3 -? Meis1
+Runx1 -? Meis1
+Gata3 -? Myb
+Ldb1 -? Myb
+Myb -? Myb
+Prdm16 -? Myb
+Bptf -? Nfe2
+Cbfa2t3h -? Nfe2
+Fli1 -? Nfe2
+Lmo2 -? Nfe2
+Lyl1 -? Nfe2
+Meis1 -? Nfe2
+Myb -? Nfe2
+Hoxa9 -? Nkx2pt3
+Lmo2 -? Nkx2pt3
+Lyl1 -? Nkx2pt3
+Meis1 -? Nkx2pt3
+Gata2 -? Notch
+Gfi1b -? Notch
+Lmo2 -? Notch
+Gata2 -? Pbx1
+Runx1 -? Pbx1
+Hoxa5 -? Prdm16
+Myb -? Prdm16
+Fli1 -? Runx1
+Meis1 -? Runx1
+Bptf -? Smarcc1
+Ets2 -? Smarcc1
+Etv6 -? Smarcc1
+Fli1 -? Smarcc1
+Ikzf1 -? Smarcc1
+Ldb1 -? Smarcc1
+Lyl1 -? Smarcc1
+Myb -? Smarcc1
+Gata2 -? Tal1
+Tal1 -? Tal1
+Ets1 -? Tcf7
+Gata1 -? Tcf7
+Gata3 -? Tcf7
+Hoxa5 -? Tcf7
+Hoxb4 -? Tcf7
+Ikzf1 -? Tcf7
+Nkx2pt3 -? Tcf7
+Notch -? Tcf7
+Runx1 -? Tcf7
+$Bptf: (((((Ikzf1 | Nfe2) | Lmo2) | Erg) | Myb) | Smarcc1)
+$Cbfa2t3h: (((Fli1 | Nfe2) | Meis1) | Ikzf1)
+$Erg: ((Bptf | Meis1) | Fli1)
+$Ets1: (Ets1 & Notch)
+$Ets2: true
+$Etv6: (Fli1 | Meis1)
+$Fli1: ((((((Meis1 | Nfe2) | Runx1) | Erg) | Cbfa2t3h) | Smarcc1) | Etv6)
+$Gata1: (((((((((((((((((((((((((((((((((((((((Smarcc1 & !Fli1) | (Tcf7 & !Fli1)) | (Gfi1b & !Fli1)) | (Gfi1b & !Lyl1)) | (Tcf7 & !Nkx2pt3)) | (Tcf7 & !Lyl1)) | (Tcf7 & Hoxa9)) | (Gata2 & !Fli1)) | (Myb & !Fli1)) | (Tal1 & !Fli1)) | (Hoxa5 & !Fli1)) | (Cbfa2t3h & !Fli1)) | (Gata2 & !Lyl1)) | (Gfi1b & Tcf7)) | ((Hoxa5 & !Hoxa9) & !Nkx2pt3)) | ((Gfi1b & !Hoxa9) & !Nkx2pt3)) | ((Hoxa5 & !Erg) & !Nkx2pt3)) | ((Myb & !Erg) & !Hoxa9)) | ((Smarcc1 & !Hoxa9) & !Lyl1)) | ((Hoxa5 & !Erg) & !Hoxa9)) | ((Cbfa2t3h & !Erg) & !Hoxa9)) | ((Tal1 & !Erg) & !Hoxa9)) | ((Hoxa5 & Myb) & !Hoxa9)) | ((Gata2 & !Erg) & !Hoxa9)) | ((Smarcc1 & !Erg) & !Lyl1)) | ((Hoxa5 & !Lyl1) & !Nkx2pt3)) | ((Myb & !Lyl1) & !Nkx2pt3)) | ((Smarcc1 & !Lyl1) & !Nkx2pt3)) | ((Hoxa5 & !Erg) & !Lyl1)) | ((Myb & !Erg) & !Lyl1)) | ((Tal1 & !Lyl1) & !Nkx2pt3)) | ((Cbfa2t3h & !Lyl1) & !Nkx2pt3)) | ((Cbfa2t3h & !Erg) & !Lyl1)) | ((Hoxa5 & !Hoxa9) & !Lyl1)) | ((Smarcc1 & !Hoxa9) & !Erg)) | ((Gfi1b & Hoxa5) & !Erg)) | ((Tal1 & !Erg) & !Lyl1)) | ((Cbfa2t3h & !Hoxa9) & !Lyl1)) | ((Tal1 & !Hoxa9) & !Lyl1))
+$Gata2: true
+$Gata3: (Tal1 & Gata3)
+$Gfi1b: ((Gata2 & Gfi1b) & !Notch)
+$Hoxa5: (Prdm16 & Tcf7)
+$Hoxa9: (((((Meis1 | Ikzf1) | Nkx2pt3) | Ets1) | Lyl1) | Hoxa5)
+$Hoxb4: Tcf7
+$Ikzf1: ((((Bptf | Hoxa9) | Smarcc1) | Myb) | Cbfa2t3h)
+$Ldb1: (((Ikzf1 | Lmo2) | Myb) | Smarcc1)
+$Lmo2: (((((((Bptf | Meis1) | Nfe2) | Lyl1) | Notch) | Ldb1) | Tal1) | Nkx2pt3)
+$Lyl1: (((((Nfe2 | Lmo2) | Erg) | Smarcc1) | Hoxa9) | Myb)
+$Meis1: ((((((((Lmo2 | Nfe2) | Fli1) | Nkx2pt3) | Runx1) | Erg) | Hoxa9) | Cbfa2t3h) | Etv6)
+$Myb: ((((Myb & !Gata3) | (Myb & !Prdm16)) | (Ldb1 & !Gata3)) | (Ldb1 & !Prdm16))
+$Nfe2: ((((((Bptf | Fli1) | Lmo2) | Meis1) | Cbfa2t3h) | Lyl1) | Myb)
+$Nkx2pt3: (((Lmo2 | Meis1) | Hoxa9) | Lyl1)
+$Notch: ((Lmo2 & !Gata2) | (Lmo2 & !Gfi1b))
+$Pbx1: (Gata2 | Runx1)
+$Prdm16: (Hoxa5 & !Myb)
+$Runx1: (Fli1 | Meis1)
+$Smarcc1: (((((((Ikzf1 | Fli1) | Bptf) | Lyl1) | Etv6) | Ldb1) | Myb) | Ets2)
+$Tal1: (Gata2 | Tal1)
+$Tcf7: ((((((((Hoxb4 & !Ikzf1) | (Hoxa5 & !Ikzf1)) | (Gata1 & !Ikzf1)) | (Notch & !Ikzf1)) | (Nkx2pt3 & !Ikzf1)) | (Ets1 & !Ikzf1)) | (Runx1 & !Ikzf1)) | (Gata3 & !Ikzf1))
