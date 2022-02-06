@@ -1,6 +1,6 @@
 use std::process::exit;
 use regex::Regex;
-use biodivine_lib_param_bn::{BooleanNetwork, VariableId, FnUpdate};
+use biodivine_lib_param_bn::{BooleanNetwork, VariableId, FnUpdate, RegulatoryGraph};
 use std::path::Path;
 use std::convert::TryFrom;
 use biodivine_lib_param_bn::symbolic_async_graph::SymbolicAsyncGraph;
@@ -48,6 +48,8 @@ fn main() {
         println!(" - model source: `{}`", model_url);
 
         let network = read_source_model(&source.path());
+        // A quick pass to ensure that parameters are represented without identity regulations.
+        let network = normalize_parameters(network);
         check_consistency(&network, &source.path());
 
         println!(" - model file exists and is consistent.");
@@ -152,6 +154,55 @@ fn check_consistency(network: &BooleanNetwork, source_dir: &Path) {
         eprintln!("{}", error);
         exit(128);
     }
+}
+
+/// This function is used to replace parameters specified as auto-regulated identity variables
+/// with proper parameters.
+fn normalize_parameters(network: BooleanNetwork) -> BooleanNetwork {
+    // Detect variables
+    let fake_parameters = network
+        .variables()
+        .filter(|id| {
+            let has_one_regulator = network.regulators(*id) == vec![*id];
+            let identity = FnUpdate::Var(*id);
+            let has_identity_update = network.get_update_function(*id) == &Some(identity);
+            has_one_regulator && has_identity_update
+        })
+        .collect::<Vec<_>>();
+
+    if fake_parameters.is_empty() {
+        return network;
+    }
+
+    // Create a copy of the original graph excluding regulations of fake parameters.
+    let names = network
+        .variables()
+        .map(|id| network.get_variable_name(id).clone())
+        .collect::<Vec<_>>();
+    let mut new_graph = RegulatoryGraph::new(names);
+    for reg in network.as_graph().regulations() {
+        if fake_parameters.contains(&reg.get_target()) {
+            // Don't copy regulations for fake parameters.
+            continue;
+        }
+        new_graph.add_regulation(
+            network.get_variable_name(reg.get_regulator()),
+            network.get_variable_name(reg.get_target()),
+            reg.is_observable(),
+            reg.get_monotonicity()
+        ).unwrap();
+    }
+
+    // Copy the rest of the network, but keep the update functions for fake parameters free.
+    let mut new_network = BooleanNetwork::new(new_graph);
+    for var in network.variables() {
+        if !fake_parameters.contains(&var) {
+            let update = network.get_update_function(var).clone();
+            new_network.set_update_function(var, update).unwrap();
+        }
+    }
+
+    new_network
 }
 
 /// Compute the network input variables.
