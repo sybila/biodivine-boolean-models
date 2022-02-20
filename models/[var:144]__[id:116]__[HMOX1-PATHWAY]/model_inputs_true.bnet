@@ -1,0 +1,145 @@
+targets,factors
+ABCC1, ORF9c
+ABCG2, (ABCG2 | !ABCG2)
+ADP_simple_molecule, (((Heme_simple_molecule_cell & ATP_simple_molecule) & H2O_simple_molecule_cell) & ABCG2)
+ALAD_Zn2__complex, (ALAD_Zn2__complex | !ALAD_Zn2__complex)
+ALAS1_ALAS2_complex, (ALAS1_ALAS2_complex | !ALAS1_ALAS2_complex)
+ALB_BIL_complex, (Bilirubin_simple_molecule & ABCC1)
+ASC, (ASC | !ASC)
+ATP_simple_molecule, (ATP_simple_molecule | !ATP_simple_molecule)
+BACH1, !miRNA_155_rna
+BACH1_Maf_complex, (MAF & BACH1)
+BLVRA_Zn2__complex, BLVRA_rna
+BLVRA_rna, NRF2_phosphorylated_nucleus
+BLVRB, BLVRB_rna
+BLVRB_rna, NRF2_phosphorylated_nucleus
+Bilirubin_simple_molecule, (((BLVRB | BLVRA_Zn2__complex) & Biliverdin_simple_molecule) & NADPH_simple_molecule)
+Biliverdin_simple_molecule, (((Heme_simple_molecule_cell & O2_simple_molecule_cell) & NADPH_simple_molecule) & HMOX1_cell_active)
+CAND1, (CAND1 | !CAND1)
+CASP1_120_197__CASP1_317_404__complex, ((NLRP3_oligomer_ASC_Caspase1_complex & CTSG) | (NLRP3_oligomer_ASC_Caspase1_complex & CTSG))
+CK2, (CK2 | !CK2)
+CO2_simple_molecule_mitochondrial_matrix, (((((SUCC_CoA_simple_molecule & Gly_simple_molecule) & H__ion_mitochondrial_matrix) & ALAS1_ALAS2_complex) & !Heme_simple_molecule_mitochondrial_matrix) & !Panhematin_drug)
+CO2_simple_molecule_mitochondrion, ((COPRO3_simple_molecule_mitochondrion & O2_simple_molecule_mitochondrion) & CPOX)
+COPRO3_simple_molecule_cell, (URO3_simple_molecule & UROD)
+COPRO3_simple_molecule_mitochondrion, COPRO3_simple_molecule_cell
+CO_simple_molecule, (((Heme_simple_molecule_cell & O2_simple_molecule_cell) & NADPH_simple_molecule) & HMOX1_cell_active)
+CPOX, (CPOX | !CPOX)
+CTSG, (CTSG | !CTSG)
+CUL3_RBX1_complex, (CUL3_RBX1_complex | !CUL3_RBX1_complex)
+CYBRD1_Heme_complex, (CYBRD1_Heme_complex | !CYBRD1_Heme_complex)
+Caspase_1_Tetramer_complex, CASP1_120_197__CASP1_317_404__complex
+CoA_SH_simple_molecule, (((((SUCC_CoA_simple_molecule & Gly_simple_molecule) & H__ion_mitochondrial_matrix) & ALAS1_ALAS2_complex) & !Heme_simple_molecule_mitochondrial_matrix) & !Panhematin_drug)
+DAMPs_phenotype, (DAMPs_phenotype | !DAMPs_phenotype)
+Dimethly_fumarate_drug, (Dimethly_fumarate_drug | !Dimethly_fumarate_drug)
+FECH, FECH_rna
+FECH_rna, NRF2_phosphorylated_nucleus
+FLVCR1_1, (FLVCR1_1 | !FLVCR1_1)
+FLVCR1_2, (FLVCR1_2 | !FLVCR1_2)
+FTH1_rna, NRF2_phosphorylated_nucleus
+FTL_rna, NRF2_phosphorylated_nucleus
+Fe2__ion_cell, ((((((Heme_simple_molecule_cell & O2_simple_molecule_cell) & NADPH_simple_molecule) & HMOX1_cell_active) | (Fe2__ion_default_compartment & SLC11A2)) | Fe2__ion_cell) | (Fe2__ion_endosome & MCOLN1))
+Fe2__ion_default_compartment, (((Fe2__ion_cell & SLC40A1_CP_Cu2__complex) | (Fe2__ion_cell & SLC40A1_HEPH_Cu2__complex)) | ((Fe3__ion_default_compartment & e__ion_default_compartment) & CYBRD1_Heme_complex))
+Fe2__ion_endosome, ((Fe3__ion_endosome & e__ion_endosome) & STEAP3)
+Fe2__ion_mitochondrial_matrix, (Fe2__ion_mitochondrial_matrix | !Fe2__ion_mitochondrial_matrix)
+Fe3__ion_default_compartment, ((((Fe2__ion_default_compartment & O2_simple_molecule_default_compartment) & H__ion_default_compartment) & SLC40A1_CP_Cu2__complex) | (((Fe2__ion_default_compartment & H__ion_default_compartment) & O2_simple_molecule_default_compartment) & SLC40A1_HEPH_Cu2__complex))
+Fe3__ion_endosome, TFRC_holoTF_complex_endosome
+Fe_3__O_OH__simple_molecule, (((Fe2__ion_cell & O2_simple_molecule_cell) & H__ion_cell) & Ferritin_complex)
+Ferritin_complex, (FTH1_rna | FTL_rna)
+Ferroptosis_phenotype, Lipid_Peroxide_simple_molecule
+GPX4, (GPX4 | !GPX4)
+Gly_simple_molecule, (Gly_simple_molecule | !Gly_simple_molecule)
+H2O2_simple_molecule, (((COPRO3_simple_molecule_mitochondrion & O2_simple_molecule_mitochondrion) & CPOX) | ((PPGEN9_simple_molecule & O2_simple_molecule_mitochondrion) & PPO_FAD_complex))
+H2O_simple_molecule_cell, ((((Heme_simple_molecule_cell & O2_simple_molecule_cell) & NADPH_simple_molecule) & HMOX1_cell_active) | (dALA_simple_molecule_cell & ALAD_Zn2__complex))
+H2O_simple_molecule_default_compartment, ((((Fe2__ion_default_compartment & O2_simple_molecule_default_compartment) & H__ion_default_compartment) & SLC40A1_CP_Cu2__complex) | (((Fe2__ion_default_compartment & H__ion_default_compartment) & O2_simple_molecule_default_compartment) & SLC40A1_HEPH_Cu2__complex))
+HMBL_simple_molecule, ((PBG_simple_molecule & H2O_simple_molecule_cell) & HMBS_DIPY_complex)
+HMBS_DIPY_complex, (HMBS_DIPY_complex | !HMBS_DIPY_complex)
+HMOX1_cell, HMOX1_rna
+HMOX1_cell_active, (HMOX1_cell & ORF3a)
+HMOX1_rna, (Nrf2_Maf_complex & !BACH1_Maf_complex)
+H__ion_cell, (dALA_simple_molecule_cell & ALAD_Zn2__complex)
+H__ion_default_compartment, (H__ion_default_compartment | !H__ion_default_compartment)
+H__ion_mitochondrial_matrix, (((PRIN9_simple_molecule_mitochondrial_matrix & Fe2__ion_mitochondrial_matrix) & FECH) & !Pb2__ion)
+Heme_simple_molecule_cell, (Heme_simple_molecule_mitochondrial_matrix & FLVCR1_2)
+Heme_simple_molecule_default_compartment, ((Heme_simple_molecule_cell & FLVCR1_1) | (((Heme_simple_molecule_cell & ATP_simple_molecule) & H2O_simple_molecule_cell) & ABCG2))
+Heme_simple_molecule_mitochondrial_matrix, (((PRIN9_simple_molecule_mitochondrial_matrix & Fe2__ion_mitochondrial_matrix) & FECH) & !Pb2__ion)
+IL_18_cell, (sa463_proIL_18_cell & Caspase_1_Tetramer_complex)
+IL_18_default_compartment, IL_18_cell
+IL_1B_cell, (sa462_proIL_1B_cell & Caspase_1_Tetramer_complex)
+IL_1B_default_compartment, IL_1B_cell
+KEAP1, (KEAP1 | !KEAP1)
+Lipid_Peroxide_simple_molecule, (Poly_unsaturated_fatty_acid_simple_molecule & Reactive_Oxygen_Species_simple_molecule)
+Lipid_alcohol_simple_molecule, (Lipid_Peroxide_simple_molecule & GPX4)
+MAF, (MAF | !MAF)
+MCOLN1, (MCOLN1 | !MCOLN1)
+NADPH_simple_molecule, (NADPH_simple_molecule | !NADPH_simple_molecule)
+NADP__simple_molecule, ((((Heme_simple_molecule_cell & O2_simple_molecule_cell) & NADPH_simple_molecule) & HMOX1_cell_active) | (((BLVRB | BLVRA_Zn2__complex) & Biliverdin_simple_molecule) & NADPH_simple_molecule))
+NH4__ion, ((PBG_simple_molecule & H2O_simple_molecule_cell) & HMBS_DIPY_complex)
+NLRP3_Elicitor_Proteins, (NLRP3_Elicitor_Proteins | !NLRP3_Elicitor_Proteins)
+NLRP3_Elicitor_Small_Molecules_simple_molecule, (NLRP3_Elicitor_Small_Molecules_simple_molecule | !NLRP3_Elicitor_Small_Molecules_simple_molecule)
+NLRP3_SUGT1_HSP90_complex, (NLRP3_SUGT1_HSP90_complex | NLRP3_rna)
+NLRP3_cell, NLRP3_SUGT1_HSP90_complex
+NLRP3_cell_active, ((((((((TXNIP_NLRP3_complex | SARS_E) | PAMPs_phenotype) | DAMPs_phenotype) | SARS_Orf3a) | NLRP3_Elicitor_Small_Molecules_simple_molecule) | NLRP3_Elicitor_Proteins) | Reactive_Oxygen_Species_simple_molecule) & NLRP3_cell)
+NLRP3_oligomer_ASC_Caspase1_complex, ((NLRP3_cell_active & ASC) | (NLRP3_oligomer_ASC_Caspase1_complex & CTSG))
+NLRP3_rna, Nf_KB_Complex_complex
+NRF2_empty, (NRF2_empty | !NRF2_empty)
+NRF2_phosphorylated_cell, ((PKC | CK2) & NRF2_empty)
+NRF2_phosphorylated_nucleus, NRF2_phosphorylated_cell
+NRF2_ubiquitinated, csa10_Ubiquitin_Ligase_Complex_complex_cell
+Nf_KB_Complex_complex, (Nf_KB_Complex_complex | !Nf_KB_Complex_complex)
+Nrf2_Maf_complex, (NRF2_phosphorylated_nucleus & MAF)
+O2_simple_molecule_cell, (O2_simple_molecule_cell | !O2_simple_molecule_cell)
+O2_simple_molecule_default_compartment, (O2_simple_molecule_default_compartment | !O2_simple_molecule_default_compartment)
+O2_simple_molecule_mitochondrion, (O2_simple_molecule_mitochondrion | !O2_simple_molecule_mitochondrion)
+ORF3a, (ORF3a | !ORF3a)
+ORF9c, (ORF9c | !ORF9c)
+PAMPs_phenotype, (PAMPs_phenotype | !PAMPs_phenotype)
+PBG_simple_molecule, (dALA_simple_molecule_cell & ALAD_Zn2__complex)
+PKC, (PKC | !PKC)
+PPGEN9_simple_molecule, ((COPRO3_simple_molecule_mitochondrion & O2_simple_molecule_mitochondrion) & CPOX)
+PPO_FAD_complex, (PPO_FAD_complex | !PPO_FAD_complex)
+PRIN9_simple_molecule_mitochondrial_matrix, PRIN9_simple_molecule_mitochondrion
+PRIN9_simple_molecule_mitochondrion, ((PPGEN9_simple_molecule & O2_simple_molecule_mitochondrion) & PPO_FAD_complex)
+PSTPIP1, (PSTPIP1 | !PSTPIP1)
+PSTPIP1_trimer_Pyrin_trimer_complex, (Pyrin_trimer_complex & PSTPIP1)
+Panhematin_drug, (Panhematin_drug | !Panhematin_drug)
+Pb2__ion, (Pb2__ion | !Pb2__ion)
+Pi_simple_molecule, (((Heme_simple_molecule_cell & ATP_simple_molecule) & H2O_simple_molecule_cell) & ABCG2)
+Poly_unsaturated_fatty_acid_simple_molecule, (Poly_unsaturated_fatty_acid_simple_molecule | !Poly_unsaturated_fatty_acid_simple_molecule)
+Pyrin_trimer_ASC_complex, (ASC & Pyrin_trimer_complex)
+Pyrin_trimer_complex, (Pyrin_trimer_complex | !Pyrin_trimer_complex)
+Reactive_Oxygen_Species_simple_molecule, (Fe2__ion_cell | !CO_simple_molecule)
+SARS_E, (SARS_E | !SARS_E)
+SARS_Orf3a, (SARS_Orf3a | !SARS_Orf3a)
+SLC11A2, (SLC11A2 | !SLC11A2)
+SLC40A1_CP_Cu2__complex, SLC40A1_rna
+SLC40A1_HEPH_Cu2__complex, (SLC40A1_HEPH_Cu2__complex | !SLC40A1_HEPH_Cu2__complex)
+SLC40A1_rna, NRF2_phosphorylated_nucleus
+STEAP3, (STEAP3 | !STEAP3)
+SUCC_CoA_simple_molecule, (SUCC_CoA_simple_molecule | !SUCC_CoA_simple_molecule)
+TFRC_TF_complex_cell, TFRC_TF_complex_endosome
+TFRC_TF_complex_endosome, TFRC_holoTF_complex_endosome
+TFRC_holoTF_complex_cell, (TFRC_TF_complex_cell | (Fe3__ion_default_compartment & Transferrin))
+TFRC_holoTF_complex_endosome, TFRC_holoTF_complex_cell
+TXNIP, (Thioredoxin_TXNIP_complex & Reactive_Oxygen_Species_simple_molecule)
+TXNIP_NLRP3_complex, (NLRP3_cell & TXNIP)
+Thioredoxin_TXNIP_complex, (TXNIP & sa364_TXN_cell)
+Transferrin, TFRC_TF_complex_cell
+URO3_simple_molecule, (HMBL_simple_molecule & UROS)
+UROD, (UROD | !UROD)
+UROS, (UROS | !UROS)
+csa10_Ubiquitin_Ligase_Complex_complex_cell, csa8_Ubiquitin_Ligase_Complex_complex_cell
+csa32_Ubiquitin_Ligase_Complex_complex_cell, csa10_Ubiquitin_Ligase_Complex_complex_cell
+csa8_Ubiquitin_Ligase_Complex_complex_cell, ((!CAND1 | CUL3_RBX1_complex) | ((NRF2_empty & KEAP1) & !Dimethly_fumarate_drug))
+dALA_simple_molecule_cell, dALA_simple_molecule_mitochondrial_matrix
+dALA_simple_molecule_mitochondrial_matrix, (((((SUCC_CoA_simple_molecule & Gly_simple_molecule) & H__ion_mitochondrial_matrix) & ALAS1_ALAS2_complex) & !Heme_simple_molecule_mitochondrial_matrix) & !Panhematin_drug)
+e__ion_default_compartment, (e__ion_default_compartment | !e__ion_default_compartment)
+e__ion_endosome, (e__ion_endosome | !e__ion_endosome)
+miRNA_155_rna, (miRNA_155_rna | !miRNA_155_rna)
+sa364_TXN_cell, (sa364_TXN_cell | !sa364_TXN_cell)
+sa366_TXN_cell, ((Thioredoxin_TXNIP_complex & Reactive_Oxygen_Species_simple_molecule) | (sa364_TXN_cell & Reactive_Oxygen_Species_simple_molecule))
+sa382_CASP1_cell, (NLRP3_oligomer_ASC_Caspase1_complex & CTSG)
+sa385_CASP1_cell, (NLRP3_oligomer_ASC_Caspase1_complex & CTSG)
+sa460_proIL_1B_cell, (sa462_proIL_1B_cell & Caspase_1_Tetramer_complex)
+sa461_proIL_18_cell, (sa463_proIL_18_cell & Caspase_1_Tetramer_complex)
+sa462_proIL_1B_cell, (sa462_proIL_1B_cell | !sa462_proIL_1B_cell)
+sa463_proIL_18_cell, (sa463_proIL_18_cell | !sa463_proIL_18_cell)

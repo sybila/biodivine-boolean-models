@@ -186,6 +186,18 @@ fn check_network(network: &BooleanNetwork, path: &Path, name: &str) {
 
 /// Check consistency of a network with its regulatory graph.
 fn check_consistency(network: &BooleanNetwork, source_dir: &Path) {
+    let mut unused = Vec::new();
+    for var in network.variables() {
+        if network.as_graph().regulators(var).is_empty()
+            && network.as_graph().targets(var).is_empty()
+        {
+            unused.push(network.get_variable_name(var).clone());
+        }
+    }
+    if !unused.is_empty() {
+        eprintln!("Model contains unused variable: {:?}", unused);
+        exit(128);
+    }
     let graph = SymbolicAsyncGraph::new(network.clone());
     if let Some(error) = graph.err() {
         eprintln!(
