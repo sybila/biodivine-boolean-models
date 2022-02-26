@@ -1,0 +1,151 @@
+v_BRCA1 -> v_FANCD1N
+v_CHKREC -| v_FANCD1N
+v_ssDNARPA -> v_FANCD1N
+v_FANCD2I -> v_FANCD1N
+v_ATM -> v_BRCA1
+v_CHK2 -> v_BRCA1
+v_DSB -> v_BRCA1
+v_ATR -> v_BRCA1
+v_CHKREC -| v_BRCA1
+v_DSB -> v_ATM
+v_ATR -> v_ATM
+v_CHKREC -| v_ATM
+v_ATM -> v_FANCD2I
+v_FAcore -> v_FANCD2I
+v_DSB -> v_FANCD2I
+v_ATR -> v_FANCD2I
+v_H2AX -> v_FANCD2I
+v_USP1 -| v_FANCD2I
+v_FAcore ->? v_PCNATLS
+v_FAN1 -| v_PCNATLS
+v_ADD -> v_PCNATLS
+v_USP1 -| v_PCNATLS
+v_BRCA1 -> v_HRR
+v_FANCD1N -> v_HRR
+v_DSB -> v_HRR
+v_RAD51 -> v_HRR
+v_CHKREC -| v_HRR
+v_DSB -> v_DNAPK
+v_KU -> v_DNAPK
+v_CHKREC -| v_DNAPK
+v_ATM -> v_MRN
+v_DSB -> v_MRN
+v_KU -| v_MRN
+v_RAD51 -| v_MRN
+v_CHKREC -| v_MRN
+v_FANCD2I -? v_MRN
+v_ATM -| v_NHEJ
+v_DNAPK -> v_NHEJ
+v_DSB -> v_NHEJ
+v_ATR -? v_NHEJ
+v_KU -> v_NHEJ
+v_CHKREC -| v_NHEJ
+v_FANCJBRCA1 -| v_NHEJ
+v_ssDNARPA -? v_NHEJ
+v_XPF -> v_NHEJ
+v_MRN -| v_KU
+v_DSB -> v_KU
+v_CHKREC -| v_KU
+v_FANCD2I -| v_KU
+v_ICL -> v_FANCM
+v_CHKREC -| v_FANCM
+v_ATM -> v_CHK2
+v_DNAPK -> v_CHK2
+v_ATR -> v_CHK2
+v_CHKREC -| v_CHK2
+v_ATM -> v_H2AX
+v_DNAPK -> v_H2AX
+v_DSB -> v_H2AX
+v_ATR -> v_H2AX
+v_CHKREC -| v_H2AX
+v_NHEJ -| v_DSB
+v_HRR -| v_DSB
+v_DSB -> v_DSB
+v_FAN1 -> v_DSB
+v_XPF -> v_DSB
+v_NHEJ -> v_CHKREC
+v_ICL -| v_CHKREC
+v_PCNATLS -> v_CHKREC
+v_HRR -> v_CHKREC
+v_DSB -| v_CHKREC
+v_CHKREC -| v_CHKREC
+v_ADD -| v_CHKREC
+v_MRN -> v_ssDNARPA
+v_DSB -> v_ssDNARPA
+v_KU -| v_ssDNARPA
+v_RAD51 -| v_ssDNARPA
+v_FANCJBRCA1 -> v_ssDNARPA
+v_FANCD2I -> v_ssDNARPA
+v_ATM -> v_FAcore
+v_FANCM -> v_FAcore
+v_ATR -> v_FAcore
+v_CHKREC -| v_FAcore
+v_FANCM -| v_USP1
+v_FANCD1N -> v_USP1
+v_PCNATLS -> v_USP1
+v_FANCD2I -> v_USP1
+v_ATM -> v_FANCJBRCA1
+v_ICL -> v_FANCJBRCA1
+v_ATR -> v_FANCJBRCA1
+v_ssDNARPA -> v_FANCJBRCA1
+v_FANCM -| v_XPF
+v_p53 -> v_XPF
+v_MUS81 -> v_XPF
+v_FAcore -| v_XPF
+v_FAN1 -? v_XPF
+v_FANCD2I -? v_XPF
+v_ICL -> v_MUS81
+v_ATM -> v_CHK1
+v_DNAPK -> v_CHK1
+v_ATR -> v_CHK1
+v_CHKREC -| v_CHK1
+v_ATM -> v_p53
+v_CHK2 -> v_p53
+v_DNAPK -> v_p53
+v_ATR -> v_p53
+v_CHKREC -| v_p53
+v_CHK1 -> v_p53
+v_PCNATLS -| v_ADD
+v_MUS81 -> v_ADD
+v_FAN1 -> v_ADD
+v_ADD -> v_ADD
+v_XPF -> v_ADD
+v_ICL -> v_ICL
+v_DSB -| v_ICL
+v_FANCD1N -> v_RAD51
+v_CHKREC -| v_RAD51
+v_ssDNARPA -> v_RAD51
+v_ATM -> v_ATR
+v_FANCM -> v_ATR
+v_CHKREC -| v_ATR
+v_ssDNARPA -> v_ATR
+v_MUS81 -> v_FAN1
+v_FANCD2I -> v_FAN1
+$v_ADD: ((v_ADD & !v_PCNATLS) | ((v_MUS81 & (v_FAN1 | v_XPF)) & !v_PCNATLS))
+$v_ATM: ((v_DSB & !v_CHKREC) | (v_ATR & !v_CHKREC))
+$v_ATR: (((v_FANCM & !v_CHKREC) | (v_ATM & !v_CHKREC)) | (v_ssDNARPA & !v_CHKREC))
+$v_BRCA1: ((v_DSB & ((v_ATM | v_CHK2) | v_ATR)) & !v_CHKREC)
+$v_CHK1: (((v_ATM & !v_CHKREC) | (v_DNAPK & !v_CHKREC)) | (v_ATR & !v_CHKREC))
+$v_CHK2: (((v_ATM & !v_CHKREC) | (v_DNAPK & !v_CHKREC)) | (v_ATR & !v_CHKREC))
+$v_CHKREC: ((((v_PCNATLS & !v_DSB) | (v_NHEJ & !v_DSB)) | (v_HRR & !v_DSB)) | !((((((v_NHEJ | v_ICL) | v_PCNATLS) | v_HRR) | v_DSB) | v_CHKREC) | v_ADD))
+$v_DNAPK: ((v_DSB & v_KU) & !v_CHKREC)
+$v_DSB: (((v_XPF & !(v_HRR | v_NHEJ)) | (v_DSB & !(v_HRR | v_NHEJ))) | (v_FAN1 & !(v_HRR | v_NHEJ)))
+$v_FAN1: (v_MUS81 & v_FANCD2I)
+$v_FANCD1N: ((v_ssDNARPA & v_BRCA1) | ((v_FANCD2I & v_ssDNARPA) & !v_CHKREC))
+$v_FANCD2I: ((v_FAcore & ((v_ATM | v_ATR) | (v_DSB & v_H2AX))) & !v_USP1)
+$v_FANCJBRCA1: ((v_ssDNARPA & (v_ATM | v_ATR)) | (v_ICL & (v_ATM | v_ATR)))
+$v_FANCM: (v_ICL & !v_CHKREC)
+$v_FAcore: ((v_FANCM & (v_ATM | v_ATR)) & !v_CHKREC)
+$v_H2AX: ((v_DSB & ((v_ATM | v_DNAPK) | v_ATR)) & !v_CHKREC)
+$v_HRR: ((v_DSB & ((v_BRCA1 & v_FANCD1N) & v_RAD51)) & !v_CHKREC)
+$v_ICL: (v_ICL & !v_DSB)
+$v_KU: (v_DSB & !((v_CHKREC | v_MRN) | v_FANCD2I))
+$v_MRN: ((v_DSB & v_ATM) & !((v_RAD51 | (v_KU & v_FANCD2I)) | v_CHKREC))
+$v_MUS81: v_ICL
+$v_NHEJ: (((v_KU & (v_DNAPK & v_DSB)) & !(v_ATM & v_ATR)) | ((v_XPF & (v_DNAPK & v_DSB)) & !((v_FANCJBRCA1 & v_ssDNARPA) | v_CHKREC)))
+$v_PCNATLS: (((v_FAcore & v_ADD) & !(v_FAN1 | v_USP1)) | (v_ADD & !(v_FAN1 | v_USP1)))
+$v_RAD51: ((v_ssDNARPA & v_FANCD1N) & !v_CHKREC)
+$v_USP1: (((v_FANCD1N & v_FANCD2I) & !v_FANCM) | (v_PCNATLS & !v_FANCM))
+$v_XPF: (((v_p53 & v_MUS81) & !(v_FAcore & (v_FAN1 & v_FANCD2I))) | (v_MUS81 & !v_FANCM))
+$v_p53: ((((v_ATM & v_CHK2) & !v_CHKREC) | ((v_ATR & v_CHK1) & !v_CHKREC)) | (v_DNAPK & !v_CHKREC))
+$v_ssDNARPA: ((v_DSB & ((v_FANCJBRCA1 & v_FANCD2I) | v_MRN)) & !(v_KU | v_RAD51))
