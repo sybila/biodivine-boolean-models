@@ -1,0 +1,118 @@
+v_ADPRc -> v_cADPR
+v_ABA -> v_PLC
+v_Ca2_c -> v_PLC
+v_GCR1 -| v_GPA1
+v_AGB1 -> v_GPA1
+v_S1P -> v_GPA1
+v_RAC1 -| v_Actin
+v_Ca2_c -> v_Actin
+v_ABA -| v_Malate
+v_PEPC -> v_Malate
+v_AnionEM -| v_Malate
+v_ABA -| v_RAC1
+v_ABI1 -| v_RAC1
+v_pH -| v_HTPase
+v_ROS -| v_HTPase
+v_Ca2_c -| v_HTPase
+v_RCN1 -> v_NIA12
+v_GPA1 -> v_AGB1
+v_Atrboh -> v_ROS
+v_pH -> v_KOUT
+v_Depolar -> v_KOUT
+v_ROS -| v_KOUT
+v_NO -? v_KOUT
+v_ABA -> v_RCN1
+v_ABA -> v_OST1
+v_InsPK -> v_InsP6
+v_Depolar -| v_CaIM
+v_ERA1 -? v_CaIM
+v_ROS -> v_CaIM
+v_ABH1 -? v_CaIM
+v_NO -> v_ADPRc
+v_pH -> v_ABI1
+v_PA -| v_ABI1
+v_ROS -| v_ABI1
+v_Ca2_c -> v_KEV
+v_pH -> v_Atrboh
+v_OST1 -> v_Atrboh
+v_ABI1 -| v_Atrboh
+v_ROP2 -> v_Atrboh
+v_GPA1 -> v_PLD
+v_ERA1 -> v_ROP10
+v_NOS -> v_NO
+v_NIA12 -> v_NO
+v_HTPase -? v_Depolar
+v_AnionEM -? v_Depolar
+v_KOUT -? v_Depolar
+v_Ca2_c -? v_Depolar
+v_KEV -? v_Depolar
+v_Ca2_c -> v_NOS
+v_SphK -> v_S1P
+v_ABA -> v_InsPK
+v_Ca2_c -> v_Ca2_ATPase
+v_ABA -> v_SphK
+v_ABA -| v_PEPC
+v_ABA -> v_pH
+v_NO -> v_GC
+v_PLD -> v_PA
+v_pH -? v_KAP
+v_Depolar -> v_KAP
+v_Ca2_c -| v_KAP
+v_GC -> v_cGMP
+v_CaIM -> v_Ca2_c
+v_Ca2_ATPase -| v_Ca2_c
+v_CIS -> v_Ca2_c
+v_InsP3 -> v_CIS
+v_cADPR -> v_CIS
+v_InsP6 -> v_CIS
+v_cGMP -> v_CIS
+v_pH -> v_AnionEM
+v_ABI1 -| v_AnionEM
+v_Ca2_c -> v_AnionEM
+v_PLC -> v_InsP3
+v_PA -> v_ROP2
+v_Malate -| v_Closure
+v_Actin -> v_Closure
+v_AnionEM -> v_Closure
+v_KOUT -> v_Closure
+v_KAP -> v_Closure
+$v_ABI1: (v_pH & !(v_PA | v_ROS))
+$v_ADPRc: v_NO
+$v_AGB1: v_GPA1
+$v_Actin: (v_Ca2_c | !(v_RAC1 | v_Ca2_c))
+$v_AnionEM: ((v_Ca2_c & (!v_ABI1 | v_pH)) | (v_pH & (!v_ABI1 | v_Ca2_c)))
+$v_Atrboh: ((v_OST1 & (v_pH & v_ROP2)) & !v_ABI1)
+$v_CIS: ((v_InsP3 & v_InsP6) | (v_cGMP & v_cADPR))
+$v_Ca2_ATPase: v_Ca2_c
+$v_Ca2_c: ((v_CIS & !v_Ca2_ATPase) | (v_CaIM & !v_Ca2_ATPase))
+$v_CaIM: (((((v_ABH1 & !v_ERA1) & !v_Depolar) | ((v_ERA1 & !v_ABH1) & !v_Depolar)) | (v_ROS & !v_Depolar)) | !(((v_Depolar | v_ERA1) | v_ROS) | v_ABH1))
+$v_Closure: (((v_KOUT & (v_Actin & v_AnionEM)) & !v_Malate) | ((v_KAP & (v_Actin & v_AnionEM)) & !v_Malate))
+$v_Depolar: (((((v_AnionEM | (v_KOUT & (((!v_HTPase & !v_AnionEM) & !v_Ca2_c) & !v_KEV))) | (v_HTPase & (((!v_AnionEM & !v_KOUT) & !v_Ca2_c) & !v_KEV))) | v_KEV) | v_Ca2_c) | !((((v_HTPase | v_AnionEM) | v_KOUT) | v_Ca2_c) | v_KEV))
+$v_GC: v_NO
+$v_GPA1: ((v_S1P & v_AGB1) | (v_AGB1 & !v_GCR1))
+$v_HTPase: !((v_pH | v_Ca2_c) | v_ROS)
+$v_InsP3: v_PLC
+$v_InsP6: v_InsPK
+$v_InsPK: v_ABA
+$v_KAP: (v_Depolar & !(v_Ca2_c & v_pH))
+$v_KEV: v_Ca2_c
+$v_KOUT: ((v_pH & v_Depolar) | (v_Depolar & !(v_ROS & v_NO)))
+$v_Malate: (v_PEPC & !(v_AnionEM | v_ABA))
+$v_NIA12: v_RCN1
+$v_NO: (v_NOS & v_NIA12)
+$v_NOS: v_Ca2_c
+$v_OST1: v_ABA
+$v_PA: v_PLD
+$v_PEPC: !v_ABA
+$v_PLC: (v_ABA & v_Ca2_c)
+$v_PLD: v_GPA1
+$v_RAC1: !(v_ABA | v_ABI1)
+$v_RCN1: v_ABA
+$v_ROP10: v_ERA1
+$v_ROP2: v_PA
+$v_ROS: v_Atrboh
+$v_S1P: v_SphK
+$v_SphK: v_ABA
+$v_cADPR: v_ADPRc
+$v_cGMP: v_GC
+$v_pH: v_ABA
