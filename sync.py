@@ -87,6 +87,10 @@ for model_dir in listdir("sources"):
 
 	(model_id, model_name) = read_dir_name(model_dir)
 
+	if model_name == "TEMPLATE":
+		# Skip template directories
+		continue
+
 	print("Start processing ", model_dir)
 
 	# Check that the model has all metadata prepared.
