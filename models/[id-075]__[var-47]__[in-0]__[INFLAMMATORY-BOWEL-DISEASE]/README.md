@@ -5,6 +5,7 @@
  - Regulations: 287
  - Publication: https://doi.org/10.1371/journal.pone.0192949
  - Source: https://research.cellcollective.org/?dashboard=true#module/8558:1/inflammatory-bowel-disease-ibd-model/1
+ - Keywords: cell-collective, curated
 
 
 ### Modifications

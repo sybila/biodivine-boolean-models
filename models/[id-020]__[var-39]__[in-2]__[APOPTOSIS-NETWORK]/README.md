@@ -5,6 +5,7 @@
  - Regulations: 73
  - Publication: https://doi.org/10.1016/j.jtbi.2009.04.024
  - Source: https://research.cellcollective.org/?dashboard=true#module/2329:1/apoptosis-network/1
+ - Keywords: cell-collective, curated
 
 
 ### Modifications

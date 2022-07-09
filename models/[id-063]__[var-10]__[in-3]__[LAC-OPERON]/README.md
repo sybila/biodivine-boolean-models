@@ -5,6 +5,7 @@
  - Regulations: 22
  - Publication: https://doi.org/10.1089/cmb.2011.0031
  - Source: https://research.cellcollective.org/?dashboard=true#module/5128:1/lac-operon/1
+ - Keywords: cell-collective, curated
 
 
 ### Modifications

@@ -5,6 +5,7 @@
  - Regulations: 18
  - Publication: https://doi.org/10.1007/s11538-017-0306-1
  - Source: https://research.cellcollective.org/?dashboard=true#module/6885:1/regulation-of-the-larabinose-operon-of-escherichia-coli/1
+ - Keywords: cell-collective, curated
 
 
 ### Modifications

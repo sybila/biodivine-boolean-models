@@ -5,6 +5,7 @@
  - Regulations: 420
  - Publication: https://doi.org/10.7554/eLife.72626
  - Source: http://ginsim.org/node/252
+ - Keywords: ginsim, curated, repaired
 
 
 ### Modifications

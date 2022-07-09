@@ -22,20 +22,24 @@ def read_dir_name(dir_name):
 	return (int(result.group(1)), result.group(2))	
 
 def check_metadata(id, name, metadata):
-	if metadata['id'] != id:
+	if (not 'id' in metadata) or metadata['id'] != id:
 		print("ERROR: Invalid id in metadata of", name)
 		sys.exit(128)
 
-	if metadata['name'] != name:
+	if (not 'name' in metadata) or metadata['name'] != name:
 		print("ERROR: Invalid name in metadata of", name)
 		sys.exit(128)
 
-	if metadata['url-publication'] == None:
+	if(not 'url-publication' in metadata) or metadata['url-publication'] == None:
 		print("ERROR: Missing publication url in", name)
 		sys.exit(128)
 
-	if metadata['url-model'] == None:
+	if (not 'url-model' in metadata) or metadata['url-model'] == None:
 		print("ERROR: Missing model url in", name)
+		sys.exit(128)
+
+	if (not 'keywords' in metadata) or (metadata['keywords'] == None):
+		print("ERROR: Missing keywords attribute in", name)
 		sys.exit(128)
 
 def check_unused_variables(model):
@@ -174,6 +178,7 @@ for model_dir in source_directories:
 	readme += f' - Regulations: {regulations}\n'
 	readme += f' - Publication: {metadata["url-publication"]}\n'
 	readme += f' - Source: {metadata["url-model"]}\n'
+	readme += f' - Keywords: {", ".join(metadata["keywords"])}\n'
 	readme += "\n\n"
 
 	readme += notes

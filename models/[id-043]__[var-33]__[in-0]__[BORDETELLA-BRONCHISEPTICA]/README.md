@@ -5,6 +5,7 @@
  - Regulations: 79
  - Publication: https://doi.org/10.1371/journal.pcbi.1002345
  - Source: https://research.cellcollective.org/?dashboard=true#module/3492:1/bordetella-bronchiseptica/1
+ - Keywords: cell-collective, curated
 
 
 ### Modifications

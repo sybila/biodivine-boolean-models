@@ -5,6 +5,7 @@
  - Regulations: 160
  - Publication: https://doi.org/10.1016/j.biosystems.2015.09.004
  - Source: https://research.cellcollective.org/?dashboard=true#module/8080:1/lymphopoiesis-regulatory-network/1
+ - Keywords: cell-collective, curated, repaired
 
 
 ### Modifications

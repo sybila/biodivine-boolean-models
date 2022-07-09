@@ -5,6 +5,7 @@
  - Regulations: 50
  - Publication: https://doi.org/10.1371/journal.pone.0134214
  - Source: https://research.cellcollective.org/?dashboard=true#module/4705:1/septation-initiation-network/1
+ - Keywords: cell-collective, curated, repaired
 
 
 ### Modifications

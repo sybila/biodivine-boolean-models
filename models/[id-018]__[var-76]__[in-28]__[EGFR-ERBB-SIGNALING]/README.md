@@ -5,6 +5,7 @@
  - Regulations: 226
  - Publication: https://doi.org/10.1371/journal.pcbi.1000438
  - Source: https://research.cellcollective.org/?dashboard=true#module/2309:1/egfr--erbb-signaling/1
+ - Keywords: cell-collective, curated
 
 
 ### Modifications

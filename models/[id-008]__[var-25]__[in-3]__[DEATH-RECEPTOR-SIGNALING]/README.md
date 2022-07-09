@@ -5,6 +5,7 @@
  - Regulations: 45
  - Publication: https://doi.org/10.1371/journal.pcbi.1000702
  - Source: https://research.cellcollective.org/?dashboard=true#module/2084:1/death-receptor-signaling/1
+ - Keywords: cell-collective, curated
 
 
 ### Modifications

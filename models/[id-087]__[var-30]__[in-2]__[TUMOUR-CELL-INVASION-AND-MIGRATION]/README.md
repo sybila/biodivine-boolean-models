@@ -5,6 +5,7 @@
  - Regulations: 157
  - Publication: http://dx.doi.org/10.1371/journal.pcbi.1004571
  - Source: http://ginsim.org/node/191
+ - Keywords: ginsim, curated, repaired
 
 
 ### Modifications

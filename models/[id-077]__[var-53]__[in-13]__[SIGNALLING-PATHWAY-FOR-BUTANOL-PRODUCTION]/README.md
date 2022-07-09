@@ -5,6 +5,7 @@
  - Regulations: 139
  - Publication: http://hdl.handle.net/11012/177647
  - Source: https://research.cellcollective.org/?dashboard=true#module/36604:1/signaling-pathway-for-butanol-production-in-clostridium-beijerinckii-nrrl-b598/10
+ - Keywords: cell-collective, curated, repaired
 
 
 ### Modifications

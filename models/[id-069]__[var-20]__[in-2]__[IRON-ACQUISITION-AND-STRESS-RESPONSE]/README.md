@@ -5,6 +5,7 @@
  - Regulations: 38
  - Publication: https://doi.org/10.1186/s12918-015-0163-1
  - Source: https://research.cellcollective.org/?dashboard=true#module/7926:1/iron-acquisition-and-oxidative-stress-response-in-aspergillus-fumigatus/1
+ - Keywords: cell-collective, curated, repaired
 
 
 ### Modifications

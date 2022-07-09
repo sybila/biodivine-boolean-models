@@ -5,6 +5,7 @@
  - Regulations: 12
  - Publication: https://doi.org/10.1007/978-3-319-53150-2_1
  - Source: http://ginsim.org/model/C_crescentus
+ - Keywords: ginsim, curated
 
 
 ### Modifications

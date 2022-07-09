@@ -5,6 +5,7 @@
  - Regulations: 37
  - Publication: https://doi.org/10.1371/journal.pone.0131832
  - Source: https://research.cellcollective.org/?dashboard=true#module/4706:1/predicting-variabilities-in-cardiac-gene/1
+ - Keywords: cell-collective, curated, repaired
 
 
 ### Modifications

@@ -5,6 +5,7 @@
  - Regulations: 39
  - Publication: https://doi.org/10.1371/journal.pcbi.1004696
  - Source: https://research.cellcollective.org/?dashboard=true#module/2394:1/b-cell-differentiation/1
+ - Keywords: cell-collective, curated, repaired
 
 
 ### Modifications

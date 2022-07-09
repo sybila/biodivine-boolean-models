@@ -5,6 +5,7 @@
  - Regulations: 125
  - Publication: https://doi.org/10.1186/s12976-015-0008-z
  - Source: https://research.cellcollective.org/?dashboard=true#module/4783:1/-igvh-mutations-in-chronic-lymphocytic-leukemia/1
+ - Keywords: cell-collective, curated, repaired
 
 
 ### Modifications

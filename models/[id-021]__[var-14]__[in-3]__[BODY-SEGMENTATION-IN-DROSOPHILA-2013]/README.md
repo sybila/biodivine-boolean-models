@@ -5,6 +5,7 @@
  - Regulations: 29
  - Publication: https://doi.org/10.1371/journal.pone.0055946
  - Source: https://research.cellcollective.org/?dashboard=true#module/2341:1/body-segmentation-in-drosophila-2013/1
+ - Keywords: cell-collective, curated
 
 
 ### Modifications

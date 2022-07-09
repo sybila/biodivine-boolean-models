@@ -5,6 +5,7 @@
  - Regulations: 34
  - Publication: https://doi.org/10.1186/1742-4682-3-13
  - Source: https://research.cellcollective.org/?dashboard=true#module/2901:1/t-cell-differentiation/1
+ - Keywords: cell-collective, curated
 
 
 ### Modifications

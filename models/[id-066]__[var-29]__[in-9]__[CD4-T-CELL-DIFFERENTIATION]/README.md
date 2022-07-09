@@ -5,6 +5,7 @@
  - Regulations: 96
  - Publication: https://doi.org/10.1186/1752-0509-6-96
  - Source: https://research.cellcollective.org/?dashboard=true#module/6678:1/cd4-t-cell-differentiation/1
+ - Keywords: cell-collective, curated, repaired
 
 
 ### Modifications

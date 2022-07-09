@@ -5,6 +5,7 @@
  - Regulations: 557
  - Publication: https://doi.org/10.1073/pnas.0705088105
  - Source: https://research.cellcollective.org/?dashboard=true#module/1557:1/signal-transduction-in-fibroblasts/1
+ - Keywords: cell-collective, curated, repaired
 
 
 ### Modifications

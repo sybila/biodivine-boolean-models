@@ -5,6 +5,7 @@
  - Regulations: 66
  - Publication: https://doi.org/10.1186/s12976-015-0011-4
  - Source: https://research.cellcollective.org/?dashboard=true#module/4790:1/fanconi-anemia-and-checkpoint-recovery/1
+ - Keywords: cell-collective, curated, repaired
 
 
 ### Modifications

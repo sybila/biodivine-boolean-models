@@ -5,6 +5,7 @@
  - Regulations: 368
  - Publication: https://doi.org/10.1093/bioinformatics/btu787
  - Source: https://research.cellcollective.org/?dashboard=true#module/2738:1/hiv1-interactions-with-t-cell-signalling-pathway/1
+ - Keywords: cell-collective, curated, repaired
 
 
 ### Modifications

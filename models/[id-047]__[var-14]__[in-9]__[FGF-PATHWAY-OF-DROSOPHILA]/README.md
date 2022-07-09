@@ -5,6 +5,7 @@
  - Regulations: 24
  - Publication: https://doi.org/10.1039/C3MB70187E
  - Source: https://research.cellcollective.org/?dashboard=true#module/3510:1/fgf-pathway-of-drosophila-signalling-pathways/1
+ - Keywords: cell-collective, curated, repaired
 
 
 ### Modifications

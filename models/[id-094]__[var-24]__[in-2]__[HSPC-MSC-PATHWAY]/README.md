@@ -5,6 +5,7 @@
  - Regulations: 79
  - Publication: http://dx.doi.org/10.3389/fphys.2016.00349
  - Source: http://ginsim.org/model/HSPC_MSC
+ - Keywords: ginsim, curated
 
 
 ### Modifications

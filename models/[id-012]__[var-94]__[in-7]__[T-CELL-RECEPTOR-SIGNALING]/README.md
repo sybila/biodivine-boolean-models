@@ -5,6 +5,7 @@
  - Regulations: 158
  - Publication: https://doi.org/10.1371/journal.pcbi.0030163
  - Source: https://research.cellcollective.org/?dashboard=true#module/2171:1/t-cell-receptor-signaling/1
+ - Keywords: cell-collective, curated
 
 
 ### Modifications

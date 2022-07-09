@@ -5,6 +5,7 @@
  - Regulations: 54
  - Publication: https://doi.org/10.1186/1471-2105-7-56
  - Source: http://ginsim.org/node/78
+ - Keywords: ginsim, curated, repaired
 
 
 ### Modifications

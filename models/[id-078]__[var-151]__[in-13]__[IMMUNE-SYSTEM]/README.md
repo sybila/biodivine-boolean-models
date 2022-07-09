@@ -5,6 +5,7 @@
  - Regulations: 506
  - Publication: https://doi.org/10.1186/1752-0509-6-96
  - Source: https://research.cellcollective.org/?dashboard=true#module/91515:1/immune-system-model/1
+ - Keywords: cell-collective, curated, repaired
 
 
 ### Modifications

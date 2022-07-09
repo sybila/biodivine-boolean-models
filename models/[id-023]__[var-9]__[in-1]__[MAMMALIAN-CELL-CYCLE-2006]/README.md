@@ -5,6 +5,7 @@
  - Regulations: 34
  - Publication: https://doi.org/10.1093/bioinformatics/btl210
  - Source: https://research.cellcollective.org/?dashboard=true#module/2396:1/mammalian-cell-cycle-2006/1
+ - Keywords: cell-collective, curated, repaired
 
 
 ### Modifications

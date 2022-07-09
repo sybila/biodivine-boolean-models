@@ -5,6 +5,7 @@
  - Regulations: 108
  - Publication: https://doi.org/10.3389/fgene.2016.00044
  - Source: https://research.cellcollective.org/?dashboard=true#module/4775:1/pc12-cell-differentiation/1
+ - Keywords: cell-collective, curated
 
 
 ### Modifications

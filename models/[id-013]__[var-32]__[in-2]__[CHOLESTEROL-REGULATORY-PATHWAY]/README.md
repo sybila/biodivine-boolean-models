@@ -5,6 +5,7 @@
  - Regulations: 41
  - Publication: https://doi.org/10.1186/1752-0509-2-99
  - Source: https://research.cellcollective.org/?dashboard=true#module/2172:1/cholesterol-regulatory-pathway/1
+ - Keywords: cell-collective, curated, repaired
 
 
 ### Modifications

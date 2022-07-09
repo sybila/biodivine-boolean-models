@@ -5,6 +5,7 @@
  - Regulations: 193
  - Publication: http://dx.doi.org/10.1073/pnas.0806447105
  - Source: http://ginsim.org/node/87
+ - Keywords: ginsim, curated
 
 
 ### Modifications

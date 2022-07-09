@@ -5,6 +5,7 @@
  - Regulations: 37
  - Publication: https://doi.org/10.1371/journal.pone.0046798
  - Source: https://research.cellcollective.org/?dashboard=true#module/2136:1/cardiac-development/1
+ - Keywords: cell-collective, curated, repaired
 
 
 ### Modifications

@@ -5,6 +5,7 @@
  - Regulations: 66
  - Publication: https://doi.org/10.1371/journal.pcbi.1004486
  - Source: https://research.cellcollective.org/?dashboard=true#module/4837:1/arabidopsis-thaliana-cell-cycle/1
+ - Keywords: cell-collective, curated, repaired
 
 
 ### Modifications

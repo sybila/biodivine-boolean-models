@@ -5,6 +5,7 @@
  - Regulations: 53
  - Publication: https://doi.org/10.1186/1471-2105-7-56
  - Source: https://research.cellcollective.org/?dashboard=true#module/2691:1/tcell-signaling-2006/1
+ - Keywords: cell-collective, curated
 
 
 ### Modifications

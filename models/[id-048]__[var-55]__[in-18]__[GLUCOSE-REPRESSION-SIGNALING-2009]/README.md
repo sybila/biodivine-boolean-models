@@ -5,6 +5,7 @@
  - Regulations: 97
  - Publication: https://doi.org/10.1186/1752-0509-3-7
  - Source: https://research.cellcollective.org/?dashboard=true#module/3511:1/glucose-repression-signaling-2009/1
+ - Keywords: cell-collective, curated, repaired
 
 
 ### Modifications

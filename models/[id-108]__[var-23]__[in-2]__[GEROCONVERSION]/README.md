@@ -5,6 +5,7 @@
  - Regulations: 67
  - Publication: http://dx.doi.org/10.1111/acel.12504
  - Source: http://ginsim.org/model/T2DM
+ - Keywords: ginsim, curated, repaired
 
 
 ### Modifications

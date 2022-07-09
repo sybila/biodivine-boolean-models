@@ -5,6 +5,7 @@
  - Regulations: 14
  - Publication: https://doi.org/10.1371/journal.pcbi.1000936
  - Source: https://research.cellcollective.org/?dashboard=true#module/2035:1/cortical-area-development/1
+ - Keywords: cell-collective, curated
 
 
 ### Modifications

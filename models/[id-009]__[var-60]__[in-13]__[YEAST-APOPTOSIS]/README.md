@@ -5,6 +5,7 @@
  - Regulations: 114
  - Publication: https://doi.org/10.3389/fphys.2012.00446
  - Source: https://research.cellcollective.org/?dashboard=true#module/2135:1/yeast-apoptosis/1
+ - Keywords: cell-collective, curated
 
 
 ### Modifications

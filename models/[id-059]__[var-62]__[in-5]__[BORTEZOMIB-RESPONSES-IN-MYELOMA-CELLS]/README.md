@@ -5,6 +5,7 @@
  - Regulations: 131
  - Publication: https://doi.org/10.1124/jpet.115.224766
  - Source: https://research.cellcollective.org/?dashboard=true#module/4850:1/-bortezomib-responses-in-u266-human-myeloma-cells/1
+ - Keywords: cell-collective, curated, repaired
 
 
 ### Modifications

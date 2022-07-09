@@ -5,6 +5,7 @@
  - Regulations: 78
  - Publication: https://doi.org/10.1371/journal.pcbi.1004324
  - Source: https://research.cellcollective.org/?dashboard=true#module/5025:1/cd4-t-cell-differentiation-and-plasticity/1
+ - Keywords: cell-collective, curated
 
 
 ### Modifications

@@ -5,6 +5,7 @@
  - Regulations: 257
  - Publication: https://doi.org/10.1126/scisignal.aar3641
  - Source: http://ginsim.org/node/225
+ - Keywords: ginsim, curated, repaired
 
 
 ### Modifications

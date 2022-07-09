@@ -5,6 +5,7 @@
  - Regulations: 128
  - Publication: http://dx.doi.org/10.3390/cancers12123600
  - Source: http://ginsim.org/model/immune-checkpoints
+ - Keywords: ginsim, curated
 
 
 ### Modifications

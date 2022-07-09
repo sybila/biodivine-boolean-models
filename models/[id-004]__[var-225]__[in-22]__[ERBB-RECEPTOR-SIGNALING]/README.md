@@ -5,6 +5,7 @@
  - Regulations: 1100
  - Publication: https://doi.org/10.1371/journal.pone.0061757
  - Source: https://research.cellcollective.org/?dashboard=true#module/1776:1/erbb-14-receptor-signaling/1
+ - Keywords: cell-collective, curated, repaired
 
 
 ### Modifications

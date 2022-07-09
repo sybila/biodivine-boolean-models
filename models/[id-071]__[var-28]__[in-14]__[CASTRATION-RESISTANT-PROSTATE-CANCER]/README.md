@@ -5,6 +5,7 @@
  - Regulations: 51
  - Publication: https://doi.org/10.1186/s12859-017-1522-2
  - Source: https://research.cellcollective.org/?dashboard=true#module/8048:1/treatment-of-castrationresistant-prostate-cancer/1
+ - Keywords: cell-collective, curated, repaired
 
 
 ### Modifications

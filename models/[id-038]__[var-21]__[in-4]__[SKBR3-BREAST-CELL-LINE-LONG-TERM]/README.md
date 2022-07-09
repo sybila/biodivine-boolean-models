@@ -5,6 +5,7 @@
  - Regulations: 81
  - Publication: https://doi.org/10.1186/1752-0509-8-75
  - Source: https://research.cellcollective.org/?dashboard=true#module/2703:1/skbr3-breast-cell-line-longterm-erbb-network/1
+ - Keywords: cell-collective, curated
 
 
 ### Modifications

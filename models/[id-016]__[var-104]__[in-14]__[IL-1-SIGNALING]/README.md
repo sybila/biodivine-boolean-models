@@ -5,6 +5,7 @@
  - Regulations: 218
  - Publication: https://doi.org/10.1039/C1MB05261F
  - Source: https://research.cellcollective.org/?dashboard=true#module/2214:1/il1-signaling/1
+ - Keywords: cell-collective, curated, repaired
 
 
 ### Modifications

@@ -5,6 +5,7 @@
  - Regulations: 156
  - Publication: https://doi.org/10.1371/journal.pcbi.1004571
  - Source: https://research.cellcollective.org/?dashboard=true#module/5884:1/tumour-cell-invasion-and-migration/1
+ - Keywords: cell-collective, curated
 
 
 ### Modifications

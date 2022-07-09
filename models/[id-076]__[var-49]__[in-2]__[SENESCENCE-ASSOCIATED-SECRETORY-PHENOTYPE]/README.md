@@ -5,6 +5,7 @@
  - Regulations: 96
  - Publication: https://doi.org/10.1371/journal.pcbi.1005741
  - Source: https://research.cellcollective.org/?dashboard=true#module/11863:1/senescence-associated-secretory-phenotype/1
+ - Keywords: cell-collective, curated, repaired
 
 
 ### Modifications

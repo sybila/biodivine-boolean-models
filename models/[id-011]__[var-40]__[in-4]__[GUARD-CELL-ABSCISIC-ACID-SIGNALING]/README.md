@@ -5,6 +5,7 @@
  - Regulations: 78
  - Publication: https://doi.org/10.1371/journal.pbio.0040312
  - Source: https://research.cellcollective.org/?dashboard=true#module/2161:1/guard-cell-abscisic-acid-signaling/1
+ - Keywords: cell-collective, curated, repaired
 
 
 ### Modifications

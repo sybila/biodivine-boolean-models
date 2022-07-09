@@ -5,6 +5,7 @@
  - Regulations: 94
  - Publication: https://doi.org/10.1073/pnas.161062211
  - Source: https://research.cellcollective.org/?dashboard=true#module/8186:1/lymphoid-and-myeloid-cell-specification-and-transdifferentiation/1
+ - Keywords: cell-collective, curated, repaired
 
 
 ### Modifications

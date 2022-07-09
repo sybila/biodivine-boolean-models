@@ -5,6 +5,7 @@
  - Regulations: 19
  - Publication: http://dx.doi.org/10.1039/b907562n
  - Source: http://ginsim.org/node/33
+ - Keywords: ginsim, curated
 
 
 ### Modifications

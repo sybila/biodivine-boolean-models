@@ -5,6 +5,7 @@
  - Regulations: 32
  - Publication: https://doi.org/10.1186/1471-2164-13-S6-S4
  - Source: https://research.cellcollective.org/?dashboard=true#module/3512:1/oxidative-stress-pathway/1
+ - Keywords: cell-collective, curated
 
 
 ### Modifications

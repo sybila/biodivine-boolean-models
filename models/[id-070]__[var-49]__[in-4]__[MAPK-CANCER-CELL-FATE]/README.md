@@ -5,6 +5,7 @@
  - Regulations: 104
  - Publication: https://doi.org/10.1371/journal.pcbi.1003286
  - Source: https://research.cellcollective.org/?dashboard=true#module/7984:1/mapk-cancer-cell-fate-network/1
+ - Keywords: cell-collective, curated
 
 
 ### Modifications

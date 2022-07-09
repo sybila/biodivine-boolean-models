@@ -5,6 +5,7 @@
  - Regulations: 149
  - Publication: https://doi.org/10.1039/C1MB05261F
  - Source: https://research.cellcollective.org/?dashboard=true#module/2314:1/il6-signalling/1
+ - Keywords: cell-collective, curated
 
 
 ### Modifications

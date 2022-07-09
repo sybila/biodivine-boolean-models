@@ -5,6 +5,7 @@
  - Regulations: 153
  - Publication: https://doi.org/10.1038/srep14739
  - Source: https://research.cellcollective.org/?dashboard=true#module/4601:1/colitisassociated-colon-cancer/1
+ - Keywords: cell-collective, curated, repaired
 
 
 ### Modifications

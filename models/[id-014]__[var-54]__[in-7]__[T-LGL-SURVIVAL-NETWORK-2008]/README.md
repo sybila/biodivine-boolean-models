@@ -5,6 +5,7 @@
  - Regulations: 193
  - Publication: https://doi.org/10.1073/pnas.0806447105
  - Source: https://research.cellcollective.org/?dashboard=true#module/2176:1/tlgl-survival-network-2008/1
+ - Keywords: cell-collective, curated
 
 
 ### Modifications

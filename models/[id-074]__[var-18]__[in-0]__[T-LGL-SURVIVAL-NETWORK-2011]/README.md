@@ -5,6 +5,7 @@
  - Regulations: 43
  - Publication: https://doi.org/10.1371/journal.pcbi.1002267
  - Source: https://research.cellcollective.org/?dashboard=true#module/8227:1/tlgl-survival-network-2011-reduced-network/1
+ - Keywords: cell-collective, curated
 
 
 ### Modifications

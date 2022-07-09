@@ -5,6 +5,7 @@
  - Regulations: 43
  - Publication: https://doi.org/10.1016/j.canlet.2015.11.025
  - Source: https://research.cellcollective.org/?dashboard=true#module/7916:1/aurora-kinase-a-in-neuroblastoma/1
+ - Keywords: cell-collective, curated, repaired
 
 
 ### Modifications

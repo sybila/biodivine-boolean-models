@@ -5,6 +5,7 @@
  - Regulations: 135
  - Publication: https://doi.org/10.1371/journal.pcbi.1002345
  - Source: https://research.cellcollective.org/?dashboard=true#module/3509:1/b-bronchiseptica-and-t-retortaeformis-coinfection/1
+ - Keywords: cell-collective, curated
 
 
 ### Modifications

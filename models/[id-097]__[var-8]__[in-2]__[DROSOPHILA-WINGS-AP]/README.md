@@ -5,6 +5,7 @@
  - Regulations: 14
  - Publication: http://dx.doi.org/10.1534/genetics.106.061218
  - Source: http://ginsim.org/node/69
+ - Keywords: ginsim, curated
 
 
 ### Modifications

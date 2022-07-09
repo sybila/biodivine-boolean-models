@@ -5,6 +5,7 @@
  - Regulations: 167
  - Publication: https://doi.org/10.1186/s12918-016-0327-7
  - Source: https://research.cellcollective.org/?dashboard=true#module/4932:1/stomatal-opening-model/1
+ - Keywords: cell-collective, curated, repaired
 
 
 ### Modifications

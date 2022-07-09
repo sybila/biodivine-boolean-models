@@ -5,6 +5,7 @@
  - Regulations: 27
  - Publication: https://doi.org/10.1371/journal.pcbi.1004338
  - Source: https://research.cellcollective.org/?dashboard=true#module/5731:1/metabolic-interactions-in-the-gut-microbiome/1
+ - Keywords: cell-collective, curated, repaired
 
 
 ### Modifications

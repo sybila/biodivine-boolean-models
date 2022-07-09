@@ -5,6 +5,7 @@
  - Regulations: 97
  - Publication: https://doi.org/10.1016/j.biosystems.2013.05.007
  - Source: https://research.cellcollective.org/?dashboard=true#module/2215:1/differentiation-of-t-lymphocytes/1
+ - Keywords: cell-collective, curated
 
 
 ### Modifications

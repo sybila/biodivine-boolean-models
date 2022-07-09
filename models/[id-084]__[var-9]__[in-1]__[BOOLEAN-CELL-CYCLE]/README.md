@@ -5,6 +5,7 @@
  - Regulations: 34
  - Publication: https://doi.org/10.1093/bioinformatics/btl210
  - Source: http://ginsim.org/node/4
+ - Keywords: ginsim, curated
 
 
 ### Modifications

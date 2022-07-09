@@ -5,6 +5,7 @@
  - Regulations: 46
  - Publication: https://doi.org/10.1186/1752-0509-8-75
  - Source: https://research.cellcollective.org/?dashboard=true#module/2700:1/hcc1954-breast-cell-line-shortterm-erbb-network/1
+ - Keywords: cell-collective, curated
 
 
 ### Modifications

@@ -5,6 +5,7 @@
  - Regulations: 20
  - Publication: https://doi.org/10.1016/j.jtbi.2006.08.014
  - Source: https://research.cellcollective.org/?dashboard=true#module/2202:1/neurotransmitter-signaling-pathway/1
+ - Keywords: cell-collective, curated
 
 
 ### Modifications

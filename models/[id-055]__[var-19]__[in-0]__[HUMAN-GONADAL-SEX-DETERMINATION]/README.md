@@ -5,6 +5,7 @@
  - Regulations: 79
  - Publication: https://doi.org/10.1186/s12976-015-0023-0
  - Source: https://research.cellcollective.org/?dashboard=true#module/4779:1/human-gonadal-sex-determination/1
+ - Keywords: cell-collective, curated, repaired
 
 
 ### Modifications

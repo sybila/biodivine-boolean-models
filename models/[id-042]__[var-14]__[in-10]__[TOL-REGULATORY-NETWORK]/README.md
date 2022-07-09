@@ -5,6 +5,7 @@
  - Regulations: 48
  - Publication: https://doi.org/10.1111/1462-2920.12014
  - Source: https://research.cellcollective.org/?dashboard=true#module/3491:1/tol-regulatory-network/1
+ - Keywords: cell-collective, curated
 
 
 ### Modifications
