@@ -1,0 +1,125 @@
+v_IL7 -> v_IL7r_activated
+v_IL7r -> v_IL7r_activated
+v_Gfi1 -? v_Id2
+v_Spi1 -> v_Id2
+v_Cebpb -> v_Id2
+v_Cebpa -> v_Id2
+v_Ebf1 -? v_Id2
+v_Spi1 -> v_E2A_gene
+v_Ikzf1 -> v_E2A_gene
+v_Ebf1 -> v_E2A_gene
+v_Pax5_protein_active -> v_E2A_gene
+v_Ets1 -> v_Ebf1_gene
+v_Spi1 -> v_Ebf1_gene
+v_IL7r_activated -> v_Ebf1_gene
+v_Cebpb -? v_Ebf1_gene
+v_Cebpa -? v_Ebf1_gene
+v_E2A_protein_active -> v_Ebf1_gene
+v_Ebf1 -> v_Ebf1_gene
+v_Runx1 -> v_Ebf1_gene
+v_Foxo1 -> v_Ebf1_gene
+v_Pax5_protein_active -> v_Ebf1_gene
+v_Ebf1_gene -> v_Ebf1
+v_Cebpb -> v_Cebpb
+v_Cebpa -> v_Cebpb
+v_Spi1_2 -> v_Cebpb
+v_Cebpa -|? v_Foxo1
+v_E2A -> v_Foxo1
+v_Spi1 -> v_Mef2c
+v_Cebpb -? v_Mef2c
+v_Cebpa -? v_Mef2c
+v_Cebpa_gene -> v_Cebpa
+v_Cebpa -> v_Cebpa
+v_E2A_gene -> v_E2A
+v_Egr1 -? v_Gfi1
+v_Cebpa -> v_Gfi1
+v_Ikzf1 -> v_Gfi1
+v_Pax5_protein_active -> v_Gfi1
+v_Spi1 -> v_Flt3
+v_Ikzf1 -> v_Flt3
+v_Pax5_protein_active -? v_Flt3
+v_Spi1 -> v_Csf1r
+v_Pax5_protein_active -? v_Csf1r
+v_Mef2c -> v_Ikzf1
+v_Pax5_protein_active -> v_Ikzf1
+v_E2A_protein_active -> v_Ets1
+v_Spi1 -> v_Cebpa_gene
+v_Runx1 -> v_Cebpa_gene
+v_Foxo1 -? v_Cebpa_gene
+v_Cebpb -? v_Pax5_gene
+v_Cebpa -? v_Pax5_gene
+v_Ebf1 -> v_Pax5_gene
+v_Pax5_gene -> v_Pax5
+v_CD19_gene -> v_Cd19
+v_Spi1 -> v_IL7r
+v_Cebpb -? v_IL7r
+v_Mef2c -> v_IL7r
+v_Cebpa -? v_IL7r
+v_Ebf1 -> v_IL7r
+v_Foxo1 -> v_IL7r
+v_Gfi1 -? v_Spi1_2
+v_Spi1 -> v_Spi1_2
+v_Cebpb -> v_Spi1_2
+v_Cebpa -> v_Spi1_2
+v_Ikzf1 -? v_Spi1_2
+v_Csf1r_activated -> v_Spi1_2
+v_Runx1 -> v_Spi1_2
+v_Foxo1 -? v_Spi1_2
+v_Mac1_gene -> v_Mac1
+v_Gfi1 -? v_Egr1
+v_Spi1 -> v_Egr1
+v_Spi1_2 -> v_Egr1
+v_Pax5_protein_active -> v_Egr1
+v_Gfi1 -> v_Spi1
+v_Spi1 -? v_Spi1
+v_Cebpb -? v_Spi1
+v_Cebpa -? v_Spi1
+v_Ikzf1 -> v_Spi1
+v_Csf1r_activated -? v_Spi1
+v_Ebf1 -> v_Spi1
+v_Runx1 -? v_Spi1
+v_Foxo1 -? v_Spi1
+v_Id2 -? v_Pax5_protein_active
+v_Pax5 -> v_Pax5_protein_active
+v_Spi1 -> v_Runx1
+v_Csf1r -> v_Csf1r_activated
+v_Csf1 -> v_Csf1r_activated
+v_Spi1 -> v_Mac1_gene
+v_Cebpa -? v_CD19_gene
+v_Pax5_protein_active -> v_CD19_gene
+v_Id2 -? v_E2A_protein_active
+v_E2A -> v_E2A_protein_active
+v_Cebpb -? v_Foxo1_gene
+v_Cebpa -? v_Foxo1_gene
+v_E2A_protein_active -> v_Foxo1_gene
+$v_CD19_gene: (v_Pax5_protein_active & !v_Cebpa)
+$v_Cd19: v_CD19_gene
+$v_Cebpa: (v_Cebpa | v_Cebpa_gene)
+$v_Cebpa_gene: ((v_Spi1 & v_Runx1) & !v_Foxo1)
+$v_Cebpb: (v_Spi1_2 & (v_Cebpb | v_Cebpa))
+$v_Csf1r: (v_Spi1 & !v_Pax5_protein_active)
+$v_Csf1r_activated: (v_Csf1r & v_Csf1)
+$v_E2A: v_E2A_gene
+$v_E2A_gene: ((v_Ikzf1 & v_Spi1) | (v_Ikzf1 & (v_Ebf1 & v_Pax5_protein_active)))
+$v_E2A_protein_active: (v_E2A & !v_Id2)
+$v_Ebf1: v_Ebf1_gene
+$v_Ebf1_gene: (((v_E2A_protein_active & (((v_Ets1 & v_Ebf1) & v_Foxo1) & v_Pax5_protein_active)) & (!v_Cebpb | !v_Cebpa)) | ((v_E2A_protein_active & ((((v_Spi1 & v_Ets1) & v_IL7r_activated) & v_Runx1) & v_Foxo1)) & (!v_Cebpb | !v_Cebpa)))
+$v_Egr1: ((v_Pax5_protein_active | (v_Spi1 & !v_Gfi1)) | v_Spi1_2)
+$v_Ets1: v_E2A_protein_active
+$v_Flt3: ((v_Spi1 & !v_Pax5_protein_active) & v_Ikzf1)
+$v_Foxo1: v_E2A
+$v_Foxo1_gene: (v_E2A_protein_active & (!v_Cebpb | !v_Cebpa))
+$v_Gfi1: (((v_Cebpa & !v_Egr1) | v_Pax5_protein_active) | (v_Ikzf1 & !v_Egr1))
+$v_IL7r: (((v_Ebf1 & v_Foxo1) & (!v_Cebpb | !v_Cebpa)) | ((v_Spi1 & v_Mef2c) & (!v_Cebpb | !v_Cebpa)))
+$v_IL7r_activated: (v_IL7 & v_IL7r)
+$v_Id2: ((v_Cebpb & (!v_Gfi1 & !v_Ebf1)) & (v_Spi1 & v_Cebpa))
+$v_Ikzf1: (v_Mef2c | v_Pax5_protein_active)
+$v_Mac1: v_Mac1_gene
+$v_Mac1_gene: v_Spi1
+$v_Mef2c: (v_Spi1 & (!v_Cebpb | !v_Cebpa))
+$v_Pax5: v_Pax5_gene
+$v_Pax5_gene: (v_Ebf1 & (!v_Cebpb | !v_Cebpa))
+$v_Pax5_protein_active: (v_Pax5 & !v_Id2)
+$v_Runx1: v_Spi1
+$v_Spi1: ((((v_Foxo1 & (v_Ikzf1 & v_Ebf1)) & (!v_Spi1 | !v_Runx1)) | ((v_Spi1 & v_Runx1) & (((!v_Cebpa & !v_Csf1r_activated) | (!v_Cebpb & !v_Csf1r_activated)) | v_Gfi1))) | ((v_Spi1 & v_Runx1) & (v_Ikzf1 & !v_Foxo1)))
+$v_Spi1_2: (((v_Runx1 & v_Spi1) & ((!v_Ikzf1 & !v_Foxo1) | !v_Gfi1)) | ((v_Runx1 & (v_Spi1 & v_Csf1r_activated)) & (v_Cebpb | v_Cebpa)))

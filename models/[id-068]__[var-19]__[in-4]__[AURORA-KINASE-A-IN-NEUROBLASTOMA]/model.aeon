@@ -1,0 +1,62 @@
+v_STMN -| v_MT
+v_AURKAActive -> v_hCPEB
+v_PP2A -| v_AURKAPresent
+v_GWL_MASTL -> v_ENSA
+v_SpindleAssembly -> v_Cytokinesis
+v_CentrosomeMat -| v_Cytokinesis
+v_PLK1 -| v_BORA
+v_Cytokinesis -? v_BORA
+v_GSK3B -> v_BORA
+v_AURKAActive -> v_NEDD9
+v_hCPEB -> v_CDK1CCNBComplex
+v_CDC25B -> v_CDK1CCNBComplex
+v_Cytokinesis -| v_CDK1CCNBComplex
+v_WEE1 -| v_CDK1CCNBComplex
+v_PLK1 -| v_WEE1
+v_PLK1 -> v_CDC25B
+v_AURKAActive -> v_CDC25B
+v_Cytokinesis -| v_CDC25B
+v_CentrosomeMat -> v_SpindleAssembly
+v_Cytokinesis -| v_SpindleAssembly
+v_PLK1 -> v_TPX2
+v_SpindleAssembly -| v_CentrosomeMat
+v_CDK1CCNBComplex -> v_CentrosomeMat
+v_PP1 -| v_AURKAActive
+v_AJUBA -> v_AURKAActive
+v_AURKAActive -? v_AURKAActive
+v_BORA -> v_AURKAActive
+v_NEDD9 -> v_AURKAActive
+v_AURKAPresent -> v_AURKAActive
+v_TPX2 -> v_AURKAActive
+v_AURKAActive -| v_STMN
+v_AURKAActive -| v_PP1
+v_CDK1CCNBComplex -| v_PP1
+v_Cytokinesis -| v_PP1
+v_PP2A -| v_GWL_MASTL
+v_CDK1CCNBComplex -> v_GWL_MASTL
+v_STMN -| v_PLK1
+v_MTCanAct -> v_PLK1
+v_AURKAActive -> v_PLK1
+v_STMNCanAct -> v_PLK1
+v_MT -> v_PLK1
+v_PP1 -> v_PP2A
+v_ENSA -| v_PP2A
+$v_AURKAActive: (((v_TPX2 & v_AURKAPresent) & !(v_PP1 & v_AURKAActive)) | ((v_AJUBA & ((v_BORA & v_AURKAPresent) | (v_NEDD9 & v_AURKAPresent))) & !(v_PP1 & v_AURKAActive)))
+$v_AURKAPresent: !v_PP2A
+$v_BORA: (v_GSK3B & !(v_PLK1 & v_Cytokinesis))
+$v_CDC25B: ((v_PLK1 & !v_Cytokinesis) | (v_AURKAActive & !v_Cytokinesis))
+$v_CDK1CCNBComplex: (((v_hCPEB & !v_Cytokinesis) | (v_CDC25B & !v_Cytokinesis)) | !(((v_hCPEB | v_CDC25B) | v_Cytokinesis) | v_WEE1))
+$v_CentrosomeMat: (v_CDK1CCNBComplex & !v_SpindleAssembly)
+$v_Cytokinesis: (v_SpindleAssembly & !v_CentrosomeMat)
+$v_ENSA: v_GWL_MASTL
+$v_GWL_MASTL: (v_CDK1CCNBComplex & !v_PP2A)
+$v_MT: !v_STMN
+$v_NEDD9: v_AURKAActive
+$v_PLK1: ((v_AURKAActive | (v_STMNCanAct & !v_STMN)) | (v_MT & v_MTCanAct))
+$v_PP1: !((v_AURKAActive | v_CDK1CCNBComplex) | v_Cytokinesis)
+$v_PP2A: (v_PP1 & !v_ENSA)
+$v_STMN: !v_AURKAActive
+$v_SpindleAssembly: (v_CentrosomeMat & !v_Cytokinesis)
+$v_TPX2: v_PLK1
+$v_WEE1: !v_PLK1
+$v_hCPEB: v_AURKAActive

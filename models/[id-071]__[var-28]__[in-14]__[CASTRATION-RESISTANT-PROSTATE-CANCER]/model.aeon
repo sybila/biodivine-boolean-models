@@ -1,0 +1,79 @@
+v_AZD5363 -? v_TSC_1_2
+v_AKT -| v_TSC_1_2
+v_mTOR -> v_RP6SKB1
+v_Temsirolimus -| v_RP6SKB1
+v_PDPK1 -> v_RP6SKB1
+v_ERK1_2 -> v_RP6SKB1
+v_AR_AR -> v_PSA
+v_Enzalutamide -| v_PSA
+v_Raf -> v_MEK1
+v_AR_HSP -> v_AR_AR
+v_AKT -> v_AR_AR
+v_RHEB -> v_mTOR
+v_EGF -> v_EGFR_ERBB2
+v_PTEN -? v_AKT
+v_PDPK1 -? v_AKT
+v_NKX3_1 -? v_AKT
+v_RP6SKB1 -| v_BAD
+v_AKT -| v_BAD
+v_AR_AR -> v_TMPRSS2
+v_Enzalutamide -| v_TMPRSS2
+v_IGF -> v_IGFR1A_B
+v_ERK1_2 -> v_SP1
+v_TSC_1_2 -| v_RHEB
+v_Lapatinib -| v_GRB2_SOS
+v_ERBB2_3 -> v_GRB2_SOS
+v_EFGR -> v_GRB2_SOS
+v_EGFR_ERBB2 -> v_GRB2_SOS
+v_IGFR1A_B -> v_GRB2_SOS
+v_GRB2_SOS -> v_Ras
+v_AZD6244 -| v_ERK1_2
+v_MEK1 -> v_ERK1_2
+v_HBEGF -> v_EFGR
+v_EGF -> v_EFGR
+v_PIK3CA -> v_PIP3
+v_PTEN -| v_PIP3
+v_RP6SKB1 -> v_SRF___ELK1
+v_ERK1_2 -> v_SRF___ELK1
+v_p21 -| v_CDK2_Cyclin_E
+v_NRG1 -> v_ERBB2_3
+v_Androgens -> v_AR_HSP
+v_Cixutumumab -| v_IRS1
+v_IGFR1A_B -> v_IRS1
+v_PIP3 -> v_PDPK1
+v_AKT -| v_p21
+v_IRS1 -> v_PIK3CA
+v_ERBB2_3 -> v_PIK3CA
+v_Ras -> v_PIK3CA
+v_BAD -| v_BCL2
+v_PIK3CA -> v_Raf
+v_BKM120 -| v_Raf
+v_Ras -> v_Raf
+$v_AKT: ((((v_NKX3_1 & (!v_PTEN & !v_PDPK1)) | v_PDPK1) | (v_PTEN & (!v_PDPK1 & !v_NKX3_1))) | !((v_PTEN | v_PDPK1) | v_NKX3_1))
+$v_AR_AR: (v_AKT | v_AR_HSP)
+$v_AR_HSP: v_Androgens
+$v_BAD: !(v_RP6SKB1 | v_AKT)
+$v_BCL2: !v_BAD
+$v_CDK2_Cyclin_E: !v_p21
+$v_EFGR: (v_EGF | v_HBEGF)
+$v_EGFR_ERBB2: v_EGF
+$v_ERBB2_3: v_NRG1
+$v_ERK1_2: (v_MEK1 & !v_AZD6244)
+$v_GRB2_SOS: ((((v_EFGR & !v_Lapatinib) | (v_EGFR_ERBB2 & !v_Lapatinib)) | v_IGFR1A_B) | (v_ERBB2_3 & !v_Lapatinib))
+$v_IGFR1A_B: v_IGF
+$v_IRS1: (v_IGFR1A_B & !v_Cixutumumab)
+$v_MEK1: v_Raf
+$v_PDPK1: v_PIP3
+$v_PIK3CA: ((v_ERBB2_3 | v_Ras) | v_IRS1)
+$v_PIP3: (v_PIK3CA & !v_PTEN)
+$v_PSA: (v_AR_AR & !v_Enzalutamide)
+$v_RHEB: !v_TSC_1_2
+$v_RP6SKB1: (((v_mTOR & !v_Temsirolimus) | v_ERK1_2) | v_PDPK1)
+$v_Raf: ((v_PIK3CA & !v_BKM120) | v_Ras)
+$v_Ras: v_GRB2_SOS
+$v_SP1: v_ERK1_2
+$v_SRF___ELK1: (v_ERK1_2 & v_RP6SKB1)
+$v_TMPRSS2: (v_AR_AR & !v_Enzalutamide)
+$v_TSC_1_2: !(v_AKT & !v_AZD5363)
+$v_mTOR: v_RHEB
+$v_p21: !v_AKT

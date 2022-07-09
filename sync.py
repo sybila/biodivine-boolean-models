@@ -80,7 +80,10 @@ def fix_variable_names(model):
 		model.set_variable_name(var, "v_"+name)				
 	return model
 
-for model_dir in listdir("sources"):
+source_directories = list(listdir("sources"))
+source_directories.sort()
+
+for model_dir in source_directories:
 	if model_dir.startswith("."):
 		# Skip hidden files.
 		continue
