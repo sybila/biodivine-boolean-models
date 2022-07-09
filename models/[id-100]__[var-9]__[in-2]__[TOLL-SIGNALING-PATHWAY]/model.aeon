@@ -1,0 +1,20 @@
+v_Necrotic_or_Serpin -| v_Spaetzle
+v_Spaetzle -> v_Toll
+v_Toll -> v_MyD88
+v_MyD88 -> v_Tube
+v_Tube -> v_Pelle
+v_Pelle -| v_Cactus
+v_Supernumary_limbs -| v_Cactus
+v_Cactus -| v_Dif
+v_Cactus -| v_Dorsal
+v_Dif -> v_target_genes
+v_Dorsal -> v_target_genes
+$v_Cactus: (!v_Pelle | (v_Pelle & !v_Supernumary_limbs))
+$v_Dif: !v_Cactus
+$v_Dorsal: !v_Cactus
+$v_MyD88: v_Toll
+$v_Pelle: v_Tube
+$v_Spaetzle: !v_Necrotic_or_Serpin
+$v_Toll: v_Spaetzle
+$v_Tube: v_MyD88
+$v_target_genes: ((!v_Dif & v_Dorsal) | v_Dif)

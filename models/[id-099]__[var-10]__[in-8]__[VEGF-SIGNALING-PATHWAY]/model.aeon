@@ -1,0 +1,28 @@
+v_Pvf1_Vascular_endothelial_growth_factor -> v_Vascular_endothelial_growth_receptor
+v_Pvf2_Vascular_endothelial_growth_factor -> v_Vascular_endothelial_growth_receptor
+v_Pvf3_Vascular_endothelial_growth_factor -> v_Vascular_endothelial_growth_receptor
+v_Vascular_endothelial_growth_receptor -> v_Downstream_of_receptor_kinase
+v_Downstream_of_receptor_kinase -> v_Son_of_sevenless
+v_Son_of_sevenless -> v_raspberry
+v_Sprouty -| v_raspberry
+v_raspberry -> v_pole_hole_ou_MAPKKK
+v_connector_enhancer_of_ksr -> v_pole_hole_ou_MAPKKK
+v_Src42 -> v_pole_hole_ou_MAPKKK
+v_Kinase_suppressor_of_Ras -> v_pole_hole_ou_MAPKKK
+v_pole_hole_ou_MAPKKK -> v_Downstream_of_raf1_or_Mek_or_MAPKK
+v_Downstream_of_raf1_or_Mek_or_MAPKK -> v_Rolled
+v_Moleskin_ou_Importin_7 -> v_Rolled
+v_Rolled -| v_Anterior_Open
+v_Rolled -> v_Pointed
+v_Anterior_Open -| v_target_genes
+v_Pointed -> v_target_genes
+$v_Anterior_Open: !v_Rolled
+$v_Downstream_of_raf1_or_Mek_or_MAPKK: v_pole_hole_ou_MAPKKK
+$v_Downstream_of_receptor_kinase: v_Vascular_endothelial_growth_receptor
+$v_Pointed: v_Rolled
+$v_Rolled: (v_Downstream_of_raf1_or_Mek_or_MAPKK & v_Moleskin_ou_Importin_7)
+$v_Son_of_sevenless: v_Downstream_of_receptor_kinase
+$v_Vascular_endothelial_growth_receptor: ((((!v_Pvf1_Vascular_endothelial_growth_factor & !v_Pvf2_Vascular_endothelial_growth_factor) & v_Pvf3_Vascular_endothelial_growth_factor) | (!v_Pvf1_Vascular_endothelial_growth_factor & v_Pvf2_Vascular_endothelial_growth_factor)) | v_Pvf1_Vascular_endothelial_growth_factor)
+$v_pole_hole_ou_MAPKKK: (((v_raspberry & v_connector_enhancer_of_ksr) & v_Src42) & v_Kinase_suppressor_of_Ras)
+$v_raspberry: (v_Son_of_sevenless & !v_Sprouty)
+$v_target_genes: (!v_Anterior_Open & v_Pointed)
