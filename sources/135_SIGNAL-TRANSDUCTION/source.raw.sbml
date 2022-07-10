@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1" metaid="_7e38093f_518c_4c47_b930_9004b03a3244" level="3" version="1" qual:required="true">
+  <model metaid="_06281bc4_934b_4c8a_a762_2a394b2677ba" id="MODEL1305240000" name="MacNamara2012 - Signal transduction">
+    <notes>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+        <div class="dc:title">MacNamara2012 - Signal transduction</div>
+        <div class="dc:description">
+          <p>A toy model of signal tranduction to illustrate how different logic formalizms (Boolean, fuzzy logic and differential equations) treat state and time, is described here.</p>
+          <p>This model was generated from the PKN-ToyPB.sif file available in        <a href="https://pypi.python.org/pypi/cellnopt.data/">cellnopt.data 0.7.8</a>
+            (also on http://www.cellnopt.org (data section) using        <a href="http://sbml.org/Software/libSBML" target="_blank">libSBML</a>
+            .        </p>
+      </div>
+      <div class="dc:bibliographicCitation">
+        <p>This model is described in the article:</p>
+        <div class="bibo:title">
+          <a href="http://identifiers.org/pubmed/22871648" title="Access to this publication">State-time spectrum of signal transduction logic models.</a>
+        </div>
+        <div class="bibo:authorList">MacNamara A, Terfve C, Henriques D, Bernabé BP, Saez-Rodriguez J</div>
+        <div class="bibo:Journal">Physical Biology [2012, 9(4):045003]</div>
+        <p>Abstract:</p>
+        <div class="bibo:abstract">
+          <p>Despite the current wealth of high-throughput data, our understanding of signal transduction is still incomplete. Mathematical modeling can be a tool to gain an insight into such processes. Detailed biochemical modeling provides deep understanding, but does not scale well above relatively a few proteins. In contrast, logic modeling can be used where the biochemical knowledge of the system is sparse and, because it is parameter free (or, at most, uses relatively a few parameters), it scales well to large networks that can be derived by manual curation or retrieved from public databases. Here, we present an overview of logic modeling formalisms in the context of training logic models to data, and specifically the different approaches to modeling qualitative to quantitative data (state) and dynamics (time) of signal transduction. We use a toy model of signal transduction to illustrate how different logic formalisms (Boolean, fuzzy logic and differential equations) treat state and time. Different formalisms allow for different features of the data to be captured, at the cost of extra requirements in terms of computational power and data quality and quantity. Through this demonstration, the assumptions behind each formalism are discussed, as well as their advantages and disadvantages and possible future developments.</p>
+        </div>
+      </div>
+      <div class="dc:publisher">
+        <p>This model is hosted on        <a href="http://www.ebi.ac.uk/biomodels/">BioModels Database</a>
+            and identified
+by:        <a href="http://identifiers.org/biomodels.db/MODEL1305240000">MODEL1305240000</a>
+            .        </p>
+      <p>To cite BioModels Database, please use:        <a href="http://identifiers.org/pubmed/20587024" title="Latest BioModels Database publication">BioModels Database: An enhanced, curated and annotated resource
+for published quantitative kinetic models</a>
+            .        </p>
+  </div>
+  <div class="dc:license">
+    <p>To the extent possible under law, all copyright and related or
+neighbouring rights to this encoded model have been dedicated to the public
+domain worldwide. Please refer to        <a href="http://creativecommons.org/publicdomain/zero/1.0/" title="Access to: CC0 1.0 Universal (CC0 1.0), Public Domain Dedication">CC0 Public Domain
+Dedication</a>
+            for more information.        </p>
+</div>
+</body>
+</notes><annotation>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+    <rdf:Description rdf:about="#_06281bc4_934b_4c8a_a762_2a394b2677ba">
+      <dc:creator>
+        <rdf:Bag>
+          <rdf:li rdf:parseType="Resource">
+            <vCard:N rdf:parseType="Resource">
+              <vCard:Family>Cokelaer</vCard:Family>
+              <vCard:Given>Thomas</vCard:Given>
+            </vCard:N>
+            <vCard:EMAIL>cokelaer@ebi.ac.uk</vCard:EMAIL>
+            <vCard:ORG rdf:parseType="Resource">
+              <vCard:Orgname>EMBL-EBI</vCard:Orgname>
+            </vCard:ORG>
+          </rdf:li>
+          <rdf:li rdf:parseType="Resource">
+            <vCard:N rdf:parseType="Resource">
+              <vCard:Family>Gonçalves</vCard:Family>
+              <vCard:Given>Emanuel</vCard:Given>
+            </vCard:N>
+            <vCard:EMAIL>emanuel@ebi.ac.uk</vCard:EMAIL>
+            <vCard:ORG rdf:parseType="Resource">
+              <vCard:Orgname>EMBL-EBI</vCard:Orgname>
+            </vCard:ORG>
+          </rdf:li>
+        </rdf:Bag>
+      </dc:creator>
+      <bqmodel:is>
+        <rdf:Bag>
+          <rdf:li rdf:resource="http://identifiers.org/biomodels.db/MODEL1305240000"/>
+        </rdf:Bag>
+      </bqmodel:is>
+      <bqbiol:hasTaxon>
+        <rdf:Bag>
+          <rdf:li rdf:resource="http://identifiers.org/taxonomy/40674"/>
+        </rdf:Bag>
+      </bqbiol:hasTaxon>
+      <bqbiol:isVersionOf>
+        <rdf:Bag>
+          <rdf:li rdf:resource="http://identifiers.org/go/GO:0010468"/>
+        </rdf:Bag>
+      </bqbiol:isVersionOf>
+    </rdf:Description>
+  </rdf:RDF>
+</annotation><listOfCompartments>
+  <compartment metaid="c5ea22b9_52b3_4aed_9bf0_9cc5c1d0b345" id="main" constant="true"/>
+</listOfCompartments><qual:listOfQualitativeSpecies>
+  <qual:qualitativeSpecies metaid="_62acdfb5_cafa_4f49_966f_328874c61f72" qual:id="erk" qual:compartment="main" qual:constant="false"/>
+  <qual:qualitativeSpecies metaid="_33e9c60f_e8ca_45c4_943a_5e18bdf6b2b9" qual:id="gsk3" qual:compartment="main" qual:constant="false"/>
+  <qual:qualitativeSpecies metaid="_71a5078a_c7ff_4e12_a021_adead91ba116" qual:id="ikk" qual:compartment="main" qual:constant="false"/>
+  <qual:qualitativeSpecies metaid="_72467805_9fef_4499_a71b_822ea1b07453" qual:id="nfkb" qual:compartment="main" qual:constant="false"/>
+  <qual:qualitativeSpecies metaid="a390db9f_dbba_4aeb_83fb_d0b3856874fb" qual:id="ras" qual:compartment="main" qual:constant="false"/>
+  <qual:qualitativeSpecies metaid="c6a20385_5a8e_4c86_b2e6_d35c4da05ce3" qual:id="egf" qual:compartment="main" qual:constant="false"/>
+  <qual:qualitativeSpecies metaid="e1956f84_dca0_407a_96d1_9d653e1287ba" qual:id="traf2" qual:compartment="main" qual:constant="false"/>
+  <qual:qualitativeSpecies metaid="d580b052_20fc_49c5_b474_e2d1a9f84b38" qual:id="egfr" qual:compartment="main" qual:constant="false"/>
+  <qual:qualitativeSpecies metaid="_5ab991e8_0270_429f_aed5_480e4e8b3a2d" qual:id="ikb" qual:compartment="main" qual:constant="false"/>
+  <qual:qualitativeSpecies metaid="_03d9e846_9861_4361_8bdb_697706e9641d" qual:id="map3k1" qual:compartment="main" qual:constant="false"/>
+  <qual:qualitativeSpecies metaid="_4d2634c9_e242_46d5_97cd_55353cc04c8b" qual:id="tnfr" qual:compartment="main" qual:constant="false"/>
+  <qual:qualitativeSpecies metaid="dde1b02e_4ad5_4411_9326_120af4c396c0" qual:id="ap1" qual:compartment="main" qual:constant="false"/>
+  <qual:qualitativeSpecies metaid="_5d4e73e3_82d7_44d4_8c4c_4db6f72b01c2" qual:id="p90rsk" qual:compartment="main" qual:constant="false"/>
+  <qual:qualitativeSpecies metaid="_189b8499_86a8_436b_86b0_379735d941d4" qual:id="mek" qual:compartment="main" qual:constant="false"/>
+  <qual:qualitativeSpecies metaid="_022da54e_84b8_4f82_8fa9_d1dffb87e2d2" qual:id="mkk4" qual:compartment="main" qual:constant="false"/>
+  <qual:qualitativeSpecies metaid="de58315c_f9d5_4dd7_a262_640ba4aac39f" qual:id="ex" qual:compartment="main" qual:constant="false"/>
+  <qual:qualitativeSpecies metaid="b39b1fd9_d8d9_47ab_805d_127d501b488f" qual:id="tnfa" qual:compartment="main" qual:constant="false"/>
+  <qual:qualitativeSpecies metaid="_5aef0db6_6e9b_4ea0_a775_4aa54965c90f" qual:id="raf1" qual:compartment="main" qual:constant="false"/>
+  <qual:qualitativeSpecies metaid="d6fa9226_67e5_4be5_b971_588ea30f4f3c" qual:id="creb" qual:compartment="main" qual:constant="false"/>
+  <qual:qualitativeSpecies metaid="f1e95150_ac56_4e4c_adc5_81c8489f810b" qual:id="map3k7" qual:compartment="main" qual:constant="false"/>
+  <qual:qualitativeSpecies metaid="_98f9b25d_f503_4fec_9a04_089e6478dfd4" qual:id="mkk7" qual:compartment="main" qual:constant="false"/>
+  <qual:qualitativeSpecies metaid="e19193c5_c43d_42f8_91d1_68c7ded9964c" qual:id="cjun" qual:compartment="main" qual:constant="false"/>
+  <qual:qualitativeSpecies metaid="e2d63210_4d09_471f_9084_7e056477a753" qual:id="sos" qual:compartment="main" qual:constant="false"/>
+  <qual:qualitativeSpecies metaid="_81ecc0eb_7bd4_4e54_8ba7_557d4aa8db6a" qual:id="jnk" qual:compartment="main" qual:constant="false"/>
+  <qual:qualitativeSpecies metaid="eb930d12_6602_44c1_9ae7_86dc5133c6b0" qual:id="p38" qual:compartment="main" qual:constant="false"/>
+  <qual:qualitativeSpecies metaid="_26b55671_7a0e_420e_b486_d9efec14f183" qual:id="pi3k" qual:compartment="main" qual:constant="false"/>
+  <qual:qualitativeSpecies metaid="_69d48d52_a079_4014_92a7_2e41ea36080c" qual:id="akt" qual:compartment="main" qual:constant="false"/>
+  <qual:qualitativeSpecies metaid="f0773fd2_5cfd_4759_acaf_d25847f9c971" qual:id="ph" qual:compartment="main" qual:constant="false"/>
+  <qual:qualitativeSpecies metaid="_1a3fc0a2_128c_4fd9_a68b_44290f59df49" qual:id="nik" qual:compartment="main" qual:constant="false"/>
+  <qual:qualitativeSpecies metaid="_28a000ea_b73e_4b8b_9f25_5ebb792ac69a" qual:id="rac" qual:compartment="main" qual:constant="false"/>
+</qual:listOfQualitativeSpecies><qual:listOfTransitions>
+  <qual:transition metaid="_23d0e37a_0465_4824_bafa_634dc9befbe6" qual:id="t1">
+    <qual:listOfInputs>
+      <qual:input metaid="_126c5a3b_880e_4909_81f9_a491486a5d7f" qual:id="theta_t1_p90rsk" qual:qualitativeSpecies="p90rsk" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+    </qual:listOfInputs>
+    <qual:listOfOutputs>
+      <qual:output metaid="_309b34c3_abc6_427b_8585_cb2d43cb09e5" qual:qualitativeSpecies="creb" qual:transitionEffect="assignmentLevel"/>
+    </qual:listOfOutputs>
+    <qual:listOfFunctionTerms>
+      <qual:defaultTerm metaid="b5367682_516f_43a9_910b_af69829f66ab" qual:resultLevel="0"/>
+      <qual:functionTerm metaid="f6b6694b_7c13_4c96_b80e_32c45a099241" qual:resultLevel="1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <geq/>
+            <ci> p90rsk </ci>
+            <ci> theta_t1_p90rsk </ci>
+          </apply>
+        </math>
+      </qual:functionTerm>
+    </qual:listOfFunctionTerms>
+  </qual:transition>
+  <qual:transition metaid="a2877e36_e1ad_4ee7_b177_d6c2070ee87e" qual:id="t2">
+    <qual:listOfInputs>
+      <qual:input metaid="be343d41_89a9_4e1a_970c_198805a16153" qual:id="theta_t2_ras" qual:qualitativeSpecies="ras" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+      <qual:input metaid="_8b66790d_3ba1_405a_aae2_cd3cca3db704" qual:id="theta_t2_rac" qual:qualitativeSpecies="rac" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+    </qual:listOfInputs>
+    <qual:listOfOutputs>
+      <qual:output metaid="_158d2922_b0d6_4090_93c2_f7c6b71f5e6f" qual:qualitativeSpecies="map3k1" qual:transitionEffect="assignmentLevel"/>
+    </qual:listOfOutputs>
+    <qual:listOfFunctionTerms>
+      <qual:defaultTerm metaid="_7a58658c_1cda_4c10_ba36_c4aa63671bb7" qual:resultLevel="0"/>
+      <qual:functionTerm metaid="_95d78953_e502_495b_866a_9822485fb260" qual:resultLevel="1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <or/>
+            <apply>
+              <geq/>
+              <ci> rac </ci>
+              <ci> theta_t2_rac </ci>
+            </apply>
+            <apply>
+              <geq/>
+              <ci> ras </ci>
+              <ci> theta_t2_ras </ci>
+            </apply>
+          </apply>
+        </math>
+      </qual:functionTerm>
+    </qual:listOfFunctionTerms>
+  </qual:transition>
+  <qual:transition metaid="cccdaac8_d13f_4418_9523_0431b6d88978" qual:id="t3">
+    <qual:listOfInputs>
+      <qual:input metaid="_2adae5de_2e13_453f_949b_111fa1212474" qual:id="theta_t3_nik" qual:qualitativeSpecies="nik" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+    </qual:listOfInputs>
+    <qual:listOfOutputs>
+      <qual:output metaid="e415414a_babb_4437_b09f_80cdff8d5938" qual:qualitativeSpecies="ikk" qual:transitionEffect="assignmentLevel"/>
+    </qual:listOfOutputs>
+    <qual:listOfFunctionTerms>
+      <qual:defaultTerm metaid="_0d210a2b_4090_4405_9092_b6315a0757ec" qual:resultLevel="0"/>
+      <qual:functionTerm metaid="_7009e8a8_5b62_4158_be32_07f22f6872e0" qual:resultLevel="1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <geq/>
+            <ci> nik </ci>
+            <ci> theta_t3_nik </ci>
+          </apply>
+        </math>
+      </qual:functionTerm>
+    </qual:listOfFunctionTerms>
+  </qual:transition>
+  <qual:transition metaid="c8a5f540_a4a9_4847_a982_ff8b3978bec7" qual:id="t4">
+    <qual:listOfInputs>
+      <qual:input metaid="edab2938_b0ba_4ab9_815f_cecd74a10ea1" qual:id="theta_t4_ex" qual:qualitativeSpecies="ex" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+      <qual:input metaid="fc6edfcd_7400_4dba_ae15_712b2a7465be" qual:id="theta_t4_ikk" qual:qualitativeSpecies="ikk" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+    </qual:listOfInputs>
+    <qual:listOfOutputs>
+      <qual:output metaid="abc79cdb_601d_42fa_9c6e_d474070d455f" qual:qualitativeSpecies="ikb" qual:transitionEffect="assignmentLevel"/>
+    </qual:listOfOutputs>
+    <qual:listOfFunctionTerms>
+      <qual:defaultTerm metaid="e8d7a4a5_6c84_45ee_b01d_a7af1f5458e2" qual:resultLevel="0"/>
+      <qual:functionTerm metaid="a13d765e_e535_43d2_960f_006ea0c373cd" qual:resultLevel="1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <or/>
+            <apply>
+              <lt/>
+              <ci> ikk </ci>
+              <ci> theta_t4_ikk </ci>
+            </apply>
+            <apply>
+              <geq/>
+              <ci> ex </ci>
+              <ci> theta_t4_ex </ci>
+            </apply>
+          </apply>
+        </math>
+      </qual:functionTerm>
+    </qual:listOfFunctionTerms>
+  </qual:transition>
+  <qual:transition metaid="_62538ad8_d86a_4ba9_b52a_f85b57ed0f3f" qual:id="t5">
+    <qual:listOfInputs>
+      <qual:input metaid="_9da43448_d729_4f59_a264_d23895f3781f" qual:id="theta_t5_mkk4" qual:qualitativeSpecies="mkk4" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+    </qual:listOfInputs>
+    <qual:listOfOutputs>
+      <qual:output metaid="f71fcc1a_df97_42e9_98d1_8438006b93b3" qual:qualitativeSpecies="p38" qual:transitionEffect="assignmentLevel"/>
+    </qual:listOfOutputs>
+    <qual:listOfFunctionTerms>
+      <qual:defaultTerm metaid="b0c605c4_638c_4150_afbf_a9bf22850ec0" qual:resultLevel="0"/>
+      <qual:functionTerm metaid="e65530b6_9b1c_4d51_be9f_6a4a4ef1133c" qual:resultLevel="1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <geq/>
+            <ci> mkk4 </ci>
+            <ci> theta_t5_mkk4 </ci>
+          </apply>
+        </math>
+      </qual:functionTerm>
+    </qual:listOfFunctionTerms>
+  </qual:transition>
+  <qual:transition metaid="_6409ae13_066b_427e_a1a5_db19a1b18f27" qual:id="t6">
+    <qual:listOfInputs>
+      <qual:input metaid="_9f171064_bae2_4f0e_87cc_c8032b5faad5" qual:id="theta_t6_mkk7" qual:qualitativeSpecies="mkk7" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+    </qual:listOfInputs>
+    <qual:listOfOutputs>
+      <qual:output metaid="dcf2a359_fc81_4312_98d7_159ae1f7b7b9" qual:qualitativeSpecies="jnk" qual:transitionEffect="assignmentLevel"/>
+    </qual:listOfOutputs>
+    <qual:listOfFunctionTerms>
+      <qual:defaultTerm metaid="_0bad1c60_c047_4014_9472_471a8e066ba0" qual:resultLevel="0"/>
+      <qual:functionTerm metaid="ba29a245_d752_4589_a9c6_62d0b53fb362" qual:resultLevel="1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <geq/>
+            <ci> mkk7 </ci>
+            <ci> theta_t6_mkk7 </ci>
+          </apply>
+        </math>
+      </qual:functionTerm>
+    </qual:listOfFunctionTerms>
+  </qual:transition>
+  <qual:transition metaid="de21aa2c_473a_4c7a_8c64_998ef9c2b0fc" qual:id="t7">
+    <qual:listOfInputs>
+      <qual:input metaid="_5cff5a14_1738_4cec_b907_c5aa5e1efcb7" qual:id="theta_t7_map3k1" qual:qualitativeSpecies="map3k1" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+      <qual:input metaid="cb2c1b9f_efa7_4222_aedd_ca2def8aaf20" qual:id="theta_t7_map3k7" qual:qualitativeSpecies="map3k7" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+    </qual:listOfInputs>
+    <qual:listOfOutputs>
+      <qual:output metaid="_1b7647c0_5a0b_4211_b8bb_6542adc963bd" qual:qualitativeSpecies="mkk4" qual:transitionEffect="assignmentLevel"/>
+    </qual:listOfOutputs>
+    <qual:listOfFunctionTerms>
+      <qual:defaultTerm metaid="_65962acb_5675_4fd2_8d0d_630d7a878453" qual:resultLevel="0"/>
+      <qual:functionTerm metaid="c3de45fd_a2dc_4a1c_ad3c_2a4065f1b424" qual:resultLevel="1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <or/>
+            <apply>
+              <geq/>
+              <ci> map3k7 </ci>
+              <ci> theta_t7_map3k7 </ci>
+            </apply>
+            <apply>
+              <geq/>
+              <ci> map3k1 </ci>
+              <ci> theta_t7_map3k1 </ci>
+            </apply>
+          </apply>
+        </math>
+      </qual:functionTerm>
+    </qual:listOfFunctionTerms>
+  </qual:transition>
+  <qual:transition metaid="_51aa56bf_fa8a_439d_9abc_351433361897" qual:id="t8">
+    <qual:listOfInputs>
+      <qual:input metaid="d45161e7_d7c9_4d55_bd2c_b590eaa791a1" qual:id="theta_t8_map3k7" qual:qualitativeSpecies="map3k7" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+    </qual:listOfInputs>
+    <qual:listOfOutputs>
+      <qual:output metaid="bf6ea290_372c_4d1a_8aa4_6987510bdf5d" qual:qualitativeSpecies="nik" qual:transitionEffect="assignmentLevel"/>
+    </qual:listOfOutputs>
+    <qual:listOfFunctionTerms>
+      <qual:defaultTerm metaid="a10c8ae6_b93a_4d9d_ae07_a174a7cad886" qual:resultLevel="0"/>
+      <qual:functionTerm metaid="_7ed69e43_53a6_494c_b9f7_453d6e67dbe4" qual:resultLevel="1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <geq/>
+            <ci> map3k7 </ci>
+            <ci> theta_t8_map3k7 </ci>
+          </apply>
+        </math>
+      </qual:functionTerm>
+    </qual:listOfFunctionTerms>
+  </qual:transition>
+  <qual:transition metaid="e497d19f_52a4_4cc5_9000_7d51a9d9395e" qual:id="t9">
+    <qual:listOfInputs>
+      <qual:input metaid="d72e4236_755c_4b37_a46c_fbdf59799d0c" qual:id="theta_t9_jnk" qual:qualitativeSpecies="jnk" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+    </qual:listOfInputs>
+    <qual:listOfOutputs>
+      <qual:output metaid="_9ae75cb1_e2b4_4dd5_b035_b116f448961c" qual:qualitativeSpecies="cjun" qual:transitionEffect="assignmentLevel"/>
+    </qual:listOfOutputs>
+    <qual:listOfFunctionTerms>
+      <qual:defaultTerm metaid="db656ce7_5d9b_4404_9d93_39574a207e9b" qual:resultLevel="0"/>
+      <qual:functionTerm metaid="f28f83e6_0b70_4c2d_8feb_2b536b16a33a" qual:resultLevel="1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <geq/>
+            <ci> jnk </ci>
+            <ci> theta_t9_jnk </ci>
+          </apply>
+        </math>
+      </qual:functionTerm>
+    </qual:listOfFunctionTerms>
+  </qual:transition>
+  <qual:transition metaid="ff6ebf46_5b98_4d5d_ad22_aa7b62ddf5d9" qual:id="t10">
+    <qual:listOfInputs>
+      <qual:input metaid="_1d5e8b86_c0cd_4057_99ae_915ca1165ca4" qual:id="theta_t10_egfr" qual:qualitativeSpecies="egfr" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+      <qual:input metaid="b7102215_51dd_456e_b3c2_fbfd6e9100eb" qual:id="theta_t10_tnfr" qual:qualitativeSpecies="tnfr" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+    </qual:listOfInputs>
+    <qual:listOfOutputs>
+      <qual:output metaid="_08f63462_cb5a_4dec_9c79_cf91feb4d2c9" qual:qualitativeSpecies="pi3k" qual:transitionEffect="assignmentLevel"/>
+    </qual:listOfOutputs>
+    <qual:listOfFunctionTerms>
+      <qual:defaultTerm metaid="b2212891_50ee_4c29_860b_50738204960b" qual:resultLevel="0"/>
+      <qual:functionTerm metaid="fbf7fa0f_53db_43ac_b260_143c1fe35c93" qual:resultLevel="1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <or/>
+            <apply>
+              <geq/>
+              <ci> tnfr </ci>
+              <ci> theta_t10_tnfr </ci>
+            </apply>
+            <apply>
+              <geq/>
+              <ci> egfr </ci>
+              <ci> theta_t10_egfr </ci>
+            </apply>
+          </apply>
+        </math>
+      </qual:functionTerm>
+    </qual:listOfFunctionTerms>
+  </qual:transition>
+  <qual:transition metaid="bfff4ea3_cb43_41ce_bd78_966066297fc5" qual:id="t11">
+    <qual:listOfInputs>
+      <qual:input metaid="_786e2ff6_9b3b_4e00_b159_98b53916a1d0" qual:id="theta_t11_tnfr" qual:qualitativeSpecies="tnfr" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+    </qual:listOfInputs>
+    <qual:listOfOutputs>
+      <qual:output metaid="bd0045db_3c4d_4dcd_9877_79a7b8da2f1a" qual:qualitativeSpecies="traf2" qual:transitionEffect="assignmentLevel"/>
+    </qual:listOfOutputs>
+    <qual:listOfFunctionTerms>
+      <qual:defaultTerm metaid="_81b59f75_b7ea_4705_8059_d5842f47b544" qual:resultLevel="0"/>
+      <qual:functionTerm metaid="_22364ae7_72b8_4ac2_b7b2_02bdae6d39c7" qual:resultLevel="1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <geq/>
+            <ci> tnfr </ci>
+            <ci> theta_t11_tnfr </ci>
+          </apply>
+        </math>
+      </qual:functionTerm>
+    </qual:listOfFunctionTerms>
+  </qual:transition>
+  <qual:transition metaid="d4f4f9c9_b5bb_4b9f_acae_9b00b144abc5" qual:id="t12">
+    <qual:listOfInputs>
+      <qual:input metaid="_06493306_724d_4edd_840c_51f37414e72d" qual:id="theta_t12_traf2" qual:qualitativeSpecies="traf2" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+    </qual:listOfInputs>
+    <qual:listOfOutputs>
+      <qual:output metaid="_713bc623_14b4_4221_a15b_fe8a53926626" qual:qualitativeSpecies="map3k7" qual:transitionEffect="assignmentLevel"/>
+    </qual:listOfOutputs>
+    <qual:listOfFunctionTerms>
+      <qual:defaultTerm metaid="_5ae55a0d_763b_4a0c_871b_d123f9bcb9f3" qual:resultLevel="0"/>
+      <qual:functionTerm metaid="e5adfd4a_63db_469d_b0ca_ea152ec0b0ad" qual:resultLevel="1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <geq/>
+            <ci> traf2 </ci>
+            <ci> theta_t12_traf2 </ci>
+          </apply>
+        </math>
+      </qual:functionTerm>
+    </qual:listOfFunctionTerms>
+  </qual:transition>
+  <qual:transition metaid="_5096c3e2_8de1_4f26_98e2_b054d20e22fe" qual:id="t13">
+    <qual:listOfInputs>
+      <qual:input metaid="c5eacb98_8576_4808_8ff4_1e7a4e875d75" qual:id="theta_t13_ph" qual:qualitativeSpecies="ph" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+      <qual:input metaid="fad025e5_8532_4ad4_8178_fa8edc9f2107" qual:id="theta_t13_egfr" qual:qualitativeSpecies="egfr" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+    </qual:listOfInputs>
+    <qual:listOfOutputs>
+      <qual:output metaid="_85f18665_676b_4a8b_ab52_11ce974aefc5" qual:qualitativeSpecies="sos" qual:transitionEffect="assignmentLevel"/>
+    </qual:listOfOutputs>
+    <qual:listOfFunctionTerms>
+      <qual:defaultTerm metaid="c6ff5fca_c895_4770_9fe0_80c5229a7f48" qual:resultLevel="0"/>
+      <qual:functionTerm metaid="c7ff6496_610d_4112_8872_2e6f3db08e1f" qual:resultLevel="1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <or/>
+            <apply>
+              <geq/>
+              <ci> egfr </ci>
+              <ci> theta_t13_egfr </ci>
+            </apply>
+            <apply>
+              <lt/>
+              <ci> ph </ci>
+              <ci> theta_t13_ph </ci>
+            </apply>
+          </apply>
+        </math>
+      </qual:functionTerm>
+    </qual:listOfFunctionTerms>
+  </qual:transition>
+  <qual:transition metaid="_2f11601d_69b4_49a2_a4e6_d9892fefca73" qual:id="t14">
+    <qual:listOfInputs>
+      <qual:input metaid="a04221b4_1e9c_4b31_9d6e_9da312d577d2" qual:id="theta_t14_pi3k" qual:qualitativeSpecies="pi3k" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+    </qual:listOfInputs>
+    <qual:listOfOutputs>
+      <qual:output metaid="_511514fd_a95f_4f15_99d2_c6fd948506f2" qual:qualitativeSpecies="rac" qual:transitionEffect="assignmentLevel"/>
+    </qual:listOfOutputs>
+    <qual:listOfFunctionTerms>
+      <qual:defaultTerm metaid="_8cfc27f0_e278_4800_afaf_9c6a62bf7688" qual:resultLevel="0"/>
+      <qual:functionTerm metaid="f1e68ad3_0e98_45e8_8265_d98649a74bcc" qual:resultLevel="1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <geq/>
+            <ci> pi3k </ci>
+            <ci> theta_t14_pi3k </ci>
+          </apply>
+        </math>
+      </qual:functionTerm>
+    </qual:listOfFunctionTerms>
+  </qual:transition>
+  <qual:transition metaid="_994b8df9_cd01_4953_b61a_ca63a496b55f" qual:id="t15">
+    <qual:listOfInputs>
+      <qual:input metaid="_4fbfeba5_3d30_4b1f_ab7d_7adfba6957e5" qual:id="theta_t15_pi3k" qual:qualitativeSpecies="pi3k" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+    </qual:listOfInputs>
+    <qual:listOfOutputs>
+      <qual:output metaid="_6072173d_6663_4540_8d98_01d9659d34f9" qual:qualitativeSpecies="akt" qual:transitionEffect="assignmentLevel"/>
+    </qual:listOfOutputs>
+    <qual:listOfFunctionTerms>
+      <qual:defaultTerm metaid="_02bb7d56_1096_4b9d_8112_4e68616e81d4" qual:resultLevel="0"/>
+      <qual:functionTerm metaid="_2e1e1d08_d4f1_4c79_b645_734e6bfffdfd" qual:resultLevel="1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <geq/>
+            <ci> pi3k </ci>
+            <ci> theta_t15_pi3k </ci>
+          </apply>
+        </math>
+      </qual:functionTerm>
+    </qual:listOfFunctionTerms>
+  </qual:transition>
+  <qual:transition metaid="aac4d79e_6388_479c_95ea_68ec2674c1fc" qual:id="t16">
+    <qual:listOfInputs>
+      <qual:input metaid="_2d78f4a8_3bf3_4a84_988a_1d51eae623e1" qual:id="theta_t16_ikb" qual:qualitativeSpecies="ikb" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+    </qual:listOfInputs>
+    <qual:listOfOutputs>
+      <qual:output metaid="efc6b4d5_6616_483b_a4a7_315eea7fa8c3" qual:qualitativeSpecies="nfkb" qual:transitionEffect="assignmentLevel"/>
+    </qual:listOfOutputs>
+    <qual:listOfFunctionTerms>
+      <qual:defaultTerm metaid="ce525959_ac5d_4f2c_bcf4_418711a3250d" qual:resultLevel="0"/>
+      <qual:functionTerm metaid="_56eca422_2188_44be_be6a_0010fd5d58b7" qual:resultLevel="1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <lt/>
+            <ci> ikb </ci>
+            <ci> theta_t16_ikb </ci>
+          </apply>
+        </math>
+      </qual:functionTerm>
+    </qual:listOfFunctionTerms>
+  </qual:transition>
+  <qual:transition metaid="b9aa5c5e_b025_4e27_ac6e_2e4a519a94c2" qual:id="t17">
+    <qual:listOfInputs>
+      <qual:input metaid="_798a897a_3efd_41d2_b000_091bf0bf5690" qual:id="theta_t17_mek" qual:qualitativeSpecies="mek" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+    </qual:listOfInputs>
+    <qual:listOfOutputs>
+      <qual:output metaid="c2b4bd0d_3f34_42d7_b800_f4d35b7f4f87" qual:qualitativeSpecies="p90rsk" qual:transitionEffect="assignmentLevel"/>
+    </qual:listOfOutputs>
+    <qual:listOfFunctionTerms>
+      <qual:defaultTerm metaid="c805c775_f53c_4ab0_9ee9_a7f16f5116a5" qual:resultLevel="0"/>
+      <qual:functionTerm metaid="_75d11298_3353_4520_bb2b_c9762b8f70a3" qual:resultLevel="1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <geq/>
+            <ci> mek </ci>
+            <ci> theta_t17_mek </ci>
+          </apply>
+        </math>
+      </qual:functionTerm>
+    </qual:listOfFunctionTerms>
+  </qual:transition>
+  <qual:transition metaid="b9a934c3_db1a_4559_ae40_384fefca4bdd" qual:id="t18">
+    <qual:listOfInputs>
+      <qual:input metaid="_9fd7692a_db5e_491a_978f_534fec340548" qual:id="theta_t18_mek" qual:qualitativeSpecies="mek" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+    </qual:listOfInputs>
+    <qual:listOfOutputs>
+      <qual:output metaid="_74b05187_6106_4412_a22e_f9cb140176ce" qual:qualitativeSpecies="erk" qual:transitionEffect="assignmentLevel"/>
+    </qual:listOfOutputs>
+    <qual:listOfFunctionTerms>
+      <qual:defaultTerm metaid="_5dd2f7d7_1a33_4728_abeb_7690a7bf41e0" qual:resultLevel="0"/>
+      <qual:functionTerm metaid="_4e0064cc_b589_4409_96ca_3f7cddf9a798" qual:resultLevel="1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <geq/>
+            <ci> mek </ci>
+            <ci> theta_t18_mek </ci>
+          </apply>
+        </math>
+      </qual:functionTerm>
+    </qual:listOfFunctionTerms>
+  </qual:transition>
+  <qual:transition metaid="_7cdf061d_75d1_46eb_b87e_00e3b9464b0a" qual:id="t19">
+    <qual:listOfInputs>
+      <qual:input metaid="e8597667_0aa4_4d9a_9231_fb82ffbba563" qual:id="theta_t19_erk" qual:qualitativeSpecies="erk" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+    </qual:listOfInputs>
+    <qual:listOfOutputs>
+      <qual:output metaid="_53c0ff89_878c_49e5_8dfa_d736c787a2b8" qual:qualitativeSpecies="ph" qual:transitionEffect="assignmentLevel"/>
+    </qual:listOfOutputs>
+    <qual:listOfFunctionTerms>
+      <qual:defaultTerm metaid="accaf66c_1095_4607_8463_06d84b0ac8c2" qual:resultLevel="0"/>
+      <qual:functionTerm metaid="b5e23c0e_1165_41cd_967f_c98c89423118" qual:resultLevel="1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <geq/>
+            <ci> erk </ci>
+            <ci> theta_t19_erk </ci>
+          </apply>
+        </math>
+      </qual:functionTerm>
+    </qual:listOfFunctionTerms>
+  </qual:transition>
+  <qual:transition metaid="_336e8fa4_0da1_442b_b30f_a5020236409b" qual:id="t20">
+    <qual:listOfInputs>
+      <qual:input metaid="_3c1bccab_dde7_40e6_91ea_4ffae6dff910" qual:id="theta_t20_ras" qual:qualitativeSpecies="ras" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+    </qual:listOfInputs>
+    <qual:listOfOutputs>
+      <qual:output metaid="_9ddc0e22_72a0_46bb_804f_e3c8039013bd" qual:qualitativeSpecies="raf1" qual:transitionEffect="assignmentLevel"/>
+    </qual:listOfOutputs>
+    <qual:listOfFunctionTerms>
+      <qual:defaultTerm metaid="_48ffb23a_1a93_4dcb_b45f_67e8facf53b3" qual:resultLevel="0"/>
+      <qual:functionTerm metaid="_635d77be_81fe_47d1_90e5_ad23a864010d" qual:resultLevel="1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <geq/>
+            <ci> ras </ci>
+            <ci> theta_t20_ras </ci>
+          </apply>
+        </math>
+      </qual:functionTerm>
+    </qual:listOfFunctionTerms>
+  </qual:transition>
+  <qual:transition metaid="_719b27ff_3d1d_499b_a0ff_fa448ba23583" qual:id="t21">
+    <qual:listOfInputs>
+      <qual:input metaid="_14f22148_4f09_42bf_aaa2_cd2624a5476d" qual:id="theta_t21_map3k1" qual:qualitativeSpecies="map3k1" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+    </qual:listOfInputs>
+    <qual:listOfOutputs>
+      <qual:output metaid="d0bd50f1_b61e_4612_9691_a1409e234beb" qual:qualitativeSpecies="mkk7" qual:transitionEffect="assignmentLevel"/>
+    </qual:listOfOutputs>
+    <qual:listOfFunctionTerms>
+      <qual:defaultTerm metaid="d951118c_b3c6_437a_a6da_1aff0b3ad47d" qual:resultLevel="0"/>
+      <qual:functionTerm metaid="_64b0fc0e_f479_4eb3_83b8_764b5f991060" qual:resultLevel="1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <geq/>
+            <ci> map3k1 </ci>
+            <ci> theta_t21_map3k1 </ci>
+          </apply>
+        </math>
+      </qual:functionTerm>
+    </qual:listOfFunctionTerms>
+  </qual:transition>
+  <qual:transition metaid="bd49e6f8_fbcb_4264_9165_fd629c57b409" qual:id="t22">
+    <qual:listOfInputs>
+      <qual:input metaid="a33d8a3d_ad6f_4a03_a170_4e364e94026e" qual:id="theta_t22_raf1" qual:qualitativeSpecies="raf1" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+    </qual:listOfInputs>
+    <qual:listOfOutputs>
+      <qual:output metaid="ebe9d8d4_f8eb_4097_ae24_15738cda458f" qual:qualitativeSpecies="mek" qual:transitionEffect="assignmentLevel"/>
+    </qual:listOfOutputs>
+    <qual:listOfFunctionTerms>
+      <qual:defaultTerm metaid="_21f498bc_b274_4d7e_aeeb_5ca00fd93406" qual:resultLevel="0"/>
+      <qual:functionTerm metaid="_4446d1fc_5df0_4d74_9640_161e4781660a" qual:resultLevel="1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <geq/>
+            <ci> raf1 </ci>
+            <ci> theta_t22_raf1 </ci>
+          </apply>
+        </math>
+      </qual:functionTerm>
+    </qual:listOfFunctionTerms>
+  </qual:transition>
+  <qual:transition metaid="ebf56d67_183a_4b77_a647_9f051a3928e7" qual:id="t23">
+    <qual:listOfInputs>
+      <qual:input metaid="_5e3e2375_3587_4da8_9770_6324ed1dbad0" qual:id="theta_t23_tnfa" qual:qualitativeSpecies="tnfa" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+    </qual:listOfInputs>
+    <qual:listOfOutputs>
+      <qual:output metaid="_83dc3345_50d4_4311_8d7f_51ea87cc625c" qual:qualitativeSpecies="tnfr" qual:transitionEffect="assignmentLevel"/>
+    </qual:listOfOutputs>
+    <qual:listOfFunctionTerms>
+      <qual:defaultTerm metaid="_992596f1_cc07_4ed4_98bd_e7d17a6222ae" qual:resultLevel="0"/>
+      <qual:functionTerm metaid="_78bcae8b_a0b4_45dd_ac04_1031545ababf" qual:resultLevel="1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <geq/>
+            <ci> tnfa </ci>
+            <ci> theta_t23_tnfa </ci>
+          </apply>
+        </math>
+      </qual:functionTerm>
+    </qual:listOfFunctionTerms>
+  </qual:transition>
+  <qual:transition metaid="c0e195ba_1f84_4a78_a97f_ea054bce63f6" qual:id="t24">
+    <qual:listOfInputs>
+      <qual:input metaid="_6d31480e_3de8_4030_ae22_4ba4a2b0ad39" qual:id="theta_t24_akt" qual:qualitativeSpecies="akt" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+    </qual:listOfInputs>
+    <qual:listOfOutputs>
+      <qual:output metaid="_8e3d1e53_6d56_4c71_86f4_f5b83b8eb759" qual:qualitativeSpecies="gsk3" qual:transitionEffect="assignmentLevel"/>
+    </qual:listOfOutputs>
+    <qual:listOfFunctionTerms>
+      <qual:defaultTerm metaid="_9017f704_a079_4c1d_959c_66b234b79fb0" qual:resultLevel="0"/>
+      <qual:functionTerm metaid="_2b520a26_49ec_44ae_bd48_2f4d85285525" qual:resultLevel="1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <lt/>
+            <ci> akt </ci>
+            <ci> theta_t24_akt </ci>
+          </apply>
+        </math>
+      </qual:functionTerm>
+    </qual:listOfFunctionTerms>
+  </qual:transition>
+  <qual:transition metaid="_6f8480ef_9e5f_4efe_b819_00617013f8d5" qual:id="t25">
+    <qual:listOfInputs>
+      <qual:input metaid="edea9b33_fd67_4589_859f_3611d4c825d7" qual:id="theta_t25_egf" qual:qualitativeSpecies="egf" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+    </qual:listOfInputs>
+    <qual:listOfOutputs>
+      <qual:output metaid="e37e40a8_1e21_4047_8120_46a94ac62b9c" qual:qualitativeSpecies="egfr" qual:transitionEffect="assignmentLevel"/>
+    </qual:listOfOutputs>
+    <qual:listOfFunctionTerms>
+      <qual:defaultTerm metaid="_8ae81533_29d9_4d97_b3fc_46408f87b2ff" qual:resultLevel="0"/>
+      <qual:functionTerm metaid="ad875e87_9bac_4bd0_be1b_6856810e99b9" qual:resultLevel="1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <geq/>
+            <ci> egf </ci>
+            <ci> theta_t25_egf </ci>
+          </apply>
+        </math>
+      </qual:functionTerm>
+    </qual:listOfFunctionTerms>
+  </qual:transition>
+  <qual:transition metaid="e756b0d8_e1f5_44e6_8bcd_0b4c0743c423" qual:id="t26">
+    <qual:listOfInputs>
+      <qual:input metaid="_912cd097_ebf0_4b12_9560_a78d8ff7008f" qual:id="theta_t26_nfkb" qual:qualitativeSpecies="nfkb" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+    </qual:listOfInputs>
+    <qual:listOfOutputs>
+      <qual:output metaid="_7e231d5e_fcc7_441e_bfc9_0f2f40f40313" qual:qualitativeSpecies="ex" qual:transitionEffect="assignmentLevel"/>
+    </qual:listOfOutputs>
+    <qual:listOfFunctionTerms>
+      <qual:defaultTerm metaid="_8e73fa16_09f0_4d6f_af33_f2c36ae7e247" qual:resultLevel="0"/>
+      <qual:functionTerm metaid="_0528cc35_b33f_46a5_9bbd_60758811c95e" qual:resultLevel="1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <geq/>
+            <ci> nfkb </ci>
+            <ci> theta_t26_nfkb </ci>
+          </apply>
+        </math>
+      </qual:functionTerm>
+    </qual:listOfFunctionTerms>
+  </qual:transition>
+  <qual:transition metaid="_732b881e_52d4_41bb_9493_506e6bdbc571" qual:id="t27">
+    <qual:listOfInputs>
+      <qual:input metaid="_9adf4c6e_9b56_497a_8534_4173300219a3" qual:id="theta_t27_cjun" qual:qualitativeSpecies="cjun" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+    </qual:listOfInputs>
+    <qual:listOfOutputs>
+      <qual:output metaid="_590bcaf1_6eab_4922_94af_8d52fe56b565" qual:qualitativeSpecies="ap1" qual:transitionEffect="assignmentLevel"/>
+    </qual:listOfOutputs>
+    <qual:listOfFunctionTerms>
+      <qual:defaultTerm metaid="b35463ad_52ab_49bf_9772_a9d8713bfdfe" qual:resultLevel="0"/>
+      <qual:functionTerm metaid="_008d2310_779f_49b6_852d_ceddee7b035a" qual:resultLevel="1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <geq/>
+            <ci> cjun </ci>
+            <ci> theta_t27_cjun </ci>
+          </apply>
+        </math>
+      </qual:functionTerm>
+    </qual:listOfFunctionTerms>
+  </qual:transition>
+  <qual:transition metaid="_46aa3d79_e219_4ed3_954f_b9099a5c05ca" qual:id="t28">
+    <qual:listOfInputs>
+      <qual:input metaid="d06f2d17_90b0_4b6c_9ec0_349e8f19374f" qual:id="theta_t28_sos" qual:qualitativeSpecies="sos" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+    </qual:listOfInputs>
+    <qual:listOfOutputs>
+      <qual:output metaid="d4d6dcf6_f6b0_4b4f_b5b0_066b36113892" qual:qualitativeSpecies="ras" qual:transitionEffect="assignmentLevel"/>
+    </qual:listOfOutputs>
+    <qual:listOfFunctionTerms>
+      <qual:defaultTerm metaid="dc4c106d_c446_4b9c_88a9_b68db072fd12" qual:resultLevel="0"/>
+      <qual:functionTerm metaid="bff16a9f_22dd_4a2d_9db3_e7e68b05367f" qual:resultLevel="1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <geq/>
+            <ci> sos </ci>
+            <ci> theta_t28_sos </ci>
+          </apply>
+        </math>
+      </qual:functionTerm>
+    </qual:listOfFunctionTerms>
+  </qual:transition>
+</qual:listOfTransitions>
+</model>
+</sbml>

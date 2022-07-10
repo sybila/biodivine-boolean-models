@@ -4,8 +4,8 @@
  - Inputs: 15
  - Regulations: 212
  - Publication: https://doi.org/10.1126/scisignal.aar3641
- - Source: http://ginsim.org/node/225
- - Keywords: ginsim, curated
+ - Source: ['http://ginsim.org/node/225', 'https://www.ebi.ac.uk/biomodels/MODEL1903260001']
+ - Keywords: ginsim, biomodels, curated
 
 
 ### Modifications

@@ -1,0 +1,321 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" qual:required="true" level="3" xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1" metaid="_207cd4f5-3039-436a-887b-f3d8fae3cb3a" version="1">
+  <model id="MODEL1504170002" name="Azpeitia2010 - Gene regulatory network to maintain the root  stem cell niche (RSCN_GRN_2010c)" metaid="_6cd5c77b-e0d5-470c-910b-b4f5bceec43b">
+    <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+	<rdf:Description rdf:about="#_6cd5c77b-e0d5-470c-910b-b4f5bceec43b">
+	<bqmodel:is>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/biomodels.db/MODEL1504170002"/>
+	</rdf:Bag>
+	</bqmodel:is>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+      <qual:listOfQualitativeSpecies xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:qualitativeSpecies qual:constant="false" metaid="d63324f5-ef50-4818-b49a-4dd7436d0520" qual:compartment="default" qual:maxLevel="1" qual:name="SCR" qual:id="SCR"/>
+      <qual:qualitativeSpecies qual:constant="false" metaid="_4236b7f7-c397-4692-ad9f-7417298b5f35" qual:compartment="default" qual:maxLevel="1" qual:name="PLT" qual:id="PLT"/>
+      <qual:qualitativeSpecies qual:constant="false" metaid="_67428e8e-7942-4c87-a4ab-f737f88a9d57" qual:compartment="default" qual:maxLevel="1" qual:name="ARF" qual:id="ARF"/>
+      <qual:qualitativeSpecies qual:constant="false" metaid="_86a0bb20-d656-4c77-be9f-01c239294841" qual:compartment="default" qual:maxLevel="1" qual:name="AUXIAA" qual:id="AUXIAA"/>
+      <qual:qualitativeSpecies qual:constant="false" metaid="_90c83eda-99ab-4236-9410-f9649483f630" qual:compartment="default" qual:maxLevel="1" qual:name="AUXIN" qual:id="AUXIN"/>
+      <qual:qualitativeSpecies qual:constant="false" metaid="_3bdffe32-ed1b-4fa7-8547-3f2dd45235ed" qual:compartment="default" qual:maxLevel="1" qual:name="SHR" qual:id="SHR"/>
+      <qual:qualitativeSpecies qual:constant="false" metaid="_3c7dd46f-e8be-458f-ae29-cf4672d41679" qual:compartment="default" qual:maxLevel="1" qual:name="JKD" qual:id="JKD"/>
+      <qual:qualitativeSpecies qual:constant="false" metaid="_33c9e605-0dea-4a14-8416-ffcca8d715f9" qual:compartment="default" qual:maxLevel="1" qual:name="MGP" qual:id="MGP"/>
+      <qual:qualitativeSpecies qual:constant="false" metaid="_497b5f77-498f-4261-9f65-f96abf25e308" qual:compartment="default" qual:maxLevel="1" qual:name="WOX5" qual:id="WOX5"/>
+      <qual:qualitativeSpecies qual:constant="false" metaid="eea45e10-4c67-47c2-941a-a9ddebdfa78d" qual:compartment="default" qual:maxLevel="1" qual:name="CLEX" qual:id="CLEX"/>
+    </qual:listOfQualitativeSpecies>
+    <qual:listOfTransitions xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:transition metaid="eb90a4e8-bdaf-4164-894a-361f375f7b1e" qual:name="Interactions targeting SCR" qual:id="tr_SCR">
+        <qual:listOfInputs>
+          <qual:input metaid="e25623f3-2a92-43a1-b804-e309d61e3671" qual:transitionEffect="none" qual:qualitativeSpecies="SCR"/>
+          <qual:input metaid="ce02f1e9-44a6-4996-add8-763d72685152" qual:transitionEffect="none" qual:qualitativeSpecies="SHR"/>
+          <qual:input metaid="_5fcc49a2-335f-4fbd-9066-91430cbc2486" qual:transitionEffect="none" qual:qualitativeSpecies="JKD"/>
+          <qual:input metaid="c7eb98e6-960e-42eb-8a4d-2e54d5c9e7ce" qual:transitionEffect="none" qual:qualitativeSpecies="MGP"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="_88e5f8b6-05d1-453c-adf7-5a864a1c0b04" qual:transitionEffect="assignmentLevel" qual:qualitativeSpecies="SCR"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="c3331c27-04ed-4b1a-9e7f-31abdd87a8f0" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> SHR </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> SCR </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <or/>
+                  <apply>
+                    <eq/>
+                    <ci> JKD </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> MGP </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_0b99479f-c45e-4ce9-a4bf-3c5af4818bb6" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="f63e5a02-44ee-4458-bde2-969b688c0a10" qual:name="Interactions targeting PLT" qual:id="tr_PLT">
+        <qual:listOfInputs>
+          <qual:input metaid="_9facf1b4-3485-49d3-ad17-cfdcd136b0a1" qual:transitionEffect="none" qual:qualitativeSpecies="ARF"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="_182e5fe0-bb32-4b79-a230-ede7a4c82f61" qual:transitionEffect="assignmentLevel" qual:qualitativeSpecies="PLT"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="_619d2011-6616-4f42-b83c-66425adf42aa" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> ARF </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_299e3c1d-172b-4a81-a1f6-853888fd2af4" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_7e912578-08e9-4e33-a2ed-035eb2892d33" qual:name="Interactions targeting ARF" qual:id="tr_ARF">
+        <qual:listOfInputs>
+          <qual:input metaid="_9616b0a5-45cd-4cfd-ad16-95f916094833" qual:transitionEffect="none" qual:qualitativeSpecies="AUXIAA"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="_1291d00e-8e4c-4573-85ba-631972545f49" qual:transitionEffect="assignmentLevel" qual:qualitativeSpecies="ARF"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="abb851a9-c278-48e5-a21f-b9848c7c4509" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> AUXIAA </ci>
+                <cn type="integer"> 0 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="a660a892-3043-4d64-8ccb-329d717b0a56" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="a3aef937-7b6e-4921-915b-ba1beba4d429" qual:name="Interactions targeting AUXIAA" qual:id="tr_AUXIAA">
+        <qual:listOfInputs>
+          <qual:input metaid="_808c2534-342a-4b73-bd70-066b0765c9bb" qual:transitionEffect="none" qual:qualitativeSpecies="AUXIN"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="fc1cb8d0-005e-4698-b1c6-0183acef85f3" qual:transitionEffect="assignmentLevel" qual:qualitativeSpecies="AUXIAA"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="_22c78afa-6883-42e7-b35d-72a0e3508281" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> AUXIN </ci>
+                <cn type="integer"> 0 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_50d15675-1950-4aa7-912b-c98ccb6b8c3e" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_94c40054-3004-484a-b02a-9423999b12a2" qual:name="Interactions targeting AUXIN" qual:id="tr_AUXIN">
+        <qual:listOfInputs>
+          <qual:input metaid="_556064a3-ba93-42fb-8a2c-2ecd3d592bf7" qual:transitionEffect="none" qual:qualitativeSpecies="AUXIN"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="_2e6f42c9-d8ed-48f6-a07d-e404554f050f" qual:transitionEffect="assignmentLevel" qual:qualitativeSpecies="AUXIN"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="a6a5c7e8-4be6-40cb-8d3e-b27f40928492" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> AUXIN </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_420effff-7f18-45db-9b19-d516563b3f33" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_737df6f1-ebcf-45f5-9c3a-225a34963b6b" qual:name="Interactions targeting SHR" qual:id="tr_SHR">
+        <qual:listOfInputs>
+          <qual:input metaid="_37ba7d69-6a3d-482a-ad98-854be2e53cc3" qual:transitionEffect="none" qual:qualitativeSpecies="SHR"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="_044bdf8f-1675-4d7b-88b9-8838fa0311fa" qual:transitionEffect="assignmentLevel" qual:qualitativeSpecies="SHR"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="_098092b3-8346-4218-b14c-7c1942a84ae8" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> SHR </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_771bb78a-8e47-45c3-9c93-da65cded5803" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_3df0995c-4d99-40d1-afeb-4358e8e03afc" qual:name="Interactions targeting JKD" qual:id="tr_JKD">
+        <qual:listOfInputs>
+          <qual:input metaid="f2d5680f-49b1-4e74-85ea-06523a0c9abb" qual:transitionEffect="none" qual:qualitativeSpecies="SCR"/>
+          <qual:input metaid="_61ca52d9-b64f-4def-abca-076936da59b1" qual:transitionEffect="none" qual:qualitativeSpecies="SHR"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="_2b8bb7e4-ce64-46cd-964f-eea6b2c1b717" qual:transitionEffect="assignmentLevel" qual:qualitativeSpecies="JKD"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="_8210c337-f90c-4456-83be-bb583b4e0842" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> SHR </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> SCR </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_1d4287a6-0720-4269-8246-60e55c8a722d" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="a5878efa-4b1e-408e-8e37-2e4f59f859e8" qual:name="Interactions targeting MGP" qual:id="tr_MGP">
+        <qual:listOfInputs>
+          <qual:input metaid="b86b7ca9-ae42-4120-aeb0-573e438380c5" qual:transitionEffect="none" qual:qualitativeSpecies="SCR"/>
+          <qual:input metaid="a1e50e65-0aa9-4074-8f1a-9801a6d66edf" qual:transitionEffect="none" qual:qualitativeSpecies="SHR"/>
+          <qual:input metaid="_9e7ca032-88b6-4983-8222-bbfab478ee01" qual:transitionEffect="none" qual:qualitativeSpecies="WOX5"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="a7705b7b-3d4b-4590-bde8-508be4acd45d" qual:transitionEffect="assignmentLevel" qual:qualitativeSpecies="MGP"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="_5a870480-25db-4ad9-8d55-eadccbed0c22" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> SHR </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> SCR </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> WOX5 </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_127e53ad-4cb5-418d-9016-780c93ea86b6" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_876e16fb-7079-4bd2-b10b-6af41ddf9ece" qual:name="Interactions targeting WOX5" qual:id="tr_WOX5">
+        <qual:listOfInputs>
+          <qual:input metaid="_1ac7565c-d412-486d-93d1-e33ed88554c2" qual:transitionEffect="none" qual:qualitativeSpecies="SCR"/>
+          <qual:input metaid="fe19c5ab-7263-471b-887d-3f6b04a81af2" qual:transitionEffect="none" qual:qualitativeSpecies="ARF"/>
+          <qual:input metaid="_4c49cd6f-3771-4d6a-9d93-e569c1476eba" qual:transitionEffect="none" qual:qualitativeSpecies="SHR"/>
+          <qual:input metaid="_42369c7c-dcc8-4e08-b024-9543c9d2f600" qual:transitionEffect="none" qual:qualitativeSpecies="CLEX"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="_78cb0b22-2087-453c-940c-d9739c56a9ed" qual:transitionEffect="assignmentLevel" qual:qualitativeSpecies="WOX5"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="b02c0609-9bb8-439d-9e1c-9dfde3d3b704" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> ARF </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> SHR </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> SCR </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> CLEX </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="a6e7dfbc-b5ea-4d12-b199-eafc185b8ae7" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_39a72e82-0715-457b-b8ce-44bfe8c095c3" qual:name="Interactions targeting CLEX" qual:id="tr_CLEX">
+        <qual:listOfInputs>
+          <qual:input metaid="d6029a0e-3661-42a7-ad1e-cb0e9fa73c2f" qual:transitionEffect="none" qual:qualitativeSpecies="SHR"/>
+          <qual:input metaid="_41b52277-ca5c-4f4a-b5a3-ef3af27cc86b" qual:transitionEffect="none" qual:qualitativeSpecies="CLEX"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="_468cdc0c-1f7f-4fca-9c15-b0b08e8e3828" qual:transitionEffect="assignmentLevel" qual:qualitativeSpecies="CLEX"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="_94305e35-8ea1-4af4-a489-07607d0a8cc2" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> SHR </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> CLEX </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_919a1828-5ad5-4922-ad8a-1e83c6cd0223" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+    </qual:listOfTransitions>
+    <listOfCompartments>
+      <compartment id="default" constant="true" metaid="_03209d9a-7249-4654-a4fa-5279d3b5f6c8"/>
+    </listOfCompartments>
+  </model>
+</sbml>

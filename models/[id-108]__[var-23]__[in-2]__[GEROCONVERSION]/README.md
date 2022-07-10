@@ -4,8 +4,8 @@
  - Inputs: 2
  - Regulations: 67
  - Publication: http://dx.doi.org/10.1111/acel.12504
- - Source: http://ginsim.org/model/T2DM
- - Keywords: ginsim, curated, repaired
+ - Source: ['http://ginsim.org/model/T2DM', 'https://www.ebi.ac.uk/biomodels/MODEL1611180000']
+ - Keywords: ginsim, biomodels, curated, repaired
 
 
 ### Modifications

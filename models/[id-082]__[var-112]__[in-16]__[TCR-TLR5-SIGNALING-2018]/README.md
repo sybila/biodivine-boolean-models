@@ -4,8 +4,8 @@
  - Inputs: 16
  - Regulations: 257
  - Publication: https://doi.org/10.1126/scisignal.aar3641
- - Source: http://ginsim.org/node/225
- - Keywords: ginsim, curated, repaired
+ - Source: ['http://ginsim.org/node/225', 'https://www.ebi.ac.uk/biomodels/MODEL1903260003']
+ - Keywords: ginsim, biomodels, curated, repaired
 
 
 ### Modifications

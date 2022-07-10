@@ -1,0 +1,2074 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" metaid="da2a8384-7534-4968-b7bf-ba620f1da247" qual:required="true" version="1" xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+  <model id="MODEL1610060001" metaid="c11da207-bd45-40f7-bf81-d2abde348e3f" name="Hamey2017 - Blood stem cell regulatory network (LMPP network)">
+    <notes>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+        <div class="dc:title">Hamey2017 - Blood stem cell regulatory
+network (LMPP network)</div>
+<div class="dc:bibliographicCitation">
+  <p>This model is described in the article:</p>
+  <div class="bibo:title">
+    <a href="http://identifiers.org/doi/10.1073/pnas.1610609114" title="Access to this publication">Reconstructing blood stem
+    cell regulatory network models from single-cell molecular
+    profiles</a>
+  </div>
+  <div class="bibo:authorList">Fiona K. Hamey, Sonia Nestorowa,
+  Sarah J. Kinston, David G. Kent, Nicola K. Wilson, and Berthold
+  Göttgens</div>
+  <div class="bibo:Journal">Proceedings of the National Academy of
+  Sciences of the United States of America</div>
+  <p>Abstract:</p>
+  <div class="bibo:abstract">
+    <p>Adult blood contains a mixture of mature cell types, each
+    with specialized functions. Single hematopoietic stem cells
+    (HSCs) have been functionally shown to generate all mature cell
+    types for the lifetime of the organism. Differentiation of HSCs
+    toward alternative lineages must be balanced at the population
+    level by the fate decisions made by individual cells.
+    Transcription factors play a key role in regulating these
+    decisions and operate within organized regulatory programs that
+    can be modeled as transcriptional regulatory networks. As
+    dysregulation of single HSC fate decisions is linked to fatal
+    malignancies such as leukemia, it is important to understand
+    how these decisions are controlled on a cell-by-cell basis.
+    Here we developed and applied a network inference method,
+    exploiting the ability to infer dynamic information from
+    single-cell snapshot expression data based on expression
+    profiles of 48 genes in 2,167 blood stem and progenitor cells.
+    This approach allowed us to infer transcriptional regulatory
+    network models that recapitulated differentiation of HSCs into
+    progenitor cell types, focusing on trajectories toward
+    megakaryocyte–erythrocyte progenitors and lymphoid-primed
+    multipotent progenitors. By comparing these two models, we
+    identified and subsequently experimentally validated a
+    difference in the regulation of nuclear factor, erythroid 2
+    (Nfe2) and core-binding factor, runt domain, alpha subunit 2,
+    translocated to, 3 homolog (Cbfa2t3h) by the transcription
+    factor Gata2. Our approach confirms known aspects of
+    hematopoiesis, provides hypotheses about regulation of HSC
+    differentiation, and is widely applicable to other hierarchical
+    biological systems to uncover regulatory relationships.</p>
+  </div>
+</div>
+<div class="dc:publisher">
+  <p>This model is hosted on 
+  <a href="http://www.ebi.ac.uk/biomodels/">BioModels Database</a>
+  and identified by: 
+  <a href="http://identifiers.org/biomodels.db/MODEL1610060001">MODEL1610060001</a>.</p>
+  <p>To cite BioModels Database, please use: 
+  <a href="http://identifiers.org/pubmed/20587024" title="Latest BioModels Database publication">BioModels Database:
+  An enhanced, curated and annotated resource for published
+  quantitative kinetic models</a>.</p>
+</div>
+<div class="dc:license">
+  <p>To the extent possible under law, all copyright and related or
+  neighbouring rights to this encoded model have been dedicated to
+  the public domain worldwide. Please refer to 
+  <a href="http://creativecommons.org/publicdomain/zero/1.0/" title="Access to: CC0 1.0 Universal (CC0 1.0), Public Domain Dedication">CC0
+  Public Domain Dedication</a> for more information.</p>
+</div>
+</body>
+    </notes>
+    <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+        <rdf:Description rdf:about="#c11da207-bd45-40f7-bf81-d2abde348e3f">
+	<bqmodel:is>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/biomodels.db/MODEL1610060001"/>
+	</rdf:Bag>
+	</bqmodel:is>
+	</rdf:Description>
+	
+	
+	
+	
+	</rdf:RDF>
+	</annotation>
+      <qual:listOfQualitativeSpecies xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:qualitativeSpecies metaid="c046f9e5-cb48-4221-800d-c08a42915a08" qual:compartment="default" qual:constant="false" qual:id="Bptf" qual:maxLevel="1" qual:name="Bptf"/>
+      <qual:qualitativeSpecies metaid="ae73c616-ccd0-421b-9a0c-803e92c5396a" qual:compartment="default" qual:constant="false" qual:id="Cbfa2t3h" qual:maxLevel="1" qual:name="Cbfa2t3h"/>
+      <qual:qualitativeSpecies metaid="e794dd8d-d3c1-4536-b972-0be6a8617575" qual:compartment="default" qual:constant="false" qual:id="Erg" qual:maxLevel="1" qual:name="Erg"/>
+      <qual:qualitativeSpecies metaid="_06eff038-8e20-4b52-add3-4d66cdb84a2b" qual:compartment="default" qual:constant="false" qual:id="Ets1" qual:maxLevel="1" qual:name="Ets1"/>
+      <qual:qualitativeSpecies metaid="_0d870e19-2fe4-47c0-b96c-74b3138f036f" qual:compartment="default" qual:constant="false" qual:id="Ets2" qual:maxLevel="1" qual:name="Ets2"/>
+      <qual:qualitativeSpecies metaid="_9416516b-346e-4e96-9d9c-a63a1c1a5f84" qual:compartment="default" qual:constant="false" qual:id="Etv6" qual:maxLevel="1" qual:name="Etv6"/>
+      <qual:qualitativeSpecies metaid="_9bb602f5-2657-49f5-b3a0-1a696507f5fe" qual:compartment="default" qual:constant="false" qual:id="Fli1" qual:maxLevel="1" qual:name="Fli1"/>
+      <qual:qualitativeSpecies metaid="_9c7eb9e1-bed4-49a7-ae0e-c16971a7103d" qual:compartment="default" qual:constant="false" qual:id="Gata1" qual:maxLevel="1" qual:name="Gata1"/>
+      <qual:qualitativeSpecies metaid="_61a71f36-abe4-4ae8-b592-fa004abb6b51" qual:compartment="default" qual:constant="false" qual:id="Gata2" qual:maxLevel="1" qual:name="Gata2"/>
+      <qual:qualitativeSpecies metaid="_6872f991-824f-4a7e-8a57-7f70cb6de509" qual:compartment="default" qual:constant="false" qual:id="Gata3" qual:maxLevel="1" qual:name="Gata3"/>
+      <qual:qualitativeSpecies metaid="_1894be34-61b4-4d4a-9a58-608628a3aa9e" qual:compartment="default" qual:constant="false" qual:id="Gfi1b" qual:maxLevel="1" qual:name="Gfi1b"/>
+      <qual:qualitativeSpecies metaid="_84ebd8e9-ef4c-4eb1-8833-9dd6c761599d" qual:compartment="default" qual:constant="false" qual:id="Hoxa5" qual:maxLevel="1" qual:name="Hoxa5"/>
+      <qual:qualitativeSpecies metaid="_0c0ae73c-8152-486a-ba3c-780ceb8637a8" qual:compartment="default" qual:constant="false" qual:id="Hoxa9" qual:maxLevel="1" qual:name="Hoxa9"/>
+      <qual:qualitativeSpecies metaid="eef45222-8f94-4a38-9691-2d04fed53636" qual:compartment="default" qual:constant="false" qual:id="Hoxb4" qual:maxLevel="1" qual:name="Hoxb4"/>
+      <qual:qualitativeSpecies metaid="c93d1f99-db7e-4def-b8b3-76504fc42b96" qual:compartment="default" qual:constant="false" qual:id="Ikzf1" qual:maxLevel="1" qual:name="Ikzf1"/>
+      <qual:qualitativeSpecies metaid="dd10b599-cec1-4340-ad5f-1502acd9831a" qual:compartment="default" qual:constant="false" qual:id="Ldb1" qual:maxLevel="1" qual:name="Ldb1"/>
+      <qual:qualitativeSpecies metaid="d80e4ee8-8543-4d84-aa45-da343b6f5b4b" qual:compartment="default" qual:constant="false" qual:id="Lmo2" qual:maxLevel="1" qual:name="Lmo2"/>
+      <qual:qualitativeSpecies metaid="_2870c430-ab46-4571-9b9e-f6e77e6116db" qual:compartment="default" qual:constant="false" qual:id="Lyl1" qual:maxLevel="1" qual:name="Lyl1"/>
+      <qual:qualitativeSpecies metaid="_1a351264-90ec-4ad5-bc70-d19265de6446" qual:compartment="default" qual:constant="false" qual:id="Meis1" qual:maxLevel="1" qual:name="Meis1"/>
+      <qual:qualitativeSpecies metaid="_2da3e938-545a-4e29-846a-405837a272f0" qual:compartment="default" qual:constant="false" qual:id="Myb" qual:maxLevel="1" qual:name="Myb"/>
+      <qual:qualitativeSpecies metaid="b9323803-ee40-4280-85f3-8c5439ae78af" qual:compartment="default" qual:constant="false" qual:id="Nfe2" qual:maxLevel="1" qual:name="Nfe2"/>
+      <qual:qualitativeSpecies metaid="_86433726-85a9-431f-bb15-5995fd936bd8" qual:compartment="default" qual:constant="false" qual:id="Nkx2pt3" qual:maxLevel="1" qual:name="Nkx2pt3"/>
+      <qual:qualitativeSpecies metaid="_31149268-b5a8-4cbb-81ee-1ca22e16cdba" qual:compartment="default" qual:constant="false" qual:id="Notch" qual:maxLevel="1" qual:name="Notch"/>
+      <qual:qualitativeSpecies metaid="_39534db3-77fb-43b4-8e91-e261b1fcc964" qual:compartment="default" qual:constant="false" qual:id="Pbx1" qual:maxLevel="1" qual:name="Pbx1"/>
+      <qual:qualitativeSpecies metaid="_6778c56b-8d07-4240-98b2-7623c7515b41" qual:compartment="default" qual:constant="false" qual:id="Prdm16" qual:maxLevel="1" qual:name="Prdm16"/>
+      <qual:qualitativeSpecies metaid="_1b38cb79-faae-402f-8a24-45104c0a3dd7" qual:compartment="default" qual:constant="false" qual:id="Runx1" qual:maxLevel="1" qual:name="Runx1"/>
+      <qual:qualitativeSpecies metaid="_0dc0aaaa-1617-4cc5-a6c4-6463048e33f7" qual:compartment="default" qual:constant="false" qual:id="Smarcc1" qual:maxLevel="1" qual:name="Smarcc1"/>
+      <qual:qualitativeSpecies metaid="c5a50cd6-155e-4439-83d4-37c10cc0b128" qual:compartment="default" qual:constant="false" qual:id="Tal1" qual:maxLevel="1" qual:name="Tal1"/>
+      <qual:qualitativeSpecies metaid="a5c6bcab-5e94-4df3-81aa-434c7141da0a" qual:compartment="default" qual:constant="false" qual:id="Tcf7" qual:maxLevel="1" qual:name="Tcf7"/>
+    </qual:listOfQualitativeSpecies>
+    <qual:listOfTransitions xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:transition metaid="_9c075499-beeb-42b6-8539-a9f40f4f2fde" qual:id="tr_Bptf" qual:name="Interactions targeting Bptf">
+        <qual:listOfInputs>
+          <qual:input metaid="_9f9c1be3-0935-449a-97f1-5af475f8e762" qual:qualitativeSpecies="Erg" qual:transitionEffect="none"/>
+          <qual:input metaid="_4e30a651-92d3-4d58-91c4-d93ee49ebaf7" qual:qualitativeSpecies="Ikzf1" qual:transitionEffect="none"/>
+          <qual:input metaid="e76b8bea-3bcd-42f2-81d4-7bceecb2d548" qual:qualitativeSpecies="Lmo2" qual:transitionEffect="none"/>
+          <qual:input metaid="_5422d13e-1cd2-4642-847e-765bae42bb92" qual:qualitativeSpecies="Myb" qual:transitionEffect="none"/>
+          <qual:input metaid="e9a3c321-6d1a-4290-ba15-2d5e9dd86946" qual:qualitativeSpecies="Nfe2" qual:transitionEffect="none"/>
+          <qual:input metaid="_27cb96e0-0889-4247-b6df-81f6985427a7" qual:qualitativeSpecies="Smarcc1" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="f410c737-7cd0-4da2-a344-fba00dc7906b" qual:qualitativeSpecies="Bptf" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="_38c70a43-55e7-40c8-87e9-48e961cc9307" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> Ikzf1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Nfe2 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Lmo2 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Erg </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Myb </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Smarcc1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_5aee01fb-0934-4cf0-baa6-a206975dcfe4" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_46fa52bd-37c5-42e1-941b-c0c2d5c0af0a" qual:id="tr_Cbfa2t3h" qual:name="Interactions targeting Cbfa2t3h">
+        <qual:listOfInputs>
+          <qual:input metaid="_5784d567-0092-4b5f-9559-cfc27a9df858" qual:qualitativeSpecies="Fli1" qual:transitionEffect="none"/>
+          <qual:input metaid="_2b2de181-a704-4555-a066-a53914e125b6" qual:qualitativeSpecies="Ikzf1" qual:transitionEffect="none"/>
+          <qual:input metaid="_52542719-5ab4-4dfc-b85d-7b2406497b97" qual:qualitativeSpecies="Meis1" qual:transitionEffect="none"/>
+          <qual:input metaid="d73f8de6-98b6-4b84-991c-1ba4ddbe1f0c" qual:qualitativeSpecies="Nfe2" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="_46fcf799-ed16-481d-a7a4-f37d5ee8dbd2" qual:qualitativeSpecies="Cbfa2t3h" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="d9124577-183c-48ab-8a7a-94ed736bd479" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> Fli1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Nfe2 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Meis1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Ikzf1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="f027f6ff-790d-4adf-85d6-b8de8ce2f1ae" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="b644f13a-0b73-4899-86bd-4e538dc0ef2b" qual:id="tr_Erg" qual:name="Interactions targeting Erg">
+        <qual:listOfInputs>
+          <qual:input metaid="e19d553a-d4eb-4ed9-9679-da511c055383" qual:qualitativeSpecies="Bptf" qual:transitionEffect="none"/>
+          <qual:input metaid="_467a3943-c6ae-4e7b-9ed3-e989f5e4a270" qual:qualitativeSpecies="Fli1" qual:transitionEffect="none"/>
+          <qual:input metaid="_5140df41-859a-4170-9c3f-45b5345748b4" qual:qualitativeSpecies="Meis1" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="d87c0f31-c8eb-4af2-8ea5-4bc8058fed5d" qual:qualitativeSpecies="Erg" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="_885bc764-ced1-43c0-bd71-854c6a426fab" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> Bptf </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Meis1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Fli1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_968e2d21-e1d9-48d0-8359-f52c63102f23" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_8f83c270-afbc-40b6-a7a1-7856760dc096" qual:id="tr_Ets1" qual:name="Interactions targeting Ets1">
+        <qual:listOfInputs>
+          <qual:input metaid="_710a46b5-572d-4110-8972-948d2e781de5" qual:qualitativeSpecies="Ets1" qual:transitionEffect="none"/>
+          <qual:input metaid="_991bdb12-1670-498a-9588-93ab449db5c2" qual:qualitativeSpecies="Notch" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="deee37fe-aa65-4394-a5ba-2e8be6711064" qual:qualitativeSpecies="Ets1" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="faa30530-d30d-4a96-9a0c-40affb92f282" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Ets1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Notch </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_171dfe7a-b1c3-4612-b42e-2933a28e46ce" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="fad02f20-f48e-4700-9164-530db468e4d7" qual:id="tr_Ets2" qual:name="Interactions targeting Ets2">
+        <qual:listOfInputs>
+          <qual:input metaid="_84323ef1-cc07-4f3f-a7eb-d98df928705b" qual:qualitativeSpecies="Ets2" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="aed15b92-e552-48db-9298-5e2a51283ba1" qual:qualitativeSpecies="Ets2" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="ddd280b2-7616-4dc1-8c37-349daec83385" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Ets2 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_21d2f21c-d92d-4509-95f6-7bf1c7cf84f7" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="d648fe71-5d66-4597-a5ee-636e3c825ba4" qual:id="tr_Etv6" qual:name="Interactions targeting Etv6">
+        <qual:listOfInputs>
+          <qual:input metaid="be19ad42-f792-44aa-97dd-0f2e31e3fcd8" qual:qualitativeSpecies="Fli1" qual:transitionEffect="none"/>
+          <qual:input metaid="db27e0b1-b8bc-431d-bab3-670e687ffbc8" qual:qualitativeSpecies="Meis1" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="_558a59f8-9ed2-4257-ab10-12cb45d5f539" qual:qualitativeSpecies="Etv6" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="_5256ec5f-5c26-423c-918d-8545a4551903" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> Fli1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Meis1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_4e42b0ef-3296-4750-9e77-99efce167cc2" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_3e19ba6b-424c-4f29-9ff3-f2bdf69c3fd0" qual:id="tr_Fli1" qual:name="Interactions targeting Fli1">
+        <qual:listOfInputs>
+          <qual:input metaid="_85fb084f-291f-4df5-87fe-eeb3ad2db7df" qual:qualitativeSpecies="Cbfa2t3h" qual:transitionEffect="none"/>
+          <qual:input metaid="af8dd272-18dd-43ca-a3fa-0a50ace09b4c" qual:qualitativeSpecies="Erg" qual:transitionEffect="none"/>
+          <qual:input metaid="_047bfb52-46a7-4da3-9619-ee557003bb72" qual:qualitativeSpecies="Etv6" qual:transitionEffect="none"/>
+          <qual:input metaid="_9d0fb1b9-9fff-44a1-8bbf-438039fc9054" qual:qualitativeSpecies="Meis1" qual:transitionEffect="none"/>
+          <qual:input metaid="_4d4af5c1-4fdb-4a9e-946b-27f3f88a3f0f" qual:qualitativeSpecies="Nfe2" qual:transitionEffect="none"/>
+          <qual:input metaid="_9afcb73c-ec2d-435c-a8a1-c8ed1a1a0c6c" qual:qualitativeSpecies="Runx1" qual:transitionEffect="none"/>
+          <qual:input metaid="_10c8142c-6de8-4366-aa1d-aaa1e8b7886f" qual:qualitativeSpecies="Smarcc1" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="_63396496-3584-4ced-8c8c-272ef7362424" qual:qualitativeSpecies="Fli1" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="_20b4abe1-f334-483b-84cb-32cd58c2123a" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> Meis1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Nfe2 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Runx1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Erg </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Cbfa2t3h </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Smarcc1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Etv6 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_7c98b559-0272-41f6-974c-398d3fe102fb" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_78330ff7-3865-44c4-931d-5aaa92c15270" qual:id="tr_Gata1" qual:name="Interactions targeting Gata1">
+        <qual:listOfInputs>
+          <qual:input metaid="_20e4d6e2-3609-4a23-a248-dea7ff7421a9" qual:qualitativeSpecies="Cbfa2t3h" qual:transitionEffect="none"/>
+          <qual:input metaid="_7aeea98c-33a4-4b83-a47b-e7f12a2f1010" qual:qualitativeSpecies="Erg" qual:transitionEffect="none"/>
+          <qual:input metaid="_62c69d47-a224-49c3-bba7-70e6c3732fff" qual:qualitativeSpecies="Fli1" qual:transitionEffect="none"/>
+          <qual:input metaid="a8d5be5c-4bc3-4c73-8db4-f8de49ce4940" qual:qualitativeSpecies="Gata2" qual:transitionEffect="none"/>
+          <qual:input metaid="_283ff896-dc0c-4267-9c87-7963a34f9470" qual:qualitativeSpecies="Gfi1b" qual:transitionEffect="none"/>
+          <qual:input metaid="_99e1ce66-fd4e-4233-bd81-7abed0abc35e" qual:qualitativeSpecies="Hoxa5" qual:transitionEffect="none"/>
+          <qual:input metaid="_863234ac-0549-4300-be43-ccedc3af2eb4" qual:qualitativeSpecies="Hoxa9" qual:transitionEffect="none"/>
+          <qual:input metaid="_1c625f28-a37c-498a-b220-1ed7a2af0410" qual:qualitativeSpecies="Lyl1" qual:transitionEffect="none"/>
+          <qual:input metaid="c2f6b9bf-63db-408b-a17a-444ff4279988" qual:qualitativeSpecies="Myb" qual:transitionEffect="none"/>
+          <qual:input metaid="_806f3e7a-40cd-4197-88e4-987f60c79a3e" qual:qualitativeSpecies="Nkx2pt3" qual:transitionEffect="none"/>
+          <qual:input metaid="a4ed7673-2cfc-47df-99e8-c47d516fcbd2" qual:qualitativeSpecies="Smarcc1" qual:transitionEffect="none"/>
+          <qual:input metaid="_706dabfa-1083-46ca-bba9-70d9fabca1fa" qual:qualitativeSpecies="Tal1" qual:transitionEffect="none"/>
+          <qual:input metaid="_33666014-1edd-413b-82a9-d3b5f401b7f5" qual:qualitativeSpecies="Tcf7" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="_8563bb7f-6703-453b-bdda-4fab08dc873d" qual:qualitativeSpecies="Gata1" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="e407f756-1416-4e52-9817-e7e690601104" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Smarcc1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Fli1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Tcf7 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Fli1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Gfi1b </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Fli1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Gfi1b </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Lyl1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Tcf7 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Nkx2pt3 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Tcf7 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Lyl1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Tcf7 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Hoxa9 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Gata2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Fli1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Myb </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Fli1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Tal1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Fli1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Hoxa5 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Fli1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cbfa2t3h </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Fli1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Gata2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Lyl1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Gfi1b </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Tcf7 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Hoxa5 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Hoxa9 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Nkx2pt3 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Gfi1b </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Hoxa9 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Nkx2pt3 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Hoxa5 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Erg </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Nkx2pt3 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Myb </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Erg </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Hoxa9 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Smarcc1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Hoxa9 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Lyl1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Hoxa5 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Erg </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Hoxa9 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cbfa2t3h </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Erg </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Hoxa9 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Tal1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Erg </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Hoxa9 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Hoxa5 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Myb </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Hoxa9 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Gata2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Erg </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Hoxa9 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Smarcc1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Erg </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Lyl1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Hoxa5 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Lyl1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Nkx2pt3 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Myb </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Lyl1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Nkx2pt3 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Smarcc1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Lyl1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Nkx2pt3 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Hoxa5 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Erg </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Lyl1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Myb </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Erg </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Lyl1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Tal1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Lyl1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Nkx2pt3 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cbfa2t3h </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Lyl1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Nkx2pt3 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cbfa2t3h </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Erg </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Lyl1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Hoxa5 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Hoxa9 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Lyl1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Smarcc1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Hoxa9 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Erg </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Gfi1b </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Hoxa5 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Erg </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Tal1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Erg </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Lyl1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cbfa2t3h </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Hoxa9 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Lyl1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Tal1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Hoxa9 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Lyl1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="d404caf5-2c73-46ff-b81f-e5de4fc88c6a" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_95ba7cda-7861-4de4-9a00-57f407cde85e" qual:id="tr_Gata2" qual:name="Interactions targeting Gata2">
+        <qual:listOfInputs>
+          <qual:input metaid="cfa51a0f-f827-4668-8290-fd3526feb1ef" qual:qualitativeSpecies="Gata2" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="_2c2cf329-6929-45fe-a0d2-097b2f57475e" qual:qualitativeSpecies="Gata2" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="_8249d00c-4d4b-4aee-b20f-cd7adc7f1d92" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Gata2 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_4429727a-3180-4b80-b2b3-136fa50e44f4" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_0a6e1c53-b062-4197-bce1-3d043fdcb901" qual:id="tr_Gata3" qual:name="Interactions targeting Gata3">
+        <qual:listOfInputs>
+          <qual:input metaid="f3e2dc9d-0019-4d70-89f1-ede7626b3f8c" qual:qualitativeSpecies="Gata3" qual:transitionEffect="none"/>
+          <qual:input metaid="_2209ae81-e294-46c4-8139-db586212b64e" qual:qualitativeSpecies="Tal1" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="_884850e9-0003-4fe3-ae01-432aafcf7f8b" qual:qualitativeSpecies="Gata3" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="_6549126a-fc1a-4d64-914d-d735b3226fb9" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Tal1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Gata3 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_049ab015-177f-44c2-8b75-9536cbb7fc5e" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_71a941c5-a742-4932-a1f7-440e4cb59c96" qual:id="tr_Gfi1b" qual:name="Interactions targeting Gfi1b">
+        <qual:listOfInputs>
+          <qual:input metaid="_981c7dd7-74b2-40e9-9a44-4c9f0df76e6f" qual:qualitativeSpecies="Gata2" qual:transitionEffect="none"/>
+          <qual:input metaid="_9c28e314-244d-44c6-a0df-903a40b79e8a" qual:qualitativeSpecies="Gfi1b" qual:transitionEffect="none"/>
+          <qual:input metaid="_83e98b46-17b1-4e65-b012-5927f54b0f33" qual:qualitativeSpecies="Notch" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="_491112d6-6080-4731-a367-457726d2ff6d" qual:qualitativeSpecies="Gfi1b" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="_6183ded0-034a-4eb5-ad7f-1f4a32b8ebcb" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Gata2 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Gfi1b </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Notch </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_1ff97788-a176-4aaf-91be-7bb7ba40eacf" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_378d9104-6fd8-49e7-84d6-02da793a6a6d" qual:id="tr_Hoxa5" qual:name="Interactions targeting Hoxa5">
+        <qual:listOfInputs>
+          <qual:input metaid="_7654aa0f-ac3b-43cd-a594-e6c42d6b9f4e" qual:qualitativeSpecies="Prdm16" qual:transitionEffect="none"/>
+          <qual:input metaid="_555fb21b-7b03-4386-8214-61b2758e5af3" qual:qualitativeSpecies="Tcf7" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="cf55b4b8-6b44-4390-a1f1-333032925d21" qual:qualitativeSpecies="Hoxa5" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="_47ac0527-791e-49dc-a699-0ba665cb55c7" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Prdm16 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Tcf7 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="a5ba271e-da2c-4c02-94cf-0820868d6f75" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="eaa2eb84-f3dd-4332-b381-6482af83b6b3" qual:id="tr_Hoxa9" qual:name="Interactions targeting Hoxa9">
+        <qual:listOfInputs>
+          <qual:input metaid="ac6f0144-bd62-4899-8461-960f456496ca" qual:qualitativeSpecies="Ets1" qual:transitionEffect="none"/>
+          <qual:input metaid="_464652dd-336e-452e-9b91-f8c04beefe2d" qual:qualitativeSpecies="Hoxa5" qual:transitionEffect="none"/>
+          <qual:input metaid="_3886577e-f8a7-4d05-ade9-6e0e02a28685" qual:qualitativeSpecies="Ikzf1" qual:transitionEffect="none"/>
+          <qual:input metaid="_9f9936ec-1b06-45ed-b029-2893ce08fa67" qual:qualitativeSpecies="Lyl1" qual:transitionEffect="none"/>
+          <qual:input metaid="_50be5330-3cb3-447e-9c3f-be54da58b86e" qual:qualitativeSpecies="Meis1" qual:transitionEffect="none"/>
+          <qual:input metaid="c825c3d9-fb07-485f-a8c1-0d46026420e0" qual:qualitativeSpecies="Nkx2pt3" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="_3960c28d-d62e-4d9a-b390-6c042c2fea9a" qual:qualitativeSpecies="Hoxa9" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="_8366af14-454a-4d54-a470-1acbbf005c75" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> Meis1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Ikzf1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Nkx2pt3 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Ets1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Lyl1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Hoxa5 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_9547be84-df9b-4c6b-818e-9c8da978e6af" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_08c921ae-0a35-4570-814a-4322334ac28d" qual:id="tr_Hoxb4" qual:name="Interactions targeting Hoxb4">
+        <qual:listOfInputs>
+          <qual:input metaid="_2f5f679b-beef-4aec-a20d-a3dfc344f537" qual:qualitativeSpecies="Tcf7" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="_4ee025c2-bc3d-4245-bf33-e6aba2106286" qual:qualitativeSpecies="Hoxb4" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="d6e096f0-7d75-4753-9379-85175e038fc6" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Tcf7 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="fa5a5494-4a9f-4ebe-9bcf-b08b0b0cc2a0" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="c7800da1-fbd0-4280-a17c-df43f9623c74" qual:id="tr_Ikzf1" qual:name="Interactions targeting Ikzf1">
+        <qual:listOfInputs>
+          <qual:input metaid="adcceeed-52f5-43e2-a1d1-b9afd828e562" qual:qualitativeSpecies="Bptf" qual:transitionEffect="none"/>
+          <qual:input metaid="cd5250b0-3bb9-42a0-ac6b-e0234d1882f6" qual:qualitativeSpecies="Cbfa2t3h" qual:transitionEffect="none"/>
+          <qual:input metaid="a2b6af67-0904-4733-890b-e0de3755c5ef" qual:qualitativeSpecies="Hoxa9" qual:transitionEffect="none"/>
+          <qual:input metaid="_8222efa3-61d6-4aa9-9f1a-a4b66ec2695d" qual:qualitativeSpecies="Myb" qual:transitionEffect="none"/>
+          <qual:input metaid="cc893d37-d1c8-4dee-945a-f87f91edfa12" qual:qualitativeSpecies="Smarcc1" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="_8e1331d2-2b42-432c-beb9-a761c012fbdc" qual:qualitativeSpecies="Ikzf1" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="ba3706d2-75fd-4bd8-8153-c9729fe22b13" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> Bptf </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Hoxa9 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Smarcc1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Myb </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Cbfa2t3h </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_1eeba4d6-eadc-4993-a4b3-80bf0b21747b" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="aa881906-6f52-4864-b6c6-25b0b4248ae5" qual:id="tr_Ldb1" qual:name="Interactions targeting Ldb1">
+        <qual:listOfInputs>
+          <qual:input metaid="_2e406012-6cd8-497c-b82b-2c33a565a73f" qual:qualitativeSpecies="Ikzf1" qual:transitionEffect="none"/>
+          <qual:input metaid="_72e7969b-8020-4673-85da-1419c14a2487" qual:qualitativeSpecies="Lmo2" qual:transitionEffect="none"/>
+          <qual:input metaid="f035b986-7a00-4119-a7ce-f3e82d8e6a47" qual:qualitativeSpecies="Myb" qual:transitionEffect="none"/>
+          <qual:input metaid="_2c2dcebb-3f33-43ed-a7ae-3d027cc0453c" qual:qualitativeSpecies="Smarcc1" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="_9b04b7af-4546-4418-8674-8c9bf4b0f20e" qual:qualitativeSpecies="Ldb1" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="_5e071fde-8a87-48b5-8a20-362090cb3890" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> Ikzf1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Lmo2 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Myb </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Smarcc1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_5f7ebf3c-a1cd-421e-9704-716fb60c4a3a" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="ad71f0f2-f833-4d91-834e-89332176067b" qual:id="tr_Lmo2" qual:name="Interactions targeting Lmo2">
+        <qual:listOfInputs>
+          <qual:input metaid="_07c2dc8e-e325-4df7-96b7-21a8b170af7b" qual:qualitativeSpecies="Bptf" qual:transitionEffect="none"/>
+          <qual:input metaid="bbe65c77-bf40-4461-9a9d-4a3a69612228" qual:qualitativeSpecies="Ldb1" qual:transitionEffect="none"/>
+          <qual:input metaid="_8a7a0908-0ff7-484f-b721-6c445722d8de" qual:qualitativeSpecies="Lyl1" qual:transitionEffect="none"/>
+          <qual:input metaid="c8a0c2b9-3386-4e50-a22e-bfb694d8ac13" qual:qualitativeSpecies="Meis1" qual:transitionEffect="none"/>
+          <qual:input metaid="_04b00599-91de-4fd2-93c4-40fad6f7de25" qual:qualitativeSpecies="Nfe2" qual:transitionEffect="none"/>
+          <qual:input metaid="_0827508d-10c4-449f-b14c-d28e8cda6498" qual:qualitativeSpecies="Nkx2pt3" qual:transitionEffect="none"/>
+          <qual:input metaid="_3cfb8025-993f-4566-af2b-315cf11820c4" qual:qualitativeSpecies="Notch" qual:transitionEffect="none"/>
+          <qual:input metaid="ba242e46-02e2-4f25-82bc-3dabc96d1180" qual:qualitativeSpecies="Tal1" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="a89ffb5d-9633-4331-b654-578329edabd8" qual:qualitativeSpecies="Lmo2" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="_19a5151e-90ee-4cef-9f2c-b461ce508c54" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> Bptf </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Meis1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Nfe2 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Lyl1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Notch </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Ldb1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Tal1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Nkx2pt3 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_5e9adcf4-b44e-4f8e-8622-004cbd857c03" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="df4ba339-8bf1-4fd0-8843-547e8855bb52" qual:id="tr_Lyl1" qual:name="Interactions targeting Lyl1">
+        <qual:listOfInputs>
+          <qual:input metaid="d657a65b-3c0c-472b-ad30-d4541cdd2f4b" qual:qualitativeSpecies="Erg" qual:transitionEffect="none"/>
+          <qual:input metaid="_4748674a-cbd4-4d70-ab39-b853d8b5d6d3" qual:qualitativeSpecies="Hoxa9" qual:transitionEffect="none"/>
+          <qual:input metaid="_3c1c223b-8927-4605-8879-a8d83f1e9a21" qual:qualitativeSpecies="Lmo2" qual:transitionEffect="none"/>
+          <qual:input metaid="aedd7e86-5979-41ce-b188-69616f60bb80" qual:qualitativeSpecies="Myb" qual:transitionEffect="none"/>
+          <qual:input metaid="_14a1b288-959d-426d-a74f-29613e8f1c46" qual:qualitativeSpecies="Nfe2" qual:transitionEffect="none"/>
+          <qual:input metaid="_8aee32db-b725-4ff9-8050-25825682e613" qual:qualitativeSpecies="Smarcc1" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="_3a837e10-9c19-4313-b441-b8e2640d6649" qual:qualitativeSpecies="Lyl1" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="_6447dc7e-0632-4fe6-bb8f-ec37b713fe3b" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> Nfe2 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Lmo2 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Erg </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Smarcc1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Hoxa9 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Myb </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="afc4179d-1b8c-4a38-8d08-ea130d6a24a1" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="d306d8cf-a61d-4c85-bb3e-f70dfaaa2309" qual:id="tr_Meis1" qual:name="Interactions targeting Meis1">
+        <qual:listOfInputs>
+          <qual:input metaid="efc2eb4a-c022-4c42-8e2e-b436765a1d24" qual:qualitativeSpecies="Cbfa2t3h" qual:transitionEffect="none"/>
+          <qual:input metaid="_7a5ddb2b-08e4-4c98-99b3-68711b024fc1" qual:qualitativeSpecies="Erg" qual:transitionEffect="none"/>
+          <qual:input metaid="cac862df-8873-4373-83c6-b74f40740ca5" qual:qualitativeSpecies="Etv6" qual:transitionEffect="none"/>
+          <qual:input metaid="_3d229048-1577-4b67-b982-215870d6e355" qual:qualitativeSpecies="Fli1" qual:transitionEffect="none"/>
+          <qual:input metaid="_7a455ac9-ea3f-4172-819c-2db5fcfa616b" qual:qualitativeSpecies="Hoxa9" qual:transitionEffect="none"/>
+          <qual:input metaid="_5a70bd52-bdde-4c05-a80f-5e98c0c393e4" qual:qualitativeSpecies="Lmo2" qual:transitionEffect="none"/>
+          <qual:input metaid="_628c0688-8c4d-4f4e-ac44-4772d9c82e0c" qual:qualitativeSpecies="Nfe2" qual:transitionEffect="none"/>
+          <qual:input metaid="_3a14e3b3-f926-4f72-b861-4894bec7526c" qual:qualitativeSpecies="Nkx2pt3" qual:transitionEffect="none"/>
+          <qual:input metaid="_15ac0f48-49d6-4afe-9d43-c58e5ae059ee" qual:qualitativeSpecies="Runx1" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="ab8b0179-f632-42ab-8c50-165cf6599cd6" qual:qualitativeSpecies="Meis1" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="_85b26359-e52c-4b65-bacd-5cad673fb09b" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> Lmo2 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Nfe2 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Fli1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Nkx2pt3 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Runx1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Erg </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Hoxa9 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Cbfa2t3h </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Etv6 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_85d7baee-9f34-4af1-82c8-75a1dc12b327" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_9dc9190c-3c0d-4133-8f91-74c38cc12ff0" qual:id="tr_Myb" qual:name="Interactions targeting Myb">
+        <qual:listOfInputs>
+          <qual:input metaid="_85f44bbf-f81a-48be-8855-94b6f0c14ba8" qual:qualitativeSpecies="Gata3" qual:transitionEffect="none"/>
+          <qual:input metaid="_6dc37fd8-8960-46df-841e-1c53c19cbc08" qual:qualitativeSpecies="Ldb1" qual:transitionEffect="none"/>
+          <qual:input metaid="_532a9d30-f830-4158-9a2a-7bdbb16bd8b3" qual:qualitativeSpecies="Myb" qual:transitionEffect="none"/>
+          <qual:input metaid="ab0cc6e8-18dd-4ed7-a6ce-869150b9434e" qual:qualitativeSpecies="Prdm16" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="_81df3a86-e873-43e4-8f3e-9a3e45016c70" qual:qualitativeSpecies="Myb" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="_6e92220f-7827-4fad-94d3-8625ae4d64d1" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Myb </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Gata3 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Myb </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Prdm16 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Ldb1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Gata3 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Ldb1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Prdm16 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_3162dc0b-bfd3-4820-a303-a6c8f773dc79" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="ca5e4e1e-dcfd-4ab8-a61c-f413d49f070b" qual:id="tr_Nfe2" qual:name="Interactions targeting Nfe2">
+        <qual:listOfInputs>
+          <qual:input metaid="_553c1dcd-92d9-4707-a529-009bb1aa0b2b" qual:qualitativeSpecies="Bptf" qual:transitionEffect="none"/>
+          <qual:input metaid="_8c797056-7e17-442a-8dab-6876692c5b7c" qual:qualitativeSpecies="Cbfa2t3h" qual:transitionEffect="none"/>
+          <qual:input metaid="c1f8e741-3381-4a41-b429-ff97f947df66" qual:qualitativeSpecies="Fli1" qual:transitionEffect="none"/>
+          <qual:input metaid="_894c346d-7196-4d92-a155-03e7a61414f6" qual:qualitativeSpecies="Lmo2" qual:transitionEffect="none"/>
+          <qual:input metaid="_68f49a3e-ae8b-4aac-bf40-f71e871c82da" qual:qualitativeSpecies="Lyl1" qual:transitionEffect="none"/>
+          <qual:input metaid="_3c452250-fbbb-4923-a57e-1b2e7b6b12dd" qual:qualitativeSpecies="Meis1" qual:transitionEffect="none"/>
+          <qual:input metaid="_1d18085e-9215-4ea6-8101-4055afc1ef06" qual:qualitativeSpecies="Myb" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="_6f9f0d26-0a57-4ae8-9810-38600d6776da" qual:qualitativeSpecies="Nfe2" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="a177fa3a-72f9-424c-87c3-bd72cade3818" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> Bptf </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Fli1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Lmo2 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Meis1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Cbfa2t3h </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Lyl1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Myb </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_68e8c591-eb8f-49ad-b0dd-29be4c937501" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="fd2cce04-cb66-4dfc-a43c-e12e99a632d9" qual:id="tr_Nkx2pt3" qual:name="Interactions targeting Nkx2pt3">
+        <qual:listOfInputs>
+          <qual:input metaid="f509f089-c128-44e9-81df-2361533d58c8" qual:qualitativeSpecies="Hoxa9" qual:transitionEffect="none"/>
+          <qual:input metaid="_3c517832-87a7-4f68-94b6-c05ecfef597a" qual:qualitativeSpecies="Lmo2" qual:transitionEffect="none"/>
+          <qual:input metaid="_7e583b46-2eb6-4da8-9b3b-dbc210794471" qual:qualitativeSpecies="Lyl1" qual:transitionEffect="none"/>
+          <qual:input metaid="_1028a390-2337-4c31-9574-995d50759f89" qual:qualitativeSpecies="Meis1" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="_55f13771-725b-4feb-a60f-13ead5fd629f" qual:qualitativeSpecies="Nkx2pt3" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="b43cb12c-6621-41fd-ad71-46d58e3eb1a7" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> Lmo2 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Meis1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Hoxa9 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Lyl1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_35cc915c-f8a6-44da-9ce2-1cb4139708fd" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="f879001f-5c49-488d-92c3-3de7360e6815" qual:id="tr_Notch" qual:name="Interactions targeting Notch">
+        <qual:listOfInputs>
+          <qual:input metaid="_8a5a8a55-2358-456d-a642-35246ad5011e" qual:qualitativeSpecies="Gata2" qual:transitionEffect="none"/>
+          <qual:input metaid="_1c3a8d01-8dbd-4841-8ce9-dbbd1813d51e" qual:qualitativeSpecies="Gfi1b" qual:transitionEffect="none"/>
+          <qual:input metaid="f3e84773-3887-4ebf-a784-6b271331cfba" qual:qualitativeSpecies="Lmo2" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="aeda725f-1145-4087-b285-40fecd9e50df" qual:qualitativeSpecies="Notch" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="_546a88f9-1413-4749-8aec-e74b8a1584f5" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Lmo2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Gata2 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Lmo2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Gfi1b </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="db368ff0-17ba-41a2-9686-87436af5a018" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_993be078-2fa6-45b9-84da-86d0d3d15f78" qual:id="tr_Pbx1" qual:name="Interactions targeting Pbx1">
+        <qual:listOfInputs>
+          <qual:input metaid="_73c51578-dfeb-4e15-906f-ed4023e42468" qual:qualitativeSpecies="Gata2" qual:transitionEffect="none"/>
+          <qual:input metaid="_4b2bdc3a-75f6-41e8-bbb0-f6d8f7f203b3" qual:qualitativeSpecies="Runx1" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="_9dc6b529-2cb8-4bc9-89bc-7a6b81a399bc" qual:qualitativeSpecies="Pbx1" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="ccc36de3-8880-4690-8c68-fcf9fbb584b5" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> Gata2 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Runx1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_7c95c238-7c50-497a-886d-54ffe0b99258" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_43fbda00-b04a-4153-8a0b-eb1e9c196d14" qual:id="tr_Prdm16" qual:name="Interactions targeting Prdm16">
+        <qual:listOfInputs>
+          <qual:input metaid="_35823d9b-c065-400c-8ae5-c4c21c5d8739" qual:qualitativeSpecies="Hoxa5" qual:transitionEffect="none"/>
+          <qual:input metaid="d0964b23-3e63-44e5-bc40-98e6fc65be40" qual:qualitativeSpecies="Myb" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="_86ae30f6-b802-44db-b97e-d66d79fc36db" qual:qualitativeSpecies="Prdm16" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="_330899ee-35ef-419d-ad2b-caae6cc1b74a" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Hoxa5 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Myb </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_2e8fdb84-5d6f-4a08-8fb1-e297b8d2f1ce" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="c2104902-1407-463e-9bb3-b0394af7ee76" qual:id="tr_Runx1" qual:name="Interactions targeting Runx1">
+        <qual:listOfInputs>
+          <qual:input metaid="e20b3340-e590-4bc2-bb6a-925ef6c131c9" qual:qualitativeSpecies="Fli1" qual:transitionEffect="none"/>
+          <qual:input metaid="fd3ea2b2-123b-407d-97f6-d493c9a2134d" qual:qualitativeSpecies="Meis1" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="_6c9acd44-ac14-4fde-b661-83ab7823798c" qual:qualitativeSpecies="Runx1" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="deb13924-2f89-4503-b16a-abee1b7ed27f" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> Fli1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Meis1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_9f796662-6133-4eca-98e9-ef5b62d98ce1" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_85ba6543-caaf-478b-b1c7-a067ac49932b" qual:id="tr_Smarcc1" qual:name="Interactions targeting Smarcc1">
+        <qual:listOfInputs>
+          <qual:input metaid="_9830b9dc-a066-4990-af30-69ec2b6b4792" qual:qualitativeSpecies="Bptf" qual:transitionEffect="none"/>
+          <qual:input metaid="d97369a6-3e78-404a-9e65-2e7db4b55abe" qual:qualitativeSpecies="Ets2" qual:transitionEffect="none"/>
+          <qual:input metaid="_83e24e7b-46b2-4915-9d8d-5a51264b9177" qual:qualitativeSpecies="Etv6" qual:transitionEffect="none"/>
+          <qual:input metaid="_49f615dc-3b8b-416d-aebf-f12a3813d218" qual:qualitativeSpecies="Fli1" qual:transitionEffect="none"/>
+          <qual:input metaid="c116e190-31e6-435e-9137-31d7aafd89b2" qual:qualitativeSpecies="Ikzf1" qual:transitionEffect="none"/>
+          <qual:input metaid="ab0d2f8f-6837-4310-b72c-08f4211ce675" qual:qualitativeSpecies="Ldb1" qual:transitionEffect="none"/>
+          <qual:input metaid="_059f1332-9dbb-48a5-8967-6a4905d5c0f8" qual:qualitativeSpecies="Lyl1" qual:transitionEffect="none"/>
+          <qual:input metaid="_3abe36eb-a7de-4756-8157-fc0bd6c11ece" qual:qualitativeSpecies="Myb" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="a7e4584b-320d-4b0a-af65-dbbeeaf407a0" qual:qualitativeSpecies="Smarcc1" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="_83783c9f-da43-4ca3-acc6-1bb7fabffc8c" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> Ikzf1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Fli1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Bptf </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Lyl1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Etv6 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Ldb1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Myb </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Ets2 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_2e3900c7-7555-478b-8151-6f2d461df0cf" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_164a4982-84a7-4717-ad81-db4cdb0b89ab" qual:id="tr_Tal1" qual:name="Interactions targeting Tal1">
+        <qual:listOfInputs>
+          <qual:input metaid="d358c3c0-8de0-4a28-b3bf-9c5299f60d22" qual:qualitativeSpecies="Gata2" qual:transitionEffect="none"/>
+          <qual:input metaid="_36103ea8-be82-46d3-973f-79cf65b4b9ae" qual:qualitativeSpecies="Tal1" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="acfd57f5-c9ef-4f72-bb0e-b58e22e024a0" qual:qualitativeSpecies="Tal1" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="_4a42dd01-b949-45c8-8612-b3b4bc43bdaf" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> Gata2 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Tal1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_3dd32b51-cd15-4dbc-881d-968216673434" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_19b9ca93-336e-4e12-a334-f681e07fe38f" qual:id="tr_Tcf7" qual:name="Interactions targeting Tcf7">
+        <qual:listOfInputs>
+          <qual:input metaid="_90568acd-69fe-4d10-a861-4af391bd9628" qual:qualitativeSpecies="Ets1" qual:transitionEffect="none"/>
+          <qual:input metaid="_159ca3a6-d148-44dd-b77f-209016653478" qual:qualitativeSpecies="Gata1" qual:transitionEffect="none"/>
+          <qual:input metaid="_9221e0bc-9f96-4125-a7a8-1df0b272468e" qual:qualitativeSpecies="Gata3" qual:transitionEffect="none"/>
+          <qual:input metaid="_86f95c5b-f3ad-45f7-8e69-2d210920d390" qual:qualitativeSpecies="Hoxa5" qual:transitionEffect="none"/>
+          <qual:input metaid="_6e77fbdd-2c07-45c6-9d5a-ec067619a978" qual:qualitativeSpecies="Hoxb4" qual:transitionEffect="none"/>
+          <qual:input metaid="f9e12343-ca79-4954-8ae2-6a658c0a9abb" qual:qualitativeSpecies="Ikzf1" qual:transitionEffect="none"/>
+          <qual:input metaid="_356ba473-253f-4643-853a-8ee00c637bb4" qual:qualitativeSpecies="Nkx2pt3" qual:transitionEffect="none"/>
+          <qual:input metaid="e6f1abe7-9950-4ff9-888c-0ca00f0df46f" qual:qualitativeSpecies="Notch" qual:transitionEffect="none"/>
+          <qual:input metaid="_33234426-f718-4f61-b9cf-34377dde2666" qual:qualitativeSpecies="Runx1" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output metaid="_89b3d9f2-5e64-4f60-a64e-6e3363ba9064" qual:qualitativeSpecies="Tcf7" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:functionTerm metaid="_11048610-3a44-4eb3-8396-9dae7ef8a2b9" qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Hoxb4 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ikzf1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Hoxa5 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ikzf1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Gata1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ikzf1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Notch </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ikzf1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Nkx2pt3 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ikzf1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Ets1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ikzf1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Runx1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ikzf1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Gata3 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ikzf1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:defaultTerm metaid="_8b4077fc-3ca3-4fa7-b0b3-54ca894d4536" qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+    </qual:listOfTransitions>
+    <listOfCompartments>
+      <compartment constant="true" id="default" metaid="e401b16b-a734-49d7-a9e7-949f60915153"/>
+    </listOfCompartments>
+  </model>
+</sbml>

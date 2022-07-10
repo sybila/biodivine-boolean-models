@@ -4,8 +4,8 @@
  - Inputs: 6
  - Regulations: 78
  - Publication: https://doi.org/10.1371/journal.pcbi.1004324
- - Source: https://research.cellcollective.org/?dashboard=true#module/5025:1/cd4-t-cell-differentiation-and-plasticity/1
- - Keywords: cell-collective, curated
+ - Source: ['https://research.cellcollective.org/?dashboard=true#module/5025:1/cd4-t-cell-differentiation-and-plasticity/1', 'https://www.ebi.ac.uk/biomodels/BIOMD0000000593']
+ - Keywords: cell-collective, biomodels, curated
 
 
 ### Modifications
