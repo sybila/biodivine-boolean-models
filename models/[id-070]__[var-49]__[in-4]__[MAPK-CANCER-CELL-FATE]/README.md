@@ -4,8 +4,8 @@
  - Inputs: 4
  - Regulations: 104
  - Publication: https://doi.org/10.1371/journal.pcbi.1003286
- - Source: https://research.cellcollective.org/?dashboard=true#module/7984:1/mapk-cancer-cell-fate-network/1
- - Keywords: cell-collective, curated
+ - Source: ['https://research.cellcollective.org/?dashboard=true#module/7984:1/mapk-cancer-cell-fate-network/1', 'http://ginsim.org/node/173']
+ - Keywords: cell-collective, ginsim, curated
 
 
 ### Modifications

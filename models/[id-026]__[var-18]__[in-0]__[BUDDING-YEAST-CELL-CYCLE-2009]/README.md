@@ -4,8 +4,8 @@
  - Inputs: 0
  - Regulations: 59
  - Publication: https://doi.org/10.1016/j.jtbi.2008.12.028
- - Source: https://research.cellcollective.org/?dashboard=true#module/2423:1/budding-yeast-cell-cycle-2009/1
- - Keywords: cell-collective, curated, repaired
+ - Source: ['https://research.cellcollective.org/?dashboard=true#module/2423:1/budding-yeast-cell-cycle-2009/1', 'http://ginsim.org/node/35']
+ - Keywords: cell-collective, ginsim, curated, repaired
 
 
 ### Modifications

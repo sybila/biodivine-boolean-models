@@ -3,7 +3,7 @@
  - Variables: 9
  - Inputs: 1
  - Regulations: 27
- - Publication: http://dx.doi.org/10.1039/b907562n
+ - Publication: https://doi.org/10.1371/journal.pone.0001672
  - Source: http://ginsim.org/node/37
  - Keywords: ginsim, curated
 
@@ -16,14 +16,14 @@ The model is provided without modifications.
 
 ```
 @article{bbm-095,
-  title={Logical modelling of cell cycle control in eukaryotes: a comparative study},
-  author={Faur{\'e}, Adrien and Thieffry, Denis},
-  journal={Molecular BioSystems},
-  volume={5},
-  number={12},
-  pages={1569--1581},
-  year={2009},
-  publisher={Royal Society of Chemistry}
+  title={Boolean network model predicts cell cycle sequence of fission yeast},
+  author={Davidich, Maria I and Bornholdt, Stefan},
+  journal={PloS one},
+  volume={3},
+  number={2},
+  pages={e1672},
+  year={2008},
+  publisher={Public Library of Science San Francisco, USA}
 }
 
 ```

@@ -4,8 +4,8 @@
  - Inputs: 6
  - Regulations: 28
  - Publication: https://doi.org/10.1039/C3MB70187E
- - Source: https://research.cellcollective.org/?dashboard=true#module/2669:1/processing-of-spz-network-from-the-drosophila-signaling-pathway/1
- - Keywords: cell-collective, curated
+ - Source: ['https://research.cellcollective.org/?dashboard=true#module/2669:1/processing-of-spz-network-from-the-drosophila-signaling-pathway/1', 'http://ginsim.org/node/126']
+ - Keywords: cell-collective, ginsim, curated
 
 
 ### Modifications

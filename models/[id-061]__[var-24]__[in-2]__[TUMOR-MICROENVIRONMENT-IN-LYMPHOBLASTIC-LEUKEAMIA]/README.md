@@ -4,8 +4,8 @@
  - Inputs: 2
  - Regulations: 79
  - Publication: https://doi.org/10.3389/fphys.2016.00349
- - Source: https://research.cellcollective.org/?dashboard=true#module/4942:1/proinflammatory-tumor-microenvironment-in-acute-lymphoblastic-leukemia/1
- - Keywords: cell-collective, curated, repaired
+ - Source: ['https://research.cellcollective.org/?dashboard=true#module/4942:1/proinflammatory-tumor-microenvironment-in-acute-lymphoblastic-leukemia/1', 'http://ginsim.org/model/HSPC_MSC']
+ - Keywords: cell-collective, ginsim, curated, repaired
 
 
 ### Modifications

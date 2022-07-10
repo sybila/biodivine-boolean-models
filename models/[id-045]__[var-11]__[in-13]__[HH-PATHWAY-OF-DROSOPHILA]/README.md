@@ -4,8 +4,8 @@
  - Inputs: 13
  - Regulations: 32
  - Publication: https://doi.org/10.1039/C3MB70187E
- - Source: https://research.cellcollective.org/?dashboard=true#module/3506:1/hh-pathway-of-drosophila-signaling-pathways/1
- - Keywords: cell-collective, curated, repaired
+ - Source: ['https://research.cellcollective.org/?dashboard=true#module/3506:1/hh-pathway-of-drosophila-signaling-pathways/1', 'http://ginsim.org/node/144']
+ - Keywords: cell-collective, ginsim, curated, repaired
 
 
 ### Modifications

@@ -4,8 +4,8 @@
  - Inputs: 0
  - Regulations: 19
  - Publication: https://doi.org/10.1038/nature06955
- - Source: https://research.cellcollective.org/?dashboard=true#module/2681:1/cell-cycle-transcription-by-coupled-cdk-and-network-oscillators/1
- - Keywords: cell-collective, curated
+ - Source: ['https://research.cellcollective.org/?dashboard=true#module/2681:1/cell-cycle-transcription-by-coupled-cdk-and-network-oscillators/1', 'http://ginsim.org/node/33']
+ - Keywords: cell-collective, ginsim, curated
 
 
 ### Modifications
