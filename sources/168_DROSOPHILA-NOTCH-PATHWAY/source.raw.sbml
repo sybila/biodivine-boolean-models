@@ -1,0 +1,793 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" layout:required="false" level="3" qual:required="true" xmlns:layout="http://www.sbml.org/sbml/level3/version1/layout/version1" version="1" xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+  <model id="model_id">
+    <layout:listOfLayouts xmlns:layout="http://www.sbml.org/sbml/level3/version1/layout/version1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <layout:layout layout:id="__layout__">
+        <layout:dimensions layout:height="460" layout:width="452"/>
+        <layout:listOfAdditionalGraphicalObjects>
+          <layout:generalGlyph layout:id="_ly_Delta" layout:reference="Delta">
+            <layout:boundingBox>
+              <layout:position layout:x="109" layout:y="11"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Notch" layout:reference="Notch">
+            <layout:boundingBox>
+              <layout:position layout:x="105" layout:y="94"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Nicd" layout:reference="Nicd">
+            <layout:boundingBox>
+              <layout:position layout:x="106" layout:y="171"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Emc" layout:reference="Emc">
+            <layout:boundingBox>
+              <layout:position layout:x="25" layout:y="299"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_E_Spl_b1" layout:reference="E_Spl_b1">
+            <layout:boundingBox>
+              <layout:position layout:x="190" layout:y="296"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_E_Spl_b2" layout:reference="E_Spl_b2">
+            <layout:boundingBox>
+              <layout:position layout:x="240" layout:y="346"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_H" layout:reference="H">
+            <layout:boundingBox>
+              <layout:position layout:x="291" layout:y="17"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Gro" layout:reference="Gro">
+            <layout:boundingBox>
+              <layout:position layout:x="292" layout:y="66"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_CtBP" layout:reference="CtBP">
+            <layout:boundingBox>
+              <layout:position layout:x="295" layout:y="114"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Mam" layout:reference="Mam">
+            <layout:boundingBox>
+              <layout:position layout:x="333" layout:y="266"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_p300" layout:reference="p300">
+            <layout:boundingBox>
+              <layout:position layout:x="342" layout:y="301"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Su_H" layout:reference="Su_H">
+            <layout:boundingBox>
+              <layout:position layout:x="372" layout:y="348"/>
+              <layout:dimensions layout:height="30" layout:width="80"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Bx42" layout:reference="Bx42">
+            <layout:boundingBox>
+              <layout:position layout:x="304" layout:y="359"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Da" layout:reference="Da">
+            <layout:boundingBox>
+              <layout:position layout:x="219" layout:y="381"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Twi_b1" layout:reference="Twi_b1">
+            <layout:boundingBox>
+              <layout:position layout:x="89" layout:y="380"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Twi_b2" layout:reference="Twi_b2">
+            <layout:boundingBox>
+              <layout:position layout:x="139" layout:y="430"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+        </layout:listOfAdditionalGraphicalObjects>
+      </layout:layout>
+    </layout:listOfLayouts>
+    <qual:listOfQualitativeSpecies xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="true" qual:id="Delta"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="false" qual:id="Notch"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="false" qual:id="Nicd"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="false" qual:id="Emc"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="false" qual:id="E_Spl_b1"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="false" qual:id="E_Spl_b2"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="true" qual:id="H"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="true" qual:id="Gro"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="true" qual:id="CtBP"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="true" qual:id="Mam"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="true" qual:id="p300"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="true" qual:id="Su_H"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="true" qual:id="Bx42"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="true" qual:id="Da"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="false" qual:id="Twi_b1"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="false" qual:id="Twi_b2"/>
+    </qual:listOfQualitativeSpecies>
+    <qual:listOfTransitions xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:transition qual:id="tr_Notch">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Delta" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Notch_in_0"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Notch" qual:transitionEffect="assignmentLevel" qual:id="tr_Notch_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Delta </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Nicd">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Notch" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Nicd_in_1"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Nicd" qual:transitionEffect="assignmentLevel" qual:id="tr_Nicd_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Notch </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Emc">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Nicd" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Emc_in_2"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Emc" qual:transitionEffect="assignmentLevel" qual:id="tr_Emc_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Nicd </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_E_Spl_b1">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Nicd" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_E_Spl_b1_in_2"/>
+          <qual:input qual:qualitativeSpecies="E_Spl_b1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_E_Spl_b1_in_4"/>
+          <qual:input qual:qualitativeSpecies="E_Spl_b2" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_E_Spl_b1_in_5"/>
+          <qual:input qual:qualitativeSpecies="H" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_E_Spl_b1_in_6"/>
+          <qual:input qual:qualitativeSpecies="Gro" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_E_Spl_b1_in_7"/>
+          <qual:input qual:qualitativeSpecies="CtBP" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_E_Spl_b1_in_8"/>
+          <qual:input qual:qualitativeSpecies="Mam" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_E_Spl_b1_in_9"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="E_Spl_b1" qual:transitionEffect="assignmentLevel" qual:id="tr_E_Spl_b1_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> Nicd </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Nicd </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> E_Spl_b1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> H </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Gro </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CtBP </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Nicd </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> E_Spl_b1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> H </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Gro </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CtBP </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mam </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Nicd </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> E_Spl_b1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> H </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Gro </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mam </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Nicd </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> E_Spl_b1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> H </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mam </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Nicd </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> E_Spl_b1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> E_Spl_b2 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> H </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Gro </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CtBP </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Nicd </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> E_Spl_b1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> E_Spl_b2 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> H </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Gro </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CtBP </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mam </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Nicd </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> E_Spl_b1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> E_Spl_b2 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> H </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Gro </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mam </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Nicd </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> E_Spl_b1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> E_Spl_b2 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> H </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mam </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Nicd </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> E_Spl_b1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> E_Spl_b2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_E_Spl_b2">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Nicd" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_E_Spl_b2_in_2"/>
+          <qual:input qual:qualitativeSpecies="E_Spl_b1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_E_Spl_b2_in_4"/>
+          <qual:input qual:qualitativeSpecies="H" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_E_Spl_b2_in_6"/>
+          <qual:input qual:qualitativeSpecies="Gro" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_E_Spl_b2_in_7"/>
+          <qual:input qual:qualitativeSpecies="CtBP" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_E_Spl_b2_in_8"/>
+          <qual:input qual:qualitativeSpecies="Mam" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_E_Spl_b2_in_9"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="E_Spl_b2" qual:transitionEffect="assignmentLevel" qual:id="tr_E_Spl_b2_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Nicd </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> E_Spl_b1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> H </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Gro </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> CtBP </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Mam </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Twi_b1">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Emc" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Twi_b1_in_3"/>
+          <qual:input qual:qualitativeSpecies="E_Spl_b1" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Twi_b1_in_4"/>
+          <qual:input qual:qualitativeSpecies="E_Spl_b2" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Twi_b1_in_5"/>
+          <qual:input qual:qualitativeSpecies="Da" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Twi_b1_in_13"/>
+          <qual:input qual:qualitativeSpecies="Twi_b1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Twi_b1_in_14"/>
+          <qual:input qual:qualitativeSpecies="Twi_b2" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Twi_b1_in_15"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Twi_b1" qual:transitionEffect="assignmentLevel" qual:id="tr_Twi_b1_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Emc </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Da </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Twi_b1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Twi_b2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Emc </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Da </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Emc </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> E_Spl_b1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Da </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Twi_b1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Twi_b2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Emc </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> E_Spl_b1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Da </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Emc </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> E_Spl_b1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> E_Spl_b2 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Da </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Twi_b1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Twi_b2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Emc </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> E_Spl_b1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> E_Spl_b2 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Da </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Emc </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> E_Spl_b1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> E_Spl_b2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Twi_b1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Twi_b2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Twi_b2">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Emc" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Twi_b2_in_3"/>
+          <qual:input qual:qualitativeSpecies="E_Spl_b1" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Twi_b2_in_4"/>
+          <qual:input qual:qualitativeSpecies="Da" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Twi_b2_in_13"/>
+          <qual:input qual:qualitativeSpecies="Twi_b1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Twi_b2_in_14"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Twi_b2" qual:transitionEffect="assignmentLevel" qual:id="tr_Twi_b2_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Emc </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Da </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Twi_b1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Emc </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> E_Spl_b1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Da </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Twi_b1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+    </qual:listOfTransitions>
+    <listOfCompartments>
+      <compartment constant="true" id="comp1"/>
+    </listOfCompartments>
+  </model>
+</sbml>

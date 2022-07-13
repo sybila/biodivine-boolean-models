@@ -1,0 +1,459 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" layout:required="false" level="3" qual:required="true" xmlns:layout="http://www.sbml.org/sbml/level3/version1/layout/version1" version="1" xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+  <model id="model_id">
+    <layout:listOfLayouts xmlns:layout="http://www.sbml.org/sbml/level3/version1/layout/version1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <layout:layout layout:id="__layout__">
+        <layout:dimensions layout:height="361" layout:width="694"/>
+        <layout:listOfAdditionalGraphicalObjects>
+          <layout:generalGlyph layout:id="_ly_Eve" layout:reference="Eve">
+            <layout:boundingBox>
+              <layout:position layout:x="357" layout:y="61"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Prd" layout:reference="Prd">
+            <layout:boundingBox>
+              <layout:position layout:x="638" layout:y="336"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Ppa" layout:reference="Ppa">
+            <layout:boundingBox>
+              <layout:position layout:x="590" layout:y="175"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Run" layout:reference="Run">
+            <layout:boundingBox>
+              <layout:position layout:x="639" layout:y="63"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Slp" layout:reference="Slp">
+            <layout:boundingBox>
+              <layout:position layout:x="103" layout:y="64"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Ftz" layout:reference="Ftz">
+            <layout:boundingBox>
+              <layout:position layout:x="104" layout:y="335"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Odd" layout:reference="Odd">
+            <layout:boundingBox>
+              <layout:position layout:x="353" layout:y="251"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+        </layout:listOfAdditionalGraphicalObjects>
+      </layout:layout>
+    </layout:listOfLayouts>
+    <qual:listOfQualitativeSpecies xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:qualitativeSpecies qual:maxLevel="3" qual:compartment="comp1" qual:constant="false" qual:id="Eve"/>
+      <qual:qualitativeSpecies qual:maxLevel="2" qual:compartment="comp1" qual:constant="false" qual:id="Prd"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="false" qual:id="Ppa"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="false" qual:id="Run"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="false" qual:id="Slp"/>
+      <qual:qualitativeSpecies qual:maxLevel="2" qual:compartment="comp1" qual:constant="false" qual:id="Ftz"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="false" qual:id="Odd"/>
+    </qual:listOfQualitativeSpecies>
+    <qual:listOfTransitions xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:transition qual:id="tr_Eve">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Eve" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Eve_in_0"/>
+          <qual:input qual:qualitativeSpecies="Prd" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Eve_in_1"/>
+          <qual:input qual:qualitativeSpecies="Run" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Eve_in_3"/>
+          <qual:input qual:qualitativeSpecies="Slp" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Eve_in_4"/>
+          <qual:input qual:qualitativeSpecies="Odd" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Eve_in_6"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Eve" qual:transitionEffect="assignmentLevel" qual:id="tr_Eve_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Eve </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Prd </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Slp </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Odd </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <geq/>
+                    <ci> Eve </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Prd </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Run </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Slp </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <geq/>
+                    <ci> Eve </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Prd </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Run </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Slp </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Odd </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <geq/>
+                    <ci> Eve </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Prd </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Run </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Slp </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Odd </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <geq/>
+                    <ci> Eve </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Prd </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Run </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Slp </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Odd </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:functionTerm qual:resultLevel="3">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <geq/>
+                  <ci> Eve </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <geq/>
+                  <ci> Prd </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Run </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Slp </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Odd </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Prd">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Ppa" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Prd_in_2"/>
+          <qual:input qual:qualitativeSpecies="Odd" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Prd_in_6"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Prd" qual:transitionEffect="assignmentLevel" qual:id="tr_Prd_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Ppa </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Odd </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:functionTerm qual:resultLevel="2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Ppa </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Odd </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Ppa">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Eve" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Ppa_in_0"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Ppa" qual:transitionEffect="assignmentLevel" qual:id="tr_Ppa_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <leq/>
+                <ci> Eve </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Run">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Eve" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Run_in_0"/>
+          <qual:input qual:qualitativeSpecies="Prd" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Run_in_1"/>
+          <qual:input qual:qualitativeSpecies="Odd" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Run_in_6"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Run" qual:transitionEffect="assignmentLevel" qual:id="tr_Run_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <leq/>
+                  <ci> Eve </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <geq/>
+                  <ci> Prd </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Odd </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Slp">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Eve" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Slp_in_0"/>
+          <qual:input qual:qualitativeSpecies="Ftz" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Slp_in_5"/>
+          <qual:input qual:qualitativeSpecies="Odd" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Slp_in_6"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Slp" qual:transitionEffect="assignmentLevel" qual:id="tr_Slp_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <leq/>
+                  <ci> Eve </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Ftz </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Odd </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Ftz">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Eve" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Ftz_in_0"/>
+          <qual:input qual:qualitativeSpecies="Slp" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Ftz_in_4"/>
+          <qual:input qual:qualitativeSpecies="Odd" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Ftz_in_6"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Ftz" qual:transitionEffect="assignmentLevel" qual:id="tr_Ftz_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <leq/>
+                  <ci> Eve </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Slp </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Odd </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Odd">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Eve" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Odd_in_0"/>
+          <qual:input qual:qualitativeSpecies="Prd" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Odd_in_1"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Odd" qual:transitionEffect="assignmentLevel" qual:id="tr_Odd_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Eve </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Prd </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+    </qual:listOfTransitions>
+    <listOfCompartments>
+      <compartment constant="true" id="comp1"/>
+    </listOfCompartments>
+  </model>
+</sbml>

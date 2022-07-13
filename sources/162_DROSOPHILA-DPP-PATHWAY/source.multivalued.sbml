@@ -1,0 +1,1275 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" layout:required="false" level="3" qual:required="true" xmlns:layout="http://www.sbml.org/sbml/level3/version1/layout/version1" version="1" xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+  <model metaid="_2e014e36-8b99-4503-a8cc-a4d02cb54afe" id="model_id">
+    <notes>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Drosophila DPP (TGF-beta homolog) signalling pathway is triggered by ligand-induced formation of heterotetrameric complexes consisting of two type II receptors and two type I receptors with intrinsic serine/threonine kinase activity. 
+The type I receptor (SAX or TKV) is phosphorylated by the constitutively active type II receptor kinase (Punt). Consequently, the complex becomes active and phosphorylates the receptor-regulated Smads (R-Smads). 
+Phosphorylated R-Smads (MAD and Smox) form complexes with a common-mediator Smad (Medea) and translocate into the nucleus, where they regulate the transcription of target genes in co-operation with other transcription factors (nejire, schnurri). 
+DPP is a morphogen, i.e. a molecule distributed in a concentration gradient that elicits different cell fates as a function of its concentration, thereby organizing a series of cell types in a defined spatial array. 
+In response to DPP gradient, cells adopt different fates. 
+The establishment of dpp gradient involves the proteins SOG and TSG. 
+These proteins together capture the DPP ligand and prevent its binding to the receptor (Punt). 
+The heteromeric complex (SOG, DPP, TSG) then release the DPP ligand, a process involving the cleavage of SOG by Tolloid (a metalloprotease). 
+Other TGF-beta signals, Glass-bottom-boa (GBB) and Screw (SCW), help DPP to potentiate cells to respond. SCW and GBB are never expressed together in the same region and affect different cells during: 
+
+i) early D/V patterning of the embryo and specification/differentiation of dorsal cells (if there is no screw, dpp alone is unable to establish the D/V pattern and embryo lack amnioserosa); 
+ii) the development of adult structures such as the wing. 
+GBB or SCW form heterodimeric complexes with DPP. These heterodimers can only signal through TKV, while SCW/SCW and GBB/GBB signals trough SAX, and DPP/DPP trough TKV and SAX. 
+To model DPP signalling and the formation of the gradient, we have considered three different levels for the TKV receptor (0, 1, 2) and the MADMED effector (0, 1, 2). The regulatory graph also accounts for the potentiation of responding cells due to association of DPP and SCW, or of DPP and GBB.
+Activated by MADMED, DAD is a pathway inhibitor that can modulate the pathway activity  from high to low signalling. DAD works by abrogating the phosphorylation of the MADMED complex by TKV or SAX, thus involving a negative circuit between DAD and the MADMED complex. 
+In addition, BRK another inhibitor of the DPP pathway can block the transcription of dad. 
+Our model reproduces the formation of the DPP signalling gradient and accounts for the role of the heterodimers signalling in cell potentiation. 
+To simulate DPP signalling, we start from an initial state corresponding to non differentiated cell, that can receives high or low level of DPP signal. 
+The use of ternary nodes enables us to account for differential effects of different DPP levels (gradient). 
+The cells receiving high level expression display the hetero-dimers SCW/DPP or GBB/DPP and 
+correspond to Tld expression area, which promotes DPP gradient formation. 
+In presence of medium DPP, TSG and SOG but no TLD are initially needed to capture homo- or hetero-dimer, diminishing pathway signalling intensity (expression level 1 for TKV and MADMED). 
+In presence of high pathway signalling, two situations occur: 
+i) in cells potentiated by SCW: a sequestering complex (SOG/TSG/ DPP/SCW) will release the signalling molecule upon TLD clivage, in addition to normal DPP signalling. This leads to a higher signal transduction. 
+ii) in cells potentiated by GBB, the situation is similar but involve a different heterodimer (GBB/DPP). 
+These situations correspond to two different stable states with high TKV and MADMED (level 2), denoting that more receptors are required to enable a higher level of nuclear MADMED. 
+We consider five different initial states: 
+i) the first one  corresponds to the absence of signalling, i.e. absence of DPP; 
+ii) the second one corresponds to medium signalling, characterized by the presence of Dpp at level 1 and of SCW; 
+iii) the third one corresponds to medium signalling, characterized by the presence of Dpp at level 1 and of GBB);
+iv) the fourth one corresponds to the presence of DPP at level 2 and of SCW; 
+v) the last one corresponds to the presence of DPP at level 2 and of  GBB. 
+These set of initial states enable the simulation of five situations. No signalling,  two medium and  two high signalling that characterize the behavior of the pathway. The stable state obtained with the no signalling simulation shows the absence of binding of the ligands to the receptors TKV and Punt (level of expression 0) and the non activation of target nodes. These medium signals simulations in presence of DPP, show the activation of the receptors (level of expression 1) and subsequent signalling cascade leading to the activation of pathway's targets. These medium signal are defined by the level of expression 1 for DPP, MADMED and TKV while in the high signalling sets, these nodes are expressed at level 2. 
+The node Tkv is multi-valued because the high signalling is characterized by the binding of hetero dimers (DPP/SCW or DPP/GBB) signalling through TKV. Note that GBB and SCW don't have the same expression pattern. 
+</p>
+  </body>
+    </notes>
+    <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_2e014e36-8b99-4503-a8cc-a4d02cb54afe">
+          <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12239569"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:18588885"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:21385708"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:22710168"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:22257639"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+      <layout:listOfLayouts xmlns:layout="http://www.sbml.org/sbml/level3/version1/layout/version1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <layout:layout layout:id="__layout__">
+        <layout:dimensions layout:height="378" layout:width="768"/>
+        <layout:listOfAdditionalGraphicalObjects>
+          <layout:generalGlyph layout:id="_ly_Scw" layout:reference="Scw">
+            <layout:boundingBox>
+              <layout:position layout:x="36" layout:y="42"/>
+              <layout:dimensions layout:height="35" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Gbb" layout:reference="Gbb">
+            <layout:boundingBox>
+              <layout:position layout:x="96" layout:y="83"/>
+              <layout:dimensions layout:height="35" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Tld" layout:reference="Tld">
+            <layout:boundingBox>
+              <layout:position layout:x="531" layout:y="84"/>
+              <layout:dimensions layout:height="35" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Sog" layout:reference="Sog">
+            <layout:boundingBox>
+              <layout:position layout:x="528" layout:y="142"/>
+              <layout:dimensions layout:height="35" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Dpp" layout:reference="Dpp">
+            <layout:boundingBox>
+              <layout:position layout:x="590" layout:y="45"/>
+              <layout:dimensions layout:height="35" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Tsg" layout:reference="Tsg">
+            <layout:boundingBox>
+              <layout:position layout:x="708" layout:y="194"/>
+              <layout:dimensions layout:height="35" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Tkv" layout:reference="Tkv">
+            <layout:boundingBox>
+              <layout:position layout:x="587" layout:y="196"/>
+              <layout:dimensions layout:height="35" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Punt" layout:reference="Punt">
+            <layout:boundingBox>
+              <layout:position layout:x="158" layout:y="130"/>
+              <layout:dimensions layout:height="35" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Sax" layout:reference="Sax">
+            <layout:boundingBox>
+              <layout:position layout:x="326" layout:y="134"/>
+              <layout:dimensions layout:height="35" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Shn" layout:reference="Shn">
+            <layout:boundingBox>
+              <layout:position layout:x="530" layout:y="246"/>
+              <layout:dimensions layout:height="35" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Brk" layout:reference="Brk">
+            <layout:boundingBox>
+              <layout:position layout:x="471" layout:y="343"/>
+              <layout:dimensions layout:height="35" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Dad" layout:reference="Dad">
+            <layout:boundingBox>
+              <layout:position layout:x="212" layout:y="264"/>
+              <layout:dimensions layout:height="35" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_MadMed" layout:reference="MadMed">
+            <layout:boundingBox>
+              <layout:position layout:x="327" layout:y="198"/>
+              <layout:dimensions layout:height="35" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Nej" layout:reference="Nej">
+            <layout:boundingBox>
+              <layout:position layout:x="419" layout:y="249"/>
+              <layout:dimensions layout:height="35" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Targets" layout:reference="Targets">
+            <layout:boundingBox>
+              <layout:position layout:x="320" layout:y="313"/>
+              <layout:dimensions layout:height="35" layout:width="74"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+        </layout:listOfAdditionalGraphicalObjects>
+      </layout:layout>
+    </layout:listOfLayouts>
+    <qual:listOfQualitativeSpecies xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="b8edd5f5-eaad-4e08-b9b7-5632ff5df11a" qual:id="Scw" qual:constant="true" qual:name="screw">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Screw (SCW) potentiates DPP signaling during early D/V patterning of the embryo (Arora et al., 1994). 
+In the absence of SCW function, DPP alone is unable to establish two distinct thresholds at their normal position 
+(dorsal ectoderm and amnioserosa) (Nguyen et al., 1998; Eldar et al., 2002). 
+
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#b8edd5f5-eaad-4e08-b9b7-5632ff5df11a">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:7958918"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9827802"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12239569"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0005590.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_789413f8-34ca-4cbc-9165-63e193e6a998" qual:id="Gbb" qual:constant="true" qual:name="glass-bottom-boat">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+Glass-bottom-boat (GBB) potentiates DPP signalling during the development of adult structures such as the wing 
+(Chen et al., 1998; Khalsa et al., 1998; Haerry et al., 1998).
+
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_789413f8-34ca-4cbc-9165-63e193e6a998">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9521913"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9636086"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12239569"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0024234.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_35f3c156-943a-4660-9311-8a55dd49bc9d" qual:id="Tld" qual:constant="true" qual:name="Tolloid">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>tolloid (tld) transcripts are detected in precellular cleavage cycle 10 embryos in a broad dorsal-on/ventral-off pattern of expression. This temporal and spatial pattern is very similar to that seen for DPP. 
+TLD encodes the Drosophila homolog of the vertebrate BMP-1 metalloprotease (Shimell et al., 1991). 
+It may thus be involved in the activation of SCW through the cleaving of SOG, leading to release the heterodimer 
+DPP/SCW by the SOG/DPP/SCW or Sog/DPP/SCW/TSG complexes.TLD cleavage is stimulated by DPP binding. 
+(Aurora et al.,1994; Yu et al., 2000; Eldar et al., 2002).</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_35f3c156-943a-4660-9311-8a55dd49bc9d">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:1840509"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:10769238"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:10769238:"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12239569"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0003719.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_274323ee-68dc-452c-9a87-cb7f40f0cbe2" qual:id="Sog" qual:constant="false" qual:name="Short gastrulation">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+SOG (Short gastrulation) is a secreted factor generating an activity gradient of DPP involved in the specification of 
+dorsal embryonic cell fates by preventing its interaction with TKV. SOG diffuses dorsally to transport and limit DPP activity by preventing ligand binding (Holley et al., 1996; Yu et al., 2000; Eldar et al., 2002).</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_274323ee-68dc-452c-9a87-cb7f40f0cbe2">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8752215"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:10769238"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12239569"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0003463.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="2" qual:compartment="comp1" metaid="_79531022-9136-40ea-9230-68d299facb6d" qual:id="Dpp" qual:constant="true" qual:name="Decanpetaplegic">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+Decapentaplegic (DPP) is the morphogen responsible of DV polarity (Ferguson et al., 1992). 
+Its primary pattern is established in the dorsal ectoderm by repression in more ventral regions by Dorsal (Ray et al., 1991). DPP regulates target genes through two mechanisms: directly by activating gene expression, or indirectly by SHN-dependent repression of BRK (Yao et al., 2008). During embryonic development, DPP is essential for 
+formation of the dorsal-ventral (D/V) axis (Wharton et al.,1993), the subdivision of the mesoderm into somatic versus visceral or cardiac components (Yu et al., 2000), the induction of endoderm in the developing gut (Staehling- Hampton et al., 1994; Frasch et al., 1995), and the formation of trachea (Wappner et al., 1997). 
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_79531022-9136-40ea-9230-68d299facb6d">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:1423606"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:1765005"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:18506030"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8330541"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:10769238"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:7997266"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8086336"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:7913899"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:7700357"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9409686"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0000490.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_24685819-871a-400c-8bf7-0fb53e27cfb0" qual:id="Tsg" qual:constant="true" qual:name="The Twisted Gastrulation">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>TSG (Twisted-gastrulation) protein is a secreted protein required to specify the fate of the dorsal midline cells 
+(Mason et al., 1997; Eldar et al., 2002). TSG participates in the formation of the gradient expression of DPP, by forming a complex with SOG, which sequesters DPP/DPP, DPP/SCW or DPP/GBB dimers.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_24685819-871a-400c-8bf7-0fb53e27cfb0">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9232597"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12239569"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0003865.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="2" qual:compartment="comp1" metaid="_61544096-725a-48e8-b2d6-cd59f1e0ce23" qual:id="Tkv" qual:constant="false" qual:name="Thick-veins">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>DPP signaling is initiated by binding of the ligand to a complex of the type I and type II serine/threonine kinase 
+receptors, Thickveins (TKV) and Punt, respectively (Xu et al., 1998). 
+Activated TKV phosphorylates the BMP-specific Smad Mothers against DPP (MAD), leading to its association 
+with the co-Smad Medea (MED) and accumulation of the MADMED complex in the nucleus. 
+Loss of TKV in the embryo and in imaginal discs mimics the loss of DPP function (Nellen et al., 1994; Terracol and 
+Lengyel, 1994; Burke and Basler, 1996). </p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_61544096-725a-48e8-b2d6-cd59f1e0ce23">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9694800"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8044837"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8001784"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8903352"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0003716.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="c4ea94d9-de66-45f8-ad3e-f184fcc79c85" qual:id="Punt" qual:constant="true" qual:name="Punt">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Punt is a transmembrane serine/threonine kinases type II receptor for DPP. 
+Upon ligand binding, Punt phosphorylates the Type I receptor (TKV or SAX) by forming a heteromeric complex, 
+leading to the phosphorylation of Smad proteins (Letsou et al., 1995; Yu et al., 2000).</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#c4ea94d9-de66-45f8-ad3e-f184fcc79c85">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:7697720"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9636086"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0003169.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="ada082e2-a52f-4708-9240-378bc9cba6c3" qual:id="Sax" qual:constant="false" qual:name="Sax">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+Screw/Screw (SCW/SCW) dimer signals through SAX, while TKV is required for  DPP/DPP and DPP/Screw 
+dimers signalling (Nguyen et al. 1998, Eldar et al., 2002).
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#ada082e2-a52f-4708-9240-378bc9cba6c3">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9694800"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12239569"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0003317.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="aa59ac49-ceeb-4c83-94f8-16847b97464a" qual:id="Shn" qual:constant="true" qual:name="Schnurrri">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>SHN encodes a large protein containing eight zinc fingers (Arora et al., 1995; Grieder et al., 1995; Staehling-Hampton et al., 1995). The C-terminal 600 amino of SHN, including zinc fingers six to eight, is sufficient to repress brk transcription in vivo upon DPP signaling (Muller et al., 2003). This repression is mediated by a SHN/MADMED (SMM) complex, which antagonizes transcriptional activation by binding to a GRCGNC(N5)GTCTG motif (Gao and Laughon, 2006; Gao et al., 2005; Muller et al., 2003; Pyrowolakis et al., 2004). </p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#aa59ac49-ceeb-4c83-94f8-16847b97464a">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:7774017"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:7774018"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:7588072"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12705870"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:16829514"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:16109720"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:15296719"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0003396.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="eb3ea679-6d3d-4a6b-97f1-91d10281d790" qual:id="Brk" qual:constant="false" qual:name="Brinker">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>BRK (Brinker) plays essential roles in the regulation of most DPP targets. 
+BRK binds to the enhancers of dpp target genes and functions as a constitutive repressor (Kirkpatrick et al., 2001; Rushlow et al., 2001; Saller and Bienz, 2001). This repression is controlled by a SHN/MADMED (SMM) complex that antagonizes transcriptional activation by binding to brinker regulatory regions (Gao and Laughon, 2006; Gao et al., 2005; Muller et al., 2003; Pyrowolakis et al., 2004). 
+Thus, DPP regulates its target genes through two mechanisms: (I) directly by activating gene expression; (ii) 
+indirectly by SHN-dependent repression of brk. Repression by DPP results in an inverse gradient of BRK throughout development (Yao et al., 2008).</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#eb3ea679-6d3d-4a6b-97f1-91d10281d790">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11262410"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11159914"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11306550"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:16829514"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:16109720"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12705870"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:15296719"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9694800"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0024250.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="a2e5b6de-e5af-444b-92ee-01625db7aa15" qual:id="Dad" qual:constant="false" qual:name="Daugthers against Dpp">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Daughters against DPP (DAD) is an I-Smad that exclusively inhibits DPP signaling mediated through MAD 
+by blocking its phosphorylation by SAX and TKV. DAD interact with TKV and SAX physically to mediate its inhibition. (Kamiya et al., 2008)</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#a2e5b6de-e5af-444b-92ee-01625db7aa15">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:18588885"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:7697720"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0020493.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="2" qual:compartment="comp1" metaid="e68ce0bd-a6b7-4740-9a37-6686e8b3e565" qual:id="MadMed" qual:constant="false" qual:name="Mad/Med">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Activated TKV phosphorylates the mad (MP-specific Smad Mothers against DPP), leading to its association with MED (co-Smad Medea) and to the accumulation of the MADMED complex in the nucleus. 
+MAD and MED-binding sites have been found in the promoters of many DPP responsive genes (Yao et al., 2008). All MED sites can also bind MAD, but some MAD sites do not bind MED sites (Xu et al., 1998). 
+
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#e68ce0bd-a6b7-4740-9a37-6686e8b3e565">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:18506030"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9694800"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0011655.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="a153888e-f159-4111-9c93-3b961e69fae0" qual:id="Nej" qual:constant="true" qual:name="Nejire">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Nejire (NEJ) is a transcriptional co-activator that is conserved in metazoans. It acts as a co-activator by bridging interactions between DNA- binding transcription factors and the basal transcription machinery and by affecting the access of factors to DNA through their intrinsic acetyltransferase (AT) activity (Lilja et al., 2003, 2007). </p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#a153888e-f159-4111-9c93-3b961e69fae0">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:14550792"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1016/j.ydbio.2007.01.036"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:17336283"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0004396.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="false" qual:name="Targets" qual:id="Targets">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>DPP targets include optomotor blind and spalt in the imaginal wing disc (Yu et al., 2000), as well as dorsocross, 
+tinman, bagpipe and eve in the dorsal mesoderm during specification and diversification.</p>
+  </body>
+        </notes>
+      </qual:qualitativeSpecies>
+    </qual:listOfQualitativeSpecies>
+    <qual:listOfTransitions xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:transition qual:id="tr_Sog">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Tld" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Sog_in_2"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Sog" qual:transitionEffect="assignmentLevel" qual:id="tr_Sog_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Tld </ci>
+                <cn type="integer"> 0 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Tkv">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Scw" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Tkv_in_0"/>
+          <qual:input qual:qualitativeSpecies="Gbb" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Tkv_in_1"/>
+          <qual:input qual:qualitativeSpecies="Sog" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Tkv_in_3"/>
+          <qual:input qual:qualitativeSpecies="Dpp" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Tkv_in_4"/>
+          <qual:input qual:qualitativeSpecies="Tsg" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Tkv_in_5"/>
+          <qual:input qual:qualitativeSpecies="Punt" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Tkv_in_7"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Tkv" qual:transitionEffect="assignmentLevel" qual:id="tr_Tkv_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Scw </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Gbb </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Sog </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Dpp </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Tsg </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Punt </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Scw </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Gbb </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Sog </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <leq/>
+                    <ci> Dpp </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Tsg </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Punt </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Scw </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Sog </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <leq/>
+                    <ci> Dpp </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Tsg </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Punt </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:functionTerm qual:resultLevel="2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Scw </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Gbb </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Sog </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Dpp </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Tsg </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Punt </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Scw </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Gbb </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Sog </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Dpp </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Tsg </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Punt </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Scw </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Sog </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Dpp </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Tsg </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Punt </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Sax">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Scw" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Sax_in_0"/>
+          <qual:input qual:qualitativeSpecies="Gbb" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Sax_in_1"/>
+          <qual:input qual:qualitativeSpecies="Sog" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Sax_in_3"/>
+          <qual:input qual:qualitativeSpecies="Dpp" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Sax_in_4"/>
+          <qual:input qual:qualitativeSpecies="Punt" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Sax_in_7"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Sax" qual:transitionEffect="assignmentLevel" qual:id="tr_Sax_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Scw </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Gbb </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Sog </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Dpp </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Punt </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Scw </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Gbb </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Sog </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Punt </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Scw </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Sog </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Punt </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Brk">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Shn" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Brk_in_9"/>
+          <qual:input qual:qualitativeSpecies="MadMed" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Brk_in_12"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Brk" qual:transitionEffect="assignmentLevel" qual:id="tr_Brk_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Shn </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> MadMed </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Dad">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Brk" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Dad_in_10"/>
+          <qual:input qual:qualitativeSpecies="MadMed" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Dad_in_12"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Dad" qual:transitionEffect="assignmentLevel" qual:id="tr_Dad_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Brk </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> MadMed </ci>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_MadMed">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Tkv" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_MadMed_in_6"/>
+          <qual:input qual:qualitativeSpecies="Sax" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_MadMed_in_8"/>
+          <qual:input qual:qualitativeSpecies="Dad" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_MadMed_in_11"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="MadMed" qual:transitionEffect="assignmentLevel" qual:id="tr_MadMed_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Tkv </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Sax </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Dad </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Tkv </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Dad </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Tkv </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Dad </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:functionTerm qual:resultLevel="2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Tkv </ci>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Dad </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Targets">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Brk" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Targets_in_10"/>
+          <qual:input qual:qualitativeSpecies="MadMed" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Targets_in_12"/>
+          <qual:input qual:qualitativeSpecies="Nej" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Targets_in_13"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Targets" qual:transitionEffect="assignmentLevel" qual:id="tr_Targets_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Brk </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <geq/>
+                  <ci> MadMed </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Nej </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+    </qual:listOfTransitions>
+    <listOfCompartments>
+      <compartment constant="true" id="comp1"/>
+    </listOfCompartments>
+  </model>
+</sbml>

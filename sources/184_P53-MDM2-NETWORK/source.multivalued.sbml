@@ -1,0 +1,422 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" layout:required="false" level="3" qual:required="true" xmlns:layout="http://www.sbml.org/sbml/level3/version1/layout/version1" version="1" xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+  <model metaid="c15be5e0-621f-4e66-8789-6afd96687b1e" id="model_id">
+    <notes>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>This model is an adapted version of the logical model of the p53-mdm2 network described in Fig. 5a of Abou-Jaoudé et al. [1].
+
+The regulatory graph describes the interactions between protein p53, the ubiquitin ligase Mdm2 in its nuclear and cytoplasmic forms, and DNA damage. It relies on  biological data taken from literature.
+
+In short, the nuclear component of Mdm2 down-regulates the level of active p53. This occurs both by accelerating p53 degradation through ubiquitination and by blocking the transcriptional activity of p53.
+
+Protein p53 plays a dual role. It activates the expression of Mdm2 thereby up-regulating the level of cytoplasmic Mdm2, and down-regulates the level of nuclear Mdm2 by inhibiting Mdm2 nuclear translocation through inactivation of the kinase Akt.
+
+DNA damage has a negative influence on the level of nuclear Mdm2, by accelerating its degradation through ATM-mediated phosphorylation and auto-ubiquitination. 
+
+Damage-induced Mdm2 destabilization enables p53 to accumulate and remain active.
+
+Finally, high levels of p53 promote damage repair by inducing the synthesis of DNA repair proteins.</p>
+  </body>
+    </notes>
+    <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#c15be5e0-621f-4e66-8789-6afd96687b1e">
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/pubmed/19233211"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+      <layout:listOfLayouts xmlns:layout="http://www.sbml.org/sbml/level3/version1/layout/version1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <layout:layout layout:id="__layout__">
+        <layout:dimensions layout:height="241" layout:width="389"/>
+        <layout:listOfAdditionalGraphicalObjects>
+          <layout:generalGlyph layout:id="_ly_p53" layout:reference="p53">
+            <layout:boundingBox>
+              <layout:position layout:x="84" layout:y="41"/>
+              <layout:dimensions layout:height="30" layout:width="80"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Mdm2cyt" layout:reference="Mdm2cyt">
+            <layout:boundingBox>
+              <layout:position layout:x="84" layout:y="211"/>
+              <layout:dimensions layout:height="30" layout:width="80"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Mdm2nuc" layout:reference="Mdm2nuc">
+            <layout:boundingBox>
+              <layout:position layout:x="309" layout:y="211"/>
+              <layout:dimensions layout:height="30" layout:width="80"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_DNAdam" layout:reference="DNAdam">
+            <layout:boundingBox>
+              <layout:position layout:x="309" layout:y="40"/>
+              <layout:dimensions layout:height="30" layout:width="80"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+        </layout:listOfAdditionalGraphicalObjects>
+      </layout:layout>
+    </layout:listOfLayouts>
+    <qual:listOfQualitativeSpecies xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:qualitativeSpecies qual:maxLevel="2" qual:compartment="comp1" metaid="b03f9feb-6d8c-4a2f-b43c-3067def139bb" qual:constant="false" qual:id="p53">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Ternary component (0, 1, 2) deonting p53 activity.
+
+Nuclear Mdm2 inhibits the activity of p53 by accelerating its degradation through ubiquitination [1,2,3] and by blocking its transcriptional activity [4,5,6,7,8]
+
+Mdm2-mediated p53 ubiquitination takes place in the nucleus in a complex with the p300/CREB- binding protein (CBP) transcriptional coactivator proteins, serving as a scaffolding [9].</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#b03f9feb-6d8c-4a2f-b43c-3067def139bb">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/pubmed/16455486"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/pubmed/9153395"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/pubmed/10723139"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/pubmed/8529093"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/pubmed/17170761"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/pubmed/1535557"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/pubmed/8479525"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/pubmed/15242646"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/pubmed/14707283"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="2" qual:compartment="comp1" metaid="_89e95a27-1a0c-4630-830d-aeaee67ae901" qual:constant="false" qual:id="Mdm2cyt">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Mdm2cyt = cytoplasmic Mdm2
+
+Multileveled component (0, 1, 2).
+
+Mdm2 gene has a p53-independant basal expression [2,3].
+
+p53 upregulates the level of cytoplasmic Mdm2 by activating the transcription of gene Mdm2 [4,5].
+
+We assume that cytoplasmic Mdm2 is activated by high levels of p53.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_89e95a27-1a0c-4630-830d-aeaee67ae901">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/6973"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/pubmed/23973961"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/pubmed/10688649"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/pubmed/8440237"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/pubmed/10065155"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_6ad164a9-e5dc-4b0a-9b56-d66eaaf5d64b" qual:constant="false" qual:id="Mdm2nuc">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Mdm2nuc = nuclear Mdm2
+
+p53 down-regulates the level of nuclear Mdm2 by inhibiting Mdm2 nuclear translocation through inactivation of the kinase Akt [2,3,4].
+
+DNA damage has a negative influence on the level of Mdm2, by accelerating its degradation through ATM-mediated phosphorylation and auto-ubiquitination [5,6]. 
+
+Following Ciliberto et al. model [7], we assume that DNA damage accelerates only the degradation of nuclear Mdm2.
+
+We assume that nuclear Mdm2 is inhibited by low levels of p53.
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_6ad164a9-e5dc-4b0a-9b56-d66eaaf5d64b">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/6973"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/pubmed/11850850"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/pubmed/12217521"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/pubmed/11545734"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/pubmed/15029243"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/pubmed/15684615"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/pubmed/15725723"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="b2a9dabe-6031-4eeb-a69e-a36fd053cb36" qual:constant="false" qual:id="DNAdam">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Component representing DNA damage
+
+High levels of p53 promote damage repair by inducing the synthesis of DNA repair proteins [1,2,3,4].
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#b2a9dabe-6031-4eeb-a69e-a36fd053cb36">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/pubmed/12967652"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/pubmed/16543940"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/pubmed/10716425"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/pubmed/10359074"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+    </qual:listOfQualitativeSpecies>
+    <qual:listOfTransitions xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:transition qual:id="tr_p53">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Mdm2nuc" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_p53_in_2"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="p53" qual:transitionEffect="assignmentLevel" qual:id="tr_p53_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Mdm2nuc </ci>
+                <cn type="integer"> 0 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Mdm2cyt">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="p53" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Mdm2cyt_in_0"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Mdm2cyt" qual:transitionEffect="assignmentLevel" qual:id="tr_Mdm2cyt_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <leq/>
+                <ci> p53 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:functionTerm qual:resultLevel="2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> p53 </ci>
+                <cn type="integer"> 2 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Mdm2nuc">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="p53" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Mdm2nuc_in_0"/>
+          <qual:input qual:qualitativeSpecies="Mdm2cyt" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Mdm2nuc_in_1"/>
+          <qual:input qual:qualitativeSpecies="DNAdam" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Mdm2nuc_in_3"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Mdm2nuc" qual:transitionEffect="assignmentLevel" qual:id="tr_Mdm2nuc_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> p53 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mdm2cyt </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> DNAdam </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> p53 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mdm2cyt </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <geq/>
+                    <ci> p53 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mdm2cyt </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_DNAdam">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="p53" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_DNAdam_in_0"/>
+          <qual:input qual:qualitativeSpecies="DNAdam" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_DNAdam_in_3"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="DNAdam" qual:transitionEffect="assignmentLevel" qual:id="tr_DNAdam_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <leq/>
+                  <ci> p53 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> DNAdam </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+    </qual:listOfTransitions>
+    <listOfCompartments>
+      <compartment constant="true" id="comp1"/>
+    </listOfCompartments>
+  </model>
+</sbml>

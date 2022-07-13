@@ -1,0 +1,20 @@
+v_EGF_b1 -> v_Operculum
+v_EGF_b2 -> v_Operculum
+v_BMP -> v_Operculum
+v_Roof_adj -| v_Operculum
+v_anterior -> v_Operculum
+v_EGF_b1 -> v_Floor
+v_EGF_b2 -> v_Floor
+v_BMP -> v_Floor
+v_Roof_adj -> v_Floor
+v_anterior -> v_Floor
+v_EGF_b1 -> v_Roof
+v_EGF_b2 -| v_Roof
+v_BMP -| v_Roof
+v_anterior -> v_Roof
+v_EGF_b1 -> v_EGF_b2
+v_EGF_b2 -> v_EGF_b2
+$v_EGF_b2: (v_EGF_b1 & v_EGF_b2)
+$v_Floor: (((((v_EGF_b1 & !v_EGF_b2) & v_BMP) & v_Roof_adj) & v_anterior) | (((v_EGF_b1 & v_EGF_b2) & v_Roof_adj) & v_anterior))
+$v_Operculum: (((((v_EGF_b1 & !v_EGF_b2) & v_BMP) & !v_Roof_adj) & v_anterior) | (((v_EGF_b1 & v_EGF_b2) & !v_Roof_adj) & v_anterior))
+$v_Roof: (((v_EGF_b1 & !v_EGF_b2) & !v_BMP) & v_anterior)

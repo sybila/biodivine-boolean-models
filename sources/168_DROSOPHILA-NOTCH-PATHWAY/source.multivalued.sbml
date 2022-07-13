@@ -1,0 +1,929 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" layout:required="false" level="3" qual:required="true" xmlns:layout="http://www.sbml.org/sbml/level3/version1/layout/version1" version="1" xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+  <model metaid="_242175f0-ce43-4dd2-8112-140a10e16406" id="model_id">
+    <notes>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Notch signaling is involved in the modulation of Twist expression and the subdivision of the 
+mesoderm into high and low domain of Twist. The binding of Delta leads to the cleavage and the release of the Notch intracellular domain NICD. 
+During mesoderm specification, NICD can inhibit Twist by forming a complex with EMC, or in 
+combination with Enhancer of split and Suppressor of hairless proteins. 
+In this regard, we modeled the effect of Notch pathway on Twist expression. Our defined initial 
+states reproduce biological data during mesoderm specification. When Delta is ON (high or 
+medium signaling), the level of Twist expression can decrease from 2 to 1 or 0. When Delta is 
+OFF (no signaling), Twist is expressed at its maximal level 2. </p>
+  </body>
+    </notes>
+    <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_242175f0-ce43-4dd2-8112-140a10e16406">
+          <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8633240"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:15128668"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9733574"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8076205"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:19896355"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:22868267"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+      <layout:listOfLayouts xmlns:layout="http://www.sbml.org/sbml/level3/version1/layout/version1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <layout:layout layout:id="__layout__">
+        <layout:dimensions layout:height="411" layout:width="452"/>
+        <layout:listOfAdditionalGraphicalObjects>
+          <layout:generalGlyph layout:id="_ly_Delta" layout:reference="Delta">
+            <layout:boundingBox>
+              <layout:position layout:x="109" layout:y="11"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Notch" layout:reference="Notch">
+            <layout:boundingBox>
+              <layout:position layout:x="105" layout:y="94"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Nicd" layout:reference="Nicd">
+            <layout:boundingBox>
+              <layout:position layout:x="106" layout:y="171"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Emc" layout:reference="Emc">
+            <layout:boundingBox>
+              <layout:position layout:x="25" layout:y="299"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_E_Spl" layout:reference="E_Spl">
+            <layout:boundingBox>
+              <layout:position layout:x="190" layout:y="296"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_H" layout:reference="H">
+            <layout:boundingBox>
+              <layout:position layout:x="291" layout:y="17"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Gro" layout:reference="Gro">
+            <layout:boundingBox>
+              <layout:position layout:x="292" layout:y="66"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_CtBP" layout:reference="CtBP">
+            <layout:boundingBox>
+              <layout:position layout:x="295" layout:y="114"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Mam" layout:reference="Mam">
+            <layout:boundingBox>
+              <layout:position layout:x="333" layout:y="266"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_p300" layout:reference="p300">
+            <layout:boundingBox>
+              <layout:position layout:x="342" layout:y="301"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Su_H" layout:reference="Su_H">
+            <layout:boundingBox>
+              <layout:position layout:x="372" layout:y="348"/>
+              <layout:dimensions layout:height="30" layout:width="80"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Bx42" layout:reference="Bx42">
+            <layout:boundingBox>
+              <layout:position layout:x="304" layout:y="359"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Da" layout:reference="Da">
+            <layout:boundingBox>
+              <layout:position layout:x="219" layout:y="381"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Twi" layout:reference="Twi">
+            <layout:boundingBox>
+              <layout:position layout:x="89" layout:y="380"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+        </layout:listOfAdditionalGraphicalObjects>
+      </layout:layout>
+    </layout:listOfLayouts>
+    <qual:listOfQualitativeSpecies xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_7637ecd3-473f-4bc4-94f9-3e21ef368bf8" qual:id="Delta" qual:constant="true" qual:name="Dl">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>The Notch ligand Delta is expressed throughout the mesoderm at late stage 9 and stage 10 (Kooh et al., 1993, Majumder et al., 2012; Guruharsha et al., 2012). </p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_7637ecd3-473f-4bc4-94f9-3e21ef368bf8">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8330521"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:22571430"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:22868267"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0000463.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_918f4afe-4b36-4a3c-aa0e-d27c742511cb" qual:id="Notch" qual:constant="false" qual:name="Notch">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Notch is ubiquitously expressed during gastrulation. It is activated by Delta (DL) and Serrate (SER). Notch null 
+embryos, lacking both maternally contributed and zygotically expressed Notch, fail to modulate Twist 
+expression into low and high mesoderm domains at stage 10, resulting in maintained uniform high Twist levels. 
+Notch signaling acts as a transcriptional switch that alleviates Su(H)-mediated repression and converts Su(H) 
+from a transcriptional repressor into a transcriptional activator. Furthermore, Su(H) could affect Twist expression through a multi-layer mechanism that includes direct, as well as indirect, transcriptional regulation (Tapanes-Castillo et al., 2004). 
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_918f4afe-4b36-4a3c-aa0e-d27c742511cb">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:15128668"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:1690605"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0004647.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="false" qual:name="Notch" qual:id="Nicd">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>A proteolytic processing mediates the release of the Notch intracellular domain (NICD), which enters the nucleus and interacts with the DNA-binding CSL  protein (Su(H) in the model).  Pan-mesodermal expression of a constitutively activated form of Notch (Nintra) has an effect opposite to that of a complete loss of Notch function: fewer cells express high Twist levels. 
+Mastermind (MAM) and other transcription factors are recruited to the CSL complex, whereas co-repressors are 
+released (probably GRO, CtTB). The assembly of the co-activator complex results in turnover of NICD. 
+In the absence of Notch activity, CSL proteins recruit co-repressors. 
+The adaptor Hairless tethers the more global repressors Groucho and CtBP, which recruit histone deacetylases. 
+The rapidly changing levels of pathway activity require that the nuclear effectors have a short half-life. 
+This is achieved by recruiting factors such as cyclin-dependent kinase-8 (CDK8), which phosphorylates NICD, 
+turning it into a substrate of the nuclear ubiquitin ligase. </p>
+  </body>
+        </notes>
+      </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_32c64fae-9cf3-487d-9c6e-006172160f82" qual:id="Emc" qual:constant="false" qual:name="extra macrochaetae">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>In the embryonic mesoderm, Extra Macrochaetae (EMC) is expressed uniformly during gastrulation until stage 10. 
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_32c64fae-9cf3-487d-9c6e-006172160f82">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:1690604"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0000575.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="2" qual:compartment="comp1" metaid="_6f77ea2f-586e-4f81-bee9-f596267ed9f5" qual:id="E_Spl" qual:constant="false" qual:name="Enhancer of split">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Enhancer of split (E(SPL)) bHLH proteins are Notch-regulated transcriptional repressors. They directly bind 
+promoters, recruit co-repressors, and repress transcription. In addition, these proteins interact with other promoter- bound bHLH proteins expressed throughout the mesoderm at uniform low levels. At stage 10, Df(3R)E(SPL) mutant embryos maintained uniform high Twist expression throughout the mesoderm. 
+Like Notch null mutants, Df(3R)E(SPL) mutant embryos do not modulate Twist into low and high domains. 
+Mesodermally expressed E(SPL) genes repress Twist at stage 10. 
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_6f77ea2f-586e-4f81-bee9-f596267ed9f5">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:10370119"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:15128668"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:20458100"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:22949507"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:23213460"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0000591.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="ee5a7b7f-2826-4caf-80e2-88a97e3521b7" qual:id="H" qual:constant="true" qual:name="Hairless">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Hairless antagonizes Notch signalling by recruiting GRO and CtBP (Nagel et al., 2005, Maier et al., 2008, Johnson et 
+al., 2011, Nagel et al., 2011). </p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#ee5a7b7f-2826-4caf-80e2-88a97e3521b7">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:16287856"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:17362357"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:22074602"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:21756252"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0001169.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_667b399e-15d9-4ae7-b7fe-eea398207fe5" qual:id="Gro" qual:constant="true" qual:name="Groucho">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Groucho is a co-repressor recruited by CSL proteins in the absence of Notch signalling. 
+Nagel et al., 2007, Nagel et al., 2011, Kurth et al., 2011; Turki-Judeh et al., 2012. </p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_667b399e-15d9-4ae7-b7fe-eea398207fe5">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:18031354"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:22125648"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:21756252"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:22305159"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0001139.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="fbb9fb59-9a11-4102-af79-14a3e96f23f2" qual:id="CtBP" qual:constant="true" qual:name="C-terminal Binding Protein">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>In the absence of Notch activity, CSL proteins (CBF1, Su(H) and LAG-1) recruit co-repressors. 
+The adaptor Hairless (H) tethers the more global repressors Groucho and C-terminal binding protein (CtBP), which 
+recruit histone deacetylases. Nagel et al., 2005; Nagel et al., 2007, Nagel et al., 2011; Kurth et al., 2011.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#fbb9fb59-9a11-4102-af79-14a3e96f23f2">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:16287856"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:18031354"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:22125648"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:21756252"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0020496.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_21b6dbd0-6ef7-41df-967e-0e9c1d5e1278" qual:id="Mam" qual:constant="true" qual:name="Mastermind">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>The co-activator Mastermind (MAM) is required to activate transcription. 
+MAM proteins from different species share little sequence homology apart from a N-terminal region that forms an 
+extended‚ helical domain that contacts CSL and the Ank domain of NICD, thereby enabling the formation of a 
+trimeric complex. This complex triggers the transcription of Notch target genes. Helms et al., 1999; Morel et al., 2001; Cave et al., 2008.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_21b6dbd0-6ef7-41df-967e-0e9c1d5e1278">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:10545243"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11378391"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:18930034"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0002643.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="d3a87299-2f2e-4db7-a2c4-67901adb32e0" qual:id="p300" qual:constant="true" qual:name="p300">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>The histone acetylase P300 promotes the assembly of initiation and elongation complexes, once it is recruited by 
+MAM on NICD regulated promotors. Takizawa et al., 2003, Tapanes-Castillo et al., 2004).</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#d3a87299-2f2e-4db7-a2c4-67901adb32e0">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:15128668"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:14500836"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0064148.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_02516c17-fec0-4f8a-87a2-2828b2db36bd" qual:id="Su_H" qual:constant="true" qual:name="Suppressor of Hairless">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Supressor of Hairless (Su(H)) null mutant embryos modulate Twist levels properly and exhibit the low and 
+high Twist pattern characteristic of wild-type embryos at stage 10. 
+The pan-mesodermal expression of a constitutively trans-activating form of Su(H), Su(H)-VP16, leads to an 
+expansion of the high Twist domain, a process involving Su(H).  The Notch null phenotype results from the loss of a transcriptional switch that converts Su(H) from a constitutive repressor into an activator.
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_02516c17-fec0-4f8a-87a2-2828b2db36bd">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:15128668"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0004837.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_7289fc97-1d35-4a46-9fbc-d4515c4f17f9" qual:id="Bx42" qual:constant="true" qual:name="Ski Interacting Protein">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Bx42 (SKIP (Ski-interacting protein) in mammals)  is a transcriptional co-regulator and component of spliceosome 
+that is recruited to promoters regulated by NICD. Mam in turn recruits the histone acetylase P300, which 
+promotes assembly of initiation and elongation complexes (Negeri et al., 2002).</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_7289fc97-1d35-4a46-9fbc-d4515c4f17f9">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12204255"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0004856.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_74f49140-3367-4be8-ae1f-f1c047b6138f" qual:id="Da" qual:constant="true" qual:name="Daughterless">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Daughterless (DA) is ubiquitously expressed throughout development (Cronmiller et al., 1993) and is required to 
+maintain high Twist expression throughout the mesoderm during gastrulation. Loss- and gain-of-function experiments indicated that DA is a critical regulator of Twist in the early mesoderm and that inhibition of DA activity is required for proper Twist modulation (Castanon et al., 2001). Expressed at high levels in the early mesoderm, EMC has been shown to genetically and biochemically interact with DA, thereby providing a mechanism for inhibiting DA activity (Tapanes-Castillo et al., 2004).</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_74f49140-3367-4be8-ae1f-f1c047b6138f">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8217842"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11688563"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:15128668"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0000413.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="2" qual:compartment="comp1" metaid="ec731921-06fc-4f48-84e2-64cdbf63a880" qual:id="Twi" qual:constant="false" qual:name="Twist">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Twist mutant embryo develop no mesoderm (Furlong, 2001). 
+Wingless and Sloppy paired are required to generate higher levels of twist expression (Bodmer et al 1990; Baylies et al 1996; Reichmann et al 1997). Twist activity is required for the formation of most body wall muscle. 
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#ec731921-06fc-4f48-84e2-64cdbf63a880">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:1982429"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9362473"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11076769"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9435291"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8633240"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:10355030"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0003900.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+    </qual:listOfQualitativeSpecies>
+    <qual:listOfTransitions xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:transition qual:id="tr_Notch">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Delta" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Notch_in_0"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Notch" qual:transitionEffect="assignmentLevel" qual:id="tr_Notch_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Delta </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Nicd">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Notch" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Nicd_in_1"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Nicd" qual:transitionEffect="assignmentLevel" qual:id="tr_Nicd_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Notch </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Emc">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Nicd" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Emc_in_2"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Emc" qual:transitionEffect="assignmentLevel" qual:id="tr_Emc_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Nicd </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_E_Spl">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Nicd" qual:transitionEffect="none" qual:sign="dual" qual:id="tr_E_Spl_in_2"/>
+          <qual:input qual:qualitativeSpecies="H" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_E_Spl_in_5"/>
+          <qual:input qual:qualitativeSpecies="Gro" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_E_Spl_in_6"/>
+          <qual:input qual:qualitativeSpecies="CtBP" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_E_Spl_in_7"/>
+          <qual:input qual:qualitativeSpecies="Mam" qual:transitionEffect="none" qual:sign="dual" qual:id="tr_E_Spl_in_8"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="E_Spl" qual:transitionEffect="assignmentLevel" qual:id="tr_E_Spl_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> Nicd </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Nicd </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> H </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Gro </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CtBP </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mam </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Nicd </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> H </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Gro </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CtBP </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mam </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Nicd </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> H </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Gro </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mam </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Nicd </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> H </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mam </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:functionTerm qual:resultLevel="2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Nicd </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> H </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Gro </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> CtBP </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Mam </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Twi">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Emc" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Twi_in_3"/>
+          <qual:input qual:qualitativeSpecies="E_Spl" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Twi_in_4"/>
+          <qual:input qual:qualitativeSpecies="Da" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Twi_in_12"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Twi" qual:transitionEffect="assignmentLevel" qual:id="tr_Twi_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Emc </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> E_Spl </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Da </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:functionTerm qual:resultLevel="2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Emc </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Da </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Emc </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> E_Spl </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Da </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+    </qual:listOfTransitions>
+    <listOfCompartments>
+      <compartment constant="true" id="comp1"/>
+    </listOfCompartments>
+  </model>
+</sbml>

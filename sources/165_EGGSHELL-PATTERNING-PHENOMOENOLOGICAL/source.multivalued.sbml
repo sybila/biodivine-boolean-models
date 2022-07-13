@@ -1,0 +1,230 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" layout:required="false" level="3" qual:required="true" xmlns:layout="http://www.sbml.org/sbml/level3/version1/layout/version1" version="1" xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+  <model id="model_id">
+    <layout:listOfLayouts xmlns:layout="http://www.sbml.org/sbml/level3/version1/layout/version1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <layout:layout layout:id="__layout__">
+        <layout:dimensions layout:height="357" layout:width="489"/>
+        <layout:listOfAdditionalGraphicalObjects>
+          <layout:generalGlyph layout:id="_ly_Operculum" layout:reference="Operculum">
+            <layout:boundingBox>
+              <layout:position layout:x="31" layout:y="265"/>
+              <layout:dimensions layout:height="25" layout:width="105"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Floor" layout:reference="Floor">
+            <layout:boundingBox>
+              <layout:position layout:x="207" layout:y="236"/>
+              <layout:dimensions layout:height="25" layout:width="105"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Roof" layout:reference="Roof">
+            <layout:boundingBox>
+              <layout:position layout:x="384" layout:y="269"/>
+              <layout:dimensions layout:height="25" layout:width="105"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_EGF" layout:reference="EGF">
+            <layout:boundingBox>
+              <layout:position layout:x="31" layout:y="98"/>
+              <layout:dimensions layout:height="25" layout:width="105"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_BMP" layout:reference="BMP">
+            <layout:boundingBox>
+              <layout:position layout:x="207" layout:y="100"/>
+              <layout:dimensions layout:height="25" layout:width="105"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Roof_adj" layout:reference="Roof_adj">
+            <layout:boundingBox>
+              <layout:position layout:x="207" layout:y="332"/>
+              <layout:dimensions layout:height="25" layout:width="105"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_anterior" layout:reference="anterior">
+            <layout:boundingBox>
+              <layout:position layout:x="383" layout:y="99"/>
+              <layout:dimensions layout:height="25" layout:width="105"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+        </layout:listOfAdditionalGraphicalObjects>
+      </layout:layout>
+    </layout:listOfLayouts>
+    <qual:listOfQualitativeSpecies xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="false" qual:id="Operculum"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="false" qual:id="Floor"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="false" qual:id="Roof"/>
+      <qual:qualitativeSpecies qual:maxLevel="2" qual:compartment="comp1" qual:constant="true" qual:id="EGF"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="true" qual:id="BMP"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="true" qual:id="Roof_adj"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="true" qual:id="anterior"/>
+    </qual:listOfQualitativeSpecies>
+    <qual:listOfTransitions xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:transition qual:id="tr_Operculum">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="EGF" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Operculum_in_3"/>
+          <qual:input qual:qualitativeSpecies="BMP" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Operculum_in_4"/>
+          <qual:input qual:qualitativeSpecies="Roof_adj" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Operculum_in_5"/>
+          <qual:input qual:qualitativeSpecies="anterior" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Operculum_in_6"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Operculum" qual:transitionEffect="assignmentLevel" qual:id="tr_Operculum_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> EGF </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> BMP </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Roof_adj </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> anterior </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> EGF </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Roof_adj </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> anterior </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Floor">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="EGF" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Floor_in_3"/>
+          <qual:input qual:qualitativeSpecies="BMP" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Floor_in_4"/>
+          <qual:input qual:qualitativeSpecies="Roof_adj" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Floor_in_5"/>
+          <qual:input qual:qualitativeSpecies="anterior" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Floor_in_6"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Floor" qual:transitionEffect="assignmentLevel" qual:id="tr_Floor_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> EGF </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> BMP </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Roof_adj </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> anterior </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> EGF </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Roof_adj </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> anterior </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Roof">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="EGF" qual:transitionEffect="none" qual:sign="dual" qual:id="tr_Roof_in_3"/>
+          <qual:input qual:qualitativeSpecies="BMP" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Roof_in_4"/>
+          <qual:input qual:qualitativeSpecies="anterior" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Roof_in_6"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Roof" qual:transitionEffect="assignmentLevel" qual:id="tr_Roof_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> EGF </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> BMP </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> anterior </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+    </qual:listOfTransitions>
+    <listOfCompartments>
+      <compartment constant="true" id="comp1"/>
+    </listOfCompartments>
+  </model>
+</sbml>

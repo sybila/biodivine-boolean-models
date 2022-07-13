@@ -1,0 +1,1902 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" layout:required="false" level="3" qual:required="true" xmlns:layout="http://www.sbml.org/sbml/level3/version1/layout/version1" version="1" xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+  <model metaid="_79079de3-3b46-4527-9329-9a03225327dc" id="model_id">
+    <notes>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Four activating ligands, Spitz, Keren, Gurken and Vein have been identified for drosophila EGF 
+receptors, called DER. Spitz (SPI) is the major ligand and is involved in most situations where the pathway is activated. Keren plays a minor, redundant role, while Gurken is used exclusively during oogenesis. 
+These ligands are produced as inactive transmembrane precursors, which are retained in the 
+endoplasmic reticulum and needed to processed by the chaperone protein Star. Processed ligands are directed into another compartment where they encounter Rhomboid (RHO) serine proteases, which cleave the ligand precursors within the transmembrane domain to release the active, secreted ligand form. RHO also cleaves and inactivates Star, attenuating the level of cleaved ligand that is produced. The fourth ligand, Vein, is produced as a secreted molecule, which is a weaker activating ligand used either to enhance signalling by other ligands or in specific situations such as muscle patterning. Binding of ligands to DER leads to dimerization and triggering of the canonical DRK/SOS/RAS/RAF/DSOR1/Rolled pathway. DRK(SH2-domain-containing protein) recruits SOS (Son of sevenless, a guanine nucleotide exchange factor) to catalyze the exchange of RAS bound GDP for GTP exchange, thereby activating RAS. RAS then promotes the activation of RAF, leading to DSOR1 activation, and eventually to Rolled (RL) activation. RL inactivates transcriptional co-repressors, such as Aop, and activates transcription factors, such as Pointed (PNT) (O'Neill et al., 1994; Brunner et al., 1994). The transcriptional activator PNT is a the major effector of the pathway. The protein Anterior open (AOP) is a constitutive repressor, which competes for PNT binding sites and can be removed from the nucleus and degraded upon phosphorylation by MAP kinases. 
+AOS (Argos), STY (Sprouty) and KEK (Kekkon) are inducible repressive elements involved in 
+negative feedbacks. AOS is a secreted molecule, which sequesters the ligand SPI (Spitz). STY acts downstream of DER, but upstream of RAS and RAF, by recruiting GAP1 and blocking the ability of DRK to bind to its positive effector. KEK is a transmembrane protein forming a non-functional heterodimer with the receptor. 
+Constitutively expressed, CBL (E3 ligase) modulates DER signalling by recognizing activated, 
+internalized receptor molecules and inducing their ubiquitination and degradation. CBL may also enhance the endocytosis of DER, following ligand binding. Modulation of DER signalling by CBL has been reported only in the follicle cells, which receive the Gurken signal from the oocyte (Levkowitz et al., 1999; Yokouchi et al., 1999; Waterman et al., 2000; Pai et al., 2000). 
+Our logical model represents a cell receiving different combinations of ligands binding (SPI or Vein or both) and express/receive different levels of inhibitory inputs (Aos, Sty, Cbl, Kek). The 
+signalling pathway is characterized by no signalling, medium or high signalling process designed by multi-valued nodes. 
+We consider five main wild-type cellular situations: 
+i. Cells secreting ligands but lacking Der activation (inhibition of Der), leading to no 
+signalling. 
+ii. Cells receiving medium signal with SPI expressed at level 1 and/or Vein expressed also at 
+level 1, leading to medium signalling. 
+iii. Cells receiving SPI at level of expression 1 (and/or Vein expressed at level 1) and in 
+presence of an inhibitor (e.g. STY, AOS, or KEK), leading to no signalling. 
+iv. Cells receiving SPI at level of expression 2 in the absence of inhibitors, leading to high 
+signalling. 
+v. Cells receiving SPI at level of expression 2 (and/or Vein expressed at level 1) in presence of 
+an inhibitor (e.g. STY, AOS, or KEK,...), leading only to medium signalling. </p>
+  </body>
+    </notes>
+    <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_79079de3-3b46-4527-9329-9a03225327dc">
+          <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:7559490"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9182757"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9809073"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8033205"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8047146"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+      <layout:listOfLayouts xmlns:layout="http://www.sbml.org/sbml/level3/version1/layout/version1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <layout:layout layout:id="__layout__">
+        <layout:dimensions layout:height="750" layout:width="391"/>
+        <layout:listOfAdditionalGraphicalObjects>
+          <layout:generalGlyph layout:id="_ly_Spi" layout:reference="Spi">
+            <layout:boundingBox>
+              <layout:position layout:x="264" layout:y="16"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Vein" layout:reference="Vein">
+            <layout:boundingBox>
+              <layout:position layout:x="331" layout:y="127"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Shc" layout:reference="Shc">
+            <layout:boundingBox>
+              <layout:position layout:x="106" layout:y="20"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Aos" layout:reference="Aos">
+            <layout:boundingBox>
+              <layout:position layout:x="185" layout:y="15"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Cbl" layout:reference="Cbl">
+            <layout:boundingBox>
+              <layout:position layout:x="74" layout:y="71"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Kek" layout:reference="Kek">
+            <layout:boundingBox>
+              <layout:position layout:x="70" layout:y="125"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Der" layout:reference="Der">
+            <layout:boundingBox>
+              <layout:position layout:x="191" layout:y="128"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Drk" layout:reference="Drk">
+            <layout:boundingBox>
+              <layout:position layout:x="192" layout:y="201"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Sos" layout:reference="Sos">
+            <layout:boundingBox>
+              <layout:position layout:x="191" layout:y="270"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Ras" layout:reference="Ras">
+            <layout:boundingBox>
+              <layout:position layout:x="193" layout:y="335"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_PLCg" layout:reference="PLCg">
+            <layout:boundingBox>
+              <layout:position layout:x="39" layout:y="223"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Gap1" layout:reference="Gap1">
+            <layout:boundingBox>
+              <layout:position layout:x="40" layout:y="330"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Sty" layout:reference="Sty">
+            <layout:boundingBox>
+              <layout:position layout:x="298" layout:y="338"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Raf" layout:reference="Raf">
+            <layout:boundingBox>
+              <layout:position layout:x="191" layout:y="410"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Cnk" layout:reference="Cnk">
+            <layout:boundingBox>
+              <layout:position layout:x="296" layout:y="388"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Src42" layout:reference="Src42">
+            <layout:boundingBox>
+              <layout:position layout:x="297" layout:y="431"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Ksr" layout:reference="Ksr">
+            <layout:boundingBox>
+              <layout:position layout:x="298" layout:y="474"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Dsor1" layout:reference="Dsor1">
+            <layout:boundingBox>
+              <layout:position layout:x="190" layout:y="483"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Rl" layout:reference="Rl">
+            <layout:boundingBox>
+              <layout:position layout:x="188" layout:y="558"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Msk" layout:reference="Msk">
+            <layout:boundingBox>
+              <layout:position layout:x="60" layout:y="559"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Pnt" layout:reference="Pnt">
+            <layout:boundingBox>
+              <layout:position layout:x="59" layout:y="635"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Aop" layout:reference="Aop">
+            <layout:boundingBox>
+              <layout:position layout:x="137" layout:y="637"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Cic" layout:reference="Cic">
+            <layout:boundingBox>
+              <layout:position layout:x="211" layout:y="640"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Gro" layout:reference="Gro">
+            <layout:boundingBox>
+              <layout:position layout:x="291" layout:y="639"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Targets" layout:reference="Targets">
+            <layout:boundingBox>
+              <layout:position layout:x="190" layout:y="720"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+        </layout:listOfAdditionalGraphicalObjects>
+      </layout:layout>
+    </layout:listOfLayouts>
+    <qual:listOfQualitativeSpecies xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:qualitativeSpecies qual:maxLevel="2" qual:compartment="comp1" metaid="f95791fd-b2df-4d69-bede-e8d123699627" qual:id="Spi" qual:constant="true" qual:name="Spitz">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>The primary DER activating ligand is SPI (Spitz). SPI is responsible for DER activation in most tissues. 
+SPI is produced as an inactive membrane precursor and is ubiquitously expressed. The active secreted form of Spitz is produced by tightly regulated cleavage of the membrane-bound precursor.Even when expressed at high levels, the precursor form is inactive. The spatial and temporal pattern of DER activation thus depends on the regulated processing of SPI. SPI precursor is normally retained in the endoplasmic reticulum, before trafficking from the endoplasmic reticulum to the Golgi compartment. This step is carried out by STAR. 
+Once reaching the Golgi, SPI encounters RHO (Rhomboid), which is essential for SPI cleavage. The 
+catalytic domain of RHO resides within its conserved transmembrane domains, giving rise to regulated intra-membrane proteolysis. The cleavage of SPI by RHO presumably takes place within the Golgi. (Schweitzer and 
+Shilo, 1997; Shiloh et al., 2003, 2005; Yogev et al., 2008).
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#f95791fd-b2df-4d69-bede-e8d123699627">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9154002"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12648473"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:16123311"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:18369317"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0005672.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="f9f6e38b-c12a-4eb9-bd49-c35ce8d8603f" qual:id="Vein" qual:constant="false" qual:name="Vein">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>VN (Vein) is a secreted ligand with relatively weak activation capacity, used in tissues where low activation 
+levels are required. Vein is expressed in a highly dynamic pattern in the embryo and larval imaginal discs (Golembo et al., 1999; Reich et al., 2002; Shiloh et al., 2003). Analysis of vein loss-of-function phenotypes reveals two 
+different modes of activity. Vein functioning independently of Spi. For example, in the embryo, the migrating muscle fibers approach the ectodermal muscle attachment (EMA) cells, produce Vein, and activate DER on the EMA cells. Vein functions in synergy with SPI, such that the combined activity of both ligands gives rise to proper 
+activation of the receptor. Vein can activate DER even in the presence of AOS, thus balancing the parallel negative- 
+feedback circuit involving AOS (Golembo, 1999; Reich et al., 2002; Shiloh et al., 2003, 2005; Yogev et al., 2008).</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#f9f6e38b-c12a-4eb9-bd49-c35ce8d8603f">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9925640"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12169631"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12648473"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/pubmed/18369317"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0003984.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="d25a4773-af08-4876-9db2-52601e7c9865" qual:id="Shc" qual:constant="true" qual:name="SHC-adaptor protein">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>SHC is required for DER signalling in the eye, wing, and ovary. In the absence of SHC protein, DER signalling is only 
+partially reduced. shc is widely expressed throughout the embryo and specifically binds to DER (Lai et al., 1995; Luschnig, 2000). </p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#d25a4773-af08-4876-9db2-52601e7c9865">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:7651398"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:10882065"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_63bf3505-872d-49bd-b0bd-a822e5a76b83" qual:id="Aos" qual:constant="true" qual:name="Argos">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>AOS (Argos ) is a secreted protein containing an EGF-like domain (Freeman et al., 1992), which inhibits DER 
+stimulation by activating ligands such as SPI (Schweitzer et al 1995; Wasserman and Freeman, 1998). 
+AOS is induced in response to DER signalling in the cells receiving high levels of DER activation, and plays a major role in restricting the activation range of the activating ligands (Golembo et al., 1996; Queenan et al., 1997). 
+AOS is secreted and reaches several cell rows away from the site of production. It maintains a steady-state level of signalling such that the cells receiving maximal levels of SPI maintain DER activation, in spite of the production of AOS, while in the cells further away from the source, AOS attenuates activation by SPI (Shiloh et al., 2003, 2005; Yogev et al., 2008). AOS and Kekkon (another inhibitor), are expressed in exactly the same pattern (Sawamoto et al., 1994; Musacchio and Perrimon, 1996). 
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_63bf3505-872d-49bd-b0bd-a822e5a76b83">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:1606617"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:7651519"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:1576953"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8565833"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9367443"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12648473"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:16123311"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:18369317"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8026629"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8812109"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0004569.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="aaacc675-c658-42aa-9f4e-d0cdfdc5a873" qual:id="Cbl" qual:constant="true" qual:name="Cable">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+CBL is an E3 ligase that recognizes the activated, endocytosed DER and induces its ubiquitination and 
+degradation. CBL may also enhance the endocytosis of DER, following ligand binding. 
+Although CBL is broadly expressed, it only modulates DER signalling in the follicle cells, which receive the 
+Gurken (another ligand) signal from the oocyte. In cbl mutant cells, DER is hyper-activated, leading to the 
+repression of genes such as pipe (Pai et al., 2000; Gur et al., 2004). </p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#aaacc675-c658-42aa-9f4e-d0cdfdc5a873">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11051547"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:15282549"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0020224.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_0352472f-c301-4e4a-acae-5b77a16add9c" qual:id="Kek" qual:constant="true" qual:name="Kekkon">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>KEK (Kekkon) is a transmembrane inhibitory protein that binds DER extracellular domain and attenuates receptor 
+dimerization (Ghiglione et al., 1999; Shiloh et al., 2003). AOS and KEK, are expressed in exactly the same pattern 
+(Sawamoto et al., 1994; Musacchio and Perrimon, 1996).</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_0352472f-c301-4e4a-acae-5b77a16add9c">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12648473"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:10102272"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8026629"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8812109"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0015399.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0015400.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0028370.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="2" qual:compartment="comp1" metaid="ffffd869-5385-470c-a4ae-e91ebc4d4b7e" qual:id="Der" qual:constant="false" qual:name="Der or Torpedo or Ellipse">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>DER (Drosophila Epidermal growth factor Receptor homolog), has been shown to fulfill multiple roles during 
+development. In the embryo, it plays a role in the establishment of ventral ectodermal fates and differentiation of the midline glial cells (Raz and Shilo, 1991, 1992), Malpighian tubule development (Baumann and Skaer, 1993), germ-band retraction, and head development (Schejter and Shilo, 1989; Clifford and Schiipbach 1990). 
+During imaginal disc development, DER was shown to be essential for the proliferation of disc cells (Clifford and 
+Schfpbach, 1990), vein and bristle formation in the wing disc (Diaz-Benjumea and Garcia-Bellido, 1990), and the 
+differentiation of photoreceptors in the eye disc (Baker and Rubin, 1989; Xu and Rubin, 1993). 
+Four activating ligands (Spitz, Keren, Gurken, Vein ) and one inhibitory ligand (Kekkon) allow versatile 
+combinations of DER activation (Shiloh et al., 2003). 
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#ffffd869-5385-470c-a4ae-e91ebc4d4b7e">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:2515109"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:1820687"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:1576953"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:18369317"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0003731.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="2" qual:compartment="comp1" metaid="c79cf2a3-7724-4743-863a-586d82205b8a" qual:id="Drk" qual:constant="false" qual:name="Downstream of receptor kinase">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>DRK is an adaptor molecule. Drk recruits the guanine nucleotide exchange factor SOS to catalyze the exchange 
+of GDP bound to RAS for GTP, thereby creating active RAS (Cabrita et al., 2003; Yan et al., 2009). </p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#c79cf2a3-7724-4743-863a-586d82205b8a">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:14515177"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:19366732"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0004638.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="2" qual:compartment="comp1" metaid="_71e45bdb-5f6c-444a-b545-00e31a27df93" qual:id="Sos" qual:constant="false" qual:name="Son of sevenless">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>SOS (Son of sevenless) activates RAS. Upon ligand binding, DER auto-phosphorylates and recruit adaptor molecules, such as DRK, which in turn recruits SOS to the signalling complex (Cabrita et al., 2003; Han et al., 2009). </p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_71e45bdb-5f6c-444a-b545-00e31a27df93">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:14515177"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:19366732"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0001965.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.sdbonline.org/fly/torstoll/sonofsev1.htm"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="2" qual:compartment="comp1" metaid="a9c609d1-4c86-41dd-8a1d-74962ce608e2" qual:id="Ras" qual:constant="false" qual:name="raspberry">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Raspberry (RAS) functions downstream of DER to establish follicular cell fate during oogenesis (Schnorr et 
+al., 1996; Golembo et al., 1996; Schnepp et al., 1996). RAS is a molecular switch, cycling between an inactive 
+GDP-bound and active GTP-bound form. RAS is activated by upstream receptor tyrosine kinases (RTKs) upon ligand binding following the recruitment of SOS by DRK. 
+RAS promotes the activation of RAF (Pole hole), DSOR1 and eventually of RL (Cabrita et al., 2003; Yan et al., 2009).</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#a9c609d1-4c86-41dd-8a1d-74962ce608e2">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8978043"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8951053"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8824589"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:7749324"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:14515177"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:19366732"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0003204.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_5194bc0e-5a31-4b02-a894-538f0eac42ab" qual:id="PLCg" qual:constant="false" qual:name="small wing or PLCgamma">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>PLCg (enzyme Phospholipase C) plays a crucial, inhibitory role in the transduction of DER signalling (Thackeray et al., 1998; Salzer et al., 2010).</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_5194bc0e-5a31-4b02-a894-538f0eac42ab">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9811587"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:19884307"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0003416.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_2caa0452-92d7-456c-a323-12bd246b796f" qual:id="Gap1" qual:constant="false" qual:name="GTPase-activating protein 1">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>GAP proteins stimulate the hydrolysis of GTP bound to RAS, thereby converting RAS into the GDP-bound, 
+inactive state (Bourne et al., 1991). By recruiting GAP1 and/or blocking the ability of DRK to bind to its positive effectors, Sprouty prevents the formation of functional signalling complexes associated with the cytoplasmic domain of receptor tyrosine kinases (Casci et al., 1999).</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_2caa0452-92d7-456c-a323-12bd246b796f">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:1898771"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:10089881"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0004390.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="e2ef34b4-0dd7-4af9-a81b-89749c638f4b" qual:id="Sty" qual:constant="true" qual:name="Sprouty">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>STY (Sprouty) exerts its inhibitory effect on receptor tyrosine kinase (RTK) signalling by intercepting essential 
+elements of the RAS/MAPK cascade through diverse mechanisms (Kim and Bar-Sagi, 2004). 
+STY is an intracellular protein, associated with the inner surface of the plasma membrane. It acts downstream of 
+DER, but upstream of RAS and RAF, by recruiting GAP1 and blocking the ability of DRK to bind to its positive 
+effectors. An intriguing aspect of the inhibitory function of Sty is that its expression depends on pathway activity, implying a negative feedback loop. (Casci et al., 1999; Reich et al.,1999; Cabrita et al., 2003; Shilo et al., 2005). </p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#e2ef34b4-0dd7-4af9-a81b-89749c638f4b">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:15173823"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:10089881"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:10457022"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:14515177"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:16123311"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0014388.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="2" qual:compartment="comp1" metaid="_0d717183-ab02-48e8-84e0-9c7abeb0b31d" qual:id="Raf" qual:constant="false" qual:name="pole hole ou MAPKKK">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>RAF is a critical effector of the RAS. The phosphorylation and activation of RAF by RAS occurs in the presence of the scaffold protein KSR (Kinase suppressor of RAS). </p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_0d717183-ab02-48e8-84e0-9c7abeb0b31d">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:16600911"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0003079.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_7726652f-54fc-420a-b2c6-7d63ac79e30a" qual:id="Cnk" qual:constant="true" qual:name="connector enhancer of ksr">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>CNK (Connector Enhancer of KSR) is required upstream of RAF (Therrien et al., 1998) for the control various 
+processes, including cell proliferation/survival, differentiation and migration (Therrien et al., 1998; Baonza et al., 2000; Cabernard and Affolter, 2005).CNK directly associates with the kinase domain of RAF via a short amino-acid sequence, called the RAF- interacting motif (RIM), and modulates RAF activity according to the EGF signalling status (Douziech et al., 2003; Laberge et al., 2005). When there is no signalling, the binding of CNK to RAF 
+is inhibited by a second motif adjacent to the RIM, called the inhibitory sequence (IS). When the pathway is activated, CNK integrates SRC42 and RAS activities, leading to RAF activation (Laberge et al., 2005). 
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_7726652f-54fc-420a-b2c6-7d63ac79e30a">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9814705"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:10860999"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:16326394"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:14517245"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:15660123"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:16600911"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="a0c83b08-ef85-4630-8cba-e173b4f0865d" qual:id="Src42" qual:constant="true" qual:name="Src oncogene at 42A">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Src42 interacts with CNK and contribute to RAF activation (Simon et al., 1985; Takahashi et al., 1996, Laberge et al., 2005). 
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#a0c83b08-ef85-4630-8cba-e173b4f0865d">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:2996778"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8682295"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:15660123"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0264959.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_74f32279-7882-4d9d-a5ed-d2c5797258bb" qual:id="Ksr" qual:constant="true" qual:name="Kinase suppressor of Ras">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>KSR (Kinase suppressor of RAS) facilitates the phosphorylation of DSOR1 and RL by RAF, and thereby enhance RL activity, which can target both nuclear and non-nuclear substrates.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_74f32279-7882-4d9d-a5ed-d2c5797258bb">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8521512"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11141565"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:16326394"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0015402.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="2" qual:compartment="comp1" metaid="c5b29b83-f50a-4c22-af18-72279b668840" qual:id="Dsor1" qual:constant="false" qual:name="Downstream of raf1 or Mek or MAPKK">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Dsor1 is known to phosphorylate RL. Phosphorylated RL can then enter in the nucleus. 
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#c5b29b83-f50a-4c22-af18-72279b668840">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:16600911"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0010269.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="2" qual:compartment="comp1" metaid="_0f485b13-3a00-44ed-8439-cd2f52538a4b" qual:id="Rl" qual:constant="false" qual:name="Rolled or MAPK">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Rolled (RL) is essential to the proper functioning of the RAS signalling pathway. After phosphorylation by 
+DSOR1 and translocation in the nucleus, RL phosphorylates PNT, enabling it to activate pathway target genes.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_0f485b13-3a00-44ed-8439-cd2f52538a4b">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:16600911"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0003256.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="cd39a803-55a4-4643-a8d0-5343d16e340c" qual:id="Msk" qual:constant="true" qual:name="Moleskin ou Importin-7">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Moleskin (Msk) is a member of the importin superfamily of nuclear importers, which can bind directly to the 
+nuclear pore complex (Gorlich et al., 1997; Jakel et al., 1999). 
+Msk physically binds Drosophila RL (Lorenzen et al., 2001). </p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#cd39a803-55a4-4643-a8d0-5343d16e340c">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9214382"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:10228156"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11262240"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0026252.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="2" qual:compartment="comp1" metaid="e884901a-0add-4c95-a1d7-76ae26e5bf1a" qual:id="Pnt" qual:constant="false" qual:name="Pointed">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>The pnt locus encodes two distinct protein isoforms: PntP1 and PntP2, here represented by a single component 
+(PNT). The pnt gene is a nuclear target of the signalling cascade acting downstream of RL (Rolled). Both isoforms act as effectors of the Ras/MAP kinase pathway in multiple developmental contexts (e.g. eye, neural cells and the 
+midline glial cells). (Klambt et al., 1993; Brunner et al., 1994; O'Neill et al., 1994; Roignant et al., 2006; Yogev et 
+al., 2008; Salzer et al., 2010).</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#e884901a-0add-4c95-a1d7-76ae26e5bf1a">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8223245"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8047146"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8033205"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9154002"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12648473"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:16123311"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:18369317"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:16600911"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:19884307"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0003118.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="cab9f694-383f-45cd-b555-11c4a72b1d63" qual:id="Aop" qual:constant="false" qual:name="Anterior Open">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Anterior open (Aop) inhibits RTK targets genes. Direct phosphorylation of the transcriptional co-repressor AOP 
+by RL leads to its export from the nucleus and subsequent ubiquitin-mediated protein degradation (Rebay and Rubin, 1995). 
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#cab9f694-383f-45cd-b555-11c4a72b1d63">
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:7781063"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="dbc46aa9-7dfa-495b-a13b-c735d21687e9" qual:id="Cic" qual:constant="false" qual:name="Capicua">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Capicua (CIC) has been conserved widely during evolution (from C. elegans to humans). Several experimental studies suggest that CIC interacts with GRO through the formation of a protein complex. This CIC/GRO complex acts as a repressor of RTKs pathway (EGF and TOR pathway). It functions by repressing EGF targets. When phosphorylated by RL, CIC/GRO repression capacity is weakened.  
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#dbc46aa9-7dfa-495b-a13b-c735d21687e9">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:15592470"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:10652276"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:21270056"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:22526417"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="aebdc271-8dfb-4b66-b06f-1af690799df4" qual:id="Gro" qual:constant="false" qual:name="Grochou">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>groucho is a neurogenic gene and member of the Enhancer of split complex (E[spl]-C). During Drosophila 
+development, GRO is ubiquitously expressed. In RTKs signalling, it has a repressor activity and functions in combination with CIC. However, the phosphorylation of GRO in response to EGF activation weakens its repressor capacity. 
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#aebdc271-8dfb-4b66-b06f-1af690799df4">
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:15592470"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_13d9e8ed-ffa9-4297-849f-de9ea3c5dd65" qual:id="Targets" qual:constant="false" qual:name="target genes">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>The EGF pathway is involved in the development of the mesoderm, the specification of muscle, epithelial cell 
+adhesion, in ventral epidermis development. The pathway is also implicated in the development of the wing.
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_13d9e8ed-ffa9-4297-849f-de9ea3c5dd65">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:20463031"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:16963016"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:15084467"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12485984"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12183378"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+    </qual:listOfQualitativeSpecies>
+    <qual:listOfTransitions xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:transition qual:id="tr_Vein">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Spi" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Vein_in_0"/>
+          <qual:input qual:qualitativeSpecies="Der" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Vein_in_6"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Vein" qual:transitionEffect="assignmentLevel" qual:id="tr_Vein_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <geq/>
+                  <ci> Spi </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <geq/>
+                  <ci> Der </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Der">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Spi" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Der_in_0"/>
+          <qual:input qual:qualitativeSpecies="Vein" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Der_in_1"/>
+          <qual:input qual:qualitativeSpecies="Shc" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Der_in_2"/>
+          <qual:input qual:qualitativeSpecies="Aos" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Der_in_3"/>
+          <qual:input qual:qualitativeSpecies="Cbl" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Der_in_4"/>
+          <qual:input qual:qualitativeSpecies="Kek" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Der_in_5"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Der" qual:transitionEffect="assignmentLevel" qual:id="tr_Der_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Spi </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Vein </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Shc </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Aos </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cbl </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Kek </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Spi </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Shc </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Aos </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cbl </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Kek </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Spi </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Shc </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Aos </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cbl </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Kek </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Spi </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Shc </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Aos </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cbl </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Spi </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Shc </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Aos </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:functionTerm qual:resultLevel="2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Spi </ci>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Shc </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Aos </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Cbl </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Kek </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Drk">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Der" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Drk_in_6"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Drk" qual:transitionEffect="assignmentLevel" qual:id="tr_Drk_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Der </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:functionTerm qual:resultLevel="2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Der </ci>
+                <cn type="integer"> 2 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Sos">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Drk" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Sos_in_7"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Sos" qual:transitionEffect="assignmentLevel" qual:id="tr_Sos_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Drk </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:functionTerm qual:resultLevel="2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Drk </ci>
+                <cn type="integer"> 2 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Ras">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Sos" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Ras_in_8"/>
+          <qual:input qual:qualitativeSpecies="Gap1" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Ras_in_11"/>
+          <qual:input qual:qualitativeSpecies="Sty" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Ras_in_12"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Ras" qual:transitionEffect="assignmentLevel" qual:id="tr_Ras_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Sos </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Gap1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Sos </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Gap1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Sty </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Sos </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Gap1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Sty </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:functionTerm qual:resultLevel="2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Sos </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Gap1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Sos </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Gap1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Sty </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_PLCg">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Der" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_PLCg_in_6"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="PLCg" qual:transitionEffect="assignmentLevel" qual:id="tr_PLCg_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <geq/>
+                <ci> Der </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Gap1">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="PLCg" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Gap1_in_10"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Gap1" qual:transitionEffect="assignmentLevel" qual:id="tr_Gap1_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> PLCg </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Raf">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Ras" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Raf_in_9"/>
+          <qual:input qual:qualitativeSpecies="Cnk" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Raf_in_14"/>
+          <qual:input qual:qualitativeSpecies="Src42" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Raf_in_15"/>
+          <qual:input qual:qualitativeSpecies="Ksr" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Raf_in_16"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Raf" qual:transitionEffect="assignmentLevel" qual:id="tr_Raf_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Ras </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Cnk </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Src42 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Ksr </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:functionTerm qual:resultLevel="2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Ras </ci>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Cnk </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Src42 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Ksr </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Dsor1">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Raf" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Dsor1_in_13"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Dsor1" qual:transitionEffect="assignmentLevel" qual:id="tr_Dsor1_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Raf </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:functionTerm qual:resultLevel="2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Raf </ci>
+                <cn type="integer"> 2 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Rl">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Dsor1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Rl_in_17"/>
+          <qual:input qual:qualitativeSpecies="Msk" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Rl_in_19"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Rl" qual:transitionEffect="assignmentLevel" qual:id="tr_Rl_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Dsor1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Msk </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:functionTerm qual:resultLevel="2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Dsor1 </ci>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Msk </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Pnt">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Rl" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Pnt_in_18"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Pnt" qual:transitionEffect="assignmentLevel" qual:id="tr_Pnt_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Rl </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:functionTerm qual:resultLevel="2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Rl </ci>
+                <cn type="integer"> 2 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Aop">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Rl" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Aop_in_18"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Aop" qual:transitionEffect="assignmentLevel" qual:id="tr_Aop_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Rl </ci>
+                <cn type="integer"> 0 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Cic">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Rl" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Cic_in_18"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Cic" qual:transitionEffect="assignmentLevel" qual:id="tr_Cic_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Rl </ci>
+                <cn type="integer"> 0 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Gro">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Rl" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Gro_in_18"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Gro" qual:transitionEffect="assignmentLevel" qual:id="tr_Gro_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Rl </ci>
+                <cn type="integer"> 0 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Targets">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Pnt" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Targets_in_20"/>
+          <qual:input qual:qualitativeSpecies="Aop" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Targets_in_21"/>
+          <qual:input qual:qualitativeSpecies="Cic" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Targets_in_22"/>
+          <qual:input qual:qualitativeSpecies="Gro" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Targets_in_23"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Targets" qual:transitionEffect="assignmentLevel" qual:id="tr_Targets_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <geq/>
+                    <ci> Pnt </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Aop </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cic </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <geq/>
+                    <ci> Pnt </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Aop </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cic </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Gro </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+    </qual:listOfTransitions>
+    <listOfCompartments>
+      <compartment constant="true" id="comp1"/>
+    </listOfCompartments>
+  </model>
+</sbml>

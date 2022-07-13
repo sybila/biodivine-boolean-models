@@ -1,0 +1,334 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" layout:required="false" level="3" qual:required="true" xmlns:layout="http://www.sbml.org/sbml/level3/version1/layout/version1" version="1" xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+  <model id="model_id">
+    <layout:listOfLayouts xmlns:layout="http://www.sbml.org/sbml/level3/version1/layout/version1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <layout:layout layout:id="__layout__">
+        <layout:dimensions layout:height="286" layout:width="354"/>
+        <layout:listOfAdditionalGraphicalObjects>
+          <layout:generalGlyph layout:id="_ly_p53_b1" layout:reference="p53_b1">
+            <layout:boundingBox>
+              <layout:position layout:x="84" layout:y="41"/>
+              <layout:dimensions layout:height="25" layout:width="45"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_p53_b2" layout:reference="p53_b2">
+            <layout:boundingBox>
+              <layout:position layout:x="134" layout:y="91"/>
+              <layout:dimensions layout:height="25" layout:width="45"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Mdm2cyt_b1" layout:reference="Mdm2cyt_b1">
+            <layout:boundingBox>
+              <layout:position layout:x="84" layout:y="211"/>
+              <layout:dimensions layout:height="25" layout:width="45"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Mdm2cyt_b2" layout:reference="Mdm2cyt_b2">
+            <layout:boundingBox>
+              <layout:position layout:x="134" layout:y="261"/>
+              <layout:dimensions layout:height="25" layout:width="45"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Mdm2nuc" layout:reference="Mdm2nuc">
+            <layout:boundingBox>
+              <layout:position layout:x="309" layout:y="211"/>
+              <layout:dimensions layout:height="25" layout:width="45"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_DNAdam" layout:reference="DNAdam">
+            <layout:boundingBox>
+              <layout:position layout:x="309" layout:y="40"/>
+              <layout:dimensions layout:height="25" layout:width="45"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+        </layout:listOfAdditionalGraphicalObjects>
+      </layout:layout>
+    </layout:listOfLayouts>
+    <qual:listOfQualitativeSpecies xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="false" qual:id="p53_b1"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="false" qual:id="p53_b2"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="false" qual:id="Mdm2cyt_b1"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="false" qual:id="Mdm2cyt_b2"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="false" qual:id="Mdm2nuc"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="false" qual:id="DNAdam"/>
+    </qual:listOfQualitativeSpecies>
+    <qual:listOfTransitions xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:transition qual:id="tr_p53_b1">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="p53_b1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_p53_b1_in_0"/>
+          <qual:input qual:qualitativeSpecies="p53_b2" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_p53_b1_in_1"/>
+          <qual:input qual:qualitativeSpecies="Mdm2nuc" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_p53_b1_in_4"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="p53_b1" qual:transitionEffect="assignmentLevel" qual:id="tr_p53_b1_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> p53_b1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mdm2nuc </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> p53_b1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> p53_b2 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mdm2nuc </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> p53_b1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> p53_b2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_p53_b2">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="p53_b1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_p53_b2_in_0"/>
+          <qual:input qual:qualitativeSpecies="Mdm2nuc" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_p53_b2_in_4"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="p53_b2" qual:transitionEffect="assignmentLevel" qual:id="tr_p53_b2_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> p53_b1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Mdm2nuc </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Mdm2cyt_b1">
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Mdm2cyt_b1" qual:transitionEffect="assignmentLevel" qual:id="tr_Mdm2cyt_b1_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="1">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Mdm2cyt_b2">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="p53_b1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Mdm2cyt_b2_in_0"/>
+          <qual:input qual:qualitativeSpecies="p53_b2" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Mdm2cyt_b2_in_1"/>
+          <qual:input qual:qualitativeSpecies="Mdm2cyt_b1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Mdm2cyt_b2_in_2"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Mdm2cyt_b2" qual:transitionEffect="assignmentLevel" qual:id="tr_Mdm2cyt_b2_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> p53_b1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> p53_b2 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Mdm2cyt_b1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Mdm2nuc">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="p53_b1" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Mdm2nuc_in_0"/>
+          <qual:input qual:qualitativeSpecies="Mdm2cyt_b1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Mdm2nuc_in_2"/>
+          <qual:input qual:qualitativeSpecies="Mdm2cyt_b2" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Mdm2nuc_in_3"/>
+          <qual:input qual:qualitativeSpecies="DNAdam" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Mdm2nuc_in_5"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Mdm2nuc" qual:transitionEffect="assignmentLevel" qual:id="tr_Mdm2nuc_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> p53_b1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mdm2cyt_b1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mdm2cyt_b2 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> DNAdam </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> p53_b1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mdm2cyt_b1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mdm2cyt_b2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> p53_b1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mdm2cyt_b1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mdm2cyt_b2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_DNAdam">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="p53_b1" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_DNAdam_in_0"/>
+          <qual:input qual:qualitativeSpecies="p53_b2" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_DNAdam_in_1"/>
+          <qual:input qual:qualitativeSpecies="DNAdam" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_DNAdam_in_5"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="DNAdam" qual:transitionEffect="assignmentLevel" qual:id="tr_DNAdam_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> p53_b1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> DNAdam </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> p53_b1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> p53_b2 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> DNAdam </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+    </qual:listOfTransitions>
+    <listOfCompartments>
+      <compartment constant="true" id="comp1"/>
+    </listOfCompartments>
+  </model>
+</sbml>
