@@ -1,0 +1,3 @@
+### Modifications
+
+The model is published as a list of reactions (`source.raw.txt`). The final update rules are then manually constructed as disjunctions of individual reactions (with each reaction being a conjunction). Since this format does not include information about regulation monotonicity, we use `.bnet` to represent the model. Some variables were renamed to ensure compatibility with other software. Also, some typos were found (e.g. `IRS-1/2` vs. `IRS1/2`) and hopefully fixed.

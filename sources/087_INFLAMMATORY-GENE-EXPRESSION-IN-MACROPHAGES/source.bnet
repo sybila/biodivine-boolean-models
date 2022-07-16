@@ -1,0 +1,100 @@
+targets, factors
+Akt1, PDK1 & !PTEN    
+Akt2, PDK1 & !PTEN    
+AP1, (c_JUN & ATF2) | p38    
+Arg1, Arg1mRNA    
+Arg1mRNA, IL10R | (Stat6 & CEBPb)
+ATF2, JNK    
+c_JUN, JNK    
+Ccl2_3_4_5_7, Ccl2_3_4_5_7mRNA    
+Ccl2_3_4_5_7mRNA, NFkB    
+Ccl2_7_Stat6, Ccl2_7mRNA_Stat6    
+Ccl2_7mRNA_Stat6, Stat6    
+Ccl5_Stat1, Ccl5mRNA_Stat1    
+Ccl5mRNA_Stat1, Stat1    
+CEBPb, !miR155    
+coSignal, TLR4RC    
+CREB, MSK1 & p90Rsk_lps    
+Cxcl1_2_3mRNA, NFkB    
+Cxcl_1_2_3, Cxcl1_2_3mRNA    
+dum_DUSP1_inh, DUSP1_NFkB | DUSP1_Stat3 | (hk_inh & LPS)    
+dum_IkBa_inh, (hk_inh & LPS) | IkBa_syn    
+dum_Socs1_inh, (hk_inh & IL4) | (hk_inh & LPS) | Socs1    
+dum_Socs3_inh, (hk_inh & LPS) | Socs3_MK2 | Socs3_Stat3    
+DUSP1_NFkB, DUSP1mRNA_NFkB    
+DUSP1_Stat3, DUSP1mRNA_Stat3    
+DUSP1mRNA_NFkB, NFkB    
+DUSP1mRNA_Stat3, Stat3    
+ERK, MKK1_2    
+Fes, (IL4Ra_IL2Ry & Jak1 & !dum_Socs1_inh) | (IL4Ra_IL2Ry & Jak3 & !dum_Socs1_inh)
+IFNAR, IFNb_medium    
+IFNb_medium, (hk_medium & LPS) | IFNb_syn    
+IFNb_syn, IFNbmRNA    
+IFNbmRNA, IRF3 & NFkB & p300 & CBP    
+IkBa, IKK    
+IkBa_syn, IkBamRNA    
+IkBamRNA, NFkB    
+IKK, TAK1 | (TRAF6 & RIP1 & !RIP3)
+IL10_medium, (hk_medium & LPS) | IL10_syn_MK2 | IL10_syn_Stat3    
+IL10_syn_MK2, !TTP & IL10mRNA_MK2    
+IL10mRNA_MK2, MK2    
+IL10mRNA_Stat3, Stat3    
+IL10R, IL10_medium    
+IL10syn_Stat3, !TTP & IL10mRNA_Stat3    
+IL13Ra2, IL13    
+IL1b_syn, IL1bmRNA    
+IL1bmRNA, NFkB    
+IL1rn_NFkB, IL1rnmRNA_NFkB    
+IL1rn_Stat, IL1rnmRNA_Stat    
+IL1rnmRNA_NFkB, NFkB & MSK1    
+IL1rnmRNA_Stat, Stat1 | Stat3    
+IL4Ra_IL13Ra1, IL13 | IL4    
+IL4Ra_IL2Ry, IL4    
+IL6_syn, IL6mRNA & !TTP    
+IL6mRNA, NFkB & CREB & AP1    
+IRAK1, IRAK4 & !IRAKM & !IRAK2c & !IRAK2d    
+IRAK4, TLR4RC & Mal & MyD88 & !MyD88s    
+IRF3, TBK1 & !MK3    
+IRS1_2, Fes    
+JNK, MKK4 | MKK7    
+miR155, !Akt1 | (Akt2 & coSignal)
+MK2, p38    
+MK3, !MK2    
+MKK1_2, TPL2    
+MKK3, TAK1    
+MKK4, TAK1    
+MKK6, TAK1    
+MKK7, TAK1    
+Mrc1, Mrc1mRNA    
+Mrc1mRNA, Stat6    
+MSK1, ERK | p38    
+MSK2, p38    
+NFkB, IkBa & !dum_IkBa_inh & !MK3 & miR155    
+p38, (MKK3 & !dum_DUSP1_inh) | (MKK4 & !dum_DUSP1_inh) |(MKK6 & !dum_DUSP1_inh)
+p70S6K, PDK1    
+p90Rsk_il, PDK1    
+p90Rsk_lps, ERK    
+PDK1, PIP3    
+PI3K, IRS1_2 | TLR4RC    
+PIP3, PI3K    
+PKC, PDK1    
+Socs1, Socs1mRNA    
+Socs1mRNA, Stat1 | Stat3 | Stat6    
+Socs2, Socs2mRNA    
+Socs2mRNA, Stat6    
+Socs3_MK2, Socs3mRNA_MK2    
+Socs3_Stat3, Socs3mRNA_Stat3    
+Socs3mRNA_MK2, MK2     
+Socs3mRNA_Stat3, Stat3 & Src    
+Stat1, (IFNAR & Jak1 & !dum_Socs1_inh) | (IFNAR & Tyk2 & !dum_Socs1_inh)  
+Stat3, (IFNAR & Jak1 & !dum_Socs3_inh) | (IFNAR & Tyk2 & !dum_Socs3_inh) | (Jak1 & IL_10R)    
+Stat6, (IL4Ra_IL13Ra1 & !PP2A & !SHP1 & Jak2 & !dum_Socs1_inh) | (IL4Ra_IL13Ra1 & Jak1 & !PP2A & !SHP1 & !dum_Socs1_inh) | (IL4Ra_IL13Ra1 & Tyk2 & !PP2A & !SHP1 & !dum_Socs1_inh) | (IL4Ra_IL2Ry & Jak1 & !PP2A & !SHP1 & !dum_Socs1_inh) | (IL4Ra_IL2Ry & Jak3 & !PP2A & !SHP1 & !dum_Socs1_inh)
+TAB, TRAF6    
+TAK1, TAB    
+TBK1, TLR4RC & TRAM & TRIF & !TRIAD3A    
+TLR4RC, LBP & CD14 & TLR4 & MD2 & !SIGIRR & !ST2 & LPS    
+TNFa, TNFamRNA & !TTP    
+TNFamRNA, NFkB    
+TPL2, TAK1 | TRAF6    
+TRAF6, IRAK1 | (TLR4RC & TRAM & TRIF & !TRIAD3A)
+TTP, !MK2    
