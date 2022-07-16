@@ -1,14 +1,14 @@
-#name: integrity-check
-#on: [push, pull_request]
-#jobs:
-#  # Check formatting
-#  check:
-#    name: check
-#    runs-on: ubuntu-latest
-#    env:
-#      RUSTFLAGS: "-D warnings"
-#    steps:
-#      - uses: actions/checkout@v2
+name: integrity-check
+on: [push, pull_request]
+jobs:
+  # Check formatting
+  check:
+    name: check
+    runs-on: ubuntu-latest
+    env:
+      RUSTFLAGS: "-D warnings"
+    steps:
+      - uses: actions/checkout@v2
 #      - uses: actions-rs/toolchain@v1
 #        with:
 #          profile: minimal
