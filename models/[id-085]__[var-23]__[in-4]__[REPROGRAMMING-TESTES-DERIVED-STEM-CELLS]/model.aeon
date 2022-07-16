@@ -1,0 +1,72 @@
+v_OCT4SOX2 -> v_OCT4
+v_KLF4 -> v_OCT4
+v_OCT4SOX2 -> v_SOX2
+v_PRDM14 -> v_SOX2
+v_DMRT1 -| v_SOX2
+v_OCT4 -> v_OCT4SOX2
+v_SOX2 -> v_OCT4SOX2
+v_OCT4SOX2 -> v_NANOG
+v_NANOG -| v_NANOG
+v_KLF4 -> v_NANOG
+v_TBX3 -> v_NANOG
+v_SMAD1_5 -> v_NANOG
+v_EZH2 -| v_NANOG
+v_OCT4 -> v_TET1
+v_NANOG -> v_TET1
+v_SOX2 -> v_LIN28a
+v_LIF -> v_PI3K
+v_GDNF -> v_PI3K
+v_LIF -> v_STAT3
+v_STAT3 -> v_KLF4
+v_TFAP2C -> v_KLF4
+v_PI3K -> v_AKT
+v_GDNF -> v_SFK
+v_OCT4 -> v_ETV5
+v_SOX2 -> v_ETV5
+v_NANOG -> v_ETV5
+v_SFK -> v_ETV5
+v_AKT -> v_TBX3
+v_BMP4 -> v_SMAD1_5
+v_TGFB -> v_SMAD3
+v_OCT4 -> v_CDH1_b1
+v_KLF4 -> v_CDH1_b1
+v_CDH1_b1 -> v_CDH1_b1
+v_CDH1_b2 -> v_CDH1_b1
+v_OCT4 -> v_CDH1_b2
+v_KLF4 -> v_CDH1_b2
+v_SMAD3 -| v_CDH1_b2
+v_CDH1_b1 -> v_CDH1_b2
+v_SMAD1_5 -> v_SMAD1_5_4
+v_STAT3 -> v_PRDM14
+v_SMAD1_5_4 -> v_PRDM14
+v_PRDM14 -> v_TFAP2C
+v_OCT4 -| v_DMRT1
+v_SOX2 -| v_DMRT1
+v_TFAP2C -| v_DMRT1
+v_OCT4 -| v_EZH2
+v_SOX2 -| v_EZH2
+v_ETV5 -> v_MET
+v_CDH1_b1 -> v_MET
+$v_AKT: v_PI3K
+$v_CDH1_b1: (((((!v_OCT4 & !v_KLF4) & v_CDH1_b1) & v_CDH1_b2) | (!v_OCT4 & v_KLF4)) | v_OCT4)
+$v_CDH1_b2: ((((!v_OCT4 & v_KLF4) & !v_SMAD3) & v_CDH1_b1) | ((v_OCT4 & !v_SMAD3) & v_CDH1_b1))
+$v_DMRT1: ((!v_OCT4 & !v_SOX2) & !v_TFAP2C)
+$v_ETV5: ((((((!v_OCT4 & !v_SOX2) & !v_NANOG) & v_SFK) | ((!v_OCT4 & !v_SOX2) & v_NANOG)) | (!v_OCT4 & v_SOX2)) | v_OCT4)
+$v_EZH2: (!v_OCT4 | (v_OCT4 & !v_SOX2))
+$v_KLF4: ((!v_STAT3 & v_TFAP2C) | v_STAT3)
+$v_LIN28a: v_SOX2
+$v_MET: ((!v_ETV5 & v_CDH1_b1) | v_ETV5)
+$v_NANOG: (((((((((((!v_OCT4SOX2 & !v_NANOG) & !v_KLF4) & !v_TBX3) & v_SMAD1_5) | (((!v_OCT4SOX2 & !v_NANOG) & !v_KLF4) & v_TBX3)) | (((((!v_OCT4SOX2 & !v_NANOG) & v_KLF4) & !v_TBX3) & !v_SMAD1_5) & !v_EZH2)) | ((((!v_OCT4SOX2 & !v_NANOG) & v_KLF4) & !v_TBX3) & v_SMAD1_5)) | (((!v_OCT4SOX2 & !v_NANOG) & v_KLF4) & v_TBX3)) | (((!v_OCT4SOX2 & v_NANOG) & !v_TBX3) & v_SMAD1_5)) | ((!v_OCT4SOX2 & v_NANOG) & v_TBX3)) | v_OCT4SOX2)
+$v_OCT4: ((!v_OCT4SOX2 & v_KLF4) | v_OCT4SOX2)
+$v_OCT4SOX2: (v_OCT4 & v_SOX2)
+$v_PI3K: ((!v_LIF & v_GDNF) | v_LIF)
+$v_PRDM14: ((!v_STAT3 & v_SMAD1_5_4) | v_STAT3)
+$v_SFK: v_GDNF
+$v_SMAD1_5: v_BMP4
+$v_SMAD1_5_4: v_SMAD1_5
+$v_SMAD3: v_TGFB
+$v_SOX2: (((!v_OCT4SOX2 & v_PRDM14) | ((v_OCT4SOX2 & !v_PRDM14) & !v_DMRT1)) | (v_OCT4SOX2 & v_PRDM14))
+$v_STAT3: v_LIF
+$v_TBX3: v_AKT
+$v_TET1: ((!v_OCT4 & v_NANOG) | v_OCT4)
+$v_TFAP2C: v_PRDM14
