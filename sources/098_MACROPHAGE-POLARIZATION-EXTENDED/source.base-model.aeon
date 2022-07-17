@@ -1,0 +1,78 @@
+IL1b -> IL1R
+IL1b_e -> IL1R
+IL10_out -> IL10R
+PPARg -? PPARg
+STAT6 -? STAT6
+JMJD3 -? JMJD3
+STAT3 -? STAT3
+ERK -? ERK
+JMJD3 -> IL10_out
+
+IFNg_e -> IFNgR
+IL16_e ->? IL1R
+GM_CSF_e -> CSF2Ra
+LPS_e -> TLR4
+LPS_e -> FcgR
+IC_e -> FcgR
+IL1b_e ->? FcgR
+IL4_e -> IL4Ra
+IL10_e -> IL10R
+IFNgR -> STAT1
+CSF2Ra -> STAT5
+IL1R -> NF_kB
+TLR4 -> IRF3
+TLR4 -> NF_kB
+FcgR -> ERK
+FcgR -| NF_kB
+FcgR -| STAT3
+FcgR -| TLR4
+IL4Ra -> PPARg
+IL4Ra -> STAT6
+IL4Ra -> JMJD3
+IL10R -> STAT3
+STAT1 -> IL12_out
+STAT5 -> IL12_out
+IFNb -> IFNgR
+IRF4 -| STAT5
+SOCS1 -| STAT1
+KLF4 -| NF_kB
+ERK -> IL10_out
+IRF3 -> IFNb
+STAT3 -| STAT5
+STAT3 -| STAT1
+STAT3 -| NF_kB
+STAT3 -> IL10_out
+JMJD3 -> IRF4
+STAT6 -> IL10_out
+STAT6 -> SOCS1
+STAT6 -> KLF4
+PPARg -| STAT3
+PPARg -| NF_kB
+PPARg -> IL10_out
+NF_kB -> IL1b
+NF_kB -> IL12_out
+
+$IFNgR: IFNg_e | IFNb
+$CSF2Ra: GM_CSF_e
+$IL1R: IL1b_e | IL1b
+$TLR4: LPS_e & ! FcgR
+$FcgR: (IC_e & LPS_e) | (IC_e & LPS_e & IL1b_e)
+$IL4Ra: IL4_e
+$IL10R: IL10_e | IL10_out
+$STAT1: IFNgR & ! (STAT3 | SOCS1)
+$STAT5: CSF2Ra & ! (STAT3 | IRF4)
+$NF_kB: (IL1R | TLR4) & ! (STAT3 | FcgR | PPARg | KLF4)
+$PPARg: PPARg | IL4Ra
+$STAT6: STAT6 | IL4Ra
+$JMJD3: JMJD3 | IL4Ra
+$STAT3: (IL10R | STAT3) & ! (PPARg | FcgR)
+$IRF3: TLR4
+$ERK: FcgR | ERK
+$KLF4: STAT6
+$SOCS1: STAT6
+$IRF4: JMJD3
+$IL1b: NF_kB
+$IFNb: IRF3
+$IL12_out: NF_kB | STAT5 | STAT1
+$IL10_out: ERK | PPARg | STAT6 | JMJD3 | STAT3
+
