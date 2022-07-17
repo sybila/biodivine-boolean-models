@@ -1,0 +1,19 @@
+Targets, Factors
+akt, flt3
+Apoptosis, tp53 & !bcl2
+arf, npm1
+bcl2, erk & !tp53
+ccnd1, !(dnmt3a | gsk3b)
+cebpa, !flt3
+Differentiation, (cebpa | etv6) & !meis1
+erk, flt3
+etv6, !erk
+fbxw7, npm1
+gsk3b, !akt
+hoxa9, !npm1
+meis1, !(dnmt3a & !hoxa9)
+myc, erk & !(fbxw7 & gsk3b)
+Proliferation, (myc | ccnd1 | sox4 | meis1 | stat5a) 
+sox4, !cebpa
+stat5a, flt3
+tp53, arf
