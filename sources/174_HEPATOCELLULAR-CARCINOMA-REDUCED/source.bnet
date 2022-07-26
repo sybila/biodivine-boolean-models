@@ -1,0 +1,19 @@
+ZEB1, SNAI1 & !miR200
+SMAD, (MEK | TGFBR) & (ZEB1 | !ZEB2)
+GSK3B, !GLI & !AKT
+SNAI1, GLI | SMAD | Bcatenin_nuc | TGFBR | NOTCH | MEK | AKT | !GSK3B
+AKT, SMAD | SOS_GRB2 | !GSK3B | Bcatenin_nuc
+Dest_compl, (GSK3B & AXIN2 & Bcatenin_nuc) | (GSK3B & Dest_compl)
+Ecadherin, Bcatenin_memb & (!SNAI1 | (!NOTCH & !SMAD) | !ZEB1 | !ZEB2 | !TWIST1 | !SNAI2)
+MEK, SOS_GRB2 | !GSK3B | Bcatenin_nuc | !(!MEK | !SNAI1)
+NOTCH, SOS_GRB2 | !GSK3B | Bcatenin_nuc | SMAD
+miR200, !SNAI1 & !ZEB1 & !ZEB2
+TGFBR, SNAI1 | TWIST1 | GLI
+TWIST1, AKT | Bcatenin_nuc | SNAI1
+ZEB2, SNAI1 & !miR200
+AXIN2, AXIN2 | Bcatenin_nuc
+Bcatenin_memb, Ecadherin & !Bcatenin_nuc
+Bcatenin_nuc, !Dest_compl & !Bcatenin_memb & (SMAD | GLI | !Ecadherin)
+GLI, Bcatenin_nuc | SMAD | GLI
+SNAI2, MEK | Bcatenin_nuc | SNAI2 | TWIST1
+SOS_GRB2, (Bcatenin_nuc | TGFBR) & !MEK
