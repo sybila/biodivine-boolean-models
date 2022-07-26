@@ -87,9 +87,17 @@ def fix_variable_names(model):
 source_directories = list(listdir("sources"))
 source_directories.sort()
 
+if len(sys.argv) > 1:
+	test_id = sys.argv[1]
+else:
+	test_id = None
+
 for model_dir in source_directories:
 	if model_dir.startswith("."):
 		# Skip hidden files.
+		continue
+
+	if test_id and not model_dir.startswith(test_id):
 		continue
 
 	(model_id, model_name) = read_dir_name(model_dir)
