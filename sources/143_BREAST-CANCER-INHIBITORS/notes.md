@@ -1,0 +1,3 @@
+### Modifications
+
+Constant update functions of variables `Alpelisib`, `Everolimus`, `Trametinib`, `BCL2_T`, `BCLXL_T`, `MCL1_T`, `BIM_T`, `ER`, `ER_microenvironment`, `FOXA1`, `Fulvestrant`, `HER2`, `HER3_T`, `HER3_microenvironment`, `Ipatasertib`, `MYC_T`, `Navitoclax`, `Neratinib`, `PBX1`, `PDK1`, `PIM`, `Palbociclib`, `Rb_T`, `S63845`, `SGK1_T`, and `p27_T` were removed to make them canonical inputs. Finally, variables `E2F_3`, `pRb_3` and `Proliferation_4` were removed because they are unused.

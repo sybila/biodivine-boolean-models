@@ -1,0 +1,63 @@
+Targets, Factors
+IGF1R, IGF1R_T | (HER2 & FOXO3) | IGF1R_2
+IGF1R_2, (IGF1R_T | (HER2 & FOXO3)) & !S6K & IGF1R
+HER3, HER3_T | FOXO3 | HER3_2
+HER3_2, FOXO3 & HER3
+mTORC2, mTORC2 & !Everolimus
+SGK1, SGK1_T & PDK1 & mTORC2
+HER2_3, ((HER3 | HER3_2) & HER2 & !Neratinib) | HER2_3_2
+HER2_3_2, ((HER3_2 & HER2) | (HER3 & HER2 & !MAPK_2)) & !Neratinib & HER2_3
+RAS, IGF1R | IGF1R_2 | HER2_3 | HER2_3_2 | RAS_2 | RAS_3
+RAS_2, ((HER2_3 | HER2_3_2) & RAS) | RAS_3
+RAS_3, HER2_3_2 & RAS & RAS_2
+MAPK, ((RAS | RAS_2 | RAS_3) & (PIP3 | PIP3_2) & !(Trametinib & !RAS_3)) | MAPK_2
+MAPK_2, (RAS_2 | RAS_3) & (PIP3 | PIP3_2) & !(Trametinib & !RAS_3) & MAPK
+PI3K, ((IGF1R | IGF1R_2 | HER2_3 | HER2_3_2 | RAS | RAS_2 | RAS_3) & !(Alpelisib & !HER2_3_2)) | PI3K_2
+PI3K_2, HER2_3_2 & !Alpelisib & PI3K
+PIP3, ((PI3K | PI3K_2) & !PTEN) | PIP3_2
+PIP3_2, PI3K_2 & !PTEN & PIP3
+PDK1_pm, (PIP3 | PIP3_2)
+mTORC2_pm, (PIP3 | PIP3_2) & !Everolimus
+AKT, ((PIP3 | PIP3_2) & (PDK1_pm | mTORC2_pm) & !(Ipatasertib & !PIP3_2))
+p21_p27_T, FOXO3 | !(MYC_2 | MYC)
+p21_p27, (!AKT & !PIM) | p21_p27_T
+cycE_CDK2_T, E2F | E2F_2 | E2F_3
+cycE_CDK2, !p21_p27 & cycE_CDK2_T
+KMT2D, !AKT
+TSC, !AKT & !SGK1 & !MAPK_2
+PRAS40, !AKT & !PIM
+mTORC1, (!TSC | !PRAS40) & !Everolimus
+FOXO3, (!AKT & !SGK1 & !PIM) & !FOXO3_Ub
+FOXO3_Ub, MAPK_2
+BIM, (FOXO3 & !MAPK_2) | BIM_T
+BAD,  !AKT & !PIM & !(MAPK | MAPK_2)
+MCL1,  Translation
+EIF4F, mTORC1
+S6K, mTORC1
+Translation, EIF4F & S6K
+ESR1, ((ER | FOXO3) & !Fulvestrant) | ESR1_2
+ESR1_2, (ER & FOXO3  & !Fulvestrant) & ESR1
+FOXA1,  FOXO3
+ER_transcription, (ER & (ESR1 | ESR1_2)) | ER_transcription_2
+ER_transcription_2, KMT2D & FOXA1 & PBX1 & ESR1_2 & ER & ER_transcription
+MYC, ER_transcription | MYC_2
+MYC_2, ER_transcription_2 & MYC
+cyclinD, MYC | cyclinD_2
+cyclinD_2, MYC_2 & cyclinD
+BCL2, ER_transcription_2 | BCL2_T
+CDK46, !Palbociclib
+cycD_CDK46, ((cyclinD | cyclinD_2) & CDK46) | cycD_CDK46_2
+cycD_CDK46_2, (cyclinD_2) & CDK46 & cycD_CDK46
+pRb, (cycD_CDK46_2 | cycD_CDK46) | cycE_CDK2 | pRb_2 | pRb_3
+pRb_2, (((cycD_CDK46 & cycE_CDK2) | cycD_CDK46_2) & pRb) | pRb_3
+pRb_3, cycD_CDK46_2 & cycE_CDK2 & pRb_2 & pRb
+E2F, pRb | E2F_2 | E2F_3
+E2F_2, (pRb_2 & E2F) | E2F_3
+E2F_3, (pRb_3 | (pRb_2 & E2F_3)) & E2F_2 & E2F
+Proliferation, Translation | E2F | E2F_2 | E2F_3
+Proliferation_2, Translation | E2F_2 | E2F_3
+Proliferation_3, (Translation & E2F_2) | E2F_3
+Proliferation_4, Translation & E2F_3
+Apoptosis, (BIM & !(MCL1 & BCL2)) | (BIM & BAD) | (BAD & !(MCL1 & BCL2)) | Apoptosis
+Apoptosis_2, (BIM & BAD & !(MCL1 & BCL2))  | Apoptosis_2
+Apoptosis_3, ((BIM & BAD & !(MCL1 | BCL2))) | Apoptosis_3
