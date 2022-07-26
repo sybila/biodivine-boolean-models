@@ -1,0 +1,31 @@
+targets, factors
+AKT, SMAD_nuc | SOS_GRB2 | !GSK3B_cyto | Bcatenin_nuc
+AXIN2_cyto, AXIN2_cyto | Bcatenin_nuc | !AXIN2_nuc
+AXIN2_nuc, !AXIN2_cyto
+Bcatenin_memb, Ecadherin & !Bcatenin_nuc
+Bcatenin_nuc, (!Dest_compl | NOTCH_ic_cyto) & !Bcatenin_memb & ( !(GLI_cyto & !GLI_nuc) | !(AXIN2_nuc & GSK3B_nuc) | Ecadherin_CTF | !Ecadherin)
+Dest_compl, (GSK3B_cyto & AXIN2_cyto & Bcatenin_nuc) | (GSK3B_cyto & Dest_compl)
+Ecadherin, Bcatenin_memb & (!SNAI1_nuc | (!NOTCH_ic_nuc & !SMAD_nuc) | !ZEB1_nuc | !ZEB2 | !TWIST1_nuc | !SNAI2_nuc)
+Ecadherin_CTF, !Ecadherin
+GLI_cyto, Bcatenin_nuc | SMAD_nuc | GLI_nuc
+GLI_nuc, (SMAD_nuc & (AKT | MEK | GSK3B_cyto)) & GLI_cyto
+GSK3B_cyto, !GLI_nuc & !AKT
+GSK3B_nuc, !AKT & !AXIN2_cyto
+MEK, SOS_GRB2 | !GSK3B_cyto | Bcatenin_nuc | !(!MEK | !SNAI1_nuc) | Ecadherin_CTF
+miR200, !SNAI1_nuc & !ZEB1_nuc & !ZEB2
+NOTCH, SMAD_nuc | Bcatenin_nuc
+NOTCH_ic_cyto, NOTCH
+NOTCH_ic_nuc, NOTCH_ic_cyto & SNAI2_nuc
+SMAD_cyto, (MEK | GSK3B_cyto) & TGFBR
+SMAD_nuc, SMAD_cyto & (ZEB1_nuc | !ZEB2)
+SNAI1_cyto, (GLI_nuc | Bcatenin_nuc | NOTCH_ic_nuc | MEK | TGFBR_icd) & (AKT | !GSK3B_cyto)
+SNAI1_nuc, SNAI1_cyto & (SMAD_nuc | TGFBR) & !GSK3B_nuc
+SNAI2_cyto, (MEK | Bcatenin_nuc | SNAI2_nuc | TWIST1_nuc) & !GSK3B_cyto
+SNAI2_nuc, SNAI2_cyto & !GSK3B_nuc
+SOS_GRB2, (Bcatenin_nuc | TGFBR) & !MEK
+TGFBR, SNAI1_nuc | TWIST1_nuc | GLI_nuc
+TGFBR_icd, TGFBR
+TWIST1_nuc, AKT | Bcatenin_nuc | SNAI1_cyto
+ZEB1_cyto, SNAI1_nuc & !miR200
+ZEB1_nuc, ZEB1_cyto
+ZEB2, SNAI1_nuc & !miR200
