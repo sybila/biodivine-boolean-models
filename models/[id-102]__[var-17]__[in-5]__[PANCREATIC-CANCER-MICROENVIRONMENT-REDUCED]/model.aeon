@@ -1,0 +1,69 @@
+v_ERKs -? v_Acts
+v_IFNg -? v_Acts
+v_NFkBs -? v_Acts
+v_TGFb -? v_Acts
+v_Thiazolidinedione -? v_Acts
+v_BCLXLp -? v_Autp
+v_CASPp -? v_Autp
+v_PIP3p -? v_Autp
+v_RASp -? v_Autp
+v_P53p -? v_BCLXLp
+v_PIP3p -? v_BCLXLp
+v_RASp -? v_BCLXLp
+v_STATp -? v_BCLXLp
+v_BCLXLp -? v_CASPp
+v_P53p -? v_CASPp
+v_PIP3p -? v_CASPp
+v_RASs -? v_ERKs
+v_TGFb -? v_ERKs
+v_Acts -? v_Migs
+v_ERKs -? v_Migs
+v_PIP3s -? v_Migs
+v_PIP3s -? v_NFkBs
+v_TNFa -? v_NFkBs
+v_P53p -? v_P21p
+v_STATp -? v_P21p
+v_TGFb -? v_P21p
+v_P21p -? v_P53p
+v_P53p -? v_P53p
+v_PIP3p -? v_P53p
+v_P53s -? v_P53s
+v_PIP3s -? v_P53s
+v_RASs -? v_P53s
+v_HER2p -? v_PIP3p
+v_P53p -? v_PIP3p
+v_RASp -? v_PIP3p
+v_P53s -? v_PIP3s
+v_RASs -? v_PIP3s
+v_TGFb -? v_PIP3s
+v_P21p -? v_Prop
+v_PIP3p -? v_Prop
+v_RASp -? v_Prop
+v_ERKs -? v_Pros
+v_P53s -? v_Pros
+v_ERKs -? v_RASp
+v_HER2p -? v_RASp
+v_RASp -? v_RASp
+v_ERKs -? v_RASs
+v_NFkBs -? v_RASs
+v_PIP3p -? v_RASs
+v_RASp -? v_RASs
+v_STATp -? v_RASs
+v_HER2p -? v_STATp
+$v_Acts: (v_TGFb & ((!v_IFNg | !v_Thiazolidinedione) & (v_NFkBs | v_ERKs)))
+$v_Autp: ((v_RASp | !v_PIP3p) & (v_PIP3p | (!v_BCLXLp & !v_CASPp)))
+$v_BCLXLp: (!v_P53p & (v_PIP3p | (v_STATp | v_RASp)))
+$v_CASPp: (!v_PIP3p & (v_P53p | !v_BCLXLp))
+$v_ERKs: (v_TGFb | v_RASs)
+$v_Migs: (v_PIP3s & (v_ERKs & v_Acts))
+$v_NFkBs: (v_TNFa | v_PIP3s)
+$v_P21p: (!v_STATp & (v_TGFb | v_P53p))
+$v_P53p: !((v_P21p | !v_PIP3p) & (v_PIP3p | v_P53p))
+$v_P53s: (!v_PIP3s & (!v_P53s & v_RASs))
+$v_PIP3p: (!v_P53p & (v_RASp | v_HER2p))
+$v_PIP3s: (!v_P53s & (v_TGFb | v_RASs))
+$v_Prop: (!v_P21p & (v_PIP3p & v_RASp))
+$v_Pros: (!v_P53s & v_ERKs)
+$v_RASp: (v_RASp | (v_HER2p | v_ERKs))
+$v_RASs: (v_NFkBs | (v_STATp | (v_PIP3p | (v_RASp | v_ERKs))))
+$v_STATp: v_HER2p
