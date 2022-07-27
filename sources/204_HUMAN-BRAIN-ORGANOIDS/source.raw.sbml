@@ -1,0 +1,3862 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" qual:required="true" version="1" xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+  <model id="model_id">
+    <qual:listOfQualitativeSpecies xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="a_secretase" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="Ab" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="ABCA7" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="AKT" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="APOE4" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="Apoer2" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="Apoptosis" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="APP" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="ATM" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="Autophagy" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="BACE1" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="BAD" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="BAX" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="Bcl2" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="BDNF" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="beclin1" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="Bim" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="Ca_ion" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="CASP2" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="CASP3" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="Cdk5" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="Cholesterol" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="CIP2A" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="CLU" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="Cofilin" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="CREB" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="CYP46A1" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="Dab1" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="Dkk1" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="DLK" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="e_NMDAR" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="EGR1" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="ERK" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="FOXO" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="Fyn" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="GSK3beta" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="Jacob" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="JNK" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="LAMP2" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="LC3" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="LIMK1" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="LPL" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="LRP6" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="MAPT" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="MDM2" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="mGluR" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="MKK7" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="mTOR" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="p38" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="p53" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="p62" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="PGC1a" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="PI3K" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="PICALM" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="PIP2" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="PP2A" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="PP2B" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="PTEN" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="PUMA" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="Reelin" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="RhoA" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="ROCK" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="ROS" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="s_NMDAR" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="SORL1" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="Sortilin" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="SREBP2" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="STAT3" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="STEP" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="synapse_loss" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="synj1" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="pTau" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="TFEB" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="ULK1" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="Vangl2" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="SIRT1" qual:maxLevel="1"/>
+      <qual:qualitativeSpecies qual:compartment="comp1" qual:constant="false" qual:id="HMGCR" qual:maxLevel="1"/>
+    </qual:listOfQualitativeSpecies>
+    <qual:listOfTransitions xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:transition qual:id="tr_a_secretase">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_a_secretase_in_21" qual:qualitativeSpecies="Cholesterol" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_a_secretase_in_25" qual:qualitativeSpecies="CREB" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_a_secretase_in_61" qual:qualitativeSpecies="ROCK" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_a_secretase_in_63" qual:qualitativeSpecies="s_NMDAR" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_a_secretase_out" qual:qualitativeSpecies="a_secretase" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cholesterol </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CREB </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> s_NMDAR </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cholesterol </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CREB </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cholesterol </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CREB </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> ROCK </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> s_NMDAR </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cholesterol </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CREB </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> ROCK </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Ab">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_Ab_in_7" qual:qualitativeSpecies="APP" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_Ab_in_9" qual:qualitativeSpecies="Autophagy" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_Ab_in_10" qual:qualitativeSpecies="BACE1" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_Ab_in_21" qual:qualitativeSpecies="Cholesterol" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_Ab_in_53" qual:qualitativeSpecies="PICALM" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_Ab_in_65" qual:qualitativeSpecies="Sortilin" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_Ab_out" qual:qualitativeSpecies="Ab" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> APP </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Autophagy </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> BACE1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cholesterol </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> PICALM </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Sortilin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> APP </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Autophagy </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> BACE1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cholesterol </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> PICALM </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> APP </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Autophagy </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> BACE1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cholesterol </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_ABCA7">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_ABCA7_in_66" qual:qualitativeSpecies="SREBP2" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_ABCA7_out" qual:qualitativeSpecies="ABCA7" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> SREBP2 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_AKT">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_AKT_in_19" qual:qualitativeSpecies="CASP3" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_AKT_in_52" qual:qualitativeSpecies="PI3K" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_AKT_in_55" qual:qualitativeSpecies="PP2A" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_AKT_in_57" qual:qualitativeSpecies="PTEN" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_AKT_in_63" qual:qualitativeSpecies="s_NMDAR" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_AKT_out" qual:qualitativeSpecies="AKT" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CASP3 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> PI3K </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> PP2A </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> s_NMDAR </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CASP3 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> PI3K </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> PP2A </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> PTEN </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> s_NMDAR </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_APOE4">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_APOE4_in_4" qual:qualitativeSpecies="APOE4" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_APOE4_out" qual:qualitativeSpecies="APOE4" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> APOE4 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Apoer2">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_Apoer2_in_4" qual:qualitativeSpecies="APOE4" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_Apoer2_in_59" qual:qualitativeSpecies="Reelin" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_Apoer2_out" qual:qualitativeSpecies="Apoer2" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> APOE4 </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Reelin </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Apoptosis">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_Apoptosis_in_19" qual:qualitativeSpecies="CASP3" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_Apoptosis_out" qual:qualitativeSpecies="Apoptosis" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> CASP3 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_APP">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_APP_in_0" qual:qualitativeSpecies="a_secretase" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_APP_in_5" qual:qualitativeSpecies="Apoer2" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_APP_in_27" qual:qualitativeSpecies="Dab1" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_APP_in_32" qual:qualitativeSpecies="ERK" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_APP_in_34" qual:qualitativeSpecies="Fyn" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_APP_in_42" qual:qualitativeSpecies="LRP6" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_APP_in_64" qual:qualitativeSpecies="SORL1" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_APP_in_65" qual:qualitativeSpecies="Sortilin" qual:sign="negative" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_APP_out" qual:qualitativeSpecies="APP" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> a_secretase </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> ERK </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> a_secretase </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Apoer2 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> ERK </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> a_secretase </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Apoer2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Dab1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> ERK </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> a_secretase </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Apoer2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Dab1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> ERK </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Fyn </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> a_secretase </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Apoer2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Dab1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> ERK </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Fyn </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> LRP6 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> SORL1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> a_secretase </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Apoer2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Dab1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> ERK </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Fyn </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> LRP6 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> SORL1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Sortilin </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> a_secretase </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Apoer2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Dab1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> ERK </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Fyn </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> LRP6 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> SORL1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_ATM">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_ATM_in_62" qual:qualitativeSpecies="ROS" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_ATM_out" qual:qualitativeSpecies="ATM" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> ROS </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Autophagy">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_Autophagy_in_15" qual:qualitativeSpecies="beclin1" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_Autophagy_in_21" qual:qualitativeSpecies="Cholesterol" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_Autophagy_in_38" qual:qualitativeSpecies="LAMP2" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_Autophagy_in_39" qual:qualitativeSpecies="LC3" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_Autophagy_in_50" qual:qualitativeSpecies="p62" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_Autophagy_in_62" qual:qualitativeSpecies="ROS" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_Autophagy_in_73" qual:qualitativeSpecies="ULK1" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_Autophagy_out" qual:qualitativeSpecies="Autophagy" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> beclin1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cholesterol </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> LAMP2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> LC3 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> p62 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> ULK1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> beclin1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cholesterol </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> LAMP2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> LC3 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> p62 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> ROS </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> ULK1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_BACE1">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_BACE1_in_21" qual:qualitativeSpecies="Cholesterol" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_BACE1_in_51" qual:qualitativeSpecies="PGC1a" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_BACE1_in_67" qual:qualitativeSpecies="STAT3" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_BACE1_out" qual:qualitativeSpecies="BACE1" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cholesterol </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> PGC1a </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> STAT3 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cholesterol </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> PGC1a </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_BAD">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_BAD_in_3" qual:qualitativeSpecies="AKT" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_BAD_in_56" qual:qualitativeSpecies="PP2B" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_BAD_out" qual:qualitativeSpecies="BAD" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> AKT </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> PP2B </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_BAX">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_BAX_in_3" qual:qualitativeSpecies="AKT" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_BAX_in_13" qual:qualitativeSpecies="Bcl2" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_BAX_in_16" qual:qualitativeSpecies="Bim" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_BAX_in_49" qual:qualitativeSpecies="p53" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_BAX_in_58" qual:qualitativeSpecies="PUMA" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_BAX_out" qual:qualitativeSpecies="BAX" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> AKT </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Bcl2 </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Bim </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> p53 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> PUMA </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Bcl2">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_Bcl2_in_11" qual:qualitativeSpecies="BAD" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_Bcl2_in_16" qual:qualitativeSpecies="Bim" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_Bcl2_in_37" qual:qualitativeSpecies="JNK" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_Bcl2_in_49" qual:qualitativeSpecies="p53" qual:sign="negative" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_Bcl2_out" qual:qualitativeSpecies="Bcl2" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> BAD </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Bim </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> BAD </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Bim </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> JNK </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> BAD </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Bim </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> JNK </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> p53 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_BDNF">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_BDNF_in_25" qual:qualitativeSpecies="CREB" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_BDNF_in_51" qual:qualitativeSpecies="PGC1a" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_BDNF_in_65" qual:qualitativeSpecies="Sortilin" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_BDNF_out" qual:qualitativeSpecies="BDNF" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CREB </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> PGC1a </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Sortilin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CREB </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Sortilin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_beclin1">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_beclin1_in_13" qual:qualitativeSpecies="Bcl2" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_beclin1_in_19" qual:qualitativeSpecies="CASP3" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_beclin1_in_37" qual:qualitativeSpecies="JNK" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_beclin1_in_61" qual:qualitativeSpecies="ROCK" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_beclin1_out" qual:qualitativeSpecies="beclin1" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Bcl2 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> JNK </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> ROCK </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Bcl2 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> JNK </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Bcl2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CASP3 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> JNK </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> ROCK </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Bcl2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CASP3 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> JNK </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Bim">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_Bim_in_31" qual:qualitativeSpecies="EGR1" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_Bim_in_33" qual:qualitativeSpecies="FOXO" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_Bim_out" qual:qualitativeSpecies="Bim" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> EGR1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> FOXO </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> EGR1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Ca_ion">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_Ca_ion_in_30" qual:qualitativeSpecies="e_NMDAR" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_Ca_ion_out" qual:qualitativeSpecies="Ca_ion" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> e_NMDAR </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_CASP2">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_CASP2_in_49" qual:qualitativeSpecies="p53" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_CASP2_out" qual:qualitativeSpecies="CASP2" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> p53 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_CASP3">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_CASP3_in_12" qual:qualitativeSpecies="BAX" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_CASP3_in_16" qual:qualitativeSpecies="Bim" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_CASP3_out" qual:qualitativeSpecies="CASP3" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> BAX </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Bim </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Cdk5">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_Cdk5_in_17" qual:qualitativeSpecies="Ca_ion" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_Cdk5_in_31" qual:qualitativeSpecies="EGR1" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_Cdk5_out" qual:qualitativeSpecies="Cdk5" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Ca_ion </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> EGR1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Ca_ion </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Cholesterol">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_Cholesterol_in_2" qual:qualitativeSpecies="ABCA7" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_Cholesterol_in_26" qual:qualitativeSpecies="CYP46A1" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_Cholesterol_in_41" qual:qualitativeSpecies="LPL" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_Cholesterol_in_66" qual:qualitativeSpecies="SREBP2" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_Cholesterol_in_76" qual:qualitativeSpecies="HMGCR" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_Cholesterol_out" qual:qualitativeSpecies="Cholesterol" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> ABCA7 </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> ABCA7 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CYP46A1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> LPL </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> ABCA7 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CYP46A1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> LPL </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> SREBP2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> HMGCR </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> ABCA7 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CYP46A1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> LPL </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_CIP2A">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_CIP2A_in_1" qual:qualitativeSpecies="Ab" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_CIP2A_out" qual:qualitativeSpecies="CIP2A" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Ab </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_CLU">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_CLU_in_31" qual:qualitativeSpecies="EGR1" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_CLU_in_49" qual:qualitativeSpecies="p53" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_CLU_out" qual:qualitativeSpecies="CLU" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> EGR1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> p53 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> EGR1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Cofilin">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_Cofilin_in_40" qual:qualitativeSpecies="LIMK1" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_Cofilin_in_56" qual:qualitativeSpecies="PP2B" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_Cofilin_out" qual:qualitativeSpecies="Cofilin" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> LIMK1 </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> PP2B </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_CREB">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_CREB_in_30" qual:qualitativeSpecies="e_NMDAR" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_CREB_in_32" qual:qualitativeSpecies="ERK" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_CREB_in_36" qual:qualitativeSpecies="Jacob" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_CREB_in_63" qual:qualitativeSpecies="s_NMDAR" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_CREB_out" qual:qualitativeSpecies="CREB" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> e_NMDAR </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> e_NMDAR </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> ERK </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Jacob </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> e_NMDAR </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> ERK </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Jacob </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> e_NMDAR </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> ERK </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Jacob </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> s_NMDAR </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_CYP46A1">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_CYP46A1_in_7" qual:qualitativeSpecies="APP" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_CYP46A1_in_17" qual:qualitativeSpecies="Ca_ion" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_CYP46A1_out" qual:qualitativeSpecies="CYP46A1" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> APP </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Ca_ion </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Dab1">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_Dab1_in_5" qual:qualitativeSpecies="Apoer2" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_Dab1_in_34" qual:qualitativeSpecies="Fyn" qual:sign="negative" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_Dab1_out" qual:qualitativeSpecies="Dab1" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Apoer2 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Fyn </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Dkk1">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_Dkk1_in_1" qual:qualitativeSpecies="Ab" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_Dkk1_in_23" qual:qualitativeSpecies="CLU" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_Dkk1_in_53" qual:qualitativeSpecies="PICALM" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_Dkk1_out" qual:qualitativeSpecies="Dkk1" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Ab </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CLU </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> PICALM </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Ab </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CLU </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_DLK">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_DLK_in_4" qual:qualitativeSpecies="APOE4" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_DLK_out" qual:qualitativeSpecies="DLK" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> APOE4 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_e_NMDAR">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_e_NMDAR_in_1" qual:qualitativeSpecies="Ab" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_e_NMDAR_in_34" qual:qualitativeSpecies="Fyn" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_e_NMDAR_in_57" qual:qualitativeSpecies="PTEN" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_e_NMDAR_out" qual:qualitativeSpecies="e_NMDAR" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Ab </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> PTEN </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Ab </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Fyn </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> PTEN </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Ab </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Fyn </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_EGR1">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_EGR1_in_37" qual:qualitativeSpecies="JNK" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_EGR1_out" qual:qualitativeSpecies="EGR1" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> JNK </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_ERK">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_ERK_in_46" qual:qualitativeSpecies="MKK7" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_ERK_in_55" qual:qualitativeSpecies="PP2A" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_ERK_in_63" qual:qualitativeSpecies="s_NMDAR" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_ERK_in_68" qual:qualitativeSpecies="STEP" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_ERK_in_71" qual:qualitativeSpecies="pTau" qual:sign="negative" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_ERK_out" qual:qualitativeSpecies="ERK" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> MKK7 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> PP2A </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> s_NMDAR </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> STEP </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> MKK7 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> PP2A </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> s_NMDAR </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> STEP </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> pTau </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> MKK7 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> PP2A </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> MKK7 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> PP2A </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> pTau </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_FOXO">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_FOXO_in_3" qual:qualitativeSpecies="AKT" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_FOXO_in_37" qual:qualitativeSpecies="JNK" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_FOXO_out" qual:qualitativeSpecies="FOXO" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> AKT </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> JNK </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Fyn">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_Fyn_in_5" qual:qualitativeSpecies="Apoer2" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_Fyn_in_27" qual:qualitativeSpecies="Dab1" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_Fyn_in_45" qual:qualitativeSpecies="mGluR" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_Fyn_in_68" qual:qualitativeSpecies="STEP" qual:sign="negative" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_Fyn_out" qual:qualitativeSpecies="Fyn" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Apoer2 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> mGluR </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> STEP </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Apoer2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Dab1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> mGluR </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> STEP </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Apoer2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Dab1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> STEP </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_GSK3beta">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_GSK3beta_in_3" qual:qualitativeSpecies="AKT" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_GSK3beta_in_17" qual:qualitativeSpecies="Ca_ion" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_GSK3beta_in_42" qual:qualitativeSpecies="LRP6" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_GSK3beta_in_55" qual:qualitativeSpecies="PP2A" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_GSK3beta_out" qual:qualitativeSpecies="GSK3beta" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> AKT </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ca_ion </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> LRP6 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> PP2A </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> AKT </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ca_ion </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> LRP6 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Jacob">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_Jacob_in_30" qual:qualitativeSpecies="e_NMDAR" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_Jacob_in_32" qual:qualitativeSpecies="ERK" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_Jacob_in_63" qual:qualitativeSpecies="s_NMDAR" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_Jacob_out" qual:qualitativeSpecies="Jacob" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> e_NMDAR </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> ERK </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> s_NMDAR </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> e_NMDAR </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_JNK">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_JNK_in_46" qual:qualitativeSpecies="MKK7" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_JNK_in_74" qual:qualitativeSpecies="Vangl2" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_JNK_out" qual:qualitativeSpecies="JNK" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> MKK7 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Vangl2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> MKK7 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_LAMP2">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_LAMP2_in_54" qual:qualitativeSpecies="PIP2" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_LAMP2_in_72" qual:qualitativeSpecies="TFEB" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_LAMP2_out" qual:qualitativeSpecies="LAMP2" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> PIP2 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> TFEB </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> PIP2 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_LC3">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_LC3_in_53" qual:qualitativeSpecies="PICALM" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_LC3_in_54" qual:qualitativeSpecies="PIP2" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_LC3_in_72" qual:qualitativeSpecies="TFEB" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_LC3_out" qual:qualitativeSpecies="LC3" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> PICALM </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> PICALM </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> PIP2 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> TFEB </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> PICALM </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> PIP2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_LIMK1">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_LIMK1_in_52" qual:qualitativeSpecies="PI3K" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_LIMK1_in_61" qual:qualitativeSpecies="ROCK" qual:sign="negative" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_LIMK1_out" qual:qualitativeSpecies="LIMK1" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> PI3K </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> ROCK </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_LPL">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_LPL_in_64" qual:qualitativeSpecies="SORL1" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_LPL_in_66" qual:qualitativeSpecies="SREBP2" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_LPL_out" qual:qualitativeSpecies="LPL" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> SORL1 </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> SREBP2 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_LRP6">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_LRP6_in_4" qual:qualitativeSpecies="APOE4" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_LRP6_in_28" qual:qualitativeSpecies="Dkk1" qual:sign="negative" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_LRP6_out" qual:qualitativeSpecies="LRP6" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> APOE4 </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> APOE4 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Dkk1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_MAPT">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_MAPT_in_25" qual:qualitativeSpecies="CREB" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_MAPT_in_30" qual:qualitativeSpecies="e_NMDAR" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_MAPT_out" qual:qualitativeSpecies="MAPT" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> CREB </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> e_NMDAR </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_MDM2">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_MDM2_in_8" qual:qualitativeSpecies="ATM" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_MDM2_in_18" qual:qualitativeSpecies="CASP2" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_MDM2_in_35" qual:qualitativeSpecies="GSK3beta" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_MDM2_in_49" qual:qualitativeSpecies="p53" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_MDM2_out" qual:qualitativeSpecies="MDM2" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> ATM </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CASP2 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> p53 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> ATM </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CASP2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> GSK3beta </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> p53 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> ATM </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> GSK3beta </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> p53 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_mGluR">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_mGluR_in_1" qual:qualitativeSpecies="Ab" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_mGluR_out" qual:qualitativeSpecies="mGluR" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Ab </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_MKK7">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_MKK7_in_29" qual:qualitativeSpecies="DLK" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_MKK7_in_30" qual:qualitativeSpecies="e_NMDAR" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_MKK7_out" qual:qualitativeSpecies="MKK7" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> DLK </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> e_NMDAR </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> DLK </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_mTOR">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_mTOR_in_3" qual:qualitativeSpecies="AKT" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_mTOR_in_21" qual:qualitativeSpecies="Cholesterol" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_mTOR_in_32" qual:qualitativeSpecies="ERK" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_mTOR_in_75" qual:qualitativeSpecies="SIRT1" qual:sign="negative" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_mTOR_out" qual:qualitativeSpecies="mTOR" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> AKT </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cholesterol </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> ERK </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> SIRT1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> AKT </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cholesterol </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> SIRT1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> AKT </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> SIRT1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_p38">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_p38_in_68" qual:qualitativeSpecies="STEP" qual:sign="negative" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_p38_out" qual:qualitativeSpecies="p38" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> STEP </ci>
+                <cn type="integer"> 0 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_p53">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_p53_in_8" qual:qualitativeSpecies="ATM" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_p53_in_44" qual:qualitativeSpecies="MDM2" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_p53_in_48" qual:qualitativeSpecies="p38" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_p53_out" qual:qualitativeSpecies="p53" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> ATM </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> MDM2 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> p38 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> ATM </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> MDM2 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_p62">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_p62_in_53" qual:qualitativeSpecies="PICALM" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_p62_in_54" qual:qualitativeSpecies="PIP2" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_p62_in_72" qual:qualitativeSpecies="TFEB" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_p62_out" qual:qualitativeSpecies="p62" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> PICALM </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> PICALM </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> PIP2 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> TFEB </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> PICALM </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> PIP2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_PGC1a">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_PGC1a_in_25" qual:qualitativeSpecies="CREB" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_PGC1a_in_48" qual:qualitativeSpecies="p38" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_PGC1a_in_75" qual:qualitativeSpecies="SIRT1" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_PGC1a_out" qual:qualitativeSpecies="PGC1a" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CREB </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> p38 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> SIRT1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CREB </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> p38 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_PI3K">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_PI3K_in_14" qual:qualitativeSpecies="BDNF" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_PI3K_in_27" qual:qualitativeSpecies="Dab1" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_PI3K_in_63" qual:qualitativeSpecies="s_NMDAR" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_PI3K_out" qual:qualitativeSpecies="PI3K" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> BDNF </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Dab1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> s_NMDAR </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> BDNF </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Dab1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> BDNF </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_PICALM">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_PICALM_in_17" qual:qualitativeSpecies="Ca_ion" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_PICALM_in_19" qual:qualitativeSpecies="CASP3" qual:sign="negative" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_PICALM_out" qual:qualitativeSpecies="PICALM" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Ca_ion </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> CASP3 </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_PIP2">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_PIP2_in_70" qual:qualitativeSpecies="synj1" qual:sign="negative" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_PIP2_out" qual:qualitativeSpecies="PIP2" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> synj1 </ci>
+                <cn type="integer"> 0 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_PP2A">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_PP2A_in_4" qual:qualitativeSpecies="APOE4" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_PP2A_in_22" qual:qualitativeSpecies="CIP2A" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_PP2A_in_35" qual:qualitativeSpecies="GSK3beta" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_PP2A_in_45" qual:qualitativeSpecies="mGluR" qual:sign="negative" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_PP2A_out" qual:qualitativeSpecies="PP2A" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> APOE4 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CIP2A </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> GSK3beta </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> APOE4 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CIP2A </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> GSK3beta </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> mGluR </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_PP2B">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_PP2B_in_17" qual:qualitativeSpecies="Ca_ion" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_PP2B_in_45" qual:qualitativeSpecies="mGluR" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_PP2B_out" qual:qualitativeSpecies="PP2B" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Ca_ion </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> mGluR </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Ca_ion </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_PTEN">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_PTEN_in_61" qual:qualitativeSpecies="ROCK" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_PTEN_out" qual:qualitativeSpecies="PTEN" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> ROCK </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_PUMA">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_PUMA_in_33" qual:qualitativeSpecies="FOXO" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_PUMA_in_49" qual:qualitativeSpecies="p53" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_PUMA_in_63" qual:qualitativeSpecies="s_NMDAR" qual:sign="negative" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_PUMA_out" qual:qualitativeSpecies="PUMA" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> FOXO </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> p53 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> s_NMDAR </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> FOXO </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> s_NMDAR </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Reelin">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_Reelin_in_6" qual:qualitativeSpecies="Apoptosis" qual:sign="negative" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_Reelin_out" qual:qualitativeSpecies="Reelin" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Apoptosis </ci>
+                <cn type="integer"> 0 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_RhoA">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_RhoA_in_18" qual:qualitativeSpecies="CASP2" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_RhoA_in_74" qual:qualitativeSpecies="Vangl2" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_RhoA_out" qual:qualitativeSpecies="RhoA" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CASP2 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Vangl2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> CASP2 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_ROCK">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_ROCK_in_60" qual:qualitativeSpecies="RhoA" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_ROCK_in_75" qual:qualitativeSpecies="SIRT1" qual:sign="negative" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_ROCK_out" qual:qualitativeSpecies="ROCK" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> RhoA </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> SIRT1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> RhoA </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_ROS">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_ROS_in_1" qual:qualitativeSpecies="Ab" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_ROS_in_17" qual:qualitativeSpecies="Ca_ion" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_ROS_in_51" qual:qualitativeSpecies="PGC1a" qual:sign="negative" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_ROS_out" qual:qualitativeSpecies="ROS" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Ab </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ca_ion </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> PGC1a </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Ab </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> PGC1a </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_s_NMDAR">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_s_NMDAR_in_14" qual:qualitativeSpecies="BDNF" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_s_NMDAR_in_34" qual:qualitativeSpecies="Fyn" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_s_NMDAR_in_68" qual:qualitativeSpecies="STEP" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_s_NMDAR_in_71" qual:qualitativeSpecies="pTau" qual:sign="negative" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_s_NMDAR_out" qual:qualitativeSpecies="s_NMDAR" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> BDNF </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Fyn </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> STEP </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> pTau </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> BDNF </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> STEP </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> pTau </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_SORL1">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_SORL1_in_14" qual:qualitativeSpecies="BDNF" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_SORL1_in_61" qual:qualitativeSpecies="ROCK" qual:sign="negative" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_SORL1_out" qual:qualitativeSpecies="SORL1" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> BDNF </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> ROCK </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> BDNF </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Sortilin">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_Sortilin_in_61" qual:qualitativeSpecies="ROCK" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_Sortilin_out" qual:qualitativeSpecies="Sortilin" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> ROCK </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_SREBP2">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_SREBP2_in_2" qual:qualitativeSpecies="ABCA7" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_SREBP2_in_3" qual:qualitativeSpecies="AKT" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_SREBP2_in_7" qual:qualitativeSpecies="APP" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_SREBP2_in_21" qual:qualitativeSpecies="Cholesterol" qual:sign="negative" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_SREBP2_out" qual:qualitativeSpecies="SREBP2" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> ABCA7 </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> ABCA7 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> AKT </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> APP </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> ABCA7 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> AKT </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> APP </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cholesterol </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> ABCA7 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> AKT </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_STAT3">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_STAT3_in_20" qual:qualitativeSpecies="Cdk5" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_STAT3_out" qual:qualitativeSpecies="STAT3" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Cdk5 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_STEP">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_STEP_in_30" qual:qualitativeSpecies="e_NMDAR" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_STEP_in_56" qual:qualitativeSpecies="PP2B" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_STEP_in_63" qual:qualitativeSpecies="s_NMDAR" qual:sign="negative" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_STEP_out" qual:qualitativeSpecies="STEP" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> e_NMDAR </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> PP2B </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> e_NMDAR </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> PP2B </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> s_NMDAR </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_synapse_loss">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_synapse_loss_in_14" qual:qualitativeSpecies="BDNF" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_synapse_loss_in_24" qual:qualitativeSpecies="Cofilin" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_synapse_loss_in_25" qual:qualitativeSpecies="CREB" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_synapse_loss_in_71" qual:qualitativeSpecies="pTau" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_synapse_loss_out" qual:qualitativeSpecies="synapse_loss" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> BDNF </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cofilin </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CREB </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> pTau </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> BDNF </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cofilin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CREB </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_synj1">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_synj1_in_4" qual:qualitativeSpecies="APOE4" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_synj1_in_20" qual:qualitativeSpecies="Cdk5" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_synj1_in_56" qual:qualitativeSpecies="PP2B" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_synj1_out" qual:qualitativeSpecies="synj1" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> APOE4 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cdk5 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> PP2B </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> APOE4 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_pTau">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_pTau_in_9" qual:qualitativeSpecies="Autophagy" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_pTau_in_20" qual:qualitativeSpecies="Cdk5" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_pTau_in_32" qual:qualitativeSpecies="ERK" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_pTau_in_35" qual:qualitativeSpecies="GSK3beta" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_pTau_in_43" qual:qualitativeSpecies="MAPT" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_pTau_in_55" qual:qualitativeSpecies="PP2A" qual:sign="negative" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_pTau_out" qual:qualitativeSpecies="pTau" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Autophagy </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cdk5 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> ERK </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> GSK3beta </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> MAPT </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> PP2A </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Autophagy </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cdk5 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> ERK </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> MAPT </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> PP2A </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Autophagy </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cdk5 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> MAPT </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> PP2A </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_TFEB">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_TFEB_in_4" qual:qualitativeSpecies="APOE4" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_TFEB_in_47" qual:qualitativeSpecies="mTOR" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_TFEB_in_56" qual:qualitativeSpecies="PP2B" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_TFEB_out" qual:qualitativeSpecies="TFEB" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> APOE4 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> PP2B </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> APOE4 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> mTOR </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> PP2B </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_ULK1">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_ULK1_in_47" qual:qualitativeSpecies="mTOR" qual:sign="negative" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_ULK1_out" qual:qualitativeSpecies="ULK1" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> mTOR </ci>
+                <cn type="integer"> 0 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Vangl2">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_Vangl2_in_28" qual:qualitativeSpecies="Dkk1" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_Vangl2_out" qual:qualitativeSpecies="Vangl2" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Dkk1 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_SIRT1">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_SIRT1_in_4" qual:qualitativeSpecies="APOE4" qual:sign="negative" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_SIRT1_in_62" qual:qualitativeSpecies="ROS" qual:sign="negative" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_SIRT1_out" qual:qualitativeSpecies="SIRT1" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> APOE4 </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> APOE4 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> ROS </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_HMGCR">
+        <qual:listOfInputs>
+          <qual:input qual:id="tr_HMGCR_in_14" qual:qualitativeSpecies="BDNF" qual:sign="positive" qual:transitionEffect="none"/>
+          <qual:input qual:id="tr_HMGCR_in_66" qual:qualitativeSpecies="SREBP2" qual:sign="positive" qual:transitionEffect="none"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:id="tr_HMGCR_out" qual:qualitativeSpecies="HMGCR" qual:transitionEffect="assignmentLevel"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> BDNF </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> SREBP2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> BDNF </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+    </qual:listOfTransitions>
+    <listOfCompartments>
+      <compartment constant="true" id="comp1"/>
+    </listOfCompartments>
+  </model>
+</sbml>
