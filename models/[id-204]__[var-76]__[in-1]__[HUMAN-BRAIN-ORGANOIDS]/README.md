@@ -10,7 +10,7 @@
 
 ### Modifications
 
-The model is provided without major modifications, just variables with constant/identity update functions have their functions erased to make them canonical inputs.
+The model is provided without major modifications, just variable `APOE4` with constant update function has been turned into a canonical input.
 
 ### Model citation
 

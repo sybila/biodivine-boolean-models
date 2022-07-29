@@ -1,0 +1,159 @@
+e2f1 -? akt1
+e2f1 -? axin2
+e2f2 -? axin2
+e2f3 -? axin2
+lef1 -? axin2
+e2f1 -? bcl2
+mir_200b_3p -? bcl2
+nfkb1 -? bcl2
+mdm2 -? cdh1
+mir_25_3p -? cdh1
+snai1 -? cdh1
+snai2 -? cdh1
+src -? cdh1
+twist1 -? cdh1
+e2f1 -? cdkn2a
+e2f2 -? cdkn2a
+sp1 -? cdkn2a
+tp53 -? cdkn2a
+twist1 -? cdkn2a
+zeb1 -? cdkn2a
+nfkbia -? chuk
+axin2 -?? ctnnb1
+cdh1 -? ctnnb1
+axin2 -? e2f1
+cdkn2a -? e2f1
+e2f3 -? e2f1
+foxa1 -? e2f1
+lef1 -? e2f1
+mdm2 -? e2f1
+mir_205_5p -? e2f1
+myc -? e2f1
+nfkb1 -? e2f1
+ppp2r1a -? e2f1
+ppp2r1b -? e2f1
+ppp2r2b -? e2f1
+ppp2r2c -? e2f1
+rb1 -? e2f1
+sfn -? e2f1
+tp53 -? e2f1
+e2f1 -? e2f2
+mir_200_3p -? e2f3
+rb1 -? e2f3
+cdh1 -? egfr
+cdh1 -? emt
+fgfr1 -? emt
+mir_200b_3p -?? emt
+smad2 -?? emt
+smad3 -? emt
+smad4 -?? emt
+snai1 -?? emt
+twist1 -? emt
+zeb1 -? emt
+e2f1 -? fgfr1
+rara -? foxa1
+chuk -? foxo3
+e2f1 -? foxo3
+e2f1 -? kiaa1524
+ctnnb1 -? lef1
+akt1 -? mdm2
+cdkn2a -? mdm2
+e2f1 -? mdm2
+tp53 -? mdm2
+smad3 -? mir_200b_3p
+tp53 -? mir_200b_3p
+tp53 -? mir_205_5p
+e2f1 -? mir_25_3p
+ctnnb1 -? myc
+e2f2 -? myc
+lef1 -? myc
+nfkb1 -? myc
+smad2 -?? myc
+smad3 -? myc
+smad4 -? myc
+akt1 -? nfkb1
+chuk -? nfkb1
+e2f1 -? nfkb1
+nfkb1 -? nfkbia
+fgfr1 -? ppp2r1a
+fgfr1 -? ppp2r1b
+kiaa1524 -? ppp2r1b
+fgfr1 -? ppp2r2c
+e2f1 -? rara
+e2f1 -? rb1
+tp53 -? sfn
+e2f1 -? sirt1
+tgfbr -? smad2
+tgfbr -? smad3
+tgfbr -? smad4
+ctnnb1 -? snai1
+cxcr1 -? snai1
+smad4 -? snai1
+tgfbr -? snai1
+ctnnb1 -? snai2
+mdm2 -? snai2
+tgfbr -? snai2
+tp53 -? snai2
+e2f1 -? sp1
+smad2 -?? sp1
+smad3 -? sp1
+smad4 -? sp1
+egfr -? src
+fgfr1 -? src
+bcl2 -? tp53
+e2f1 -? tp53
+foxo3 -? tp53
+mdm2 -? tp53
+mir_25_3p -? tp53
+rb1 -? tp53
+sirt1 -? tp53
+sp1 -? tp53
+twist1 -? tp53
+ctnnb1 -? twist1
+nfkb1 -? twist1
+cxcr1 -? zeb1
+e2f1 -? zeb1
+mir_200b_3p -? zeb1
+mir_205_5p -? zeb1
+snai1 -? zeb1
+$akt1: e2f1
+$axin2: (e2f1 | (e2f2 | (e2f3 | lef1)))
+$bcl2: (!mir_200b_3p | (e2f1 | nfkb1))
+$cdh1: (!snai1 | ((!src & (!snai2 & (!mir_25_3p & !mdm2))) | !twist1))
+$cdkn2a: (!tp53 | (!twist1 | (!zeb1 | (e2f1 | (e2f2 | sp1)))))
+$chuk: !nfkbia
+$ctnnb1: ((!axin2 & !cdh1) | !cdh1)
+$e2f1: (!axin2 | (!cdkn2a | (!mir_205_5p | (!ppp2r1a | (!ppp2r1b | (!ppp2r2b | (!ppp2r2c | (!rb1 | (!sfn | (e2f3 | (foxa1 | (lef1 | (mdm2 | (myc | (nfkb1 | tp53)))))))))))))))
+$e2f2: e2f1
+$e2f3: (!mir_200_3p | !rb1)
+$egfr: cdh1
+$emt: ((!cdh1 & fgfr1) | ((!cdh1 & (fgfr1 & (zeb1 & (!mir_200b_3p & twist1)))) | ((!cdh1 & smad3) | ((!cdh1 & (zeb1 & (!mir_200b_3p & twist1))) | (cdh1 | (fgfr1 | ((fgfr1 & (snai1 & (smad4 & (smad3 & smad2)))) | ((fgfr1 & (zeb1 & (!mir_200b_3p & twist1))) | ((snai1 & (smad4 & (smad3 & smad2))) | ((zeb1 & twist1) | (zeb1 & (twist1 & (snai1 & (smad4 & (smad3 & smad2)))))))))))))))
+$fgfr1: e2f1
+$foxa1: !rara
+$foxo3: (!chuk | e2f1)
+$kiaa1524: e2f1
+$lef1: ctnnb1
+$mdm2: (!cdkn2a | (!e2f1 | (akt1 | tp53)))
+$mir_200b_3p: (smad3 | tp53)
+$mir_205_5p: tp53
+$mir_25_3p: e2f1
+$myc: ((!smad2 & (smad3 & !smad4)) | (!smad3 | (!smad4 | (ctnnb1 | (e2f2 | (lef1 | nfkb1))))))
+$nfkb1: (akt1 | (chuk | e2f1))
+$nfkbia: nfkb1
+$ppp2r1a: fgfr1
+$ppp2r1b: (fgfr1 | (!kiaa1524 | fgfr1))
+$ppp2r2c: fgfr1
+$rara: !e2f1
+$rb1: e2f1
+$sfn: tp53
+$sirt1: e2f1
+$smad2: tgfbr
+$smad3: tgfbr
+$smad4: tgfbr
+$snai1: (ctnnb1 | (cxcr1 | (smad4 | tgfbr)))
+$snai2: (!mdm2 | (!tp53 | (ctnnb1 | tgfbr)))
+$sp1: (e2f1 | ((smad2 & (smad3 & smad4)) | (smad3 | smad4)))
+$src: (egfr | fgfr1)
+$tp53: (!bcl2 | (!mdm2 | (!mir_25_3p | (!rb1 | (!sirt1 | (!twist1 | (e2f1 | (foxo3 | sp1))))))))
+$twist1: (ctnnb1 | nfkb1)
+$zeb1: (!mir_200b_3p | (!mir_205_5p | (cxcr1 | (e2f1 | snai1))))

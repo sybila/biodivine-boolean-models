@@ -1,0 +1,42 @@
+targets, factors
+akt1, e2f1
+axin2, e2f1 | e2f2 | e2f3 | lef1
+bcl2, !mir_200b_3p | e2f1 | nfkb1
+cdh1, !snai1 | (!src & !snai2 & !mir_25_3p & !mdm2) | !twist1
+cdkn2a, !tp53 | !twist1 | !zeb1 | e2f1 | e2f2 | sp1
+chuk, !nfkbia
+ctnnb1, (!axin2 & !cdh1) | !cdh1
+e2f1, !axin2 | !cdkn2a | !mir_205_5p | !ppp2r1a | !ppp2r1b | !ppp2r2b | !ppp2r2c | !rb1 | !sfn | e2f3 | foxa1 | lef1 | mdm2 | myc | nfkb1 | tp53
+e2f2, e2f1
+e2f3, !mir_200_3p | !rb1
+egfr, cdh1
+emt, (!cdh1 & fgfr1) | (!cdh1 & fgfr1 & zeb1 & !mir_200b_3p & twist1) | (!cdh1 & smad3) | (!cdh1 & zeb1 & !mir_200b_3p & twist1) | cdh1 | fgfr1 | (fgfr1 & snai1 & smad4 & smad3 & smad2) | (fgfr1 & zeb1 & !mir_200b_3p & twist1) | (snai1 & smad4 & smad3 & smad2) | (zeb1 & twist1) | (zeb1 & twist1 & snai1 & smad4 & smad3 & smad2)
+fgfr1, e2f1
+foxa1, !rara
+foxo3, !chuk | e2f1
+kiaa1524, e2f1
+lef1, ctnnb1
+mdm2, !cdkn2a | !e2f1 | akt1 | tp53
+mir_200b_3p, smad3 | tp53
+mir_205_5p, tp53
+mir_25_3p, e2f1
+myc, (!smad2 & smad3 & !smad4) | !smad3 | !smad4 | ctnnb1 | e2f2 | lef1 | nfkb1
+nfkb1, akt1 | chuk | e2f1
+nfkbia, nfkb1
+ppp2r1a, fgfr1
+ppp2r1b, fgfr1 | !kiaa1524 | fgfr1
+ppp2r2c, fgfr1
+rara, !e2f1
+rb1, e2f1
+sfn, tp53
+sirt1, e2f1
+smad2, tgfbr
+smad3, tgfbr
+smad4, tgfbr
+snai1, ctnnb1 | cxcr1 | smad4 | tgfbr
+snai2, !mdm2 | !tp53 | ctnnb1 | tgfbr
+sp1, e2f1 | (smad2 & smad3 & smad4) | smad3 | smad4
+src, egfr | fgfr1
+tp53, !bcl2 | !mdm2 | !mir_25_3p | !rb1 | !sirt1 | !twist1 | e2f1 | foxo3 | sp1
+twist1, ctnnb1 | nfkb1
+zeb1, !mir_200b_3p | !mir_205_5p | cxcr1 | e2f1 | snai1
