@@ -1,0 +1,52 @@
+$Egr1: Gata2 & Junb
+$Junb: Egr1 | Myc
+$Bclaf1: Myc
+$Myc: Cebpa & Bclaf1
+$Fli1: Junb | (Gata1 & !Klf1)
+$Gata2: (Gata2 & !Gata1 & !Zfpm1) | (Egr1 & !Gata1 & !Zfpm1 & !Spi1)
+$Spi1: (Spi1 & !Gata1) | (Cebpa & !Gata1 & !Gata2)
+$Cebpa: (Gata2 & !Ikzf1) | (Spi1 & !Ikzf1)
+$Gata1: Fli1 | (Gata2 & !Spi1) | (Gata1 & !Ikzf1 & !Spi1)
+$Klf1: Gata1 & !Fli1
+$Tal1: Gata1 & !Spi1
+$Ikzf1: Gata2
+$Zfpm1: Gata1
+$CDK46CycD: Bclaf1 | Myc
+$CIPKIP: Junb
+
+Junb -> CIPKIP
+Egr1 -> Junb
+Junb -> Egr1
+Myc -> Junb
+Myc -> Bclaf1
+Bclaf1 -> Myc
+Myc -> CDK46CycD
+Bclaf1 -> CDK46CycD
+Cebpa -> Myc
+Cebpa -> Spi1
+Spi1 -> Cebpa
+Gata2 -> Cebpa
+Ikzf1 -| Cebpa
+Egr1 -> Gata2
+Gata2 -> Egr1
+Spi1 -> Spi1
+Spi1 -| Tal1
+Spi1 -| Gata1
+Gata1 -| Spi1
+Spi1 -| Gata2
+Gata2 -| Spi1
+Gata2 -> Gata2
+Gata2 -> Ikzf1
+Gata2 -> Gata1
+Gata1 -| Gata2
+Gata1 -> Zfpm1
+Ikzf1 -| Gata1
+Zfpm1 -| Gata2
+Gata1 -> Gata1
+Gata1 -> Tal1
+Gata1 -> Fli1
+Fli1 -> Gata1
+Junb -> Fli1
+Fli1 -| Klf1
+Klf1 -| Fli1
+Gata1 -> Klf1
