@@ -18,20 +18,40 @@
 \maketitle
 
 \begin{abstract}
-	Recent years have seen emergence of a wide variety of powerful tools for computational analysis of logical models represented as Boolean networks. However, assessment of validity, efficiency and scalability of such tools requires a comprehensive benchmark set of Boolean networks that can be used to obtain comparable results for different tools.
+	The space of powerful tools for computational analysis of logical models (represented as Boolean networks) is growing constantly. However, comparing the validity, efficiency, and scalability of such tools necessitates a comprehensive benchmark set of realistic Boolean networks.
 	
-	At the moment, this need is largely served using databases of biological models such as CellCollective or GINsim database. However, these databases are more focused on human curated, biological aspects of the networks and are therefore limited in scope. Furthermore, the models in these databases are not available as a single dataset and often have to be manually obtained one by one.
+	At the moment, this need is largely served by databases of biological models such as CellCollective, GINsim, or Biomodels. However, these databases are more focused on human curated, biologically relevant networks, and are therefore limited in scope. Furthermore, the models in such databases are often not available as a single dataset. This requires additional time for preprocessing and data collection, which the tool authors are often unwilling or unable to spend.
 	
-	Here, we introduce a comprehensive benchmark dataset that has been created by surveying the aforementioned databases, as well as a large body of other literature to obtain as many biologically motivated Boolean networks as possible. To make the dataset useful to a wide range of tool maintainers, we provide the models in different machine-readable formats and ensure all models are valid and consistent using an automated validation procedure. At the moment, the dataset comprises 145 networks.
+	In this technical report, we describe a comprehensive, open-source benchmark dataset that has been created by surveying the aforementioned databases, as well as a large body of other literature to obtain as many realistic Boolean networks as possible. To make the dataset useful to a wide range of tool maintainers, we provide the models in different machine-readable formats and ensure all models are valid and logically consistent using an automated static-analysis workflow. At the moment of writing, the dataset comprises 210+ networks.
 \end{abstract}
 
 \section{Introduction}
 
-Logical models provide a very useful and simple framework for description of complex biological processes. The most common mechanism for describing executable logical models are Boolean networks. In recent years, we have seen a rapid development of new tools and algorithms for analysis of large Boolean networks. However, in many instances, it is hard to assess usefulness and scalability of such tools due to a lack of commonly recognised ``benchmark dataset'' of networks on which the tools can be compared.
+Logical models provide a very useful and simple framework for description of complex biological processes. The most common mechanism for formalising executable logical models are Boolean networks~\cite{bn-intro}. In recent years, we have seen a rapid development of new tools and algorithms for analysis of large Boolean networks. However, in many instances, it is hard to assess usefulness and scalability of such tools due to a lack of commonly recognised ``benchmark dataset'' of networks on which the tools can be compared.
 
-This purpose is often served by models obtained from databases maintained by the authors of some of the larger modelling tools, such as CellCollective~\cite{cell-collective} or GINsim~\cite{ginsim}. However, these models are often hard to obtain in bulk and have to be downloaded one by one. Additionally, authors often modify the models slightly, or assume non-standard values of inputs which prevents comparisons. Finally, these databases are far from comprehensive, so a wide range of models is often omitted.
+This purpose is often served by models obtained from databases maintained by the authors of some of the larger modelling tools, such as CellCollective~\cite{cell-collective}, GINsim~\cite{ginsim}, or Biomodels~\cite{biomodels}. However, these models are often hard to obtain in bulk or may require additional processing (e.g. to convert into an appropriate format). Additionally, tool authors often modify the models in minor ways, which prevents meaningful comparisons between publications. Finally, these databases are far from comprehensive, so a wide range of models is often omitted.
 
-As a result, most papers develop an ad hoc benchmark set that is often partially proprietary and hard or impossible to replicate and compare to. Here, we propose a standardized comprehensive benchmark set that can be used for this purpose instead. To make the benchmark set as user friendly as possible, we provide the following benefits compared to existing solutions:
+As a result, most papers develop an ad hoc benchmark set that is often partially proprietary and hard or impossible to replicate and compare to. In this technical report, we describe a comprehensive, open-source benchmark dataset that can be used for this purpose instead.
+
+\section{Goals and scope}
+
+\paragraph{Eligible models} To cover the widest possible assortment of realistic models, we currently allow submission of any logical model which can be reliably retrieved from a known database, repository, or an associated publication. The only requirement is that the model must be based on real biological information. That is, we do not accept randomly generated models. However, we do not require any specific level of curation either---the model can be hand made, automatically synthesised, or anything in between. Similarly, we accept many different model formats, including a human-assisted translation process for models that are currently not machine-readable.
+
+\paragraph{Editions} The goal is to gradually evolve the dataset by adding new models (or by removing problematic/redundant models). Consequently, we plan to regularly release \emph{editions} of the dataset, such that the users can refer to specific (historic) editions as necessary. Preliminary plan is to release editions yearly. Initially, editions will be available as Github releases, with a possible future addition of Zenodo artefacts.
+
+\paragraph{Model metadata} While we do not perform any biological curation of models, we collect basic meta-data about each model to make filtering and search easier. In particular, each model has:
+\begin{itemize}
+	\item A \emph{numeric identifier} that is unique within a specific dataset edition.
+	\item A human-readable name. For simplicity, the name is limited to numbers, capital letters and the dash symbol (e.g. \texttt{MODEL-NAME-5}). To improve legibility, we may use a regular space instead of a dash in text that is not meant to be machine readable (i.e. \texttt{MODEL NAME 5}).
+\end{itemize}
+
+\paragraph{Validation and canonical representation}
+
+\paragraph{Collaboration and contributions} TODO
+
+\section{Technical information}
+
+To make the benchmark set as user friendly as possible, we provide the following benefits compared to existing solutions:
 
 \begin{itemize}
 	\item The dataset is open source and available on Github, so that anyone can propose new additions or modifications. Each tracked model is (primarily) referred to using a unique ID as opposed to name or citation. However, we also keep track of the original source (publication) where the model first appeared.
