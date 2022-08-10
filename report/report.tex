@@ -18,7 +18,7 @@
 \maketitle
 
 \begin{abstract}
-	The space of powerful tools for computational analysis of logical models (represented as Boolean networks) is growing constantly. However, comparing the validity, efficiency, and scalability of such tools necessitates a comprehensive benchmark set of realistic Boolean networks.
+	The space of powerful tools for computational analysis of logical models (represented as Boolean networks) has been growing considerably. However, comparing the validity, efficiency, and scalability of such tools necessitates a comprehensive benchmark set of realistic Boolean networks.
 	
 	At the moment, this need is largely served by databases of biological models such as CellCollective, GINsim, or Biomodels. However, these databases are more focused on human curated, biologically relevant networks, and are therefore limited in scope. Furthermore, the models in such databases may not always be available as a single dataset or in the desired format. This requires additional time for preprocessing and data collection, which the tool authors are often unwilling or unable to spend.
 	
@@ -29,11 +29,11 @@
 
 Logical models provide a very useful and simple framework for describing complex biological phenomena. The most common mechanism for formalising executable logical models are Boolean networks~\cite{bn-intro}. In recent years, we have seen a rapid development of new tools and algorithms for analysis of large Boolean networks. However, in many instances, it is hard to assess usefulness and scalability of such tools due to a lack of commonly recognised ``benchmark dataset'' of networks on which the tools can be compared.
 
-This purpose is often served by models obtained from databases maintained by the authors of some of the larger modelling tools, such as CellCollective~\cite{cell-collective}, GINsim~\cite{ginsim}, or Biomodels~\cite{biomodels}. However, these models are often hard to obtain in bulk or may require additional processing (e.g. to convert into an appropriate format). Additionally, tool authors often modify the models in minor ways, which prevents meaningful comparisons between publications. Finally, these databases are far from comprehensive, so a wide range of models is often omitted.
+This purpose is often served by models obtained from databases maintained by the authors of some of the larger modelling tools, such as CellCollective~\cite{cell-collective}, GINsim~\cite{ginsim}, or Biomodels~\cite{biomodels}. However, these models are often hard to obtain in bulk or may require additional processing (e.g. to convert into an appropriate format). Additionally, tool authors often modify the models in minor ways (e.g. by tweaking valuations of network inputs), which prevents meaningful comparisons between publications. Finally, these databases are far from comprehensive, so a wide range of models is often omitted.
 
 As a result, most papers develop an ad hoc benchmark set that is often partially proprietary and hard or impossible to replicate and compare to. In this technical report, we describe a comprehensive, open-source benchmark dataset that can be used for this purpose instead.
 
-\textbf{Disclaimer: The model dataset as well as this report will be gradually updated as new models and data become available. If possible, please refer to the latest version of this report on ArXiv and the latest version of the data in the Github repository.}
+\textbf{Disclaimer: The model dataset as well as this report will be gradually updated as new models and data become available. If possible, please refer to the latest version of this report on arXiv and the latest revision of the dataset in the github repository.}
 
 \section{Goals and scope}
 
@@ -49,6 +49,7 @@ As a result, most papers develop an ad hoc benchmark set that is often partially
 	\item The URL where the model data was downloaded. This can be a list of URLs if the model is available from multiple sources. This can also be the publication DOI if the model is based directly on the published supplementary data.
 	\item Basic structural metadata, such as the number of model \emph{variables}, \emph{inputs}, and \emph{regulations}. The plan is to also incorporate additional structural measures of the regulatory graph later (e.g. feedback-vertex-set, SCC sizes, etc.), once additional static analysis steps are added.
 	\item A set of curated \emph{keywords}. Generally, these represent additional technical metadata, such as listing the databases where the model is available, or whether the model is based on multi-valued logic. At the moment, the dataset does not contain any biological keywords (e.g. cancer, differentiation, etc.). However, we are open to incorporating any community suggestions for additional keywords.
+	\item A markdown document with any additional notes or relevant information about the model.
 \end{itemize}
 
 For each model, the metadata is summarised in a human-readable markdown \texttt{README.md} file, as well as a machine-readable \texttt{.json} document.
@@ -56,7 +57,7 @@ For each model, the metadata is summarised in a human-readable markdown \texttt{
 
 \paragraph{Contributions}
 
-The dataset is managed using a versioned Github repository.\footnote{\url{https://github.com/sybila/biodivine-boolean-models/}} Submitting a new model into the collection can be thus performed by anyone using the pull-request functionality (project readme has more detailed instructions about preparing such a pull request). Alternatively, we also accept submissions using issues: Simply create an issue with the bibliographic entry of the model you wish to include and we will try to incorporate it as soon as possible.
+The dataset is managed using a versioned Github repository.\footnote{\url{https://github.com/sybila/biodivine-boolean-models/}} Submitting a new model into the collection can be thus performed by anyone using the pull-request functionality (project readme has more detailed instructions about preparing such pull requests). Alternatively, we also accept submissions using issues: Simply create an issue with the bibliographic entry of the model you wish to include and we will try to incorporate it as soon as possible.
 
 \section{Technical information}
 \label{section:technical}
@@ -70,11 +71,11 @@ The dataset is organized as follows:
 	\item \texttt{/sync.py} is the Python script for model processing and static analysis.
 \end{itemize}
 
-\paragraph{Keywords} The metadata for each model can contain a set of keywords. In theory, any keyword can be added in order to identify specific classes of models. However, at the moment, we specifically recognise the following keywords:
+\paragraph{Keywords} The metadata for each model can contain a set of keywords. In theory, any keyword can be added to identify specific classes of models. However, at the moment, we specifically recognise the following keywords:
 
 \begin{itemize}
 	\item \texttt{curated}: A curated model is not only based on biological information, but is also (partially) validated by a human. That is, a model resulting from a purely automatic translation or inference can be included in the dataset, but is not automatically considered curated.
-	\item \texttt{repaired}: A model where one or more logical inconsistencies have been resolved (a complete list of possible repairs is given later in this section). The modifications should be listed in model notes.
+	\item \texttt{repaired}: A model where one or more logical inconsistencies have been resolved (a complete list of possible repairs is given later in this report). The modifications should be listed in model notes.
 	\item \texttt{multi-valued}: A model whose original version is multi-valued, but which is presented in a Booleanized form (the original multi-valued model should be included in the \texttt{sources} directory).
 	\item \texttt{cell-collective}/\texttt{ginsim}/\texttt{biomodels}/\texttt{covid-disease-map}: Indicates that the model is available in the corresponding database (or multiple databases).
 	\item \texttt{casq}: Indicates that the model has been translated from a CellDesigner pathway using the CaSQ tool~\cite{casq}.
@@ -85,22 +86,22 @@ The dataset is organized as follows:
 \begin{itemize}
 	\item \texttt{.bnet}; a simple plaintext file with the logical update functions~\cite{pyboolnet}.
 	\item \texttt{.aeon}; also a plaintext format, but one that also incorporates the regulatory network of the model (with monotonicity and essentiality)~\cite{aeon}.
-	\item \texttt{.sbml}; XML-based format with support for additional meta-data (model layout, entity references and comments, etx.)~\cite{sbml-qual}.
+	\item \texttt{.sbml}; XML-based format with support for additional meta-data (model layout, entity references and comments, etc.)~\cite{sbml-qual}.
 \end{itemize}
 
-Each model is available in all three formats. Any of the three formats can be also used as a model source (however, only limited static analysis is available for \texttt{.bnet} models due to the missing regulatory network). To ensure compatibility across all tools, we also perform model variable renaming when necessary. For example, \texttt{.sbml} supports (almost) arbitrary strings as variable names, while other formats follow a more typical C-like naming requirements. As such, regardless of the input format, variable names are normalized such that they are valid in any format.
+Each model is available in all three formats. Any of the three formats can be also used as a model source (however, only limited static analysis is available for \texttt{.bnet} models due to the missing regulatory network). To ensure compatibility across all tools, we also perform model variable renaming when necessary. For example, \texttt{.sbml} supports (almost) arbitrary strings as variable names, while other formats follow a more typical C-like naming requirements. As such, regardless of the source format, variable names are normalized such that they are valid in any format.
 
-\paragraph{Model inputs} We also normalize the representation of model \emph{inputs} and \emph{constants}. Formally, an input or a constant is an entity with no incoming regulations, and either an identity (input) or \texttt{true}/\texttt{false} (constant) update function. The update function for inputs can be also missing entirely to indicate that the value if unknown/undetermined.
+\paragraph{Model inputs} We also normalize the representation of model \emph{inputs} and \emph{constants}. Formally, an input or a constant is an entity with no incoming regulations, and either an identity (input) or \texttt{true}/\texttt{false} (constant) update function. The update function for inputs can be also missing entirely to indicate that the value is unknown/undetermined.
 
 The specific representation of such variables is typically at the discretion of the model authors and differs from model to model. For example, some authors use constant update functions for inputs with a ``typical'' or ``assumed'' value, while other authors use the identity function, and other authors omit the functions entirely, only describing the expected values in text.
 
-To make the resulting models as canonical as possible, we opted to \emph{omit the update function} for every constant or input variable. If you wish to use the original setting as published by the authors, this information is always available in the \texttt{sources} directory, or as part of the associated publication.
+To make the resulting models as canonical as possible, we opted to \emph{omit the update function} for every constant or input variable. If you wish to use the original setting as published by the authors, this information is still available in the \texttt{sources} directory, or as part of the associated publication.
 
 For benchmarking and tool comparison, we generally recommend sampling a non-trivial subspace of input valuations, as the behaviour of the model can often differ substantially based on the values of inputs. The model with all input values erased is therefore a good starting point for such sampling.
 
 \paragraph{Multi-valued networks} Some logical models are not Boolean, but multi-valued. Our dataset also includes models of this type. However, every such model is only given in the Booleanized format where the multi-valued entities are expanded into multiple Boolean variables. At the moment, the Booleanization is performed manually using the GINsim~\cite{ginsim} software. In the future, we may include this as an automated step in the analysis workflow. Every Booleanized multi-valued model is marked with the \texttt{multi-valued} keyword. The original multi-valued model is also available in the corresponding \texttt{sources} sub-directory.
 
-\paragraph{Duplicates} Some models are available from multiple sources (typically multiple model databases). To eliminate duplicates, we typically only include a single version of the same model, but list multiple model URLs as possible sources. The information about duplicates and model-database mapping is also tracked in a shared spreadsheet.\footnote{\url{https://docs.google.com/spreadsheets/d/1YFMaT3SKOwsReW3r6umv7Atqjoe1AZJmeMQ3HBPnIUI/edit?usp=sharing}} Note that some publications can still contain multiple models, in which case we include all such models (each model is linked to the single shared publication). Similarly, multiple publications can describe variations or derivatives of a single model. We then typically include the variations as separate models, as long as there is a non-trivial difference from the original model (e.g. new/removed variables or regulations).
+\paragraph{Duplicates} Some models are available from multiple sources (typically multiple model databases). To eliminate duplicates, we typically only include a single version of the same model, but list multiple model URLs as possible sources (note that different databases can sometimes have slightly different versions of the same model). The information about duplicates and model-database mapping is also tracked in a shared spreadsheet.\footnote{\url{https://docs.google.com/spreadsheets/d/1YFMaT3SKOwsReW3r6umv7Atqjoe1AZJmeMQ3HBPnIUI/edit?usp=sharing}} Note that some publications can still contain multiple models, in which case we include all such models (each model is linked to the single shared publication). Similarly, multiple publications can describe variations or derivatives of a single model. We then typically include the variations as separate models, as long as there is a non-trivial difference from the original model (e.g. new/removed variables or regulations).
 
 \paragraph{Model repair} Many published models contain logical \emph{inconsistencies} that we are able to detect as part of our static analysis workflow. Such issues have to be resolved before the model can be included in the dataset. For every model where such ``repair'' operation was performed, we use the \texttt{repaired} keyword and describe the repair process in the model notes. Furthermore, the original (unaltered) model file should be available in the \texttt{sources} directory. In general, we recognise the following types of problems:
 
@@ -111,11 +112,11 @@ For benchmarking and tool comparison, we generally recommend sampling a non-triv
 	\item Typos and other issues: Sometimes, the logical inconsistency is due to an obvious typo in the model specification (e.g. substitution of two similar variable names), in which case we fix the typo to the best of our ability.
 \end{itemize}
 
-The goal of each repair is to retain original update functions of the model (as these are typically crucial for reproducibility) while adjusting the regulatory graph to match the actual reality.
+The goal of each repair is to retain the original update functions of the model (as these are typically crucial for reproducibility). We thus typically adjust the regulatory network to match the actual update functions.
 
 \section{Models}
 
-In the rest of the report, we give a complete enumeration of all models included in the dataset with basic metadata and associated bibliographic entries.
+In the rest of the report, we give a complete enumeration of all models included in the dataset with basic metadata and associated bibliographic entries. A machine readable (\texttt{.csv}) version of this summary is available as part of each dataset editions.
 
 \begin{center}
 	\begin{tabular}{ | C{16pt} | C{144pt} | C{25pt} | C{25pt} | C{25pt} | C{36pt} | }
@@ -191,7 +192,7 @@ In the rest of the report, we give a complete enumeration of all models included
 		\hline
 		047 & \texttt{FGF PATHWAY OF DROSOPHILA} & 14 & 9 & 24 & \cite{bbm-drosophila} \\ 
 		\hline
-		048 & \texttt{GLUCOSE REPRESSION SIGNALING~2009} & 55 & 18 & 97 & \cite{bbm-048} \\
+		048 & \texttt{GLUCOSE REPRESSION SIGNALING~2009} & 55 & 18 & 97 & \cite{bbm-048-173} \\
 		\hline
 		049 & \texttt{OXIDATIVE STRESS PATHWAY} & 18 & 1 & 32 & \cite{bbm-049} \\
 		\hline
@@ -465,7 +466,7 @@ In the rest of the report, we give a complete enumeration of all models included
 	 	\hline
 	 	172 & \texttt{DROSOPHILA GAP D} & 5 & 2 & 12 & \cite{bbm-169-170-171-172} \\
 	 	\hline
-	 	173 & \texttt{GLUCOSE REPRESSION SIGNALLING} & 62 & 14 & 116 & \cite{bbm-173} \\
+	 	173 & \texttt{GLUCOSE REPRESSION SIGNALLING} & 62 & 14 & 116 & \cite{bbm-048-173} \\
 	 	\hline
 	 	174 & \texttt{HEPATOCELLULAR CARCINOMA REDUCED} & 19 & 0 & 71 & \cite{bbm-092-174} \\
 	 	\hline
