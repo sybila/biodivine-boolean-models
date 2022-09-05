@@ -4,17 +4,23 @@ jobs:
   # Check formatting
   check:
     name: check
-    runs-on: ubuntu-latest
-    env:
-      RUSTFLAGS: "-D warnings"
+    runs-on: ubuntu-latest    
     steps:
       - uses: actions/checkout@v2
-#      - uses: actions-rs/toolchain@v1
-#        with:
-#          profile: minimal
-#          toolchain: stable
-#          override: true
-#      - uses: actions-rs/cargo@v1
-#        with:
-#          command: run
-#          args: --release --bin sync -- --check
+      - name: Install Python.
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10' 
+          cache: 'pip'
+      - name: Install AEON.
+        run: pip install -r requirements.txt  
+      - name: Remove model files.
+        run: rm -rf models/*   
+      - name: Run a fresh model sync.
+        run: python3 sync.py
+      - name: Check if there is any change
+        id: get_changes
+        run: echo "::set-output name=changed::$(git status --porcelain | wc -l)"
+      - name: If there are changes, fail.
+        if: steps.get_changes.outputs.changed != 0
+        run: exit 1
