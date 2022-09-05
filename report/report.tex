@@ -29,7 +29,7 @@
 
 Logical models provide a very useful and simple framework for describing complex biological phenomena. Likely the most common mechanism for formalising executable logical models are Boolean networks~\cite{bn-intro}. In recent years, we have seen a rapid development of new tools and algorithms for analysis of large Boolean networks. However, in many instances, it is hard to assess usefulness and scalability of such tools due to a lack of commonly recognised ``benchmark dataset'' of networks on which the tools can be compared.
 
-This purpose is often served by models obtained from databases maintained by the authors of some of the larger modelling tools, such as CellCollective~\cite{cell-collective}, GINsim~\cite{ginsim}, or Biomodels~\cite{biomodels}. However, these models are often hard to obtain in bulk or may require additional processing (e.g. to convert into an appropriate format). Additionally, paper authors often modify the models in minor ways (e.g. by tweaking valuations of network inputs), which prevents meaningful comparisons between publications. Finally, these databases are far from comprehensive, so a wide range of models is often omitted.
+This purpose is often served by models obtained from databases maintained by the authors of some of the larger modelling tools, such as CellCollective~\cite{cell-collective}, GINsim~\cite{ginsim}, or Biomodels~\cite{biomodels}. However, these models are often hard to obtain in bulk or may require additional processing (e.g. to convert into an appropriate format). Additionally, publication authors often modify the models in minor ways (e.g. by tweaking valuations of network inputs), which prevents meaningful comparisons between publications. Finally, these databases are far from comprehensive, so a wide range of models is often omitted.
 
 As a result, most papers develop an ad hoc benchmark set that is often partially proprietary and hard or impossible to replicate and compare to. In this technical report, we describe a comprehensive, open-source benchmark dataset that can be used for this purpose instead.
 
@@ -46,7 +46,7 @@ As a result, most papers develop an ad hoc benchmark set that is often partially
 	\item A \emph{numeric identifier} that is unique within a specific dataset edition.
 	\item A human-readable name. For simplicity, the name is limited to numbers, capital letters and the dash symbol (e.g. \texttt{MODEL-NAME-5}). To improve legibility, we may use spaces instead of dashes in text that is not meant to be machine readable (i.e. \texttt{MODEL NAME 5}).
 	\item The DOI of the \emph{associated publication} and its \emph{bibliographic entry} (in Bibtex). Note that a single publication can contain multiple models---some DOIs thus appear in relation to multiple models.
-	\item The URL where the model data was downloaded. This can be a list of URLs if the model is available from multiple sources. This can also be the publication DOI if the model is based directly on the published supplementary data.
+	\item The URL where the model data was downloaded. This can be a list of URLs if the model is available from multiple sources. This can also be the publication DOI if the model is available directly through the published supplementary data.
 	\item Basic structural metadata, such as the number of model \emph{variables}, \emph{inputs}, and \emph{regulations}. The plan is to also incorporate additional structural measures of the regulatory graph later (e.g. feedback-vertex-set, SCC sizes, etc.), once additional static analysis steps are added.
 	\item A set of curated \emph{keywords}. Generally, these represent additional technical metadata, such as listing the databases where the model is available, or whether the model is based on multi-valued logic. At the moment, the dataset does not contain any biological keywords (e.g. cancer, differentiation, etc.). However, we are open to incorporating any community suggestions for additional keywords.
 	\item A markdown document with any additional notes or relevant information about the model.
@@ -68,8 +68,8 @@ The dataset is organized as follows:
 	\item \texttt{/models} contains the whole dataset with all model and metadata files.
 	\item \texttt{/sources} directory contains the original machine-readable source files that are used to generate the \texttt{models} directory.
 	\item \texttt{/report} directory contains the LaTeX source files for this report.
-	\item \texttt{/sync.py} is the Python script for model processing and static analysis.
-	\item \texttt{/bundle.py} is the Python script for creating model bundle archives.
+	\item \texttt{/sync.py} is a Python script for model processing and static analysis (takes models from \texttt{/sources} and generates files in \texttt{/models}).
+	\item \texttt{/bundle.py} is a Python script for creating model bundle archives. These can include model variants with different input representation, or a subset of the collection filtered according to some basic conditions.
 \end{itemize}
 
 For more information on how to use \texttt{sync.py} and \texttt{bundle.py} to work with the dataset, see the project readme file.
