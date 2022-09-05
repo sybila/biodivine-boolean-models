@@ -1,0 +1,193 @@
+v_MEK1 -> v_MAPK
+v_pNFKB -> v_IL6
+v_pSTAT3 -> v_BCL2
+v_BAD -| v_BCL2
+v_pNFKB -> v_BCL2
+v_p53 -| v_BCL2
+v_DNAdam -> v_STRESS
+v_Prot -| v_STRESS
+v_AKT -| v_Cas9
+v_Cytc -> v_Cas9
+v_XIAP -| v_Cas9
+v_pNFKB -> v_FLIP
+v_pRB -> v_GROWTH
+v_CDK6 -> v_pRB
+v_CDK2 ->? v_pRB
+v_CDK4 -> v_pRB
+v_Bclxl -| v_BID
+v_Fas -> v_BID
+v_BCL2 -| v_BID
+v_Cas8 -> v_BID
+v_STRESS -> v_BID
+v_AKT -> v_MDM
+v_p53 -> v_MDM
+v_ATM -| v_MDM
+v_JNK -> v_cJun
+v_AKT -| v_BAD
+v_BAX -> v_MITO
+v_MYC -| v_p21
+v_p53 -> v_p21
+v_AKT -| v_p21
+v_CDK4 -| v_p21
+v_MDM -| v_p21
+v_IL6 -> v_PI3K
+v_gp130 -> v_PI3K
+v_Cas3 -> v_ATM
+v_DNAdam -> v_ATM
+v_SHP1 -| v_JAK2
+v_IL6 -> v_JAK2
+v_gp130 -> v_JAK2
+v_Cas9 -> v_Cas3
+v_Cas8 -> v_Cas3
+v_XIAP -| v_Cas3
+v_BAD -| v_Bclxl
+v_pSTAT3 -> v_Bclxl
+v_pNFKB -> v_Bclxl
+v_p53 -| v_Bclxl
+v_BAX -| v_Bclxl
+v_RIP -> v_IKK
+v_NIK -> v_IKK
+v_AKT -> v_IKK
+v_TRAF3 -| v_NIK
+v_cJun -> v_FasL
+v_Fas -> v_FasL
+v_Bort -| v_Prot
+v_ERK -> v_MYC
+v_pSTAT3 -> v_MYC
+v_MEKK -> v_MYC
+v_RAS -> v_RAF
+v_Cas3 -> v_Cl_PARP
+v_MYC -> v_CYCE
+v_PIP3 -> v_AKT
+v_Bort -> v_RIP
+v_TNFAR -> v_RIP
+v_TNFA -> v_RIP
+v_CYCD -> v_CDK4
+v_p21 -| v_CDK4
+v_p27 -| v_CDK4
+v_Prot -| v_JNK
+v_MKK4 -> v_JNK
+v_RAF -> v_MEK1
+v_TNFAR -> v_CIAP
+v_Bclxl -| v_BAX
+v_p53 -> v_BAX
+v_BCL2 -| v_BAX
+v_BID -> v_BAX
+v_Cas3 -| v_gp130
+v_MEK1 -> v_MEKK
+v_Cas3 -| v_STAT3
+v_CYCD -> v_CDK6
+v_p21 -| v_CDK2
+v_CYCE -> v_CDK2
+v_Smac -| v_XIAP
+v_pSTAT3 -> v_XIAP
+v_pNFKB -> v_XIAP
+v_p53 -| v_XIAP
+v_MYC -| v_p27
+v_AKT -| v_p27
+v_p53 -> v_p27
+v_CDK4 -| v_p27
+v_MITO -> v_Smac
+v_RAC -> v_MEKK2
+v_SHP1 -|? v_JAK1
+v_IL6 -> v_JAK1
+v_gp130 -> v_JAK1
+v_Cl_PARP -> v_Apo
+v_pSTAT3 -> v_pNFKB
+v_X -> v_pNFKB
+v_pIKB -> v_pNFKB
+v_Prot ->? v_pNFKB
+v_MEKK2 -> v_MKK4
+v_IKK -> v_pIKB
+v_JNK -> v_p53
+v_MDM -| v_p53
+v_Prot -? v_p53
+v_DNAPK -> v_p53
+v_FLIP -| v_Cas8
+v_Fas -> v_Cas8
+v_FasL -> v_Cas8
+v_STRESS -> v_RAC
+v_MAPK -> v_ERK
+v_Cas3 -> v_DNAdam
+v_STRESS -> v_DNAdam
+v_p53 -> v_Fas
+v_FasL -> v_Fas
+v_ERK -> v_CYCD
+v_MYC -> v_CYCD
+v_AKT -> v_CYCD
+v_SHP1 -> v_RAS
+v_IL6 -> v_RAS
+v_gp130 -> v_RAS
+v_p53 -> v_PTEN
+v_MITO -> v_Cytc
+v_CIAP -| v_TRAF3
+v_PIP3 -> v_PIP3
+v_PTEN -| v_PIP3
+v_IKK -|? v_pSTAT3
+v_STAT3 -> v_pSTAT3
+v_JNK -|? v_pSTAT3
+v_JAK2 -> v_pSTAT3
+v_JAK1 -> v_pSTAT3
+v_ATM -> v_DNAPK
+$v_AKT: v_PIP3
+$v_ATM: (v_Cas3 | v_DNAdam)
+$v_Apo: v_Cl_PARP
+$v_BAD: !v_AKT
+$v_BAX: ((v_p53 & !(v_Bclxl | v_BCL2)) | (v_BID & !(v_Bclxl | v_BCL2)))
+$v_BCL2: ((v_pNFKB & !(v_BAD | v_p53)) | (v_pSTAT3 & !(v_BAD | v_p53)))
+$v_BID: (((v_Fas & !(v_BCL2 | v_Bclxl)) | (v_Cas8 & !(v_BCL2 | v_Bclxl))) | (v_STRESS & !(v_BCL2 | v_Bclxl)))
+$v_Bclxl: ((v_pNFKB & !((v_p53 | v_BAD) | v_BAX)) | (v_pSTAT3 & !((v_p53 | v_BAD) | v_BAX)))
+$v_CDK2: (v_CYCE & !v_p21)
+$v_CDK4: (v_CYCD & !(v_p27 | v_p21))
+$v_CDK6: v_CYCD
+$v_CIAP: v_TNFAR
+$v_CYCD: ((v_ERK | v_MYC) | v_AKT)
+$v_CYCE: v_MYC
+$v_Cas3: ((v_Cas9 & !v_XIAP) | (v_Cas8 & !v_XIAP))
+$v_Cas8: ((v_Fas & v_FasL) & !v_FLIP)
+$v_Cas9: (v_Cytc & !(v_XIAP | v_AKT))
+$v_Cl_PARP: v_Cas3
+$v_Cytc: v_MITO
+$v_DNAPK: v_ATM
+$v_DNAdam: (v_STRESS | v_Cas3)
+$v_ERK: v_MAPK
+$v_FLIP: v_pNFKB
+$v_Fas: (v_p53 | v_FasL)
+$v_FasL: (v_cJun | v_Fas)
+$v_GROWTH: v_pRB
+$v_IKK: ((v_RIP & v_NIK) | v_AKT)
+$v_IL6: v_pNFKB
+$v_JAK1: (v_gp130 & v_IL6)
+$v_JAK2: ((v_IL6 & v_gp130) & !v_SHP1)
+$v_JNK: (v_MKK4 & !v_Prot)
+$v_MAPK: v_MEK1
+$v_MDM: ((v_AKT & !v_ATM) | (v_p53 & !v_ATM))
+$v_MEK1: v_RAF
+$v_MEKK: v_MEK1
+$v_MEKK2: v_RAC
+$v_MITO: v_BAX
+$v_MKK4: v_MEKK2
+$v_MYC: ((v_MEKK | v_pSTAT3) | v_ERK)
+$v_NIK: !v_TRAF3
+$v_PI3K: (v_IL6 & v_gp130)
+$v_PIP3: (v_PIP3 & !v_PTEN)
+$v_PTEN: v_p53
+$v_Prot: !v_Bort
+$v_RAC: v_STRESS
+$v_RAF: v_RAS
+$v_RAS: (v_SHP1 | (v_IL6 & v_gp130))
+$v_RIP: ((v_TNFAR & v_TNFA) | v_Bort)
+$v_STAT3: !v_Cas3
+$v_STRESS: (v_DNAdam | !(v_DNAdam | v_Prot))
+$v_Smac: v_MITO
+$v_TRAF3: !v_CIAP
+$v_XIAP: ((v_pNFKB & !(v_Smac | v_p53)) | (v_pSTAT3 & !(v_Smac | v_p53)))
+$v_cJun: v_JNK
+$v_gp130: !v_Cas3
+$v_p21: (v_p53 & !(((v_CDK4 | v_MYC) | v_MDM) | v_AKT))
+$v_p27: (v_p53 & !((v_AKT | v_CDK4) | v_MYC))
+$v_p53: ((v_DNAPK & !(v_MDM & v_Prot)) | (v_JNK & !(v_MDM & v_Prot)))
+$v_pIKB: v_IKK
+$v_pNFKB: ((((v_Prot & v_pIKB) | v_X) | v_pSTAT3) | v_pIKB)
+$v_pRB: ((v_CDK2 & (v_CDK6 & v_CDK4)) | (v_CDK4 & v_CDK6))
+$v_pSTAT3: ((v_JAK1 & (v_STAT3 & v_JAK2)) | (((v_JAK2 & (v_STAT3 & v_JAK1)) & !v_IKK) & !v_JNK))

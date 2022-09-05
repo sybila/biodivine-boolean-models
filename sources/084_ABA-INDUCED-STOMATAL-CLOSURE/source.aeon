@@ -1,0 +1,214 @@
+8_nitro_cGMP -> ADPRc
+ABH1 -| CaIM
+ABI1 -| pHc
+ABI1 -| RBOH
+ABI1 -| SLAC1
+ABI1 -> AtRAC1
+ABI2 -| GHR1
+ABI2 -| pHc
+ADPRc -> cADPR
+ARP_Complex -> Actin_Reorganization
+ABA -| PEPC
+ABA -> RCARs
+ABA -> PI3P5K
+ABA -> SPHK1_2
+Actin_Reorganization -> CaIM
+AnionEM -> H2O_Efflux
+Aquaporin_PIP2_1 -> H2O_Efflux
+AtRAC1 -| Actin_Reorganization
+CIS -> Ca2_c
+CPK23 -> SLAH3
+CPK23 -> SLAC1
+CPK3_21 -> SLAH3
+CPK3_21 -> CPK3_21
+ABI1 -| OST1
+CPK6 -> SLAH3
+CPK6 -> SLAC1
+Ca2_c -> MPK9_12
+Ca2_c -> Ca2_ATPase
+Ca2_c -> KEV
+Ca2_c -> QUAC1
+Ca2_c -| H_ATPase
+Ca2_c -> Depolarization
+Ca2_c -> pHc
+Ca2_c -> CPK3_21
+Ca2_c -> PLD_alpha
+Ca2_c -> PLC
+Ca2_c -> TCTP
+Ca2_ATPase -| Ca2_c
+CaIM -> Ca2_c
+Depolarization -> KOUT
+ERA1 -| CaIM
+GAPC1_2 -> PLD_delta
+GCR1 -| GPA1
+GEF1_4_10 -> ROP11
+GHR1 -> SLAC1
+GHR1 -> CaIM
+GPA1 -> RBOH
+GPA1 -> PLD_alpha
+GTP -> cGMP
+H_ATPase -| Depolarization
+H2O_Efflux -> Closure
+HAB1 -| OST1
+InsP3 -> CIS
+InsP6 -> CIS
+K_efflux -> H2O_Efflux
+K_efflux -| Depolarization
+KEV -> K_efflux
+KEV -> Depolarization
+KOUT -> K_efflux
+MPK9_12 -> SLAC1
+MPK9_12 -> MPK9_12
+MRP5 -> CaIM
+Malate -| H2O_Efflux
+Microtubule_Depolymerization -> Closure
+Microtubule_Depolymerization -> Microtubule_Depolymerization
+NAD_ -> cADPR
+NADPH -> ROS
+NADPH -> NO
+NIA1_2 -> NO
+NO -> NOGC1
+NO -| KOUT
+NO -> PLD_delta
+NO -> 8_nitro_cGMP
+NOGC1 -> cGMP
+Nitrite -> NO
+NtSyp121 -> CaIM
+OST1 -> pHc
+OST1 -> QUAC1
+OST1 -> RBOH
+PA -| ABI1
+PA -> RBOH
+PA -> SPHK1_2
+PC -> PA
+PEPC -> Malate
+pHc -|? pHc
+PI3P5K -> PtdIns_3_5_P2
+PtdIns_4_5_P2 -> DAG
+PtdIns_4_5_P2 -> InsP3
+PLC -> DAG
+PLC -> InsP3
+PLD_alpha -> PA
+PLD_delta -> PA
+PP2CA -| OST1
+PP2CA -| SLAC1
+PtdIns_3_5_P2 -> V_PPase
+PtdInsP3 -> Actin_Reorganization
+PtdInsP3 -> RBOH
+PtdInsP4 -> Actin_Reorganization
+PtdInsP4 ->? Aquaporin_PIP2_1
+QUAC1 -> AnionEM
+RBOH -> ROS
+RCARs -| HAB1
+RCARs -| ABI1
+RCARs -| ABI2
+RCARs -| PP2CA
+RCN1 ->? ROS
+ROP11 -> ABI1
+ROP11 -> ABI2
+ROS -| KOUT
+ROS -| H_ATPase
+ROS -> GHR1
+ROS -| ABI1
+ROS -> NIA1_2
+ROS -> 8_nitro_cGMP
+S1P_PhytoS1P -|? S1P_PhytoS1P
+S1P_PhytoS1P -> GPA1
+SCAB1 -> Actin_Reorganization
+SLAC1 -> AnionEM
+AnionEM -> Depolarization
+AnionEM -| Malate
+SLAH3 -> AnionEM
+SPHK1_2 -> S1P_PhytoS1P
+TCTP -> Microtubule_Depolymerization
+V_PPase -> Vacuolar_Acidification
+Vacuolar_Acidification -> pHc
+Vacuolar_Acidification -> KEV
+cADPR -> CIS
+cGMP -> 8_nitro_cGMP
+pHc -> KOUT
+pHc -| H_ATPase
+pHc -> RBOH
+pHc -> SLAC1
+pHc -> ABI1
+ROS -| HAB1
+ROS -| PP2CA
+Ca2_c -> V_ATPase
+V_ATPase -> Vacuolar_Acidification
+ROS -| ABI2
+InsP3 -> InsP6
+ROS -> PLD_delta
+DAGK -> PA
+DAG -> PA
+Sph -> S1P_PhytoS1P
+SPP1 -| S1P_PhytoS1P
+ABA -| AtRAC1
+ABI2 -| OST1
+CPK3_21 -> SLAC1
+OST1 -> SLAC1
+ABI2 -| SLAC1
+ABI1 -| SLAH3
+ABA -| Malate
+OST1 -> Aquaporin_PIP2_1
+RCN1 -? RBOH
+PtdInsP4 -? PtdIns_4_5_P2
+Vacuolar_Acidification -? Vacuolar_Acidification
+
+$RCARs: ABA
+$PEPC: !ABA
+$PI3P5K: ABA
+$ROP11: GEF1_4_10 
+$ABI1: !PA & (!RCARs | ROP11) & !ROS & pHc
+$ABI2: (!RCARs | ROP11) & !ROS
+$HAB1: !RCARs & !ROS
+$PP2CA: !RCARs & !ROS
+$OST1: (!ABI1 & !HAB1) | (!PP2CA & !ABI2) | (!ABI1 & !ABI2) | (!HAB1 & !PP2CA) | (!HAB1 & !ABI2) | (!ABI1 & !PP2CA)
+$RBOH: pHc & !ABI1 & PtdInsP3 & OST1 & GPA1 & PA & RCN1
+$ROS: NADPH & RBOH
+$GHR1: !ABI2 & ROS
+$NO: Nitrite & NIA1_2 & NADPH 
+$NIA1_2: ROS
+$NOGC1: NO
+$cGMP: NOGC1 & GTP
+$8_nitro_cGMP: cGMP & ROS & NO
+$ADPRc: 8_nitro_cGMP 
+$cADPR: NAD_ & ADPRc
+$CIS: InsP3 | InsP6 | cADPR
+$CaIM: Actin_Reorganization | (NtSyp121 & GHR1 & MRP5) | !ABH1 | !ERA1  
+$Ca2_c: (CIS | CaIM) & !Ca2_ATPase 
+$Ca2_ATPase: Ca2_c
+$CPK3_21: Ca2_c | CPK3_21
+$MPK9_12: Ca2_c | MPK9_12
+$PtdIns_4_5_P2: PtdInsP4
+$PLC: Ca2_c
+$DAG: PtdIns_4_5_P2 & PLC
+$InsP3: PLC & PtdIns_4_5_P2
+$InsP6: InsP3 
+$PLD_alpha: GPA1 & Ca2_c
+$PLD_delta: NO | ROS & GAPC1_2
+$PA: PC & (PLD_delta | PLD_alpha) | DAG & DAGK
+$SPHK1_2: PA | ABA
+$S1P_PhytoS1P: SPHK1_2 & Sph & !SPP1 
+$GPA1: S1P_PhytoS1P | !GCR1
+$PtdIns_3_5_P2: PI3P5K
+$V_PPase: PtdIns_3_5_P2
+$V_ATPase: Ca2_c
+$Vacuolar_Acidification: V_PPase | V_ATPase | Vacuolar_Acidification
+$TCTP: Ca2_c
+$Microtubule_Depolymerization: TCTP | Microtubule_Depolymerization
+$pHc: (OST1 & !ABI2 & ! ABI1 | Ca2_c)  & Vacuolar_Acidification
+$H_ATPase: !pHc & !Ca2_c & !ROS
+$AtRAC1: !ABA | ABI1
+$Actin_Reorganization: (PtdInsP4 | PtdInsP3) & !AtRAC1 & ARP_Complex & SCAB1
+$SLAC1: (CPK6 | CPK23 | CPK3_21) & MPK9_12 & OST1 & GHR1 & !ABI1 & !PP2CA & !ABI2 & pHc 
+$QUAC1: OST1 & Ca2_c 
+$SLAH3: (CPK6 | CPK23) & CPK3_21 & !ABI1
+$AnionEM: SLAC1 | QUAC1 & SLAH3
+$Malate: PEPC & !ABA & !AnionEM
+$KEV: Vacuolar_Acidification | Ca2_c
+$Depolarization: (AnionEM | Ca2_c | KEV) & (!H_ATPase | !K_efflux)  
+$KOUT: (!NO | !ROS | pHc) & Depolarization
+$K_efflux: KEV & KOUT 
+$Aquaporin_PIP2_1: OST1
+$H2O_Efflux: (AnionEM & Aquaporin_PIP2_1 & K_efflux) & !Malate
+$Closure: Microtubule_Depolymerization & H2O_Efflux 

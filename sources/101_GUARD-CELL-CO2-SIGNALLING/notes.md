@@ -1,0 +1,3 @@
+### Modifications
+
+The model should be an extension of network number 84 (`ABA INDUCED STOMATAL CLOSURE`). The model was downloaded from the tool repository in a format similar to `.bnet` (i.e. without regulation info). Technically, the regulation info may be available in the main manuscript, but I do not have time to read the whole paper. Also, constant update functions for `ABA`, `CO2`, `GTP`, `Sph`, `SCAB1`, `RCN1`, `DAGK`, `CPK6`, `CPK23`, `PtdInsP3`, `PtdInsP4`, `PC`, `Nitrite`, `GCR1`, `NADPH`, `NAD`, `MRP5`, `GAPC`, `ERA1`, `ABH1`, `ARP23`, `NtSyp121`, `NtSyp121`, and `SPP1` were removed to turn them into proper inputs.

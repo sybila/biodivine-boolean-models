@@ -1,0 +1,29 @@
+# \[174\] HEPATOCELLULAR-CARCINOMA-REDUCED
+
+ - Variables: 19
+ - Inputs: 0
+ - Regulations: 71
+ - Publication: https://doi.org/10.1158/0008-5472.CAN-14-0225
+ - Source: https://github.com/deriteidavid/compartmentalized_EMT_Boolean_model_Mendik_et_al_2021/blob/3c63a801f3d74b48366fbb072c3bf46b1d737991/attractr_repertoire_and_stable_motif_analysis/EMT19.booleannet
+ - Keywords: curated
+
+
+### Modifications
+
+The model is an "attractor preserving reduction" of model no. 92 that is also available in the original paper. We use a `.booleannet` model as input since it was readily available, but the regulation monotonicity can be most likely taken from model no. 92 if desired. 
+
+### Model citation
+
+```
+@article{bbm-174,
+  title={Network Modeling of TGF$\beta$ Signaling in Hepatocellular Carcinoma Epithelial-to-Mesenchymal Transition Reveals Joint Sonic Hedgehog and Wnt Pathway ActivationNetwork Modeling of Epithelial-to-Mesenchymal Transition},
+  author={Steinway, Steven Nathaniel and Za{\~n}udo, Jorge GT and Ding, Wei and Rountree, Carl Bart and Feith, David J and Loughran, Thomas P and Albert, Reka},
+  journal={Cancer research},
+  volume={74},
+  number={21},
+  pages={5963--5977},
+  year={2014},
+  publisher={AACR}
+}
+```
+

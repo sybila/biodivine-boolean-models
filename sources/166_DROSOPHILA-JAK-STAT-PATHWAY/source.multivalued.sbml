@@ -1,0 +1,1091 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" layout:required="false" level="3" qual:required="true" xmlns:layout="http://www.sbml.org/sbml/level3/version1/layout/version1" version="1" xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+  <model metaid="_8299a163-fcc4-428f-a935-049718d3074c" id="model_id">
+    <notes>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>In Drosophila, three secreted ligands (OS, UPD2 and UPD3) have been identified for the JAK/STAT pathway. Their binding to the receptor dome induces its homo-dimerization, enabling hop to phosphorylate specific tyrosine residues of the receptor. Consequently, STAT92E is also phosphorylated by HOP, leading to his homo-dimerization and nuclear translocation. 
+In the nucleus, STAT92E binds to target DNA sequences and acts as an activator of transcription of several target genes (Hou and Perrimon, 1997). 
+During Drosophila development, the JAK/STAT pathway is involved in embryonic segmentation, eye development, cell growth, haematopoiesis, and sex determination (Luo and Dearolf, 2001; Aaron et al, 2011). 
+JAK/STAT signalling also plays important roles during spermatogenesis (Kiger et al, 2001) and oogenesis (Denef and Schupbach, 2003; Xi et al, 2003, Aaron et al, 2011). 
+To study the dynamic of the pathway, we define a set of initial states representative of in vivo situations during JAK/STAT signalling. 
+More precisely, we define a three initial states corresponding to pathway signalling (binding of OS or UPD2 or UPD3) and two initial states corresponding to pathway signalling in the presence of an inhibitor (SOCS44A or BRWD3) and one initial state corresponding to non signalling conditions (no binding of ligands). 
+</p>
+  </body>
+    </notes>
+    <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_8299a163-fcc4-428f-a935-049718d3074c">
+          <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9066269"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11746233"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:21965617"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11752574"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12747848"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12586061"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+      <layout:listOfLayouts xmlns:layout="http://www.sbml.org/sbml/level3/version1/layout/version1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <layout:layout layout:id="__layout__">
+        <layout:dimensions layout:height="434" layout:width="433"/>
+        <layout:listOfAdditionalGraphicalObjects>
+          <layout:generalGlyph layout:id="_ly_OS" layout:reference="OS">
+            <layout:boundingBox>
+              <layout:position layout:x="216" layout:y="25"/>
+              <layout:dimensions layout:height="35" layout:width="65"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Upd2" layout:reference="Upd2">
+            <layout:boundingBox>
+              <layout:position layout:x="131" layout:y="31"/>
+              <layout:dimensions layout:height="35" layout:width="65"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Upd3" layout:reference="Upd3">
+            <layout:boundingBox>
+              <layout:position layout:x="299" layout:y="31"/>
+              <layout:dimensions layout:height="35" layout:width="65"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Dome" layout:reference="Dome">
+            <layout:boundingBox>
+              <layout:position layout:x="219" layout:y="101"/>
+              <layout:dimensions layout:height="31" layout:width="64"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_ET" layout:reference="ET">
+            <layout:boundingBox>
+              <layout:position layout:x="368" layout:y="140"/>
+              <layout:dimensions layout:height="31" layout:width="64"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Hrs" layout:reference="Hrs">
+            <layout:boundingBox>
+              <layout:position layout:x="86" layout:y="183"/>
+              <layout:dimensions layout:height="31" layout:width="64"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Stam" layout:reference="Stam">
+            <layout:boundingBox>
+              <layout:position layout:x="369" layout:y="184"/>
+              <layout:dimensions layout:height="31" layout:width="64"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Socs36E" layout:reference="Socs36E">
+            <layout:boundingBox>
+              <layout:position layout:x="366" layout:y="256"/>
+              <layout:dimensions layout:height="31" layout:width="64"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Hop" layout:reference="Hop">
+            <layout:boundingBox>
+              <layout:position layout:x="225" layout:y="185"/>
+              <layout:dimensions layout:height="31" layout:width="64"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Socs44A" layout:reference="Socs44A">
+            <layout:boundingBox>
+              <layout:position layout:x="107" layout:y="226"/>
+              <layout:dimensions layout:height="31" layout:width="64"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Ptp61F" layout:reference="Ptp61F">
+            <layout:boundingBox>
+              <layout:position layout:x="74" layout:y="274"/>
+              <layout:dimensions layout:height="31" layout:width="64"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Brwd3" layout:reference="Brwd3">
+            <layout:boundingBox>
+              <layout:position layout:x="80" layout:y="322"/>
+              <layout:dimensions layout:height="31" layout:width="64"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Ken" layout:reference="Ken">
+            <layout:boundingBox>
+              <layout:position layout:x="117" layout:y="368"/>
+              <layout:dimensions layout:height="31" layout:width="64"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Su_var" layout:reference="Su_var">
+            <layout:boundingBox>
+              <layout:position layout:x="364" layout:y="336"/>
+              <layout:dimensions layout:height="31" layout:width="64"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Stat92E" layout:reference="Stat92E">
+            <layout:boundingBox>
+              <layout:position layout:x="226" layout:y="288"/>
+              <layout:dimensions layout:height="31" layout:width="64"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_NStat92E" layout:reference="NStat92E">
+            <layout:boundingBox>
+              <layout:position layout:x="369" layout:y="400"/>
+              <layout:dimensions layout:height="31" layout:width="64"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Targets" layout:reference="Targets">
+            <layout:boundingBox>
+              <layout:position layout:x="223" layout:y="403"/>
+              <layout:dimensions layout:height="31" layout:width="64"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+        </layout:listOfAdditionalGraphicalObjects>
+      </layout:layout>
+    </layout:listOfLayouts>
+    <qual:listOfQualitativeSpecies xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_39f49e2e-f6bc-4fec-9415-7a749ee66854" qual:id="OS" qual:constant="true" qual:name="outstretched">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Outstretched (OS) is a secreted glycoprotein of 47 kDa, released by heparin (Harrison et al, 1998). 
+Besides OS, two additional ligands (UPD2 and UPD3) have been identified (Castelli-Gair Hombrıa and Brown, 
+2002). The Drosophila JAK/STAT pathway activity is mediated exclusively by the ligands OS, UPD2 and UPD3 
+(Harrison et al, 1998; Zeidler et al, 1999b; Agaisse et al, 2003). os and upd2 have overlapping segmental expression patterns during mesoderm development. OS and UPD2 function in a redundant manner (Hombria et al, 2005).</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_39f49e2e-f6bc-4fec-9415-7a749ee66854">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9784499"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:10346822"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12967563"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:16277982"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0004956.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_67e3ff58-9769-4070-b605-26bb67c0c34e" qual:id="Upd2" qual:constant="true" qual:name="Unpaired">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+Unpaired 2 (UPD2) is a second pathway activator that functions redundantly to OS (Castelli-Gair Hombria et al, 
+2005; Gilbert et al, 2005).</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_67e3ff58-9769-4070-b605-26bb67c0c34e">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:16277982"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:15925495"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0030904.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="e9b7289a-3e77-4ce3-9bcd-7a34d9999f1f" qual:id="Upd3" qual:constant="true" qual:name="Unpaired">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Unpaired 3 (UPD 3) is expressed in the developing gonads (Castelli-Gair Hombría et al, 2005), the larval 
+lymph gland, and in circulating haemocytes following septic injury (Agaisse et al, 2003). 
+UPD3 is the third JAK/STAT pathway activator.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#e9b7289a-3e77-4ce3-9bcd-7a34d9999f1f">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:16277982"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12967563"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0053542.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_3a126180-7022-42ee-a034-312c5452abe3" qual:id="Dome" qual:constant="false" qual:name="Domeless or Master of Marelle">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Domeless (or Master Of Marelle) encodes the transmembrane receptor of the JAK/STAT pathway 
+(Brown et al, 2001; Chen et al, 2002). Physical interactions between DOME and OS, as well as the ability of DOME to activate HOP have been demonstrated (Chen et al, 2002). </p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_3a126180-7022-42ee-a034-312c5452abe3">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11696329"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12429573"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0043903.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_370f3983-9f04-49f5-92d8-ed266fed7018" qual:id="ET" qual:constant="true" qual:name="eye transformer">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Eye Transformer (ET) is a negative regulator of the JAK/STAT pathway in Drosophila. 
+It functions as a regulator of STAT92E phosphorylation upstream of the receptor dome. 
+It has putative cytokine binding motifs and could function as a receptor that captures OS, UPD2 and UPD3 
+ligand from DOME. It presumably inhibits DOME activation by forming a non-signalling heterodimer with dome, or by inhibiting DOME homodimer/HOP signalosome. 
+Et is involved in STAT92E phosphorylation and co-precipitates with DOME and HOP (Kallio et al, 2010). 
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_370f3983-9f04-49f5-92d8-ed266fed7018">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:20624926"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0031055.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="f6181f86-e85a-4c31-8255-bb3e6e766190" qual:id="Hrs" qual:constant="true" qual:name="Hepatocyte growth factor regulated tyrosine kinase substrate">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+HRS (Hepatocyte growth factor regulated tyrosine kinase substrate) protein associates with the protein STAM to 
+increase JAK/STAT pathway signalling (Mesilaty- Gross et al, 1999; Bromberg and Darnell, 2000; Lohi and 
+Lehto, 2001; Mizuno et al, 2003).</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#f6181f86-e85a-4c31-8255-bb3e6e766190">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:10231582"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:10851045"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11728436"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0031450.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_906d7eda-0c4d-483d-8f73-dfccb50cbc23" qual:id="Stam" qual:constant="true" qual:name="Signal transducing adaptor molecule">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Signal transducing adaptor molecule (STAM) associates with Hrs (Hepatocyte growth factor regulated tyrosine 
+kinase substrate) protein. The resulting complex increases JAK/STAT signalling (Mesilaty- Gross et al, 1999; Bromberg and Darnell, 2000; Lohi and Lehto, 2001; Mizuno et al, 2003). </p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_906d7eda-0c4d-483d-8f73-dfccb50cbc23">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:10231582"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:10851045"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11728436"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12972556"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0027363.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="e534a1a8-d95f-4378-9fe1-460fb3c66d12" qual:id="Socs36E" qual:constant="false" qual:name="socs36E">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+SOCS (Suppressors of cytokine signalling) proteins act as negative regulators of the JAK/STAT pathway. 
+Three socs genes have been identified in the Drosophila genome (socs36e, socs44a and socs16d). Suppressor of cytokine signaling at 36E (SOCS36E) was shown to suppress the activity of both HOP and STAT92E. 
+socs36E gene is itself activated by STAT92E, thus forming a negative feedback loop down-regulating the pathway activity (Callus and Mathey-Prevot, 2002; Karsten et al, 2002; Rawlings et al, 2004; Baeg et al, 2005).</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#e534a1a8-d95f-4378-9fe1-460fb3c66d12">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12101419"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12204282"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:15488148"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:16055650"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0041184.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="2" qual:compartment="comp1" metaid="_7930997b-7ae0-4fbf-bba3-827db049da51" qual:id="Hop" qual:constant="false" qual:name="JAK (Hopscotch)">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>The gene hopscotch (hop) encodes a  receptor-associated to JAK (Binari and Perrimon, 1994). Upon ligand binding, DOME activates HOP, which in turn, phosphorylates STAT92E dimers (Stancato et al, 1996). HOP can phosphorylate STAT92E at tyrosine residue 711, which is required for STAT92E DNA binding activity (Yan et al, 1996). </p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_7930997b-7ae0-4fbf-bba3-827db049da51">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8626752"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8608596"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0004864.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="bd1286a4-21fc-472f-8e28-7a3f7f3206dc" qual:id="Socs44A" qual:constant="true" qual:name="suppressors of cytokine signalling">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+SOCS (Suppressors of Cytokine signalling) factors act as negative regulators of the JAK/STAT pathway. 
+Three SOCSs genes have been identified in the Drosophila genome (socs36e, socs44a and socs16d). 
+Although SOCS44A  (Suppressor of cytokine signaling at 44a) does not show JAK/STAT-dependent expression, 
+it can inhibit pathway activity (Rawlings et al, 2004).</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#bd1286a4-21fc-472f-8e28-7a3f7f3206dc">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12101419"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12204282"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:15488148"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:16055650"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0033266.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="c764eaf1-0636-429e-b998-616f206d0444" qual:id="Ptp61F" qual:constant="true" qual:name="phospho-Tyr phosphatase">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Protein tyrosine phosphatase 61F (PTP61F) (homologue of human PTPB1, for phospho-Tyr phosphatase B1) acts 
+as a suppressor of STAT92E-dependent transcription (Baeg et al, 2005; Müller et al, 2005). PTP61F is expressed in a pattern complementary to that of OS. A nuclear spliced form of PTP61F (PTP61FC) can affect 
+pathway activity in vivo downstream of HOP (Muller et al, 2005). PTP61FC probably acts at the level of STAT92E. 
+(Zi et al, 2005). </p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#c764eaf1-0636-429e-b998-616f206d0444">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:16055650"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:16094372"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:15710397"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0003138.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_93e1b969-d11c-4959-9015-84dd489eb34e" qual:id="Brwd3" qual:constant="true" qual:name="D40- and bromo-domain-containing protein">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+D40- and Bromo-domain-containing protein (BRWD3) is a large protein that strongly suppresses the transcription 
+of stat92e (Muller et al, 2005). </p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_93e1b969-d11c-4959-9015-84dd489eb34e">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:16094372"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0011785.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_86ad4e3b-eea7-445b-a65d-e29ada547562" qual:id="Ken" qual:constant="true" qual:name="Ken Barbie or BCL6">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Ken and Barbie (KEN) (homolog of human BCL6, for B-cell lymphoma 6) belongs to the family of BTB/POZ 
+domain containing transcriptional repressors and functions as a transcriptional repressor in competition 
+with STAT92E. 
+During Drosophila development, KEN is sufficient to down-regulate the expression of a subset of putative 
+JAK/STAT target genes (incomplete overlap between consensus sequences bound by KEN and STAT92E) 
+(Arbouzova et al, 2006). 
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_86ad4e3b-eea7-445b-a65d-e29ada547562">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:16401426"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0011236.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="b9fd7e42-cf21-4daf-a9dd-d903e5921e50" qual:id="Su_var" qual:constant="true" qual:name="Suppressor of variegation or ZIMP">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>PIAS proteins (protein inhibitors of activated STAT) represent another well-characterized group of pathway 
+suppressors (like SOCS) that bind to STATs and target them for degradation via sumoylation (Kotaja et al, 2002; 
+Ungureanu et al, 2003; Wormald and Hilton, 2004; Gronholm et al, 2010). 
+A single Drosophila PIAS gene (pias), also called su(var)2-10 (suppressor of variegation 2-10) and zimp, 
+has been identified. Drosophila PIAS is found in the cytoplasm and nucleus (Hari et al, 2001).</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#b9fd7e42-cf21-4daf-a9dd-d903e5921e50">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12077349"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12855578"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:14607831"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:11390354"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:20616536"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0003585.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="2" qual:compartment="comp1" metaid="_794255e6-978d-4dfe-a077-838447d4b98b" qual:id="Stat92E" qual:constant="false" qual:name="Stat92E">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Signal-transducer and activator of transcription protein at 92E (STAT92E) is the transcriptional effector of the 
+JAK/STAT pathway. Phosphorylated STAT92E homodimers translocate to the nucleus to regulate the expression of specific target genes. 
+STAT92E encodes a 761 amino acid STAT and is the only known STAT protein encoded protein in Drosophila 
+(Hou et al, 1996; Yan et al, 1996). </p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_794255e6-978d-4dfe-a077-838447d4b98b">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8608595"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8608596"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://flybase.org/reports/FBgn0016917.html"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="d1afb289-6377-44ee-9738-afa6efb44948" qual:id="NStat92E" qual:constant="true" qual:name="Truncated Stat">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>STAT92E (Signal-transducer and activator of transcription protein at 92E) effects can be counteracted 
+by naturally occurring N-terminally truncated STAT92E protein (Yan et al, 1996; Henriksen et al, 2002). 
+When ectopically expressed, NSTAT92E exerts a dominant-negative effect on the expression of the 
+JAK/STAT target genes, such as even-skipped or trachealess (Henriksen et al, 2002; Karsten et al, 2005). </p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#d1afb289-6377-44ee-9738-afa6efb44948">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8608596"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:12231627"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:16129580"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="d2d195d7-d044-436d-ab2d-dc685b9990c0" qual:constant="false" qual:id="Targets">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Embryos mutant for HOP, STAT92E, DOME or OS exhibit characteristic segmentation and gastrulation defects. 
+Gap genes, pair-rule genes, and segment polarity genes are targets of JAK/STAT pathway (eve, runt,...) (Binari and Perrimon, 1994; Hou et al, 1997). tinman is also a target gene of JAK/STAT pathway (Liu et al, 2009). </p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#d2d195d7-d044-436d-ab2d-dc685b9990c0">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:8314084"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:9066269"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="PMID:19217429"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+    </qual:listOfQualitativeSpecies>
+    <qual:listOfTransitions xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:transition qual:id="tr_Dome">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="OS" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Dome_in_0"/>
+          <qual:input qual:qualitativeSpecies="Upd2" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Dome_in_1"/>
+          <qual:input qual:qualitativeSpecies="Upd3" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Dome_in_2"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Dome" qual:transitionEffect="assignmentLevel" qual:id="tr_Dome_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> OS </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Upd2 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Upd3 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> OS </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Upd2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> OS </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Socs36E">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Stat92E" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Socs36E_in_14"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Socs36E" qual:transitionEffect="assignmentLevel" qual:id="tr_Socs36E_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Stat92E </ci>
+                <cn type="integer"> 2 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Hop">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Dome" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Hop_in_3"/>
+          <qual:input qual:qualitativeSpecies="ET" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Hop_in_4"/>
+          <qual:input qual:qualitativeSpecies="Hrs" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Hop_in_5"/>
+          <qual:input qual:qualitativeSpecies="Stam" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Hop_in_6"/>
+          <qual:input qual:qualitativeSpecies="Socs36E" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Hop_in_7"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Hop" qual:transitionEffect="assignmentLevel" qual:id="tr_Hop_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Dome </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> ET </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Hrs </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Socs36E </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Dome </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> ET </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Hrs </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Stam </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Socs36E </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Dome </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> ET </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Hrs </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Stam </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Socs36E </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:functionTerm qual:resultLevel="2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Dome </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> ET </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Hrs </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Stam </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Socs36E </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Stat92E">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Hop" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Stat92E_in_8"/>
+          <qual:input qual:qualitativeSpecies="Socs44A" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Stat92E_in_9"/>
+          <qual:input qual:qualitativeSpecies="Ptp61F" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Stat92E_in_10"/>
+          <qual:input qual:qualitativeSpecies="Brwd3" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Stat92E_in_11"/>
+          <qual:input qual:qualitativeSpecies="Ken" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Stat92E_in_12"/>
+          <qual:input qual:qualitativeSpecies="Su_var" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Stat92E_in_13"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Stat92E" qual:transitionEffect="assignmentLevel" qual:id="tr_Stat92E_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Hop </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Socs44A </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Ptp61F </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Brwd3 </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Ken </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Su_var </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:functionTerm qual:resultLevel="2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Hop </ci>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Socs44A </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Ptp61F </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Brwd3 </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Ken </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Su_var </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Targets">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Stat92E" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Targets_in_14"/>
+          <qual:input qual:qualitativeSpecies="NStat92E" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Targets_in_15"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Targets" qual:transitionEffect="assignmentLevel" qual:id="tr_Targets_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <geq/>
+                  <ci> Stat92E </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> NStat92E </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+    </qual:listOfTransitions>
+    <listOfCompartments>
+      <compartment constant="true" id="comp1"/>
+    </listOfCompartments>
+  </model>
+</sbml>

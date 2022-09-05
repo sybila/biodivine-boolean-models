@@ -1,0 +1,3 @@
+### Modifications
+
+The model is only available as `.booleannet` file with no regulation data. It was then manually converted to `.bnet`. Finally, constant update functions for variables `Alpelisib`, `Fulvestrant`, `Everolimus`, `Trametinib`, `Ipatasertib`, `Palbociclib`, `Neratinib`, `HER2`, `IGF1R_T`, `HER3_T`, `PDK1`, `SGK1_T`, `PIM`, `PTEN`, `BIM_T`, `BCL2_T`, `ER`, and `PBX1` were removed to make them canonical inputs.

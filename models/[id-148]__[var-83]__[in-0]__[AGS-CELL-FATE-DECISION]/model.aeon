@@ -1,0 +1,268 @@
+v_MEK -| v_RTPK
+v_p38alpha -| v_RTPK
+v_RTPKgene -> v_RTPK
+v_MMP -> v_RTPK
+v_RTPK -> v_SHC1
+v_PTEN -| v_SHC1
+v_SHC1 -> v_GRB2
+v_GRB2 -> v_SOS
+v_ERK -| v_SOS
+v_SOS -> v_Ras
+v_SHP2 -> v_Ras
+v_Ras -> v_Raf
+v_ERK -| v_Raf
+v_AKT -| v_Raf
+v_Rheb -| v_Raf
+v_Raf -> v_MEK
+v_ERK -| v_MEK
+v_MAP3K8 -> v_MEK
+v_MEK -> v_ERK
+v_DUSP6 -| v_ERK
+v_ERK -> v_DUSP6
+v_mTORC1 -> v_DUSP6
+v_TAB -> v_TAK1
+v_TAK1 -> v_MKK3
+v_ASK1 -> v_MKK3
+v_AKT -| v_ASK1
+v_p38alpha -| v_TAB
+v_MKK3 -> v_p38alpha
+v_DUSP1 -| v_p38alpha
+v_MKK4 -> v_p38alpha
+v_p38alpha -> v_DUSP1
+v_MSK -> v_DUSP1
+v_TAK1 -> v_MKK4
+v_MEKK4 -> v_MKK4
+v_MLK3 -> v_MKK4
+v_GRAP2 -> v_MKK4
+v_TAK1 -> v_MKK7
+v_GRAP2 -> v_MKK7
+v_Rac -> v_MEKK4
+v_Rac -> v_MLK3
+v_mTORC2 -> v_Rac
+v_Dvl -> v_Rac
+v_DUSP1 -| v_JNK
+v_MKK4 -> v_JNK
+v_MKK7 -> v_JNK
+v_p38alpha -| v_GRAP2
+v_GAB -> v_SHP2
+v_GRB2 -> v_GAB
+v_ERK -| v_GAB
+v_TAK1 -> v_IKKB
+v_p53 -| v_IKKB
+v_AKT -> v_IKKA
+v_mTORC2 -> v_AKT
+v_PDK1 -> v_AKT
+v_ERK -| v_IRS1
+v_IKKB -| v_IRS1
+v_S6K -| v_IRS1
+v_CFLAR -| v_Caspase8
+v_Egr1 -> v_PTENgene
+v_CytochromeC -> v_Caspase9
+v_AKT -| v_FOXO
+v_NLK -| v_FOXO
+v_ERK -| v_TSC
+v_IKKB -| v_TSC
+v_AKT -| v_TSC
+v_GSK3 -> v_TSC
+v_RSK -| v_TSC
+v_AKT -| v_pras40
+v_BAD -| v_BCL2
+v_p38alpha -> v_p53
+v_MDM2 -| v_p53
+v_TSC -| v_Rheb
+v_pras40 -| v_mTORC1
+v_Rheb -> v_mTORC1
+v_RSK -> v_mTORC1
+v_PTENgene -> v_PTEN
+v_GSK3 -| v_PTEN
+v_AKT -| v_BAD
+v_RSK -| v_BAD
+v_TSC -> v_mTORC2
+v_S6K -| v_mTORC2
+v_p53 -> v_MDM2gene
+v_NFkB -> v_MDM2gene
+v_mTORC1 -> v_S6K
+v_PDK1 -> v_S6K
+v_AKT -> v_MDM2
+v_MDM2gene -> v_MDM2
+v_S6K -| v_MDM2
+v_BCL2 -| v_CytochromeC
+v_BAX -> v_CytochromeC
+v_p53 -> v_BAX
+v_IKKB -> v_NFkB
+v_IKKA -> v_NFkB
+v_MSK -> v_NFkB
+v_IKKB -> v_MAP3K8
+v_Ras -> v_PI3K
+v_GAB -> v_PI3K
+v_IRS1 -> v_PI3K
+v_PTEN -| v_PDK1
+v_PI3K -> v_PDK1
+v_ERK -> v_LRP
+v_p38alpha -> v_LRP
+v_JNK -> v_LRP
+v_DKK1 -| v_LRP
+v_Fz -> v_LRP
+v_JNK -> v_ITCH
+v_DKK1gene -> v_DKK1
+v_SFRP1 -| v_Fz
+v_FOXO -> v_Antisurvival_b1
+v_Antisurvival_b1 -> v_Antisurvival_b1
+v_Antisurvival_b2 -> v_Antisurvival_b1
+v_Caspase37_b1 -> v_Antisurvival_b1
+v_FOXO -> v_Antisurvival_b2
+v_Antisurvival_b1 -> v_Antisurvival_b2
+v_Antisurvival_b2 -> v_Antisurvival_b2
+v_Antisurvival_b3 -> v_Antisurvival_b2
+v_Caspase37_b1 -> v_Antisurvival_b2
+v_Caspase37_b2 -> v_Antisurvival_b2
+v_FOXO -> v_Antisurvival_b3
+v_Antisurvival_b1 -> v_Antisurvival_b3
+v_Antisurvival_b2 -> v_Antisurvival_b3
+v_Caspase37_b1 -> v_Antisurvival_b3
+v_Caspase37_b2 -> v_Antisurvival_b3
+v_LRP -| v_Axin
+v_ERK -| v_GSK3
+v_p38alpha -| v_GSK3
+v_AKT -| v_GSK3
+v_S6K -| v_GSK3
+v_LRP -| v_GSK3
+v_RSK -| v_GSK3
+v_Dvl -| v_GSK3
+v_FOXO -> v_RTPKgene
+v_ERK -> v_RSK
+v_PDK1 -> v_RSK
+v_ERK -> v_MSK
+v_p38alpha -> v_MSK
+v_AKT -> v_CFLAR
+v_ITCH -| v_CFLAR
+v_LRP -| v_CK1
+v_Fz -> v_Dvl
+v_SFRP1gene -> v_SFRP1
+v_cMYC -| v_SFRP1gene
+v_Caspase8 -> v_Caspase37_b1
+v_Caspase9 -> v_Caspase37_b1
+v_Caspase37_b1 -> v_Caspase37_b1
+v_Caspase37_b2 -> v_Caspase37_b1
+v_Caspase8 -> v_Caspase37_b2
+v_Caspase9 -> v_Caspase37_b2
+v_Caspase37_b1 -> v_Caspase37_b2
+v_IKKA -> v_betacatenin
+v_betaTrCP -| v_betacatenin
+v_Axin -> v_betaTrCP
+v_GSK3 -> v_betaTrCP
+v_CK1 -> v_betaTrCP
+v_LEF -> v_MMP
+v_TCF -| v_Egr1
+v_betacatenin -> v_LEF
+v_Prosurvival_b1 -> v_Prosurvival_b1
+v_Prosurvival_b2 -> v_Prosurvival_b1
+v_cMYC -> v_Prosurvival_b1
+v_CCND1_b1 -> v_Prosurvival_b1
+v_Prosurvival_b1 -> v_Prosurvival_b2
+v_Prosurvival_b2 -> v_Prosurvival_b2
+v_Prosurvival_b3 -> v_Prosurvival_b2
+v_cMYC -> v_Prosurvival_b2
+v_CCND1_b1 -> v_Prosurvival_b2
+v_CCND1_b2 -> v_Prosurvival_b2
+v_Prosurvival_b1 -> v_Prosurvival_b3
+v_Prosurvival_b2 -> v_Prosurvival_b3
+v_cMYC -> v_Prosurvival_b3
+v_CCND1_b1 -> v_Prosurvival_b3
+v_CCND1_b2 -> v_Prosurvival_b3
+v_TCF -> v_cMYC
+v_betacatenin -> v_TCF
+v_NLK -| v_TCF
+v_TAK1 -> v_NLK
+v_cMYC -| v_DKK1gene
+v_TCF -> v_DKK1gene
+v_RSK -> v_CCND1_b1
+v_TCF -> v_CCND1_b1
+v_CCND1_b1 -> v_CCND1_b1
+v_CCND1_b2 -> v_CCND1_b1
+v_RSK -> v_CCND1_b2
+v_TCF -> v_CCND1_b2
+v_CCND1_b1 -> v_CCND1_b2
+$v_AKT: ((!v_mTORC2 & v_PDK1) | v_mTORC2)
+$v_ASK1: !v_AKT
+$v_Antisurvival_b1: (((((!v_FOXO & !v_Antisurvival_b1) & v_Caspase37_b1) | (((!v_FOXO & v_Antisurvival_b1) & !v_Antisurvival_b2) & v_Caspase37_b1)) | ((!v_FOXO & v_Antisurvival_b1) & v_Antisurvival_b2)) | v_FOXO)
+$v_Antisurvival_b2: (((((((((!v_FOXO & v_Antisurvival_b1) & !v_Antisurvival_b2) & v_Caspase37_b1) & v_Caspase37_b2) | (((((!v_FOXO & v_Antisurvival_b1) & v_Antisurvival_b2) & !v_Antisurvival_b3) & v_Caspase37_b1) & v_Caspase37_b2)) | (((!v_FOXO & v_Antisurvival_b1) & v_Antisurvival_b2) & v_Antisurvival_b3)) | (((v_FOXO & v_Antisurvival_b1) & !v_Antisurvival_b2) & v_Caspase37_b1)) | ((((v_FOXO & v_Antisurvival_b1) & v_Antisurvival_b2) & !v_Antisurvival_b3) & v_Caspase37_b1)) | (((v_FOXO & v_Antisurvival_b1) & v_Antisurvival_b2) & v_Antisurvival_b3))
+$v_Antisurvival_b3: ((((v_FOXO & v_Antisurvival_b1) & v_Antisurvival_b2) & v_Caspase37_b1) & v_Caspase37_b2)
+$v_Axin: !v_LRP
+$v_BAD: (!v_AKT & !v_RSK)
+$v_BAX: v_p53
+$v_BCL2: !v_BAD
+$v_CCND1_b1: (((((!v_RSK & !v_TCF) & v_CCND1_b1) & v_CCND1_b2) | (!v_RSK & v_TCF)) | v_RSK)
+$v_CCND1_b2: ((v_RSK & v_TCF) & v_CCND1_b1)
+$v_CFLAR: (v_AKT & !v_ITCH)
+$v_CK1: !v_LRP
+$v_Caspase37_b1: (((((!v_Caspase8 & !v_Caspase9) & v_Caspase37_b1) & v_Caspase37_b2) | (!v_Caspase8 & v_Caspase9)) | v_Caspase8)
+$v_Caspase37_b2: ((v_Caspase8 & v_Caspase9) & v_Caspase37_b1)
+$v_Caspase8: !v_CFLAR
+$v_Caspase9: v_CytochromeC
+$v_CytochromeC: (!v_BCL2 & v_BAX)
+$v_DKK1: v_DKK1gene
+$v_DKK1gene: (!v_cMYC & v_TCF)
+$v_DUSP1: ((!v_p38alpha & v_MSK) | v_p38alpha)
+$v_DUSP6: ((!v_ERK & v_mTORC1) | v_ERK)
+$v_Dvl: v_Fz
+$v_ERK: ((!v_MEK & !v_DUSP6) | v_MEK)
+$v_Egr1: !v_TCF
+$v_FOXO: (!v_AKT & !v_NLK)
+$v_Fz: !v_SFRP1
+$v_GAB: (v_GRB2 & !v_ERK)
+$v_GRAP2: !v_p38alpha
+$v_GRB2: v_SHC1
+$v_GSK3: ((((((!v_ERK & !v_p38alpha) & !v_AKT) & !v_S6K) & !v_LRP) & !v_RSK) & !v_Dvl)
+$v_IKKA: v_AKT
+$v_IKKB: (v_TAK1 & !v_p53)
+$v_IRS1: ((!v_ERK & !v_IKKB) & !v_S6K)
+$v_ITCH: v_JNK
+$v_JNK: (((!v_DUSP1 & !v_MKK4) & v_MKK7) | (!v_DUSP1 & v_MKK4))
+$v_LEF: v_betacatenin
+$v_LRP: (((((((!v_ERK & !v_p38alpha) & !v_JNK) & !v_DKK1) & v_Fz) | (((!v_ERK & !v_p38alpha) & v_JNK) & !v_DKK1)) | ((!v_ERK & v_p38alpha) & !v_DKK1)) | (v_ERK & !v_DKK1))
+$v_MAP3K8: v_IKKB
+$v_MDM2: (((!v_AKT & v_MDM2gene) & !v_S6K) | (v_AKT & !v_S6K))
+$v_MDM2gene: ((!v_p53 & v_NFkB) | v_p53)
+$v_MEK: (((!v_Raf & !v_ERK) | ((!v_Raf & v_ERK) & v_MAP3K8)) | v_Raf)
+$v_MEKK4: v_Rac
+$v_MKK3: ((!v_TAK1 & v_ASK1) | v_TAK1)
+$v_MKK4: ((((((!v_TAK1 & !v_MEKK4) & !v_MLK3) & v_GRAP2) | ((!v_TAK1 & !v_MEKK4) & v_MLK3)) | (!v_TAK1 & v_MEKK4)) | v_TAK1)
+$v_MKK7: ((!v_TAK1 & v_GRAP2) | v_TAK1)
+$v_MLK3: v_Rac
+$v_MMP: v_LEF
+$v_MSK: ((!v_ERK & v_p38alpha) | v_ERK)
+$v_NFkB: ((((!v_IKKB & !v_IKKA) & v_MSK) | (!v_IKKB & v_IKKA)) | v_IKKB)
+$v_NLK: v_TAK1
+$v_PDK1: (!v_PTEN & v_PI3K)
+$v_PI3K: ((((!v_Ras & !v_GAB) & v_IRS1) | (!v_Ras & v_GAB)) | v_Ras)
+$v_PTEN: (v_PTENgene & !v_GSK3)
+$v_PTENgene: v_Egr1
+$v_Prosurvival_b1: ((((((!v_Prosurvival_b1 & !v_cMYC) & v_CCND1_b1) | (!v_Prosurvival_b1 & v_cMYC)) | (((v_Prosurvival_b1 & !v_Prosurvival_b2) & !v_cMYC) & v_CCND1_b1)) | ((v_Prosurvival_b1 & !v_Prosurvival_b2) & v_cMYC)) | (v_Prosurvival_b1 & v_Prosurvival_b2))
+$v_Prosurvival_b2: ((((((((v_Prosurvival_b1 & !v_Prosurvival_b2) & !v_cMYC) & v_CCND1_b1) & v_CCND1_b2) | (((v_Prosurvival_b1 & !v_Prosurvival_b2) & v_cMYC) & v_CCND1_b1)) | (((((v_Prosurvival_b1 & v_Prosurvival_b2) & !v_Prosurvival_b3) & !v_cMYC) & v_CCND1_b1) & v_CCND1_b2)) | ((((v_Prosurvival_b1 & v_Prosurvival_b2) & !v_Prosurvival_b3) & v_cMYC) & v_CCND1_b1)) | ((v_Prosurvival_b1 & v_Prosurvival_b2) & v_Prosurvival_b3))
+$v_Prosurvival_b3: ((((v_Prosurvival_b1 & v_Prosurvival_b2) & v_cMYC) & v_CCND1_b1) & v_CCND1_b2)
+$v_RSK: (v_ERK & v_PDK1)
+$v_RTPK: ((((!v_MEK & !v_p38alpha) & !v_RTPKgene) & v_MMP) | ((!v_MEK & !v_p38alpha) & v_RTPKgene))
+$v_RTPKgene: v_FOXO
+$v_Rac: ((!v_mTORC2 & v_Dvl) | v_mTORC2)
+$v_Raf: ((((!v_Ras & !v_ERK) & !v_AKT) & !v_Rheb) | v_Ras)
+$v_Ras: ((!v_SOS & v_SHP2) | v_SOS)
+$v_Rheb: !v_TSC
+$v_S6K: ((!v_mTORC1 & v_PDK1) | v_mTORC1)
+$v_SFRP1: v_SFRP1gene
+$v_SFRP1gene: !v_cMYC
+$v_SHC1: ((!v_RTPK & !v_PTEN) | v_RTPK)
+$v_SHP2: v_GAB
+$v_SOS: ((!v_GRB2 & !v_ERK) | v_GRB2)
+$v_TAB: !v_p38alpha
+$v_TAK1: v_TAB
+$v_TCF: ((!v_betacatenin & !v_NLK) | v_betacatenin)
+$v_TSC: ((((!v_ERK & !v_IKKB) & !v_AKT) & v_GSK3) & !v_RSK)
+$v_betaTrCP: ((v_Axin & v_GSK3) & v_CK1)
+$v_betacatenin: ((!v_IKKA & !v_betaTrCP) | v_IKKA)
+$v_cMYC: v_TCF
+$v_mTORC1: (((!v_pras40 & !v_Rheb) & v_RSK) | (!v_pras40 & v_Rheb))
+$v_mTORC2: (v_TSC & !v_S6K)
+$v_p38alpha: (((!v_MKK3 & !v_DUSP1) & v_MKK4) | (v_MKK3 & !v_DUSP1))
+$v_p53: (v_p38alpha & !v_MDM2)
+$v_pras40: !v_AKT

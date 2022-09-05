@@ -1,0 +1,20 @@
+v_CtrA -> v_CtrA
+v_GcrA -> v_CtrA
+v_CcrM -| v_CtrA
+v_SciP -| v_CtrA
+v_CtrA -| v_GcrA
+v_DnaA -> v_GcrA
+v_CtrA -> v_DnaA
+v_GcrA -| v_DnaA
+v_DnaA -| v_DnaA
+v_CcrM -> v_DnaA
+v_CtrA -> v_CcrM
+v_CcrM -| v_CcrM
+v_SciP -| v_CcrM
+v_CtrA -> v_SciP
+v_DnaA -| v_SciP
+$v_CcrM: ((v_CtrA & !v_CcrM) & !v_SciP)
+$v_CtrA: ((((!v_CtrA & v_GcrA) & !v_CcrM) & !v_SciP) | ((v_CtrA & !v_CcrM) & !v_SciP))
+$v_DnaA: (((v_CtrA & !v_GcrA) & !v_DnaA) & v_CcrM)
+$v_GcrA: (!v_CtrA & v_DnaA)
+$v_SciP: (v_CtrA & !v_DnaA)

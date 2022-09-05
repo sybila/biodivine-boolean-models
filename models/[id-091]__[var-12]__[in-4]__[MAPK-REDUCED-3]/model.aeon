@@ -1,0 +1,70 @@
+v_DNA_damage -> v_Apoptosis
+v_ERK -| v_Apoptosis
+v_p38 -> v_Apoptosis
+v_JNK -> v_Apoptosis
+v_MDM2 -| v_Apoptosis
+v_DNA_damage -> v_Growth_Arrest
+v_p38 -> v_Growth_Arrest
+v_MDM2 -| v_Growth_Arrest
+v_DNA_damage -| v_Proliferation
+v_ERK -> v_Proliferation
+v_p38 -| v_Proliferation
+v_PI3K -> v_Proliferation
+v_MDM2 -> v_Proliferation
+v_DNA_damage -> v_ERK
+v_ERK -| v_ERK
+v_p38 -| v_ERK
+v_JNK -| v_ERK
+v_PLCG -> v_ERK
+v_PI3K -| v_ERK
+v_RAS -> v_ERK
+v_MDM2 -| v_ERK
+v_TGFBR_stimulus -> v_p38
+v_DNA_damage -> v_p38
+v_ERK -| v_p38
+v_p38 -| v_p38
+v_GADD45 -> v_p38
+v_RAS -> v_p38
+v_TGFBR_stimulus -> v_JNK
+v_DNA_damage -> v_JNK
+v_ERK -| v_JNK
+v_p38 -| v_JNK
+v_GADD45 -> v_JNK
+v_RAS -> v_JNK
+v_EGFR_stimulus -> v_GRB2
+v_FGFR3_stimulus -> v_GRB2
+v_TGFBR_stimulus -> v_GRB2
+v_ERK -> v_GRB2
+v_GRB2 -| v_GRB2
+v_PLCG -| v_GRB2
+v_EGFR_stimulus -> v_PLCG
+v_FGFR3_stimulus -> v_PLCG
+v_ERK -> v_PLCG
+v_GRB2 -| v_PLCG
+v_PLCG -| v_PLCG
+v_TGFBR_stimulus -> v_GADD45
+v_DNA_damage -> v_GADD45
+v_p38 -> v_GADD45
+v_MDM2 -| v_GADD45
+v_GRB2 -> v_PI3K
+v_PI3K -> v_PI3K
+v_ERK -| v_RAS
+v_GRB2 -> v_RAS
+v_PLCG -> v_RAS
+v_DNA_damage -> v_MDM2
+v_ERK -| v_MDM2
+v_p38 -| v_MDM2
+v_PI3K -> v_MDM2
+v_MDM2 -| v_MDM2
+$v_Apoptosis: ((((((!v_DNA_damage & !v_ERK) & v_p38) & v_JNK) & !v_MDM2) | ((((v_DNA_damage & !v_ERK) & !v_p38) & v_JNK) & !v_MDM2)) | (((v_DNA_damage & !v_ERK) & v_p38) & v_JNK))
+$v_ERK: (((((((((((((!v_DNA_damage & !v_ERK) & !v_p38) & !v_JNK) & !v_PLCG) & v_RAS) | (((((!v_DNA_damage & !v_ERK) & !v_p38) & !v_JNK) & v_PLCG) & !v_PI3K)) | ((((((!v_DNA_damage & !v_ERK) & !v_p38) & !v_JNK) & v_PLCG) & v_PI3K) & v_RAS)) | ((((!v_DNA_damage & v_ERK) & !v_p38) & !v_JNK) & v_RAS)) | (((((v_DNA_damage & !v_ERK) & !v_p38) & !v_JNK) & !v_PLCG) & v_RAS)) | (((((v_DNA_damage & !v_ERK) & !v_p38) & !v_JNK) & v_PLCG) & !v_PI3K)) | (((((((v_DNA_damage & !v_ERK) & !v_p38) & !v_JNK) & v_PLCG) & v_PI3K) & !v_RAS) & !v_MDM2)) | ((((((v_DNA_damage & !v_ERK) & !v_p38) & !v_JNK) & v_PLCG) & v_PI3K) & v_RAS)) | ((((v_DNA_damage & v_ERK) & !v_p38) & !v_JNK) & v_RAS))
+$v_GADD45: ((((((!v_TGFBR_stimulus & !v_DNA_damage) & v_p38) & !v_MDM2) | (((!v_TGFBR_stimulus & v_DNA_damage) & !v_p38) & !v_MDM2)) | ((!v_TGFBR_stimulus & v_DNA_damage) & v_p38)) | v_TGFBR_stimulus)
+$v_GRB2: ((((((((((!v_EGFR_stimulus & !v_FGFR3_stimulus) & !v_TGFBR_stimulus) & v_ERK) & !v_GRB2) & !v_PLCG) | ((!v_EGFR_stimulus & !v_FGFR3_stimulus) & v_TGFBR_stimulus)) | ((((!v_EGFR_stimulus & v_FGFR3_stimulus) & !v_TGFBR_stimulus) & !v_GRB2) & !v_PLCG)) | ((!v_EGFR_stimulus & v_FGFR3_stimulus) & v_TGFBR_stimulus)) | (((v_EGFR_stimulus & !v_TGFBR_stimulus) & !v_GRB2) & !v_PLCG)) | (v_EGFR_stimulus & v_TGFBR_stimulus))
+$v_Growth_Arrest: ((((!v_DNA_damage & v_p38) & !v_MDM2) | ((v_DNA_damage & !v_p38) & !v_MDM2)) | (v_DNA_damage & v_p38))
+$v_JNK: (((((((((((((((((((!v_TGFBR_stimulus & !v_DNA_damage) & !v_ERK) & !v_p38) & !v_GADD45) & v_RAS) | ((((!v_TGFBR_stimulus & !v_DNA_damage) & !v_ERK) & !v_p38) & v_GADD45)) | (((((!v_TGFBR_stimulus & !v_DNA_damage) & !v_ERK) & v_p38) & v_GADD45) & v_RAS)) | ((((!v_TGFBR_stimulus & !v_DNA_damage) & v_ERK) & v_GADD45) & v_RAS)) | (((!v_TGFBR_stimulus & v_DNA_damage) & !v_ERK) & !v_p38)) | (((((!v_TGFBR_stimulus & v_DNA_damage) & !v_ERK) & v_p38) & !v_GADD45) & v_RAS)) | ((((!v_TGFBR_stimulus & v_DNA_damage) & !v_ERK) & v_p38) & v_GADD45)) | ((((!v_TGFBR_stimulus & v_DNA_damage) & v_ERK) & !v_GADD45) & v_RAS)) | (((!v_TGFBR_stimulus & v_DNA_damage) & v_ERK) & v_GADD45)) | (((v_TGFBR_stimulus & !v_DNA_damage) & !v_ERK) & !v_p38)) | (((((v_TGFBR_stimulus & !v_DNA_damage) & !v_ERK) & v_p38) & !v_GADD45) & v_RAS)) | ((((v_TGFBR_stimulus & !v_DNA_damage) & !v_ERK) & v_p38) & v_GADD45)) | ((((v_TGFBR_stimulus & !v_DNA_damage) & v_ERK) & !v_GADD45) & v_RAS)) | (((v_TGFBR_stimulus & !v_DNA_damage) & v_ERK) & v_GADD45)) | (v_TGFBR_stimulus & v_DNA_damage))
+$v_MDM2: ((((((!v_DNA_damage & !v_ERK) & !v_p38) & v_PI3K) | ((((v_DNA_damage & !v_ERK) & !v_p38) & !v_PI3K) & !v_MDM2)) | (((v_DNA_damage & !v_ERK) & !v_p38) & v_PI3K)) | (((v_DNA_damage & v_ERK) & !v_p38) & !v_MDM2))
+$v_PI3K: ((!v_GRB2 & v_PI3K) | v_GRB2)
+$v_PLCG: ((((((!v_EGFR_stimulus & !v_FGFR3_stimulus) & v_ERK) & !v_GRB2) & !v_PLCG) | (((!v_EGFR_stimulus & v_FGFR3_stimulus) & !v_GRB2) & !v_PLCG)) | ((v_EGFR_stimulus & !v_GRB2) & !v_PLCG))
+$v_Proliferation: (((((!v_DNA_damage & v_ERK) & !v_p38) & v_PI3K) | ((((!v_DNA_damage & v_ERK) & v_p38) & v_PI3K) & v_MDM2)) | ((((v_DNA_damage & v_ERK) & !v_p38) & v_PI3K) & v_MDM2))
+$v_RAS: ((((!v_ERK & !v_GRB2) & v_PLCG) | (!v_ERK & v_GRB2)) | (v_ERK & v_PLCG))
+$v_p38: (((((((((((((((((((!v_TGFBR_stimulus & !v_DNA_damage) & !v_ERK) & !v_p38) & !v_GADD45) & v_RAS) | ((((!v_TGFBR_stimulus & !v_DNA_damage) & !v_ERK) & !v_p38) & v_GADD45)) | (((((!v_TGFBR_stimulus & !v_DNA_damage) & !v_ERK) & v_p38) & v_GADD45) & v_RAS)) | ((((!v_TGFBR_stimulus & !v_DNA_damage) & v_ERK) & v_GADD45) & v_RAS)) | (((!v_TGFBR_stimulus & v_DNA_damage) & !v_ERK) & !v_p38)) | (((((!v_TGFBR_stimulus & v_DNA_damage) & !v_ERK) & v_p38) & !v_GADD45) & v_RAS)) | ((((!v_TGFBR_stimulus & v_DNA_damage) & !v_ERK) & v_p38) & v_GADD45)) | ((((!v_TGFBR_stimulus & v_DNA_damage) & v_ERK) & !v_GADD45) & v_RAS)) | (((!v_TGFBR_stimulus & v_DNA_damage) & v_ERK) & v_GADD45)) | (((v_TGFBR_stimulus & !v_DNA_damage) & !v_ERK) & !v_p38)) | (((((v_TGFBR_stimulus & !v_DNA_damage) & !v_ERK) & v_p38) & !v_GADD45) & v_RAS)) | ((((v_TGFBR_stimulus & !v_DNA_damage) & !v_ERK) & v_p38) & v_GADD45)) | ((((v_TGFBR_stimulus & !v_DNA_damage) & v_ERK) & !v_GADD45) & v_RAS)) | (((v_TGFBR_stimulus & !v_DNA_damage) & v_ERK) & v_GADD45)) | (v_TGFBR_stimulus & v_DNA_damage))

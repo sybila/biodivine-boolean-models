@@ -1,0 +1,131 @@
+p53_K -> PUMA
+p53_K -| p53_A
+p53_K -> DRAM1
+p53_K -> PTEN
+p53_K -> p53INP1
+PTEN -| AKT
+E2F1 -> Sirt1
+E2F1 -> CDK2_CycE
+E2F1 -> Myc
+E2F1 -> BMI1
+E2F1 -> PROLIFERATION
+PUMA -| BCL2
+p53INP1 -| p53_A
+Wip1 -| ATM
+Wip1 -| Mdm2
+Wip1 -| p53_K
+Wip1 -| p53_A
+Wip1 -| BAX
+Wip1 -| DDR_Activation
+p21 -| CDK46_CycD
+p21 -| CDK2_CycE
+p21 -| Myc
+p21 -| Caspase3
+p21 -> SENESCENCE
+BCL2 -| BAX
+BCL2 -| Caspase3
+Mdm2 -| p53_A
+Mdm2 -| p53_K
+AMPK -> Myc
+AMPK -> p53_A
+AMPK -| mTORC1
+AMPK -> ULK1
+AMPK -| mTORC2
+BMI1 -| p21
+BMI1 -> AKT
+BMI1 -| DDR_Activation
+BMI1 -| PTEN
+BAX -> Caspase3
+CDK2_CycE -| RB
+ULK1 -| APOPTOSIS
+ULK1 -> AUTOPHAGY
+ULK1 -| mTORC1
+ULK1 -| AMPK
+mTORC2 -> AKT
+mTORC2 -| ULK1
+CDK46_CycD -| RB
+mTORC1 -| mTORC2
+mTORC1 -| ULK1
+AKT -> Mdm2
+AKT -> mTORC2
+AKT -| p21
+AKT -> mTORC1
+DRAM1 -> ULK1
+DRAM1 -> BAX
+DRAM1 -| BCL2
+DRAM1 -| mTORC1
+DRAM1 -| mTORC2
+DRAM1 -> APOPTOSIS
+miR_16 -| CDK46_CycD
+miR_16 -| CDK2_CycE
+miR_16 -| Cdc25A
+miR_16 -| BMI1
+miR_16 -| mTORC2
+miR_16 -| BCL2
+miR_16 -| Wip1
+miR_16 -| mTORC1
+ATM -> AMPK
+ATM -> E2F1
+ATM -| Mdm2
+ATM -| Cdc25A
+ATM -> p53_A
+ATM -> p53_K
+ATM -> miR_16
+DDR_Activation -> ATM
+DDR_Activation -| AKT
+DDR_Activation -> AMPK
+Caspase3 -| p21
+Caspase3 -> APOPTOSIS
+Sirt1 -| E2F1
+Sirt1 -| p53_A
+Sirt1 -| p53_K
+Sirt1 -| mTORC2
+Transfected_miRNA -> miR_16
+Transfected_miRNA -> DDR_Activation
+p53_A -> p21
+p53_A -| p53_K
+p53_A -> Wip1
+p53_A -> p53INP1
+p53_A -> Mdm2
+p53_A -> SENESCENCE
+Cdc25A -> CDK2_CycE
+Cdc25A -> CDK46_CycD
+Cdc25A -> E2F1
+Cdc25A -| DDR_Activation
+RB -| E2F1
+RB -| Myc
+Myc -> E2F1
+Myc -| p21
+Myc -> BMI1
+$miR_16: ATM & Transfected_miRNA
+$DDR_Activation: Transfected_miRNA & !(Wip1 & BMI1 & Cdc25A)
+$ATM: DDR_Activation & !Wip1
+$AMPK: (ATM | DDR_Activation) & !ULK1
+$Mdm2: (!Wip1 | p53_A) & !ATM & AKT
+$p53INP1: p53_K | p53_A
+$p53_A: !Sirt1 & !p53_K & (ATM | !p53INP1 | (AMPK & !(Wip1 & Mdm2)))
+$p53_K: !p53_A & (!Sirt1 | !Wip1) & ATM & !Mdm2
+$Wip1: p53_A & !miR_16
+$Myc: (E2F1 | AMPK) & !RB & !p21
+$p21: p53_A | (!Myc & !Caspase3 & !BMI1 & !AKT)
+$CDK46_CycD: Cdc25A & !miR_16 & !p21
+$CDK2_CycE: Cdc25A & E2F1 & !miR_16 & !p21
+$Cdc25A: !ATM & !miR_16
+$BMI1: !miR_16 & (E2F1 | Myc) 
+$mTORC2: !miR_16 | AKT | !(DRAM1 | mTORC1 | Sirt1 | AMPK)
+$mTORC1: AKT & !((ULK1 & DRAM1 & miR_16) | AMPK)
+$BCL2: !miR_16 & !PUMA & !DRAM1
+$Sirt1: E2F1
+$PTEN: p53_K & !BMI1
+$RB: !CDK46_CycD & !CDK2_CycE
+$AKT: (!DDR_Activation & !PTEN) | mTORC2 | BMI1
+$E2F1: (!RB & ((Cdc25A & ATM) | !Sirt1)) | Myc
+$PUMA: p53_K
+$BAX: !BCL2 & DRAM1 & !Wip1
+$Caspase3: BAX | (!p21 & !BCL2)
+$DRAM1: p53_K
+$ULK1: (DRAM1 | AMPK) & !mTORC2 & !mTORC1
+$PROLIFERATION: E2F1
+$AUTOPHAGY: ULK1
+$APOPTOSIS: (Caspase3 | DRAM1) & !ULK1
+$SENESCENCE: p21 | p53_A

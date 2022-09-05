@@ -1,0 +1,43 @@
+v_hh_external -> v_CIA
+v_PTC_protein -| v_CIA
+v_CI_protein -> v_CIA
+v_EN_protein -| v_ptc
+v_CIR -| v_ptc
+v_CIA -> v_ptc
+v_wg -> v_WG_protein
+v_ci -> v_CI_protein
+v_SLP -| v_en
+v_WG_external -> v_en
+v_wg -> v_wg
+v_SLP -> v_wg
+v_CIR -| v_wg
+v_CIA -> v_wg
+v_EN_protein -> v_hh
+v_CIR -| v_hh
+v_hh_external -| v_PTC_protein
+v_ptc -> v_PTC_protein
+v_PTC_protein -> v_PTC_protein
+v_en -> v_EN_protein
+v_hh -> v_HH_protein
+v_hh_external -> v_SMO
+v_PTC_protein -| v_SMO
+v_hh_external -| v_CIR
+v_PTC_protein -> v_CIR
+v_CI_protein -> v_CIR
+v_EN_protein -| v_ci
+v_hh_external -> v_PH
+v_PTC_protein -> v_PH
+$v_CIA: ((v_hh_external & v_CI_protein) | (v_CI_protein & !v_PTC_protein))
+$v_CIR: ((v_CI_protein & v_PTC_protein) & !v_hh_external)
+$v_CI_protein: v_ci
+$v_EN_protein: v_en
+$v_HH_protein: v_hh
+$v_PH: (v_PTC_protein & v_hh_external)
+$v_PTC_protein: ((v_PTC_protein & !v_hh_external) | v_ptc)
+$v_SMO: (v_hh_external | !(v_hh_external | v_PTC_protein))
+$v_WG_protein: v_wg
+$v_ci: !v_EN_protein
+$v_en: (v_WG_external & !v_SLP)
+$v_hh: (v_EN_protein & !v_CIR)
+$v_ptc: (v_CIA & !(v_CIR | v_EN_protein))
+$v_wg: (((v_wg & (v_SLP | v_CIA)) & !v_CIR) | ((v_CIA & v_SLP) & !v_CIR))

@@ -1,0 +1,3 @@
+### Modifications
+
+The following variables were removed because they were not connected to the rest of the network: `csa352_Nucleocapsid_complex_SARS_CoV_2_virion (csa352)`, `csa366_Nucleocapsid_complex_SARS_CoV_2_virion (csa366)`, `csa370_Nucleocapsid_complex_SARS_CoV_2_virion (csa370)`, `csa371_Nucleocapsid_complex_SARS_CoV_2_virion (csa371)`, `csa432_Nucleocapsid_complex_SARS_CoV_2_virion (csa432)`, `sa2045_M_SARS_CoV_2_virion (sa2045)`.

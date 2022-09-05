@@ -1,0 +1,171 @@
+DNA_Damage -> ATM
+HDAC1 -| ATM
+E2F1 -> ATM
+Wip1 -| ATM
+$ATM: DNA_Damage & (!HDAC1 | !Wip1 | E2F1)
+
+ATM -> miR_34a
+p53	-> miR_34a
+lnc_XIST -| miR_34a
+$miR_34a: (ATM  | p53) & !lnc_XIST	
+
+ATM	-> miR_16
+p53	-> miR_16
+HDAC1 -| miR_16
+c_Myc -| miR_16
+lnc_XIST -| miR_16
+$miR_16: (ATM | p53) & !HDAC1 & !c_Myc & !lnc_XIST	
+			
+DNA_Damage -> miR_449a
+lnc_XIST -| miR_449a
+$miR_449a: DNA_Damage & !lnc_XIST	
+			
+YY1 -> lnc_XIST
+miR_34a -| lnc_XIST
+miR_16 -| lnc_XIST
+miR_449a -| lnc_XIST
+$lnc_XIST: YY1 & (!miR_34a | !miR_449a | !miR_16)	
+			
+miR_34a -| HDAC1
+miR_449a -| HDAC1
+Sirt_1 -| HDAC1
+DNA_Damage -| HDAC1
+$HDAC1: !DNA_Damage | !(miR_449a & (miR_34a | Sirt_1))	
+			
+E2F1 -> c_Myc
+miR_34a -| c_Myc
+RB -| c_Myc
+p21 -| c_Myc
+C_Met -> c_Myc
+miR_449a -| c_Myc
+$c_Myc: (E2F1 | C_Met | !miR_34a | !miR_449a) & !RB & !p21	
+
+c_Myc -> YY1
+miR_34a -| YY1
+RB -| YY1
+$YY1: c_Myc & (!miR_34a | !RB)	
+			
+miR_34a	-| C_Met
+miR_449a -| C_Met
+c_Myc -> C_Met
+$C_Met: !miR_34a & !miR_449a & c_Myc	
+			
+ATM	-> p53
+Sirt_1 -| p53
+Mdm2 -| p53
+YY1 -| p53
+C_Met -| p53
+$p53: (ATM | !Sirt_1) & !Mdm2 & !YY1 & !C_Met	
+			
+Wip1 -| Mdm2
+p53 -> Mdm2
+YY1 -> Mdm2
+ATM -| Mdm2
+$Mdm2: (!Wip1 | p53 | YY1) & !ATM	
+			
+Sirt_1 -| p53_A
+p53 -> p53_A
+p53_K -| p53_A
+p53_INP1 -| p53_A
+$p53_A: !Sirt_1 & !p53_K &  (p53 | !p53_INP1)	
+			
+			
+Sirt_1 -| p53_K
+p53_A -| p53_K
+p53	-> p53_K
+Wip1 -| p53_K
+$p53_K: !p53_A & (!Sirt_1 | !Wip1) & p53	
+			
+			
+E2F1 -> Sirt_1
+miR_34a	-| Sirt_1
+HDAC1 -| Sirt_1
+miR_449a -| Sirt_1
+$Sirt_1: E2F1 | (!HDAC1 & !(miR_34a | miR_449a))	
+			
+p53_A -> p53_INP1
+p53_K -> p53_INP1
+$p53_INP1: p53_A | p53_K	
+			
+p53_A -> Wip1
+miR_16 -| Wip1
+$Wip1: p53_A & !miR_16	
+			
+p53_A -> p21
+HDAC1 -| p21
+c_Myc -| p21
+BMI1 -| p21
+Caspase3 -| p21
+YY1	-| p21
+lnc_XIST -| p21
+$p21: p53_A | ((!HDAC1 | !c_Myc | !BMI1 | !YY1 | !lnc_XIST) & !Caspase3)			
+			
+ATM	-| Cdc25A
+miR_34a -| Cdc25A
+miR_449a -| Cdc25A
+miR_16 -| Cdc25A
+$Cdc25A: !ATM & !miR_34a & !miR_449a & !miR_16	
+			
+Cdc25A -> CDK46_CycD
+p21 -| CDK46_CycD
+miR_34a -| CDK46_CycD
+miR_16 -| CDK46_CycD
+miR_449a -| CDK46_CycD
+$CDK46_CycD: Cdc25A & !miR_34a & !miR_449a & !p21 & !miR_16	
+			
+			
+Cdc25A -> CDK2_CycE
+E2F1 -> CDK2_CycE
+p21 -| CDK2_CycE
+miR_34a -| CDK2_CycE
+miR_16 -| CDK2_CycE
+miR_449a -| CDK2_CycE
+$CDK2_CycE: Cdc25A & E2F1 & !miR_34a & !miR_449a & !p21 & !miR_16	
+			
+			
+CDK46_CycD -| RB
+CDK2_CycE -| RB
+$RB: !CDK46_CycD & !CDK2_CycE	
+			
+p53_K -> PUMA
+$PUMA: p53_K	
+			
+PUMA -| BCL2
+miR_34a -| BCL2
+miR_16 -| BCL2
+miR_449a -| BCL2
+$BCL2: !PUMA & !miR_34a & !miR_16 & !miR_449a	
+			
+BCL2 -| BAX
+p53_K -> BAX
+$BAX: !BCL2 & p53_K 	
+			
+RB -| E2F1
+Cdc25A -> E2F1
+ATM -> E2F1
+Sirt_1 -| E2F1
+miR_34a -| E2F1
+c_Myc -> E2F1
+miR_449a -| E2F1
+$E2F1: (!RB &  ((Cdc25A & ATM) | !Sirt_1 | !miR_34a | !miR_449a)) | c_Myc	
+	
+miR_16 -| BMI1
+E2F1 -> BMI1
+c_Myc -> BMI1
+$BMI1: !miR_16 & (E2F1 | c_Myc)	
+			
+BCL2 -| Caspase3
+p21 -| Caspase3
+BAX -> Caspase3
+$Caspase3: !(BCL2 & p21) & BAX	
+			
+CDK2_CycE -> Proliferation
+$Proliferation: CDK2_CycE	
+			
+p21	-> Senescence
+CDK2_CycE -| Senescence
+$Senescence: p21 & !CDK2_CycE	
+			
+Caspase3 -> Apoptosis
+$Apoptosis: Caspase3
+			

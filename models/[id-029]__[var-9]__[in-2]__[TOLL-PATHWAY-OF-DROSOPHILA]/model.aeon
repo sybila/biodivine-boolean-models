@@ -1,0 +1,20 @@
+v_Toll -> v_MyD88
+v_Nec -| v_Spz
+v_MyD88 -> v_Tube
+v_Tube -> v_Pelle
+v_Spz -> v_Toll
+v_Pelle -| v_Cactus
+v_Slmb -? v_Cactus
+v_Cactus -| v_Dif
+v_Cactus -| v_Dorsal
+v_Dorsal -> v_Targets
+v_Dif -> v_Targets
+$v_Cactus: !(v_Pelle & v_Slmb)
+$v_Dif: !v_Cactus
+$v_Dorsal: !v_Cactus
+$v_MyD88: v_Toll
+$v_Pelle: v_Tube
+$v_Spz: !v_Nec
+$v_Targets: (v_Dorsal | v_Dif)
+$v_Toll: v_Spz
+$v_Tube: v_MyD88

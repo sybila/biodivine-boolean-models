@@ -1,0 +1,117 @@
+v_Ag_b1 -> v_Ag_b2
+v_Ag_b2 -> v_Ag_b2
+v_PIP3 -> v_Akt
+v_C_Jun -> v_AP_1
+v_c_Fos -> v_AP_1
+v_SLP_76 -> v_Bcr
+v_Lyn -> v_Btk
+v_Syk -> v_Btk
+v_JNK -> v_C_Jun
+v_ERK -> v_c_Fos
+v_IP3 -> v_Ca
+v_Ca -> v_CALCINEURIN
+v_Lyn -> v_Cbp_PAG
+v_Cbp_PAG -> v_Csk
+v_PIP2 -> v_DAG
+v_PLCG1 -> v_DAG
+v_ERK -> v_Elk_1
+v_JNK -> v_Elk_1
+v_MEK -> v_ERK
+v_Ag_b1 -> v_FceRI_IgE
+v_Lyn -> v_FceRI_IgE
+v_FceRI_IgE -> v_FceRI_IgE_P
+v_Ag_b1 -> v_FcgRIIB
+v_Ag_b2 -> v_FcgRIIB
+v_FcgRIIB -> v_FcgRIIB_P
+v_Lyn -> v_FcgRIIB_P
+v_Csk -| v_FYN
+v_FYN -> v_Gab2
+v_LAT2 -> v_Gab2
+v_Bcr -> v_GRB2_SOS
+v_ERK -| v_GRB2_SOS
+v_LAT -> v_GRB2_SOS
+v_RasGAP_Dok1 -| v_GRB2_SOS
+v_PIP2 -> v_IP3
+v_PLCG1 -> v_IP3
+v_MEKK4_7 -> v_JNK
+v_Syk -> v_LAT
+v_Lyn -> v_LAT2
+v_Syk -> v_LAT2
+v_cCbl -| v_Lyn
+v_Lyn -> v_Lyn
+v_Raf -> v_MEK
+v_PAK2 -> v_MEKK1
+v_MEKK1 -> v_MEKK4_7
+v_CALCINEURIN -> v_NFAT
+v_PKC -> v_NF_kB
+v_Rac1 -> v_PAK2
+v_Gab2 -> v_PI3K
+v_PI3K -> v_PIP3
+v_PIP2 -> v_PIP3
+v_SHIP_1 -| v_PIP3
+v_DAG -> v_PKC
+v_ERK -> v_PLA
+v_Btk -> v_PLCG1
+v_LAT -> v_PLCG1
+v_PIP3 -> v_PLCG1
+v_Syk -> v_PLCG1
+v_RAS -> v_Raf
+v_Bcr -> v_Rac1
+v_SLP_76 -> v_Rac1
+v_VAV -> v_Rac1
+v_GRB2_SOS -> v_RAS
+v_PKC -> v_RAS
+v_SHIP_1 -> v_RasGAP_Dok1
+v_FcgRIIB_P -> v_SHIP_1
+v_Syk -> v_SLP_76
+v_cCbl -| v_Syk
+v_ERK -> v_Syk
+v_FceRI_IgE_P -> v_Syk
+v_Lyn -> v_Syk
+v_Syk -> v_Syk
+v_Syk -> v_VAV
+$v_AP_1: (v_C_Jun & v_c_Fos)
+$v_Ag_b2: (v_Ag_b1 & v_Ag_b2)
+$v_Akt: v_PIP3
+$v_Bcr: v_SLP_76
+$v_Btk: (v_Lyn & v_Syk)
+$v_CALCINEURIN: v_Ca
+$v_C_Jun: v_JNK
+$v_Ca: v_IP3
+$v_Cbp_PAG: v_Lyn
+$v_Csk: v_Cbp_PAG
+$v_DAG: (v_PIP2 & v_PLCG1)
+$v_ERK: v_MEK
+$v_Elk_1: ((!v_ERK & v_JNK) | v_ERK)
+$v_FYN: !v_Csk
+$v_FceRI_IgE: (v_Ag_b1 & v_Lyn)
+$v_FceRI_IgE_P: v_FceRI_IgE
+$v_FcgRIIB: (v_Ag_b1 & v_Ag_b2)
+$v_FcgRIIB_P: (v_FcgRIIB & v_Lyn)
+$v_GRB2_SOS: (((v_Bcr & !v_ERK) & v_LAT) & !v_RasGAP_Dok1)
+$v_Gab2: (v_FYN & v_LAT2)
+$v_IP3: (v_PIP2 & v_PLCG1)
+$v_JNK: v_MEKK4_7
+$v_LAT: v_Syk
+$v_LAT2: (v_Lyn & v_Syk)
+$v_Lyn: (!v_cCbl & v_Lyn)
+$v_MEK: v_Raf
+$v_MEKK1: v_PAK2
+$v_MEKK4_7: v_MEKK1
+$v_NFAT: v_CALCINEURIN
+$v_NF_kB: v_PKC
+$v_PAK2: v_Rac1
+$v_PI3K: v_Gab2
+$v_PIP3: ((v_PI3K & v_PIP2) & !v_SHIP_1)
+$v_PKC: v_DAG
+$v_PLA: v_ERK
+$v_PLCG1: ((((v_Btk & !v_LAT) & v_PIP3) & v_Syk) | ((v_Btk & v_LAT) & v_Syk))
+$v_RAS: ((!v_GRB2_SOS & v_PKC) | v_GRB2_SOS)
+$v_Rac1: ((v_Bcr & v_SLP_76) & v_VAV)
+$v_Raf: v_RAS
+$v_RasGAP_Dok1: v_SHIP_1
+$v_SHIP_1: v_FcgRIIB_P
+$v_SLP_76: v_Syk
+$v_Syk: ((((((!v_cCbl & !v_ERK) & v_FceRI_IgE_P) & v_Lyn) | (((!v_cCbl & v_ERK) & !v_FceRI_IgE_P) & v_Syk)) | ((((!v_cCbl & v_ERK) & v_FceRI_IgE_P) & !v_Lyn) & v_Syk)) | (((!v_cCbl & v_ERK) & v_FceRI_IgE_P) & v_Lyn))
+$v_VAV: v_Syk
+$v_c_Fos: v_ERK

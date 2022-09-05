@@ -1,0 +1,47 @@
+targets, factors
+RCARs, ABA
+PEPC, !ABA
+PI3P5K__PtdIns_3_5_P2__V_PPase, ABA
+ABI1, !PA_DAGK_PC & (!RCARs | ROP11_GEF1_4_10) & !RBOH_RCN1_b__ROS_a & pHc
+ABI2, (!RCARs | ROP11_GEF1_4_10) & !RBOH_RCN1_b__ROS_a
+HAB1, !RCARs & !RBOH_RCN1_b__ROS_a
+PP2CA, !RCARs & !RBOH_RCN1_b__ROS_a
+OST1__PIP2_1, (!ABI1 & !HAB1) | (!PP2CA & !ABI2) | (!ABI1 & !ABI2) | (!HAB1 & !PP2CA) | (!HAB1 & !ABI2) | (!ABI1 & !PP2CA)
+RBOH_RCN1_b__ROS_a, pHc & !ABI1 & OST1__PIP2_1 & SPHK1_2__S1P__SPP1_Sph__GPA1__GCR1 & PA_DAGK_PC
+GHR1, !ABI2 & RBOH_RCN1_b__ROS_a
+NO_Nitrite_a, NIA1_2
+NIA1_2, RBOH_RCN1_b__ROS_a
+NOGC1__cGMP_GTP, NO_Nitrite_a
+8_nitro_cGMP__ADPRc__cADPR_a, NOGC1__cGMP_GTP & RBOH_RCN1_b__ROS_a & NO_Nitrite_a
+CIS, InsP3__InsP6_c | 8_nitro_cGMP__ADPRc__cADPR_a
+CaIM__ABH1__ERA1_MRP5_NtSyp121,  Actin_Reorganization_ARP_Complex_SCAB1_b_c | GHR1  
+Ca2_, (CIS | CaIM__ABH1__ERA1_MRP5_NtSyp121) & !Ca2__ATPase 
+Ca2__ATPase, Ca2_
+CPK3_21, Ca2_ | CPK3_21
+MPK9_12, Ca2_ | MPK9_12
+PLC, Ca2_
+DAG_c, PLC
+InsP3__InsP6_c, PLC
+PLDa, SPHK1_2__S1P__SPP1_Sph__GPA1__GCR1 & Ca2_
+PLDdel_GAPC1_2, NO_Nitrite_a | RBOH_RCN1_b__ROS_a
+PA_DAGK_PC, PLDdel_GAPC1_2 | PLDa | DAG_c
+SPHK1_2__S1P__SPP1_Sph__GPA1__GCR1, PA_DAGK_PC | ABA
+V_ATPase, Ca2_
+TCTP, Ca2_
+Microtubule_Depolymerization, TCTP | Microtubule_Depolymerization
+pHc, ((OST1__PIP2_1 & !ABI2 & !ABI1) | Ca2_) & Vacuolar_Acidification
+H__ATPase, !pHc & !Ca2_ & !RBOH_RCN1_b__ROS_a
+AtRAC1, !ABA | ABI1
+Actin_Reorganization_ARP_Complex_SCAB1_b_c, !AtRAC1
+SLAC1, (CPK6_23 | CPK3_21) & MPK9_12 & OST1__PIP2_1 & GHR1 & !ABI1 & !PP2CA & !ABI2 & pHc 
+QUAC1, OST1__PIP2_1 & Ca2_
+SLAH3, CPK6_23 & CPK3_21 & !ABI1
+AnionEM, SLAC1 | QUAC1 & SLAH3
+Malate, PEPC & !ABA & !AnionEM
+KEV, Vacuolar_Acidification | Ca2_
+Depolarization, (AnionEM | Ca2_ | KEV) & (!H__ATPase | !K__efflux)  
+KOUT, (!NO_Nitrite_a | !RBOH_RCN1_b__ROS_a | pHc) & Depolarization
+K__efflux, KEV & KOUT 
+H2O_Efflux, AnionEM & OST1__PIP2_1 & K__efflux & !Malate
+Closure, Microtubule_Depolymerization & H2O_Efflux
+Vacuolar_Acidification, PI3P5K__PtdIns_3_5_P2__V_PPase | V_ATPase | Vacuolar_Acidification

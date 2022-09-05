@@ -1,0 +1,604 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" layout:required="false" level="3" qual:required="true" xmlns:layout="http://www.sbml.org/sbml/level3/version1/layout/version1" version="1" xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+  <model metaid="_61f5293d-bbc2-42e8-a2e9-1c1b660837e6" id="model_id">
+    <notes>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Leaning on the differential model published by Ciliberto et al (2003), we have delineated a logical model for the regulatory network monitoring the formation of the bud (BUD), called the morphogenetic check-point (MCP). 
+This model accounts for the fact that the cell cycle is temporary blocked in G2 phase in case of budding defect. This G2 blocking can be bypassed in the presence of high Clb2 activity level, which correlates with the growth of the cell. Consequently, nuclear division occurs without cell division, thereby giving rise to dinucleate cells. To properly model this phenomenon, we have considered a second threshold for the MASS component, which denotes a mass large enough to bypass G2 arrest.
+This logical model recapitulates the wild-type and knockout phenotypes considered by Ciliberto et al (2003), as well as three additional knockout mutants described in Harrison et al (2001). As this model focuses on Clb2 activation depending on the mass of the cell, its dynamics is analysed in terms of stable states for each possible value of MASS.
+</p>
+  </body>
+    </notes>
+    <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_61f5293d-bbc2-42e8-a2e9-1c1b660837e6">
+          <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/14691135"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/11283616"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+      <layout:listOfLayouts xmlns:layout="http://www.sbml.org/sbml/level3/version1/layout/version1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <layout:layout layout:id="__layout__">
+        <layout:dimensions layout:height="252" layout:width="306"/>
+        <layout:listOfAdditionalGraphicalObjects>
+          <layout:generalGlyph layout:id="_ly_BUD" layout:reference="BUD">
+            <layout:boundingBox>
+              <layout:position layout:x="246" layout:y="142"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_SBF" layout:reference="SBF">
+            <layout:boundingBox>
+              <layout:position layout:x="6" layout:y="178"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Swe1" layout:reference="Swe1">
+            <layout:boundingBox>
+              <layout:position layout:x="87" layout:y="221"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Mih1" layout:reference="Mih1">
+            <layout:boundingBox>
+              <layout:position layout:x="93" layout:y="63"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Clb2" layout:reference="Clb2">
+            <layout:boundingBox>
+              <layout:position layout:x="91" layout:y="139"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_MASS" layout:reference="MASS">
+            <layout:boundingBox>
+              <layout:position layout:x="6" layout:y="30"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Mpk1" layout:reference="Mpk1">
+            <layout:boundingBox>
+              <layout:position layout:x="192" layout:y="62"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Hsl1" layout:reference="Hsl1">
+            <layout:boundingBox>
+              <layout:position layout:x="181" layout:y="222"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+        </layout:listOfAdditionalGraphicalObjects>
+      </layout:layout>
+    </layout:listOfLayouts>
+    <qual:listOfQualitativeSpecies xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="false" qual:id="BUD">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Mass acts indirectly on BUD, through Cln2, Cln3 and Clb5 which are not represented here for the sake of simplicity. In this model mass is thus required to activate BUD.
+
+Hsl1 and Hsl7 are recruited and activated at the bud neck, where they can inactivate Swe1.
+
+When BUD formation fails, a MAPK pathway is thought to inhibit Mih1.</p>
+  </body>
+        </notes>
+      </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="false" qual:id="SBF">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Transcription factor, activated by the G1 cyclins, and thus indirectly by mass (cf yeast cell cycle core model)
+
+Activates the transcription of SBF activates the transcription of Swe1</p>
+  </body>
+        </notes>
+      </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="2" qual:compartment="comp1" qual:constant="false" qual:id="Swe1">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Kinase. Budding yeast homologue of Wee1.
+
+Activated by the MBF and inhibited by Hsl1 and Hsl7.
+
+Inhibits Clb2 activity by phosphorylating its Cdk partner Cdc28 on tyrosine-19.</p>
+  </body>
+        </notes>
+      </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="2" qual:compartment="comp1" qual:constant="false" qual:id="Mih1">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Phosphatase.Budding yeast homologue of Cdc25.
+
+Activates Clb2 by removing an inhibitory phosphate from Cdc28 on tyrosine-19.</p>
+  </body>
+        </notes>
+      </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="2" qual:compartment="comp1" qual:constant="false" qual:id="Clb2">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>B-type cyclin essential for mitosis, present in S/G2/M phase (represents both Clb1 and Clb2 in the model).</p>
+  </body>
+        </notes>
+      </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="2" qual:compartment="comp1" qual:constant="false" qual:id="MASS">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Represents the mass of the cell. Considered an input in this model.
+
+We assume that mass increase inpacts the cell cycle by increasing Cyclins concentration in the nucleus.
+
+In the wild-type, MASS has to cross the first threshold to initiate the cycle. 
+
+MASS has to cross the second threshold to overcome the morphogenesis checkpoint inhibition of Clb2.</p>
+  </body>
+        </notes>
+      </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="false" qual:id="Mpk1">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Kinase. Budding yeast homologue of Wee1.
+
+Activated by the MBF and inhibited by Hsl1 and Hsl7.
+
+Inhibits Clb2 activity by phosphorylating its Cdk partner Cdc28 on tyrosine-19.</p>
+  </body>
+        </notes>
+      </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="false" qual:id="Hsl1">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Activation depends on bud presence.
+
+Inhibits Swe1 (mecanism is unclear.)</p>
+  </body>
+        </notes>
+      </qual:qualitativeSpecies>
+    </qual:listOfQualitativeSpecies>
+    <qual:listOfTransitions xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:transition qual:id="tr_BUD">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="MASS" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_BUD_in_5"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="BUD" qual:transitionEffect="assignmentLevel" qual:id="tr_BUD_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <geq/>
+                <ci> MASS </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_SBF">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Clb2" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_SBF_in_4"/>
+          <qual:input qual:qualitativeSpecies="MASS" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_SBF_in_5"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="SBF" qual:transitionEffect="assignmentLevel" qual:id="tr_SBF_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <leq/>
+                  <ci> Clb2 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <geq/>
+                  <ci> MASS </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Swe1">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="SBF" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Swe1_in_1"/>
+          <qual:input qual:qualitativeSpecies="Clb2" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Swe1_in_4"/>
+          <qual:input qual:qualitativeSpecies="Hsl1" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Swe1_in_7"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Swe1" qual:transitionEffect="assignmentLevel" qual:id="tr_Swe1_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> SBF </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <leq/>
+                    <ci> Clb2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Hsl1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> SBF </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Clb2 </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Hsl1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:functionTerm qual:resultLevel="2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> SBF </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <leq/>
+                  <ci> Clb2 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Hsl1 </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Mih1">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Clb2" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Mih1_in_4"/>
+          <qual:input qual:qualitativeSpecies="Mpk1" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Mih1_in_6"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Mih1" qual:transitionEffect="assignmentLevel" qual:id="tr_Mih1_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Clb2 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mpk1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <geq/>
+                    <ci> Clb2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mpk1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:functionTerm qual:resultLevel="2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <geq/>
+                  <ci> Clb2 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Mpk1 </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Clb2">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Swe1" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Clb2_in_2"/>
+          <qual:input qual:qualitativeSpecies="Mih1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Clb2_in_3"/>
+          <qual:input qual:qualitativeSpecies="MASS" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Clb2_in_5"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Clb2" qual:transitionEffect="assignmentLevel" qual:id="tr_Clb2_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Swe1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <leq/>
+                    <ci> Mih1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> MASS </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Swe1 </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mih1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> MASS </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Swe1 </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mih1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> MASS </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:functionTerm qual:resultLevel="2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Swe1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> MASS </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Swe1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <leq/>
+                    <ci> Mih1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> MASS </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Swe1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mih1 </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> MASS </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Swe1 </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mih1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> MASS </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Swe1 </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mih1 </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> MASS </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_MASS">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="MASS" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_MASS_in_5"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="MASS" qual:transitionEffect="assignmentLevel" qual:id="tr_MASS_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> MASS </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:functionTerm qual:resultLevel="2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> MASS </ci>
+                <cn type="integer"> 2 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Mpk1">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="BUD" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Mpk1_in_0"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Mpk1" qual:transitionEffect="assignmentLevel" qual:id="tr_Mpk1_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> BUD </ci>
+                <cn type="integer"> 0 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Hsl1">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="BUD" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Hsl1_in_0"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Hsl1" qual:transitionEffect="assignmentLevel" qual:id="tr_Hsl1_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> BUD </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+    </qual:listOfTransitions>
+    <listOfCompartments>
+      <compartment constant="true" id="comp1"/>
+    </listOfCompartments>
+  </model>
+</sbml>

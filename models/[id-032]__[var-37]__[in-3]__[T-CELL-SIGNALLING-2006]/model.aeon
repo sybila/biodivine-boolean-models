@@ -1,0 +1,90 @@
+v_MEK -> v_ERK
+v_PKCth -> v_SEK
+v_IP3 -> v_Ca
+v_ERK -> v_Rsk
+v_SLP76 -> v_Itk
+v_ZAP70 -> v_Itk
+v_LAT -> v_Grb2Sos
+v_ZAP70 -> v_LAT
+v_ZAP70 -> v_cCbl
+v_Grb2Sos -> v_Ras
+v_RasGRP1 -> v_Ras
+v_PKCth -> v_RasGRP1
+v_DAG -> v_RasGRP1
+v_TCRlig -> v_TCRbind
+v_cCbl -| v_TCRbind
+v_Raf -> v_MEK
+v_DAG -> v_PKCth
+v_Lck -> v_Rlk
+v_ERK -> v_Fos
+v_Fos -> v_AP1
+v_Jun -> v_AP1
+v_Ca -> v_Calcin
+v_LAT -> v_PLCg_bind
+v_Rlk -> v_PLCg_act
+v_SLP76 -> v_PLCg_act
+v_ZAP70 -> v_PLCg_act
+v_Itk -> v_PLCg_act
+v_PLCg_bind -> v_PLCg_act
+v_JNK -> v_Jun
+v_IKKbeta -| v_IkB
+v_IkB -| v_Nfkb
+v_Calcin -> v_NFAT
+v_Gads -> v_SLP76
+v_CD45 -> v_Lck
+v_CD8 -> v_Lck
+v_PAGCsk -| v_Lck
+v_SEK -> v_JNK
+v_PLCg_act -> v_DAG
+v_Ras -> v_Raf
+v_TCRbind -|? v_PAGCsk
+v_Fyn -> v_PAGCsk
+v_PKCth -> v_IKKbeta
+v_PLCg_act -> v_IP3
+v_Lck -> v_ZAP70
+v_cCbl -| v_ZAP70
+v_TCRphos -> v_ZAP70
+v_Lck -> v_Fyn
+v_CD45 -> v_Fyn
+v_TCRbind -> v_Fyn
+v_Fyn -> v_TCRphos
+v_Rsk -> v_CREB
+v_CREB -> v_CRE
+v_LAT -> v_Gads
+$v_AP1: (v_Fos & v_Jun)
+$v_CRE: v_CREB
+$v_CREB: v_Rsk
+$v_Ca: v_IP3
+$v_Calcin: v_Ca
+$v_DAG: v_PLCg_act
+$v_ERK: v_MEK
+$v_Fos: v_ERK
+$v_Fyn: ((v_CD45 & v_Lck) | (v_TCRbind & v_CD45))
+$v_Gads: v_LAT
+$v_Grb2Sos: v_LAT
+$v_IKKbeta: v_PKCth
+$v_IP3: v_PLCg_act
+$v_IkB: !v_IKKbeta
+$v_Itk: (v_ZAP70 & v_SLP76)
+$v_JNK: v_SEK
+$v_Jun: v_JNK
+$v_LAT: v_ZAP70
+$v_Lck: ((v_CD45 & v_CD8) & !v_PAGCsk)
+$v_MEK: v_Raf
+$v_NFAT: v_Calcin
+$v_Nfkb: !v_IkB
+$v_PAGCsk: v_Fyn
+$v_PKCth: v_DAG
+$v_PLCg_act: ((v_ZAP70 & ((v_Rlk & v_SLP76) & v_PLCg_bind)) | (v_Itk & ((v_SLP76 & v_ZAP70) & v_PLCg_bind)))
+$v_PLCg_bind: v_LAT
+$v_Raf: v_Ras
+$v_Ras: (v_RasGRP1 | v_Grb2Sos)
+$v_RasGRP1: (v_PKCth & v_DAG)
+$v_Rlk: v_Lck
+$v_Rsk: v_ERK
+$v_SEK: v_PKCth
+$v_SLP76: v_Gads
+$v_TCRbind: (v_TCRlig & !v_cCbl)
+$v_TCRphos: v_Fyn
+$v_ZAP70: ((v_TCRphos & v_Lck) & !v_cCbl)
+$v_cCbl: v_ZAP70

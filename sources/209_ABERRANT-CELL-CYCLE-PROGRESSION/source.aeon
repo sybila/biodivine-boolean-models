@@ -1,0 +1,540 @@
+GF_High -> GF
+GF -> GF
+$GF: GF | GF_High
+
+CAD -| RTK
+GF -> RTK
+GF_High -> RTK
+$RTK: !CAD & (GF_High | GF)
+
+RTK -> Grb2
+GF_High -> Grb2
+$Grb2: RTK & GF_High
+
+Grb2 -> SOS
+$SOS: Grb2
+Grb2 -> Ras
+SOS -> Ras
+$Ras: Grb2 & SOS
+
+Casp3 -| RAF
+Ras -> RAF
+$RAF: !Casp3 & Ras
+
+RAF -> MEK
+$MEK: RAF
+
+MEK -> ERK
+$ERK: MEK
+
+PIP3 -> mTORC2
+S6K -| mTORC2
+$mTORC2: PIP3 | !S6K
+
+Ras -> PI3K
+RTK -> PI3K
+$PI3K: Ras | RTK
+
+PI3K -> PIP3
+PI3K_H -> PIP3
+$PIP3: PI3K_H | PI3K
+
+PI3K -> PDK1
+PIP3 -> PDK1
+$PDK1: PI3K & PIP3
+
+Casp3 -| AKT_B
+PIP3 -> AKT_B
+PDK1 -> AKT_B
+mTORC2 -> AKT_B
+$AKT_B: !Casp3 & PIP3 & (PDK1 | mTORC2)
+
+FoxO3 -> p110_H
+NeddL4 -| p110_H
+p110_H -> p110_H
+$p110_H: (FoxO3 & !NeddL4) | (p110_H & (FoxO3 | !NeddL4))
+
+p110_H -> PI3K_H
+PI3K -> PI3K_H
+RTK -> PI3K_H
+Ras -> PI3K_H
+$PI3K_H: p110_H & PI3K & RTK & Ras
+
+AKT_B -> AKT_H
+p110_H -> AKT_H
+PI3K_H -> AKT_H
+PIP3 -> AKT_H
+PDK1 -> AKT_H
+mTORC2 -> AKT_H
+Ras -> AKT_H
+$AKT_H: AKT_B & p110_H & PI3K_H & PIP3 & PDK1 & mTORC2 & Ras
+
+AKT_H -| FoxO3
+AKT_B -| FoxO3
+ERK -| FoxO3
+Plk1 -| FoxO3
+Plk1_H -| FoxO3
+$FoxO3: !(AKT_B | AKT_H | ERK) | ( !(AKT_H & (Plk1 | Plk1_H | AKT_B | ERK) ) & !(Plk1 & Plk1_H & ERK) )
+
+RTK -> PLCgamma
+Grb2 -> PLCgamma
+p110_H -> PLCgamma
+PI3K_H -> PLCgamma
+PIP3 -> PLCgamma
+$PLCgamma: RTK & Grb2 & p110_H & PI3K_H & PIP3
+
+PLCgamma -> IP3
+$IP3: PLCgamma
+
+IP3 -> Ca2_
+$Ca2_: IP3
+
+Ca2_ -> NeddL4
+IP3 -> NeddL4
+$NeddL4: Ca2_ & IP3
+
+AKT_H -| FoxO1
+Plk1 -| FoxO1
+$FoxO1: !Plk1 & !AKT_H
+
+FoxO1 -> p21_mRNA
+FoxO3 -> p21_mRNA
+Myc -| p21_mRNA
+$p21_mRNA: (FoxO1 & FoxO3) | (!Myc & (FoxO1 | FoxO3))
+
+AKT_H -| TSC2
+AKT_B -| TSC2
+ERK -| TSC2
+$TSC2: !AKT_H | !(AKT_B | ERK)
+
+AKT_H -| PRAS40
+AKT_B -| PRAS40
+mTORC1 -| PRAS40
+$PRAS40: !AKT_H & (!mTORC1 | !AKT_B)
+
+PLCgamma -> DAG
+$DAG: PLCgamma
+
+TSC2 -| Rheb
+DAG -> Rheb
+$Rheb: !TSC2 & DAG
+
+Casp3 -| mTORC1
+Rheb -> mTORC1
+PRAS40 -| mTORC1
+E2F1 -> mTORC1
+Cdk1 -> mTORC1
+CyclinB -> mTORC1
+GSK3 -> mTORC1
+$mTORC1: !Casp3 & ( (Rheb & !PRAS40) | E2F1 | (CyclinB & Cdk1 & GSK3) )
+
+Casp3 -| S6K
+mTORC1 -> S6K
+$S6K: !Casp3 & mTORC1
+
+Casp3 -| eIF4E
+mTORC1 -> eIF4E
+$eIF4E: !Casp3 & mTORC1
+
+AKT_H -| GSK3
+ERK -| GSK3
+S6K -| GSK3
+$GSK3: !AKT_H & !(S6K & ERK)
+
+p21_mRNA -> p21
+Casp3 -| p21
+CyclinE -| p21
+$p21: p21_mRNA & !Casp3 & !CyclinE
+
+Casp3 -| pRB
+CyclinD1 -| pRB
+CyclinA -| pRB
+p27Kip1 -> pRB
+CyclinE -| pRB
+$pRB: !Casp3 & !CyclinD1 & !CyclinA & (p27Kip1 | !CyclinE)
+
+Casp3 -| p27Kip1
+CyclinD1 -| p27Kip1
+Cdk1 -| p27Kip1
+CyclinB -| p27Kip1
+CyclinE -| p27Kip1
+CyclinA -| p27Kip1
+FoxO1 -> p27Kip1
+FoxO3 -> p27Kip1
+$p27Kip1: !Casp3 & !CyclinD1 & !(Cdk1 & CyclinB) & ( (!CyclinE & (FoxO3 & FoxO1) ) | (!CyclinA & (FoxO3 | FoxO1) ) | (!CyclinE & !CyclinA) )
+
+ERK -> Myc
+GSK3 -| Myc
+eIF4E -> Myc
+E2F1 -> Myc
+pRB -| Myc
+$Myc: (ERK & (eIF4E | !GSK3)) | (E2F1 & !pRB & (eIF4E | ERK | !GSK3) )
+
+CHK1 -| CyclinD1
+p21 -| CyclinD1
+E2F1 -> CyclinD1
+pRB -| CyclinD1
+Myc -> CyclinD1
+GSK3 -| CyclinD1
+CyclinD1 -> CyclinD1
+$CyclinD1: !CHK1 & ( ( !p21 & ( (!GSK3 & (Myc | E2F1)) | (Myc & CyclinD1) | (Myc & E2F1) | (E2F1 & CyclinD1) ) ) | ( !pRB & E2F1 & ( (Myc & CyclinD1) | (Myc & !GSK3) | (CyclinD1 & !GSK3) ) ) )
+
+CAD -| E2F1
+CyclinA -| E2F1
+pRB -| E2F1
+E2F1 -> E2F1
+Myc -> E2F1
+$E2F1: !(CAD | CyclinA | pRB) & (E2F1 | Myc)
+
+E2F1 -> CyclinE
+Cdc6 -> CyclinE
+Pre_RC -> CyclinE
+pRB -| CyclinE
+p27Kip1 -| CyclinE
+CHK1 -| CyclinE
+Casp3 -| CyclinE
+$CyclinE: E2F1 & Cdc6 & Pre_RC & !(pRB | p27Kip1 | CHK1 | Casp3)
+
+CAD -| CyclinA_mRNA
+E2F1 -> CyclinA_mRNA
+pRB -| CyclinA_mRNA
+FoxM1 -> CyclinA_mRNA
+$CyclinA_mRNA: !CAD & ( (E2F1 & !pRB) | FoxM1 )
+
+E2F1 -> Emi1
+pRB -| Emi1
+p21 -| Emi1
+Plk1 -| Emi1
+CyclinB -| Emi1
+Cdk1 -| Emi1
+U_Kinetochores -| Emi1
+A_Kinetochores -| Emi1
+$Emi1: (E2F1 | !pRB | !p21) & !(Plk1 & CyclinB & Cdk1 & (U_Kinetochores | A_Kinetochores))
+
+Myc -> FoxM1
+CyclinE -> FoxM1
+CyclinA -> FoxM1
+Cdc25A -> FoxM1
+Cdc25B -> FoxM1
+CyclinB -> FoxM1
+Cdk1 -> FoxM1
+Plk1 -> FoxM1
+$FoxM1: (Myc & CyclinE) | (CyclinA & Cdc25A & Cdc25B) | (Plk1 & CyclinB & Cdk1)
+
+FoxM1 -> Cdc25A
+E2F1 -> Cdc25A
+pRB -| Cdc25A
+Cdh1 -| Cdc25A
+GSK3 -| Cdc25A
+CHK1 -| Cdc25A
+CyclinE -> Cdc25A
+CyclinA -> Cdc25A
+Cdk1 -> Cdc25A
+CyclinB -> Cdc25A
+$Cdc25A: ( (FoxM1 & E2F1 & !pRB) | ( !Cdh1 & (FoxM1 | (E2F1 & !pRB) ) ) ) & (!(GSK3 | CHK1) | CyclinE | CyclinA | (CyclinB & Cdk1) )
+
+CyclinA_mRNA -> CyclinA
+pAPC -| CyclinA
+Cdc25A -> CyclinA
+Cdh1 -| CyclinA
+Emi1 -> CyclinA
+UbcH10 -| CyclinA
+CyclinA -> CyclinA
+$CyclinA: CyclinA_mRNA & !pAPC & ( (Cdc25A & (!Cdh1 | Emi1) ) | (CyclinA & ( (!Cdh1 & (Emi1 | !UbcH10) ) | (Emi1 & !UbcH10) ) ) )
+
+Casp3 -| Wee1
+CHK1 -> Wee1
+Replication -> Wee1
+Cdk1 -| Wee1
+CyclinB -| Wee1
+CyclinA -| Wee1
+Plk1 -| Wee1
+$Wee1: !Casp3 & (Replication | CHK1) & !(Cdk1 & CyclinB) & (CHK1 | !(Cdk1 & CyclinA & Plk1) )
+
+Cdh1 -| UbcH10
+UbcH10 -> UbcH10
+Cdc20 -> UbcH10
+CyclinA -> UbcH10
+CyclinB -> UbcH10
+$UbcH10: !Cdh1 | (UbcH10 & (Cdc20 | CyclinA | CyclinB) )
+
+FoxM1 -> CyclinB
+FoxO3 -> CyclinB
+CyclinB -> CyclinB
+Cdh1 -| CyclinB
+pAPC -| CyclinB
+Cdc20 -| CyclinB
+$CyclinB: (FoxM1 | (FoxO3 & CyclinB) ) & !(Cdh1 | (pAPC & Cdc20) )
+
+FoxM1 -> Cdc25B
+4N_DNA -> Cdc25B
+$Cdc25B: FoxM1 & 4N_DNA
+
+Cdh1 -| Plk1
+FoxM1 -> Plk1
+Plk1_H -> Plk1
+CyclinB -> Plk1
+Cdk1 -> Plk1
+CyclinA -> Plk1
+Wee1 -| Plk1
+Cdc25A -> Plk1
+$Plk1: !Cdh1 & (FoxM1 | Plk1_H) & ( (CyclinB & Cdk1) | (CyclinA & !Wee1 & Cdc25A) )
+
+Plk1 -> Cdc25C
+Cdc25B -> Cdc25C
+CHK1 -| Cdc25C
+Cdk1 -> Cdc25C
+CyclinB -> Cdc25C
+4N_DNA -> Cdc25C
+$Cdc25C: 4N_DNA & Plk1 & ( (Cdc25B & !CHK1) | (CyclinB & Cdk1) )
+
+CyclinB -> Cdk1
+Cdc25C -> Cdk1
+Cdk1 -> Cdk1
+Wee1 -| Cdk1
+CHK1 -| Cdk1
+$Cdk1: CyclinB & Cdc25C & ( !CHK1 | (!Wee1 & Cdk1) )
+
+CyclinB -> pAPC
+Cdk1 -> pAPC
+Plk1 -> pAPC
+pAPC -> pAPC
+Cdc20 -> pAPC
+$pAPC: (CyclinB & Cdk1 & Plk1) | (CyclinB & Cdk1 & pAPC) | (pAPC & Cdc20)
+
+Cdh1 -| Cdc20
+Cdk1 -| Cdc20
+CyclinB -| Cdc20
+CyclinA -| Cdc20
+Emi1 -| Cdc20
+Mad2 -| Cdc20
+pAPC -> Cdc20
+$Cdc20: pAPC & !Emi1 & !Cdh1 & ( !Mad2 | ( !CyclinA & !(CyclinB & Cdk1) ) )
+
+CyclinB -| Cdh1
+Cdk1 -| Cdh1
+CyclinA -| Cdh1
+Cdc25A -| Cdh1
+Emi1 -| Cdh1
+$Cdh1: !(CyclinB & Cdk1) & !( CyclinA & (Emi1 | Cdc25A) )
+
+E2F1 -? ORC
+Pre_RC -> ORC
+Cdc6 -> ORC
+Cdt1 -> ORC
+$ORC: E2F1 | (Pre_RC & Cdt1 & Cdc6)
+
+Casp3 -| Cdc6
+CyclinA -| Cdc6
+4N_DNA -| Cdc6
+E2F1 -> Cdc6
+ORC -> Cdc6
+Plk1 -| Cdc6
+Pre_RC -> Cdc6
+Cdc6 -> Cdc6
+Cdt1 -> Cdc6
+$Cdc6: !Casp3 & !(4N_DNA & CyclinA) & ( (E2F1 & ORC & !Plk1) | (Pre_RC & ORC & Cdc6 & Cdt1) )
+
+ORC -> Cdt1
+Cdc6 -> Cdt1
+CyclinE -| Cdt1
+CyclinA -| Cdt1
+Cdc25A -| Cdt1
+Pre_RC -> Cdt1
+Myc -> Cdt1
+E2F1 -> Cdt1
+pRB -| Cdt1
+geminin -| Cdt1
+$Cdt1: !geminin & ORC & Cdc6 & !(CyclinE & CyclinA & Cdc25A) & ( (Pre_RC & (E2F1 | Myc)) | (E2F1 & (Myc | !pRB) ) )
+
+ORC -> Pre_RC
+Cdc6 -> Pre_RC
+Cdt1 -> Pre_RC
+Replication -| Pre_RC
+4N_DNA -| Pre_RC
+$Pre_RC: ORC & Cdc6 & Cdt1 & !(Replication & 4N_DNA)
+
+E2F1 -> geminin
+Cdh1 -| geminin
+pAPC -| geminin
+Cdc20 -| geminin
+$geminin: E2F1 & !Cdh1 & !(pAPC & Cdc20)
+
+CAD -| Replication
+Pre_RC -> Replication
+E2F1 -> Replication
+CyclinE -> Replication
+Cdc25A -> Replication
+CyclinA -> Replication
+Replication -> Replication
+4N_DNA -| Replication
+$Replication: !CAD & Pre_RC & ( (E2F1 & CyclinE & Cdc25A) | (Replication & CyclinA & Cdc25A & (E2F1 | !4N_DNA) ))
+
+Replication -> ATR
+$ATR: Replication
+
+ATR -> CHK1
+$CHK1: ATR
+
+CAD -| 4N_DNA
+Replication -> 4N_DNA
+Pre_RC -> 4N_DNA
+CyclinA -> 4N_DNA
+4N_DNA -> 4N_DNA
+Ect2 -| 4N_DNA
+$4N_DNA: !CAD & ( (Replication & ((Pre_RC & CyclinA) | 4N_DNA) ) | (4N_DNA & !Ect2))
+
+4N_DNA -> U_Kinetochores
+Cdh1 -| U_Kinetochores
+A_Kinetochores -| U_Kinetochores
+CyclinB -> U_Kinetochores
+Cdk1 -> U_Kinetochores
+U_Kinetochores -> U_Kinetochores
+$U_Kinetochores: 4N_DNA & !Cdh1 & !A_Kinetochores & ((CyclinB & Cdk1) | U_Kinetochores)
+
+U_Kinetochores -> Mad2
+A_Kinetochores -| Mad2
+$Mad2: U_Kinetochores & !A_Kinetochores
+
+4N_DNA -> A_Kinetochores
+Cdh1 -| A_Kinetochores
+pAPC -| A_Kinetochores
+Cdc20 -| A_Kinetochores
+A_Kinetochores -> A_Kinetochores
+U_Kinetochores -> A_Kinetochores
+Plk1 -> A_Kinetochores
+CyclinB -> A_Kinetochores
+Cdk1 -> A_Kinetochores
+$A_Kinetochores: 4N_DNA & !Cdh1 & !(pAPC & Cdc20) & (A_Kinetochores | (U_Kinetochores & Plk1 & CyclinB & Cdk1) )
+
+Plk1 -> Plk1_H
+FoxM1 -> Plk1_H
+FoxO3 -> Plk1_H
+FoxO1 -> Plk1_H
+Plk1_H -> Plk1_H
+$Plk1_H: Plk1 & FoxM1 & (Plk1_H | FoxO3 | FoxO1)
+
+4N_DNA -> Ect2
+Plk1_H -> Ect2
+Cdh1 -> Ect2
+U_Kinetochores -| Ect2
+A_Kinetochores -| Ect2
+$Ect2: 4N_DNA & Plk1_H & Cdh1 & !U_Kinetochores & !A_Kinetochores
+
+Trail -> DR4_5
+$DR4_5: Trail
+
+DR4_5 -> Casp8
+Casp3 -> Casp8
+$Casp8: DR4_5 | Casp3
+
+Casp3 -> Casp2
+U_Kinetochores -> Casp2
+Mad2 -> Casp2
+Cdk1 -| Casp2
+CyclinB -| Casp2
+$Casp2: Casp3 | (U_Kinetochores & Mad2 & !(CyclinB & Cdk1) )
+
+Casp3 -| MCL_1
+Casp2 -| MCL_1
+U_Kinetochores -| MCL_1
+Cdk1 -| MCL_1
+CyclinB -| MCL_1
+E2F1 -| MCL_1
+ERK -> MCL_1
+GSK3 -| MCL_1
+AKT_B -> MCL_1
+$MCL_1: !Casp3 & !Casp2 & (!GSK3 | (AKT_B & (ERK | !E2F1) ) ) & (!(Cdk1 & CyclinB & U_Kinetochores) )
+
+Casp3 -| BCLXL
+BAD -| BCLXL
+BCL2 -> BCLXL
+MCL_1 -> BCLXL
+U_Kinetochores -| BCLXL
+Plk1 -> BCLXL
+Cdk1 -| BCLXL
+CyclinB -| BCLXL
+$BCLXL: !Casp3 & (BCL2 | !BAD) & ( !U_Kinetochores | ( Plk1 & ( !(CyclinB & Cdk1) | (BCL2 & MCL_1) ) ) | ( BCL2 & MCL_1 & !(CyclinB & Cdk1) ) )
+
+Casp3 -| BCL2
+BAD -| BCL2
+BIM -| BCL2
+BIK -| BCL2
+BCLXL -> BCL2
+MCL_1 -> BCL2
+U_Kinetochores -| BCL2
+Plk1 -> BCL2
+Cdk1 -| BCL2
+CyclinB -| BCL2
+$BCL2: !(Casp3 | BAD | BIM | BIK) & (!U_Kinetochores | (MCL_1 & BCLXL) | (Plk1 & (BCLXL | MCL_1 | !(Cdk1 & CyclinB) ) ) )
+
+Casp3 -> BAD
+Casp8 -> BAD
+AKT_B -| BAD
+AKT_H -| BAD
+ERK -| BAD
+S6K -| BAD
+$BAD: Casp3 | !(AKT_H | AKT_B | ERK | S6K) | (Casp8 & ( !(AKT_B & ERK & S6K) & !(AKT_H & (AKT_B | ERK) ) ) )
+
+BCL2 -| BIK
+BCLXL -| BIK
+MCL_1 -| BIK
+$BIK: !(MCL_1 | BCLXL | BCL2)
+
+FoxO3 -> BIM
+GSK3 -> BIM
+ERK -| BIM
+BCL2 -| BIM
+BCLXL -| BIM
+MCL_1 -| BIM
+$BIM: FoxO3 & GSK3 & !(ERK | MCL_1 | BCLXL | BCL2)
+
+Casp8 -> BID
+Casp2 -> BID
+BCL2 -| BID
+BCLXL -| BID
+MCL_1 -| BID
+$BID: Casp8 | ( Casp2 & !(BCL2 | BCLXL | MCL_1) )
+
+BID -> BAK
+BIM -> BAK
+BIK -> BAK
+BCLXL -| BAK
+MCL_1 -| BAK
+BCL2 -| BAK
+$BAK: (BID & (BIM | BIK | !(BCL2 & BCLXL & MCL_1) ) ) | ( (BIM | BIK) & !(BCLXL | MCL_1) )
+
+BIM -> BAX
+BID -> BAX
+BIK -> BAX
+BCL2 -| BAX
+BCLXL -| BAX
+MCL_1 -| BAX
+$BAX: (BIM & ( (BID | BIK) | !(BCL2 & BCLXL & MCL_1) ) ) | ( (BID | BIK) & !(BCL2 | BCLXL) )
+
+BAX -> Cyto_C
+BAK -> Cyto_C
+$Cyto_C: BAX | BAK
+
+BAX -> SMAC
+BAK -> SMAC
+$SMAC: BAX | BAK
+
+AKT_H -> IAPs
+SMAC -| IAPs
+$IAPs: !SMAC | AKT_H
+
+Casp3 -> Casp9
+IAPs -| Casp9
+Cyto_C -> Casp9
+$Casp9: Casp3 | (!IAPs & Cyto_C)
+
+IAPs -| Casp3
+Casp9 -> Casp3
+Casp8 -> Casp3
+Casp3 -> Casp3
+$Casp3: (Casp9 & Casp8) | ( Casp3 & (Casp9 | Casp8) ) | ( !IAPs & (Casp9 | Casp8 | Casp3) )
+
+Casp3 -> CAD
+Casp9 -> CAD
+$CAD: Casp3 & Casp9

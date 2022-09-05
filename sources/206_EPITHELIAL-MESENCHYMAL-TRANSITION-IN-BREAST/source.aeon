@@ -1,0 +1,133 @@
+e2f1 -? akt1
+e2f1 -? axin2
+e2f3 -? axin2
+gsk3b -? axin2
+lef1 -? axin2
+mdm2 -? axin2
+e2f1 -? bcl2
+traf1 -? birc2
+birc2 -? birc3
+mdm2 -? cdh1
+mir_25_3p -? cdh1
+snai1 -? cdh1
+snai2 -? cdh1
+src -? cdh1
+twist1 -? cdh1
+e2f1 -? cdkn2a
+e2f2 -? cdkn2a
+myc -? cdkn2a
+sp1 -? cdkn2a
+tp53 -? cdkn2a
+twist1 -? cdkn2a
+axin2 -? ctnnb1
+cdh1 -? ctnnb1
+gsk3b -? ctnnb1
+birc2 -? e2f1
+birc3 -? e2f1
+cdkn2a -? e2f1
+e2f3 -? e2f1
+flt4 -? e2f1
+foxa1 -? e2f1
+gsk3b -? e2f1
+kpna2 -? e2f1
+lef1 -? e2f1
+mdm2 -? e2f1
+mir_205_5p -? e2f1
+myc -? e2f1
+ncoa3 -? e2f1
+rb1 -? e2f1
+tp53 -? e2f1
+e2f1 -? e2f2
+rb1 -? e2f3
+cdh1 -? egfr
+cdh1 -? emt
+fn1 -? emt
+sani2 -? emt
+snai1 -? emt
+snai2 -?? emt
+src -? emt
+fn1 -? flt4
+e2f1 -? fn1
+hmmr -? fn1
+snai1 -? fn1
+rara -? foxa1
+e2f1 -? foxo3
+akt1 -? gsk3b
+axin2 -? gsk3b
+ctnnb1 -? gsk3b
+fn1 -? kpna2
+ctnnb1 -? lef1
+akt1 -? mdm2
+cdkn2a -? mdm2
+e2f1 -? mdm2
+tp53 -? mdm2
+e2f1 -? mir_17_5p
+tp53 -? mir_205_5p
+e2f1 -? mir_25_3p
+ctnnb1 -? myc
+e2f2 -? myc
+lef1 -? myc
+mdm2 -? myc
+thrb -? myc
+mir_17_5p -? ncoa3
+rara -? ncoa3
+e2f1 -? rara
+e2f1 -? rb1
+e2f1 -? sirt1
+ctnnb1 -? snai1
+gsk3b -? snai1
+tgfbr -? snai1
+ctnnb1 -? snai2
+mdm2 -? snai2
+tgfbr -? snai2
+tp53 -? snai2
+e2f1 -? sp1
+egfr -? src
+bcl2 -? tp53
+e2f1 -? tp53
+foxo3 -? tp53
+mdm2 -? tp53
+mir_25_3p -? tp53
+rb1 -? tp53
+sirt1 -? tp53
+sp1 -? tp53
+twist1 -? tp53
+birc3 -? traf1
+il1r1 -? traf1
+ctnnb1 -? twist1
+$akt1: e2f1
+$axin2: (e2f1 | (e2f3 | (gsk3b | (lef1 | mdm2))))
+$bcl2: e2f1
+$birc2: traf1
+$birc3: !birc2
+$cdh1: (!mdm2 | (!mir_25_3p | (!snai1 | (!snai2 | (!src | !twist1)))))
+$cdkn2a: (!tp53 | (!twist1 | (e2f1 | (e2f2 | (myc | sp1)))))
+$ctnnb1: (!axin2 | (!cdh1 | gsk3b))
+$e2f1: (!birc3 | (!cdkn2a | (!gsk3b | (!mir_205_5p | (!rb1 | (birc2 | (e2f3 | (flt4 | (foxa1 | (kpna2 | (lef1 | (mdm2 | (myc | (ncoa3 | tp53))))))))))))))
+$e2f2: e2f1
+$e2f3: !rb1
+$egfr: cdh1
+$emt: (!cdh1 | ((!cdh1 & fn1) | (fn1 | ((snai1 & (sani2 & src)) | ((src & (snai1 & (snai2 & !cdh1))) | ((src & (snai1 & (snai2 & (!cdh1 & fn1)))) | (src & (snai1 & (snai2 & fn1)))))))))
+$flt4: fn1
+$fn1: (e2f1 | (hmmr | snai1))
+$foxa1: !rara
+$foxo3: e2f1
+$gsk3b: (!akt1 | (!axin2 | ctnnb1))
+$kpna2: fn1
+$lef1: !ctnnb1
+$mdm2: (!cdkn2a | (!e2f1 | (akt1 | tp53)))
+$mir_17_5p: e2f1
+$mir_205_5p: tp53
+$mir_25_3p: e2f1
+$myc: (!mdm2 | (ctnnb1 | (e2f2 | (lef1 | thrb))))
+$ncoa3: (!mir_17_5p | rara)
+$rara: !e2f1
+$rb1: e2f1
+$sirt1: e2f1
+$snai1: (!gsk3b | (ctnnb1 | tgfbr))
+$snai2: (!mdm2 | (!tp53 | (ctnnb1 | tgfbr)))
+$sp1: e2f1
+$src: egfr
+$tp53: (!bcl2 | (!mdm2 | (!mir_25_3p | (!rb1 | (!sirt1 | (!twist1 | (e2f1 | (foxo3 | sp1))))))))
+$traf1: (!birc3 | il1r1)
+$twist1: ctnnb1

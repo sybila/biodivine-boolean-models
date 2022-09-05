@@ -1,0 +1,2436 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" metaid="_468c2fe0-8356-4297-84ca-ed7ff16d9d55" version="1" xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1" qual:required="true">
+  <model name="Mbodj2016 - Mesoderm specification during Drosophila development" id="MODEL1607310000" metaid="_1456789f-28e3-4fcd-8adc-f28831b0e4fa">
+    <notes>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+        <div class="dc:title">Mbodj2016 - Mesoderm specification during
+Drosophila development</div>
+<div class="dc:bibliographicCitation">
+  <p>This model is described in the article:</p>
+  <div class="bibo:title">
+    <a href="http://identifiers.org/pubmed/27599298" title="Access to this publication">Qualitative Dynamical
+    Modelling Can Formally Explain Mesoderm Specification and
+    Predict Novel Developmental Phenotypes.</a>
+  </div>
+  <div class="bibo:authorList">Mbodj A, Gustafson EH, Ciglar L,
+  Junion G, Gonzalez A, Girardot C, Perrin L, Furlong EE, Thieffry
+  D.</div>
+  <div class="bibo:Journal">PLoS Comput. Biol. 2016 Sep; 12(9):
+  e1005073</div>
+  <p>Abstract:</p>
+  <div class="bibo:abstract">
+    <p>Given the complexity of developmental networks, it is often
+    difficult to predict the effect of genetic perturbations, even
+    within coding genes. Regulatory factors generally have
+    pleiotropic effects, exhibit partially redundant roles, and
+    regulate highly interconnected pathways with ample cross-talk.
+    Here, we delineate a logical model encompassing 48 components
+    and 82 regulatory interactions involved in mesoderm
+    specification during Drosophila development, thereby providing
+    a formal integration of all available genetic information from
+    the literature. The four main tissues derived from mesoderm
+    correspond to alternative stable states. We demonstrate that
+    the model can predict known mutant phenotypes and use it to
+    systematically predict the effects of over 300 new, often
+    non-intuitive, loss- and gain-of-function mutations, and
+    combinations thereof. We further validated several novel
+    predictions experimentally, thereby demonstrating the
+    robustness of model. Logical modelling can thus contribute to
+    formally explain and predict regulatory outcomes underlying
+    cell fate decisions.</p>
+  </div>
+</div>
+<div class="dc:publisher">
+  <p>This model is hosted on 
+  <a href="http://www.ebi.ac.uk/biomodels/">BioModels Database</a>
+  and identified by: 
+  <a href="http://identifiers.org/biomodels.db/MODEL1607310000">MODEL1607310000</a>.</p>
+  <p>To cite BioModels Database, please use: 
+  <a href="http://identifiers.org/pubmed/20587024" title="Latest BioModels Database publication">BioModels Database:
+  An enhanced, curated and annotated resource for published
+  quantitative kinetic models</a>.</p>
+</div>
+<div class="dc:license">
+  <p>To the extent possible under law, all copyright and related or
+  neighbouring rights to this encoded model have been dedicated to
+  the public domain worldwide. Please refer to 
+  <a href="http://creativecommons.org/publicdomain/zero/1.0/" title="Access to: CC0 1.0 Universal (CC0 1.0), Public Domain Dedication">CC0
+  Public Domain Dedication</a> for more information.</p>
+</div>
+</body>
+    </notes>
+    <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+	<rdf:Description rdf:about="#_1456789f-28e3-4fcd-8adc-f28831b0e4fa">
+	<bqmodel:is>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/biomodels.db/MODEL1607310000"/>
+	</rdf:Bag>
+	</bqmodel:is>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+      <qual:listOfQualitativeSpecies xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="f8bb2249-f6e2-431e-8481-58f849f33144" qual:constant="true" qual:id="Delta"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_0ccda5f9-5167-4491-a3f2-4153c6f9e5e8" qual:constant="true" qual:id="Dpp"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="dccfd565-f1bf-4afe-a94b-73eb8b73455b" qual:constant="true" qual:id="En"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_391c8bdd-e777-4e96-9f1e-3d04d9115bc2" qual:constant="true" qual:id="Hh"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="f553a812-e3f2-4ae7-9720-ffe14636c3ea" qual:constant="true" qual:id="Med"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_44f92376-9eb2-48e1-ab51-6b9f8026dfd8" qual:constant="true" qual:id="Pyr"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_5c677b34-c10d-4b83-a6fd-e23730a6a2b6" qual:constant="true" qual:id="Shn"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_86698c3f-21d1-4f5a-b2fb-28bf844f99b7" qual:constant="true" qual:id="Spi"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_12e6f79a-f8e2-484b-b7d6-c2ed867cdea9" qual:constant="true" qual:id="SuH"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_8c05f0b8-d38a-46b9-b73e-193f449a9b6c" qual:constant="true" qual:id="Ths"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="c5643fe6-0724-413b-9cc3-1186e9782ca9" qual:constant="true" qual:id="Upd"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="b86536b6-4d80-4d83-a1fd-bf52e68389bb" qual:constant="true" qual:id="Wg"/>
+      <qual:qualitativeSpecies qual:maxLevel="3" qual:compartment="comp1" metaid="_70f6e97c-8cb5-4fac-9c77-bb557ef54062" qual:constant="false" qual:id="Bap"/>
+      <qual:qualitativeSpecies qual:maxLevel="2" qual:compartment="comp1" metaid="_69d4a708-d033-4258-bd24-09b29350a627" qual:constant="false" qual:id="Bin"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="c233d790-dfff-4ccf-8db0-14e6d2d9c653" qual:constant="false" qual:id="Brk"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_5bc93c6b-8993-4d95-a306-3abdfee6a2c9" qual:constant="false" qual:id="Ci"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_1f0e2a4a-04b2-4bab-9c45-9d91d352f131" qual:constant="false" qual:id="Da"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="f44a2677-8c6a-4c46-aa9f-cfd2ed54a8f1" qual:constant="false" qual:id="Dsix4"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_7a6f08c3-23fd-4bc3-bb16-96e9710946d8" qual:constant="false" qual:id="Dome"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_2ea7bab6-8953-4f12-bf15-658dda799432" qual:constant="false" qual:id="Der"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="cba0fd34-4d88-431e-8e00-c339273d04fc" qual:constant="false" qual:id="Doc"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="a536c45e-300d-444d-bf21-77cc4e0433ad" qual:constant="false" qual:id="Emc"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_6baee31f-0892-4cf6-9f7c-cc7e867c0677" qual:constant="false" qual:id="E_S"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_013dc60a-77dd-432a-abda-0e5624f87607" qual:constant="false" qual:id="Eve"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="b8d2f1f7-b22c-4242-ae81-878469223651" qual:constant="false" qual:id="Eya"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_7ec496c7-2dea-4b62-b428-d2637f9e5b25" qual:constant="false" qual:id="Hbr"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="a35c914c-8e9b-4885-aa24-d1529720567e" qual:constant="false" qual:id="Htl"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_647498ac-d5b9-43eb-8420-f96e21328b60" qual:constant="false" qual:id="Hop"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="e8244a7d-de74-405e-9bad-38f17f274c27" qual:constant="false" qual:id="Mad"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_99d4bbb6-9094-4837-8ef7-ef183832cc4b" qual:constant="false" qual:id="Mef2"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="df4b47ca-5f8d-4620-b7f7-601df10f241f" qual:constant="false" qual:id="Nicd"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="e324fae7-5a51-4678-8258-0f50ea908510" qual:constant="false" qual:id="Notch"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_90546ba3-99e3-4b6d-a9af-f8a9ad0fb371" qual:constant="false" qual:id="Pan"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_3f7c5a5d-8d88-432f-aeb2-0431ee8463d5" qual:constant="false" qual:id="Pka"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_0b836f47-637a-4eb3-9468-aca8b195f815" qual:constant="false" qual:id="Pnr"/>
+      <qual:qualitativeSpecies qual:maxLevel="2" qual:compartment="comp1" metaid="dc32c6b5-2a6d-4cb1-b2db-e888e9e07293" qual:constant="false" qual:id="Pnt"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="f189c629-86bb-47f9-8073-e65f45455173" qual:constant="false" qual:id="Poxm"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_56655d9a-909d-4072-8e41-33c32c4410da" qual:constant="false" qual:id="Ptc"/>
+      <qual:qualitativeSpecies qual:maxLevel="2" qual:compartment="comp1" metaid="_29210b76-471d-4e71-b0ae-c75a3acb98dc" qual:constant="false" qual:id="Ras"/>
+      <qual:qualitativeSpecies qual:maxLevel="2" qual:compartment="comp1" metaid="_8a72b895-b42d-4005-be12-8baa16cfa68e" qual:constant="false" qual:id="Rl"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_47c5ecf7-b231-480c-8c56-9123612a72b5" qual:constant="false" qual:id="Slp"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_452aaf03-d77b-46fa-99a1-6b06bdbcfca0" qual:constant="false" qual:id="Smo"/>
+      <qual:qualitativeSpecies qual:maxLevel="2" qual:compartment="comp1" metaid="_809a21c3-37dd-4003-92cd-4bccf1048020" qual:constant="false" qual:id="Srp"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_875727d5-fb06-4ab4-988e-f2c1f7d00441" qual:constant="false" qual:id="Stat92E"/>
+      <qual:qualitativeSpecies qual:maxLevel="2" qual:compartment="comp1" metaid="_34d0e254-494c-4220-b08c-093760cf4bcd" qual:constant="false" qual:id="Tin"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_9bcdf01f-4a9d-48d6-b730-f783405d4768" qual:constant="false" qual:id="Tkv"/>
+      <qual:qualitativeSpecies qual:maxLevel="2" qual:compartment="comp1" metaid="e442e9b2-82b0-458b-888d-2272e5332b94" qual:constant="false" qual:id="Twi"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="a236d2d3-0fa7-4d8c-9e0f-53c29823acb6" qual:constant="false" qual:id="Zfh1"/>
+    </qual:listOfQualitativeSpecies>
+    <qual:listOfTransitions xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:transition metaid="a4d88dd1-0e46-490f-b41e-1e62907f8862" qual:id="tr_Bap">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="En" qual:transitionEffect="none" metaid="_0d707a73-8c09-49bf-93d1-d140aaadcfe6" qual:sign="positive" qual:id="tr_Bap_in_2"/>
+          <qual:input qual:qualitativeSpecies="Med" qual:transitionEffect="none" metaid="_290844e0-be66-4c9c-9aca-442f5be5cea5" qual:sign="positive" qual:id="tr_Bap_in_4"/>
+          <qual:input qual:qualitativeSpecies="Bin" qual:transitionEffect="none" metaid="_3b42db3a-2662-45e8-ab7a-62d8fa217597" qual:sign="positive" qual:id="tr_Bap_in_13"/>
+          <qual:input qual:qualitativeSpecies="Ci" qual:transitionEffect="none" metaid="e4054dda-acee-40ca-bf79-58da9fdaf98e" qual:sign="positive" qual:id="tr_Bap_in_15"/>
+          <qual:input qual:qualitativeSpecies="Mad" qual:transitionEffect="none" metaid="_61471790-45d0-459e-9d08-c291a647483b" qual:sign="positive" qual:id="tr_Bap_in_28"/>
+          <qual:input qual:qualitativeSpecies="Slp" qual:transitionEffect="none" metaid="aaad925f-72ee-4a7c-ba2c-ac8ee45f773e" qual:sign="negative" qual:id="tr_Bap_in_40"/>
+          <qual:input qual:qualitativeSpecies="Tin" qual:transitionEffect="none" metaid="_956203b6-1f36-4d25-83d4-3fc6df35acb3" qual:sign="positive" qual:id="tr_Bap_in_44"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Bap" qual:transitionEffect="assignmentLevel" metaid="_8102faf6-b7b7-4d04-bfbc-e4ca99ea9278" qual:id="tr_Bap_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="fcf3d71e-0b33-4c51-b9ea-86cc09201dd0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="ce7db86a-4ca2-4978-b2b7-3d3359e9b630">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> En </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Bin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Slp </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Tin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> En </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Bin </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ci </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mad </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Slp </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Tin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> En </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Bin </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ci </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mad </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Tin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> En </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Bin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ci </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Slp </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Tin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> En </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Bin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ci </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mad </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Slp </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Tin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> En </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Bin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ci </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mad </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Slp </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Tin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> En </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Bin </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ci </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Slp </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Tin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> En </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Bin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ci </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Slp </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Tin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> En </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Bin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ci </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Slp </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Tin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> En </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Bin </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ci </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mad </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Slp </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Tin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> En </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Bin </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ci </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mad </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Slp </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Tin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> En </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Bin </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ci </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mad </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Slp </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Tin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> En </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Bin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ci </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mad </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Slp </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Tin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> En </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Bin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ci </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mad </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Slp </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Tin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> En </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Bin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ci </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mad </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Slp </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Tin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:functionTerm qual:resultLevel="2" metaid="a2cc3047-bb03-4106-88c8-35b699ea028f">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> En </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Bin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ci </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mad </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Slp </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Tin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> En </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Bin </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ci </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Slp </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Tin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> En </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Bin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ci </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Slp </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Tin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> En </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Bin </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ci </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mad </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Slp </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Tin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> En </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Bin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ci </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mad </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Slp </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Tin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> En </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Bin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ci </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mad </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Slp </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Tin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:functionTerm qual:resultLevel="3" metaid="_8e9ab58e-b0b4-440c-acaf-346e32d3c39b">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> En </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Bin </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> En </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Bin </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> En </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Bin </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> En </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Bin </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ci </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mad </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Slp </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Tin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> En </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Bin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ci </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mad </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Slp </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Tin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> En </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Bin </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="ea1d0ca2-1668-4217-a145-b506c21f0abb" qual:id="tr_Bin">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Bap" qual:transitionEffect="none" metaid="_7a108312-af57-44f8-9712-5f1ef9a0d2d0" qual:sign="positive" qual:id="tr_Bin_in_12"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Bin" qual:transitionEffect="assignmentLevel" metaid="befb2952-8571-47df-b53b-67cbe7226610" qual:id="tr_Bin_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="_8973f51b-e3a3-49d0-89ad-5546b0784d97">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="_5155d0e6-eeb0-4d2d-9c04-42e8257db2b9">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <geq/>
+                <ci> Bap </ci>
+                <cn type="integer"> 2 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_42d9d844-9af5-4428-bb90-62f18ed3fcd0" qual:id="tr_Brk">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Med" qual:transitionEffect="none" metaid="bdf60b18-516d-499a-a9d7-ca30ce8fbded" qual:sign="negative" qual:id="tr_Brk_in_4"/>
+          <qual:input qual:qualitativeSpecies="Shn" qual:transitionEffect="none" metaid="_20edb2bd-5b24-4530-909e-c02e8d850345" qual:sign="negative" qual:id="tr_Brk_in_6"/>
+          <qual:input qual:qualitativeSpecies="Mad" qual:transitionEffect="none" metaid="_5fabd9a9-59c2-4927-b5a0-2f178d97872d" qual:sign="negative" qual:id="tr_Brk_in_28"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Brk" qual:transitionEffect="assignmentLevel" metaid="_502e0a00-0fb9-438d-9bfe-59aa1bff45bc" qual:id="tr_Brk_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="_729804ff-7cf8-466c-99ef-b036174081d8">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="_920bd04d-0908-4289-9cb1-43a10accd81f">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <eq/>
+                  <ci> Med </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Shn </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Shn </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mad </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_9eae17f9-f20e-4af8-be42-56ee95d69a72" qual:id="tr_Ci">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Pka" qual:transitionEffect="none" metaid="_27a5e726-6bd6-4a10-96c2-e1c560ce01ae" qual:sign="negative" qual:id="tr_Ci_in_33"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Ci" qual:transitionEffect="assignmentLevel" metaid="_41fa1cd7-5644-4ca2-9ea4-1d9471c69056" qual:id="tr_Ci_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="_2fb60e7e-02c4-47d8-aea3-b71cf765b103">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="bc558eb2-5df0-40ad-b51a-b77e0086187f">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Pka </ci>
+                <cn type="integer"> 0 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_6bf9f803-01dd-42f6-9c55-ebd2683e2097" qual:id="tr_Da">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Emc" qual:transitionEffect="none" metaid="cc1739a4-d651-4194-9fee-4a16bb63cc96" qual:sign="negative" qual:id="tr_Da_in_21"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Da" qual:transitionEffect="assignmentLevel" metaid="cc566f63-c471-4c4d-812e-8d7943ff930d" qual:id="tr_Da_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="ff340bf8-8dbe-4ffb-804d-238583cea357">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="_8444f8e7-ef91-4ef5-bb58-af2e2e07e090">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Emc </ci>
+                <cn type="integer"> 0 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="fc0a0e39-e88d-4d12-8258-6e549a88b384" qual:id="tr_Dsix4">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Med" qual:transitionEffect="none" metaid="cc9271f8-0fc8-4970-a41b-8f4a115d09cc" qual:sign="negative" qual:id="tr_Dsix4_in_4"/>
+          <qual:input qual:qualitativeSpecies="Mad" qual:transitionEffect="none" metaid="_2ee119a0-7b6e-44ec-96da-83ec0c179064" qual:sign="negative" qual:id="tr_Dsix4_in_28"/>
+          <qual:input qual:qualitativeSpecies="Tin" qual:transitionEffect="none" metaid="_4043e5bb-7919-4bc5-b6d4-c11adc97a7ce" qual:sign="positive" qual:id="tr_Dsix4_in_44"/>
+          <qual:input qual:qualitativeSpecies="Zfh1" qual:transitionEffect="none" metaid="edba5075-5d71-4bad-932c-1412329fa8df" qual:sign="positive" qual:id="tr_Dsix4_in_47"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Dsix4" qual:transitionEffect="assignmentLevel" metaid="f3c248f5-d3fa-4d6b-a077-e03be821b11e" qual:id="tr_Dsix4_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="c7136a4c-0ade-4b80-a2ea-7ddb5fdec6be">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="_0db3f0aa-b385-40f8-8c93-7efb2b9a3362">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Tin </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Zfh1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Tin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mad </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Tin </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Zfh1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mad </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Tin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_8f8a3e7f-996b-4a02-90a4-4a3f19a9c288" qual:id="tr_Dome">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Upd" qual:transitionEffect="none" metaid="ca8c8e03-1a2a-47d8-8cdb-936d283f5bd7" qual:sign="positive" qual:id="tr_Dome_in_10"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Dome" qual:transitionEffect="assignmentLevel" metaid="_4f595f9e-5126-48ea-85aa-19bf955c3f39" qual:id="tr_Dome_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="_3297407d-ecad-43e2-a985-47bfe19b39f8">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="_14d66745-bd64-4e7b-aeee-be867e224032">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Upd </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_52facfb2-a70d-43f4-a907-05fdb73138d5" qual:id="tr_Der">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Spi" qual:transitionEffect="none" metaid="_0b999225-dc0f-4c42-bd17-f97cd93c14a7" qual:sign="positive" qual:id="tr_Der_in_7"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Der" qual:transitionEffect="assignmentLevel" metaid="d3f53fdf-c01d-43f8-8b4f-38d003871973" qual:id="tr_Der_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="_2615d4ca-bfd5-4487-b36c-11496c3f0b58">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="cb011e7b-6427-4cc0-9461-3e8134af3b5f">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Spi </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_0fc5017c-6a41-4099-b019-37b30c72c438" qual:id="tr_Doc">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Med" qual:transitionEffect="none" metaid="_358448a5-94a8-488f-86a3-bec8635226de" qual:sign="positive" qual:id="tr_Doc_in_4"/>
+          <qual:input qual:qualitativeSpecies="Mad" qual:transitionEffect="none" metaid="ea4f718b-0d39-492f-a663-bbce9ce1f945" qual:sign="positive" qual:id="tr_Doc_in_28"/>
+          <qual:input qual:qualitativeSpecies="Pan" qual:transitionEffect="none" metaid="c09112c0-e840-40b3-853b-2ea9d9a5c76a" qual:sign="positive" qual:id="tr_Doc_in_32"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Doc" qual:transitionEffect="assignmentLevel" metaid="fc4f96ad-eef4-49b4-a821-944303fde54e" qual:id="tr_Doc_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="_930c694c-fcbb-470c-bbda-a4a904b3abdf">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="b23d4f1c-081f-427a-87e7-9b2608be509a">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Med </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Mad </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Pan </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_45146765-f5b7-4d6b-9bed-426c5769f7c3" qual:id="tr_Emc">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Nicd" qual:transitionEffect="none" metaid="_652b54be-402e-446c-a011-42e7e01e9684" qual:sign="positive" qual:id="tr_Emc_in_30"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Emc" qual:transitionEffect="assignmentLevel" metaid="_7798b58d-5e97-4dab-a1cb-732c9db9fd20" qual:id="tr_Emc_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="_0072ab16-2b25-4fd3-80c9-6bf5a362b2f8">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="_78494aeb-e9f7-4436-bd15-f1e055fc96f9">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Nicd </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_1a501347-6233-41b7-b164-58190b8106c6" qual:id="tr_E_S">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="SuH" qual:transitionEffect="none" metaid="e858a69f-7a17-472b-ac64-d1c979ac5b9a" qual:sign="positive" qual:id="tr_E_S_in_8"/>
+          <qual:input qual:qualitativeSpecies="Nicd" qual:transitionEffect="none" metaid="d41c4a47-e179-47eb-ae49-d6682c37e360" qual:sign="positive" qual:id="tr_E_S_in_30"/>
+          <qual:input qual:qualitativeSpecies="Stat92E" qual:transitionEffect="none" metaid="be80d74f-45e4-4a99-a66b-e8da445bcb77" qual:sign="positive" qual:id="tr_E_S_in_43"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="E_S" qual:transitionEffect="assignmentLevel" metaid="_49202f9c-9f4a-4ea7-b840-23bdce8a9566" qual:id="tr_E_S_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="_04d42050-b888-4dc0-9cc3-e77ea3e3167a">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="_8b04dd13-2df6-495f-ad3b-74d00556b09f">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> SuH </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Nicd </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Stat92E </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_1b0d3abc-b297-425b-b7d0-75e1e0233d16" qual:id="tr_Eve">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Med" qual:transitionEffect="none" metaid="_6f4f54fe-59db-4ebc-ae25-91a1795243d3" qual:sign="positive" qual:id="tr_Eve_in_4"/>
+          <qual:input qual:qualitativeSpecies="Htl" qual:transitionEffect="none" metaid="_316f783e-7620-45be-b9f6-b9044f062b45" qual:sign="positive" qual:id="tr_Eve_in_26"/>
+          <qual:input qual:qualitativeSpecies="Mad" qual:transitionEffect="none" metaid="f877eb25-1566-4617-8cb7-464e19c86100" qual:sign="positive" qual:id="tr_Eve_in_28"/>
+          <qual:input qual:qualitativeSpecies="Pan" qual:transitionEffect="none" metaid="f410b8a1-1eff-4f81-add8-3cfcc51023aa" qual:sign="positive" qual:id="tr_Eve_in_32"/>
+          <qual:input qual:qualitativeSpecies="Pnt" qual:transitionEffect="none" metaid="_373a527c-ee21-44d3-9e20-17adc0c969e6" qual:sign="positive" qual:id="tr_Eve_in_35"/>
+          <qual:input qual:qualitativeSpecies="Tin" qual:transitionEffect="none" metaid="cf38a585-c20a-4818-95f2-04a2d7238a34" qual:sign="positive" qual:id="tr_Eve_in_44"/>
+          <qual:input qual:qualitativeSpecies="Twi" qual:transitionEffect="none" metaid="fd064bf9-2bb7-49a7-8950-d038cf7edacd" qual:sign="positive" qual:id="tr_Eve_in_46"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Eve" qual:transitionEffect="assignmentLevel" metaid="e566a5a6-d815-4bfb-9509-3d8f06512f51" qual:id="tr_Eve_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="_9a2e9fe6-0385-4ede-b16e-0d09bbace87d">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="_1e474386-475f-49de-9bd0-c4cff517fb8f">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Med </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Htl </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Mad </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Pan </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <geq/>
+                  <ci> Pnt </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Tin </ci>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+                <apply>
+                  <geq/>
+                  <ci> Twi </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_802cfa8b-900d-41a2-9b2b-117c40a809d5" qual:id="tr_Eya">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Tin" qual:transitionEffect="none" metaid="_00e85838-d9db-4c2d-8fe0-803a8eb79d26" qual:sign="positive" qual:id="tr_Eya_in_44"/>
+          <qual:input qual:qualitativeSpecies="Twi" qual:transitionEffect="none" metaid="a57fb14c-44d6-4aec-957f-af70f18bde23" qual:sign="positive" qual:id="tr_Eya_in_46"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Eya" qual:transitionEffect="assignmentLevel" metaid="_5f41203b-79b2-4fb7-90e0-7e65796f4b4b" qual:id="tr_Eya_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="_6fff1e32-6bfa-4b60-acfc-8601c5a01d08">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="_088c633a-cc23-4b13-a35a-84e2201928d5">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <leq/>
+                    <ci> Tin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Twi </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Tin </ci>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="cbd74154-49d3-4c0b-ac2b-b1f4a3adaf1b" qual:id="tr_Hbr">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Htl" qual:transitionEffect="none" metaid="e234baea-f5a7-447e-9ee4-f070bae33d51" qual:sign="positive" qual:id="tr_Hbr_in_26"/>
+          <qual:input qual:qualitativeSpecies="Pan" qual:transitionEffect="none" metaid="_71ad7588-38bc-4c98-93b8-bdc88f2a3028" qual:sign="positive" qual:id="tr_Hbr_in_32"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Hbr" qual:transitionEffect="assignmentLevel" metaid="_6abeb23e-0854-4b52-9c9c-b0f8d62a2f92" qual:id="tr_Hbr_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="_4d723901-7ac9-41d8-b508-d2f96bfab40f">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="_4d69b16a-4c39-4185-b255-485f637e4227">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Htl </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Pan </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_5546ebdf-1999-4efb-b2f4-fe7a43f2cced" qual:id="tr_Htl">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Pyr" qual:transitionEffect="none" metaid="be50afdf-df01-43e7-8c0b-00faff1cf1ca" qual:sign="positive" qual:id="tr_Htl_in_5"/>
+          <qual:input qual:qualitativeSpecies="Ths" qual:transitionEffect="none" metaid="_03642bda-3530-4e37-adc7-d5941ea7d4c8" qual:sign="positive" qual:id="tr_Htl_in_9"/>
+          <qual:input qual:qualitativeSpecies="Pan" qual:transitionEffect="none" metaid="_727e0617-d10b-44b9-a92d-0df407f0c318" qual:sign="positive" qual:id="tr_Htl_in_32"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Htl" qual:transitionEffect="assignmentLevel" metaid="_7685b3af-c9d2-45ad-ae58-475faf82afea" qual:id="tr_Htl_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="c247564e-d065-4e9b-8d72-f24b1225ba75">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="_2960eb23-daef-42f7-9d5d-a65db0b140c6">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Pyr </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ths </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Pan </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Pyr </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ths </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Pan </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Pyr </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ths </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="c41203fa-7854-4fd9-86fe-5f7f6a9edc83" qual:id="tr_Hop">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Dome" qual:transitionEffect="none" metaid="_8d14dc3b-4980-441d-9eda-cff8aa5a850d" qual:sign="positive" qual:id="tr_Hop_in_18"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Hop" qual:transitionEffect="assignmentLevel" metaid="a26397b9-8527-4d48-be70-fd2d72bfcc96" qual:id="tr_Hop_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="_9f64add7-d168-4f27-a045-0344c5979150">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="ec2cf1a7-e3f0-481f-90fd-97dc4fa0f08b">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Dome </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_092d3305-8faa-4766-8569-dfde17de2552" qual:id="tr_Mad">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Tkv" qual:transitionEffect="none" metaid="fe230803-df24-4e57-b8ab-2f15396902f3" qual:sign="positive" qual:id="tr_Mad_in_45"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Mad" qual:transitionEffect="assignmentLevel" metaid="_2e1fe3e2-b017-44f3-a691-c90804dd2b1b" qual:id="tr_Mad_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="_84e7abb9-5286-4105-b6da-c19e4daf97ed">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="_3f23b85b-b09b-43b4-bfe6-90cd94b6f7ef">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Tkv </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_18fc1401-6ae7-4fec-b1c0-971c341f9604" qual:id="tr_Mef2">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Tin" qual:transitionEffect="none" metaid="a10e7ae2-bf7c-4b8f-bfbb-fe7de2dd830a" qual:sign="positive" qual:id="tr_Mef2_in_44"/>
+          <qual:input qual:qualitativeSpecies="Twi" qual:transitionEffect="none" metaid="e750091a-6942-49a6-a8d6-e22b845f6aff" qual:sign="positive" qual:id="tr_Mef2_in_46"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Mef2" qual:transitionEffect="assignmentLevel" metaid="_7c9f9c9a-267e-49d7-88c5-1f1ec49639b9" qual:id="tr_Mef2_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="_5cc640ed-a065-417b-ba8b-afbcad2a5ac8">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="_35b42e92-304b-47f7-ac82-82e7ac83972d">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Tin </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Twi </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <geq/>
+                  <ci> Tin </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_546e7a01-a998-41bd-a11d-9a0218eb8baf" qual:id="tr_Nicd">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Notch" qual:transitionEffect="none" metaid="_785d3779-cc13-4a70-b4d2-69da9adb63da" qual:sign="positive" qual:id="tr_Nicd_in_31"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Nicd" qual:transitionEffect="assignmentLevel" metaid="b52cfaf9-2e02-4d29-9b68-6db8793c21b0" qual:id="tr_Nicd_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="a59d72bd-05c8-40db-8f7e-73c24e674e0d">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="bef6f7eb-8f03-414d-bacc-ab62a09794a0">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Notch </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_886724fa-8ddc-4b19-9d23-f253891b59bf" qual:id="tr_Notch">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Delta" qual:transitionEffect="none" metaid="_1cd62de9-2a15-48fa-8af6-847a405653f8" qual:sign="positive" qual:id="tr_Notch_in_0"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Notch" qual:transitionEffect="assignmentLevel" metaid="_0d427a14-1025-4448-ba1b-066c82f0cd00" qual:id="tr_Notch_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="e2fe8f63-6f8c-4fc8-b17f-072f2e129188">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="cc297c0c-4c17-4672-8342-e9d97bdaf6a9">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Delta </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_92faa347-5d20-4387-b847-d8f5ff7ea999" qual:id="tr_Pan">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Wg" qual:transitionEffect="none" metaid="_09fe3afd-d6e2-469a-8e8c-dd30a24a1378" qual:sign="positive" qual:id="tr_Pan_in_11"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Pan" qual:transitionEffect="assignmentLevel" metaid="_438c1736-2af9-4365-bf9b-fbe2d6f9eaaa" qual:id="tr_Pan_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="a9e81ff1-d025-49f7-9d20-6db2197c9063">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="_0943fb64-3898-45cb-94f5-c33c628a3312">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Wg </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="e9c0db66-a6ef-43d4-be61-b27fe434d649" qual:id="tr_Pka">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Smo" qual:transitionEffect="none" metaid="c099eebd-5a63-4fee-af15-1a41e9242090" qual:sign="negative" qual:id="tr_Pka_in_41"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Pka" qual:transitionEffect="assignmentLevel" metaid="_476906f2-ca3f-4750-8474-cd631e965f75" qual:id="tr_Pka_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="ef32383c-239c-4a07-be2b-c560a6df7a00">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="_5e89f7dc-ef64-4af2-84ae-d0ec39c11b61">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Smo </ci>
+                <cn type="integer"> 0 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_401d04d3-a31a-46d4-929a-1d8a82ba593d" qual:id="tr_Pnr">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Doc" qual:transitionEffect="none" metaid="a68ca4e0-15ba-4283-b5d3-498673224fb1" qual:sign="positive" qual:id="tr_Pnr_in_20"/>
+          <qual:input qual:qualitativeSpecies="Tin" qual:transitionEffect="none" metaid="_009e3961-931b-4540-a3fb-3312ba95b67c" qual:sign="positive" qual:id="tr_Pnr_in_44"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Pnr" qual:transitionEffect="assignmentLevel" metaid="_56d888dc-d787-4823-a115-a47ea0aff463" qual:id="tr_Pnr_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="_869bd54e-57b0-44b8-b20d-fd6dff9daa17">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="_53fc32e7-4b7b-476b-bc8f-f74e6d07645e">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Doc </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <geq/>
+                  <ci> Tin </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="d9a9215a-a479-4c70-b4a3-e0ab416c23de" qual:id="tr_Pnt">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Rl" qual:transitionEffect="none" metaid="_3b89dacc-bcbd-4560-9e63-2f047669c29a" qual:sign="positive" qual:id="tr_Pnt_in_39"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Pnt" qual:transitionEffect="assignmentLevel" metaid="e2d19cc9-cc18-4b75-b899-a85780d059c4" qual:id="tr_Pnt_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="d6e55812-7318-42f3-a951-e2175b90bf5f">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="_606f74a3-2536-43fc-81e3-7ff33aeb2ce4">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <geq/>
+                <ci> Rl </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="b4899bb8-847c-4e49-9372-63404183c938" qual:id="tr_Poxm">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Med" qual:transitionEffect="none" metaid="_270e03f7-0f3a-4aa1-bf4d-c170549cb182" qual:sign="negative" qual:id="tr_Poxm_in_4"/>
+          <qual:input qual:qualitativeSpecies="Mad" qual:transitionEffect="none" metaid="fb445ab5-c51e-4d2b-a8b7-3d059d038dc3" qual:sign="negative" qual:id="tr_Poxm_in_28"/>
+          <qual:input qual:qualitativeSpecies="Pan" qual:transitionEffect="none" metaid="_972a977b-9f3f-42d8-bc8a-64e6483451ff" qual:sign="positive" qual:id="tr_Poxm_in_32"/>
+          <qual:input qual:qualitativeSpecies="Twi" qual:transitionEffect="none" metaid="d9c25d90-c698-400e-89de-f2e0422564d2" qual:sign="positive" qual:id="tr_Poxm_in_46"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Poxm" qual:transitionEffect="assignmentLevel" metaid="_68a89e85-6f20-442e-b993-ac2479cde08f" qual:id="tr_Poxm_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="f368191f-bd7b-443e-a5ae-fbf50575c14d">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="_91cf1580-69cf-495d-a676-2c82f2651b2b">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Pan </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Twi </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mad </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Pan </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Twi </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_82174e30-be44-4704-abbc-18500cfe01cd" qual:id="tr_Ptc">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Hh" qual:transitionEffect="none" metaid="_47714371-787b-4f7b-8ebe-93d11075b6e9" qual:sign="negative" qual:id="tr_Ptc_in_3"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Ptc" qual:transitionEffect="assignmentLevel" metaid="_9d9e24ee-e32c-43cc-a391-b93b31364ece" qual:id="tr_Ptc_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="_88d50c1a-ca09-4c21-9250-c2207f32323d">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="_73fb23d5-2367-4773-891e-0bab9090adf9">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Hh </ci>
+                <cn type="integer"> 0 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="dcbb9256-14cb-42ab-9218-dfb6324882e5" qual:id="tr_Ras">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Der" qual:transitionEffect="none" metaid="_7b0fbc7d-3795-477b-b067-3e8b1df8a0a1" qual:sign="positive" qual:id="tr_Ras_in_19"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Ras" qual:transitionEffect="assignmentLevel" metaid="_45d9699c-0ad2-43bc-8d73-0729280b9829" qual:id="tr_Ras_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="_5e3a67d3-911c-43fb-8dab-59e690fb0c1b">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="_9ab2a15b-e709-4756-aecb-2e38cb6dac4e">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Der </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_917f2094-73b2-4674-a614-e1d2b28f8ebc" qual:id="tr_Rl">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Ras" qual:transitionEffect="none" metaid="_2a808b64-e8f5-4c41-bbd1-04d6f6eedd01" qual:sign="positive" qual:id="tr_Rl_in_38"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Rl" qual:transitionEffect="assignmentLevel" metaid="_8b7e4d22-2c12-4fb3-96fa-ea98556fde56" qual:id="tr_Rl_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="dc64b016-c9af-4ea5-af08-e33f4ad1c223">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="_8d75aa85-855c-4195-880a-51f95d437a02">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <geq/>
+                <ci> Ras </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="fff4b49d-d4e5-43ba-a601-9c0c8367b58e" qual:id="tr_Slp">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Pan" qual:transitionEffect="none" metaid="_676e270f-5791-4b2d-b59f-8bf320249bb6" qual:sign="positive" qual:id="tr_Slp_in_32"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Slp" qual:transitionEffect="assignmentLevel" metaid="_8e6bd05a-2919-4033-8903-7fbc48ab26a7" qual:id="tr_Slp_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="_79e09511-6116-4f87-9132-56cb976f1408">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="d4fe1157-f683-4af3-a20e-68e5b51f8ebe">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Pan </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_0ba55cd3-9cf1-48a3-b660-653ca418ac58" qual:id="tr_Smo">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Ptc" qual:transitionEffect="none" metaid="_60e75909-14ce-4b41-812a-0f3d2519312d" qual:sign="negative" qual:id="tr_Smo_in_37"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Smo" qual:transitionEffect="assignmentLevel" metaid="_10a8c472-0d90-4f5e-bd2e-3fbc9ace49d8" qual:id="tr_Smo_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="_62d6d20c-da04-4454-8524-bfc01ca99591">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="_53195697-4536-4ad2-9724-0447c2720714">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Ptc </ci>
+                <cn type="integer"> 0 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_6acf8a68-dfd2-4a5b-881b-f226b8329a59" qual:id="tr_Srp">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="En" qual:transitionEffect="none" metaid="_611da340-085c-495d-ae2d-7fb8551b8ef1" qual:sign="positive" qual:id="tr_Srp_in_2"/>
+          <qual:input qual:qualitativeSpecies="Med" qual:transitionEffect="none" metaid="_235aa82d-3dba-48b2-96c6-6ad5a6988a21" qual:sign="negative" qual:id="tr_Srp_in_4"/>
+          <qual:input qual:qualitativeSpecies="Ci" qual:transitionEffect="none" metaid="_2f98040f-ff2d-4255-8f16-034903bb4d7e" qual:sign="positive" qual:id="tr_Srp_in_15"/>
+          <qual:input qual:qualitativeSpecies="Mad" qual:transitionEffect="none" metaid="b86a44c2-7ca6-4ee3-a5a1-94f91137692e" qual:sign="negative" qual:id="tr_Srp_in_28"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Srp" qual:transitionEffect="assignmentLevel" metaid="cb51ce93-836c-41d6-98b3-3f68e275462e" qual:id="tr_Srp_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="_96a6d18a-52f5-480c-bc7b-06fb29489a67">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="_0d84a69a-7e92-45a5-8f36-011c1a1bad14">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> En </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ci </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> En </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ci </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mad </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:functionTerm qual:resultLevel="2" metaid="_8f4d5d9a-dd6b-4d92-9527-b1e2ef75c6d5">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> En </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ci </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> En </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ci </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mad </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_0a4b3efb-88c1-4f1b-add2-6d5ccdd17eb8" qual:id="tr_Stat92E">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Hop" qual:transitionEffect="none" metaid="_8a597c95-0379-4d6e-a33f-26434879e462" qual:sign="positive" qual:id="tr_Stat92E_in_27"/>
+          <qual:input qual:qualitativeSpecies="Tin" qual:transitionEffect="none" metaid="_8b7174f7-5079-445d-8c47-fd38154e47d1" qual:sign="positive" qual:id="tr_Stat92E_in_44"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Stat92E" qual:transitionEffect="assignmentLevel" metaid="_6016f628-be5e-4e2b-98d1-2e1a4bcba6be" qual:id="tr_Stat92E_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="_40d6eb56-abbb-496e-9c96-100b801ed66d">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="e2ec5f8d-c6b4-4e9d-a7d8-02f6d67cc1db">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Hop </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Tin </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Hop </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="bd89e93a-0812-49e8-9d85-6a3282c8be03" qual:id="tr_Tin">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Med" qual:transitionEffect="none" metaid="_75c6f1dc-cb54-4b1f-9485-34dbcd13581c" qual:sign="positive" qual:id="tr_Tin_in_4"/>
+          <qual:input qual:qualitativeSpecies="Mad" qual:transitionEffect="none" metaid="_16c104bd-a2ac-4908-8607-a03ae7e538b8" qual:sign="positive" qual:id="tr_Tin_in_28"/>
+          <qual:input qual:qualitativeSpecies="Pan" qual:transitionEffect="none" metaid="d05cb5e9-0144-415e-948f-ac64d9cd3e64" qual:sign="positive" qual:id="tr_Tin_in_32"/>
+          <qual:input qual:qualitativeSpecies="Stat92E" qual:transitionEffect="none" metaid="_0dd738fb-8c44-478d-a78d-d87f939fe873" qual:sign="positive" qual:id="tr_Tin_in_43"/>
+          <qual:input qual:qualitativeSpecies="Tin" qual:transitionEffect="none" metaid="_69a39b61-1aca-40cf-b06a-f8b06b63b782" qual:sign="positive" qual:id="tr_Tin_in_44"/>
+          <qual:input qual:qualitativeSpecies="Twi" qual:transitionEffect="none" metaid="_7091cec4-3da6-4579-a968-1736b86fe8b0" qual:sign="positive" qual:id="tr_Tin_in_46"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Tin" qual:transitionEffect="assignmentLevel" metaid="_9bcd71b6-7a45-4a1d-944a-e570061a44c6" qual:id="tr_Tin_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="b8f3d6f4-d95b-460c-b43f-60ef0bee672b">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="_18b7d01e-9c45-4347-a8cd-4631fb7c224b">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mad </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Tin </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Twi </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mad </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Tin </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mad </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Pan </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Med </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mad </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Pan </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Stat92E </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:functionTerm qual:resultLevel="2" metaid="_1c9f58fa-18f0-4307-b764-0a9aea20895c">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Med </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Mad </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Pan </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Stat92E </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_5fb0b685-e9a9-4831-b7d3-2cccd13c6659" qual:id="tr_Tkv">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Dpp" qual:transitionEffect="none" metaid="_32fa919b-fb0c-4350-bc44-1d82fdbf21d9" qual:sign="positive" qual:id="tr_Tkv_in_1"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Tkv" qual:transitionEffect="assignmentLevel" metaid="_09f59465-df93-4cdf-a171-ab46f9d6b71d" qual:id="tr_Tkv_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="_889137ac-fe71-4999-90fd-8e2ffa94831c">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="b811ee06-cec9-4e5e-ba77-22ce3bc725d0">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Dpp </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_835ada8f-e8ec-4d13-a108-ea0c2882f98a" qual:id="tr_Twi">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Da" qual:transitionEffect="none" metaid="_49e9506e-9257-4305-921e-d274e0a9b3d3" qual:sign="positive" qual:id="tr_Twi_in_16"/>
+          <qual:input qual:qualitativeSpecies="E_S" qual:transitionEffect="none" metaid="fd2b6832-9937-4877-b400-f27405aeb006" qual:sign="negative" qual:id="tr_Twi_in_22"/>
+          <qual:input qual:qualitativeSpecies="Slp" qual:transitionEffect="none" metaid="_85b81425-a8f4-477e-b488-744e53225df8" qual:sign="positive" qual:id="tr_Twi_in_40"/>
+          <qual:input qual:qualitativeSpecies="Twi" qual:transitionEffect="none" metaid="_2fa26ef3-d1c3-40c9-9166-73581b1edf56" qual:sign="positive" qual:id="tr_Twi_in_46"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Twi" qual:transitionEffect="assignmentLevel" metaid="_0d80aa15-fc91-4e56-baf4-fe095d2f3a19" qual:id="tr_Twi_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="f678b3ba-ec5c-488b-8e5e-9a4123532f68">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="_002bc0c6-b0da-485c-9ff1-7171327e85e8">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Da </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Slp </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Twi </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Da </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> E_S </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Slp </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Twi </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Da </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> E_S </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Slp </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Twi </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:functionTerm qual:resultLevel="2" metaid="_8317ebd9-29f9-4a0c-add9-b722efa64955">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Da </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> E_S </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Slp </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <geq/>
+                  <ci> Twi </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_4f0c625f-9c69-48dd-8524-eab0bab85f0c" qual:id="tr_Zfh1">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Twi" qual:transitionEffect="none" metaid="_6842ebbe-28aa-4546-b987-4ec927abbbe2" qual:sign="positive" qual:id="tr_Zfh1_in_46"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Zfh1" qual:transitionEffect="assignmentLevel" metaid="_224ccb84-04ae-47ce-b4bf-6745c4dc9ffa" qual:id="tr_Zfh1_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="_1d2b9b3e-914a-4cbe-acc8-50d7337ed13a">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="_4d660989-15c3-478a-872f-66e3c29a2483">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <geq/>
+                <ci> Twi </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+    </qual:listOfTransitions>
+    <listOfCompartments>
+      <compartment constant="true" id="comp1" metaid="_3f173c60-e096-4fc8-9cee-7e9a6553d7db"/>
+    </listOfCompartments>
+  </model>
+</sbml>

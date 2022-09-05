@@ -1,0 +1,28 @@
+# \[138\] APOPTOSIS-UPDATED
+
+ - Variables: 17
+ - Inputs: 14
+ - Regulations: 37
+ - Publication: https://doi.org/10.1101/2020.04.02.019075
+ - Source: https://github.com/vincent-noel/COVID19/blob/7949bfec12baf51e8ec1eab2d6973a62d63c0e30/notebooks/Apoptosis_new.bnet
+ - Keywords: curated
+
+
+### Modifications
+
+This is a modified version of model no. 111, but it probably warrants its own entry as it is associated with a new publication. However, the model is only available as `.bnet`, so regulation data is not available. It could be largely taken from model no. 111 if desired.
+
+Also, constant update functions of `CASP9_Cytoplasm_input`, `E`, `M`, `N`, `Orf3a`, `Orf3b`, `Orf6`, `Orf7a`, `Orf8a`, `Orf9b`, `S`, `TNF_TNFRSF1A_complex`, `TRADD`, `FAS_FASL_complex` were removed to make them canonical inputs.
+
+### Model citation
+
+```
+@article{bbm-138,
+  title={Rapid community-driven development of a SARS-CoV-2 tissue simulator},
+  author={Getz, Michael and Wang, Yafei and An, Gary and Becker, Andrew and Cockrell, Chase and Collier, Nicholson and Craig, Morgan and Davis, Courtney L and Faeder, James and Versypt, Ashlee N Ford and others},
+  journal={BioRxiv},
+  year={2020},
+  publisher={Cold Spring Harbor Laboratory Preprints}
+}
+```
+

@@ -1,0 +1,32 @@
+targets, factors
+IFNg_e, IFNg_e
+GM_CSF_e, GM_CSF_e
+IL1b_e, IL1b_e
+LPS_e, LPS_e
+IC_e, IC_e
+IL4_e, IL4_e
+IL10_e, IL10_e
+IFNgR, IFNg_e | IFNb
+CSF2Ra, GM_CSF_e
+IL1R, IL1b_e | IL1b
+TLR4, LPS_e & ! FcgR
+FcgR, (IC_e & LPS_e) | (IC_e & LPS_e & IL1b_e)
+IL4Ra, IL4_e
+IL10R, IL10_e | IL10_out
+STAT1, IFNgR & ! (STAT3 | SOCS1)
+STAT5, CSF2Ra & ! (STAT3 | IRF4)
+NF_kB, (IL1R | TLR4) & ! (STAT3 | FcgR | PPARg | KLF4)
+PPARg, PPARg | IL4Ra
+STAT6, STAT6 | IL4Ra
+JMJD3, JMJD3 | IL4Ra
+STAT3, (IL10R | STAT3) & ! (PPARg | FcgR)
+IRF3, TLR4
+ERK, FcgR | ERK
+KLF4, STAT6
+SOCS1, STAT6
+IRF4, JMJD3
+IL1b, NF_kB
+IFNb, IRF3
+IL12_out, NF_kB | STAT5 | STAT1
+IL10_out, ERK | PPARg | STAT6 | JMJD3 | STAT3
+

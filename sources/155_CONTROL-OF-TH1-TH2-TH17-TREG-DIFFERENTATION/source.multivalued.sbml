@@ -1,0 +1,4344 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" layout:required="false" level="3" qual:required="true" xmlns:layout="http://www.sbml.org/sbml/level3/version1/layout/version1" version="1" xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+  <model id="model_id">
+    <notes>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>This logical model integrates the documented cross-regulations between key transcription factors and the relevant signalling pathways controlling Th cell differentiation.
+Using a reduction method and other analysis tools, we could show that this model generate specific stable states corresponding to canonical Th1, Th2, Th17 and Treg subtypes, which coexist with other transient hybrid cell types that co-express combinations of Th1, Th2, Treg and Th17 markers in an environment-dependent fashion. 
+The dynamical analysis of this model thereby provides novel insights into the heterogeneity and plasticity of late Th cell lineages.  
+Furthermore, this model enables in silico investigation of the nature of Th subtypes, as well as of potentially novel differentiation or reprogrammation pathways.
+</p>
+  </body>
+    </notes>
+    <layout:listOfLayouts xmlns:layout="http://www.sbml.org/sbml/level3/version1/layout/version1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <layout:layout layout:id="__layout__">
+        <layout:dimensions layout:height="720" layout:width="1463"/>
+        <layout:listOfAdditionalGraphicalObjects>
+          <layout:generalGlyph layout:id="_ly_APC" layout:reference="APC">
+            <layout:boundingBox>
+              <layout:position layout:x="1325" layout:y="2"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IFNB_e" layout:reference="IFNB_e">
+            <layout:boundingBox>
+              <layout:position layout:x="131" layout:y="4"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IFNG_e" layout:reference="IFNG_e">
+            <layout:boundingBox>
+              <layout:position layout:x="216" layout:y="4"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IL2_e" layout:reference="IL2_e">
+            <layout:boundingBox>
+              <layout:position layout:x="1079" layout:y="4"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IL4_e" layout:reference="IL4_e">
+            <layout:boundingBox>
+              <layout:position layout:x="904" layout:y="4"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IL6_e" layout:reference="IL6_e">
+            <layout:boundingBox>
+              <layout:position layout:x="381" layout:y="3"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IL10_e" layout:reference="IL10_e">
+            <layout:boundingBox>
+              <layout:position layout:x="636" layout:y="3"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IL12_e" layout:reference="IL12_e">
+            <layout:boundingBox>
+              <layout:position layout:x="798" layout:y="4"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IL15_e" layout:reference="IL15_e">
+            <layout:boundingBox>
+              <layout:position layout:x="996" layout:y="3"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IL21_e" layout:reference="IL21_e">
+            <layout:boundingBox>
+              <layout:position layout:x="466" layout:y="2"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IL23_e" layout:reference="IL23_e">
+            <layout:boundingBox>
+              <layout:position layout:x="555" layout:y="2"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IL27_e" layout:reference="IL27_e">
+            <layout:boundingBox>
+              <layout:position layout:x="301" layout:y="2"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_TGFB_e" layout:reference="TGFB_e">
+            <layout:boundingBox>
+              <layout:position layout:x="714" layout:y="2"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_CD28" layout:reference="CD28">
+            <layout:boundingBox>
+              <layout:position layout:x="1294" layout:y="177"/>
+              <layout:dimensions layout:height="25" layout:width="50"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IFNBR" layout:reference="IFNBR">
+            <layout:boundingBox>
+              <layout:position layout:x="128" layout:y="178"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IFNGR" layout:reference="IFNGR">
+            <layout:boundingBox>
+              <layout:position layout:x="217" layout:y="180"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IL2R" layout:reference="IL2R">
+            <layout:boundingBox>
+              <layout:position layout:x="1071" layout:y="182"/>
+              <layout:dimensions layout:height="25" layout:width="59"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IL4R" layout:reference="IL4R">
+            <layout:boundingBox>
+              <layout:position layout:x="901" layout:y="182"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IL6R" layout:reference="IL6R">
+            <layout:boundingBox>
+              <layout:position layout:x="382" layout:y="182"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IL10R" layout:reference="IL10R">
+            <layout:boundingBox>
+              <layout:position layout:x="640" layout:y="183"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IL12R" layout:reference="IL12R">
+            <layout:boundingBox>
+              <layout:position layout:x="809" layout:y="180"/>
+              <layout:dimensions layout:height="25" layout:width="50"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IL15R" layout:reference="IL15R">
+            <layout:boundingBox>
+              <layout:position layout:x="990" layout:y="180"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IL21R" layout:reference="IL21R">
+            <layout:boundingBox>
+              <layout:position layout:x="467" layout:y="182"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IL23R" layout:reference="IL23R">
+            <layout:boundingBox>
+              <layout:position layout:x="552" layout:y="182"/>
+              <layout:dimensions layout:height="25" layout:width="63"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IL27R" layout:reference="IL27R">
+            <layout:boundingBox>
+              <layout:position layout:x="299" layout:y="180"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_TCR" layout:reference="TCR">
+            <layout:boundingBox>
+              <layout:position layout:x="1362" layout:y="176"/>
+              <layout:dimensions layout:height="25" layout:width="50"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_TGFBR" layout:reference="TGFBR">
+            <layout:boundingBox>
+              <layout:position layout:x="717" layout:y="181"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IFNGR1" layout:reference="IFNGR1">
+            <layout:boundingBox>
+              <layout:position layout:x="166" layout:y="124"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IFNGR2" layout:reference="IFNGR2">
+            <layout:boundingBox>
+              <layout:position layout:x="180" layout:y="88"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_GP130" layout:reference="GP130">
+            <layout:boundingBox>
+              <layout:position layout:x="423" layout:y="100"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IL6RA" layout:reference="IL6RA">
+            <layout:boundingBox>
+              <layout:position layout:x="350" layout:y="128"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IL12RB1" layout:reference="IL12RB1">
+            <layout:boundingBox>
+              <layout:position layout:x="761" layout:y="112"/>
+              <layout:dimensions layout:height="25" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_CGC" layout:reference="CGC">
+            <layout:boundingBox>
+              <layout:position layout:x="850" layout:y="53"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IL12RB2" layout:reference="IL12RB2">
+            <layout:boundingBox>
+              <layout:position layout:x="840" layout:y="121"/>
+              <layout:dimensions layout:height="25" layout:width="56"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IL10RB" layout:reference="IL10RB">
+            <layout:boundingBox>
+              <layout:position layout:x="675" layout:y="146"/>
+              <layout:dimensions layout:height="22" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IL10RA" layout:reference="IL10RA">
+            <layout:boundingBox>
+              <layout:position layout:x="606" layout:y="131"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IL4RA" layout:reference="IL4RA">
+            <layout:boundingBox>
+              <layout:position layout:x="937" layout:y="122"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IL15RA" layout:reference="IL15RA">
+            <layout:boundingBox>
+              <layout:position layout:x="950" layout:y="83"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IL2RB" layout:reference="IL2RB">
+            <layout:boundingBox>
+              <layout:position layout:x="1032" layout:y="124"/>
+              <layout:dimensions layout:height="22" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IL2RA" layout:reference="IL2RA">
+            <layout:boundingBox>
+              <layout:position layout:x="1117" layout:y="102"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IL27RA" layout:reference="IL27RA">
+            <layout:boundingBox>
+              <layout:position layout:x="266" layout:y="129"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IFNG" layout:reference="IFNG">
+            <layout:boundingBox>
+              <layout:position layout:x="264" layout:y="455"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IL2" layout:reference="IL2">
+            <layout:boundingBox>
+              <layout:position layout:x="1080" layout:y="452"/>
+              <layout:dimensions layout:height="25" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IL4" layout:reference="IL4">
+            <layout:boundingBox>
+              <layout:position layout:x="918" layout:y="452"/>
+              <layout:dimensions layout:height="25" layout:width="59"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IL10" layout:reference="IL10">
+            <layout:boundingBox>
+              <layout:position layout:x="638" layout:y="450"/>
+              <layout:dimensions layout:height="25" layout:width="50"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IL21" layout:reference="IL21">
+            <layout:boundingBox>
+              <layout:position layout:x="472" layout:y="447"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IL23" layout:reference="IL23">
+            <layout:boundingBox>
+              <layout:position layout:x="558" layout:y="448"/>
+              <layout:dimensions layout:height="25" layout:width="50"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_TGFB" layout:reference="TGFB">
+            <layout:boundingBox>
+              <layout:position layout:x="725" layout:y="449"/>
+              <layout:dimensions layout:height="25" layout:width="50"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_TBET" layout:reference="TBET">
+            <layout:boundingBox>
+              <layout:position layout:x="153" layout:y="691"/>
+              <layout:dimensions layout:height="25" layout:width="56"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_GATA3" layout:reference="GATA3">
+            <layout:boundingBox>
+              <layout:position layout:x="437" layout:y="694"/>
+              <layout:dimensions layout:height="25" layout:width="64"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_FOXP3" layout:reference="FOXP3">
+            <layout:boundingBox>
+              <layout:position layout:x="708" layout:y="693"/>
+              <layout:dimensions layout:height="27" layout:width="66"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_NFAT" layout:reference="NFAT">
+            <layout:boundingBox>
+              <layout:position layout:x="1325" layout:y="326"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_STAT1" layout:reference="STAT1">
+            <layout:boundingBox>
+              <layout:position layout:x="187" layout:y="338"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_STAT3" layout:reference="STAT3">
+            <layout:boundingBox>
+              <layout:position layout:x="505" layout:y="338"/>
+              <layout:dimensions layout:height="25" layout:width="67"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_STAT4" layout:reference="STAT4">
+            <layout:boundingBox>
+              <layout:position layout:x="808" layout:y="337"/>
+              <layout:dimensions layout:height="25" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_STAT5" layout:reference="STAT5">
+            <layout:boundingBox>
+              <layout:position layout:x="979" layout:y="335"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_STAT6" layout:reference="STAT6">
+            <layout:boundingBox>
+              <layout:position layout:x="874" layout:y="337"/>
+              <layout:dimensions layout:height="25" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_SMAD3" layout:reference="SMAD3">
+            <layout:boundingBox>
+              <layout:position layout:x="762" layout:y="580"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IRF1" layout:reference="IRF1">
+            <layout:boundingBox>
+              <layout:position layout:x="323" layout:y="644"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_RUNX3" layout:reference="RUNX3">
+            <layout:boundingBox>
+              <layout:position layout:x="64" layout:y="690"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_proliferation" layout:reference="proliferation">
+            <layout:boundingBox>
+              <layout:position layout:x="1171" layout:y="39"/>
+              <layout:dimensions layout:height="27" layout:width="89"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_NFKB" layout:reference="NFKB">
+            <layout:boundingBox>
+              <layout:position layout:x="1407" layout:y="453"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IKB" layout:reference="IKB">
+            <layout:boundingBox>
+              <layout:position layout:x="1408" layout:y="389"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_RORGT" layout:reference="RORGT">
+            <layout:boundingBox>
+              <layout:position layout:x="537" layout:y="694"/>
+              <layout:dimensions layout:height="25" layout:width="55"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_IL17" layout:reference="IL17">
+            <layout:boundingBox>
+              <layout:position layout:x="1197" layout:y="449"/>
+              <layout:dimensions layout:height="25" layout:width="45"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+        </layout:listOfAdditionalGraphicalObjects>
+      </layout:layout>
+    </layout:listOfLayouts>
+    <qual:listOfQualitativeSpecies xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="true" qual:id="APC">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Antigen Presenting Cell. 
+This input node denotes proper presentation of an antigen recognised by the Th TCR.</p>
+  </body>
+        </notes>
+      </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_01ff969e-00bb-423c-b747-19aec69acb65" qual:constant="true" qual:id="IFNB_e">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>External source of interferon-beta.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_01ff969e-00bb-423c-b747-19aec69acb65">
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/5434"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_797fe9bc-9fcc-4703-ba20-27ee114040c9" qual:constant="true" qual:id="IFNG_e">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>External source of interferon-gamma.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_797fe9bc-9fcc-4703-ba20-27ee114040c9">
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/5438"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_574a0c1c-b4b2-4e41-b675-457db7a42c90" qual:constant="true" qual:id="IL2_e">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>External source of interleukine-2.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_574a0c1c-b4b2-4e41-b675-457db7a42c90">
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/6001"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_87ec89a6-4402-4ef8-8461-31bd17f2a9b1" qual:constant="true" qual:id="IL4_e">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>External source of interleukine-4.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_87ec89a6-4402-4ef8-8461-31bd17f2a9b1">
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/6014"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="ccce484e-de8e-4990-b3e1-afb824f86e55" qual:constant="true" qual:id="IL6_e">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>External source of interleukine-6.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#ccce484e-de8e-4990-b3e1-afb824f86e55">
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/6018"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="d93436e8-2f4d-4796-967c-76ef1f868d8d" qual:constant="true" qual:id="IL10_e">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>External source of interleukine-10.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#d93436e8-2f4d-4796-967c-76ef1f868d8d">
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/5962"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="b4280dec-5e47-4368-ac3a-f9f95ff812cd" qual:constant="true" qual:id="IL12_e">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>External source of interleukine-12.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#b4280dec-5e47-4368-ac3a-f9f95ff812cd">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/5969"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/5970"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_09c620c6-3f92-4f37-9e0f-ea273f961cae" qual:constant="true" qual:id="IL15_e">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>External source of interleukine-15.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_09c620c6-3f92-4f37-9e0f-ea273f961cae">
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/5977"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="aa7932c4-3a36-42cd-9fd5-573b3549ad47" qual:constant="true" qual:id="IL21_e">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>External source of interleukine-21.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#aa7932c4-3a36-42cd-9fd5-573b3549ad47">
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/6005"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_5ca0c164-e1ca-4736-84bf-f6e415f85fef" qual:constant="true" qual:id="IL23_e">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>External source of interleukine-23.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_5ca0c164-e1ca-4736-84bf-f6e415f85fef">
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/15488"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="f2946471-ff02-4862-b5e1-865b28815d55" qual:constant="true" qual:id="IL27_e">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>External source of interleukine-27.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#f2946471-ff02-4862-b5e1-865b28815d55">
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/19157"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_91a7e7bc-34a7-4f7e-8664-20432f8ed716" qual:constant="true" qual:id="TGFB_e">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>External source of Transforming Growth Factor beta.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_91a7e7bc-34a7-4f7e-8664-20432f8ed716">
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/11766"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="b3cf8aea-5097-4bd8-a5fd-f67d963e0e21" qual:constant="false" qual:id="CD28">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>CD28 provides a co-stimulatory signal to the TCR, required for the activation of Th cells.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#b3cf8aea-5097-4bd8-a5fd-f67d963e0e21">
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/1653"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_07c2e0e1-ca02-4ef2-97c4-6dacb134351a" qual:constant="false" qual:id="IFNBR">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Upon ligand binding, the IFN-beta receptor activates STAT1.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_07c2e0e1-ca02-4ef2-97c4-6dacb134351a">
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/5432"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="false" qual:id="IFNGR">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>The IFN-gamma receptor requires the IFNGR1 and IFNGR2 subchains and activates STAT1 upon binding.</p>
+  </body>
+        </notes>
+      </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="2" qual:compartment="comp1" metaid="_1cf88b6c-2b2d-48f5-9b8c-5ead9ae4e41a" qual:constant="false" qual:id="IL2R">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>The IL-2 receptor requires the CGC and IL2RB subchains, and activates STAT5 upon binding. 
+The IL2RA subchain is needed for the high affinity response.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_1cf88b6c-2b2d-48f5-9b8c-5ead9ae4e41a">
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1016/j.cytogfr.2006.07.003"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="2" qual:compartment="comp1" qual:constant="false" qual:id="IL4R">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>The IL-4 receptor requires the CGC and IL4RA subchains and activates STAT6 and STAT5 upon binding.</p>
+  </body>
+        </notes>
+      </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="false" qual:id="IL6R">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>The IL-6 receptor requires the IL6RA and GP130 subchains and activates STAT3 upon binding.</p>
+  </body>
+        </notes>
+      </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="false" qual:id="IL10R">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>The IL-10 receptor requires the IL10RA and IL10RB subchains, and activates STAT3 upon binding.</p>
+  </body>
+        </notes>
+      </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_06b052a6-ffe1-477e-822e-4bb1d680a0e5" qual:constant="false" qual:id="IL12R">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>The IL-12 receptor requires the IL12RB1 (at high level) and IL12RB2 subchains and activates STAT4 upon binding.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_06b052a6-ffe1-477e-822e-4bb1d680a0e5">
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1038/ni1538"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="2" qual:compartment="comp1" qual:constant="false" qual:id="IL15R">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>The IL-15 receptor requires the CGC, IL15RA and IL2RB subchains and activates STAT5 upon binding.</p>
+  </body>
+        </notes>
+      </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_0cef9603-95e0-4ff9-94cc-a73d27959ddf" qual:constant="false" qual:id="IL21R">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>The IL-21 receptor requires the GP130 and CGC subchains, and activates STAT3 upon binding.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_0cef9603-95e0-4ff9-94cc-a73d27959ddf">
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/6006"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_5f8c09f5-7196-4c8b-ab47-683e94766239" qual:constant="false" qual:id="IL23R">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>The IL-23 receptor requires the GP130 and IL12RB1 subchains and activates STAT3 upon binding.
+According to (Ivanov et al, 2007), STAT3 and RORgt are needed for its expression (most likely for the expression of its subchains).</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_5f8c09f5-7196-4c8b-ab47-683e94766239">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/19100"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1016/j.smim.2007.10.011"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="false" qual:id="IL27R">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>The IL-27 receptor requires the IL27RA and GP130 subchains and activates STAT1 and STAT3 upon binding.</p>
+  </body>
+        </notes>
+      </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="false" qual:id="TCR">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>T Cell Receptor, activated by antigen presentation.</p>
+  </body>
+        </notes>
+      </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="false" qual:id="TGFBR">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Upon ligand binding, the TGF-beta receptor activates SMAD3.</p>
+  </body>
+        </notes>
+      </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_79d3686e-bb93-4e91-b05e-5d5d6384667a" qual:constant="false" qual:id="IFNGR1">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>IFNGR1 is a subchain of the IFN-gamma receptor.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_79d3686e-bb93-4e91-b05e-5d5d6384667a">
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/5439"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="cfaa9b89-6fab-4fe1-b464-d613ccd76052" qual:constant="false" qual:id="IFNGR2">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>IFNGR2 is a subchain of the IFN-gamma receptor.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#cfaa9b89-6fab-4fe1-b464-d613ccd76052">
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/5440"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="f5b57564-af7b-4dfe-aab9-a4e591ca632e" qual:constant="false" qual:id="GP130">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Glycoprotein 130 (IL-6 Signal Transducer) forms a complex with binded receptor of the IL-6 familly. 
+It is required for signal transduction of these receptors (IL6R, IL21R, IL23R and IL27R in this model).</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#f5b57564-af7b-4dfe-aab9-a4e591ca632e">
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/6021"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_1612fad6-98c9-42a7-a557-8a8c261eb772" qual:constant="false" qual:id="IL6RA">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>IL-6 receptor alpha is a subchain of the IL-6 receptor.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_1612fad6-98c9-42a7-a557-8a8c261eb772">
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/6019"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="2" qual:compartment="comp1" metaid="_36b1dac7-24f1-41d2-89c0-c6dd9e822579" qual:constant="false" qual:id="IL12RB1">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>IL-12 receptor beta 1 is a subchain of the IL-12 and IL-23 receptors.
+According to (Kano et al, 2007), IRF1 promotes higher level of IL12RB1, which is required for IL-12 signalling, but not for IL-23.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_36b1dac7-24f1-41d2-89c0-c6dd9e822579">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/5971"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1038/ni1538"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="false" qual:name="common gamma chain" qual:id="CGC">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>The Common Gamma Chain (IL2RG), is shared by several cytokine receptors (IL2R, IL4R, IL15R and IL21R).</p>
+  </body>
+        </notes>
+      </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="faddc52a-f200-414f-8b18-16c7510c1ae5" qual:constant="false" qual:id="IL12RB2">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>IL-12 receptor beta 2 is a subchain of the IL-12 receptor.
+According to (Szabo et al, 1997), STAT6 blocks the IL12 pathway by inhibiting IL12RB2.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#faddc52a-f200-414f-8b18-16c7510c1ae5">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/5972"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1016/j.biosystems.2005.10.004"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/pubmed/9120387"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="f1141ca7-caad-46bf-b477-e8d5d4f9090b" qual:constant="false" qual:id="IL10RB">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>IL10 receptor beta is a subchain of the IL-10 receptor.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#f1141ca7-caad-46bf-b477-e8d5d4f9090b">
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/5965"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_31342b6a-fccb-4504-be9d-cba328c3081a" qual:constant="false" qual:id="IL10RA">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>IL10 receptor alpha is a subchain of the IL-10 receptor.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_31342b6a-fccb-4504-be9d-cba328c3081a">
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/5964"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="2" qual:compartment="comp1" metaid="_210fd21f-03a6-448f-b942-d19c55e9ee52" qual:constant="false" qual:id="IL4RA">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>IL-4 receptor alpha is a subchain of the IL-4 receptor.
+IL-2 upregulates IL4RA expression in a STAT5 dependent way and thereby promotes augmented IL-4RA expression and priming for responsiveness to IL4 (LIao et al, 2008).</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_210fd21f-03a6-448f-b942-d19c55e9ee52">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/6015"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/18820682"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_2dd719f9-8d6a-4a60-bd75-e758a7612092" qual:constant="false" qual:id="IL15RA">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>IL-15 receptor alpha is a subchain of the IL-15 receptor.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_2dd719f9-8d6a-4a60-bd75-e758a7612092">
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/5978"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_4eefa5f9-d643-4345-828d-23057fda75b4" qual:constant="false" qual:id="IL2RB">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>IL-2 receptor beta is a subchain of the IL-2 and IL-15 receptors.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_4eefa5f9-d643-4345-828d-23057fda75b4">
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/6009"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_0660b039-7643-482a-8579-2566c8f158b2" qual:constant="false" qual:id="IL2RA">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>IL-2 receptor alpha (CD25) is the high affinity subchain of the IL-2 receptor. 
+According to (Kim et al, 2006), it is activated by NFAT, SMAD3, NFKB and STAT5. 
+It is also activated by FOXP3 in CD4+CD25+ Treg. 
+Its presence enables higher activation of the IL-2 receptor.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_0660b039-7643-482a-8579-2566c8f158b2">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/6008"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1016/j.cytogfr.2006.07.003"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="d077aeae-1f6f-4f40-8b83-f38c5b75ae0e" qual:constant="false" qual:id="IL27RA">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>IL-27 receptor alpha is a subchain of the IL-27 receptor.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#d077aeae-1f6f-4f40-8b83-f38c5b75ae0e">
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/17290"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="f4ebd7fb-296c-462e-9efd-365066168d4d" qual:constant="false" qual:id="IFNG">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>The gamma interferon is produced by active Th1 cells. 
+Its production requires NFAT (blocked by FOXP3), cell proliferation, and either IL12 (through STAT4) or Tbet (in cooperation with RUNX3). 
+It is inhibited by STAT3.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#f4ebd7fb-296c-462e-9efd-365066168d4d">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/5438"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1038/ni1424"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1073/pnas.0501675102"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1016/j.biosystems.2005.10.004"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="b7cc35f5-e877-4487-bf23-b7df7d418648" qual:constant="false" qual:id="IL2">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Interleukine 2 is one of the most actively studied cytokines (for a review, see Kim et al, 2006). 
+Its production requires NFAT (blocked by FOXP3) but not proliferation (unlike assumed for other cytokines).
+According to (Villarino et al, 2007), STAT5 (activated by IL2/4/15) and STAT6 (activated by IL4) cooperate to inhibit IL2 production.
+RelA has been shown to induce IL-2 expression following transient overexpression (Rao et al, 2003). 
+According to (Hwang et al, 2005), Tbet cooperates with relA (a NFkB subunits to inhibit IL2.
+Hence, the interaction from NFKB onto  IL2  has a context-dependent sign.
+
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#b7cc35f5-e877-4487-bf23-b7df7d418648">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/6001"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1084/jem.20061198"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1016/j.cell.2006.07.005"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1084/jem.20051044"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1016/j.cytogfr.2006.07.003"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/12646638"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_28f37067-d723-47d1-9208-6817bf7adb8e" qual:constant="false" qual:id="IL4">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>IL4 is produced by Th2 cells. 
+Its production requires NFAT (blocked by FOXP3, see Bettelli et al, 2005), proliferation and GATA3. 
+it is inhibited by Tbet (cooperating with RUNX3, see Djuretic et al, 2007) and IRF1 (Elser et al, 2002).</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_28f37067-d723-47d1-9208-6817bf7adb8e">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/6014"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1038/ni1424"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1073/pnas.0501675102"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/pubmed/12479817"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="a8062ca4-ce4c-4c87-ad31-07d154ea2561" qual:constant="false" qual:id="IL10">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Interleukine-10 is activated by GATA3 and STAT3. 
+As for other cytokines, its production requires NFAT and proliferation.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#a8062ca4-ce4c-4c87-ad31-07d154ea2561">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/5962"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1038/ni1539"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1186/1742-4682-3-13"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_9c3bae26-1cc3-4c14-b488-ee2be0855c55" qual:constant="false" qual:id="IL21">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Interleukines 21 and 23 are sequentially  activated by IL6 through STAT3 (see Zhou et al, 2007). 
+As for other cytokines, their production requires NFAT and proliferation.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_9c3bae26-1cc3-4c14-b488-ee2be0855c55">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/6005"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1038/nature05970"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1038/ni1488"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1182/blood.V99.10.3756"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_38616310-f5ec-484b-b102-3d9782ef242b" qual:constant="false" qual:id="IL23">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Interleukines 21 and 23 are sequentially  activated by IL6 through STAT3 (see Zhou et al, 2007). 
+As for other cytokines, their production requires NFAT and proliferation.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_38616310-f5ec-484b-b102-3d9782ef242b">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/15488"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1038/ni1488"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="f9ecd97f-7fef-48a1-acb7-ed065574adc2" qual:constant="false" qual:id="TGFB">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>TGF-beta is believed to be important in regulation of the immune system by Treg cells and apparently block the activation of lymphocytes and some phagocytes.
+The mechanism leading to its expression in Treg cells is unknown. 
+Here, we assume an activation by FOXP3.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#f9ecd97f-7fef-48a1-acb7-ed065574adc2">
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/11766"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_797de8c0-2cf6-4fd9-b815-6ac9580948d5" qual:constant="false" qual:id="TBET">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>T-bet (TBX21) is the main transcription factor of the Th1 lineage. 
+It is activated by STAT1, self-maintained and inhibited by GATA3.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_797de8c0-2cf6-4fd9-b815-6ac9580948d5">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/11599"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1016/j.biosystems.2005.10.004"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_20c6004c-01eb-41ec-8c15-3a459c263809" qual:constant="false" qual:id="GATA3">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>GATA3 is the main transcription factor of the Th2 lineage. 
+It is activated by STAT6, self-maintained and inhibited by Tbet.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_20c6004c-01eb-41ec-8c15-3a459c263809">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/4172"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1016/j.biosystems.2005.10.004"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="b1a8b773-0e93-4da0-98fa-70e856575700" qual:constant="false" qual:id="FOXP3">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Foxp3 is the main known marker of regulatory T cells. 
+It is activated by NFAT, TGF-beta (through Smad3, see Tone et al, 2008) and STAT5 (see Yao et al, 2007). 
+It is inhibited by STAT1 (binding site observed in Floess et al, 2007), STAT3 (Yao et al, 2007) and RORgt.
+We asumme that Foxp3 can maintain its own expression (binding sites observed in Floess et al, 2007) in presence of NFAT and STAT5.
+We also assume that STAT3 and RORgt cooperate to inhibit Foxp3.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#b1a8b773-0e93-4da0-98fa-70e856575700">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/6106"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1189/jlb.1006644"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1371/journal.pbio.0050038"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1182/blood-2006-11-055756"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1038/ni1549"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="bb398984-b20b-4738-b566-fc6c02ada740" qual:id="NFAT" qual:constant="false" qual:name="NFAT">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>The Nuclear Factor of Activated T cells (NFAT) familly of transcription factors encompass 5 members. 
+The nucleus localisation of NFATc1 to NFATc4 depends on the presence of calcineurin (and thus of the TCR activation).
+This node represents the presence of NFAT (and AP1) in the nucleus.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#bb398984-b20b-4738-b566-fc6c02ada740">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/7775"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/7776"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/7777"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/7778"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_84c0207b-2abc-4d0b-9011-454461136da0" qual:constant="false" qual:id="STAT1">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>STAT1 is activated by IL-27, IFN-beta and IFN-gamma receptors.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_84c0207b-2abc-4d0b-9011-454461136da0">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/11362"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1016/j.biosystems.2005.10.004"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1146/annurev.immunol.25.022106.141557"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/pubmed/15356135"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="f947f7fb-b00c-4640-8fea-bfb451e1181d" qual:constant="false" qual:id="STAT3">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>STAT3 is activated by IL-6, IL-21, IL-23, IL-27 and IL-10 receptors.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#f947f7fb-b00c-4640-8fea-bfb451e1181d">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/11364"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1182/blood.V99.10.3756"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1186/1742-4682-3-13"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1146/annurev.immunol.25.022106.141557"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="b22507b5-0a3b-45c1-ae49-d8e3e1c0bbda" qual:constant="false" qual:id="STAT4">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>STAT4 is activated by IL-12 receptor and inhibited by GATA3.
+Mendoza et al (2006) proposed it as intermediate in IFN-gamma inhibition by GATA3.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#b22507b5-0a3b-45c1-ae49-d8e3e1c0bbda">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/11365"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1186/1742-4682-3-13"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="2" qual:compartment="comp1" metaid="_842accef-4f85-4118-9307-d770d681dc6d" qual:constant="false" qual:id="STAT5">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>STAT5 is activated by IL-4, IL-15 and IL-2 receptors.
+A high level of IL2R promotes a high level of STAT5, required to activate cell proliferation.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_842accef-4f85-4118-9307-d770d681dc6d">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/11366"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/11367"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1016/j.cytogfr.2006.07.003"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="b470e0f4-0d59-4c53-8dbb-c91687087915" qual:constant="false" qual:id="STAT6">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>STAT6 is activated by IL-4 receptor.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#b470e0f4-0d59-4c53-8dbb-c91687087915">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/11368"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1016/j.biosystems.2005.10.004"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_795b9197-8298-41b6-8dbb-f1277770d13e" qual:constant="false" qual:id="SMAD3">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>SMAD3 is activated by TGF- beta receptor and involved in the activation of IL2RA and FOXP3.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_795b9197-8298-41b6-8dbb-f1277770d13e">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/6769"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1016/j.cytogfr.2006.07.003"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_04633d25-cbde-4da5-9d4b-eb92d1f46163" qual:constant="false" qual:id="IRF1">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>IRF1 is required for the activation of IL12RB1 and for the inhibition of IL4 by STAT1.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_04633d25-cbde-4da5-9d4b-eb92d1f46163">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/6116"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1038/ni1538"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="e96f2a94-8763-4646-94f1-e65a01259808" qual:constant="false" qual:id="RUNX3">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>RUNX3 is activated by T-bet, with which it cooperates to activate IFN-gama and inhibit IL-4.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#e96f2a94-8763-4646-94f1-e65a01259808">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/10473"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1038/ni1424"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="c09a4665-f66e-48ff-84b3-ad40bd957115" qual:constant="false" qual:id="proliferation">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>This component denotes that the cell proliferation has been activated. 
+It is used as a switch required for the expression of most cytokines.
+It is activated by IL2 through STAT5 (see Moriggl et al, 1999).</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#c09a4665-f66e-48ff-84b3-ad40bd957115">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/pubmed/10072077"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/pubmed/9729043"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="dbd3aa14-5cfd-4351-9637-3f95941bf667" qual:constant="false" qual:id="NFKB">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>NF-kappa B is inhibited by I-kappa B and Foxp3 (according to Bettelli et al, 2005).
+The NF-kB family is composed is composed of  NF-kB1, NF-kB2, RelA, RelB and c-Rel. c-Rel has been solidly implicated in the regulation of IL-2 transcription by chromatin remodelling accross the IL-2 gene (Rao et al, 2003). Other components such as RelA were shown to induce IL-2 expression following transient overexpression. 
+Hence, the interaction from NFKB onto  IL2  has a context-dependent sign.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#dbd3aa14-5cfd-4351-9637-3f95941bf667">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1073/pnas.0501675102"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/12646638"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="false" qual:id="IKB">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>The  NF-kappa B inhibitor I-kappa B is inhibited by the TCR signal.</p>
+  </body>
+        </notes>
+      </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_62365689-68f3-4f89-9fdc-45c0160dbb05" qual:constant="false" qual:id="RORGT">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>RORGT is a key actor in Th17 differentiation. 
+According to (Zhou et al, 2007), RORgt is activated by TGFb + STAT3 (activated by interleukines 6, 21 and 23).
+Here, we assume that RORgt is self-regulated (as the other master regulators).</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_62365689-68f3-4f89-9fdc-45c0160dbb05">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1038/ni1488"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1038/ni.1610"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_3fff97aa-aa2c-4d79-94de-ba41d42ef26f" qual:constant="false" qual:id="IL17">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>IL17 cytokines are produced by TGFb+IL6 induced Th17 cells when stimulated by IL23 and (IL18 or IL1b).
+STAT3 and RORGT activate IL17 cooperatively.
+The action of RORGT can be blocked by FOXP3 (Zhou et al, 2008).
+STAT3 and NFkB are required to activate IL17.
+IL2 inhibits IL17 through STAT5. STAT1, STAT5 and STAT6 can bind on the IL17 promoter. 
+An inhibitory effect for Tbet and IL4 has also been reported. 
+Coexpression of IL17 and IFNg has been observed, indicating that these inhibitions may be overcomed.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_3fff97aa-aa2c-4d79-94de-ba41d42ef26f">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/hgnc/5981"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/doi/10.1038/nature06878"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+    </qual:listOfQualitativeSpecies>
+    <qual:listOfTransitions xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:transition qual:id="tr_CD28">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="APC" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_CD28_in_0"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="CD28" qual:transitionEffect="assignmentLevel" qual:id="tr_CD28_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> APC </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_IFNBR">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="IFNB_e" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IFNBR_in_1"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="IFNBR" qual:transitionEffect="assignmentLevel" qual:id="tr_IFNBR_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> IFNB_e </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_IFNGR">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="IFNG_e" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IFNGR_in_2"/>
+          <qual:input qual:qualitativeSpecies="IFNGR1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IFNGR_in_27"/>
+          <qual:input qual:qualitativeSpecies="IFNGR2" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IFNGR_in_28"/>
+          <qual:input qual:qualitativeSpecies="IFNG" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IFNGR_in_41"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="IFNGR" qual:transitionEffect="assignmentLevel" qual:id="tr_IFNGR_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> IFNG_e </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IFNGR1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IFNGR2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IFNG </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> IFNG_e </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IFNGR1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IFNGR2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_IL2R">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="IL2_e" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL2R_in_3"/>
+          <qual:input qual:qualitativeSpecies="CGC" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL2R_in_32"/>
+          <qual:input qual:qualitativeSpecies="IL2RB" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL2R_in_38"/>
+          <qual:input qual:qualitativeSpecies="IL2RA" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL2R_in_39"/>
+          <qual:input qual:qualitativeSpecies="IL2" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL2R_in_42"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="IL2R" qual:transitionEffect="assignmentLevel" qual:id="tr_IL2R_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> IL2_e </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CGC </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IL2RB </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IL2RA </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IL2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> IL2_e </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CGC </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IL2RB </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IL2RA </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:functionTerm qual:resultLevel="2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> IL2_e </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CGC </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IL2RB </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IL2RA </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IL2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> IL2_e </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CGC </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IL2RB </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IL2RA </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_IL4R">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="IL4_e" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL4R_in_4"/>
+          <qual:input qual:qualitativeSpecies="CGC" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL4R_in_32"/>
+          <qual:input qual:qualitativeSpecies="IL4RA" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL4R_in_36"/>
+          <qual:input qual:qualitativeSpecies="IL4" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL4R_in_43"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="IL4R" qual:transitionEffect="assignmentLevel" qual:id="tr_IL4R_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> IL4_e </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CGC </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IL4RA </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IL4 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> IL4_e </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CGC </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IL4RA </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:functionTerm qual:resultLevel="2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> IL4_e </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CGC </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IL4RA </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IL4 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> IL4_e </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CGC </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IL4RA </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_IL6R">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="IL6_e" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL6R_in_5"/>
+          <qual:input qual:qualitativeSpecies="GP130" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL6R_in_29"/>
+          <qual:input qual:qualitativeSpecies="IL6RA" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL6R_in_30"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="IL6R" qual:transitionEffect="assignmentLevel" qual:id="tr_IL6R_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> IL6_e </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> GP130 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> IL6RA </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_IL10R">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="IL10_e" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL10R_in_6"/>
+          <qual:input qual:qualitativeSpecies="IL10RB" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL10R_in_34"/>
+          <qual:input qual:qualitativeSpecies="IL10RA" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL10R_in_35"/>
+          <qual:input qual:qualitativeSpecies="IL10" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL10R_in_44"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="IL10R" qual:transitionEffect="assignmentLevel" qual:id="tr_IL10R_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> IL10_e </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IL10RB </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IL10RA </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IL10 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> IL10_e </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IL10RB </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IL10RA </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_IL12R">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="IL12_e" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL12R_in_7"/>
+          <qual:input qual:qualitativeSpecies="IL12RB1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL12R_in_31"/>
+          <qual:input qual:qualitativeSpecies="IL12RB2" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL12R_in_33"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="IL12R" qual:transitionEffect="assignmentLevel" qual:id="tr_IL12R_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> IL12_e </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> IL12RB1 </ci>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> IL12RB2 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_IL15R">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="IL15_e" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL15R_in_8"/>
+          <qual:input qual:qualitativeSpecies="CGC" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL15R_in_32"/>
+          <qual:input qual:qualitativeSpecies="IL15RA" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL15R_in_37"/>
+          <qual:input qual:qualitativeSpecies="IL2RB" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL15R_in_38"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="IL15R" qual:transitionEffect="assignmentLevel" qual:id="tr_IL15R_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> IL15_e </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> CGC </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> IL15RA </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> IL2RB </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_IL21R">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="IL21_e" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL21R_in_9"/>
+          <qual:input qual:qualitativeSpecies="GP130" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL21R_in_29"/>
+          <qual:input qual:qualitativeSpecies="CGC" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL21R_in_32"/>
+          <qual:input qual:qualitativeSpecies="IL21" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL21R_in_45"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="IL21R" qual:transitionEffect="assignmentLevel" qual:id="tr_IL21R_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> IL21_e </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> GP130 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CGC </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IL21 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> IL21_e </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> GP130 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CGC </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_IL23R">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="IL23_e" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL23R_in_10"/>
+          <qual:input qual:qualitativeSpecies="GP130" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL23R_in_29"/>
+          <qual:input qual:qualitativeSpecies="IL12RB1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL23R_in_31"/>
+          <qual:input qual:qualitativeSpecies="IL23" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL23R_in_46"/>
+          <qual:input qual:qualitativeSpecies="STAT3" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL23R_in_53"/>
+          <qual:input qual:qualitativeSpecies="RORGT" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL23R_in_63"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="IL23R" qual:transitionEffect="assignmentLevel" qual:id="tr_IL23R_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> IL23_e </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> GP130 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> IL12RB1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IL23 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> STAT3 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> RORGT </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> IL23_e </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> GP130 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> IL12RB1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> STAT3 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> RORGT </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_IL27R">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="IL27_e" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL27R_in_11"/>
+          <qual:input qual:qualitativeSpecies="GP130" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL27R_in_29"/>
+          <qual:input qual:qualitativeSpecies="IL27RA" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL27R_in_40"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="IL27R" qual:transitionEffect="assignmentLevel" qual:id="tr_IL27R_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> IL27_e </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> GP130 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> IL27RA </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_TCR">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="APC" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_TCR_in_0"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="TCR" qual:transitionEffect="assignmentLevel" qual:id="tr_TCR_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> APC </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_TGFBR">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="TGFB_e" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_TGFBR_in_12"/>
+          <qual:input qual:qualitativeSpecies="TGFB" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_TGFBR_in_47"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="TGFBR" qual:transitionEffect="assignmentLevel" qual:id="tr_TGFBR_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> TGFB_e </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> TGFB </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> TGFB_e </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_IFNGR1">
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="IFNGR1" qual:transitionEffect="assignmentLevel" qual:id="tr_IFNGR1_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="1">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_IFNGR2">
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="IFNGR2" qual:transitionEffect="assignmentLevel" qual:id="tr_IFNGR2_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="1">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_GP130">
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="GP130" qual:transitionEffect="assignmentLevel" qual:id="tr_GP130_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="1">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_IL6RA">
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="IL6RA" qual:transitionEffect="assignmentLevel" qual:id="tr_IL6RA_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="1">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_IL12RB1">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="IRF1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL12RB1_in_58"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="IL12RB1" qual:transitionEffect="assignmentLevel" qual:id="tr_IL12RB1_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> IRF1 </ci>
+                <cn type="integer"> 0 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:functionTerm qual:resultLevel="2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> IRF1 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_CGC">
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="CGC" qual:transitionEffect="assignmentLevel" qual:id="tr_CGC_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="1">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_IL12RB2">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="STAT6" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_IL12RB2_in_56"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="IL12RB2" qual:transitionEffect="assignmentLevel" qual:id="tr_IL12RB2_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> STAT6 </ci>
+                <cn type="integer"> 0 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_IL10RB">
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="IL10RB" qual:transitionEffect="assignmentLevel" qual:id="tr_IL10RB_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="1">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_IL10RA">
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="IL10RA" qual:transitionEffect="assignmentLevel" qual:id="tr_IL10RA_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="1">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_IL4RA">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="STAT5" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL4RA_in_55"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="IL4RA" qual:transitionEffect="assignmentLevel" qual:id="tr_IL4RA_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <leq/>
+                <ci> STAT5 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:functionTerm qual:resultLevel="2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> STAT5 </ci>
+                <cn type="integer"> 2 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_IL15RA">
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="IL15RA" qual:transitionEffect="assignmentLevel" qual:id="tr_IL15RA_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="1">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_IL2RB">
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="IL2RB" qual:transitionEffect="assignmentLevel" qual:id="tr_IL2RB_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="1">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_IL2RA">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="FOXP3" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL2RA_in_50"/>
+          <qual:input qual:qualitativeSpecies="NFAT" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL2RA_in_51"/>
+          <qual:input qual:qualitativeSpecies="STAT5" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL2RA_in_55"/>
+          <qual:input qual:qualitativeSpecies="SMAD3" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL2RA_in_57"/>
+          <qual:input qual:qualitativeSpecies="NFKB" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL2RA_in_61"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="IL2RA" qual:transitionEffect="assignmentLevel" qual:id="tr_IL2RA_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> FOXP3 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> NFAT </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> STAT5 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> SMAD3 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> NFKB </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> FOXP3 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> NFAT </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> STAT5 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> SMAD3 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> FOXP3 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> NFAT </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> STAT5 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> FOXP3 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> NFAT </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_IL27RA">
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="IL27RA" qual:transitionEffect="assignmentLevel" qual:id="tr_IL27RA_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="1">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_IFNG">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="TBET" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IFNG_in_48"/>
+          <qual:input qual:qualitativeSpecies="FOXP3" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_IFNG_in_50"/>
+          <qual:input qual:qualitativeSpecies="NFAT" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IFNG_in_51"/>
+          <qual:input qual:qualitativeSpecies="STAT3" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_IFNG_in_53"/>
+          <qual:input qual:qualitativeSpecies="STAT4" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IFNG_in_54"/>
+          <qual:input qual:qualitativeSpecies="RUNX3" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IFNG_in_59"/>
+          <qual:input qual:qualitativeSpecies="proliferation" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IFNG_in_60"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="IFNG" qual:transitionEffect="assignmentLevel" qual:id="tr_IFNG_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> TBET </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> FOXP3 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> NFAT </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> STAT3 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> STAT4 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> proliferation </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> TBET </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> FOXP3 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> NFAT </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> STAT3 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> STAT4 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> RUNX3 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> proliferation </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> TBET </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> FOXP3 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> NFAT </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> STAT3 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> STAT4 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> proliferation </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_IL2">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="TBET" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_IL2_in_48"/>
+          <qual:input qual:qualitativeSpecies="FOXP3" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_IL2_in_50"/>
+          <qual:input qual:qualitativeSpecies="NFAT" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL2_in_51"/>
+          <qual:input qual:qualitativeSpecies="STAT5" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_IL2_in_55"/>
+          <qual:input qual:qualitativeSpecies="STAT6" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_IL2_in_56"/>
+          <qual:input qual:qualitativeSpecies="NFKB" qual:transitionEffect="none" qual:sign="dual" qual:id="tr_IL2_in_61"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="IL2" qual:transitionEffect="assignmentLevel" qual:id="tr_IL2_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> TBET </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> FOXP3 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> NFAT </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> STAT5 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> NFKB </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> TBET </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> FOXP3 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> NFAT </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> STAT5 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> STAT6 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> NFKB </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> TBET </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> FOXP3 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> NFAT </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> STAT5 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> TBET </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> FOXP3 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> NFAT </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> STAT5 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> STAT6 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> TBET </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> FOXP3 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> STAT5 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> NFKB </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> TBET </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> FOXP3 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> STAT5 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> STAT6 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> NFKB </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> TBET </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> FOXP3 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> NFAT </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> STAT5 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> NFKB </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> TBET </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> FOXP3 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> NFAT </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> STAT5 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> STAT6 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> NFKB </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_IL4">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="TBET" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_IL4_in_48"/>
+          <qual:input qual:qualitativeSpecies="GATA3" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL4_in_49"/>
+          <qual:input qual:qualitativeSpecies="FOXP3" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_IL4_in_50"/>
+          <qual:input qual:qualitativeSpecies="NFAT" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL4_in_51"/>
+          <qual:input qual:qualitativeSpecies="IRF1" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_IL4_in_58"/>
+          <qual:input qual:qualitativeSpecies="RUNX3" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_IL4_in_59"/>
+          <qual:input qual:qualitativeSpecies="proliferation" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL4_in_60"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="IL4" qual:transitionEffect="assignmentLevel" qual:id="tr_IL4_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> TBET </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> GATA3 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> FOXP3 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> NFAT </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IRF1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> proliferation </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> TBET </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> GATA3 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> FOXP3 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> NFAT </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IRF1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> RUNX3 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> proliferation </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_IL10">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="GATA3" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL10_in_49"/>
+          <qual:input qual:qualitativeSpecies="NFAT" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL10_in_51"/>
+          <qual:input qual:qualitativeSpecies="STAT3" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL10_in_53"/>
+          <qual:input qual:qualitativeSpecies="proliferation" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL10_in_60"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="IL10" qual:transitionEffect="assignmentLevel" qual:id="tr_IL10_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> GATA3 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> NFAT </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> STAT3 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> proliferation </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> GATA3 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> NFAT </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> proliferation </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_IL21">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="NFAT" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL21_in_51"/>
+          <qual:input qual:qualitativeSpecies="STAT3" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL21_in_53"/>
+          <qual:input qual:qualitativeSpecies="proliferation" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL21_in_60"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="IL21" qual:transitionEffect="assignmentLevel" qual:id="tr_IL21_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> NFAT </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> STAT3 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> proliferation </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_IL23">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="NFAT" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL23_in_51"/>
+          <qual:input qual:qualitativeSpecies="STAT3" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL23_in_53"/>
+          <qual:input qual:qualitativeSpecies="proliferation" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL23_in_60"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="IL23" qual:transitionEffect="assignmentLevel" qual:id="tr_IL23_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> NFAT </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> STAT3 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> proliferation </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_TGFB">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="FOXP3" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_TGFB_in_50"/>
+          <qual:input qual:qualitativeSpecies="NFAT" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_TGFB_in_51"/>
+          <qual:input qual:qualitativeSpecies="proliferation" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_TGFB_in_60"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="TGFB" qual:transitionEffect="assignmentLevel" qual:id="tr_TGFB_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> FOXP3 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> NFAT </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> proliferation </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_TBET">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="TBET" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_TBET_in_48"/>
+          <qual:input qual:qualitativeSpecies="GATA3" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_TBET_in_49"/>
+          <qual:input qual:qualitativeSpecies="STAT1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_TBET_in_52"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="TBET" qual:transitionEffect="assignmentLevel" qual:id="tr_TBET_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> TBET </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> GATA3 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> STAT1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> TBET </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> GATA3 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_GATA3">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="TBET" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_GATA3_in_48"/>
+          <qual:input qual:qualitativeSpecies="GATA3" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_GATA3_in_49"/>
+          <qual:input qual:qualitativeSpecies="STAT6" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_GATA3_in_56"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="GATA3" qual:transitionEffect="assignmentLevel" qual:id="tr_GATA3_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> TBET </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> GATA3 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> STAT6 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> TBET </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> GATA3 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_FOXP3">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="FOXP3" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_FOXP3_in_50"/>
+          <qual:input qual:qualitativeSpecies="NFAT" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_FOXP3_in_51"/>
+          <qual:input qual:qualitativeSpecies="STAT1" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_FOXP3_in_52"/>
+          <qual:input qual:qualitativeSpecies="STAT3" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_FOXP3_in_53"/>
+          <qual:input qual:qualitativeSpecies="STAT5" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_FOXP3_in_55"/>
+          <qual:input qual:qualitativeSpecies="SMAD3" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_FOXP3_in_57"/>
+          <qual:input qual:qualitativeSpecies="RORGT" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_FOXP3_in_63"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="FOXP3" qual:transitionEffect="assignmentLevel" qual:id="tr_FOXP3_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> FOXP3 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> NFAT </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> STAT1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> STAT3 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> STAT5 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> SMAD3 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> FOXP3 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> NFAT </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> STAT1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> STAT3 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> STAT5 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> SMAD3 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> RORGT </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> FOXP3 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> NFAT </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> STAT5 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_NFAT">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="CD28" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_NFAT_in_13"/>
+          <qual:input qual:qualitativeSpecies="TCR" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_NFAT_in_25"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="NFAT" qual:transitionEffect="assignmentLevel" qual:id="tr_NFAT_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> CD28 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> TCR </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_STAT1">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="IFNBR" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_STAT1_in_14"/>
+          <qual:input qual:qualitativeSpecies="IFNGR" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_STAT1_in_15"/>
+          <qual:input qual:qualitativeSpecies="IL27R" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_STAT1_in_24"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="STAT1" qual:transitionEffect="assignmentLevel" qual:id="tr_STAT1_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> IFNBR </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IFNGR </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IL27R </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> IFNBR </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IFNGR </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> IFNBR </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_STAT3">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="IL6R" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_STAT3_in_18"/>
+          <qual:input qual:qualitativeSpecies="IL10R" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_STAT3_in_19"/>
+          <qual:input qual:qualitativeSpecies="IL21R" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_STAT3_in_22"/>
+          <qual:input qual:qualitativeSpecies="IL23R" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_STAT3_in_23"/>
+          <qual:input qual:qualitativeSpecies="IL27R" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_STAT3_in_24"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="STAT3" qual:transitionEffect="assignmentLevel" qual:id="tr_STAT3_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> IL6R </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IL10R </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IL21R </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IL23R </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IL27R </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> IL6R </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IL10R </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IL21R </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IL23R </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> IL6R </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IL10R </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IL21R </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> IL6R </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IL10R </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> IL6R </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_STAT4">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="IL12R" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_STAT4_in_20"/>
+          <qual:input qual:qualitativeSpecies="GATA3" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_STAT4_in_49"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="STAT4" qual:transitionEffect="assignmentLevel" qual:id="tr_STAT4_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> IL12R </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> GATA3 </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_STAT5">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="IL2R" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_STAT5_in_16"/>
+          <qual:input qual:qualitativeSpecies="IL4R" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_STAT5_in_17"/>
+          <qual:input qual:qualitativeSpecies="IL15R" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_STAT5_in_21"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="STAT5" qual:transitionEffect="assignmentLevel" qual:id="tr_STAT5_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> IL2R </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IL4R </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> IL15R </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> IL2R </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IL4R </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> IL2R </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <leq/>
+                    <ci> IL4R </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:functionTerm qual:resultLevel="2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> IL2R </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IL4R </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> IL2R </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> IL4R </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> IL2R </ci>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_STAT6">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="IL4R" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_STAT6_in_17"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="STAT6" qual:transitionEffect="assignmentLevel" qual:id="tr_STAT6_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <geq/>
+                <ci> IL4R </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_SMAD3">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="TGFBR" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_SMAD3_in_26"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="SMAD3" qual:transitionEffect="assignmentLevel" qual:id="tr_SMAD3_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> TGFBR </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_IRF1">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="STAT1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IRF1_in_52"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="IRF1" qual:transitionEffect="assignmentLevel" qual:id="tr_IRF1_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> STAT1 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_RUNX3">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="TBET" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_RUNX3_in_48"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="RUNX3" qual:transitionEffect="assignmentLevel" qual:id="tr_RUNX3_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> TBET </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_proliferation">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="STAT5" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_proliferation_in_55"/>
+          <qual:input qual:qualitativeSpecies="proliferation" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_proliferation_in_60"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="proliferation" qual:transitionEffect="assignmentLevel" qual:id="tr_proliferation_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <leq/>
+                    <ci> STAT5 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> proliferation </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> STAT5 </ci>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_NFKB">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="FOXP3" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_NFKB_in_50"/>
+          <qual:input qual:qualitativeSpecies="IKB" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_NFKB_in_62"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="NFKB" qual:transitionEffect="assignmentLevel" qual:id="tr_NFKB_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> FOXP3 </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> IKB </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_IKB">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="TCR" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_IKB_in_25"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="IKB" qual:transitionEffect="assignmentLevel" qual:id="tr_IKB_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> TCR </ci>
+                <cn type="integer"> 0 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_RORGT">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="TGFBR" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_RORGT_in_26"/>
+          <qual:input qual:qualitativeSpecies="STAT3" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_RORGT_in_53"/>
+          <qual:input qual:qualitativeSpecies="RORGT" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_RORGT_in_63"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="RORGT" qual:transitionEffect="assignmentLevel" qual:id="tr_RORGT_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> TGFBR </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> STAT3 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> RORGT </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> TGFBR </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> STAT3 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> RORGT </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> TGFBR </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> STAT3 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_IL17">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="FOXP3" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_IL17_in_50"/>
+          <qual:input qual:qualitativeSpecies="NFAT" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL17_in_51"/>
+          <qual:input qual:qualitativeSpecies="STAT1" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_IL17_in_52"/>
+          <qual:input qual:qualitativeSpecies="STAT3" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL17_in_53"/>
+          <qual:input qual:qualitativeSpecies="STAT5" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_IL17_in_55"/>
+          <qual:input qual:qualitativeSpecies="STAT6" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_IL17_in_56"/>
+          <qual:input qual:qualitativeSpecies="proliferation" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL17_in_60"/>
+          <qual:input qual:qualitativeSpecies="NFKB" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL17_in_61"/>
+          <qual:input qual:qualitativeSpecies="RORGT" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_IL17_in_63"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="IL17" qual:transitionEffect="assignmentLevel" qual:id="tr_IL17_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> FOXP3 </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> NFAT </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> STAT1 </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> STAT3 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> STAT5 </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> STAT6 </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> proliferation </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> NFKB </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> RORGT </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+    </qual:listOfTransitions>
+    <listOfCompartments>
+      <compartment constant="true" id="comp1"/>
+    </listOfCompartments>
+  </model>
+</sbml>

@@ -1402,37 +1402,7 @@
 	</annotation>
             </qual:qualitativeSpecies>
     </qual:listOfQualitativeSpecies>
-    <qual:listOfTransitions xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
-      <qual:transition qual:id="tr_S_1">
-        <notes>
-          <body xmlns="http://www.w3.org/1999/xhtml">
-            <p>TCF3 activates TCF3.</p></body>
-        </notes>
-        <qual:listOfInputs>
-          <qual:input qual:id="tr_S_1_in_S_1" qual:qualitativeSpecies="S_1" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
-            <notes>
-              <body xmlns="http://www.w3.org/1999/xhtml">
-                <p>Microarray expression data suggests TCF3 activates itself.</p></body>
-            </notes>
-          </qual:input>
-        </qual:listOfInputs>
-        <qual:listOfOutputs>
-          <qual:output qual:qualitativeSpecies="S_1" qual:transitionEffect="assignmentLevel"/>
-        </qual:listOfOutputs>
-        <qual:listOfFunctionTerms>
-          <qual:defaultTerm qual:resultLevel="0">
-          </qual:defaultTerm>
-          <qual:functionTerm qual:resultLevel="1">
-            <math xmlns="http://www.w3.org/1998/Math/MathML">            
-              <apply>
-                <eq/>
-                <ci> S_1 </ci>
-                <cn type="integer"> 1 </cn>
-              </apply>
-            </math>
-                    </qual:functionTerm>
-        </qual:listOfFunctionTerms>
-      </qual:transition>
+    <qual:listOfTransitions xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">      
       <qual:transition qual:id="tr_S_2">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
@@ -1462,37 +1432,7 @@
             </math>
                     </qual:functionTerm>
         </qual:listOfFunctionTerms>
-      </qual:transition>
-      <qual:transition qual:id="tr_S_3">
-        <notes>
-          <body xmlns="http://www.w3.org/1999/xhtml">
-            <p>CREM activates CREM.</p></body>
-        </notes>
-        <qual:listOfInputs>
-          <qual:input qual:id="tr_S_3_in_S_3" qual:qualitativeSpecies="S_3" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
-            <notes>
-              <body xmlns="http://www.w3.org/1999/xhtml">
-                <p>Microarray expression data suggests CREM activates itself.</p></body>
-            </notes>
-          </qual:input>
-        </qual:listOfInputs>
-        <qual:listOfOutputs>
-          <qual:output qual:qualitativeSpecies="S_3" qual:transitionEffect="assignmentLevel"/>
-        </qual:listOfOutputs>
-        <qual:listOfFunctionTerms>
-          <qual:defaultTerm qual:resultLevel="0">
-          </qual:defaultTerm>
-          <qual:functionTerm qual:resultLevel="1">
-            <math xmlns="http://www.w3.org/1998/Math/MathML">            
-              <apply>
-                <eq/>
-                <ci> S_3 </ci>
-                <cn type="integer"> 1 </cn>
-              </apply>
-            </math>
-                    </qual:functionTerm>
-        </qual:listOfFunctionTerms>
-      </qual:transition>
+      </qual:transition>      
       <qual:transition qual:id="tr_S_4">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
@@ -1536,37 +1476,7 @@
             </math>
                     </qual:functionTerm>
         </qual:listOfFunctionTerms>
-      </qual:transition>
-      <qual:transition qual:id="tr_S_5">
-        <notes>
-          <body xmlns="http://www.w3.org/1999/xhtml">
-            <p>HSP90AA1 activates HSP90AA1.</p></body>
-        </notes>
-        <qual:listOfInputs>
-          <qual:input qual:id="tr_S_5_in_S_5" qual:qualitativeSpecies="S_5" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
-            <notes>
-              <body xmlns="http://www.w3.org/1999/xhtml">
-                <p>HSP90AA1 is a part of an autocrine and paracrine positive feedback loop.</p></body>
-            </notes>
-          </qual:input>
-        </qual:listOfInputs>
-        <qual:listOfOutputs>
-          <qual:output qual:qualitativeSpecies="S_5" qual:transitionEffect="assignmentLevel"/>
-        </qual:listOfOutputs>
-        <qual:listOfFunctionTerms>
-          <qual:defaultTerm qual:resultLevel="0">
-          </qual:defaultTerm>
-          <qual:functionTerm qual:resultLevel="1">
-            <math xmlns="http://www.w3.org/1998/Math/MathML">            
-              <apply>
-                <eq/>
-                <ci> S_5 </ci>
-                <cn type="integer"> 1 </cn>
-              </apply>
-            </math>
-                    </qual:functionTerm>
-        </qual:listOfFunctionTerms>
-      </qual:transition>
+      </qual:transition>      
       <qual:transition qual:id="tr_S_6">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
@@ -1612,13 +1522,13 @@
                 <p>Inhibition of HSP90AA1 leads to polyubiquitylation and degradation of AICDA.</p></body>
             </notes>
           </qual:input>
-          <qual:input qual:id="tr_S_7_in_S_41" qual:qualitativeSpecies="S_41" qual:sign="negative" essential="false" qual:thresholdLevel="1" qual:transitionEffect="none">
+          <qual:input qual:id="tr_S_7_in_S_41" qual:qualitativeSpecies="S_41" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none" essential="false">
             <notes>
               <body xmlns="http://www.w3.org/1999/xhtml">
                 <p>Microarray expression data suggests CD79A negatively regulates AICDA.</p></body>
             </notes>
           </qual:input>
-          <qual:input qual:id="tr_S_7_in_S_84" qual:qualitativeSpecies="S_84" qual:sign="positive" essential="false" qual:thresholdLevel="1" qual:transitionEffect="none">
+          <qual:input qual:id="tr_S_7_in_S_84" qual:qualitativeSpecies="S_84" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none" essential="false">
             <notes>
               <body xmlns="http://www.w3.org/1999/xhtml">
                 <p>CD27 cells produce AICDA.</p></body>
@@ -1839,7 +1749,7 @@
                 <p>Microarray expression data suggests HDAC9 negatively regulates EZH2.</p></body>
             </notes>
           </qual:input>
-          <qual:input qual:id="tr_S_11_in_S_60" qual:qualitativeSpecies="S_60" qual:sign="positive" essential="false" qual:thresholdLevel="1" qual:transitionEffect="none">
+          <qual:input qual:id="tr_S_11_in_S_60" qual:qualitativeSpecies="S_60" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none" essential="false">
             <notes>
               <body xmlns="http://www.w3.org/1999/xhtml">
                 <p>EED and EZH2 form the' polycomb repressive complex 2 (PRC2).</p></body>
@@ -1892,37 +1802,7 @@
             </math>
                     </qual:functionTerm>
         </qual:listOfFunctionTerms>
-      </qual:transition>
-      <qual:transition qual:id="tr_S_12">
-        <notes>
-          <body xmlns="http://www.w3.org/1999/xhtml">
-            <p>FRK activates FRK.</p></body>
-        </notes>
-        <qual:listOfInputs>
-          <qual:input qual:id="tr_S_12_in_S_12" qual:qualitativeSpecies="S_12" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
-            <notes>
-              <body xmlns="http://www.w3.org/1999/xhtml">
-                <p>Microarray expression data suggests FRK activates itself.</p></body>
-            </notes>
-          </qual:input>
-        </qual:listOfInputs>
-        <qual:listOfOutputs>
-          <qual:output qual:qualitativeSpecies="S_12" qual:transitionEffect="assignmentLevel"/>
-        </qual:listOfOutputs>
-        <qual:listOfFunctionTerms>
-          <qual:defaultTerm qual:resultLevel="0">
-          </qual:defaultTerm>
-          <qual:functionTerm qual:resultLevel="1">
-            <math xmlns="http://www.w3.org/1998/Math/MathML">            
-              <apply>
-                <eq/>
-                <ci> S_12 </ci>
-                <cn type="integer"> 1 </cn>
-              </apply>
-            </math>
-                    </qual:functionTerm>
-        </qual:listOfFunctionTerms>
-      </qual:transition>
+      </qual:transition>      
       <qual:transition qual:id="tr_S_13">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
@@ -1952,37 +1832,7 @@
             </math>
                     </qual:functionTerm>
         </qual:listOfFunctionTerms>
-      </qual:transition>
-      <qual:transition qual:id="tr_S_14">
-        <notes>
-          <body xmlns="http://www.w3.org/1999/xhtml">
-            <p>SKI activates SKI.</p></body>
-        </notes>
-        <qual:listOfInputs>
-          <qual:input qual:id="tr_S_14_in_S_14" qual:qualitativeSpecies="S_14" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
-            <notes>
-              <body xmlns="http://www.w3.org/1999/xhtml">
-                <p>Microarray expression data suggests SKI activates itself.</p></body>
-            </notes>
-          </qual:input>
-        </qual:listOfInputs>
-        <qual:listOfOutputs>
-          <qual:output qual:qualitativeSpecies="S_14" qual:transitionEffect="assignmentLevel"/>
-        </qual:listOfOutputs>
-        <qual:listOfFunctionTerms>
-          <qual:defaultTerm qual:resultLevel="0">
-          </qual:defaultTerm>
-          <qual:functionTerm qual:resultLevel="1">
-            <math xmlns="http://www.w3.org/1998/Math/MathML">            
-              <apply>
-                <eq/>
-                <ci> S_14 </ci>
-                <cn type="integer"> 1 </cn>
-              </apply>
-            </math>
-                    </qual:functionTerm>
-        </qual:listOfFunctionTerms>
-      </qual:transition>
+      </qual:transition>      
       <qual:transition qual:id="tr_S_15">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
@@ -2029,37 +1879,7 @@
             </math>
                     </qual:functionTerm>
         </qual:listOfFunctionTerms>
-      </qual:transition>
-      <qual:transition qual:id="tr_S_16">
-        <notes>
-          <body xmlns="http://www.w3.org/1999/xhtml">
-            <p>CHST2 activates CHST2.</p></body>
-        </notes>
-        <qual:listOfInputs>
-          <qual:input qual:id="tr_S_16_in_S_16" qual:qualitativeSpecies="S_16" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
-            <notes>
-              <body xmlns="http://www.w3.org/1999/xhtml">
-                <p>Microarray expression data suggests CHST2 activates itself.</p></body>
-            </notes>
-          </qual:input>
-        </qual:listOfInputs>
-        <qual:listOfOutputs>
-          <qual:output qual:qualitativeSpecies="S_16" qual:transitionEffect="assignmentLevel"/>
-        </qual:listOfOutputs>
-        <qual:listOfFunctionTerms>
-          <qual:defaultTerm qual:resultLevel="0">
-          </qual:defaultTerm>
-          <qual:functionTerm qual:resultLevel="1">
-            <math xmlns="http://www.w3.org/1998/Math/MathML">            
-              <apply>
-                <eq/>
-                <ci> S_16 </ci>
-                <cn type="integer"> 1 </cn>
-              </apply>
-            </math>
-                    </qual:functionTerm>
-        </qual:listOfFunctionTerms>
-      </qual:transition>
+      </qual:transition>     
       <qual:transition qual:id="tr_S_17">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
@@ -2484,37 +2304,7 @@
             </math>
                     </qual:functionTerm>
         </qual:listOfFunctionTerms>
-      </qual:transition>
-      <qual:transition qual:id="tr_S_26">
-        <notes>
-          <body xmlns="http://www.w3.org/1999/xhtml">
-            <p>TNFRSF1B activates TNFRSF1B.</p></body>
-        </notes>
-        <qual:listOfInputs>
-          <qual:input qual:id="tr_S_26_in_S_26" qual:qualitativeSpecies="S_26" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
-            <notes>
-              <body xmlns="http://www.w3.org/1999/xhtml">
-                <p>TNFRSF1B activates TNFRSF1B by self- interacting with the flanking N- and C-terminal regions.</p></body>
-            </notes>
-          </qual:input>
-        </qual:listOfInputs>
-        <qual:listOfOutputs>
-          <qual:output qual:qualitativeSpecies="S_26" qual:transitionEffect="assignmentLevel"/>
-        </qual:listOfOutputs>
-        <qual:listOfFunctionTerms>
-          <qual:defaultTerm qual:resultLevel="0">
-          </qual:defaultTerm>
-          <qual:functionTerm qual:resultLevel="1">
-            <math xmlns="http://www.w3.org/1998/Math/MathML">            
-              <apply>
-                <eq/>
-                <ci> S_26 </ci>
-                <cn type="integer"> 1 </cn>
-              </apply>
-            </math>
-                    </qual:functionTerm>
-        </qual:listOfFunctionTerms>
-      </qual:transition>
+      </qual:transition>      
       <qual:transition qual:id="tr_S_27">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
@@ -2574,37 +2364,7 @@
             </math>
                     </qual:functionTerm>
         </qual:listOfFunctionTerms>
-      </qual:transition>
-      <qual:transition qual:id="tr_S_29">
-        <notes>
-          <body xmlns="http://www.w3.org/1999/xhtml">
-            <p>SIAH1 activates SIAH1.</p></body>
-        </notes>
-        <qual:listOfInputs>
-          <qual:input qual:id="tr_S_29_in_S_29" qual:qualitativeSpecies="S_29" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
-            <notes>
-              <body xmlns="http://www.w3.org/1999/xhtml">
-                <p>Microarray expression data suggests SIAH1 activates itself.</p></body>
-            </notes>
-          </qual:input>
-        </qual:listOfInputs>
-        <qual:listOfOutputs>
-          <qual:output qual:qualitativeSpecies="S_29" qual:transitionEffect="assignmentLevel"/>
-        </qual:listOfOutputs>
-        <qual:listOfFunctionTerms>
-          <qual:defaultTerm qual:resultLevel="0">
-          </qual:defaultTerm>
-          <qual:functionTerm qual:resultLevel="1">
-            <math xmlns="http://www.w3.org/1998/Math/MathML">            
-              <apply>
-                <eq/>
-                <ci> S_29 </ci>
-                <cn type="integer"> 1 </cn>
-              </apply>
-            </math>
-                    </qual:functionTerm>
-        </qual:listOfFunctionTerms>
-      </qual:transition>
+      </qual:transition>      
       <qual:transition qual:id="tr_S_30">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
@@ -2710,7 +2470,7 @@
                 <p>PRKCA binds to CAV1.</p></body>
             </notes>
           </qual:input>
-          <qual:input qual:id="tr_S_33_in_S_61" qual:qualitativeSpecies="S_61" qual:sign="positive" essential="false" qual:thresholdLevel="1" qual:transitionEffect="none">
+          <qual:input qual:id="tr_S_33_in_S_61" qual:qualitativeSpecies="S_61" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none" essential="false">
             <notes>
               <body xmlns="http://www.w3.org/1999/xhtml">
                 <p>Microarray expression data suggests TGFBR3 positively regulates CAV1.</p></body>
@@ -2778,36 +2538,6 @@
                   <ci> S_4 </ci>
                   <cn type="integer"> 1 </cn>
                 </apply>
-              </apply>
-            </math>
-                    </qual:functionTerm>
-        </qual:listOfFunctionTerms>
-      </qual:transition>
-      <qual:transition qual:id="tr_S_35">
-        <notes>
-          <body xmlns="http://www.w3.org/1999/xhtml">
-            <p>CD74 activates CD74.</p></body>
-        </notes>
-        <qual:listOfInputs>
-          <qual:input qual:id="tr_S_35_in_S_35" qual:qualitativeSpecies="S_35" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
-            <notes>
-              <body xmlns="http://www.w3.org/1999/xhtml">
-                <p>CD74 is involved in an autocrine positive-feedback loop.</p></body>
-            </notes>
-          </qual:input>
-        </qual:listOfInputs>
-        <qual:listOfOutputs>
-          <qual:output qual:qualitativeSpecies="S_35" qual:transitionEffect="assignmentLevel"/>
-        </qual:listOfOutputs>
-        <qual:listOfFunctionTerms>
-          <qual:defaultTerm qual:resultLevel="0">
-          </qual:defaultTerm>
-          <qual:functionTerm qual:resultLevel="1">
-            <math xmlns="http://www.w3.org/1998/Math/MathML">            
-              <apply>
-                <eq/>
-                <ci> S_35 </ci>
-                <cn type="integer"> 1 </cn>
               </apply>
             </math>
                     </qual:functionTerm>
@@ -3148,7 +2878,7 @@
                 <p>HSP90AA1 indirectly upregulates ADM expression.</p></body>
             </notes>
           </qual:input>
-          <qual:input qual:id="tr_S_43_in_S_51" qual:qualitativeSpecies="S_51" qual:sign="positive" essential="false" qual:thresholdLevel="1" qual:transitionEffect="none">
+          <qual:input qual:id="tr_S_43_in_S_51" qual:qualitativeSpecies="S_51" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none" essential="false">
             <notes>
               <body xmlns="http://www.w3.org/1999/xhtml">
                 <p>Cells treated with TNF showed upregulation of ADM mRNA.</p></body>
@@ -3194,7 +2924,7 @@
             <p>TGFBR3 or IGF1R with TGFBR3 activates INPP5D.</p></body>
         </notes>
         <qual:listOfInputs>
-          <qual:input qual:id="tr_S_44_in_S_73" qual:qualitativeSpecies="S_73" qual:sign="positive" essential="false" qual:thresholdLevel="1" qual:transitionEffect="none">
+          <qual:input qual:id="tr_S_44_in_S_73" qual:qualitativeSpecies="S_73" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none" essential="false">
             <notes>
               <body xmlns="http://www.w3.org/1999/xhtml">
                 <p>Microarray expression data suggests IGF1R positively regulates INPP5D.</p></body>
@@ -3239,37 +2969,7 @@
             </math>
                     </qual:functionTerm>
         </qual:listOfFunctionTerms>
-      </qual:transition>
-      <qual:transition qual:id="tr_S_45">
-        <notes>
-          <body xmlns="http://www.w3.org/1999/xhtml">
-            <p>CNR1 activates CNR1.</p></body>
-        </notes>
-        <qual:listOfInputs>
-          <qual:input qual:id="tr_S_45_in_S_45" qual:qualitativeSpecies="S_45" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
-            <notes>
-              <body xmlns="http://www.w3.org/1999/xhtml">
-                <p>Microarray expression data suggests CNR1 activates itself.</p></body>
-            </notes>
-          </qual:input>
-        </qual:listOfInputs>
-        <qual:listOfOutputs>
-          <qual:output qual:qualitativeSpecies="S_45" qual:transitionEffect="assignmentLevel"/>
-        </qual:listOfOutputs>
-        <qual:listOfFunctionTerms>
-          <qual:defaultTerm qual:resultLevel="0">
-          </qual:defaultTerm>
-          <qual:functionTerm qual:resultLevel="1">
-            <math xmlns="http://www.w3.org/1998/Math/MathML">            
-              <apply>
-                <eq/>
-                <ci> S_45 </ci>
-                <cn type="integer"> 1 </cn>
-              </apply>
-            </math>
-                    </qual:functionTerm>
-        </qual:listOfFunctionTerms>
-      </qual:transition>
+      </qual:transition>      
       <qual:transition qual:id="tr_S_46">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
@@ -3483,37 +3183,7 @@
             </math>
                     </qual:functionTerm>
         </qual:listOfFunctionTerms>
-      </qual:transition>
-      <qual:transition qual:id="tr_S_50">
-        <notes>
-          <body xmlns="http://www.w3.org/1999/xhtml">
-            <p>IL10RA activates IL10RA.</p></body>
-        </notes>
-        <qual:listOfInputs>
-          <qual:input qual:id="tr_S_50_in_S_50" qual:qualitativeSpecies="S_50" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
-            <notes>
-              <body xmlns="http://www.w3.org/1999/xhtml">
-                <p>IL10RA indirectly upregulates its own expression.</p></body>
-            </notes>
-          </qual:input>
-        </qual:listOfInputs>
-        <qual:listOfOutputs>
-          <qual:output qual:qualitativeSpecies="S_50" qual:transitionEffect="assignmentLevel"/>
-        </qual:listOfOutputs>
-        <qual:listOfFunctionTerms>
-          <qual:defaultTerm qual:resultLevel="0">
-          </qual:defaultTerm>
-          <qual:functionTerm qual:resultLevel="1">
-            <math xmlns="http://www.w3.org/1998/Math/MathML">            
-              <apply>
-                <eq/>
-                <ci> S_50 </ci>
-                <cn type="integer"> 1 </cn>
-              </apply>
-            </math>
-                    </qual:functionTerm>
-        </qual:listOfFunctionTerms>
-      </qual:transition>
+      </qual:transition>      
       <qual:transition qual:id="tr_S_51">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
@@ -3576,37 +3246,7 @@
             </math>
                     </qual:functionTerm>
         </qual:listOfFunctionTerms>
-      </qual:transition>
-      <qual:transition qual:id="tr_S_53">
-        <notes>
-          <body xmlns="http://www.w3.org/1999/xhtml">
-            <p>FGFR1 activates FGFR1.</p></body>
-        </notes>
-        <qual:listOfInputs>
-          <qual:input qual:id="tr_S_53_in_S_53" qual:qualitativeSpecies="S_53" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
-            <notes>
-              <body xmlns="http://www.w3.org/1999/xhtml">
-                <p>Microarray expression data suggests FGFR1 activates itself.</p></body>
-            </notes>
-          </qual:input>
-        </qual:listOfInputs>
-        <qual:listOfOutputs>
-          <qual:output qual:qualitativeSpecies="S_53" qual:transitionEffect="assignmentLevel"/>
-        </qual:listOfOutputs>
-        <qual:listOfFunctionTerms>
-          <qual:defaultTerm qual:resultLevel="0">
-          </qual:defaultTerm>
-          <qual:functionTerm qual:resultLevel="1">
-            <math xmlns="http://www.w3.org/1998/Math/MathML">            
-              <apply>
-                <eq/>
-                <ci> S_53 </ci>
-                <cn type="integer"> 1 </cn>
-              </apply>
-            </math>
-                    </qual:functionTerm>
-        </qual:listOfFunctionTerms>
-      </qual:transition>
+      </qual:transition>      
       <qual:transition qual:id="tr_S_54">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
@@ -3673,73 +3313,73 @@
             <p>FRK in conjunction with ILK, BMI1, IFNGR2, RRM1, TNF, INPP5D, and EGR1 activates PTEN.</p><p>TGFBR3, ADM, AEBP1, BMI1, and CSNK2A2 are negative regulators for PTEN.</p><p>EGR1 in conjunction with INPP5D, RRM1, ILK, BMI1, and FRK activates PTEN.</p></body>
         </notes>
         <qual:listOfInputs>
-          <qual:input qual:id="tr_S_56_in_S_13" qual:qualitativeSpecies="S_13" qual:sign="positive" essential="false" qual:thresholdLevel="1" qual:transitionEffect="none">
+          <qual:input qual:id="tr_S_56_in_S_13" qual:qualitativeSpecies="S_13" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none" essential="false">
             <notes>
               <body xmlns="http://www.w3.org/1999/xhtml">
                 <p>Microarray expression data suggests IFNGR2 positively regulates PTEN.</p></body>
             </notes>
           </qual:input>
-          <qual:input qual:id="tr_S_56_in_S_75" qual:qualitativeSpecies="S_75" qual:sign="positive" essential="false" qual:thresholdLevel="1" qual:transitionEffect="none">
+          <qual:input qual:id="tr_S_56_in_S_75" qual:qualitativeSpecies="S_75" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none" essential="false">
             <notes>
               <body xmlns="http://www.w3.org/1999/xhtml">
                 <p>Microarray expression data suggests RRM1 positively regulates PTEN.</p></body>
             </notes>
           </qual:input>
-          <qual:input qual:id="tr_S_56_in_S_43" qual:qualitativeSpecies="S_43" qual:sign="negative" essential="false" qual:thresholdLevel="1" qual:transitionEffect="none">
+          <qual:input qual:id="tr_S_56_in_S_43" qual:qualitativeSpecies="S_43" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none" essential="false">
             <notes>
               <body xmlns="http://www.w3.org/1999/xhtml">
                 <p>Microarray expression data suggests ADM inhibits PTEN.</p></body>
             </notes>
           </qual:input>
-          <qual:input qual:id="tr_S_56_in_S_36" qual:qualitativeSpecies="S_36" qual:sign="positive" essential="false" qual:thresholdLevel="1" qual:transitionEffect="none">
+          <qual:input qual:id="tr_S_56_in_S_36" qual:qualitativeSpecies="S_36" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none" essential="false">
             <notes>
               <body xmlns="http://www.w3.org/1999/xhtml">
                 <p>Silencing of ILK decreased PTEN expression.</p></body>
             </notes>
           </qual:input>
-          <qual:input qual:id="tr_S_56_in_S_65" qual:qualitativeSpecies="S_65" qual:sign="negative" essential="false" qual:thresholdLevel="1" qual:transitionEffect="none">
+          <qual:input qual:id="tr_S_56_in_S_65" qual:qualitativeSpecies="S_65" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none" essential="false">
             <notes>
               <body xmlns="http://www.w3.org/1999/xhtml">
                 <p>Microarray expression data suggests AEBP1 inhibits PTEN.</p></body>
             </notes>
           </qual:input>
-          <qual:input qual:id="tr_S_56_in_S_12" qual:qualitativeSpecies="S_12" qual:sign="positive" essential="false" qual:thresholdLevel="1" qual:transitionEffect="none">
+          <qual:input qual:id="tr_S_56_in_S_12" qual:qualitativeSpecies="S_12" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none" essential="false">
             <notes>
               <body xmlns="http://www.w3.org/1999/xhtml">
                 <p>Microarray expression data suggests FRK positively regulates PTEN.</p></body>
             </notes>
           </qual:input>
-          <qual:input qual:id="tr_S_56_in_S_91" qual:qualitativeSpecies="S_91" qual:sign="dual" essential="false" qual:thresholdLevel="1" qual:transitionEffect="none">
+          <qual:input qual:id="tr_S_56_in_S_91" qual:qualitativeSpecies="S_91" qual:sign="dual" qual:thresholdLevel="1" qual:transitionEffect="none" essential="false">
             <notes>
               <body xmlns="http://www.w3.org/1999/xhtml">
                 <p>Microarray expression data suggests BMI1 alone inhibits PTEN, but that BMI1 with ILK, IFNGR2, RRM1, TNF, INPP5D, and EGR1 or BMI1 with EGR1, INPP5D, RRM1, ILK, and FRK positively regulates PTEN.</p></body>
             </notes>
           </qual:input>
-          <qual:input qual:id="tr_S_56_in_S_42" qual:qualitativeSpecies="S_42" qual:sign="positive" essential="false" qual:thresholdLevel="1" qual:transitionEffect="none">
+          <qual:input qual:id="tr_S_56_in_S_42" qual:qualitativeSpecies="S_42" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none" essential="false">
             <notes>
               <body xmlns="http://www.w3.org/1999/xhtml">
                 <p>Elevated EGR1 levels upregulated PTEN</p></body>
             </notes>
           </qual:input>
-          <qual:input qual:id="tr_S_56_in_S_44" qual:qualitativeSpecies="S_44" qual:sign="positive" essential="false" qual:thresholdLevel="1" qual:transitionEffect="none">
+          <qual:input qual:id="tr_S_56_in_S_44" qual:qualitativeSpecies="S_44" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none" essential="false">
             <notes>
               <body xmlns="http://www.w3.org/1999/xhtml">
                 <p>Microarray expression data suggests INPP5D positively regulates PTEN.</p></body>
             </notes>
           </qual:input>
-          <qual:input qual:id="tr_S_56_in_S_51" qual:qualitativeSpecies="S_51" qual:sign="positive" essential="false" qual:thresholdLevel="1" qual:transitionEffect="none">
+          <qual:input qual:id="tr_S_56_in_S_51" qual:qualitativeSpecies="S_51" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none" essential="false">
             <notes>
               <body xmlns="http://www.w3.org/1999/xhtml">
                 <p>Microarray expression data suggests TNF positively regulates PTEN.</p></body>
             </notes>
           </qual:input>
-          <qual:input qual:id="tr_S_56_in_S_70" qual:qualitativeSpecies="S_70" qual:sign="negative" essential="false" qual:thresholdLevel="1" qual:transitionEffect="none">
+          <qual:input qual:id="tr_S_56_in_S_70" qual:qualitativeSpecies="S_70" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none" essential="false">
             <notes>
               <body xmlns="http://www.w3.org/1999/xhtml">
                 <p>CSNK2A2 induces PTEN phosphorylation.</p></body>
             </notes>
           </qual:input>
-          <qual:input qual:id="tr_S_56_in_S_61" qual:qualitativeSpecies="S_61" qual:sign="negative" essential="false" qual:thresholdLevel="1" qual:transitionEffect="none">
+          <qual:input qual:id="tr_S_56_in_S_61" qual:qualitativeSpecies="S_61" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none" essential="false">
             <notes>
               <body xmlns="http://www.w3.org/1999/xhtml">
                 <p>Microarray expression data suggests TGFBR3 inhibits PTEN.</p></body>
@@ -3943,13 +3583,13 @@
             <p>CREM or JAK1 inhibits FOS.</p><p>ADM in conjunction with LMNA, MAP2K6, and TNF activate FOS.</p><p>CNR1 in conjunction with LMNA, MAP2K6,  PCNA, ADM, and TNF activate FOS.</p></body>
         </notes>
         <qual:listOfInputs>
-          <qual:input qual:id="tr_S_57_in_S_3" qual:qualitativeSpecies="S_3" qual:sign="negative" essential="false" qual:thresholdLevel="1" qual:transitionEffect="none">
+          <qual:input qual:id="tr_S_57_in_S_3" qual:qualitativeSpecies="S_3" qual:sign="negative" qual:thresholdLevel="1" qual:transitionEffect="none" essential="false">
             <notes>
               <body xmlns="http://www.w3.org/1999/xhtml">
                 <p>Microarray expression data suggests CREM positively regulates FOS.</p></body>
             </notes>
           </qual:input>
-          <qual:input qual:id="tr_S_57_in_S_45" qual:qualitativeSpecies="S_45" qual:sign="positive" essential="false" qual:thresholdLevel="1" qual:transitionEffect="none">
+          <qual:input qual:id="tr_S_57_in_S_45" qual:qualitativeSpecies="S_45" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none" essential="false">
             <notes>
               <body xmlns="http://www.w3.org/1999/xhtml">
                 <p>Microarray expression data suggests CNR1 positively regulates FOS.</p></body>
@@ -3961,7 +3601,7 @@
                 <p>Microarray expression data suggests ADM positively regulates FOS.</p></body>
             </notes>
           </qual:input>
-          <qual:input qual:id="tr_S_57_in_S_17" qual:qualitativeSpecies="S_17" qual:sign="positive" essential="false" qual:thresholdLevel="1" qual:transitionEffect="none">
+          <qual:input qual:id="tr_S_57_in_S_17" qual:qualitativeSpecies="S_17" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none" essential="false">
             <notes>
               <body xmlns="http://www.w3.org/1999/xhtml">
                 <p>Microarray expression data suggests PCNA positively regulates FOS.</p></body>
@@ -4117,7 +3757,7 @@
             <p>CUL5 or IFNGR2 with CUL5 inhibits APOBEC3G.</p></body>
         </notes>
         <qual:listOfInputs>
-          <qual:input qual:id="tr_S_58_in_S_13" qual:qualitativeSpecies="S_13" qual:sign="positive" essential="false" qual:thresholdLevel="1" qual:transitionEffect="none">
+          <qual:input qual:id="tr_S_58_in_S_13" qual:qualitativeSpecies="S_13" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none" essential="false">
             <notes>
               <body xmlns="http://www.w3.org/1999/xhtml">
                 <p>Teatment with IFNG causes the upregulation of APOBEC3G gene expression.</p></body>
@@ -4176,157 +3816,7 @@
             </math>
                     </qual:functionTerm>
         </qual:listOfFunctionTerms>
-      </qual:transition>
-      <qual:transition qual:id="tr_S_59">
-        <notes>
-          <body xmlns="http://www.w3.org/1999/xhtml">
-            <p>ANXA2 activates ANXA2.</p></body>
-        </notes>
-        <qual:listOfInputs>
-          <qual:input qual:id="tr_S_59_in_S_59" qual:qualitativeSpecies="S_59" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
-            <notes>
-              <body xmlns="http://www.w3.org/1999/xhtml">
-                <p>ANXA2 overexpression induced ANXA2 itself, suggesting a positive feedback mechanism.</p></body>
-            </notes>
-          </qual:input>
-        </qual:listOfInputs>
-        <qual:listOfOutputs>
-          <qual:output qual:qualitativeSpecies="S_59" qual:transitionEffect="assignmentLevel"/>
-        </qual:listOfOutputs>
-        <qual:listOfFunctionTerms>
-          <qual:defaultTerm qual:resultLevel="0">
-          </qual:defaultTerm>
-          <qual:functionTerm qual:resultLevel="1">
-            <math xmlns="http://www.w3.org/1998/Math/MathML">            
-              <apply>
-                <eq/>
-                <ci> S_59 </ci>
-                <cn type="integer"> 1 </cn>
-              </apply>
-            </math>
-                    </qual:functionTerm>
-        </qual:listOfFunctionTerms>
-      </qual:transition>
-      <qual:transition qual:id="tr_S_60">
-        <notes>
-          <body xmlns="http://www.w3.org/1999/xhtml">
-            <p>EED activates EED.</p></body>
-        </notes>
-        <qual:listOfInputs>
-          <qual:input qual:id="tr_S_60_in_S_60" qual:qualitativeSpecies="S_60" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
-            <notes>
-              <body xmlns="http://www.w3.org/1999/xhtml">
-                <p>Microarray expression data suggests EED activates itself</p></body>
-            </notes>
-          </qual:input>
-        </qual:listOfInputs>
-        <qual:listOfOutputs>
-          <qual:output qual:qualitativeSpecies="S_60" qual:transitionEffect="assignmentLevel"/>
-        </qual:listOfOutputs>
-        <qual:listOfFunctionTerms>
-          <qual:defaultTerm qual:resultLevel="0">
-          </qual:defaultTerm>
-          <qual:functionTerm qual:resultLevel="1">
-            <math xmlns="http://www.w3.org/1998/Math/MathML">            
-              <apply>
-                <eq/>
-                <ci> S_60 </ci>
-                <cn type="integer"> 1 </cn>
-              </apply>
-            </math>
-                    </qual:functionTerm>
-        </qual:listOfFunctionTerms>
-      </qual:transition>
-      <qual:transition qual:id="tr_S_61">
-        <notes>
-          <body xmlns="http://www.w3.org/1999/xhtml">
-            <p>TGFBR3 activates TGFBR3.</p></body>
-        </notes>
-        <qual:listOfInputs>
-          <qual:input qual:id="tr_S_61_in_S_61" qual:qualitativeSpecies="S_61" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
-            <notes>
-              <body xmlns="http://www.w3.org/1999/xhtml">
-                <p>Microarray expression data suggests TGFBR3 activates itself.</p></body>
-            </notes>
-          </qual:input>
-        </qual:listOfInputs>
-        <qual:listOfOutputs>
-          <qual:output qual:qualitativeSpecies="S_61" qual:transitionEffect="assignmentLevel"/>
-        </qual:listOfOutputs>
-        <qual:listOfFunctionTerms>
-          <qual:defaultTerm qual:resultLevel="0">
-          </qual:defaultTerm>
-          <qual:functionTerm qual:resultLevel="1">
-            <math xmlns="http://www.w3.org/1998/Math/MathML">            
-              <apply>
-                <eq/>
-                <ci> S_61 </ci>
-                <cn type="integer"> 1 </cn>
-              </apply>
-            </math>
-                    </qual:functionTerm>
-        </qual:listOfFunctionTerms>
-      </qual:transition>
-      <qual:transition qual:id="tr_S_62">
-        <notes>
-          <body xmlns="http://www.w3.org/1999/xhtml">
-            <p>GSK3B activates GSK3B.</p></body>
-        </notes>
-        <qual:listOfInputs>
-          <qual:input qual:id="tr_S_62_in_S_62" qual:qualitativeSpecies="S_62" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
-            <notes>
-              <body xmlns="http://www.w3.org/1999/xhtml">
-                <p>GSK3B activates GSK3B through autophosphorylation.</p></body>
-            </notes>
-          </qual:input>
-        </qual:listOfInputs>
-        <qual:listOfOutputs>
-          <qual:output qual:qualitativeSpecies="S_62" qual:transitionEffect="assignmentLevel"/>
-        </qual:listOfOutputs>
-        <qual:listOfFunctionTerms>
-          <qual:defaultTerm qual:resultLevel="0">
-          </qual:defaultTerm>
-          <qual:functionTerm qual:resultLevel="1">
-            <math xmlns="http://www.w3.org/1998/Math/MathML">            
-              <apply>
-                <eq/>
-                <ci> S_62 </ci>
-                <cn type="integer"> 1 </cn>
-              </apply>
-            </math>
-                    </qual:functionTerm>
-        </qual:listOfFunctionTerms>
-      </qual:transition>
-      <qual:transition qual:id="tr_S_63">
-        <notes>
-          <body xmlns="http://www.w3.org/1999/xhtml">
-            <p>LMNA activates LMNA.</p></body>
-        </notes>
-        <qual:listOfInputs>
-          <qual:input qual:id="tr_S_63_in_S_63" qual:qualitativeSpecies="S_63" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
-            <notes>
-              <body xmlns="http://www.w3.org/1999/xhtml">
-                <p>Microarray expression data suggests LMNA upregulates its own activity.</p></body>
-            </notes>
-          </qual:input>
-        </qual:listOfInputs>
-        <qual:listOfOutputs>
-          <qual:output qual:qualitativeSpecies="S_63" qual:transitionEffect="assignmentLevel"/>
-        </qual:listOfOutputs>
-        <qual:listOfFunctionTerms>
-          <qual:defaultTerm qual:resultLevel="0">
-          </qual:defaultTerm>
-          <qual:functionTerm qual:resultLevel="1">
-            <math xmlns="http://www.w3.org/1998/Math/MathML">            
-              <apply>
-                <eq/>
-                <ci> S_63 </ci>
-                <cn type="integer"> 1 </cn>
-              </apply>
-            </math>
-                    </qual:functionTerm>
-        </qual:listOfFunctionTerms>
-      </qual:transition>
+      </qual:transition>            
       <qual:transition qual:id="tr_S_64">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
@@ -4393,7 +3883,7 @@
             <p>TNF or IFNGR2 with TNF activates IL7.</p></body>
         </notes>
         <qual:listOfInputs>
-          <qual:input qual:id="tr_S_66_in_S_13" qual:qualitativeSpecies="S_13" qual:sign="positive" essential="false" qual:thresholdLevel="1" qual:transitionEffect="none">
+          <qual:input qual:id="tr_S_66_in_S_13" qual:qualitativeSpecies="S_13" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none" essential="false">
             <notes>
               <body xmlns="http://www.w3.org/1999/xhtml">
                 <p>Microarray expression data suggests IFNGR2 with TNF positively regulates IL7.</p></body>
@@ -4545,37 +4035,7 @@
             </math>
                     </qual:functionTerm>
         </qual:listOfFunctionTerms>
-      </qual:transition>
-      <qual:transition qual:id="tr_S_70">
-        <notes>
-          <body xmlns="http://www.w3.org/1999/xhtml">
-            <p>CSNK2A2 activates CSNK2A2.</p></body>
-        </notes>
-        <qual:listOfInputs>
-          <qual:input qual:id="tr_S_70_in_S_70" qual:qualitativeSpecies="S_70" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
-            <notes>
-              <body xmlns="http://www.w3.org/1999/xhtml">
-                <p>Microarray expression data suggests CSNK2A2 activates itself.</p></body>
-            </notes>
-          </qual:input>
-        </qual:listOfInputs>
-        <qual:listOfOutputs>
-          <qual:output qual:qualitativeSpecies="S_70" qual:transitionEffect="assignmentLevel"/>
-        </qual:listOfOutputs>
-        <qual:listOfFunctionTerms>
-          <qual:defaultTerm qual:resultLevel="0">
-          </qual:defaultTerm>
-          <qual:functionTerm qual:resultLevel="1">
-            <math xmlns="http://www.w3.org/1998/Math/MathML">            
-              <apply>
-                <eq/>
-                <ci> S_70 </ci>
-                <cn type="integer"> 1 </cn>
-              </apply>
-            </math>
-                    </qual:functionTerm>
-        </qual:listOfFunctionTerms>
-      </qual:transition>
+      </qual:transition>      
       <qual:transition qual:id="tr_S_71">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
@@ -4682,97 +4142,7 @@
             </math>
                     </qual:functionTerm>
         </qual:listOfFunctionTerms>
-      </qual:transition>
-      <qual:transition qual:id="tr_S_74">
-        <notes>
-          <body xmlns="http://www.w3.org/1999/xhtml">
-            <p>CD81 activates CD81.</p></body>
-        </notes>
-        <qual:listOfInputs>
-          <qual:input qual:id="tr_S_74_in_S_74" qual:qualitativeSpecies="S_74" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
-            <notes>
-              <body xmlns="http://www.w3.org/1999/xhtml">
-                <p>CD81 activates CD81 through self-reactive IgE antibodies.</p></body>
-            </notes>
-          </qual:input>
-        </qual:listOfInputs>
-        <qual:listOfOutputs>
-          <qual:output qual:qualitativeSpecies="S_74" qual:transitionEffect="assignmentLevel"/>
-        </qual:listOfOutputs>
-        <qual:listOfFunctionTerms>
-          <qual:defaultTerm qual:resultLevel="0">
-          </qual:defaultTerm>
-          <qual:functionTerm qual:resultLevel="1">
-            <math xmlns="http://www.w3.org/1998/Math/MathML">            
-              <apply>
-                <eq/>
-                <ci> S_74 </ci>
-                <cn type="integer"> 1 </cn>
-              </apply>
-            </math>
-                    </qual:functionTerm>
-        </qual:listOfFunctionTerms>
-      </qual:transition>
-      <qual:transition qual:id="tr_S_75">
-        <notes>
-          <body xmlns="http://www.w3.org/1999/xhtml">
-            <p>RRM1 activates RRM1.</p></body>
-        </notes>
-        <qual:listOfInputs>
-          <qual:input qual:id="tr_S_75_in_S_75" qual:qualitativeSpecies="S_75" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
-            <notes>
-              <body xmlns="http://www.w3.org/1999/xhtml">
-                <p>Microarray expression data suggests RRM1 activates itself.</p></body>
-            </notes>
-          </qual:input>
-        </qual:listOfInputs>
-        <qual:listOfOutputs>
-          <qual:output qual:qualitativeSpecies="S_75" qual:transitionEffect="assignmentLevel"/>
-        </qual:listOfOutputs>
-        <qual:listOfFunctionTerms>
-          <qual:defaultTerm qual:resultLevel="0">
-          </qual:defaultTerm>
-          <qual:functionTerm qual:resultLevel="1">
-            <math xmlns="http://www.w3.org/1998/Math/MathML">            
-              <apply>
-                <eq/>
-                <ci> S_75 </ci>
-                <cn type="integer"> 1 </cn>
-              </apply>
-            </math>
-                    </qual:functionTerm>
-        </qual:listOfFunctionTerms>
-      </qual:transition>
-      <qual:transition qual:id="tr_S_76">
-        <notes>
-          <body xmlns="http://www.w3.org/1999/xhtml">
-            <p>RFC5 activates RFC5.</p></body>
-        </notes>
-        <qual:listOfInputs>
-          <qual:input qual:id="tr_S_76_in_S_76" qual:qualitativeSpecies="S_76" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
-            <notes>
-              <body xmlns="http://www.w3.org/1999/xhtml">
-                <p>Microarray expression data suggests RFC5 activates itself.</p></body>
-            </notes>
-          </qual:input>
-        </qual:listOfInputs>
-        <qual:listOfOutputs>
-          <qual:output qual:qualitativeSpecies="S_76" qual:transitionEffect="assignmentLevel"/>
-        </qual:listOfOutputs>
-        <qual:listOfFunctionTerms>
-          <qual:defaultTerm qual:resultLevel="0">
-          </qual:defaultTerm>
-          <qual:functionTerm qual:resultLevel="1">
-            <math xmlns="http://www.w3.org/1998/Math/MathML">            
-              <apply>
-                <eq/>
-                <ci> S_76 </ci>
-                <cn type="integer"> 1 </cn>
-              </apply>
-            </math>
-                    </qual:functionTerm>
-        </qual:listOfFunctionTerms>
-      </qual:transition>
+      </qual:transition>      
       <qual:transition qual:id="tr_S_77">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
@@ -4862,37 +4232,7 @@
             </math>
                     </qual:functionTerm>
         </qual:listOfFunctionTerms>
-      </qual:transition>
-      <qual:transition qual:id="tr_S_80">
-        <notes>
-          <body xmlns="http://www.w3.org/1999/xhtml">
-            <p>FNY activates FYN.</p></body>
-        </notes>
-        <qual:listOfInputs>
-          <qual:input qual:id="tr_S_80_in_S_80" qual:qualitativeSpecies="S_80" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
-            <notes>
-              <body xmlns="http://www.w3.org/1999/xhtml">
-                <p>FYN in involved in a positive feedback loop that sustains its continued activity.</p></body>
-            </notes>
-          </qual:input>
-        </qual:listOfInputs>
-        <qual:listOfOutputs>
-          <qual:output qual:qualitativeSpecies="S_80" qual:transitionEffect="assignmentLevel"/>
-        </qual:listOfOutputs>
-        <qual:listOfFunctionTerms>
-          <qual:defaultTerm qual:resultLevel="0">
-          </qual:defaultTerm>
-          <qual:functionTerm qual:resultLevel="1">
-            <math xmlns="http://www.w3.org/1998/Math/MathML">            
-              <apply>
-                <eq/>
-                <ci> S_80 </ci>
-                <cn type="integer"> 1 </cn>
-              </apply>
-            </math>
-                    </qual:functionTerm>
-        </qual:listOfFunctionTerms>
-      </qual:transition>
+      </qual:transition>      
       <qual:transition qual:id="tr_S_81">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
@@ -4963,7 +4303,7 @@
                 <p>Microarray expression data suggests RUNX3 positively regulates PRF1.</p></body>
             </notes>
           </qual:input>
-          <qual:input qual:id="tr_S_82_in_S_51" qual:qualitativeSpecies="S_51" qual:sign="positive" essential="false" qual:thresholdLevel="1" qual:transitionEffect="none">
+          <qual:input qual:id="tr_S_82_in_S_51" qual:qualitativeSpecies="S_51" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none" essential="false">
             <notes>
               <body xmlns="http://www.w3.org/1999/xhtml">
                 <p>Microarray expression data suggests TNF with RUNX3 positively regulates PRF1.</p></body>
@@ -5002,37 +4342,7 @@
             </math>
                     </qual:functionTerm>
         </qual:listOfFunctionTerms>
-      </qual:transition>
-      <qual:transition qual:id="tr_S_83">
-        <notes>
-          <body xmlns="http://www.w3.org/1999/xhtml">
-            <p>CSDA activates CSDA.</p></body>
-        </notes>
-        <qual:listOfInputs>
-          <qual:input qual:id="tr_S_83_in_S_83" qual:qualitativeSpecies="S_83" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
-            <notes>
-              <body xmlns="http://www.w3.org/1999/xhtml">
-                <p>Microarray expression data suggests CREM activates itself.</p></body>
-            </notes>
-          </qual:input>
-        </qual:listOfInputs>
-        <qual:listOfOutputs>
-          <qual:output qual:qualitativeSpecies="S_83" qual:transitionEffect="assignmentLevel"/>
-        </qual:listOfOutputs>
-        <qual:listOfFunctionTerms>
-          <qual:defaultTerm qual:resultLevel="0">
-          </qual:defaultTerm>
-          <qual:functionTerm qual:resultLevel="1">
-            <math xmlns="http://www.w3.org/1998/Math/MathML">            
-              <apply>
-                <eq/>
-                <ci> S_83 </ci>
-                <cn type="integer"> 1 </cn>
-              </apply>
-            </math>
-                    </qual:functionTerm>
-        </qual:listOfFunctionTerms>
-      </qual:transition>
+      </qual:transition>      
       <qual:transition qual:id="tr_S_84">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
@@ -5065,37 +4375,7 @@
             </math>
                     </qual:functionTerm>
         </qual:listOfFunctionTerms>
-      </qual:transition>
-      <qual:transition qual:id="tr_S_85">
-        <notes>
-          <body xmlns="http://www.w3.org/1999/xhtml">
-            <p>CUL5 activates CUL5.</p></body>
-        </notes>
-        <qual:listOfInputs>
-          <qual:input qual:id="tr_S_85_in_S_85" qual:qualitativeSpecies="S_85" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
-            <notes>
-              <body xmlns="http://www.w3.org/1999/xhtml">
-                <p>Microarray expression data suggests CUL5 activates itself.</p></body>
-            </notes>
-          </qual:input>
-        </qual:listOfInputs>
-        <qual:listOfOutputs>
-          <qual:output qual:qualitativeSpecies="S_85" qual:transitionEffect="assignmentLevel"/>
-        </qual:listOfOutputs>
-        <qual:listOfFunctionTerms>
-          <qual:defaultTerm qual:resultLevel="0">
-          </qual:defaultTerm>
-          <qual:functionTerm qual:resultLevel="1">
-            <math xmlns="http://www.w3.org/1998/Math/MathML">            
-              <apply>
-                <eq/>
-                <ci> S_85 </ci>
-                <cn type="integer"> 1 </cn>
-              </apply>
-            </math>
-                    </qual:functionTerm>
-        </qual:listOfFunctionTerms>
-      </qual:transition>
+      </qual:transition>      
       <qual:transition qual:id="tr_S_86">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
@@ -5108,7 +4388,7 @@
                 <p>EGR1 binds to the promoter region of ALOX5.</p></body>
             </notes>
           </qual:input>
-          <qual:input qual:id="tr_S_86_in_S_61" qual:qualitativeSpecies="S_61" qual:sign="positive" essential="false" qual:thresholdLevel="1" qual:transitionEffect="none">
+          <qual:input qual:id="tr_S_86_in_S_61" qual:qualitativeSpecies="S_61" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none" essential="false">
             <notes>
               <body xmlns="http://www.w3.org/1999/xhtml">
                 <p>Microarray expression data suggests TGFBR3 positively regulates ALOX5.</p></body>
@@ -5270,37 +4550,7 @@
             </math>
                     </qual:functionTerm>
         </qual:listOfFunctionTerms>
-      </qual:transition>
-      <qual:transition qual:id="tr_S_91">
-        <notes>
-          <body xmlns="http://www.w3.org/1999/xhtml">
-            <p>BMI1 activates BMI1.</p></body>
-        </notes>
-        <qual:listOfInputs>
-          <qual:input qual:id="tr_S_91_in_S_91" qual:qualitativeSpecies="S_91" qual:sign="positive" qual:thresholdLevel="1" qual:transitionEffect="none">
-            <notes>
-              <body xmlns="http://www.w3.org/1999/xhtml">
-                <p>A positive feedback loop sustains BMl1 activity.</p></body>
-            </notes>
-          </qual:input>
-        </qual:listOfInputs>
-        <qual:listOfOutputs>
-          <qual:output qual:qualitativeSpecies="S_91" qual:transitionEffect="assignmentLevel"/>
-        </qual:listOfOutputs>
-        <qual:listOfFunctionTerms>
-          <qual:defaultTerm qual:resultLevel="0">
-          </qual:defaultTerm>
-          <qual:functionTerm qual:resultLevel="1">
-            <math xmlns="http://www.w3.org/1998/Math/MathML">            
-              <apply>
-                <eq/>
-                <ci> S_91 </ci>
-                <cn type="integer"> 1 </cn>
-              </apply>
-            </math>
-                    </qual:functionTerm>
-        </qual:listOfFunctionTerms>
-      </qual:transition>
+      </qual:transition>      
     </qual:listOfTransitions>
     <listOfCompartments>
       <compartment constant="true" id="cytosol" name="cytosol"/>

@@ -1,0 +1,48 @@
+v_bcl2 -? v_Apoptosis
+v_tp53 -? v_Apoptosis
+v_cebpa -? v_Differentiation
+v_etv6 -? v_Differentiation
+v_meis1 -? v_Differentiation
+v_ccnd1 -? v_Proliferation
+v_meis1 -? v_Proliferation
+v_myc -? v_Proliferation
+v_sox4 -? v_Proliferation
+v_stat5a -? v_Proliferation
+v_flt3 -? v_akt
+v_npm1 -? v_arf
+v_erk -? v_bcl2
+v_tp53 -? v_bcl2
+v_dnmt3a -? v_ccnd1
+v_gsk3b -? v_ccnd1
+v_flt3 -? v_cebpa
+v_flt3 -? v_erk
+v_erk -? v_etv6
+v_npm1 -? v_fbxw7
+v_akt -? v_gsk3b
+v_npm1 -? v_hoxa9
+v_dnmt3a -? v_meis1
+v_hoxa9 -? v_meis1
+v_erk -? v_myc
+v_fbxw7 -? v_myc
+v_gsk3b -? v_myc
+v_cebpa -? v_sox4
+v_flt3 -? v_stat5a
+v_arf -? v_tp53
+$v_Apoptosis: (v_tp53 & !v_bcl2)
+$v_Differentiation: ((v_cebpa | v_etv6) & !v_meis1)
+$v_Proliferation: (v_myc | (v_ccnd1 | (v_sox4 | (v_meis1 | v_stat5a))))
+$v_akt: v_flt3
+$v_arf: v_npm1
+$v_bcl2: (v_erk & !v_tp53)
+$v_ccnd1: !(v_dnmt3a | v_gsk3b)
+$v_cebpa: !v_flt3
+$v_erk: v_flt3
+$v_etv6: !v_erk
+$v_fbxw7: v_npm1
+$v_gsk3b: !v_akt
+$v_hoxa9: !v_npm1
+$v_meis1: !(v_dnmt3a & !v_hoxa9)
+$v_myc: (v_erk & !(v_fbxw7 & v_gsk3b))
+$v_sox4: !v_cebpa
+$v_stat5a: v_flt3
+$v_tp53: v_arf

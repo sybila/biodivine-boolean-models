@@ -1,0 +1,3095 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" layout:required="false" level="3" qual:required="true" xmlns:layout="http://www.sbml.org/sbml/level3/version1/layout/version1" version="1" xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+  <model metaid="_69a926fb-b228-4e8a-a100-bd131e9f9416" id="model_id">
+    <notes>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Based on public and novel data from molecular genetic experiments (qPCR, western blot, EMSA), along with genome-wide assays (RNA-seq, ChIP-seq), this logical model recapitulates cytokine-induced differentiation of common progenitors myeloid-lymphoid progenitors, the effect of various reported gene knock-downs, as well as reprogramming of pre-B cells into macrophages induced by ectopic expression of CEBPa and CEBPb factors (van Oevelen et al (20015) Stem Cell Report). 
+
+This model explicitly distinguishes between genes, proteins, and activated proteins for several key network players, in order to enable the reproduction of specific temporal behaviour.
+
+A simple version of this network can be obtained by applying one of the model reductions associated with this model (e.g. reduce_proteins, to obtain the regulatory graph of Figure 3 in Collombet et al, PNAS, in press).
+
+For some factors, several nodes are considered to represent the gene (factor_gene), the protein (factor) and the active form of the protein (factor_active). This was introduced to account for post-translational regulation (cytokine receptors activation by their ligand, and protein-protein interaction, etc). Otherwise, nodes represent both the gene and the corresponding protein. 
+
+The reduction "Reduce_proteins" reduce the multi-level nodes (gene-protein-active protein) and results in only one node for each factor, reducing the complexity of stable states analysis or simulations.
+
+Using this reduction, the model exhibits four stables states (plus one stable state with all variables at 0, independently of the state of the inputs cytokines Il7 and Csf1). These four states correspond to CLP, GMP, B cells and Macrophages as defined in the “Run simulation” panel. CLP and GMP states are stable only in the absence of Il7 or Cs1 (respectively), as these cytokines enable differentiation into B cells and macrophages, respectively.
+
+Normal differentiation can be simulated from multipotent progenitors, as defined in the simulation panel (MP). In the absence of inputs, the MP can lead to GMP or CLP. In the presence of inputs, they can tends toward B cell or macrophage (see simulation presets "Dif: ....").
+
+Reprogramming of B cells into macrophages can be simulated with constant or transient ectopic expression of Cebpa in B cells (see "Bcell-Repro" simulation presets, which include Cebpa expression combined with various perturbations). 
+
+Reverse reprogramming from macrophages to B cells can be simulated by ectopic expression of combinations of B cell factors in macrophages (see "Mac-Repro" presets).</p>
+  </body>
+    </notes>
+    <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_69a926fb-b228-4e8a-a100-bd131e9f9416">
+          <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="https://www-ncbi-nlm-nih-gov.insb.bib.cnrs.fr/pubmed/26235892"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="https://www.ncbi.nlm.nih.gov/pubmed/26235892"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+      <layout:listOfLayouts xmlns:layout="http://www.sbml.org/sbml/level3/version1/layout/version1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <layout:layout layout:id="__layout__">
+        <layout:dimensions layout:height="856" layout:width="1045"/>
+        <layout:listOfAdditionalGraphicalObjects>
+          <layout:generalGlyph layout:id="_ly_Mac1_gene" layout:reference="Mac1_gene">
+            <layout:boundingBox>
+              <layout:position layout:x="232" layout:y="783"/>
+              <layout:dimensions layout:height="30" layout:width="65"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Mac1" layout:reference="Mac1">
+            <layout:boundingBox>
+              <layout:position layout:x="257" layout:y="816"/>
+              <layout:dimensions layout:height="40" layout:width="80"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Id2" layout:reference="Id2">
+            <layout:boundingBox>
+              <layout:position layout:x="704" layout:y="482"/>
+              <layout:dimensions layout:height="40" layout:width="80"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Egr2" layout:reference="Egr2">
+            <layout:boundingBox>
+              <layout:position layout:x="562" layout:y="427"/>
+              <layout:dimensions layout:height="40" layout:width="80"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Cebpb" layout:reference="Cebpb">
+            <layout:boundingBox>
+              <layout:position layout:x="231" layout:y="511"/>
+              <layout:dimensions layout:height="40" layout:width="80"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Cebpa_gene" layout:reference="Cebpa_gene">
+            <layout:boundingBox>
+              <layout:position layout:x="249" layout:y="351"/>
+              <layout:dimensions layout:height="30" layout:width="65"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Cebpa" layout:reference="Cebpa">
+            <layout:boundingBox>
+              <layout:position layout:x="251" layout:y="370"/>
+              <layout:dimensions layout:height="40" layout:width="80"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Csf1r" layout:reference="Csf1r">
+            <layout:boundingBox>
+              <layout:position layout:x="110" layout:y="312"/>
+              <layout:dimensions layout:height="40" layout:width="80"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Csf1r_act" layout:reference="Csf1r_act">
+            <layout:boundingBox>
+              <layout:position layout:x="123" layout:y="239"/>
+              <layout:dimensions layout:height="30" layout:width="65"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Spi1" layout:reference="Spi1">
+            <layout:boundingBox>
+              <layout:position layout:x="367" layout:y="298"/>
+              <layout:dimensions layout:height="40" layout:width="80"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Runx1" layout:reference="Runx1">
+            <layout:boundingBox>
+              <layout:position layout:x="361" layout:y="181"/>
+              <layout:dimensions layout:height="40" layout:width="80"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Gfi1" layout:reference="Gfi1">
+            <layout:boundingBox>
+              <layout:position layout:x="581" layout:y="358"/>
+              <layout:dimensions layout:height="40" layout:width="80"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Ikzf1" layout:reference="Ikzf1">
+            <layout:boundingBox>
+              <layout:position layout:x="512" layout:y="295"/>
+              <layout:dimensions layout:height="40" layout:width="80"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Flt3" layout:reference="Flt3">
+            <layout:boundingBox>
+              <layout:position layout:x="537" layout:y="789"/>
+              <layout:dimensions layout:height="40" layout:width="80"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Mef2c" layout:reference="Mef2c">
+            <layout:boundingBox>
+              <layout:position layout:x="497" layout:y="130"/>
+              <layout:dimensions layout:height="40" layout:width="80"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Ets1" layout:reference="Ets1">
+            <layout:boundingBox>
+              <layout:position layout:x="764" layout:y="422"/>
+              <layout:dimensions layout:height="40" layout:width="80"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Il7ra" layout:reference="Il7ra">
+            <layout:boundingBox>
+              <layout:position layout:x="932" layout:y="341"/>
+              <layout:dimensions layout:height="40" layout:width="80"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Il7r_act" layout:reference="Il7r_act">
+            <layout:boundingBox>
+              <layout:position layout:x="945" layout:y="406"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_E2a_gene" layout:reference="E2a_gene">
+            <layout:boundingBox>
+              <layout:position layout:x="694" layout:y="351"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_E2a" layout:reference="E2a">
+            <layout:boundingBox>
+              <layout:position layout:x="706" layout:y="382"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_E2a_prot_Active" layout:reference="E2a_prot_Active">
+            <layout:boundingBox>
+              <layout:position layout:x="737" layout:y="349"/>
+              <layout:dimensions layout:height="40" layout:width="80"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Foxo1_gene" layout:reference="Foxo1_gene">
+            <layout:boundingBox>
+              <layout:position layout:x="855" layout:y="428"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Foxo1" layout:reference="Foxo1">
+            <layout:boundingBox>
+              <layout:position layout:x="856" layout:y="449"/>
+              <layout:dimensions layout:height="40" layout:width="80"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Ebf1" layout:reference="Ebf1">
+            <layout:boundingBox>
+              <layout:position layout:x="815" layout:y="537"/>
+              <layout:dimensions layout:height="40" layout:width="80"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Ebf1_gene" layout:reference="Ebf1_gene">
+            <layout:boundingBox>
+              <layout:position layout:x="872" layout:y="549"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Pax5_gene" layout:reference="Pax5_gene">
+            <layout:boundingBox>
+              <layout:position layout:x="853" layout:y="662"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Pax5" layout:reference="Pax5">
+            <layout:boundingBox>
+              <layout:position layout:x="861" layout:y="624"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Pax5_prot_active" layout:reference="Pax5_prot_active">
+            <layout:boundingBox>
+              <layout:position layout:x="763" layout:y="616"/>
+              <layout:dimensions layout:height="40" layout:width="80"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Cd19_gene" layout:reference="Cd19_gene">
+            <layout:boundingBox>
+              <layout:position layout:x="763" layout:y="812"/>
+              <layout:dimensions layout:height="30" layout:width="60"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Cd19" layout:reference="Cd19">
+            <layout:boundingBox>
+              <layout:position layout:x="849" layout:y="808"/>
+              <layout:dimensions layout:height="40" layout:width="80"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Csf1" layout:reference="Csf1">
+            <layout:boundingBox>
+              <layout:position layout:x="118" layout:y="31"/>
+              <layout:dimensions layout:height="40" layout:width="80"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Il7" layout:reference="Il7">
+            <layout:boundingBox>
+              <layout:position layout:x="965" layout:y="37"/>
+              <layout:dimensions layout:height="40" layout:width="80"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+          <layout:generalGlyph layout:id="_ly_Cebpa_ER" layout:reference="Cebpa_ER">
+            <layout:boundingBox>
+              <layout:position layout:x="30" layout:y="370"/>
+              <layout:dimensions layout:height="30" layout:width="65"/>
+            </layout:boundingBox>
+          </layout:generalGlyph>
+        </layout:listOfAdditionalGraphicalObjects>
+      </layout:layout>
+    </layout:listOfLayouts>
+    <qual:listOfQualitativeSpecies xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_762b512c-6373-4d8e-9bef-f0503f440c71" qual:constant="false" qual:id="Mac1_gene">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>See Mac1 node for annotations.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_762b512c-6373-4d8e-9bef-f0503f440c71">
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ensembl.org/Mus_musculus/Gene/Summary?db=core;g=ENSMUSG00000030786;r=7:128062640-128118491"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_92777348-2bde-4b5b-89e2-2493473e22e4" qual:constant="false" qual:id="Mac1">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Marker of macrophage phenotype. 
+
+Encoded by the Itgam gene.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_92777348-2bde-4b5b-89e2-2493473e22e4">
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ensembl.org/Mus_musculus/Gene/Summary?db=core;g=ENSMUSG00000030786;r=7:128062640-128118491"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_04c27958-3e2a-4422-b9fd-c8e6b1170361" qual:constant="false" qual:id="Id2">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Inhibitor of Pax5 and E2a DNA binding activity through protein-protein interraction.
+
+
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_04c27958-3e2a-4422-b9fd-c8e6b1170361">
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ensembl.org/Mus_musculus/Gene/Summary?db=core;g=ENSMUSG00000020644;r=12:25093801-25096092;t=ENSMUST00000020974"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="d41d9bf9-5f71-49e3-8926-2316d6435022" qual:id="Egr2" qual:constant="false" qual:name="EGR2">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Favor myeloid over lymphoid differentiation by repressing Gfi1
+[Spooner et al (2009) Immunity 31:576-86]</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#d41d9bf9-5f71-49e3-8926-2316d6435022">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ensembl.org/Mus_musculus/Gene/Summary?db=core;g=ENSMUSG00000038418;r=18:34859823-34864984"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="https://www.ncbi.nlm.nih.gov/pubmed/19818654"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="d497fa93-e3e0-4593-8f71-dcfabe3727a9" qual:id="Cebpb" qual:constant="false" qual:name="CEBPb">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Like Cebpa, ectopic expression in B cells induces their reprogramming into to macrophage.
+[Xie H et al. Cell. 2004 May 28;117(5):663-76]</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#d497fa93-e3e0-4593-8f71-dcfabe3727a9">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ensembl.org/Mus_musculus/Gene/Summary?db=core;g=ENSMUSG00000056501;r=2:167688915-167690418;t=ENSMUST00000070642"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="ttps://www.ncbi.nlm.nih.gov/pubmed/15163413"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_407ac2c9-dd5f-4f3b-9699-61646ea55669" qual:constant="false" qual:id="Cebpa_gene">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>See Cebpa node for annotations.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_407ac2c9-dd5f-4f3b-9699-61646ea55669">
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ensembl.org/Mus_musculus/Gene/Summary?db=core;g=ENSMUSG00000034957;r=7:35119293-35121928"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_298a32d4-3f70-4114-8cec-7137671edf76" qual:id="Cebpa" qual:constant="false" qual:name="CEBPa">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>CEBPa is expressed in myeloid lineage and necessary for granulcytic development.
+
+CEBPa is necessary for CMP to GMP transition ; necessary for general myelopoiesis ; not for GMP to Neutrophile.
+[Zhang P et al. (2004) Immunity 21:853-63]
+
+Ectopic expression in B cells induces their reprogramming into macrophage.
+[Xie H et al. Cell. 2004 May 28;117(5):663-76]
+
+
+
+
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_298a32d4-3f70-4114-8cec-7137671edf76">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ensembl.org/Mus_musculus/Gene/Summary?db=core;g=ENSMUSG00000034957;r=7:35119293-35121928"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="https://www.ncbi.nlm.nih.gov/pubmed/15589173"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="ttps://www.ncbi.nlm.nih.gov/pubmed/15163413"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="bb75d887-9911-4485-a1c8-d4f4f68e80b2" qual:id="Csf1r" qual:constant="false" qual:name="M-CSFR">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Necessary for monocyte differentiation.
+
+Constitutive expression in PU1-- myeloid cell line allowed recovering of survival but not myeloid differentiation.
+[Anderson K. L. et al. (1999) Blood, 94(7)]</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#bb75d887-9911-4485-a1c8-d4f4f68e80b2">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ensembl.org/Mus_musculus/Gene/Summary?db=core;g=ENSMUSG00000024621;r=18:61105572-61132149"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="https://www.ncbi.nlm.nih.gov/pubmed/10498603"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_3d534c38-04dd-4122-bb28-e891b30e1446" qual:id="Csf1r_act" qual:constant="false" qual:name="M-CSFR">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>See Csf1r node for annotations.
+
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_3d534c38-04dd-4122-bb28-e891b30e1446">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ensembl.org/Mus_musculus/Gene/Summary?db=core;g=ENSMUSG00000024621;r=18:61105572-61132149"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource=":"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="2" qual:compartment="comp1" metaid="fb421a8d-e3ff-44f8-8f47-2cf0e8768f4d" qual:id="Spi1" qual:constant="false" qual:name="Spi1">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Necessary for myeloid and lymphoid differentiation.
+
+2 levels of activity: 
+- low level control B cell or granulocyte differentiation, 
+- high level control monocyte differentiation.
+[﻿Laslo P et al. (2006) Cell 126:755-66] 
+[Spooner C et al. (2009)  Immunity, 31(4), 576–86]
+
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#fb421a8d-e3ff-44f8-8f47-2cf0e8768f4d">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ensembl.org/Mus_musculus/Gene/Summary?db=core;g=ENSMUSG00000002111;r=2:91082390-91115756"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="https://www-ncbi-nlm-nih-gov.insb.bib.cnrs.fr/pubmed/16923394"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="https://www-ncbi-nlm-nih-gov.insb.bib.cnrs.fr/pubmed/19818654"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource=":"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_9ea5a3c8-c6b9-49a2-bf22-0ba85b4d8cbf" qual:id="Runx1" qual:constant="false" qual:name="Runx1">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Ruequired for early hematopoiesis.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_9ea5a3c8-c6b9-49a2-bf22-0ba85b4d8cbf">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ensembl.org/Mus_musculus/Gene/Summary?db=core;g=ENSMUSG00000022952;r=16:92601466-92826149"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource=":"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="fa8478ae-4a88-4d68-95ef-e44b9de881ca" qual:id="Gfi1" qual:constant="false" qual:name="Gfi1">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Promote B cell fate versus myeloid in MPP 
+[﻿Spooner et al. (2009) Immunity 31:576-86]
+
+Necessary for B cell development through Id2 inhibition ﻿
+[Li et al. (2010) Blood 116:1060-9]
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#fa8478ae-4a88-4d68-95ef-e44b9de881ca">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ensembl.org/Mus_musculus/Gene/Summary?db=core;g=ENSMUSG00000029275;r=5:107716657-107726036"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="https://www.ncbi.nlm.nih.gov/pubmed/19818654"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="https://www.ncbi.nlm.nih.gov/pubmed/20453161"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_62fee61f-d64e-49d9-a1b6-71816047c5b0" qual:id="Ikzf1" qual:constant="false" qual:name="Ikzf1">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Necessary for lymphoid development.   
+[Georgopoulos K et al. (1994) Cell, 79(1), 143–56]
+
+Necessary for the specification of LMPP from MPP.
+[Yoshida T et al.(2006) Nature immunology, 7(4)]
+
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_62fee61f-d64e-49d9-a1b6-71816047c5b0">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ensembl.org/Mus_musculus/Gene/Summary?db=core;g=ENSMUSG00000018654;r=11:11685003-11772926"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="https://www.ncbi.nlm.nih.gov/pubmed/7923373"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="https://www.ncbi.nlm.nih.gov/pubmed/16518393"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="edff0cb0-feff-4756-a0c0-f5e6ca616fc2" qual:id="Flt3" qual:constant="false" qual:name="Flt3">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>LMPP phenotype marker.
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#edff0cb0-feff-4756-a0c0-f5e6ca616fc2">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ensembl.org/Mus_musculus/Gene/Summary?db=core;g=ENSMUSG00000042817;r=5:147330741-147400489"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource=":"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_745c4230-ac75-470c-b5fa-4072f45170df" qual:id="Mef2c" qual:constant="false" qual:name="Mef2c">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Required for CLP, B-cells and T-cells differentiation  .
+[Stehling-Sun S et al. (2009) Nature immunology, 10(3)]
+
+
+
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_745c4230-ac75-470c-b5fa-4072f45170df">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ensembl.org/Mus_musculus/Gene/Summary?db=core;g=ENSMUSG00000005583;r=13:83504034-83667080"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="https://www.ncbi.nlm.nih.gov/pubmed/19169261"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_45eaf7ea-0555-4766-a8f7-b51d538d9d2e" qual:id="Ets1" qual:constant="false" qual:name="Ets1">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Required for lymphoid development.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_45eaf7ea-0555-4766-a8f7-b51d538d9d2e">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ensembl.org/Mus_musculus/Gene/Summary?db=core;g=ENSMUSG00000032035;r=9:32636221-32757820"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource=":"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="c9e56d32-13e7-4a58-8328-7144c7ec8b2e" qual:id="Il7ra" qual:constant="false" qual:name="IL7R">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Necessary for lymphoid differentiation.
+
+KO block B cell development at the preproB stage, Partially rescued by overexpression of EBF or STAT5.
+[﻿K. Kikuchi et al., The Journal of experimental medicine 201, 1197-203 (2005)]
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#c9e56d32-13e7-4a58-8328-7144c7ec8b2e">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ensembl.org/Mus_musculus/Gene/Summary?db=core;g=ENSMUSG00000003882;r=15:9506161-9529876;t=ENSMUST00000003981"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="https://www.ncbi.nlm.nih.gov/pubmed/15837809"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_8c3caed6-d884-44ba-a931-edcb775e331a" qual:id="Il7r_act" qual:constant="false" qual:name="Il7R">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>See Il7ra node for annotation.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_8c3caed6-d884-44ba-a931-edcb775e331a">
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ensembl.org/Mus_musculus/Gene/Summary?db=core;g=ENSMUSG00000003882;r=15:9506161-9529876;t=ENSMUST00000003981"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="fcad768b-0ed0-40b0-ba70-fb178bdddafd" qual:constant="false" qual:id="E2a_gene">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>See E2a node for annotation.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#fcad768b-0ed0-40b0-ba70-fb178bdddafd">
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ensembl.org/Mus_musculus/Gene/Summary?db=core;g=ENSMUSG00000020167;r=10:80409514-80433647"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_1310bd14-cdff-417d-8768-89336087d662" qual:constant="false" qual:id="E2a">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Necessary for normal LMPP/CLP/Lymphoid development  
+[﻿Dias, S. et al. (2008)  Immunity, 29(2)]
+
+Necessary to maintain B cell phenotype in proB (rescued by Pax5 constitutive expression)  
+[Kwon, K.et al. (2008) Immunity, (June), 751–762]
+
+
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_1310bd14-cdff-417d-8768-89336087d662">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ensembl.org/Mus_musculus/Gene/Summary?db=core;g=ENSMUSG00000020167;r=10:80409514-80433647"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="https://www.ncbi.nlm.nih.gov/pubmed/18674933"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="https://www.ncbi.nlm.nih.gov/pubmed/18538592"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_342ce0e8-d64e-426b-a0e1-bd7820cbc8ad" qual:id="E2a_prot_Active" qual:constant="false" qual:name="E2a">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>See E2a node for annotation.
+
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_342ce0e8-d64e-426b-a0e1-bd7820cbc8ad">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ensembl.org/Mus_musculus/Gene/Summary?db=core;g=ENSMUSG00000020167;r=10:80409514-80433647"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource=":"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_25b34f27-5768-4474-83a7-6522cd582d1b" qual:constant="false" qual:id="Foxo1_gene">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>See Foxo1 node for annotation.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_25b34f27-5768-4474-83a7-6522cd582d1b">
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ensembl.org/Mus_musculus/Gene/Summary?db=core;g=ENSMUSG00000044167;r=3:52268336-52353221;t=ENSMUST00000053764"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_1e99e129-bf2d-4372-b023-fdb89a65ca2e" qual:id="Foxo1" qual:constant="false" qual:name="FOXO1">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>FoxO1 knock-out mice has less mature B and T cells and HSC with impaired self renewal
+[Tothova, Z. (2007) Cell, 128(2)]
+
+
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_1e99e129-bf2d-4372-b023-fdb89a65ca2e">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ensembl.org/Mus_musculus/Gene/Summary?db=core;g=ENSMUSG00000044167;r=3:52268336-52353221;t=ENSMUST00000053764"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="https://www.ncbi.nlm.nih.gov/pubmed/17254970"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_8bdf7bfd-0512-4984-90d1-7b516d89feb9" qual:id="Ebf1" qual:constant="false" qual:name="EBF">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Necessary for B cell differentiation.
+
+KO block B cell development at a proB B220+ Bp1-- HSA-- stage   
+[﻿Lin H, Grosschedl R (1995) Nature 376:263–267]
+
+In IL-7 knock-out, overexpression of Ebf1 rescue B cell potential of CLP 
+[﻿S. Dias et al.,The Journal of experimental medicine 201, 971-9 (2005)]</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_8bdf7bfd-0512-4984-90d1-7b516d89feb9">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ensembl.org/Mus_musculus/Gene/Summary?db=core;g=ENSMUSG00000057098;r=11:44617317-45008091"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="https://www.ncbi.nlm.nih.gov/pubmed/7542362"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="https://www.ncbi.nlm.nih.gov/pubmed/15767371"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_259d13b8-6971-456f-9550-9684c8e1b0fe" qual:constant="false" qual:id="Ebf1_gene">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>See Ebf1 node for annotation.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_259d13b8-6971-456f-9550-9684c8e1b0fe">
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ensembl.org/Mus_musculus/Gene/Summary?db=core;g=ENSMUSG00000057098;r=11:44617317-45008091"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="a6df5aa8-1a7b-4f1b-bf43-2d1f459bc11b" qual:constant="false" qual:id="Pax5_gene">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>See Pax5 node for annotation.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#a6df5aa8-1a7b-4f1b-bf43-2d1f459bc11b">
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ensembl.org/Mus_musculus/Gene/Summary?db=core;g=ENSMUSG00000014030;r=4:44524757-44710487"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="e6fbfd4d-f1d4-4f43-bc62-77c3f23f61ed" qual:constant="false" qual:id="Pax5">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Necessary for terminal B cell differentiation.
+
+Knock-out block B cell development at proB stage 
+[Nutt, S.L. et al., Nature 401, 556-62 (1999)]
+
+Overexpression in CMP block myeloid differentiation 
+[﻿Chiang MY, Monroe JG (1999) Blood 94:3621-32]
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#e6fbfd4d-f1d4-4f43-bc62-77c3f23f61ed">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ensembl.org/Mus_musculus/Gene/Summary?db=core;g=ENSMUSG00000014030;r=4:44524757-44710487"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="https://www.ncbi.nlm.nih.gov/pubmed/10524622"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="https://www.ncbi.nlm.nih.gov/pubmed/10572073"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_0e72180e-e85f-4800-9489-b2089453621b" qual:id="Pax5_prot_active" qual:constant="false" qual:name="Pax5">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>See Pax5 node for annotation.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_0e72180e-e85f-4800-9489-b2089453621b">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ensembl.org/Mus_musculus/Gene/Summary?db=core;g=ENSMUSG00000014030;r=4:44524757-44710487"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource=":"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_507c332b-e045-45ba-b5fc-62ffc0442828" qual:constant="false" qual:id="Cd19_gene">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>see Cd19 node for annotation.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_507c332b-e045-45ba-b5fc-62ffc0442828">
+              <bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ensembl.org/Mus_musculus/Gene/Summary?db=core;g=ENSMUSG00000030724;r=7:126408450-126414889"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource=":"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_7ebf2b13-fda4-45f7-9933-da9e27408959" qual:constant="false" qual:id="Cd19">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>B cell phenotype marker.</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_7ebf2b13-fda4-45f7-9933-da9e27408959">
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ensembl.org/Mus_musculus/Gene/Summary?db=core;g=ENSMUSG00000030724;r=7:126408450-126414889"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_5ed21e10-89e6-47de-bdf6-5e6ad1243528" qual:id="Csf1" qual:constant="true" qual:name="M-CSF">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Necessary for monocyte differentiation.
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_5ed21e10-89e6-47de-bdf6-5e6ad1243528">
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://www.ensembl.org/Mus_musculus/Gene/Summary?db=core;g=ENSMUSG00000014599;r=3:107741048-107760469"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_2d6e0582-165a-43de-87a7-093cc34c4937" qual:constant="true" qual:id="Il7">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>Required for B cells differentiation.
+
+- KO entails impairs in lymphoid compartiment 
+(U. von Freeden-Jeffry et al., Immunity 7, 147-54 (1997).)
+
+- KO impairs selectivly B potential of CLP, not T or NK (﻿1. S. Dias et al.,The Journal of experimental medicine 201, 971-9 (2005).
+- - Can be partially rescue by overexpression of EBF
+- - Nearly not rescue by overexpression of Pax5
+
+- KO block B development at the prepro stage (﻿1. K. Kikuchi et al., The Journal of experimental medicine 201, 1197-203 (2005).
+
+- KO downregulate EBF and Pax5 (4w+, adult++) (﻿1. S. Dias et al.,The Journal of experimental medicine 201, 971-9 (2005).
+
+</p>
+  </body>
+        </notes>
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+	<rdf:Description rdf:about="#_2d6e0582-165a-43de-87a7-093cc34c4937">
+	<bqbiol:unknownQualifier>
+	<rdf:Bag>
+	<rdf:li rdf:resource=":"/>
+	</rdf:Bag>
+	</bqbiol:unknownQualifier>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+            </qual:qualitativeSpecies>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" qual:constant="false" qual:id="Cebpa_ER">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+     <p>See Cebpa for annotations</p>
+  </body>
+        </notes>
+      </qual:qualitativeSpecies>
+    </qual:listOfQualitativeSpecies>
+    <qual:listOfTransitions xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:transition qual:id="tr_Mac1_gene">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Spi1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Mac1_gene_in_9"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Mac1_gene" qual:transitionEffect="assignmentLevel" qual:id="tr_Mac1_gene_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Spi1 </ci>
+                <cn type="integer"> 2 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Mac1">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Mac1_gene" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Mac1_in_0"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Mac1" qual:transitionEffect="assignmentLevel" qual:id="tr_Mac1_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Mac1_gene </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Id2">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Cebpb" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Id2_in_4"/>
+          <qual:input qual:qualitativeSpecies="Cebpa" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Id2_in_6"/>
+          <qual:input qual:qualitativeSpecies="Spi1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Id2_in_9"/>
+          <qual:input qual:qualitativeSpecies="Gfi1" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Id2_in_11"/>
+          <qual:input qual:qualitativeSpecies="Ebf1" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Id2_in_23"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Id2" qual:transitionEffect="assignmentLevel" qual:id="tr_Id2_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Cebpb </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Cebpa </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <geq/>
+                  <ci> Spi1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Gfi1 </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Ebf1 </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Egr2">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Spi1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Egr2_in_9"/>
+          <qual:input qual:qualitativeSpecies="Gfi1" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Egr2_in_11"/>
+          <qual:input qual:qualitativeSpecies="Pax5_prot_active" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Egr2_in_27"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Egr2" qual:transitionEffect="assignmentLevel" qual:id="tr_Egr2_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Spi1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Pax5_prot_active </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Spi1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Gfi1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Spi1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Gfi1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Pax5_prot_active </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Spi1 </ci>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Cebpb">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Cebpb" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Cebpb_in_4"/>
+          <qual:input qual:qualitativeSpecies="Cebpa" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Cebpb_in_6"/>
+          <qual:input qual:qualitativeSpecies="Spi1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Cebpb_in_9"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Cebpb" qual:transitionEffect="assignmentLevel" qual:id="tr_Cebpb_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpb </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpa </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Spi1 </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpb </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Spi1 </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Cebpa_gene">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Spi1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Cebpa_gene_in_9"/>
+          <qual:input qual:qualitativeSpecies="Runx1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Cebpa_gene_in_10"/>
+          <qual:input qual:qualitativeSpecies="Foxo1" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Cebpa_gene_in_22"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Cebpa_gene" qual:transitionEffect="assignmentLevel" qual:id="tr_Cebpa_gene_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <geq/>
+                  <ci> Spi1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Runx1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Foxo1 </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Cebpa">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Cebpa_gene" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Cebpa_in_5"/>
+          <qual:input qual:qualitativeSpecies="Cebpa_ER" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Cebpa_in_32"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Cebpa" qual:transitionEffect="assignmentLevel" qual:id="tr_Cebpa_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpa_gene </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpa_ER </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Cebpa_gene </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Csf1r">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Spi1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Csf1r_in_9"/>
+          <qual:input qual:qualitativeSpecies="Pax5_prot_active" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Csf1r_in_27"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Csf1r" qual:transitionEffect="assignmentLevel" qual:id="tr_Csf1r_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <geq/>
+                  <ci> Spi1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Pax5_prot_active </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Csf1r_act">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Csf1r" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Csf1r_act_in_7"/>
+          <qual:input qual:qualitativeSpecies="Csf1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Csf1r_act_in_30"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Csf1r_act" qual:transitionEffect="assignmentLevel" qual:id="tr_Csf1r_act_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Csf1r </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Csf1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Spi1">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Cebpb" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Spi1_in_4"/>
+          <qual:input qual:qualitativeSpecies="Cebpa" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Spi1_in_6"/>
+          <qual:input qual:qualitativeSpecies="Csf1r_act" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Spi1_in_8"/>
+          <qual:input qual:qualitativeSpecies="Spi1" qual:transitionEffect="none" qual:sign="dual" qual:id="tr_Spi1_in_9"/>
+          <qual:input qual:qualitativeSpecies="Runx1" qual:transitionEffect="none" qual:sign="dual" qual:id="tr_Spi1_in_10"/>
+          <qual:input qual:qualitativeSpecies="Gfi1" qual:transitionEffect="none" qual:sign="dual" qual:id="tr_Spi1_in_11"/>
+          <qual:input qual:qualitativeSpecies="Ikzf1" qual:transitionEffect="none" qual:sign="dual" qual:id="tr_Spi1_in_12"/>
+          <qual:input qual:qualitativeSpecies="Foxo1" qual:transitionEffect="none" qual:sign="dual" qual:id="tr_Spi1_in_22"/>
+          <qual:input qual:qualitativeSpecies="Ebf1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Spi1_in_23"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Spi1" qual:transitionEffect="assignmentLevel" qual:id="tr_Spi1_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpb </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpa </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Spi1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Runx1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ikzf1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Foxo1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ebf1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpb </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpa </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Spi1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Runx1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Gfi1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ikzf1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Foxo1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpb </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpa </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Spi1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Runx1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Gfi1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ikzf1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpb </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpa </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Csf1r_act </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Spi1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Runx1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ikzf1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Foxo1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ebf1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpb </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpa </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Csf1r_act </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Spi1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Runx1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Gfi1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ikzf1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Foxo1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpb </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpa </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Csf1r_act </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Spi1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Runx1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Gfi1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ikzf1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpb </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpa </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Csf1r_act </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Spi1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Runx1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ikzf1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Foxo1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ebf1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpb </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Csf1r_act </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Spi1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Runx1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ikzf1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Foxo1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ebf1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpb </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Csf1r_act </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Spi1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Runx1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Gfi1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ikzf1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Foxo1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpb </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Csf1r_act </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Spi1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Runx1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Gfi1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ikzf1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpb </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Csf1r_act </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Spi1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Runx1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ikzf1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Foxo1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ebf1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:functionTerm qual:resultLevel="2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpb </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpa </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Spi1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Runx1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Gfi1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ikzf1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpb </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpa </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Spi1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Runx1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Gfi1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ikzf1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Foxo1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpb </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpa </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Csf1r_act </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Spi1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Runx1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Gfi1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ikzf1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpb </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpa </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Csf1r_act </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Spi1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Runx1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Gfi1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ikzf1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Foxo1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpb </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpa </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Csf1r_act </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Spi1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Runx1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpb </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Csf1r_act </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Spi1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Runx1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Gfi1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ikzf1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpb </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Csf1r_act </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Spi1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Runx1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Gfi1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ikzf1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Foxo1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpb </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Csf1r_act </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Spi1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Runx1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Runx1">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Spi1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Runx1_in_9"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Runx1" qual:transitionEffect="assignmentLevel" qual:id="tr_Runx1_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <geq/>
+                <ci> Spi1 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Gfi1">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Egr2" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Gfi1_in_3"/>
+          <qual:input qual:qualitativeSpecies="Cebpa" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Gfi1_in_6"/>
+          <qual:input qual:qualitativeSpecies="Ikzf1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Gfi1_in_12"/>
+          <qual:input qual:qualitativeSpecies="Pax5_prot_active" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Gfi1_in_27"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Gfi1" qual:transitionEffect="assignmentLevel" qual:id="tr_Gfi1_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Egr2 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpa </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ikzf1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Pax5_prot_active </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Egr2 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpa </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ikzf1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Egr2 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpa </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Egr2 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Pax5_prot_active </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Ikzf1">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Mef2c" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Ikzf1_in_14"/>
+          <qual:input qual:qualitativeSpecies="Pax5_prot_active" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Ikzf1_in_27"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Ikzf1" qual:transitionEffect="assignmentLevel" qual:id="tr_Ikzf1_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Mef2c </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Pax5_prot_active </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Mef2c </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Flt3">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Spi1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Flt3_in_9"/>
+          <qual:input qual:qualitativeSpecies="Ikzf1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Flt3_in_12"/>
+          <qual:input qual:qualitativeSpecies="Pax5_prot_active" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Flt3_in_27"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Flt3" qual:transitionEffect="assignmentLevel" qual:id="tr_Flt3_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <geq/>
+                  <ci> Spi1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Ikzf1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Pax5_prot_active </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Mef2c">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Cebpb" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Mef2c_in_4"/>
+          <qual:input qual:qualitativeSpecies="Cebpa" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Mef2c_in_6"/>
+          <qual:input qual:qualitativeSpecies="Spi1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Mef2c_in_9"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Mef2c" qual:transitionEffect="assignmentLevel" qual:id="tr_Mef2c_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Cebpb </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Cebpa </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <geq/>
+                  <ci> Spi1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Ets1">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="E2a_prot_Active" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Ets1_in_20"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Ets1" qual:transitionEffect="assignmentLevel" qual:id="tr_Ets1_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> E2a_prot_Active </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Il7ra">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Cebpb" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Il7ra_in_4"/>
+          <qual:input qual:qualitativeSpecies="Cebpa" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Il7ra_in_6"/>
+          <qual:input qual:qualitativeSpecies="Spi1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Il7ra_in_9"/>
+          <qual:input qual:qualitativeSpecies="Mef2c" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Il7ra_in_14"/>
+          <qual:input qual:qualitativeSpecies="Foxo1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Il7ra_in_22"/>
+          <qual:input qual:qualitativeSpecies="Ebf1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Il7ra_in_23"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Il7ra" qual:transitionEffect="assignmentLevel" qual:id="tr_Il7ra_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpb </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpa </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Spi1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Foxo1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ebf1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpb </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpa </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Spi1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mef2c </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Foxo1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ebf1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpb </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpa </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Spi1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Mef2c </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Il7r_act">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Il7ra" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Il7r_act_in_16"/>
+          <qual:input qual:qualitativeSpecies="Il7" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Il7r_act_in_31"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Il7r_act" qual:transitionEffect="assignmentLevel" qual:id="tr_Il7r_act_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Il7ra </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Il7 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_E2a_gene">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Spi1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_E2a_gene_in_9"/>
+          <qual:input qual:qualitativeSpecies="Ikzf1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_E2a_gene_in_12"/>
+          <qual:input qual:qualitativeSpecies="Ebf1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_E2a_gene_in_23"/>
+          <qual:input qual:qualitativeSpecies="Pax5_prot_active" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_E2a_gene_in_27"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="E2a_gene" qual:transitionEffect="assignmentLevel" qual:id="tr_E2a_gene_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Spi1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ikzf1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ebf1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Pax5_prot_active </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <geq/>
+                    <ci> Spi1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ikzf1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_E2a">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="E2a_gene" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_E2a_in_18"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="E2a" qual:transitionEffect="assignmentLevel" qual:id="tr_E2a_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> E2a_gene </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_E2a_prot_Active">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Id2" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_E2a_prot_Active_in_2"/>
+          <qual:input qual:qualitativeSpecies="E2a" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_E2a_prot_Active_in_19"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="E2a_prot_Active" qual:transitionEffect="assignmentLevel" qual:id="tr_E2a_prot_Active_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Id2 </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> E2a </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Foxo1_gene">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Cebpb" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Foxo1_gene_in_4"/>
+          <qual:input qual:qualitativeSpecies="Cebpa" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Foxo1_gene_in_6"/>
+          <qual:input qual:qualitativeSpecies="E2a_prot_Active" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Foxo1_gene_in_20"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Foxo1_gene" qual:transitionEffect="assignmentLevel" qual:id="tr_Foxo1_gene_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Cebpb </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Cebpa </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> E2a_prot_Active </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Foxo1">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Foxo1_gene" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Foxo1_in_21"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Foxo1" qual:transitionEffect="assignmentLevel" qual:id="tr_Foxo1_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Foxo1_gene </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Ebf1">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Ebf1_gene" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Ebf1_in_24"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Ebf1" qual:transitionEffect="assignmentLevel" qual:id="tr_Ebf1_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Ebf1_gene </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Ebf1_gene">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Cebpb" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Ebf1_gene_in_4"/>
+          <qual:input qual:qualitativeSpecies="Cebpa" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Ebf1_gene_in_6"/>
+          <qual:input qual:qualitativeSpecies="Spi1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Ebf1_gene_in_9"/>
+          <qual:input qual:qualitativeSpecies="Runx1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Ebf1_gene_in_10"/>
+          <qual:input qual:qualitativeSpecies="Ets1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Ebf1_gene_in_15"/>
+          <qual:input qual:qualitativeSpecies="Il7r_act" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Ebf1_gene_in_17"/>
+          <qual:input qual:qualitativeSpecies="E2a_prot_Active" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Ebf1_gene_in_20"/>
+          <qual:input qual:qualitativeSpecies="Foxo1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Ebf1_gene_in_22"/>
+          <qual:input qual:qualitativeSpecies="Ebf1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Ebf1_gene_in_23"/>
+          <qual:input qual:qualitativeSpecies="Pax5_prot_active" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Ebf1_gene_in_27"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Ebf1_gene" qual:transitionEffect="assignmentLevel" qual:id="tr_Ebf1_gene_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpb </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpa </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Spi1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ets1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> E2a_prot_Active </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Foxo1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ebf1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Pax5_prot_active </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpb </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpa </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Spi1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Runx1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ets1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> E2a_prot_Active </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Foxo1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ebf1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Pax5_prot_active </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpb </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpa </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Spi1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Runx1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ets1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Il7r_act </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> E2a_prot_Active </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Foxo1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ebf1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Pax5_prot_active </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpb </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cebpa </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> Spi1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Runx1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Ets1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Il7r_act </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> E2a_prot_Active </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Foxo1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Pax5_gene">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Cebpb" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Pax5_gene_in_4"/>
+          <qual:input qual:qualitativeSpecies="Cebpa" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Pax5_gene_in_6"/>
+          <qual:input qual:qualitativeSpecies="Ebf1" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Pax5_gene_in_23"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Pax5_gene" qual:transitionEffect="assignmentLevel" qual:id="tr_Pax5_gene_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Cebpb </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Cebpa </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Ebf1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Pax5">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Pax5_gene" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Pax5_in_25"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Pax5" qual:transitionEffect="assignmentLevel" qual:id="tr_Pax5_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Pax5_gene </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Pax5_prot_active">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Id2" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Pax5_prot_active_in_2"/>
+          <qual:input qual:qualitativeSpecies="Pax5" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Pax5_prot_active_in_26"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Pax5_prot_active" qual:transitionEffect="assignmentLevel" qual:id="tr_Pax5_prot_active_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Id2 </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Pax5 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Cd19_gene">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Cebpa" qual:transitionEffect="none" qual:sign="negative" qual:id="tr_Cd19_gene_in_6"/>
+          <qual:input qual:qualitativeSpecies="Pax5_prot_active" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Cd19_gene_in_27"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Cd19_gene" qual:transitionEffect="assignmentLevel" qual:id="tr_Cd19_gene_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <eq/>
+                  <ci> Cebpa </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> Pax5_prot_active </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Cd19">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Cd19_gene" qual:transitionEffect="none" qual:sign="positive" qual:id="tr_Cd19_in_28"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Cd19" qual:transitionEffect="assignmentLevel" qual:id="tr_Cd19_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> Cd19_gene </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition qual:id="tr_Cebpa_ER">
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Cebpa_ER" qual:transitionEffect="assignmentLevel" qual:id="tr_Cebpa_ER_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0">
+          </qual:defaultTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+    </qual:listOfTransitions>
+    <listOfCompartments>
+      <compartment constant="true" id="comp1"/>
+    </listOfCompartments>
+  </model>
+</sbml>

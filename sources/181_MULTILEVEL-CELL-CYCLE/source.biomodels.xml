@@ -1,0 +1,1736 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" metaid="_5a720780-f0ab-4a95-ad1c-1f34f70a52a9" version="1" xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1" qual:required="true">
+  <model name="Traynard2016 - Mammalian cell cycle regulation - Logical Model" id="MODEL1611230001" metaid="_59b0bcd4-f86e-4317-a2fb-2458a7293d3b">
+    <notes>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+        <div class="dc:title">Traynard2016 - Mammalian cell cycle
+regulation - Logical Model</div>
+<div class="dc:bibliographicCitation">
+  <p>This model is described in the article:</p>
+  <div class="bibo:title">
+    <a href="http://identifiers.org/pubmed/27587700" title="Access to this publication">Logical model specification
+    aided by model-checking techniques: application to the
+    mammalian cell cycle regulation.</a>
+  </div>
+  <div class="bibo:authorList">Traynard P, Fauré A, Fages F,
+  Thieffry D.</div>
+  <div class="bibo:Journal">Bioinformatics 2016 Sep; 32(17):
+  i772-i780</div>
+  <p>Abstract:</p>
+  <div class="bibo:abstract">
+    <p>Understanding the temporal behaviour of biological
+    regulatory networks requires the integration of molecular
+    information into a formal model. However, the analysis of model
+    dynamics faces a combinatorial explosion as the number of
+    regulatory components and interactions increases.We use
+    model-checking techniques to verify sophisticated dynamical
+    properties resulting from the model regulatory structure in the
+    absence of kinetic assumption. We demonstrate the power of this
+    approach by analysing a logical model of the molecular network
+    controlling mammalian cell cycle. This approach enables a
+    systematic analysis of model properties, the delineation of
+    model limitations, and the assessment of various refinements
+    and extensions based on recent experimental observations. The
+    resulting logical model accounts for the main irreversible
+    transitions between cell cycle phases, the sequential
+    activation of cyclins, and the inhibitory role of Skp2, and
+    further emphasizes the multifunctional role for the cell cycle
+    inhibitor Rb.The original and revised mammalian cell cycle
+    models are available in the model repository associated with
+    the public modelling software GINsim
+    (http://ginsim.org/node/189).thieffry@ens.frSupplementary data
+    are available at Bioinformatics online.</p>
+  </div>
+</div>
+<div class="dc:publisher">
+  <p>This model is hosted on 
+  <a href="http://www.ebi.ac.uk/biomodels/">BioModels Database</a>
+  and identified by: 
+  <a href="http://identifiers.org/biomodels.db/MODEL1611230001">MODEL1611230001</a>.</p>
+  <p>To cite BioModels Database, please use: 
+  <a href="http://identifiers.org/pubmed/20587024" title="Latest BioModels Database publication">BioModels Database:
+  An enhanced, curated and annotated resource for published
+  quantitative kinetic models</a>.</p>
+</div>
+<div class="dc:license">
+  <p>To the extent possible under law, all copyright and related or
+  neighbouring rights to this encoded model have been dedicated to
+  the public domain worldwide. Please refer to 
+  <a href="http://creativecommons.org/publicdomain/zero/1.0/" title="Access to: CC0 1.0 Universal (CC0 1.0), Public Domain Dedication">CC0
+  Public Domain Dedication</a> for more information.</p>
+</div>
+</body>
+    </notes>
+    <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+	<rdf:Description rdf:about="#_59b0bcd4-f86e-4317-a2fb-2458a7293d3b">
+	<bqmodel:is>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/biomodels.db/MODEL1611230001"/>
+	</rdf:Bag>
+	</bqmodel:is>
+	</rdf:Description>
+	</rdf:RDF>
+	</annotation>
+      <qual:listOfQualitativeSpecies xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_807f62ad-fbea-4972-8f3a-19bd490dd160" qual:constant="true" qual:id="CycD"/>
+      <qual:qualitativeSpecies qual:maxLevel="2" qual:compartment="comp1" metaid="b1a5ade4-3e3d-45a3-9ab5-5b7e58275cbc" qual:constant="false" qual:id="Rb"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="e3284456-fc71-47f8-a335-a0f666c10298" qual:constant="false" qual:id="E2F"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="d28bf0a0-f1af-4f5f-b51e-2b90c761cde9" qual:constant="false" qual:id="CycE"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_736472be-ea0f-425f-8466-746e6c5c6e73" qual:constant="false" qual:id="CycA"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_07861381-4d62-4862-8e17-c3e55ae6a171" qual:constant="false" qual:id="CycB"/>
+      <qual:qualitativeSpecies qual:maxLevel="2" qual:compartment="comp1" metaid="_89da0ac8-52c5-45ea-820a-fba1156aec02" qual:constant="false" qual:id="p27"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_698ec398-f989-4249-82bb-fba5e81460b5" qual:constant="false" qual:id="Cdc20"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_1a7bd2af-0319-4b49-aa07-441864350605" qual:constant="false" qual:id="Cdh1"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="cac8b611-12a2-4bf1-b249-b2e71129f136" qual:constant="false" qual:id="UbcH10"/>
+      <qual:qualitativeSpecies qual:maxLevel="1" qual:compartment="comp1" metaid="_0bbfc01f-19d9-4491-96c1-caeed96a8b19" qual:constant="false" qual:id="Skp2"/>
+    </qual:listOfQualitativeSpecies>
+    <qual:listOfTransitions xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1">
+      <qual:transition metaid="b50a87c8-70a0-45c2-9b8b-19b86aa99d66" qual:id="tr_Rb">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="CycD" qual:transitionEffect="none" metaid="_6ac34efa-9bd3-4e54-bb24-d0bbd71b0497" qual:sign="negative" qual:id="tr_Rb_in_0"/>
+          <qual:input qual:qualitativeSpecies="CycE" qual:transitionEffect="none" metaid="_084dabe0-f681-4ea9-9b87-4cb80b49964d" qual:sign="negative" qual:id="tr_Rb_in_3"/>
+          <qual:input qual:qualitativeSpecies="CycA" qual:transitionEffect="none" metaid="_6c1b72b4-1beb-4f0b-b437-e14c669d2079" qual:sign="negative" qual:id="tr_Rb_in_4"/>
+          <qual:input qual:qualitativeSpecies="CycB" qual:transitionEffect="none" metaid="_34c55ee6-fd66-4693-870b-5a12fbcbda51" qual:sign="negative" qual:id="tr_Rb_in_5"/>
+          <qual:input qual:qualitativeSpecies="p27" qual:transitionEffect="none" metaid="_2ff07f50-5f92-4b22-a29a-d3397d30ef7e" qual:sign="positive" qual:id="tr_Rb_in_6"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Rb" qual:transitionEffect="assignmentLevel" metaid="_84b40324-8284-438b-9c48-7dceb1bde4ea" qual:id="tr_Rb_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="_43c56c46-48fb-4cea-9a06-f585fce2a62c">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="d0bd7644-fab7-4c2c-9bfe-fe4b9d035e82">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CycD </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycE </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycB </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> p27 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CycD </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycE </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycB </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CycD </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycE </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycB </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> p27 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CycD </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycE </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> p27 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CycD </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycE </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> p27 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:functionTerm qual:resultLevel="2" metaid="_4c3fbfa9-7762-4150-ba48-c776fde38df4">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CycD </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycE </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycB </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CycD </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycE </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycB </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> p27 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CycD </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycE </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> p27 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CycD </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycE </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> p27 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CycD </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycE </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycB </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> p27 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="e0e437da-c8f9-46ad-b842-868ce529b67e" qual:id="tr_E2F">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Rb" qual:transitionEffect="none" metaid="f5fab9ae-bf36-4cd9-a86c-d6cdd6e34066" qual:sign="negative" qual:id="tr_E2F_in_1"/>
+          <qual:input qual:qualitativeSpecies="CycA" qual:transitionEffect="none" metaid="_09e83e1e-5325-414b-bad0-3e66847112d2" qual:sign="negative" qual:id="tr_E2F_in_4"/>
+          <qual:input qual:qualitativeSpecies="CycB" qual:transitionEffect="none" metaid="_10b988d1-3adb-4991-a40c-ba3688b6ebc3" qual:sign="negative" qual:id="tr_E2F_in_5"/>
+          <qual:input qual:qualitativeSpecies="p27" qual:transitionEffect="none" metaid="_7f60237b-2a45-4b56-a229-4ca4322a1826" qual:sign="positive" qual:id="tr_E2F_in_6"/>
+          <qual:input qual:qualitativeSpecies="Cdc20" qual:transitionEffect="none" metaid="eef2311e-23ab-49e1-ad66-b91c2612c430" qual:sign="negative" qual:id="tr_E2F_in_7"/>
+          <qual:input qual:qualitativeSpecies="Skp2" qual:transitionEffect="none" metaid="ef794af8-4c40-4425-aa30-8de7c3ffefc6" qual:sign="negative" qual:id="tr_E2F_in_10"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="E2F" qual:transitionEffect="assignmentLevel" metaid="_223d2f84-64d3-4998-a79b-011c87ab3ebb" qual:id="tr_E2F_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="_0fd23b8a-1d86-4856-9657-a1d91aaadcdf">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="_059ad680-e75f-4214-a902-8594ceada7da">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <leq/>
+                    <ci> Rb </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycB </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <leq/>
+                    <ci> Rb </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycB </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cdc20 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <leq/>
+                    <ci> Rb </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycB </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> p27 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Skp2 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <leq/>
+                    <ci> Rb </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycB </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> p27 </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <leq/>
+                    <ci> Rb </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycB </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> p27 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cdc20 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Skp2 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <leq/>
+                    <ci> Rb </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycB </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> p27 </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cdc20 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_189709c0-a881-48e7-a772-6ad231317cec" qual:id="tr_CycE">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Rb" qual:transitionEffect="none" metaid="_11f5d20c-9010-4e2f-b63b-bd2253ff60a5" qual:sign="negative" qual:id="tr_CycE_in_1"/>
+          <qual:input qual:qualitativeSpecies="E2F" qual:transitionEffect="none" metaid="_6d5c013d-46d3-485c-a4cf-20db98b893e7" qual:sign="positive" qual:id="tr_CycE_in_2"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="CycE" qual:transitionEffect="assignmentLevel" metaid="_35675591-736e-41e8-9909-c5b84f517614" qual:id="tr_CycE_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="_5e061f3d-7420-4506-8d43-d0519a05771d">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="_6841c411-020b-40e1-8b6d-6bb29adab385">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <and/>
+                <apply>
+                  <leq/>
+                  <ci> Rb </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <eq/>
+                  <ci> E2F </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="d833541b-6f91-4bac-a680-ad081fcf836a" qual:id="tr_CycA">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Rb" qual:transitionEffect="none" metaid="_80fb7f39-fb8e-4528-bdd8-5e9bcdd61a5c" qual:sign="negative" qual:id="tr_CycA_in_1"/>
+          <qual:input qual:qualitativeSpecies="E2F" qual:transitionEffect="none" metaid="b12f4a37-c378-45c7-a63b-8c42fd6aa1a4" qual:sign="positive" qual:id="tr_CycA_in_2"/>
+          <qual:input qual:qualitativeSpecies="CycA" qual:transitionEffect="none" metaid="_9407d864-32e8-4ac6-b4bf-4c6774ce89f5" qual:sign="positive" qual:id="tr_CycA_in_4"/>
+          <qual:input qual:qualitativeSpecies="Cdc20" qual:transitionEffect="none" metaid="_1f2059c0-9c15-4573-a952-0da4e3239da1" qual:sign="negative" qual:id="tr_CycA_in_7"/>
+          <qual:input qual:qualitativeSpecies="Cdh1" qual:transitionEffect="none" metaid="_1a47df15-ea17-4d86-9463-740724b35602" qual:sign="negative" qual:id="tr_CycA_in_8"/>
+          <qual:input qual:qualitativeSpecies="UbcH10" qual:transitionEffect="none" metaid="_524796b8-3aff-44e0-8fe8-e975ff29c4e0" qual:sign="negative" qual:id="tr_CycA_in_9"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="CycA" qual:transitionEffect="assignmentLevel" metaid="_500c8ec3-6509-4b1f-827f-f248ad116546" qual:id="tr_CycA_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="_92b9b2de-0cc4-4a56-abd5-2602ef0a811d">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="e6672f4e-fdc9-4d65-b5dc-bb7c5670b264">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Rb </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> E2F </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cdc20 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cdh1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Rb </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> E2F </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cdc20 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cdh1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> UbcH10 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Rb </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> E2F </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cdc20 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> UbcH10 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Rb </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> E2F </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cdc20 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cdh1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Rb </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> E2F </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cdc20 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cdh1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> UbcH10 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Rb </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> E2F </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cdc20 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> UbcH10 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <geq/>
+                    <ci> Rb </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cdc20 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cdh1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <geq/>
+                    <ci> Rb </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cdc20 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cdh1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> UbcH10 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <geq/>
+                    <ci> Rb </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cdc20 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> UbcH10 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_3b595a44-dd40-49a8-b672-da4b89a14aa6" qual:id="tr_CycB">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Cdc20" qual:transitionEffect="none" metaid="_93b3cb7e-f25c-4bf9-941a-3e4da5eb51cd" qual:sign="negative" qual:id="tr_CycB_in_7"/>
+          <qual:input qual:qualitativeSpecies="Cdh1" qual:transitionEffect="none" metaid="_08cf5615-8837-4d9d-ad79-25cd0deebf35" qual:sign="negative" qual:id="tr_CycB_in_8"/>
+          <qual:input qual:qualitativeSpecies="UbcH10" qual:transitionEffect="none" metaid="fcfd900e-38a5-4764-a767-b312b591b975" qual:sign="negative" qual:id="tr_CycB_in_9"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="CycB" qual:transitionEffect="assignmentLevel" metaid="f9b77993-88f7-405e-8931-7380edd56337" qual:id="tr_CycB_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="b85d4a21-1519-471e-a862-e2538ad2fea5">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="_4768508b-3e50-4e83-b02b-6555a19760b7">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cdc20 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cdh1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Cdc20 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cdh1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> UbcH10 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_779bf7d4-6c5f-4114-9e9a-9f9678721098" qual:id="tr_p27">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="CycD" qual:transitionEffect="none" metaid="_6ab31c8d-0dff-48ca-8edd-f65d2951d913" qual:sign="negative" qual:id="tr_p27_in_0"/>
+          <qual:input qual:qualitativeSpecies="CycE" qual:transitionEffect="none" metaid="c2f99830-cca6-410e-bf25-270cb7bd34b5" qual:sign="negative" qual:id="tr_p27_in_3"/>
+          <qual:input qual:qualitativeSpecies="CycA" qual:transitionEffect="none" metaid="f18357eb-1cd4-4112-8384-21d335e43ebf" qual:sign="negative" qual:id="tr_p27_in_4"/>
+          <qual:input qual:qualitativeSpecies="CycB" qual:transitionEffect="none" metaid="f90c4746-c350-4788-b67c-33b4590a44a1" qual:sign="negative" qual:id="tr_p27_in_5"/>
+          <qual:input qual:qualitativeSpecies="p27" qual:transitionEffect="none" metaid="_24895bab-7c2b-44bb-8116-a7d7c605b12f" qual:sign="positive" qual:id="tr_p27_in_6"/>
+          <qual:input qual:qualitativeSpecies="Skp2" qual:transitionEffect="none" metaid="f8fc186c-1475-40dc-b8a4-5d8cf20b4e1a" qual:sign="negative" qual:id="tr_p27_in_10"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="p27" qual:transitionEffect="assignmentLevel" metaid="_440dcfa8-6e69-43ca-b6ce-9ac3ef7129c4" qual:id="tr_p27_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="f932bfbc-0c34-4471-8268-0d73fe619130">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="_22da2fd1-78f3-4ebc-8ff4-2b3bf750b26d">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CycD </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycE </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycB </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CycD </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycE </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycB </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Skp2 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CycD </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycE </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycB </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> p27 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Skp2 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CycD </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycE </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycB </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> p27 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CycD </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycE </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycB </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Skp2 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CycD </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycE </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycB </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <leq/>
+                    <ci> p27 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Skp2 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CycD </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycE </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycB </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> p27 </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CycD </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycE </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycB </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Skp2 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CycD </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycE </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Skp2 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+          <qual:functionTerm qual:resultLevel="2" metaid="_3b12e2c9-044a-40ea-93b9-3c6be5ebd48a">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CycD </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycE </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycB </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CycD </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycE </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycB </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Skp2 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CycD </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycE </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycB </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> p27 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Skp2 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CycD </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycE </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycB </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> p27 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CycD </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycE </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycB </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Skp2 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CycD </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycE </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycB </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <leq/>
+                    <ci> p27 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Skp2 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CycD </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycE </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycB </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> p27 </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CycD </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycE </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycB </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Skp2 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CycD </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycE </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Skp2 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_04e61317-c643-4256-b32c-20b3d45eda58" qual:id="tr_Cdc20">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="CycB" qual:transitionEffect="none" metaid="d5ed377b-1a51-46c3-aaaa-b0893462873d" qual:sign="positive" qual:id="tr_Cdc20_in_5"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Cdc20" qual:transitionEffect="assignmentLevel" metaid="_68929de7-aa90-4097-9de2-04a5ffc1876c" qual:id="tr_Cdc20_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="fc11f398-7fed-4668-8070-e7ec1414aed8">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="d4d3cdf7-b302-4c7c-934c-98414ea4d13e">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <eq/>
+                <ci> CycB </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_0261cc8d-0c4b-4066-a79d-4ed83121a979" qual:id="tr_Cdh1">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="CycA" qual:transitionEffect="none" metaid="cdc016b2-d423-4aab-9e32-65f3bf8440ed" qual:sign="negative" qual:id="tr_Cdh1_in_4"/>
+          <qual:input qual:qualitativeSpecies="CycB" qual:transitionEffect="none" metaid="ba7b9886-fb17-4738-8711-9bdfeb9f726e" qual:sign="negative" qual:id="tr_Cdh1_in_5"/>
+          <qual:input qual:qualitativeSpecies="p27" qual:transitionEffect="none" metaid="b52ab72b-4de8-44a5-975f-eb59e71c535c" qual:sign="positive" qual:id="tr_Cdh1_in_6"/>
+          <qual:input qual:qualitativeSpecies="Skp2" qual:transitionEffect="none" metaid="fbe9f77d-2873-41c6-b211-ac5497447b7f" qual:sign="negative" qual:id="tr_Cdh1_in_10"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Cdh1" qual:transitionEffect="assignmentLevel" metaid="_5590bbe5-f646-422d-96b7-7b358caae0ad" qual:id="tr_Cdh1_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="f25e78de-b863-4f8d-98cf-ab22854e7ee1">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="_31582d37-96a0-417f-8257-b8af5985a1a9">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycB </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycB </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <geq/>
+                    <ci> p27 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> p27 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Skp2 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> p27 </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="dd85cf97-ec8b-40c0-a307-81947adea0b4" qual:id="tr_UbcH10">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="CycA" qual:transitionEffect="none" metaid="d415a69c-cedd-43b7-98c5-4d640780f877" qual:sign="positive" qual:id="tr_UbcH10_in_4"/>
+          <qual:input qual:qualitativeSpecies="CycB" qual:transitionEffect="none" metaid="_95c8edc9-e831-4e6b-ba36-d3394ab3758e" qual:sign="positive" qual:id="tr_UbcH10_in_5"/>
+          <qual:input qual:qualitativeSpecies="Cdc20" qual:transitionEffect="none" metaid="_05ef0b9b-a178-49c2-aae4-1568532cada3" qual:sign="positive" qual:id="tr_UbcH10_in_7"/>
+          <qual:input qual:qualitativeSpecies="Cdh1" qual:transitionEffect="none" metaid="_4e380149-e66e-4b59-9a16-23405555c58e" qual:sign="negative" qual:id="tr_UbcH10_in_8"/>
+          <qual:input qual:qualitativeSpecies="UbcH10" qual:transitionEffect="none" metaid="e2bd266c-b224-4f88-82ec-fb0dc1187777" qual:sign="positive" qual:id="tr_UbcH10_in_9"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="UbcH10" qual:transitionEffect="assignmentLevel" metaid="dcb5d61f-fbe3-4ffe-86fd-c17f3bda7944" qual:id="tr_UbcH10_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="b988817a-5697-4f5a-b2e4-03491017d91e">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="_60d6ac8c-5156-4027-a7e0-8cec68ecaccf">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycB </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cdc20 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cdh1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycB </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cdc20 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cdh1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycB </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cdc20 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cdh1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> UbcH10 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycB </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cdh1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> CycB </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cdh1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> UbcH10 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cdh1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> CycA </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cdh1 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> UbcH10 </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+      <qual:transition metaid="_6ccbe715-b3cf-427d-b5df-3514a3127379" qual:id="tr_Skp2">
+        <qual:listOfInputs>
+          <qual:input qual:qualitativeSpecies="Rb" qual:transitionEffect="none" metaid="_1fbbc4e9-2576-4b8a-b609-996f496a69b8" qual:sign="negative" qual:id="tr_Skp2_in_1"/>
+          <qual:input qual:qualitativeSpecies="Cdh1" qual:transitionEffect="none" metaid="a7b63c9f-b2f3-4a79-b50f-0b569636f8f6" qual:sign="negative" qual:id="tr_Skp2_in_8"/>
+        </qual:listOfInputs>
+        <qual:listOfOutputs>
+          <qual:output qual:qualitativeSpecies="Skp2" qual:transitionEffect="assignmentLevel" metaid="ea2ae413-098d-4c51-8575-993e2458c441" qual:id="tr_Skp2_out"/>
+        </qual:listOfOutputs>
+        <qual:listOfFunctionTerms>
+          <qual:defaultTerm qual:resultLevel="0" metaid="_72230793-375e-46a7-8278-32a663b0864b">
+          </qual:defaultTerm>
+          <qual:functionTerm qual:resultLevel="1" metaid="_3939ea50-7aa4-48f3-a5ff-6ded9353c4de">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">            
+              <apply>
+                <or/>
+                <apply>
+                  <leq/>
+                  <ci> Rb </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <and/>
+                  <apply>
+                    <eq/>
+                    <ci> Rb </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                  <apply>
+                    <eq/>
+                    <ci> Cdh1 </ci>
+                    <cn type="integer"> 0 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </math>
+                    </qual:functionTerm>
+        </qual:listOfFunctionTerms>
+      </qual:transition>
+    </qual:listOfTransitions>
+    <listOfCompartments>
+      <compartment constant="true" id="comp1" metaid="fc47586d-778c-40f4-9856-ddebd5cccfa4"/>
+    </listOfCompartments>
+  </model>
+</sbml>

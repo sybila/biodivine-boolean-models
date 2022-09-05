@@ -1,0 +1,222 @@
+v_P21 -| v_ASK1
+v_ROS -> v_ASK1
+v_TGFB -| v_TH2
+v_IL4 -> v_TH2
+v_IFNG -| v_TH2
+v_FAS -> v_FADD_
+v_TNFR -> v_FADD_
+v_IKB -| v_NFKB
+v_TNFR -> v_MEKK1
+v_CERAMIDE -> v_MEKK1
+v_TGFR -> v_MEKK1
+v_ERK -> v_FOS
+v_IAP -| v_CASP3
+v_CASP8 -> v_CASP3
+v_CASP9 -> v_CASP3
+v_ASK1 -> v_JNK
+v_MEKK1 -> v_JNK
+v_CASP3 -> v_Apoptosis
+v_FADD_ -> v_CASP8
+v_CFLIP -| v_CASP8
+v_P21 -| v_CASP8
+v_AKT -> v_MDM2
+v_ATM -| v_MDM2
+v_P53 -> v_MDM2
+v_GSK3B -| v_MDM2
+v_AKT -> v_IKK
+v_S1P -> v_IKK
+v_TNFR -> v_IKK
+v_SMAC -| v_IAP
+v_NFKB -> v_IAP
+v_STAT3 -> v_IAP
+v_TREG -> v_TGFB
+v_BCL2 -| v_TBID
+v_CASP8 -> v_TBID
+v_JAK -> v_STAT3
+v_TNFA -> v_DC
+v_CCL2 -> v_DC
+v_IL10 -| v_DC
+v_NFKB -> v_CCL2
+v_NFKB -> v_SOD
+v_STAT3 -> v_SOD
+v_TGFB -| v_CTL
+v_IFNG -> v_CTL
+v_COX2 -> v_PGE2
+v_JUN -| v_SMAD
+v_TGFR -> v_SMAD
+v_RAF -> v_MEK
+v_ROS -> v_MEK
+v_P53 -| v_BCL2
+v_NFKB -> v_BCL2
+v_STAT3 -> v_BCL2
+v_PP2A -| v_BCL2
+v_PGE2 -> v_EP2
+v_NFKB -> v_IL6
+v_MAC -> v_IL6
+v_DC -> v_IL6
+v_CTL -> v_FAS
+v_SPHK1 -> v_S1P
+v_MOMP -> v_SMAC
+v_S1P -> v_COX2
+v_TNFR -> v_COX2
+v_P53 -> v_P21
+v_GSK3B -| v_P21
+v_SMAD -> v_P21
+v_CASP3 -| v_P21
+v_DC -> v_TREG
+v_IL10 -> v_TREG
+v_IL6 -| v_TREG
+v_TH2 -> v_IL4
+v_DC -> v_IL4
+v_MAC -> v_TNFA
+v_TNFR -> v_SPHK1
+v_ERK -> v_SPHK1
+v_TGFB -| v_TH1
+v_IL4 -| v_TH1
+v_IFNG -> v_TH1
+v_IL12 -> v_TH1
+v_IL10 -| v_TH1
+v_GP130 -> v_JAK
+v_SOCS -| v_JAK
+v_CYCLIND1 -> v_Proliferation
+v_CASP3 -| v_Proliferation
+v_FOS -> v_Proliferation
+v_P21 -| v_Proliferation
+v_APC -| v_BCATENIN
+v_GSK3B -? v_BCATENIN
+v_RAS -> v_RAF
+v_CERAMIDE -> v_RAF
+v_BCL2 -| v_MOMP
+v_TBID -> v_MOMP
+v_CERAMIDE -> v_MOMP
+v_BAX -> v_MOMP
+v_ROS -> v_ATM
+v_BCATENIN -> v_JUN
+v_ERK -> v_JUN
+v_JNK -> v_JUN
+v_GSK3B -| v_JUN
+v_AKT -| v_PP2A
+v_CERAMIDE -> v_PP2A
+v_MEK -> v_ERK
+v_STAT3 -> v_SOCS
+v_TNFA -> v_TNFR
+v_JUN -> v_CYCLIND1
+v_BCATENIN -> v_CYCLIND1
+v_GSK3B -| v_CYCLIND1
+v_STAT3 -> v_CYCLIND1
+v_AKT -| v_BAX
+v_TBID -> v_BAX
+v_P53 -> v_BAX
+v_PP2A -> v_BAX
+v_MAC -> v_IL12
+v_DC -> v_IL12
+v_NFKB -> v_CFLIP
+v_CTL -> v_IFNG
+v_TH1 -> v_IFNG
+v_P53 -> v_SMASE
+v_FADD_ -> v_SMASE
+v_AKT -| v_GSK3B
+v_EP2 -| v_GSK3B
+v_IFNG -> v_MAC
+v_CCL2 -> v_MAC
+v_IL10 -| v_MAC
+v_CYTC -> v_CASP9
+v_IAP -| v_CASP9
+v_P21 -| v_CASP9
+v_PI3K -> v_AKT
+v_CASP3 -| v_AKT
+v_PP2A -| v_AKT
+v_GP130 -> v_RAS
+v_EP2 -> v_RAS
+v_IL6 -> v_GP130
+v_NFKB -> v_SMAD7
+v_SMAD -> v_SMAD7
+v_TH2 -> v_IL10
+v_TREG -> v_IL10
+v_TNFR -> v_ROS
+v_SOD -| v_ROS
+v_JUN -| v_PTEN
+v_P53 -> v_PTEN
+v_NFKB -| v_PTEN
+v_MOMP -> v_CYTC
+v_PTEN -| v_PI3K
+v_RAS -> v_PI3K
+v_EP2 -> v_PI3K
+v_IKK -| v_IKB
+v_TGFB -> v_TGFR
+v_SMAD7 -| v_TGFR
+v_PTEN -> v_P53
+v_ATM -> v_P53
+v_MDM2 -| v_P53
+v_JNK -> v_P53
+v_SMASE -> v_CERAMIDE
+v_SPHK1 -| v_CERAMIDE
+$v_AKT: (v_PI3K & !(v_CASP3 | v_PP2A))
+$v_ASK1: (v_ROS & !v_P21)
+$v_ATM: v_ROS
+$v_Apoptosis: v_CASP3
+$v_BAX: (((v_TBID & v_PP2A) & !v_AKT) | ((v_P53 & v_PP2A) & !v_AKT))
+$v_BCATENIN: !(v_APC & v_GSK3B)
+$v_BCL2: ((v_STAT3 & !(v_PP2A | v_P53)) | (v_NFKB & !(v_PP2A | v_P53)))
+$v_CASP3: ((v_CASP8 & !v_IAP) | (v_CASP9 & !v_IAP))
+$v_CASP8: (v_FADD_ & !(v_CFLIP | v_P21))
+$v_CASP9: (v_CYTC & !(v_IAP | v_P21))
+$v_CCL2: v_NFKB
+$v_CERAMIDE: (v_SMASE & !v_SPHK1)
+$v_CFLIP: v_NFKB
+$v_COX2: (v_TNFR & v_S1P)
+$v_CTL: (v_IFNG & !v_TGFB)
+$v_CYCLIND1: (((v_BCATENIN & !v_GSK3B) | (v_STAT3 & !v_GSK3B)) | (v_JUN & !v_GSK3B))
+$v_CYTC: v_MOMP
+$v_DC: ((v_CCL2 & !v_IL10) | (v_TNFA & !v_IL10))
+$v_EP2: v_PGE2
+$v_ERK: v_MEK
+$v_FADD_: (v_FAS | v_TNFR)
+$v_FAS: v_CTL
+$v_FOS: v_ERK
+$v_GP130: v_IL6
+$v_GSK3B: !(v_AKT | v_EP2)
+$v_IAP: ((v_NFKB & !v_SMAC) | (v_STAT3 & !v_SMAC))
+$v_IFNG: (v_CTL | v_TH1)
+$v_IKB: !v_IKK
+$v_IKK: (v_AKT | (v_TNFR & v_S1P))
+$v_IL10: (v_TREG | v_TH2)
+$v_IL12: (v_DC | v_MAC)
+$v_IL4: (v_DC | v_TH2)
+$v_IL6: ((v_MAC | v_DC) | v_NFKB)
+$v_JAK: (v_GP130 & !v_SOCS)
+$v_JNK: (v_MEKK1 | v_ASK1)
+$v_JUN: (((v_BCATENIN & v_JNK) & !v_GSK3B) | ((v_ERK & v_JNK) & !v_GSK3B))
+$v_MAC: ((v_CCL2 & !v_IL10) | (v_IFNG & !v_IL10))
+$v_MDM2: ((v_P53 & v_AKT) & !(v_ATM | v_GSK3B))
+$v_MEK: (v_RAF | v_ROS)
+$v_MEKK1: ((v_TNFR | v_TGFR) | v_CERAMIDE)
+$v_MOMP: (((v_TBID & !v_BCL2) | (v_BAX & !v_BCL2)) | (v_CERAMIDE & !v_BCL2))
+$v_NFKB: !v_IKB
+$v_P21: ((v_SMAD & !(v_GSK3B | v_CASP3)) | (v_P53 & !(v_GSK3B | v_CASP3)))
+$v_P53: (((v_ATM & !v_MDM2) | (v_JNK & !v_MDM2)) | (v_PTEN & !v_MDM2))
+$v_PGE2: v_COX2
+$v_PI3K: ((v_EP2 & !v_PTEN) | (v_RAS & !v_PTEN))
+$v_PP2A: (v_CERAMIDE & !v_AKT)
+$v_PTEN: (v_P53 & !(v_NFKB | v_JUN))
+$v_Proliferation: ((v_CYCLIND1 & v_FOS) & !(v_P21 | v_CASP3))
+$v_RAF: (v_CERAMIDE | v_RAS)
+$v_RAS: (v_EP2 | v_GP130)
+$v_ROS: (v_TNFR & !v_SOD)
+$v_S1P: v_SPHK1
+$v_SMAC: v_MOMP
+$v_SMAD: (v_TGFR & !v_JUN)
+$v_SMAD7: (v_NFKB | v_SMAD)
+$v_SMASE: (v_FADD_ | v_P53)
+$v_SOCS: v_STAT3
+$v_SOD: (v_NFKB | v_STAT3)
+$v_SPHK1: (v_ERK | v_TNFR)
+$v_STAT3: v_JAK
+$v_TBID: (v_CASP8 & !v_BCL2)
+$v_TGFB: v_TREG
+$v_TGFR: (v_TGFB & !v_SMAD7)
+$v_TH1: ((v_IFNG & !((v_TGFB | v_IL4) | v_IL10)) | (v_IL12 & !((v_TGFB | v_IL4) | v_IL10)))
+$v_TH2: (v_IL4 & !(v_IFNG | v_TGFB))
+$v_TNFA: v_MAC
+$v_TNFR: v_TNFA
+$v_TREG: ((v_DC & !v_IL6) | (v_IL10 & !v_IL6))

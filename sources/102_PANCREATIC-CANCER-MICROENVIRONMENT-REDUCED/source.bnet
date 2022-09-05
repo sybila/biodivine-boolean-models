@@ -1,0 +1,18 @@
+targets, factors
+RASs, (NFkBs | STATp | PIP3p | RASp | ERKs)
+NFkBs, (TNFa | PIP3s)
+PIP3s, !P53s & (TGFb | RASs)
+P53s, !PIP3s & !P53s & RASs
+ERKs, TGFb | RASs
+Pros, !P53s & ERKs
+Migs, PIP3s & ERKs & Acts
+Acts, TGFb & (!IFNg | !Thiazolidinedione) & (NFkBs | ERKs)
+RASp, RASp | HER2p | ERKs
+STATp, HER2p
+PIP3p, !P53p & (RASp | HER2p)
+P21p, !STATp  & ( TGFb | P53p )
+BCLXLp, !P53p & ( PIP3p | STATp | RASp )
+P53p, !((P21p | !PIP3p) & (PIP3p | P53p))
+CASPp, !PIP3p & (P53p | !BCLXLp)
+Autp, (RASp | !PIP3p) & (PIP3p | (!BCLXLp & !CASPp))
+Prop, !P21p & PIP3p & RASp

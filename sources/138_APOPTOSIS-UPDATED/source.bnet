@@ -1,0 +1,21 @@
+# model in BoolNet format
+# the header targets, factors is mandatory to be importable in the R package BoolNet
+
+targets, factors
+AKT1,                     !M
+APAF1,                    BAX
+Apoptosis_phenotype,      !CASP3&!CASP7&!N&!Orf3b&!Orf6&!Orf8a&!Orf9b&S | !CASP3&!CASP7&!N&!Orf3b&!Orf6&!Orf8a&Orf9b | !CASP3&!CASP7&!N&!Orf3b&!Orf6&Orf8a | !CASP3&!CASP7&!N&!Orf3b&Orf6 | !CASP3&!CASP7&!N&Orf3b | !CASP3&!CASP7&N | !CASP3&CASP7 | CASP3
+Apoptosome_complex,       !AKT1&APAF1&CASP9_Cytoplasm_input&CYCS
+BAD,                      !AKT1
+BAD_BBC3_BCL2L11_complex, BCL2_MCL1_BCL2L1_complex
+BAX,                      !BAD_BBC3_BCL2L11_complex&!BCL2_MCL1_BCL2L1_complex&BID | BAD_BBC3_BCL2L11_complex&!BCL2_MCL1_BCL2L1_complex
+BCL2_MCL1_BCL2L1_complex, !BAD&!E&Orf7a | !BAD&E
+BID,                      CASP8
+CASP3,                    !CASP8&CASP9_Cytoplasm | CASP8
+CASP7,                    !CASP8&CASP9_Cytoplasm | CASP8
+CASP8,                    !FADD&TRADD_FADD_complex | FADD
+CASP9_Cytoplasm,          !AKT1&Apoptosome_complex
+CYCS,                     MAPK14
+FADD,                     FAS_FASL_complex
+MAPK14,                   Orf3a
+TRADD_FADD_complex,       FADD&TNF_TNFRSF1A_complex&TRADD

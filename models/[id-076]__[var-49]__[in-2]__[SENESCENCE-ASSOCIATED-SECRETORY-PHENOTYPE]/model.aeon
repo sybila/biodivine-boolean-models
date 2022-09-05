@@ -1,0 +1,145 @@
+v_p21 -| v_CDK2
+v_E2F -> v_CDK2
+v_SOCS3 -| v_JAK
+v_IL6R -> v_JAK
+v_NFkB -> v_IL1
+v_PI3K -> v_Akt
+v_STAT3 -> v_SOCS3
+v_ATM -> v_CHK2
+v_DNAD -> v_NEMO
+v_IL1 -> v_IL1R
+v_TAK1 -> v_MKK
+v_MEKK -> v_MKK
+v_cJun -> v_AP1
+v_cFos -> v_AP1
+v_IkB -> v_IkB
+v_NFkB -> v_IkB
+v_IKK -| v_IkB
+v_NEMO -? v_IkB
+v_Akt -> v_IKK
+v_NEMO -> v_IKK
+v_NIK -> v_IKK
+v_CEBPbeta -> v_cFos
+v_p38 -> v_cFos
+v_JNK -> v_cFos
+v_Elk1 -> v_cFos
+v_STAT3 -> v_cFos
+v_MKK -> v_JNK
+v_MKP1 -| v_JNK
+v_JAK -> v_STAT3
+v_mTOR -> v_STAT3
+v_cFos -> v_STAT3
+v_cJun -> v_STAT3
+v_CEBPbeta -> v_IL8
+v_NFkB -> v_IL8
+v_AP1 -> v_IL8
+v_TRAF6 -> v_MEKK
+v_E2F -> v_E2F
+v_pRB -> v_E2F
+v_RB_ -| v_E2F
+v_GP130 -> v_MEK1_2
+v_IL6 -> v_MEK1_2
+v_TAB -> v_TAK1
+v_TRAF6 -> v_TAK1
+v_IL6 -> v_Oncogene
+v_IL8 -> v_Oncogene
+v_AP1 -> v_MKP1
+v_CEBPbeta -> v_IL6
+v_NFkB -> v_IL6
+v_ERK1_2 -> v_IL6
+v_MKK -> v_p38
+v_MKP1 -| v_p38
+v_ERK1_2 -> v_Elk1
+v_Elk1 -> v_CEBPbeta
+v_TRAF6 -> v_TAB
+v_IRAK -> v_TAB
+v_CEBPbeta -> v_cJun
+v_p38 -> v_cJun
+v_cFos -> v_cJun
+v_ERK1_2 -> v_cJun
+v_JNK -> v_cJun
+v_DNAD -> v_ATM
+v_Akt -> v_mTOR
+v_CHK2 -> v_p53
+v_CHK1 -> v_p53
+v_MDM2 -| v_p53
+v_ATM -> v_p53
+v_CDK2 -| v_RB_
+v_CDK4 -| v_RB_
+v_pRB -| v_RB_
+v_IL6 -> v_IL6R
+v_IL6 -> v_GP130
+v_HIF1 -> v_p21
+v_p53 -> v_p21
+v_DNAD -> v_p16INK4
+v_Oncogene -> v_p16INK4
+v_IL1R -> v_IRAK
+v_IRAK -> v_IRAK
+v_MyD88 -> v_IRAK
+v_IL1R -> v_MyD88
+v_TAK1 -> v_NIK
+v_ATR -> v_CHK1
+v_IL6 -> v_ERK1_2
+v_MEK1_2 -> v_ERK1_2
+v_p53 -> v_MDM2
+v_ATM -| v_MDM2
+v_p21 -| v_CDK4
+v_p16INK4 -| v_CDK4
+v_JAK -> v_PI3K
+v_IRAK -> v_TRAF6
+v_IkB -| v_NFkB
+v_IKK -> v_NFkB
+v_CDK2 -> v_pRB
+v_CDK4 -> v_pRB
+v_DNAD -> v_ATR
+v_p53 -| v_HIF1
+v_Hypoxia -> v_HIF1
+$v_AP1: (v_cJun & v_cFos)
+$v_ATM: v_DNAD
+$v_ATR: v_DNAD
+$v_Akt: v_PI3K
+$v_CDK2: (v_E2F & !v_p21)
+$v_CDK4: !(v_p21 | v_p16INK4)
+$v_CEBPbeta: v_Elk1
+$v_CHK1: v_ATR
+$v_CHK2: v_ATM
+$v_E2F: ((v_pRB & !v_RB_) | (v_E2F & !v_RB_))
+$v_ERK1_2: (v_MEK1_2 & v_IL6)
+$v_Elk1: v_ERK1_2
+$v_GP130: v_IL6
+$v_HIF1: (v_Hypoxia & !v_p53)
+$v_IKK: ((v_Akt | v_NIK) | v_NEMO)
+$v_IL1: v_NFkB
+$v_IL1R: v_IL1
+$v_IL6: ((v_NFkB | v_CEBPbeta) | v_ERK1_2)
+$v_IL6R: v_IL6
+$v_IL8: ((v_CEBPbeta | v_NFkB) | v_AP1)
+$v_IRAK: ((v_IRAK | v_MyD88) | v_IL1R)
+$v_IkB: ((v_NFkB & !(v_IKK & v_NEMO)) | (v_IkB & !(v_IKK & v_NEMO)))
+$v_JAK: (v_IL6R & !v_SOCS3)
+$v_JNK: (v_MKK & !v_MKP1)
+$v_MDM2: (v_p53 & !v_ATM)
+$v_MEK1_2: (v_GP130 & v_IL6)
+$v_MEKK: v_TRAF6
+$v_MKK: (v_TAK1 | v_MEKK)
+$v_MKP1: v_AP1
+$v_MyD88: v_IL1R
+$v_NEMO: v_DNAD
+$v_NFkB: (v_IKK & !v_IkB)
+$v_NIK: v_TAK1
+$v_Oncogene: (v_IL6 | v_IL8)
+$v_PI3K: v_JAK
+$v_RB_: !((v_CDK2 | v_CDK4) | v_pRB)
+$v_SOCS3: v_STAT3
+$v_STAT3: ((v_mTOR | v_JAK) | (v_cFos & v_cJun))
+$v_TAB: (v_TRAF6 | v_IRAK)
+$v_TAK1: (v_TRAF6 | v_TAB)
+$v_TRAF6: v_IRAK
+$v_cFos: ((((v_STAT3 | v_Elk1) | v_p38) | v_JNK) | v_CEBPbeta)
+$v_cJun: (v_cFos & (((v_CEBPbeta | v_p38) | v_ERK1_2) | v_JNK))
+$v_mTOR: v_Akt
+$v_p16INK4: (v_Oncogene | v_DNAD)
+$v_p21: (v_HIF1 | v_p53)
+$v_p38: (v_MKK & !v_MKP1)
+$v_p53: (((v_CHK1 & !v_MDM2) | (v_ATM & !v_MDM2)) | (v_CHK2 & !v_MDM2))
+$v_pRB: (v_CDK2 | v_CDK4)

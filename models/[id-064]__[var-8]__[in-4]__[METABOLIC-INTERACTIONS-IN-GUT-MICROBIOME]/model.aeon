@@ -1,0 +1,35 @@
+v_Enterobacteriaceae -> v_Enterococcus
+v_Clostridium_difficile -> v_Enterococcus
+v_Coprobacillus -| v_Enterococcus
+v_Blautia -> v_Enterococcus
+v_Mollicutes -> v_Enterococcus
+v_Coprobacillus -? v_Blautia
+v_Enterococcus -> v_Blautia
+v_Blautia -? v_Blautia
+v_Lachnospiraceae_other_ -> v_Lachnospiraceae
+v_Other -> v_Lachnospiraceae
+v_Clindamycin_ -| v_Lachnospiraceae
+v_Lachnospiraceae -> v_Lachnospiraceae
+v_Lachnospiraceae_other_ -> v_Barnesiella
+v_Other -> v_Barnesiella
+v_Clindamycin_ -| v_Barnesiella
+v_Lachnospiraceae -> v_Barnesiella
+v_Lachnospiraceae_other_ -> v_Lachnospiraceae_other_
+v_Other -> v_Lachnospiraceae_other_
+v_Clindamycin_ -| v_Lachnospiraceae_other_
+v_Lachnospiraceae -> v_Lachnospiraceae_other_
+v_Lachnospiraceae_other_ -> v_Other
+v_Other -> v_Other
+v_Clindamycin_ -| v_Other
+v_Lachnospiraceae -> v_Other
+v_Clostridium_difficile -> v_Clostridium_difficile
+v_Barnesiella -| v_Clostridium_difficile
+v_Coprobacillus -> v_Akkermansia_
+$v_Akkermansia_: v_Coprobacillus
+$v_Barnesiella: (((v_Lachnospiraceae_other_ & !v_Clindamycin_) | (v_Other & !v_Clindamycin_)) | (v_Lachnospiraceae & !v_Clindamycin_))
+$v_Blautia: ((((v_Coprobacillus & !v_Blautia) | v_Enterococcus) | (v_Blautia & !v_Coprobacillus)) | v_Blautia)
+$v_Clostridium_difficile: (v_Clostridium_difficile & !v_Barnesiella)
+$v_Enterococcus: ((((v_Enterobacteriaceae | v_Mollicutes) | v_Blautia) | v_Clostridium_difficile) | !((((v_Enterobacteriaceae | v_Clostridium_difficile) | v_Coprobacillus) | v_Blautia) | v_Mollicutes))
+$v_Lachnospiraceae: (((v_Lachnospiraceae & !v_Clindamycin_) | (v_Lachnospiraceae_other_ & !v_Clindamycin_)) | (v_Other & !v_Clindamycin_))
+$v_Lachnospiraceae_other_: (((v_Lachnospiraceae & !v_Clindamycin_) | (v_Other & !v_Clindamycin_)) | (v_Lachnospiraceae_other_ & !v_Clindamycin_))
+$v_Other: (((v_Other & !v_Clindamycin_) | (v_Lachnospiraceae_other_ & !v_Clindamycin_)) | (v_Lachnospiraceae & !v_Clindamycin_))
