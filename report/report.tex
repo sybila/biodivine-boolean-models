@@ -18,7 +18,7 @@
 \maketitle
 
 \begin{abstract}
-	The space of powerful tools for computational analysis of logical models (represented as Boolean networks) has been growing considerably. However, comparing the validity, efficiency, and scalability of such tools necessitates a comprehensive benchmark set of realistic Boolean networks.
+	The space of powerful tools for computational analysis of logical models (represented as Boolean networks) has been growing considerably in the recent years. However, comparing the validity, efficiency, and scalability of such tools necessitates a comprehensive benchmark set of realistic Boolean networks.
 	
 	At the moment, this need is largely served by databases of biological models such as CellCollective, GINsim, or Biomodels. However, these databases are more focused on human curated, biologically relevant networks, and are therefore limited in scope. Furthermore, the models in such databases may not always be available as a single dataset or in the desired format. This requires additional time for preprocessing and data collection, which the tool authors are often unwilling or unable to spend.
 	
@@ -27,19 +27,19 @@
 
 \section{Introduction}
 
-Logical models provide a very useful and simple framework for describing complex biological phenomena. The most common mechanism for formalising executable logical models are Boolean networks~\cite{bn-intro}. In recent years, we have seen a rapid development of new tools and algorithms for analysis of large Boolean networks. However, in many instances, it is hard to assess usefulness and scalability of such tools due to a lack of commonly recognised ``benchmark dataset'' of networks on which the tools can be compared.
+Logical models provide a very useful and simple framework for describing complex biological phenomena. Likely the most common mechanism for formalising executable logical models are Boolean networks~\cite{bn-intro}. In recent years, we have seen a rapid development of new tools and algorithms for analysis of large Boolean networks. However, in many instances, it is hard to assess usefulness and scalability of such tools due to a lack of commonly recognised ``benchmark dataset'' of networks on which the tools can be compared.
 
-This purpose is often served by models obtained from databases maintained by the authors of some of the larger modelling tools, such as CellCollective~\cite{cell-collective}, GINsim~\cite{ginsim}, or Biomodels~\cite{biomodels}. However, these models are often hard to obtain in bulk or may require additional processing (e.g. to convert into an appropriate format). Additionally, tool authors often modify the models in minor ways (e.g. by tweaking valuations of network inputs), which prevents meaningful comparisons between publications. Finally, these databases are far from comprehensive, so a wide range of models is often omitted.
+This purpose is often served by models obtained from databases maintained by the authors of some of the larger modelling tools, such as CellCollective~\cite{cell-collective}, GINsim~\cite{ginsim}, or Biomodels~\cite{biomodels}. However, these models are often hard to obtain in bulk or may require additional processing (e.g. to convert into an appropriate format). Additionally, paper authors often modify the models in minor ways (e.g. by tweaking valuations of network inputs), which prevents meaningful comparisons between publications. Finally, these databases are far from comprehensive, so a wide range of models is often omitted.
 
 As a result, most papers develop an ad hoc benchmark set that is often partially proprietary and hard or impossible to replicate and compare to. In this technical report, we describe a comprehensive, open-source benchmark dataset that can be used for this purpose instead.
 
-\textbf{Disclaimer: The model dataset as well as this report will be gradually updated as new models and data become available. If possible, please refer to the latest version of this report on arXiv and the latest revision of the dataset in the github repository.}
+\textbf{Disclaimer: The model dataset as well as this report will be gradually updated as new models and data become available. If possible, please refer to the latest version of this report on arXiv and the latest revision of the dataset in the Github repository.}
 
 \section{Goals and scope}
 
-\paragraph{Eligible models} To cover the widest possible assortment of realistic models, we currently allow submission of any logical model which can be reliably retrieved from a known database, repository, or an associated publication. The only requirement is that the model must be based on real biological information. That is, we do not accept randomly generated models. However, we do not require any specific level of curation either---the model can be hand made, automatically synthesised, or anything in between. Similarly, we accept many different model formats and we are willing to assist with translation if a machine-friendly format is not available. We also accept multi-valued models, however, for now the dataset only contains their Booleanized versions.
+\paragraph{Eligible models} To cover the widest possible assortment of realistic models, we currently allow submission of any logical model which can be reliably retrieved from a known database, repository, or an associated publication. The only requirement is that the model must be based on a real biological system. That is, we do not accept randomly generated models. However, we do not require any specific level of curation either---the model can be hand made, automatically synthesised, or anything in between. Similarly, we accept many different model formats and we are willing to assist with translation if a machine-friendly format is not available. We also accept multi-valued models, however, for now the dataset only contains their Booleanized derivatives.
 
-\paragraph{Editions} The goal is to gradually evolve the dataset by adding new models (or by removing problematic/redundant models). Consequently, we plan to regularly release \emph{editions} of the dataset, such that the users can refer to the whole history of editions as necessary. Preliminary plan is to release editions in roughly yearly intervals. Initially, editions will be available as Github releases, with a possible future addition of Zenodo artefacts. In each edition, the user can then filter models with specific properties (size, keywords, source, etc.).
+\paragraph{Editions} The goal is to gradually evolve the dataset by adding new models (or by removing problematic/redundant models). Consequently, we plan to regularly release \emph{editions} of the dataset, such that the users can refer to the whole history of editions as necessary. Preliminary plan is to release editions in roughly yearly intervals. Initially, editions will be available as Github releases, with a possible future addition of Zenodo artefacts. In each edition, the user can then pick models with specific properties (size, keywords, source, etc.).
 
 \paragraph{Model metadata} While we do not perform any biological curation of models, we collect basic meta-data about each model to make filtering and search easier. In particular, each model has:
 \begin{itemize}
@@ -66,16 +66,19 @@ The dataset is organized as follows:
 
 \begin{itemize}
 	\item \texttt{/models} contains the whole dataset with all model and metadata files.
-	\item \texttt{/sources} directory contains the machine-readable source files that are used to generate the \texttt{models} directory.
+	\item \texttt{/sources} directory contains the original machine-readable source files that are used to generate the \texttt{models} directory.
 	\item \texttt{/report} directory contains the LaTeX source files for this report.
 	\item \texttt{/sync.py} is the Python script for model processing and static analysis.
+	\item \texttt{/bundle.py} is the Python script for creating model bundle archives.
 \end{itemize}
+
+For more information on how to use \texttt{sync.py} and \texttt{bundle.py} to work with the dataset, see the project readme file.
 
 \paragraph{Keywords} The metadata for each model can contain a set of keywords. In theory, any keyword can be added to identify specific classes of models. However, at the moment, we specifically recognise the following keywords:
 
 \begin{itemize}
 	\item \texttt{curated}: A curated model is not only based on biological information, but is also (partially) validated by a human. That is, a model resulting from a purely automatic translation or inference can be included in the dataset, but is not automatically considered curated.
-	\item \texttt{repaired}: A model where one or more logical inconsistencies have been resolved (a complete list of possible repairs is given later in this report). The modifications should be listed in model notes.
+	\item \texttt{repaired}: A model where one or more logical inconsistencies have been resolved (a complete list of possible repairs is given later in this report). The rationale behind each modification should be listed in model notes.
 	\item \texttt{multi-valued}: A model whose original version is multi-valued, but which is presented in a Booleanized form (the original multi-valued model should be included in the \texttt{sources} directory).
 	\item \texttt{cell-collective}/\texttt{ginsim}/\texttt{biomodels}/\texttt{covid-disease-map}: Indicates that the model is available in the corresponding database (or multiple databases).
 	\item \texttt{casq}: Indicates that the model has been translated from a CellDesigner pathway using the CaSQ tool~\cite{casq}.
@@ -89,13 +92,13 @@ The dataset is organized as follows:
 	\item \texttt{.sbml}; XML-based format with support for additional meta-data (model layout, entity references and comments, etc.)~\cite{sbml-qual}.
 \end{itemize}
 
-Each model is available in all three formats. Any of the three formats can be also used as a model source (however, only limited static analysis is available for \texttt{.bnet} models due to the missing regulatory network). To ensure compatibility across all tools, we also perform model variable renaming when necessary. For example, \texttt{.sbml} supports (almost) arbitrary strings as variable names, while other formats follow a more typical C-like naming requirements. As such, regardless of the source format, variable names are normalized such that they are valid in any format.
+Each model is available in all three formats. Any of the three formats can be also used as a model source (however, only limited static analysis is available for \texttt{.bnet} models due to the missing regulatory network). To ensure compatibility across all tools, we also perform model variable renaming when necessary. For example, \texttt{.sbml} supports (almost) arbitrary strings as variable names, while other formats follow a more typical C-like naming requirements. As such, regardless of the source format, variable names are normalized so that they are valid in any format.
 
 \paragraph{Model inputs} We also normalize the representation of model \emph{inputs} and \emph{constants}. Formally, an input or a constant is an entity with no incoming regulations, and either an identity (input) or \texttt{true}/\texttt{false} (constant) update function. The update function for inputs can be also missing entirely to indicate that the value is unknown/undetermined.
 
 The specific representation of such variables is typically at the discretion of the model authors and differs from model to model. For example, some authors use constant update functions for inputs with a ``typical'' or ``assumed'' value, while other authors use the identity function, and other authors omit the functions entirely, only describing the expected values in text.
 
-To make the resulting models as canonical as possible, we opted to \emph{omit the update function} for every constant or input variable. If you wish to use the original setting as published by the authors, this information is still available in the \texttt{sources} directory, or as part of the associated publication.
+To make the resulting models as canonical as possible, we opted to \emph{omit the update function} for every constant or input variable. If you wish to use the original setting as published by the authors, this information is still available in the \texttt{/sources} directory, or as part of the original publication. Furthermore, using the \texttt{bundle.py} script, you can generate variants of the dataset with a different input setting (constant true/constant false/identity function/free).
 
 For benchmarking and tool comparison, we generally recommend sampling a non-trivial subspace of input valuations, as the behaviour of the model can often differ substantially based on the values of inputs. The model with all input values erased is therefore a good starting point for such sampling.
 
@@ -116,7 +119,7 @@ The goal of each repair is to retain the original update functions of the model 
 
 \section{Models}
 
-In the rest of the report, we give a complete enumeration of all models included in the dataset with basic metadata and associated bibliographic entries. A machine readable (\texttt{.csv}) version of this summary is available as part of each dataset editions.
+In the rest of the report, we give a complete enumeration of all models included in the dataset with basic metadata and associated bibliographic entries. A machine readable (\texttt{.csv}) version of this summary is available as part of each dataset edition.
 
 \begin{center}
 	\begin{tabular}{ | C{16pt} | C{144pt} | C{25pt} | C{25pt} | C{25pt} | C{36pt} | }

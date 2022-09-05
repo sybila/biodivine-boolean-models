@@ -1,3 +1,8 @@
+# This script is reponsible for reading, validating and translating 
+# models in the /sources directory and writing the final results
+# into the /models directory. As part of this process, it generates
+# basic metadata about the model's structure.
+
 import re
 import sys
 import json
@@ -92,6 +97,8 @@ if len(sys.argv) > 1:
 else:
 	test_id = None
 
+meta_csv_summary = "ID, name, variables, regulations\n"
+
 for model_dir in source_directories:
 	if model_dir.startswith("."):
 		# Skip hidden files.
@@ -167,6 +174,9 @@ for model_dir in source_directories:
 	metadata['inputs'] = inputs
 	metadata['regulations'] = regulations
 
+	# Add a row to the metadata summary csv:
+	meta_csv_summary += f"{model_id:03d}, {model_name}, {variables}, {inputs}, {regulations}\n"
+	
 	output_directory = f'[id-{model_id:03d}]__[var-{variables}]__[in-{inputs}]__[{model_name}]'
 	
 	if not isdir('models/'+output_directory):
@@ -198,3 +208,6 @@ for model_dir in source_directories:
 	Path(f'models/{output_directory}/README.md').write_text(readme)
 
 	print("\t - Model exported into", output_directory)
+
+Path(f'models/summary.csv').write_text(meta_csv_summary)
+print("Dataset summary written to `models/summary.csv`.")
