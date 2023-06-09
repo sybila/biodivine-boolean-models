@@ -10,11 +10,12 @@
 \DeclareFloatingEnvironment[name={Online-only Table}]{supptable}
 
 % 110 characters; 68 right now
-\title{Comprehensive benchmark dataset of real-world Boolean network models}
+\title{Comprehensive repository of logically consistent real-world Boolean network models}
 
 \author[1,2]{Samuel Pastva}
 \author[2]{David Šafránek}
 \author[2]{Nikola Beneš}
+\author[1]{Thomas Henzinger}
 \author[2]{Luboš Brim}
 \affil[1]{Institute of Science and Technology Austria, Klosterneuburg, 3400, Austria}
 \affil[2]{Faculty of Informatics, Masaryk University, Brno, 60200, Czechia}
@@ -37,13 +38,13 @@
 
 \begin{abstract}
 	% 170 word limit; ~157 right now
-	Recent developments in both computational analysis and data-driven syntesis enable a new era of automated reasoning with logical models (Boolean networks in particular) in systems biology. However, these advancements also motivate an increased focus on quality control and scalability comparisons between tools.
+	Recent developments in both computational analysis and data-driven syntesis enable a new era of automated reasoning with logical models (Boolean networks in particular) in systems biology. However, these advancements also motivate an increased focus on quality control and performance comparisons between tools.
 	
 	At the moment, to illustrate real-world applicability, authors typically test their approaches on small sets of manually curated models that are inherently limited in scope.
 	%, or biologically unrealistic collections of random networks. 
 	This further complicates reuse and comparisons, because benchmark models often contain ad hoc modifications or are outright not available.
 	
-	In this paper, we describe a new, comprehensive, open source dataset of 210+ Boolean network models compiled from available databases and a literature survey. The models are available in a wide range of formats. Furthermore, the dataset is accompanied by a validation pipeline that ensures the integrity and logical consistency of each model. Using this pipeline, we identified and repaired many potential problems in a number of widely used models.
+	In this paper, we describe a new, comprehensive, open source dataset of 210+ Boolean network models compiled from available databases and a literature survey. The models are available in a wide range of formats. Furthermore, the dataset is accompanied by a validation pipeline that ensures the integrity and logical consistency of each model. Using this pipeline, we identified and repaired 400+ potential problems in a number of widely used models.
 \end{abstract}
 \begin{document}
 
@@ -70,7 +71,7 @@ While these databases have non-trivial overlap, they are mostly focused on speci
 
 To address these issues, we present the \emph{Biodivine Boolean Models} (BBM) dataset. BBM covers 210+ models from an extensive set of sources, including the aforementioned databases and independently published models (see Figure~\ref{fig:sources}). For each model, BBM tracks the primary source of the model (i.e. its publication and authors), any secondary sources (e.g. databases) and the source for the actual model files (e.g. git repositories, supplementary materials, database entries, etc.). 
 
-Aside from model aggregation, BBM provides several benefits to tool authors: First, models tracked in BBM are available in several widely recognised formats (\texttt{bnet}~\cite{pyboolnet}, \texttt{aeon}~\cite{aeon}, and \texttt{sbml}~\cite{sbml-qual}) and can be downloaded in bulk. Second, BBM eliminates certain ambiguities in model representation, such as the treatment of network input nodes. Third, BBM performs extensive static validation to ensure logical consistency between variable update rules and the associated regulatory network of each model. This process identifies and repairs common problems in logical models such as mismatch in monotonicity of a regulation and an update function, or the presence of redundant model components. Finally, BBM provides an automated reproducible workflow to generate custom variants of the dataset based on the user provided criteria.
+Aside from model aggregation, BBM provides several benefits to tool authors: First, models tracked in BBM are available in several widely recognised formats (\texttt{bnet}~\cite{pyboolnet}, \texttt{aeon}~\cite{aeon}, and \texttt{sbml}~\cite{sbml-qual}) and can be downloaded in bulk. Second, BBM eliminates certain ambiguities in model representation, such as the treatment of network input nodes. Third, BBM performs extensive static validation to ensure logical consistency between variable update rules and the associated influence graph of each model. This process identifies and repairs common problems in logical models such as mismatch in monotonicity of the regulation and the update function, or the presence of (logically) redundant model components. Finally, BBM provides an automated reproducible workflow to generate custom variants of the dataset based on the user provided criteria.
 
 Overall, we believe BBM significantly simplifies the process of validating and benchmarking Boolean network tools as it provides a large, clearly defined and validated set of models. To the best of our knowledge, BBM is also the largest publicly available set of real-world (i.e. not randomly generated) Boolean network models.
 
@@ -78,7 +79,7 @@ Overall, we believe BBM significantly simplifies the process of validating and b
 
 \section*{Methods}
 
-In this section, we first give a quick overview of the relevant elements of Boolean network model. We then proceed to list how the actual BBM dataset is created, curated, validated and distributed.
+In this section, we first give a quick overview of the relevant elements of Boolean network models. We then proceed to list how the actual BBM dataset is created, curated, validated and distributed.
 
 \subsection*{Boolean networks}
 
@@ -86,7 +87,7 @@ In this section, we first give a quick overview of the relevant elements of Bool
 
 First, let us give a brief formal introduction into the topic of Boolean network modelling. By $\mathbb{B}$, we denote the set $\{0,1\}$. We then say that a \emph{Boolean network} $\mathcal{B}$ over $n$ variables is an indexed collection $\mathcal{B} = \{ F_1, \ldots, F_n \}$, such that each $F_i$ is a Boolean \emph{update function} $F_i  : \mathbb{B}^n \to \mathbb{B}$ (the set of Boolean vectors $\mathbb{B}^n$ is called the \emph{state space} of $\mathcal{B}$). Naturally, within a real-world model, variables are also augmented with human-readable names and other biologically relevant metadata, while functions are described using Boolean expressions or function tables.
 
-\paragraph{Signed Influence graph} Individual update functions typically depend only on a small subset of network variables, not the whole network state. This fact is communicated using the \emph{signed influence graph} (sometimes called the \emph{regulatory network}) associated with the Boolean network $\mathcal{B}$. This is a labelled directed graph $\mathcal{I} = (V, E, l)$ such that its vertices are the variables of $\mathcal{B}$, $V = \{ 1, \ldots, n \}$, edges $E \subseteq V \times V$ represent dependencies between variables (we say that $x$ \emph{regulates} $y$ when $(x,y) \in E$) and $l : E \to \{ \oplus, \ominus, ? \}$ labels each edge with an optional \emph{monotonicity} (positive, negative, or unknown). The influence graph is typically provided directly by model authors.
+\paragraph{Signed Influence graph} Individual update functions typically depend only on a small subset of the network variables, not the whole network state. This fact is communicated using the \emph{signed influence graph} (often also called the \emph{regulatory network}) associated with the Boolean network $\mathcal{B}$. This is a labelled directed graph $\mathcal{I} = (V, E, l)$ such that its vertices are the variables of $\mathcal{B}$, $V = \{ 1, \ldots, n \}$, edges $E \subseteq V \times V$ represent dependencies between variables (we say that $x$ \emph{regulates} $y$ when $(x,y) \in E$) and $l : E \to \{ \oplus, \ominus, ? \}$ labels each edge with an optional \emph{monotonicity} (positive, negative, or unknown). In rare cases, \emph{mixed} monotonicity (combination of $\oplus$ and $\ominus$) is used to signify that the relationship is expected to be non-monotonic. However, for simplicity and due to its rareness, we do not consider such case here and treat such \emph{mixed} labels simply as \emph{unknown}. The influence graph is typically provided directly by model authors.
 
 \paragraph{Properties of Boolean functions} Intuitively, the influence graph $\mathcal{I}$ imposes additional requirements on the structure of the network's update functions $F_i$. Formally, we can understand these requirements as \emph{essentiality} and \emph{monotonicity} of individual function inputs. First, given a state $x \in \mathbb{B}^n$, we write $x[i \gets b]$ to denote a copy of $x$ with the value of the $i$-th variable substituted for $b \in \mathbb{B}$. Then, given a function $F: \mathbb{B}^n \to \mathbb{B}$, we say that the $i$-th variable is an \emph{essential} input of $F$ if the output of $F$ depends on this variable, formally $\exists x \in \mathbb{B}^n.~F(x[i \gets 0]) \not= F(x[i \gets 1])$. We also say that $F$ is \emph{positively monotonic} in its $i$-th input when increasing this input cannot decrease the output of $F$, formally $\forall x \in \mathbb{B}.~F(x[i \gets 0]) \leq F(x[i \gets 1])$. Symmetrically, we say that the input is \emph{negatively monotonic} when $\forall x \in \mathbb{B}.~F(x[i \gets 0]) \geq F(x[i \gets 1])$.
 
@@ -94,19 +95,19 @@ In practice, these essentiality and monotonicity requirements map to the biologi
 
 \subsection*{Model Acquisition}
 
-Next, we describe process of compiling the BBM dataset. Due to the high variability of model sources, the process of incorporating a new model is largely manual (aside from validation and consistency checking covered in the next section).
+Next, we describe the process of compiling the BBM dataset. Due to the high variability of model sources, the process of incorporating a new model is largely manual (aside from validation and consistency checking covered in the next section).
 
 \paragraph{Eligible models} 
 
-To cover the widest possible assortment of realistic models, we currently allow submission of any logical model that can be reliably retrieved from a known database, repository, or an associated publication. The only requirement is that the model must be based on a real biological system. That is, we do not accept randomly generated or otherwise synthetic models.  However, we do not require any specific level of curation or validation of any biological claims. In particular, the model can be hand made, automatically synthesised, or anything in between. Similarly, we accept many different model formats and we are willing to assist with translation if a machine-friendly model representation is not available.
+To admit the widest possible assortment of realistic models, we currently allow submission of any logical model that can be reliably retrieved from a known database, repository, or an associated publication. The only requirement is that the model must be based on a real biological system. That is, we do not accept randomly generated or otherwise synthetic models.  However, we do not require any specific level of curation or validation of any biological claims. In particular, the model can be hand made, automatically synthesised, or anything in between. Similarly, we accept many different model formats and we are willing to assist with translation if a machine-friendly model representation is not available.
 
 \paragraph{Multi-valued networks}
 
-The dataset also incorporates multi-valued networks. That is, logical models admitting multi-valued or bounded integer variables (as opposed to just Booleans). To maximise compatibility with the available tools, every such model is instead provided in a Booleanised representation. That is, the model is transformed into a plain Boolean network such that each multi-valued component with domain $\{ 0, \ldots, k\}$ is expanded into $k$ Boolean components using the well-known Van Ham encoding~\cite{van-ham}. This process is facilitated by the tool \texttt{biolqm}~\cite{biolqm}. Each Booleanised multi-valued model is distinguished using a \texttt{multi-valued} keyword included in model's metadata. Whenever possible, we also incorporate the \texttt{sbml}~\cite{sbml-qual} representation of the original (i.e. non-Booleanised) multi-valued model. However, such original files currently cannot be processed by the automated validation pipeline.
+The dataset also incorporates multi-valued networks. That is, logical models admitting multi-valued or bounded integer variables (as opposed to just Booleans). To maximise compatibility with the available tools, every such model is instead provided in a Booleanised representation. That is, the model is transformed into a plain Boolean network such that each multi-valued component with domain $\{ 0, \ldots, k\}$ is expanded into $k$ Boolean components using the well-known Van Ham encoding~\cite{van-ham}. This process is facilitated by the tool \texttt{biolqm}.~\cite{biolqm} Each Booleanised multi-valued model is distinguished using a \texttt{multi-valued} keyword included in the model's metadata. Whenever possible, we also incorporate the \texttt{sbml}~\cite{sbml-qual} representation of the original (i.e. non-Booleanised) multi-valued model. However, such original files currently cannot be processed by the automated validation pipeline.
 
 \paragraph*{Sources} 
 
-The dataset incorporates 219 models from a wide range of publications. Notable sources include GINsim~\cite{ginsim} (83 models), CellCollective~\cite{cell-collective} (78 models), Biomodels~\cite{biomodels} (18 models) and the COVID-19 Disease Map~\cite{bbm-covid-disease-map} (22 models) databases. If a model appears in multiple databases, the dataset lists such model only once with multiple data source entries, even if there are minor differences between the model files in each database. The contribution of each database to the overall dataset is visualised in Figure~\ref{fig:sources}. \todo{Furthermore, Online-only Table~\ref{supp:model-list} gives the full list of models including references to their original publications and Online-only Table~\ref{supp:database-map} maps relevant database entries to the corresponding BBM models. The remaining models are sourced through a comprehensive literature search for Boolean network related keywords across PubMed and Google Scholar.}
+As of 2022, the dataset incorporates 212 models from a wide range of publications. Notable sources include GINsim~\cite{ginsim} (83 models), CellCollective~\cite{cell-collective} (78 models), Biomodels~\cite{biomodels} (18 models) and the COVID-19 Disease Map~\cite{bbm-covid-disease-map} (22 models). If a model appears in multiple databases, the dataset lists such model only once with multiple source links, even if there are minor differences between the model files in each database. The contribution of each database to the overall dataset is visualised in Figure~\ref{fig:sources}. Furthermore, Online-only Table~\ref{supp:model-list} gives the full list of models including references to their original publications and Online-only Table~\ref{supp:database-map} maps relevant database entries to the corresponding BBM models. The remaining models are sourced through a comprehensive literature search for Boolean network related keywords across PubMed and Google Scholar.
 
 \subsection*{Normalisation, Validation and Repair}
 
@@ -144,7 +145,7 @@ The dataset is managed through a versioned git repository that is continuously u
 
 \paragraph*{Model metadata} 
 
-As already discussed, each model within a particular BBM edition is available in three formats, \texttt{bnet}~\cite{pyboolnet}, \texttt{aeon}~\cite{aeon}, and \texttt{sbml}~\cite{sbml-qual}, and with erased update functions on input variables. Furthermore, each model is accompanied by a collection of metadata which is provided both as a machine-friendly \texttt{json} file and a human-readable \texttt{markdown} document. As part of this metadata, we track the publication where the model first appeared (as a BibTeX reference), the original source of the model file, description of any modifications made to the model during validation, as well as a set of relevant keywords.
+As already discussed, each model within a particular BBM edition is available in three formats, \texttt{bnet}~\cite{pyboolnet}, \texttt{aeon}~\cite{aeon}, and \texttt{sbml}~\cite{sbml-qual}, and with erased update functions on input variables. Furthermore, each model is accompanied by a collection of metadata which is provided both as a machine-friendly \texttt{json} file and a human-readable \texttt{markdown} document. As part of this metadata, we track the publication where the model first appeared (as a BibTeX reference), the original source of the model file, description of any modifications made to the model during validation, as well as the set of relevant keywords.
 
 Using these keywords, we track the databases in which the model appears (e.g. \texttt{cell-collective}, \texttt{ginsim}, etc.) or methods used to construct the model (e.g. \texttt{casq}~\cite{casq}). We also use the keyword \texttt{repaired} to label models where some logical inconsistencies were found during validation (the specific nature of the repair performed is detailed as a separate note), and keyword \texttt{multi-valued} to indicate that the model is a Booleanised version of a multi-valued network.
 
@@ -153,12 +154,12 @@ Using these keywords, we track the databases in which the model appears (e.g. \t
 We recognise that our chosen model representation may not be suitable for all benchmarking and validation tasks. As such, we also include an interactive workflow which allows anyone to export a custom edition based on the BBM dataset. Specifically, this workflow allows the user to:
 
 \begin{itemize}
-	\item chose between the three model formats;
-	\item chose the desired representation of input variables (constant $\mathit{true}$, constant $\mathit{false}$, identity function, erased function);
-	\item filter the results using a custom Python expression evaluated for each model and its metadata.
+	\item Chose between the three model formats;
+	\item Chose the desired representation of input variables (constant $\mathit{true}$, constant $\mathit{false}$, identity function, erased function);
+	\item Filter the results using a custom Python expression evaluated for each model and its metadata.
 \end{itemize}
 
-Using this filter functionality, users can pick models based on structural properties (presence of a specific variable or regulation, the number of variables, connectivity, etc.), but also based on model metadata (model author, keywords, etc.). To ensure reproducibility, each such custom dataset edition incorporates an additional metadata file with all parameters of the workflow, meaning the custom edition can be fully recreated based on this metadata file.
+Using this filter functionality, users can pick models based on structural properties (presence of a specific variable or regulation, the number of variables, connectivity, etc.), but also based on model metadata (model authors, keywords, etc.). To ensure reproducibility, each such custom dataset edition incorporates an additional metadata file with all parameters of the workflow, meaning the custom edition can be fully recreated based on this metadata file.
 
 %The Methods should include detailed text describing any steps or procedures used in producing the data, including full descriptions of the experimental design, data acquisition assays, and any computational processing (e.g. normalization, image feature extraction). See the detailed section in our submission guidelines for advice on writing a transparent and reproducible methods section. Related methods should be grouped under corresponding subheadings where possible, and methods should be described in enough detail to allow other researchers to interpret and repeat, if required, the full study. Specific data outputs should be explicitly referenced via data citation (see Data Records and Citing Data, below).
 
@@ -166,7 +167,7 @@ Using this filter functionality, users can pick models based on structural prope
 
 \section*{Data Records}
 
-There are currently two editions of the BBM dataset, both available as Zenodo archives: edition 2021~\todo{TODO} and edition 2022~\todo{TODO}. Any future updates to the dataset will be announced using the git repository at \hyperlink{https://github.com/sybila/biodivine-boolean-models}{https://github.com/sybila/biodivine-boolean-models}. Both editions contain the raw input model files, the generated output models and their metadata, as well as any programs necessary to validate the integrity of the models and to generate custom model editions. The models available in the latest edition (2022) are summarised in the Online-only Table~\ref{supp:model-list}.
+There are currently two editions of the BBM dataset, both available as Zenodo archives: edition 2021~\cite{bbm2021} at the address \hyperlink{https://doi.org/10.5281/zenodo.8020272}{https://doi.org/10.5281/zenodo.8020272}, and edition 2022~\cite{bbm2022} at \hyperlink{https://doi.org/10.5281/zenodo.8020309}{https://doi.org/10.5281/zenodo.8020309}. Any future updates to the dataset will be announced using the git repository at \hyperlink{https://github.com/sybila/biodivine-boolean-models}{https://github.com/sybila/biodivine-boolean-models}. Both editions contain the raw input model files, the generated output models and their metadata, as well as any programs necessary to validate the integrity of the models and to generate custom model editions. The models available in the latest edition (2022) are summarised in the Online-only Table~\ref{supp:model-list}.
 
 %The Data Records section should be used to explain each data record associated with this work, including the repository where this information is stored, and to provide an overview of the data files and their formats. Each external data record should be cited numerically in the text of this section, for example \cite{Hao:gidmaps:2014}, and included in the main reference list as described below. A data citation should also be placed in the subsection of the Methods containing the data-collection or analytical procedure(s) used to derive the corresponding record. Providing a direct link to the dataset may also be helpful to readers (\hyperlink{https://doi.org/10.6084/m9.figshare.853801}{https://doi.org/10.6084/m9.figshare.853801}).
 
@@ -174,22 +175,22 @@ There are currently two editions of the BBM dataset, both available as Zenodo ar
 
 \section*{Technical Validation}
 
-Naturally, to ensure data integrity, we validate the syntax of each model file using the tool \texttt{aeon.py}~\cite{aeonpy} (some of the input model files even contain minor syntactic errors that had to be corrected). Furthermore, we already described the individual validation steps performed within our pipeline as part of the \emph{Methods} section. This validation pipeline is executed for each commit of the aforementioned git repository, meaning no errors can be introduced into the dataset. 
+First, to ensure compatibility of model formats, we validate the syntax of each model file using the tool \texttt{aeon.py}~\cite{aeonpy} (some of the input model files even contain minor syntactic errors that had to be corrected). Furthermore, we already described the individual validation steps performed within our pipeline as part of the \emph{Methods} section. This validation pipeline is executed for each commit of the aforementioned git repository, meaning no errors can be introduced into the dataset undetected. 
 
-However, we would like to emphasise the importance of this validation step by analysing the number and types of errors uncovered using this validation pipeline.
+However, we would like to emphasise the importance of this validation step by analysing the number and types of potential problems uncovered using our validation pipeline. This is summarised in Figure~\ref{fig:errors}, which shows the number of problems grouped by type (with a more detailed breakdown in Online-only Table~\ref{supp:model-list}). Here, the \emph{Other} category mainly covers models with syntactic issues or other obvious typos. What is especially alarming for us is the high number of regulations with invalid monotonicity or essentiality properties. Overall, we found that $\sim1.5\%$ of all regulations have potential integrity problems when compared to the actual update function.
 
-\todo{Add figure and a paragraph which breaks down the types of errors encountered, etc.}
+Finally, we should note that our validation still has potential blind spots and the total number of problems thus may not be final. First, the Booleanization process using \texttt{biolqm}~\cite{biolqm} which is applied to multi-valued networks always ``resets'' the network's influence graph such that it is consistent with the Booleanized update functions. Since we currently cannot work with multi-valued networks directly, this means the two most prominent types of errors cannot be detected in these models. Second, many models do not come annotated with a signed influence graph and are only given as a list of functions. For such models, we thus have nothing to validate against. Nevertheless, we could still compare the employed regulations against other models and biological databases where applicable. Our goal is to address these shortcomings as part of the future work. 
 
 %This section presents any experiments or analyses that are needed to support the technical quality of the dataset. This section may be supported by figures and tables, as needed. This is a required section; authors must present information justifying the reliability of their data.
 
 \section*{Usage Notes}
 
-The model files distributed within BBM are compatible with many common tools for Boolean network analysis. In particular, this includes (but is not limited to) the tools available as part of the CoLoMoTo Jupyter notebook environment.~\cite{colomoto-notebook} Specifically, one can use the following tools (in alphabetical order) to further analyse the properties of the published models:
+The model files distributed within BBM are compatible with many common tools for Boolean network analysis. In particular, this includes (but is not limited to) the tools available as part of the CoLoMoTo Jupyter notebook environment.~\cite{colomoto-notebook} Specifically, one can use the following tools (in the alphabetical order) to further analyse the properties of the published models:
 
 \begin{itemize}
-	\item \texttt{aeon}~\cite{aeon} and \texttt{aeon.py}~\cite{aeonpy} perform symbolic analysis of asynchronous network dynamics (attractors, fixed-points, reachability) and bifurcation analysis with respect to network inputs;
+	\item \texttt{aeon}~\cite{aeon} and \texttt{aeon.py}~\cite{aeonpy} perform symbolic analysis of the asynchronous network dynamics (attractors, fixed-points, reachability) and bifurcation analysis with respect to network inputs and parameters;
 	\item \texttt{biolqm}~\cite{biolqm} and \texttt{ginsim}~\cite{ginsim} facilitate analysis of multi-valued models and other miscellaneous methods (translation between additional model formats, simulation, perturbation analysis, etc.);
-	\item \texttt{cabean}~\cite{cabean} facilitates target control and reprogramming of network behaviour;
+	\item \texttt{cabean}~\cite{cabean} facilitates target control and reprogramming of the network behaviour;
 	\item \texttt{maboss}~\cite{maboss} supports analysis of BNs under \emph{stochastic} update semantics;
 	\item \texttt{mpbn}~\cite{mpbn} computes the attractors and reachability properties in the \emph{most-permissive} BN semantics;
 	\item \texttt{pyboolnet}~\cite{pyboolnet} supports generation of random networks and synchronous simulation;
@@ -197,7 +198,7 @@ The model files distributed within BBM are compatible with many common tools for
 	\item \texttt{trappist}~\cite{trappist} computes the minimal and maximal trap spaces of the network as well as fixed-points.
 \end{itemize}
 
-For further reading, we recommend the repository of the CoLoMoTo notebook environment, which contains usage examples for most of the aforementioned tools distributed as user-friendly Python notebooks.
+For further reading, we recommend the repository of the CoLoMoTo notebook environment, which contains usage examples for most of the aforementioned tools distributed as user-friendly Jupyter notebooks.
 
 %The Usage Notes should contain brief instructions to assist other researchers with reuse of the data. This may include discussion of software packages that are suitable for analysing the assay data files, suggested downstream processing steps (e.g. normalization, etc.), or tips for integrating or comparing the data records with other datasets. Authors are encouraged to provide code, programs or data-processing workflows if they may help others understand or use the data. Please see our code availability policy for advice on supplying custom code alongside Data Descriptor manuscripts.
 
@@ -205,7 +206,7 @@ For further reading, we recommend the repository of the CoLoMoTo notebook enviro
 
 \section*{Code availability}
 
-The code, including previous revisions and all relevant model source files, is available as a git repository at the URL \hyperlink{https://github.com/sybila/biodivine-boolean-models}{https://github.com/sybila/biodivine-boolean-models}. Historical revisions of the source code associated with each BBM edition are also part of the aforementioned Zenodo packages. Submissions of new models are encouraged through issues and pull requests of the git repository (see instructions in the \texttt{CONTRIBUTING.md} file). The automated validation and post-processing relies on the tool \texttt{aeon.py}~\cite{aeonpy}, version \texttt{1.1.0}. Furthermore, \texttt{biolqm}~\cite{biolqm} was manually used for some of the initial model conversions, but is not used by the automated validation and export pipeline.
+The code, including previous revisions and all relevant model source files, is available as a git repository at the URL \hyperlink{https://github.com/sybila/biodivine-boolean-models}{https://github.com/sybila/biodivine-boolean-models}. Historical revisions of the source code associated with each BBM edition are also part of the aforementioned Zenodo packages. Submissions of new models are encouraged through issues and pull requests in this git repository (see instructions in the \texttt{CONTRIBUTING.md} file). The automated validation and post-processing relies on the tool \texttt{aeon.py}~\cite{aeonpy}, version \texttt{1.1.0}. Furthermore, \texttt{biolqm}~\cite{biolqm} was manually used for some of the initial model conversions, but is not used by the automated validation or the export pipeline.
 
 \bibliography{report}
 
@@ -213,7 +214,8 @@ The code, including previous revisions and all relevant model source files, is a
 
 \section*{Acknowledgements}
 
-This project has received funding from the European Union’s Horizon 2020 research and innovation programme under the Marie Skłodowska-Curie Grant Agreement No. 101034413.
+This work was partially supported by GACR [grant No. GA22-10845S]; and
+Grant Agency of Masaryk University [grant No. MUNI/G/1771/2020]. This project has received funding from the European Union’s Horizon 2020 research and innovation programme under the Marie Skłodowska-Curie Grant Agreement No. 101034413.
 
 %Acknowledgements should be brief, and should not include thanks to anonymous referees and editors, or effusive comments. Grant or contribution numbers may be acknowledged.
 
@@ -242,7 +244,7 @@ The authors declare that there are no financial or non-financial competing inter
 
 \begin{figure}
 	\centering
-	\pgfplotsset{width=10cm,compat=1.8}
+	\pgfplotsset{width=12cm,compat=1.8}
 	\begin{tikzpicture}
 		\begin{axis}[
 			ybar,
@@ -257,7 +259,7 @@ The authors declare that there are no financial or non-financial competing inter
 			nodes near coords,
 			nodes near coords align={vertical},
 			]
-			\addplot coordinates {(CellCollective,78) (GINsim,83) (Disease Map,22) (Biomodels,18) (Other,44)};			
+			\addplot coordinates {(CellCollective,78) (GINsim,83) (Disease Map,22) (Biomodels,18) (Other,37)};			
 			\addplot coordinates {(CellCollective,61) (GINsim,59) (Disease Map,22) (Biomodels,7)};
 			\addplot coordinates {(CellCollective,17) (GINsim,24) (Disease Map,0) (Biomodels,11)};
 			\legend{total,unique source,shared source}
@@ -265,6 +267,30 @@ The authors declare that there are no financial or non-financial competing inter
 	\end{tikzpicture}
 	\caption{Models of the BBM dataset grouped by the database in which they appear, including the number of models uniquely available in each database and the models shared between multiple sources (see Online-only Table~\ref{supp:database-map} for exact mapping).}
 	\label{fig:sources}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\pgfplotsset{width=12cm,height=8cm,compat=1.8}
+	\begin{tikzpicture}
+		\begin{axis}[
+			ybar,
+			enlargelimits=0.15,
+			legend style={at={(0.5,-0.15)},
+				anchor=north,legend columns=-1},
+			ylabel={\#problems},
+			symbolic x coords={monotonicity, observability, redundant, missing, other},
+			xticklabels={$\shortstack{Input\\monotonicity}$,$\shortstack{Input\\essentiality}$,$\shortstack{Disconnected\\variables}$, $\shortstack{Missing\\regulations}$, Other},
+			xtick=data,
+			ymin=5,
+			nodes near coords,
+			nodes near coords align={vertical},
+			]
+			\addplot coordinates {(monotonicity,224) (observability,160) (redundant,29) (missing,19) (other,6)};
+			0		\end{axis}
+	\end{tikzpicture}
+	\caption{Types and multiplicity of individual problems uncovered by the validation step of the BBM pipeline (see Online-only Table~\ref{supp:model-list} for per-model summary).}
+	\label{fig:errors}
 \end{figure}
 
 \begin{supptable}[h]
