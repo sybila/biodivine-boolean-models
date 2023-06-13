@@ -4,7 +4,7 @@
 
 Note that this is **not** a biological database. Each model has a link to the original source where you can find more biologically relevant data. However, we do not aim to preserve or categorise this additional information in any way.
 
-If you want to know more, you can read our [technical report](./report/report.pdf).
+If you want to know more, you can read our [technical report](./report/report.pdf).
 
 **Where are the models?** If you just need individual models, you can head to the `./models` directory where each model has a subdirectory containing `bnet`/`aeon`/`sbml` source files as well as JSON metadata file and a human-friendly readme. There is also a `models/summary.csv` file with the full list of models. Alternatively, you can download one of the "edition archives" in the [repository releases](https://github.com/sybila/biodivine-boolean-models/releases). These contain the same model files as the `./models` directory, but are grouped by model format and exported as a single directory, so they are easier to digest by scripts or programs.
 
@@ -14,9 +14,13 @@ If you want to know more, you can read our [technical report](./report/report.p
 
 ### Citation
 
-If you found this dataset useful in your research, you can cite the technical report  on ArXiv:
+If you found this dataset useful in your academic work, you can cite the [technical report](https://doi.org/10.1101/2023.06.12.544361):
 
-TODO: ArXiv bib entry coming soon.
+```
+Repository of logically consistent real-world Boolean network models
+Samuel Pastva, David Safranek, and others
+bioRxiv 2023.06.12.544361; doi: https://doi.org/10.1101/2023.06.12.544361
+```
 
 ### Custom Model Editions
 
