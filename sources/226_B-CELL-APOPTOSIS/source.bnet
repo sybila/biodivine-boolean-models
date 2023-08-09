@@ -1,0 +1,69 @@
+targets,factors
+TNF_alpha , TNF_alpha  |  NF_kappaB
+IL_6 , IL_6  |  NF_kappaB
+GRP78 , ATF6  |  XBP1  |  ATF4  &   (  ! ER ) 
+ATF6 , GRP78
+PERK , GRP78  &   (  ! DNAJC3 ) 
+IRE1 , BAX  |  BAK  |  GRP78
+EIF2S1 , GADD34  &   (  ! PERK ) 
+DNAJC3 , ATF6  |  XBP1
+ATF4 , EIF2S1
+CHOP , ATF6  |  ATF4
+XBP1 , IRE1
+GADD34 , CHOP
+TNFR1 , TNF_alpha
+TNFR2 , TNF_alpha
+TRAF2 , IRE1  |  TNFR2  |  TRADD
+ASK1 , OS  |  TRAF2  |  DAXX
+JNK , OS  |  ASK1  |  GADD45
+p38 , OS  |  ASK1
+BCL2 ,  (  ! JNK )   &   (  ! CHOP )   &   (  ! P53 )   &   (  ! BAD ) 
+BID , CASP8  &   (  ! BCL2 ) 
+BAX , JNK  |  P53  &   (  ! BCL2 ) 
+BAK , BAX  &   (  ! BCL2 ) 
+DIABLO , BAX  |  BAK  |  BID
+HtrA2 , BAX  |  BAK  |  BID
+FasR , FasL
+TRADD , TNFR1
+DAXX , FasR
+RIPK1 , FasR  |  TRADD
+RAIDD , RIPK1
+FADD , FasR  |  TRADD
+CASP8 , RAIDD  |  FADD  |  CASP3  |  CASP6
+CASP9 , RAIDD  |  CASP8  |  CASP3  |  APAF1  |  CASP12  &   (  ! XIAP )   &   (  ! AKT ) 
+CASP3 , CASP9  |  CASP8  &   (  ! XIAP ) 
+CASP7 , CASP9  |  CASP8  |  CASP3  |  CASP6  &   (  ! XIAP ) 
+CASP6 , CASP7  |  CASP3
+XIAP ,  (  ! DIABLO )   &   (  ! HtrA2 )   &   (  ! CASP3 ) 
+CytochromeC , BAX  |  BAK  |  BID
+APAF1 , CytochromeC  |  P53
+Apoptosis , CASP3  |  CASP6  |  CASP7
+INSR , INS
+IRS , INSR  &   (  ! SOCS3 )   &   (  ! JNK )   &   (  ! IKK_beta )   &   (  ! S6K ) 
+PI3K , IRS  |  JAK
+PIP3 , PI3K
+PDK1 , PIP3
+AKT , PDK1  |  mTORC2  &   (  ! TRB3 ) 
+AS160 , AKT
+PKC_alpha , PDK1
+GLUT4 , AKT  |  AS160  |  PKC_alpha
+GSK3_beta ,  ! AKT
+GS ,  ! GSK3_beta
+FOXO1 , PERK  &   (  ! AKT )   &   (  ! XBP1 ) 
+PGC1_alpha , FOXO1
+PEPCK , FOXO1
+G6PC , FOXO1
+PPAR_alpha , PGC1_alpha
+TRB3 , PPAR_alpha  |  CHOP
+TSC1_2 ,  (  ! AKT )   &   (  ! IKK_beta ) 
+Rheb ,  ! TSC1_2
+mTORC1 , Rheb
+S6K , mTORC1
+mTORC2 ,  ! S6K
+BAD , JNK  &   (  ! AKT ) 
+JAK , IL_6  &   (  ! SOCS3 ) 
+STAT3 , JAK
+SOCS3 , STAT3
+IKK_beta , TRAF2
+NF_kappaB ,  ! IKB_alpha
+IKB_alpha ,  ! IKK_beta
