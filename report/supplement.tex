@@ -1,0 +1,615 @@
+\documentclass{article}
+
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{array} % fixed with table cells
+
+\title{Biodivne Boolean Models: A Comprehensive Benchmark of Logical Models}
+\author{Samuel Pastva}
+\date{}
+
+% Fixed width table columns
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+	The space of powerful tools for computational analysis of logical models (represented as Boolean networks) has been growing considerably in the recent years. However, comparing the validity, efficiency, and scalability of such tools necessitates a comprehensive benchmark set of realistic Boolean networks.
+	
+	At the moment, this need is largely served by databases of biological models such as CellCollective, GINsim, or Biomodels. However, these databases are more focused on human curated, biologically relevant networks, and are therefore limited in scope. Furthermore, the models in such databases may not always be available as a single dataset or in the desired format. This requires additional time for preprocessing and data collection, which the tool authors are often unwilling or unable to spend.
+	
+	In this technical report, we describe a comprehensive, open-source benchmark dataset that has been created by surveying the aforementioned databases, as well as a large body of other literature to obtain as many realistic Boolean networks as possible. To make the dataset useful to a wide range of tool maintainers, we provide the models in different machine-readable formats and ensure all models are valid and logically consistent using an automated static-analysis workflow. At the moment of writing, the dataset comprises more than 210 networks.
+\end{abstract}
+
+\section{Introduction}
+
+Logical models provide a very useful and simple framework for describing complex biological phenomena. Likely the most common mechanism for formalising executable logical models are Boolean networks~\cite{bn-intro}. In recent years, we have seen a rapid development of new tools and algorithms for analysis of large Boolean networks. However, in many instances, it is hard to assess usefulness and scalability of such tools due to a lack of commonly recognised ``benchmark dataset'' of networks on which the tools can be compared.
+
+This purpose is often served by models obtained from databases maintained by the authors of some of the larger modelling tools, such as CellCollective~\cite{cell-collective}, GINsim~\cite{ginsim}, or Biomodels~\cite{biomodels}. However, these models are often hard to obtain in bulk or may require additional processing (e.g. to convert into an appropriate format). Additionally, publication authors often modify the models in minor ways (e.g. by tweaking valuations of network inputs), which prevents meaningful comparisons between publications. Finally, these databases are far from comprehensive, so a wide range of models is often omitted.
+
+As a result, most papers develop an ad hoc benchmark set that is often partially proprietary and hard or impossible to replicate and compare to. In this technical report, we describe a comprehensive, open-source benchmark dataset that can be used for this purpose instead.
+
+\textbf{Disclaimer: The model dataset as well as this report will be gradually updated as new models and data become available. If possible, please refer to the latest version of this report on arXiv and the latest revision of the dataset in the Github repository.}
+
+\section{Goals and scope}
+
+\paragraph{Eligible models} To cover the widest possible assortment of realistic models, we currently allow submission of any logical model which can be reliably retrieved from a known database, repository, or an associated publication. The only requirement is that the model must be based on a real biological system. That is, we do not accept randomly generated models. However, we do not require any specific level of curation either---the model can be hand made, automatically synthesised, or anything in between. Similarly, we accept many different model formats and we are willing to assist with translation if a machine-friendly format is not available. We also accept multi-valued models, however, for now the dataset only contains their Booleanized derivatives.
+
+\paragraph{Editions} The goal is to gradually evolve the dataset by adding new models (or by removing problematic/redundant models). Consequently, we plan to regularly release \emph{editions} of the dataset, such that the users can refer to the whole history of editions as necessary. Preliminary plan is to release editions in roughly yearly intervals. Initially, editions will be available as Github releases, with a possible future addition of Zenodo artefacts. In each edition, the user can then pick models with specific properties (size, keywords, source, etc.).
+
+\paragraph{Model metadata} While we do not perform any biological curation of models, we collect basic meta-data about each model to make filtering and search easier. In particular, each model has:
+\begin{itemize}
+	\item A \emph{numeric identifier} that is unique within a specific dataset edition.
+	\item A human-readable name. For simplicity, the name is limited to numbers, capital letters and the dash symbol (e.g. \texttt{MODEL-NAME-5}). To improve legibility, we may use spaces instead of dashes in text that is not meant to be machine readable (i.e. \texttt{MODEL NAME 5}).
+	\item The DOI of the \emph{associated publication} and its \emph{bibliographic entry} (in Bibtex). Note that a single publication can contain multiple models---some DOIs thus appear in relation to multiple models.
+	\item The URL where the model data was downloaded. This can be a list of URLs if the model is available from multiple sources. This can also be the publication DOI if the model is available directly through the published supplementary data.
+	\item Basic structural metadata, such as the number of model \emph{variables}, \emph{inputs}, and \emph{regulations}. The plan is to also incorporate additional structural measures of the regulatory graph later (e.g. feedback-vertex-set, SCC sizes, etc.), once additional static analysis steps are added.
+	\item A set of curated \emph{keywords}. Generally, these represent additional technical metadata, such as listing the databases where the model is available, or whether the model is based on multi-valued logic. At the moment, the dataset does not contain any biological keywords (e.g. cancer, differentiation, etc.). However, we are open to incorporating any community suggestions for additional keywords.
+	\item A markdown document with any additional notes or relevant information about the model.
+\end{itemize}
+
+For each model, the metadata is summarised in a human-readable markdown \texttt{README.md} file, as well as a machine-readable \texttt{.json} document.
+
+
+\paragraph{Contributions}
+
+The dataset is managed using a versioned Github repository.\footnote{\url{https://github.com/sybila/biodivine-boolean-models/}} Submitting a new model into the collection can be thus performed by anyone using the pull-request functionality (project readme has more detailed instructions about preparing such pull requests). Alternatively, we also accept submissions using issues: Simply create an issue with the bibliographic entry of the model you wish to include and we will try to incorporate it as soon as possible.
+
+\section{Technical information}
+\label{section:technical}
+
+The dataset is organized as follows:
+
+\begin{itemize}
+	\item \texttt{/models} contains the whole dataset with all model and metadata files.
+	\item \texttt{/sources} directory contains the original machine-readable source files that are used to generate the \texttt{models} directory.
+	\item \texttt{/report} directory contains the LaTeX source files for this report.
+	\item \texttt{/sync.py} is a Python script for model processing and static analysis (takes models from \texttt{/sources} and generates files in \texttt{/models}).
+	\item \texttt{/bundle.py} is a Python script for creating model bundle archives. These can include model variants with different input representation, or a subset of the collection filtered according to some basic conditions.
+\end{itemize}
+
+For more information on how to use \texttt{sync.py} and \texttt{bundle.py} to work with the dataset, see the project readme file.
+
+\paragraph{Keywords} The metadata for each model can contain a set of keywords. In theory, any keyword can be added to identify specific classes of models. However, at the moment, we specifically recognise the following keywords:
+
+\begin{itemize}
+	\item \texttt{curated}: A curated model is not only based on biological information, but is also (partially) validated by a human. That is, a model resulting from a purely automatic translation or inference can be included in the dataset, but is not automatically considered curated.
+	\item \texttt{repaired}: A model where one or more logical inconsistencies have been resolved (a complete list of possible repairs is given later in this report). The rationale behind each modification should be listed in model notes.
+	\item \texttt{multi-valued}: A model whose original version is multi-valued, but which is presented in a Booleanized form (the original multi-valued model should be included in the \texttt{sources} directory).
+	\item \texttt{cell-collective}/\texttt{ginsim}/\texttt{biomodels}/\texttt{covid-disease-map}: Indicates that the model is available in the corresponding database (or multiple databases).
+	\item \texttt{casq}: Indicates that the model has been translated from a CellDesigner pathway using the CaSQ tool~\cite{casq}.
+\end{itemize}
+
+\paragraph{Formats and representation} At the moment, we support three major model formats for BN representation: 
+
+\begin{itemize}
+	\item \texttt{.bnet}; a simple plaintext file with the logical update functions~\cite{pyboolnet}.
+	\item \texttt{.aeon}; also a plaintext format, but one that also incorporates the regulatory network of the model (with monotonicity and essentiality)~\cite{aeon}.
+	\item \texttt{.sbml}; XML-based format with support for additional meta-data (model layout, entity references and comments, etc.)~\cite{sbml-qual}.
+\end{itemize}
+
+Each model is available in all three formats. Any of the three formats can be also used as a model source (however, only limited static analysis is available for \texttt{.bnet} models due to the missing regulatory network). To ensure compatibility across all tools, we also perform model variable renaming when necessary. For example, \texttt{.sbml} supports (almost) arbitrary strings as variable names, while other formats follow a more typical C-like naming requirements. As such, regardless of the source format, variable names are normalized so that they are valid in any format.
+
+\paragraph{Model inputs} We also normalize the representation of model \emph{inputs} and \emph{constants}. Formally, an input or a constant is an entity with no incoming regulations, and either an identity (input) or \texttt{true}/\texttt{false} (constant) update function. The update function for inputs can be also missing entirely to indicate that the value is unknown/undetermined.
+
+The specific representation of such variables is typically at the discretion of the model authors and differs from model to model. For example, some authors use constant update functions for inputs with a ``typical'' or ``assumed'' value, while other authors use the identity function, and other authors omit the functions entirely, only describing the expected values in text.
+
+To make the resulting models as canonical as possible, we opted to \emph{omit the update function} for every constant or input variable. If you wish to use the original setting as published by the authors, this information is still available in the \texttt{/sources} directory, or as part of the original publication. Furthermore, using the \texttt{bundle.py} script, you can generate variants of the dataset with a different input setting (constant true/constant false/identity function/free).
+
+For benchmarking and tool comparison, we generally recommend sampling a non-trivial subspace of input valuations, as the behaviour of the model can often differ substantially based on the values of inputs. The model with all input values erased is therefore a good starting point for such sampling.
+
+\paragraph{Multi-valued networks} 
+
+\paragraph{Duplicates} Some models are available from multiple sources (typically multiple model databases). To eliminate duplicates, we typically only include a single version of the same model, but list multiple model URLs as possible sources (note that different databases can sometimes have slightly different versions of the same model). The information about duplicates and model-database mapping is also tracked in a shared spreadsheet.\footnote{\url{https://docs.google.com/spreadsheets/d/1YFMaT3SKOwsReW3r6umv7Atqjoe1AZJmeMQ3HBPnIUI/edit?usp=sharing}} Note that some publications can still contain multiple models, in which case we include all such models (each model is linked to the single shared publication). Similarly, multiple publications can describe variations or derivatives of a single model. We then typically include the variations as separate models, as long as there is a non-trivial difference from the original model (e.g. new/removed variables or regulations).
+
+\paragraph{Model repair} Many published models contain logical \emph{inconsistencies} that we are able to detect as part of our static analysis workflow. Such issues have to be resolved before the model can be included in the dataset. For every model where such ``repair'' operation was performed, we use the \texttt{repaired} keyword and describe the repair process in the model notes. Furthermore, the original (unaltered) model file should be available in the \texttt{sources} directory. In general, we recognise the following types of problems:
+
+\begin{itemize}
+	\item Monotonicity: When a model declares a regulation as (positively or negatively) monotonous, but the actual update function does not adhere to this assumption, we remove the monotonicity requirement from the regulation.
+	\item Essentiality: When a model declares a regulation but the regulator has no impact on the output of the update function, we mark the regulation as non-essential. This problem has two variants: Either the regulator is completely unused (in which case this is likely the intention of the model author), or the regulator appears in the update function, but has no actual impact on its output (in which case it is likely that the model author was not aware of this problem).
+	\item Redundant variables: We expect the dependency graph of each model to be weakly connected, or at least to not contain completely disconnected variables. If such variables are found, they are removed.
+	\item Typos and other issues: Sometimes, the logical inconsistency is due to an obvious typo in the model specification (e.g. substitution of two similar variable names), in which case we fix the typo to the best of our ability.
+\end{itemize}
+
+The goal of each repair is to retain the original update functions of the model (as these are typically crucial for reproducibility). We thus typically adjust the regulatory network to match the actual update functions.
+
+\section{Models}
+
+In the rest of the report, we give a complete enumeration of all models included in the dataset with basic metadata and associated bibliographic entries. A machine readable (\texttt{.csv}) version of this summary is available as part of each dataset edition.
+
+\begin{center}
+	\begin{tabular}{ | C{16pt} | C{144pt} | C{25pt} | C{25pt} | C{25pt} | C{36pt} | }
+		\hline
+		ID & Name & Vars. & Inps. & Regs. & Source \\ \hline
+		001 & \texttt{SIGNALING IN MACROPHAGE ACTIVATION} & 302 & 19 & 533 & \cite{bbm-001} \\ \hline
+		002 & \texttt{SIGNAL TRANSDUCTION IN~FIBROBLASTS} & 130 & 9 & 557 & \cite{bbm-002} \\ \hline
+		003 & \texttt{MAMMALIAN CELL CYCLE} & 19 & 1 & 51 & \cite{bbm-003} \\ \hline
+		004 & \texttt{ERBB RECEPTOR SIGNALING} & 225 & 22 & 1100 & \cite{bbm-004}  \\ \hline
+		005 & \texttt{FA/BRCA PATHWAY} & 28 & 0 & 123 & \cite{bbm-005} \\ \hline
+		006 & \texttt{HGF SIGNALING IN~KERATINOCYTES} & 62 & 6 & 103 & \cite{bbm-006} \\ \hline
+		007 & \texttt{CORTICAL AREA DEVELOPMENT} & 5 & 0 & 14 & \cite{bbm-007} \\ \hline
+		008 & \texttt{DEATH RECEPTOR SIGNALING} & 25 & 3 & 45 & \cite{bbm-008-150} \\ \hline
+		009 & \texttt{YEAST APOPTOSIS} & 60 & 13 & 114 & \cite{bbm-009} \\ \hline
+		010 & \texttt{CARDIAC-DEVELOPMENT} & 13 & 2 & 37 & \cite{bbm-010} \\ \hline
+		011 & \texttt{GUARD CELL ABSCISIC ACID~SIGNALING} & 40 & 4 & 78 & \cite{bbm-011} \\ \hline		
+		012 & \texttt{T-CELL RECEPTOR SIGNALING} & 94 & 7 & 158 & \cite{bbm-012} \\ \hline
+		013 & \texttt{CHOLESTEROL REGULATORY~PATHWAY} & 32 & 2 & 41 & \cite{bbm-013} \\ \hline
+		014 & \texttt{T-LGL SURVIVAL NETWORK 2008} & 54 & 7 & 193 & \cite{bbm-014} \\ \hline
+		015 & \texttt{NEUROTRANSMITTER SIGNALING~PATHWAY} & 14 & 2 & 20 & \cite{bbm-015} \\ \hline
+		016 & \texttt{IL-1 SIGNALING} & 104 & 14 & 218 & \cite{bbm-016-019} \\ \hline
+		017 & \texttt{DIFFERENTIATION OF T-LYMPHOCYTES}  & 41 & 9 & 97 & \cite{bbm-017} \\ \hline
+		018 & \texttt{EGFR-ERBB SIGNALING} & 76 & 28 & 226 & \cite{bbm-018} \\ \hline
+		019 & \texttt{IL-6 SIGNALING} & 71 & 15 & 149 & \cite{bbm-016-019} \\ \hline
+		020 & \texttt{APOPTOSIS NETWORK} & 39 & 2 & 73 & \cite{bbm-020} \\ \hline
+		021 & \texttt{BODY SEGMENTATION IN DROSOPHILA 2013} & 14 & 3 & 29 & \cite{bbm-021} \\ \hline
+		022 & \texttt{B-CELL DIFFERENTIATION} & 17 & 5 & 39 & \cite{bbm-022} \\ \hline
+		023 & \texttt{MAMMALIAN CELL CYCLE 2006} & 9 & 1 & 34 & \cite{bbm-023} \\ \hline
+		024 & \texttt{BUDDING YEAST CELL CYCLE} & 16 & 4 & 42 & \cite{bbm-024} \\ \hline
+		025 & \texttt{T-LGL SURVIVAL NETWORK 2011} & 54 & 6 & 195 & \cite{bbm-025-074} \\ \hline
+		026 & \texttt{BUDDING YEAST CELL~CYCLE~2009} & 18 & 0 & 59 & \cite{bbm-026} \\ \hline
+		027 & \texttt{WG PATHWAY OF DROSOPHILA} & 12 & 14 & 29 & \cite{bbm-drosophila} \\ \hline
+		028 & \texttt{VEGF PATHWAY OF DROSOPHILA} & 10 & 8 & 18 & \cite{bbm-drosophila} \\ \hline
+		029 & \texttt{TOLL PATHWAY OF DROSOPHILA} & 9 & 2 & 11 & \cite{bbm-drosophila} \\ \hline
+		030 & \texttt{SPZ NETWORK OF DROSOPHILA} & 18 & 6 & 28 & \cite{bbm-drosophila} \\ \hline
+	\end{tabular}	
+
+	\begin{tabular}{ | C{16pt} | C{149pt} | C{25pt} | C{25pt} | C{25pt} | C{36pt} | }
+		\hline
+		ID & Name & Vars. & Inps. & Regs. & Source \\ 
+		\hline
+		031 & \texttt{CELL CYCLE TRANSCRIPTION} & 9 & 0 & 19 & \cite{bbm-031} \\ 
+		\hline
+		032 & \texttt{T-CELL SIGNALLING 2006} & 37 & 3 & 53 & \cite{bbm-032} \\ 
+		\hline
+		033 & \texttt{BT474 BREAST CELL LINE~LONG~TERM} & 19 & 5 & 68 & \cite{bbm-breast-cell-line} \\ 
+		\hline
+		034 & \texttt{HCC1954 BREAST CELL LINE~LONG~TERM} & 19 & 4 & 68 & \cite{bbm-breast-cell-line} \\ 
+		\hline
+		035 & \texttt{BT474 BREAST CELL LINE~SHORT~TERM} & 11 & 5 & 46 & \cite{bbm-breast-cell-line} \\ 
+		\hline
+		036 & \texttt{HCC1954 BREAST CELL LINE~SHORT~TERM} & 11 & 5 & 46 & \cite{bbm-breast-cell-line} \\ 
+		\hline
+		037 & \texttt{SKBR3 BREAST CELL LINE~SHORT~TERM} & 11 & 5 & 41 & \cite{bbm-breast-cell-line} \\ 
+		\hline
+		038 & \texttt{SKBR3 BREAST CELL LINE~LONG~TERM} & 21 & 4 & 81 & \cite{bbm-breast-cell-line} \\ 
+		\hline
+		039 & \texttt{HIV-1 INTERACTIONS WITH T-CELL SIGNALING} & 124 & 14 & 368 & \cite{bbm-039} \\ 
+		\hline
+		040 & \texttt{T-CELL DIFFERENTIATION} & 19 & 4 & 34 & \cite{bbm-040} \\ 
+		\hline
+		041 & \texttt{INFLUENZA VIRUS REPLICATION~CYCLE} & 120 & 11 & 302 & \cite{bbm-041} \\ 
+		\hline
+		042 & \texttt{TOL REGULATORY NETWORK} & 14 & 10 & 48 & \cite{bbm-042} \\ 
+		\hline
+		043 & \texttt{BORDETELLA BRONCHISEPTICA} & 33 & 0 & 79 & \cite{bbm-043-044-046} \\ 
+		\hline
+		044 & \texttt{TRICHOSTRONGYLUS RETORTAEFORMIS} & 25 & 1 & 58 & \cite{bbm-043-044-046} \\ 
+		\hline
+		045 & \texttt{HH PATHWAY OF DROSOPHILA} & 11 & 13 & 32 & \cite{bbm-drosophila} \\ 
+		\hline
+		046 & \texttt{B~BRONCHISEPTICA AND T~RETORTAEFORMIS} & 52 & 1 & 135 & \cite{bbm-043-044-046} \\ 
+		\hline
+		047 & \texttt{FGF PATHWAY OF DROSOPHILA} & 14 & 9 & 24 & \cite{bbm-drosophila} \\ 
+		\hline
+		048 & \texttt{GLUCOSE REPRESSION SIGNALING~2009} & 55 & 18 & 97 & \cite{bbm-048-173} \\
+		\hline
+		049 & \texttt{OXIDATIVE STRESS PATHWAY} & 18 & 1 & 32 & \cite{bbm-049} \\
+		\hline
+		050 & \texttt{CD4 T-CELL SIGNALING} & 154 & 34 & 351 & \cite{bbm-050} \\
+		\hline
+		051 & \texttt{COLITIS ASSOCIATED COLON~CANCER} & 69 & 1 & 153 & \cite{bbm-051} \\
+		\hline
+		052 & \texttt{SEPTATION INITIATION NETWORK} & 23 & 8 & 50 & \cite{bbm-052} \\
+		\hline
+		053 & \texttt{PREDICTING VARIABILITIES IN~CARDIAC GENE} & 13 & 2 & 37 & \cite{bbm-053} \\ 
+		\hline
+		054 & \texttt{PC12 CELL DIFFERENTIATION} & 61 & 1 & 108 & \cite{bbm-054} \\
+		\hline
+		055 & \texttt{HUMAN GONADAL SEX DETERMINATION} & 19 & 0 & 79 & \cite{bbm-055} \\
+		\hline
+		056 & \texttt{IGVH MUTATIONS IN~LYMPHOCYTIC LEUKEMIA} & 66 & 25 & 125 & \cite{bbm-056} \\
+		\hline
+	\end{tabular}
+
+	\begin{tabular}{ | C{16pt} | C{149pt} | C{25pt} | C{25pt} | C{25pt} | C{36pt} | }
+		\hline
+		ID & Name & Vars. & Inps. & Regs. & Source \\ 
+		\hline
+		057 & \texttt{FANCONI ANEMIA AND CHECKPOINT RECOVERY} & 15 & 0 & 66 & \cite{bbm-057} \\
+		\hline
+		058 & \texttt{ARABIDOPSIS THALIANA CELL~CYCLE} & 14 & 0 & 66 & \cite{bbm-058} \\
+		\hline
+		059 & \texttt{BORTEZOMIB RESPONSES IN~MYELOMA CELLS} & 62 & 5 & 131 & \cite{bbm-059} \\
+		\hline
+		060 & \texttt{STOMATAL OPENING} & 44 & 5 & 167 & \cite{bbm-060} \\
+		\hline
+		061 & \texttt{TUMOR MICROENVIRONMENT IN LYMPHOBLASTIC LEUKAEMIA} & 24 & 2 & 79 & \cite{bbm-061} \\ 
+		\hline
+		062 & \texttt{CD4 T-CELL DIFFERENTIATION AND PLASTICITY} & 12 & 6 & 78 & \cite{bbm-062} \\ 
+		\hline
+		063 & \texttt{LAC OPERON} & 10 & 3 & 22 & \cite{bbm-063} \\ 
+		\hline
+		064 & \texttt{METABOLIC INTERACTIONS IN GUT MICROBIOME} & 8 & 4 & 27 & \cite{bbm-064} \\ 
+		\hline
+		065 & \texttt{TUMOUR CELL INVASION AND MIGRATION} & 30 & 2 & 156 & \cite{bbm-065-086} \\ 
+		\hline
+		066 & \texttt{CD4 T-CELL DIFFERENTIATION} & 29 & 9 & 96 & \cite{cell-collective} \\ 
+		\hline
+		067 & \texttt{REGULATION OF L-ARABINOSE OPERON} & 9 & 4 & 18 & \cite{bbm-067} \\ 
+		\hline
+		068 & \texttt{AURORA KINASE-A IN NEUROBLASTOMA} & 19 & 4 & 43 & \cite{bbm-068} \\ 
+		\hline
+		069 & \texttt{IRON ACQUISITION AND STRESS RESPONSE} & 20 & 2 & 38 & \cite{bbm-069} \\ 
+		\hline
+		070 & \texttt{MAPK CANCER CELL FATE} & 49 & 4 & 104 & \cite{bbm-070-089-090-091} \\ 
+		\hline
+		071 & \texttt{CASTRATION RESISTANT PROSTATE CANCER} & 28 & 14 & 51 & \cite{bbm-071} \\ 
+		\hline
+		072 & \texttt{LYMPHOPOIESIS REGULATORY NETWORK} & 67 & 14 & 160 & \cite{bbm-072} \\ 
+		\hline
+		073 & \texttt{LYMPHOID AND MYELOID CELL SPECIFICATION} & 31 & 2 & 94 & \cite{bbm-073-177} \\ 
+		\hline
+		074 & \texttt{T-LGL SURVIVAL NETWORK 2011 REDUCED} & 18 & 0 & 43 & \cite{bbm-025-074} \\ 
+		\hline
+		075 & \texttt{INFLAMMATORY BOWEL DISEASE} & 47 & 0 & 287 & \cite{bbm-075} \\ 
+		\hline
+		076 & \texttt{SENESCENCE ASSOCIATED SECRETORY PHENOTYPE} & 49 & 2 & 96 & \cite{bbm-076} \\ 
+		\hline
+		077 & \texttt{SIGNALLING PATHWAY FOR BUTANOL PRODUCTION} & 53 & 13 & 139 & \cite{bbm-077} \\ 
+		\hline
+		078 & \texttt{IMMUNE SYSTEM} & 151 & 13 & 506 & \cite{cell-collective} \\ 
+		\hline
+		079 & \texttt{COLORECTAL TUMORIGENESIS} & 184 & 13 & 747 & \cite{bbm-079} \\ 
+		\hline
+		080 & \texttt{TCR SIGNALING 2018} & 95 & 15 & 212 & \cite{bbm-080-081-082} \\ 
+		\hline
+		081 & \texttt{TLR5 SIGNALING 2018} & 40 & 2 & 68 & \cite{bbm-080-081-082} \\
+		\hline
+		082 & \texttt{TCR-TLR5 SIGNALING 2018} & 112 & 16 & 257 & \cite{bbm-080-081-082} \\
+		\hline
+		083 & \texttt{SIGNALING IN PROSTATE CANCER} & 122 & 11 & 420 & \cite{bbm-083} \\
+		\hline
+	\end{tabular}
+
+	\begin{tabular}{ | C{16pt} | C{149pt} | C{25pt} | C{25pt} | C{25pt} | C{36pt} | }
+		\hline
+		ID & Name & Vars. & Inps. & Regs. & Source \\ 
+		\hline
+		084 & \texttt{ABA INDUCED STOMATAL CLOSURE} & 58 & 23 & 155 & \cite{bbm-084} \\
+		\hline
+		085 & \texttt{REPROGRAMMING TESTES DERIVED STEM CELLS} & 23 & 4 & 49 & \cite{bbm-085} \\
+		\hline
+		086 & \texttt{TUMOUR CELL INVASION AND MIGRATION REDUCED} & 18 & 2 & 88 & \cite{bbm-065-086} \\
+		\hline
+		087 & \texttt{INFLAMMATORY GENE EXPRESSION IN MACROPHAGES} & 99 & 34 & 190 & \cite{bbm-087} \\
+		\hline
+		088 & \texttt{MIR-9 NEUROGENESIS} & 6 & 0 & 11 & \cite{bbm-088} \\
+		\hline
+		089 & \texttt{MAPK REDUCED 1} & 13 & 4 & 78 & \cite{bbm-070-089-090-091} \\
+		\hline
+		090 & \texttt{MAPK REDUCED 2} & 14 & 4 & 60 & \cite{bbm-070-089-090-091} \\
+		\hline
+		091 & \texttt{MAPK REDUCED 3} & 12 & 4 & 58 & \cite{bbm-070-089-090-091} \\
+		\hline
+		092 & \texttt{HEPATOCELLULAR CARCINOMA} & 61 & 8 & 139 & \cite{bbm-092-174} \\
+		\hline
+		093 & \texttt{IMMUNE CHECKPOINT INHIBITORS} & 51 & 15 & 128 & \cite{bbm-093} \\
+		\hline
+		094 & \texttt{MACROPHAGE POLARIZATION STATES} & 23 & 8 & 52 & \cite{bbm-094} \\
+		\hline
+		095 & \texttt{FISSION YEAST 2008} & 9 & 1 & 27 & \cite{bbm-095} \\
+		\hline
+		096 & \texttt{ERBB REGULATED G1-S TRANSITION} & 19 & 1 & 48 & \cite{bbm-096} \\
+		\hline
+		097 & \texttt{DROSOPHILA WINGS AP} & 8 & 2 & 14 & \cite{bbm-097} \\
+		\hline
+		098 & \texttt{MACROPHAGE POLARIZATION EXTENDED} & 30 & 12 & 72 & \cite{bbm-098} \\
+		\hline
+		099 & \texttt{YEAST HYPHAL TRANSITION} & 16 & 3 & 36 & \cite{bbm-099} \\
+		\hline
+		100 & \texttt{ACUTE MYELOID LEUKEMIA} & 18 & 3 & 30 & \cite{bbm-100} \\
+		\hline
+		101 & \texttt{GUARD CELL CO2 SIGNALLING} & 61 & 24 & 155 & \cite{bbm-101} \\
+		\hline
+		102 & \texttt{PANCREATIC CANCER MICROENVIRONMENT REDUCED} & 17 & 5 & 52 & \cite{bbm-102-103} \\
+		\hline
+		103 & \texttt{PANCREATIC CANCER MICROENVIRONMENT} & 65 & 4 & 110 & \cite{bbm-102-103} \\
+		\hline
+		104 & \texttt{DROSOPHILA CELL CYCLE} & 11 & 3 & 42 & \cite{bbm-104} \\
+		\hline
+		105 & \texttt{PLANT GUARD CELL SIGNALLING} & 46 & 3 & 113 & \cite{bbm-105} \\
+		\hline
+		106 & \texttt{STOMATAL RESTING STATE} & 58 & 22 & 151 & \cite{bbm-106} \\
+		\hline
+		107 & \texttt{DNA DAMAGE INDUCED AUTOPHAGY} & 32 & 1 & 99 & \cite{bbm-107} \\
+		\hline
+		108 & \texttt{GEROCONVERSION} & 23 & 2 & 67 & \cite{bbm-108} \\
+		\hline
+		109 & \texttt{ASYMMETRIC CELL DIVISION A} & 5 & 0 & 15 & \cite{bbm-109-110} \\
+		\hline
+		110 & \texttt{ASYMMETRIC CELL DIVISION B} & 9 & 0 & 12 & \cite{bbm-109-110} \\
+		\hline
+		111 & \texttt{APOPTOSIS} & 18 & 15 & 40 & \cite{bbm-covid-disease-map} \\
+		\hline
+		112 & \texttt{COAGULATION PATHWAY} & 85 & 27 & 195 & \cite{bbm-covid-disease-map} \\
+		\hline
+		113 & \texttt{ER STRESS} & 107 & 75 & 266 & \cite{bbm-covid-disease-map} \\
+		\hline
+		114 & \texttt{ETC} & 46 & 38 & 154 & \cite{bbm-covid-disease-map} \\
+		\hline
+		115 & \texttt{E PROTEIN} & 17 & 18 & 40 & \cite{bbm-covid-disease-map} \\
+		\hline
+		116 & \texttt{HMOX1 PATHWAY} & 89 & 55 & 228 & \cite{bbm-covid-disease-map} \\
+		\hline
+		117 & \texttt{IFN LAMBDA} & 28 & 19 & 52 & \cite{bbm-covid-disease-map} \\
+		\hline
+		118 & \texttt{INTERFERON 1} & 66 & 55 & 190 & \cite{bbm-covid-disease-map} \\
+		\hline
+ 	\end{tabular}	
+ 
+ 	\begin{tabular}{ | C{16pt} | C{149pt} | C{25pt} | C{25pt} | C{25pt} | C{36pt} | }
+ 		\hline
+ 		ID & Name & Vars. & Inps. & Regs. & Source \\ 
+ 		\hline
+		119 & \texttt{JNK PATHWAY} & 13 & 6 & 21 & \cite{bbm-covid-disease-map} \\
+ 		\hline
+ 		120 & \texttt{KYNURENINE PATHWAY} & 78 & 72 & 304 & \cite{bbm-covid-disease-map} \\
+ 		\hline
+ 		121 & \texttt{NLRP3 ACTIVATION} & 39 & 18 & 91 & \cite{bbm-covid-disease-map} \\
+ 		\hline
+		122 & \texttt{NSP14} & 74 & 94 & 558 & \cite{bbm-covid-disease-map} \\
+		\hline
+		123 & \texttt{NSP4 NSP6} & 43 & 17 & 62 & \cite{bbm-covid-disease-map} \\
+		\hline
+		124 & \texttt{NSP9 PROTEIN} & 119 & 133 & 257 & \cite{bbm-covid-disease-map} \\
+		\hline
+		125 & \texttt{ORF10 CUL2 PATHWAY} & 34 & 17 & 92 & \cite{bbm-covid-disease-map} \\
+		\hline
+		126 & \texttt{ORF3A} & 24 & 18 & 56 & \cite{bbm-covid-disease-map} \\
+ 		\hline
+ 		127 & \texttt{PAMP SIGNALING} & 44 & 35 & 109 & \cite{bbm-covid-disease-map} \\
+ 		\hline
+ 		128 & \texttt{PYRIMIDINE DEPRIVATION} & 56 & 34 & 131 & \cite{bbm-covid-disease-map} \\
+ 		\hline
+ 		129 & \texttt{RTC AND TRANSCRIPTION} & 33 & 1 & 40 & \cite{bbm-covid-disease-map} \\
+ 		\hline
+ 		130 & \texttt{RENIN ANGIOTENSIN} & 43 & 34 & 130 & \cite{bbm-covid-disease-map} \\
+ 		\hline
+ 		131 & \texttt{TGFB PATHWAY} & 7 & 14 & 24 & \cite{bbm-covid-disease-map} \\
+ 		\hline
+ 		132 & \texttt{VIRUS REPLICATION CYCLE} & 129 & 19 & 268 & \cite{bbm-covid-disease-map} \\
+ 		\hline
+ 		133 & \texttt{ROOT STEM CELL 2010} & 8 & 2 & 16 & \cite{bbm-133} \\
+ 		\hline
+		134 & \texttt{RHEUMATOID ARTHRITIS} & 35 & 3 & 59 & \cite{bbm-134} \\
+ 		\hline
+ 		135 & \texttt{SIGNAL TRANSDUCTION} & 28 & 2 & 33 & \cite{bbm-135} \\
+ 		\hline
+ 		136 & \texttt{EGF TNF ALPHA SIGNALLING PATHWAY} & 26 & 2 & 31 & \cite{sbml-qual} \\
+ 		\hline
+ 		137 & \texttt{SIGNALLING IN LIVER CANCER} & 71 & 11 & 118 & \cite{bbm-137} \\
+ 		\hline
+ 		138 & \texttt{APOPTOSIS-UPDATED} & 17 & 14 & 37 & \cite{bbm-138} \\
+ 		\hline
+ 		139 & \texttt{ACUTE RESPONSES DURING HYPERINSULINEMIA} & 10 & 9 & 64 & \cite{bbm-139} \\
+ 		\hline
+		140 & \texttt{BREAST CANCER DRUG RESISTANCE} & 62 & 18 & 211 & \cite{bbm-140} \\
+ 		\hline
+ 		141 & \texttt{HIGH OSMOLARITY AND MATING PATHWAYS} & 43 & 2 & 94 & \cite{bbm-141} \\
+ 		\hline
+ 		142 & \texttt{BLOOD STEM CELL} & 27 & 2 & 126 & \cite{bbm-142} \\
+ 		\hline
+		143 & \texttt{BREAST CANCER INHIBITORS} & 71 & 26 & 223 & \cite{bbm-143} \\
+ 		\hline
+		144 & \texttt{SNF1-AMPK-PATHWAY} & 146 & 56 & 482 & \cite{bbm-144} \\
+ 		\hline
+ 		145 & \texttt{MELANOGENESIS} & 61 & 1 & 113 & \cite{bbm-145} \\
+ 		\hline
+ 		146 & \texttt{BUDDING YEAST FAURE 2009} & 40 & 10 & 271 & \cite{bbm-146-147-159-180} \\
+ 		\hline
+ 		147 & \texttt{BUDDING YEAST EXIT MODULE} & 11 & 5 & 44 & \cite{bbm-146-147-159-180} \\
+ 		\hline
+ 		148 & \texttt{AGS CELL FATE DECISION} & 83 & 0 & 185 & \cite{bbm-148-149} \\
+ 		\hline
+ 		149 & \texttt{AGS CELL FATE DECISION REDUCED} & 12 & 2 & 62 & \cite{bbm-148-149} \\
+ 		\hline
+ 		150 & \texttt{CELL FATE DECISION MULTISCALE} & 31 & 2 & 52 & \cite{bbm-008-150} \\
+ 		\hline
+ 		151 & \texttt{TCR REDOX METABOLISM} & 130 & 3 & 417 & \cite{bbm-151-152} \\
+ 		\hline
+ 		152 & \texttt{TCR REDOX METABOLISM REDUCED} & 50 & 3 & 288 & \cite{bbm-151-152} \\
+ 		\hline
+ 		153 & \texttt{CONTROL OF PROLIFERATION} & 17 & 1 & 34 & \cite{bbm-153} \\
+ 		\hline
+ 		154 & \texttt{CONTROL OF TH1 TH2 DIFFERENTIATION} & 18 & 3 & 50 & \cite{bbm-154} \\
+ 		\hline
+ 	\end{tabular}
+ 
+	 \begin{tabular}{ | C{16pt} | C{149pt} | C{25pt} | C{25pt} | C{25pt} | C{36pt} | }
+	 	\hline
+	 	ID & Name & Vars. & Inps. & Regs. & Source \\ 	 	
+	 	\hline
+	 	155 & \texttt{CONTROL OF TH1 TH2 TH17 TREG DIFFERENTATION} & 45 & 26 & 164 & \cite{bbm-155-156} \\
+	 	\hline
+	 	156 & \texttt{CONTROL OF TH1 TH2 TH17 TREG DIFFERENTATION REDUCED} & 23 & 13 & 108 & \cite{bbm-155-156} \\
+	 	\hline
+	 	157 & \texttt{CONTROL OF TH DIFFERENTATION} & 62 & 41 & 234 & \cite{bbm-157} \\
+	 	\hline
+	 	158 & \texttt{LAMBDA PHAGE LYSOGENY} & 7 & 0 & 30 & \cite{bbm-158} \\
+	 	\hline
+	 	159 & \texttt{BUDDING YEAST CORE} & 31 & 8 & 158 & \cite{bbm-146-147-159-180} \\
+	 	\hline
+	 	160 & \texttt{IL17 DIFFERENTIAL EXPRESSION} & 76 & 16 & 246 & \cite{bbm-160} \\
+	 	\hline
+	 	161 & \texttt{DIFFERENTIATION OF MONOCYTES} & 94 & 2 & 244 & \cite{bbm-161} \\
+	 	\hline
+	 	162 & \texttt{DROSOPHILA DPP PATHWAY} & 10 & 8 & 40 & \cite{bbm-drosophila} \\
+	 	\hline
+	 	163 & \texttt{DROSOPHILA EGF PATHWAY} & 24 & 10 & 84 & \cite{bbm-drosophila} \\
+	 	\hline
+	 	164 & \texttt{EGGSHELL PATTERNING MECHANISTIC} & 17 & 7 & 62 & \cite{bbm-164-165} \\
+	 	\hline
+	 	165 & \texttt{EGGSHELL PATTERNING PHENOMOENOLOGICAL} & 4 & 4 & 16 & \cite{bbm-164-165} \\
+	 	\hline
+	 	166 & \texttt{DROSOPHILA JAK STAT PATHWAY} & 7 & 12 & 36 & \cite{bbm-drosophila} \\
+	 	\hline
+	 	167 & \texttt{MESODERM SPECIFICATION IN DROSOPHILA} & 41 & 16 & 130 & \cite{bbm-167} \\
+	 	\hline
+	 	168 & \texttt{DROSOPHILA NOTCH PATHWAY} & 7 & 6 & 26 & \cite{bbm-drosophila} \\
+	 	\hline
+	 	169 & \texttt{DROSOPHILA GAP A} & 5 & 2 & 17 & \cite{bbm-169-170-171-172} \\
+	 	\hline
+	 	170 & \texttt{DROSOPHILA GAP B} & 4 & 3 & 15 & \cite{bbm-169-170-171-172} \\
+	 	\hline
+	 	171 & \texttt{DROSOPHILA GAP C} & 5 & 2 & 20 & \cite{bbm-169-170-171-172} \\
+	 	\hline
+	 	172 & \texttt{DROSOPHILA GAP D} & 5 & 2 & 12 & \cite{bbm-169-170-171-172} \\
+	 	\hline
+	 	173 & \texttt{GLUCOSE REPRESSION SIGNALLING} & 62 & 14 & 116 & \cite{bbm-048-173} \\
+	 	\hline
+	 	174 & \texttt{HEPATOCELLULAR CARCINOMA REDUCED} & 19 & 0 & 71 & \cite{bbm-092-174} \\
+	 	\hline
+	 	175 & \texttt{SEA URCHIN} & 32 & 9 & 95 & \cite{bbm-175} \\
+	 	\hline
+	 	176 & \texttt{MYELOFIBROTIC MICROENVIRONMENT} & 47 & 2 & 148 & \cite{bbm-176} \\
+	 	\hline
+	 	177 & \texttt{LYMPHOID CELL SPECIFICATION} & 31 & 3 & 96 & \cite{bbm-073-177} \\
+	 	\hline
+	 	178 & \texttt{MAST CELL ACTIVATION} & 45 & 3 & 72 & \cite{bbm-178} \\
+	 	\hline
+	 	179 & \texttt{MICROENVIRONMENT CONTROL} & 46 & 10 & 149 & \cite{bbm-179} \\
+	 	\hline
+	 	180 & \texttt{MORPHOGENETIC CHECKPOINT} & 11 & 1 & 36 & \cite{bbm-146-147-159-180} \\
+	 	\hline
+	 	181 & \texttt{MULTILEVEL CELL CYCLE} & 12 & 1 & 59 & \cite{bbm-181-182} \\
+	 	\hline
+	 	182 & \texttt{BOOLEAN CELL CYCLE} & 12 & 2 & 59 & \cite{bbm-181-182} \\
+	 	\hline
+	 	183 & \texttt{ALTERATIONS IN BLADDER} & 31 & 4 & 111 & \cite{bbm-183} \\
+	 	\hline
+	 	184 & \texttt{P53 MDM2 NETWORK} & 5 & 1 & 15 & \cite{bbm-184} \\
+	 	\hline
+	 	185 & \texttt{CHICKEN SEX DETERMINATION} & 12 & 3 & 34 & \cite{bbm-185-186} \\
+	 	\hline	 	
+	\end{tabular}
+
+	\begin{tabular}{ | C{16pt} | C{149pt} | C{25pt} | C{25pt} | C{25pt} | C{36pt} | }
+		\hline
+		ID & Name & Vars. & Inps. & Regs. & Source \\ 	 	
+		\hline
+		186 & \texttt{CHICKEN SEX DETERMINATION REDUCED} & 7 & 3 & 25 & \cite{bbm-185-186} \\
+		\hline
+		187 & \texttt{MAMMAL SEX DETERMINATION 1 CELL} & 13 & 6 & 55 & \cite{bbm-187-188} \\
+		\hline
+		188 & \texttt{MAMMAL SEX DETERMINATION 2 CELL} & 30 & 7 & 132 & \cite{bbm-187-188} \\
+		\hline
+		189 & \texttt{TRP BIOSYNTHESIS} & 5 & 1 & 13 & \cite{bbm-189} \\
+		\hline
+		190 & \texttt{BRAF TREATMENT RESPONSE} & 32 & 5 & 74 & \cite{bbm-190} \\
+		\hline
+		191 & \texttt{SEGMENT POLARITY 1 CELL} & 17 & 2 & 55 & \cite{bbm-191-192} \\
+		\hline
+		192 & \texttt{SEGMENT POLARITY 6 CELL} & 102 & 0 & 352 & \cite{bbm-191-192} \\
+		\hline
+		193 & \texttt{SENESCENCE G1S CHECKPOINT} & 28 & 2 & 100 & \cite{bbm-193} \\
+		\hline
+	 	194 & \texttt{VULVAR PRECURSOR CELLS} & 78 & 28 & 236 & \cite{bbm-194} \\
+		\hline
+	 	195 & \texttt{CTLA4 PD1 CHECKPOINT INHIBITORS} & 161 & 55 & 439 & \cite{bbm-195} \\
+		\hline
+		196 & \texttt{T-LYMPHOCYTE SPECIFICATION} & 58 & 3 & 237 & \cite{bbm-196} \\
+		\hline
+		197 & \texttt{ANTERIOR POSTERIOR BOUNDARY} & 48 & 8 & 253 & \cite{bbm-197} \\
+		\hline
+		198 & \texttt{PAIR RULE MODULE} & 11 & 0 & 48 & \cite{bbm-198} \\
+		\hline
+		199 & \texttt{HEPATOCELLULAR CARCINOMA COMPARTMENTALIZED} & 30 & 0 & 97 & \cite{bbm-199} \\
+		\hline	 	
+		200 & \texttt{LUNG-CANCER-CELL-CYCLE} & 25 & 1 & 71 & \cite{bbm-200} \\
+		\hline	 			
+		201 & \texttt{ONKOGENE ROLE OF INCRNA ANRIL} & 31 & 2 & 94 & \cite{bbm-201} \\
+		\hline
+		202 & \texttt{ONKOGENE ROLE OF INCRNA XIST} & 30 & 1 & 107 & \cite{bbm-202} \\
+		\hline
+		203 & \texttt{DDR SIGNALLING PATHWAYS} & 39 & 1 & 143 & \cite{bbm-203} \\
+		\hline
+		204 & \texttt{HUMAN BRAIN ORGANOIDS} & 76 & 1 & 205 & \cite{bbm-204} \\
+		\hline
+		205 & \texttt{EPITHELIAL-MESENCHYMAL TRANSITION IN BLADDER} & 41 & 4 & 118 & \cite{bbm-205-206} \\
+		\hline
+		206 & \texttt{EPITHELIAL-MESENCHYMAL TRANSITION IN BREAST} & 36 & 5 & 97 & \cite{bbm-205-206} \\
+		\hline
+		207 & \texttt{BREAST CANCER TUMOUR} & 85 & 18 & 441 & \cite{bbm-207} \\
+		\hline
+		208 & \texttt{HEMATOPOIESIS AGING} & 15 & 0 & 36 & \cite{bbm-208} \\
+		\hline
+		209 & \texttt{ABERRANT CELL CYCLE PROGRESSION} & 85 & 2 & 372 & \cite{bbm-209} \\
+		\hline
+		210 & \texttt{DRUG SYNERGY PREDICTION} & 144 & 0 & 367 & \cite{bbm-210} \\
+		\hline
+		211 & \texttt{EPITHELIAL-DERIVED CANCER CELLS} & 183 & 0 & 602 & \cite{bbm-211} \\
+		\hline
+		212 & \texttt{ESCHERICHIA COLI TRYPTOPHAN} & 13 & 3 & 27 & \cite{bbm-212} \\
+		\hline
+		213 & \texttt{DOPAMINE TRANSCRIPTION} & 54 & 11 & 94 & \cite{bbm-213-214-215-216-217-218-219} \\
+		\hline
+		214 & \texttt{FOXO3 PATHWAY} & 52 & 18 & 89 & \cite{bbm-213-214-215-216-217-218-219} \\
+		\hline
+		215 & \texttt{MTOR PATHWAY} & 41 & 26 & 83 & \cite{bbm-213-214-215-216-217-218-219} \\
+		\hline
+		216 & \texttt{PPARGC1A PATHWAY} & 52 & 17 & 109 & \cite{bbm-213-214-215-216-217-218-219} \\
+		\hline
+		217 & \texttt{PRKN PATHWAY} & 21 & 35 & 72 & \cite{bbm-213-214-215-216-217-218-219} \\
+		\hline		
+		218 & \texttt{TCA CYCLE} & 34 & 34 & 197 & \cite{bbm-213-214-215-216-217-218-219} \\
+		\hline		
+	\end{tabular}
+
+	\begin{tabular}{ | C{16pt} | C{149pt} | C{25pt} | C{25pt} | C{25pt} | C{36pt} | }
+		\hline
+		ID & Name & Vars. & Inps. & Regs. & Source \\ 	 	
+		\hline
+		219 & \texttt{WNT-PI3K-AKT PATHWAY} & 45 & 39 & 106 & \cite{bbm-213-214-215-216-217-218-219} \\
+		\hline
+%		220 & \texttt{----} & -- & -- & -- & -- \\
+%		\hline
+%		221 & \texttt{----} & -- & -- & -- & -- \\
+%		\hline		
+%		222 & \texttt{----} & -- & -- & -- & -- \\
+%		\hline		
+%		223 & \texttt{----} & -- & -- & -- & -- \\
+%		\hline		
+%		224 & \texttt{----} & -- & -- & -- & -- \\
+%		\hline		
+%		225 & \texttt{----} & -- & -- & -- & -- \\
+%		\hline		
+%		226 & \texttt{----} & -- & -- & -- & -- \\
+%		\hline		
+%		227 & \texttt{----} & -- & -- & -- & -- \\
+%		\hline		
+%		228 & \texttt{----} & -- & -- & -- & -- \\
+%		\hline		
+%		229 & \texttt{----} & -- & -- & -- & -- \\
+%		\hline		
+%		230 & \texttt{----} & -- & -- & -- & -- \\
+%		\hline		
+%		231 & \texttt{----} & -- & -- & -- & -- \\
+%		\hline		
+	\end{tabular}
+
+
+%	\begin{tabular}{ | C{16pt} | C{149pt} | C{25pt} | C{25pt} | C{25pt} | C{36pt} | }
+%		\hline
+%		ID & Name & Vars. & Inps. & Regs. & Source \\ 	 	
+%		\hline
+%	\end{tabular}
+\end{center}
+
+\bibliographystyle{plain}
+\bibliography{report}
+
+\end{document}
