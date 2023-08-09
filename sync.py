@@ -54,7 +54,8 @@ def check_unused_variables(model):
 		if len(graph.regulators(var)) == 0 and len(graph.targets(var)) == 0:			
 			print("ERROR: Variable", name, "is unused.")
 			sys.exit(128)
-		if model.get_update_function(var) == name and len(graph.regulators(var)) <= 1:
+		function = model.get_update_function(var)		
+		if function is not None and function.as_variable() == var and len(graph.regulators(var)) <= 1:
 			print("ERROR: Variable", name, "is effectively an input.")
 			sys.exit(128)
 
