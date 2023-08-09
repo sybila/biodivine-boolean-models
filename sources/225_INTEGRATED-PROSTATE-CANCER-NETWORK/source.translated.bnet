@@ -1,0 +1,92 @@
+targets,factors
+ADAM17, ADAM17
+EGF, !AT2R
+EGFR, !(!ADAM17 & !EGF)
+Ras, EGFR
+Raf, (!AKT) & !((!HSP90) & (!Ras))
+MEK, !((!Raf) & (!IGF_1) & (!EGFR))
+ERK, !((!PAR1) & (!TNFa) & (!TGFB) & (!MEK))
+RSK, ERK
+ELK, RSK
+Cdc37, Cdc37
+HSP90, Cdc37
+HSP27, !HSP90
+ERBB2, !((!HSP90) & (!EGF))
+ACK1, HSP90
+MED15, MED15
+SKIP, SKIP
+TGFB, !((!AR) & (!SKIP) & (!MED15))
+SMAD4, TGFB
+SMAD2, TGFB
+SMAD3, !((!TGFB) & (!MED15))
+FOXH1, !(SMAD2&SMAD4)
+MED1, !((!ERK) & (!AKT))
+SIRT1, FHL2
+FOXO1, (!SIRT1)&PTEN
+CDKN2A, !Bmi1
+UBE2C, MED1
+FHL2, FHL2
+ERG, ERG
+AT2R, MTUS1
+PTEN, PTEN
+FOXA1, MED1
+JNK, MAPK
+NKX3_1, !CDKN2A
+CASP3, !((!NKX3_1&CDKN1B) & (!JNK))
+TRAP6, TRAP6
+PAR1, TRAP6
+MAPK, !((!ERK) & (!Androgen) & (!EGF) & (!TGFB) & (!TNFa))
+Bmi1, !(PTEN & (!E2F1))
+IL_6, !((!MAPK) & !(WHSC1 & NFKB) & (!BMP_6))
+AR, (FOXH1& ERBB2& EGFR& FOXO1& CDKN2A & DAB2IP&EBP1& !(SIAH2 & NCOR)) & !((!AKT) & (!Androgen) & (!EP300) & !(Cdc37 & Vav3) & (!MED1) & (!FHL2) & (!CACNA1D) & (!NFKB) & (!Vav3) & (!IL_6))
+TNFa, NKX3_1
+CCND, !((!AR) & (!ERBB2) & (!IL_8) & !(WHSC1 & NFKB))
+TMPRSS2, TMPRSS2
+CACNA1D, TMPRSS2 & ERG
+TNFSF11, TGFB
+MTUS1, MTUS1
+EBP1, EBP1
+STAT3, IL_6
+JAK2, !((!IL_6) & SOCS2)
+PKIB, PKIB
+PKA_C, PKIB
+CXCL1, NFKB
+BMP_6, NFKB
+IKKa, AKT
+AKT, !(EBP1 & INPP4B & Fkbp5) & !((!HSP90) & (!PKA_C) & (!CXCL1) & (!TNFa) & (!PI3K))
+c_Myc, AR
+mTOR, AKT
+Androgen, CACNA1D
+MMP_9, !((!MAPK) & (!TGFB) & (!PDEF))
+RhoGAP, RhoGAP
+EpCAM, EpCAM
+PI3K, !((!EGF) & (!IL_4) & PTEN & (!TGFB) & (!EpCAM) & (!KAT5) & (!Vav3))
+Wnt, Wnt
+NFKB, (!IKKa)& !((!EGR_1) & (!TNFSF11) & (!WHSC1) & (!IL_6) & (!TNFa) & (!HOXB13) & (!Wnt) & (!RhoGAP) & (!AKT))
+SKP2, !((!c_Myc) & (!mTOR))
+PSA, !((!NFKB) & CDKN2A)
+Vav3, Vav3
+KAT5, KAT5
+INPP4B, AR & NCOR
+Fkbp5, AR
+EGR_1, IGF_1
+BCL_2, NFKB
+PDEF, !((!KAT5) & HOXB13)
+Bcl_XL, !((!AR) & (!BCL_2))
+BAK, !(Bcl_XL)
+IL_4, IL_4
+EP300, !((!IL_4) & (!E2F1))
+DAB2IP, Wnt
+WHSC1, AR
+NCOR, !CK2
+SIAH2, SIAH2
+CDKN1B, !SKP2
+ZnT4, ZnT4
+HOXB13, !ZnT4
+E2F1, !((!CDKN1A)  & (!IKKa))
+CDKN1A, !(RAC1 & HOXB13) & !( (!SMAD3) & (!SMAD4))
+IGF_1, !((!DAB2IP) & SOCS2)
+IL_8, !((!ERK) & (!EGR_1) & (!NFKB))
+CK2, CK2
+SOCS2, Androgen
+RAC1, RAC1

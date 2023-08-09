@@ -1,0 +1,225 @@
+HSP90 -? ACK1
+CXCL1 -? AKT
+EBP1 -? AKT
+Fkbp5 -? AKT
+HSP90 -? AKT
+INPP4B -? AKT
+PI3K -? AKT
+PKA_C -? AKT
+TNFa -? AKT
+AKT -? AR
+Androgen -? AR
+CACNA1D -? AR
+CDKN2A -? AR
+Cdc37 -?? AR
+DAB2IP -? AR
+EBP1 -? AR
+EGFR -? AR
+EP300 -? AR
+ERBB2 -? AR
+FHL2 -? AR
+FOXH1 -? AR
+FOXO1 -? AR
+IL_6 -? AR
+MED1 -? AR
+NCOR -? AR
+NFKB -? AR
+SIAH2 -? AR
+Vav3 -? AR
+MTUS1 -? AT2R
+CACNA1D -? Androgen
+Bcl_XL -? BAK
+NFKB -? BCL_2
+NFKB -? BMP_6
+AR -? Bcl_XL
+BCL_2 -? Bcl_XL
+E2F1 -? Bmi1
+PTEN -? Bmi1
+ERG -? CACNA1D
+TMPRSS2 -? CACNA1D
+CDKN1B -? CASP3
+JNK -? CASP3
+NKX3_1 -? CASP3
+AR -? CCND
+ERBB2 -? CCND
+IL_8 -? CCND
+NFKB -? CCND
+WHSC1 -? CCND
+HOXB13 -? CDKN1A
+RAC1 -? CDKN1A
+SMAD3 -? CDKN1A
+SMAD4 -? CDKN1A
+SKP2 -? CDKN1B
+Bmi1 -? CDKN2A
+NFKB -? CXCL1
+Wnt -? DAB2IP
+CDKN1A -? E2F1
+IKKa -? E2F1
+AT2R -? EGF
+ADAM17 -? EGFR
+EGF -? EGFR
+IGF_1 -? EGR_1
+RSK -? ELK
+E2F1 -? EP300
+IL_4 -? EP300
+EGF -? ERBB2
+HSP90 -? ERBB2
+MEK -? ERK
+PAR1 -? ERK
+TGFB -? ERK
+TNFa -? ERK
+MED1 -? FOXA1
+SMAD2 -? FOXH1
+SMAD4 -? FOXH1
+PTEN -? FOXO1
+SIRT1 -? FOXO1
+AR -? Fkbp5
+ZnT4 -? HOXB13
+HSP90 -? HSP27
+Cdc37 -? HSP90
+DAB2IP -? IGF_1
+SOCS2 -? IGF_1
+AKT -? IKKa
+BMP_6 -? IL_6
+MAPK -? IL_6
+NFKB -? IL_6
+WHSC1 -? IL_6
+EGR_1 -? IL_8
+ERK -? IL_8
+NFKB -? IL_8
+AR -? INPP4B
+NCOR -? INPP4B
+IL_6 -? JAK2
+SOCS2 -? JAK2
+MAPK -? JNK
+Androgen -? MAPK
+EGF -? MAPK
+ERK -? MAPK
+TGFB -? MAPK
+TNFa -? MAPK
+AKT -? MED1
+ERK -? MED1
+EGFR -? MEK
+IGF_1 -? MEK
+Raf -? MEK
+MAPK -? MMP_9
+PDEF -? MMP_9
+TGFB -? MMP_9
+CK2 -? NCOR
+AKT -? NFKB
+EGR_1 -? NFKB
+HOXB13 -? NFKB
+IKKa -? NFKB
+IL_6 -? NFKB
+RhoGAP -? NFKB
+TNFSF11 -? NFKB
+TNFa -? NFKB
+WHSC1 -? NFKB
+Wnt -? NFKB
+CDKN2A -? NKX3_1
+TRAP6 -? PAR1
+HOXB13 -? PDEF
+KAT5 -? PDEF
+EGF -? PI3K
+EpCAM -? PI3K
+IL_4 -? PI3K
+KAT5 -? PI3K
+PTEN -? PI3K
+TGFB -? PI3K
+Vav3 -? PI3K
+PKIB -? PKA_C
+CDKN2A -? PSA
+NFKB -? PSA
+ERK -? RSK
+AKT -? Raf
+HSP90 -? Raf
+Ras -? Raf
+EGFR -? Ras
+FHL2 -? SIRT1
+c_Myc -? SKP2
+mTOR -? SKP2
+TGFB -? SMAD2
+MED15 -? SMAD3
+TGFB -? SMAD3
+TGFB -? SMAD4
+Androgen -? SOCS2
+IL_6 -? STAT3
+AR -? TGFB
+MED15 -? TGFB
+SKIP -? TGFB
+TGFB -? TNFSF11
+NKX3_1 -? TNFa
+MED1 -? UBE2C
+AR -? WHSC1
+AR -? c_Myc
+AKT -? mTOR
+$ACK1: HSP90
+$AKT: (!(EBP1 & (INPP4B & Fkbp5)) & !(!HSP90 & (!PKA_C & (!CXCL1 & (!TNFa & !PI3K)))))
+$AR: ((FOXH1 & (ERBB2 & (EGFR & (FOXO1 & (CDKN2A & (DAB2IP & (EBP1 & !(SIAH2 & NCOR)))))))) & !(!AKT & (!Androgen & (!EP300 & (!(Cdc37 & Vav3) & (!MED1 & (!FHL2 & (!CACNA1D & (!NFKB & (!Vav3 & !IL_6))))))))))
+$AT2R: MTUS1
+$Androgen: CACNA1D
+$BAK: !Bcl_XL
+$BCL_2: NFKB
+$BMP_6: NFKB
+$Bcl_XL: !(!AR & !BCL_2)
+$Bmi1: !(PTEN & !E2F1)
+$CACNA1D: (TMPRSS2 & ERG)
+$CASP3: !((!NKX3_1 & CDKN1B) & !JNK)
+$CCND: !(!AR & (!ERBB2 & (!IL_8 & !(WHSC1 & NFKB))))
+$CDKN1A: (!(RAC1 & HOXB13) & !(!SMAD3 & !SMAD4))
+$CDKN1B: !SKP2
+$CDKN2A: !Bmi1
+$CXCL1: NFKB
+$DAB2IP: Wnt
+$E2F1: !(!CDKN1A & !IKKa)
+$EGF: !AT2R
+$EGFR: !(!ADAM17 & !EGF)
+$EGR_1: IGF_1
+$ELK: RSK
+$EP300: !(!IL_4 & !E2F1)
+$ERBB2: !(!HSP90 & !EGF)
+$ERK: !(!PAR1 & (!TNFa & (!TGFB & !MEK)))
+$FOXA1: MED1
+$FOXH1: !(SMAD2 & SMAD4)
+$FOXO1: (!SIRT1 & PTEN)
+$Fkbp5: AR
+$HOXB13: !ZnT4
+$HSP27: !HSP90
+$HSP90: Cdc37
+$IGF_1: !(!DAB2IP & SOCS2)
+$IKKa: AKT
+$IL_6: !(!MAPK & (!(WHSC1 & NFKB) & !BMP_6))
+$IL_8: !(!ERK & (!EGR_1 & !NFKB))
+$INPP4B: (AR & NCOR)
+$JAK2: !(!IL_6 & SOCS2)
+$JNK: MAPK
+$MAPK: !(!ERK & (!Androgen & (!EGF & (!TGFB & !TNFa))))
+$MED1: !(!ERK & !AKT)
+$MEK: !(!Raf & (!IGF_1 & !EGFR))
+$MMP_9: !(!MAPK & (!TGFB & !PDEF))
+$NCOR: !CK2
+$NFKB: (!IKKa & !(!EGR_1 & (!TNFSF11 & (!WHSC1 & (!IL_6 & (!TNFa & (!HOXB13 & (!Wnt & (!RhoGAP & !AKT)))))))))
+$NKX3_1: !CDKN2A
+$PAR1: TRAP6
+$PDEF: !(!KAT5 & HOXB13)
+$PI3K: !(!EGF & (!IL_4 & (PTEN & (!TGFB & (!EpCAM & (!KAT5 & !Vav3))))))
+$PKA_C: PKIB
+$PSA: !(!NFKB & CDKN2A)
+$RSK: ERK
+$Raf: (!AKT & !(!HSP90 & !Ras))
+$Ras: EGFR
+$SIRT1: FHL2
+$SKP2: !(!c_Myc & !mTOR)
+$SMAD2: TGFB
+$SMAD3: !(!TGFB & !MED15)
+$SMAD4: TGFB
+$SOCS2: Androgen
+$STAT3: IL_6
+$TGFB: !(!AR & (!SKIP & !MED15))
+$TNFSF11: TGFB
+$TNFa: NKX3_1
+$UBE2C: MED1
+$WHSC1: AR
+$c_Myc: AR
+$mTOR: AKT
+
