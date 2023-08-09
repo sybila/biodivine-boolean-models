@@ -5,7 +5,7 @@
  - Regulations: 533
  - Publication: https://doi.org/10.1186/1752-0509-2-36
  - Source: https://research.cellcollective.org/?dashboard=true#module/1582:1/signaling-in-macrophage-activation/1
- - Keywords: cell-collective, curated, repaired
+ - Keywords: cell-collective, curated, repaired, grn-principles
 
 
 ### Modifications
