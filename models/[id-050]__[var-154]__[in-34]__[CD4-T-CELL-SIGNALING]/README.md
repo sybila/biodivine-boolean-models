@@ -5,7 +5,7 @@
  - Regulations: 351
  - Publication: https://doi.org/10.3389/fimmu.2014.00599
  - Source: https://research.cellcollective.org/?dashboard=true#module/3521:1/cd4-t-cell-signaling/1
- - Keywords: cell-collective, curated, repaired
+ - Keywords: cell-collective, grn-principles, curated, repaired
 
 
 ### Modifications

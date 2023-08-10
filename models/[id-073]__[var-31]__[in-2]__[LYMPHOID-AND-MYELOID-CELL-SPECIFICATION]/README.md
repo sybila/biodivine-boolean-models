@@ -3,7 +3,7 @@
  - Variables: 31
  - Inputs: 2
  - Regulations: 94
- - Publication: https://doi.org/10.1073/pnas.161062211
+ - Publication: https://doi.org/10.1073/pnas.1610622114
  - Source: ['https://research.cellcollective.org/?dashboard=true#module/8186:1/lymphoid-and-myeloid-cell-specification-and-transdifferentiation/1', 'https://www.ebi.ac.uk/biomodels/MODEL1610240000']
  - Keywords: cell-collective, biomodels, curated, repaired
 

@@ -3,7 +3,7 @@
  - Variables: 17
  - Inputs: 5
  - Regulations: 52
- - Publication: https://link.springer.com/article/10.1007/s11538-021-00937-w
+ - Publication: https://doi.org/10.1007/s11538-021-00937-w
  - Source: https://link.springer.com/article/10.1007/s11538-021-00937-w/tables/9
  - Keywords: curated
 

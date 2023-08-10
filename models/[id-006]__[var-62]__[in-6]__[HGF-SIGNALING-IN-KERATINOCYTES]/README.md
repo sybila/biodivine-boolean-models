@@ -5,7 +5,7 @@
  - Regulations: 103
  - Publication: https://doi.org/10.1093/bioinformatics/bts410
  - Source: https://research.cellcollective.org/?dashboard=true#module/1969:1/hgf-signaling-in-keratinocytes/1
- - Keywords: cell-collective, curated
+ - Keywords: cell-collective, grn-principles, curated
 
 
 ### Modifications

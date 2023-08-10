@@ -5,7 +5,7 @@
  - Regulations: 51
  - Publication: https://doi.org/10.1186/1752-0509-3-1
  - Source: https://research.cellcollective.org/?dashboard=true#module/1607:1/mammalian-cell-cycle/1
- - Keywords: cell-collective, curated, repaired
+ - Keywords: cell-collective, grn-principles, curated, repaired
 
 
 ### Modifications

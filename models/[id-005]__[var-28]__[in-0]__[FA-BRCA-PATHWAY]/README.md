@@ -5,7 +5,7 @@
  - Regulations: 123
  - Publication: https://doi.org/10.1093/bioinformatics/bts036
  - Source: https://research.cellcollective.org/?dashboard=true#module/1778:1/fa-brca-pathway/1
- - Keywords: cell-collective, curated, repaired
+ - Keywords: cell-collective, grn-principles, curated, repaired
 
 
 ### Modifications
