@@ -10,9 +10,10 @@ from os import listdir, mkdir
 from os.path import isdir, isfile
 from biodivine_aeon import *
 from datetime import datetime
-from utils import inputs_free, inputs_constant, inputs_identity
+from utils import inputs_free, inputs_constant, inputs_identity, output_model
 
 import json
+import random
 
 ENDC = '\033[0m'
 BOLD = '\033[1m'
@@ -37,17 +38,52 @@ while True:
 
 INPUTS = "free"
 while True:
-	print("Choose how model inputs are represented [true/false/identity/free; default: free]")
+	print("Choose the representation of model inputs (i.e. source nodes) [true/false/identity/free/random; default: free]")
 	print(BOLD, end="")	
 	user_inputs = input().lower()
 	print(ENDC, end="")
 	if user_inputs == "":
 		user_inputs = "free"
-	if user_inputs in ["true", "false", "identity", "free"]:
+	if user_inputs in ["true", "false", "identity", "free", "random"]:
 		INPUTS = user_inputs
 		print(f"Selected input representation: {BOLD}{user_inputs}{ENDC}")
 		break
 	print("Invalid representation chosen.")
+
+SAMPLE_COUNT = 0
+SAMPLE_SEED = 0
+if INPUTS == "random":
+	while True:
+		print("Choose how many unique random input valuations should be sampled (at most) [positive integer; default: 32]")
+		print(BOLD, end="")
+		try:
+			user_count = input().lower()
+			print(ENDC, end="")
+			if user_count == "":
+				user_count = 32
+			user_count = int(user_count)
+			if user_count > 0:
+				SAMPLE_COUNT = user_count
+				print(f"Selected {BOLD}{user_count}{ENDC} random samples.")
+				break
+		except:
+			print(ENDC, end="")
+			print("Invalid sample count.")	
+	while True:
+		print("Choose a seed for random sampling [integer; default: 0]")
+		print(BOLD, end="")
+		try:
+			user_seed = input().lower()
+			print(ENDC, end="")
+			if user_seed == "":
+				user_seed = 0
+			user_seed = int(user_seed)
+			SAMPLE_SEED = user_seed
+			print(f"Selected {BOLD}{user_seed}{ENDC} as the random seed.")
+			break
+		except:
+			print(ENDC, end="")
+			print("Invalid seed.")	
 
 # Read filter string from user input.
 
@@ -149,30 +185,83 @@ for model_dir in model_directories:
 
 		meta_csv_summary += f"{metadata['id']:03d}, {metadata['name']}, {metadata['variables']}, {metadata['inputs']}, {metadata['regulations']}\n"
 
-		if INPUTS == "free":
-			model = inputs_free(model)
-		if INPUTS == "true" or INPUTS == "false":
-			model = inputs_constant(model, INPUTS)
-		if INPUTS == "identity":
-			model = inputs_identity(model)
+		if INPUTS == "random":
+			# For random sampling, we have to be a bit more clever...
+			param_model = inputs_free(model)
+			stg = SymbolicAsyncGraph(param_model)
+			const_model = inputs_constant(stg.network(), "true")			
+			all_colors = stg.unit_colors()			
+			if all_colors.is_singleton():
+				# This model does not have inputs, we can just output it.				
+				output_model(OUT_DIR, const_model, metadata['id'], FORMAT)
+			else:
+				ctx = stg.symbolic_context()
+				bdd_vars = ctx.bdd_variable_set()
+				rng = random.Random(SAMPLE_SEED)
 
-		if FORMAT == "aeon":
-			Path(f"{OUT_DIR}/{metadata['id']:03d}.aeon").write_text(model.to_aeon())
-		if FORMAT == "bnet":
-			Path(f"{OUT_DIR}/{metadata['id']:03d}.bnet").write_text(model.to_bnet())
-		if FORMAT == "sbml":
-			Path(f"{OUT_DIR}/{metadata['id']:03d}.sbml").write_text(model.to_sbml())
+				# Prepare a mapping from variable names to their corresponding symbolic 
+				# parameter variables.				
+				input_symbolic_var = {}
+				for var in param_model.implicit_parameters():
+					name = param_model.get_variable_name(var)
+					table = ctx.get_implicit_function_table(var)
+					assert len(table) == 1
+					symbolic_var = table[0][1]
+					input_symbolic_var[name] = symbolic_var
+
+				print(f" >> Sampling... ", end="")
+				for s in range(SAMPLE_COUNT):					
+					if all_colors.is_empty():
+						# This model has fewer valuations than the sample count.
+						break
+					print(f"{s+1}; ", end="")
+
+					# Here, we pick a random valuation and subtract it from the set of colors.
+					# Unfortunately, there doesn't seem to be a nicer way to do this atm.
+					# But it would be cool to add this to the API in the future.
+
+					valuation_seed = rng.randrange(0, 2**30)
+					valuation_sample = all_colors.to_bdd().valuation_random(valuation_seed)
+					valuation_bdd = bdd_vars.mk_valuation(valuation_sample)
+					# We have to project away the state variables from the valuation
+					# and this seems to be the easiest way to do it.
+					valuation_set = stg.unit_colored_vertices().copy_with(valuation_bdd)
+					all_colors = all_colors.minus(valuation_set.colors())
+
+					suffix = "_"
+					for (name, bdd_var) in input_symbolic_var.items():
+						if valuation_sample[bdd_var]:
+							suffix += "1"
+							const_model.set_update_function(name, "true")
+						else:
+							suffix += "0"
+							const_model.set_update_function(name, "false")
+					output_model(OUT_DIR, const_model, metadata['id'], FORMAT, suffix)
+				print(" Done.")
+		else:
+			if INPUTS == "free":
+				model = inputs_free(model)
+			if INPUTS == "true" or INPUTS == "false":
+				model = inputs_constant(model, INPUTS)
+			if INPUTS == "identity":
+				model = inputs_identity(model)
+
+			output_model(OUT_DIR, model, metadata['id'], FORMAT)
 
 
 Path(f'{OUT_DIR}/summary.csv').write_text(meta_csv_summary)
 print(f"Dataset summary written to `{OUT_DIR}/summary.csv`.")
 
 with open(f'{OUT_DIR}/metadata.json', "w") as file:
-	json.dump({
+	metadata = {
 		'timestamp': f"{datetime.now()}",
 		'model_format': FORMAT,
 		'input_representation': INPUTS,
 		'filter_expression': FILTER,
 		'output_dir': OUT_DIR,
-	}, file)
+	}
+	if INPUTS == "random":
+		metadata['sample_count'] = SAMPLE_COUNT
+		metadata['sample_seed'] = SAMPLE_SEED
+	json.dump(metadata, file)
 print(f"Dataset metadata written to `{OUT_DIR}/metadata.json`.")

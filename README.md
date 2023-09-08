@@ -1,14 +1,14 @@
 # Biodivine Boolean Models (BBM) Benchmark Dataset
 
-**What is this?** BBM is a collection of Boolean models (Boolean networks) used in systems biology. It aims to be a comprehensive collection suitable for benchmarking and testing new tools and methods. At the moment, there are **210+ models** from major model repositories (GINsim, CellCollective, Biomodels, etc.) or individual publications. Additionally, the repository is configured to automatically check integrity of all models and generate different model formats for different tools.
+**What is this?** BBM is a collection of Boolean models (Boolean networks) used in systems biology. It aims to be a comprehensive collection suitable for benchmarking and testing new tools and methods. At the moment, there are **230+ models** from major model repositories (GINsim, CellCollective, Biomodels, etc.) or individual publications. Additionally, the repository is configured to automatically check integrity of all models and generate different model formats for different tools.
 
 Note that this is **not** a biological database. Each model has a link to the original source where you can find more biologically relevant data. However, we do not aim to preserve or categorise this additional information in any way.
 
-If you want to know more, you can read our [technical report](./report/report.pdf).
+If you want to learn more, you can read our [technical report](./report/report.pdf).
 
 **Where are the models?** If you just need individual models, you can head to the `./models` directory where each model has a subdirectory containing `bnet`/`aeon`/`sbml` source files as well as JSON metadata file and a human-friendly readme. There is also a `models/summary.csv` file with the full list of models. Alternatively, you can download one of the "edition archives" in the [repository releases](https://github.com/sybila/biodivine-boolean-models/releases). These contain the same model files as the `./models` directory, but are grouped by model format and exported as a single directory, so they are easier to digest by scripts or programs.
 
-> Note on model inputs: By default, all inputs (entities with no incoming regulations) are represented as "free" variables (i.e. their update function is omitted). However, this is not supported by all tools. If you need to, you can change this input representation when generating a custom "edition" of the dataset (see below).
+> Note on model inputs (source nodes): By default, all inputs (entities with no incoming regulations) are represented as "free" variables (i.e. their update function is omitted). However, this is not supported by all tools. If you need to, you can change this input representation when generating a custom "edition" of the dataset (see below).
 
 > Note on multivalued models: The dataset also includes Booleanized versions of multi-valued models. If you wish to exclude these, they can be identified using the keyword `multi-valued`.
 
@@ -24,9 +24,11 @@ bioRxiv 2023.06.12.544361; doi: https://doi.org/10.1101/2023.06.12.544361
 
 ### Custom Model Editions
 
-If you need models with specific properties, you can use `bundle.py` to generate custom model editions. In particular, for each edition you can pick the desired format (`bnet`/`aeon`/`sbml`), desired input representation (`free`, constant `true` or `false`, or the `identity` function), and you can filter the models using a Python expression (e.g. you want to only include models with specific keywords).
+If you need to generate models with specific properties (or formats), you can use `bundle.py` to generate custom model editions. In particular, for each edition you can pick the desired format (`bnet`/`aeon`/`sbml`), desired input representation (`free`, constant `true` or `false`, `random`, or the `identity` function), and you can filter the models using a Python expression (e.g. you want to only include models with specific keywords or size).
 
-Once you have [AEON.py](https://github.com/sybila/biodivine-aeon-py) installed (`pip install biodivine_aeon`), you can simply run `python3 bundle.py` and answer the script prompts with your desired specification. For inspiration, here are several filter expression that can be useful for generating custom editions:
+> Random input valuations: If you select `random` input values, you'll be given the option to specify how many samples should be taken for each model (assuming the model has enough valuations). Each sample is unique and is saved as an individual model file. Furthermore, you will be able to select what random seed should be used to initialize the generator for each model. As such, the process should be fully reproducible.
+
+Once you have [AEON.py](https://github.com/sybila/biodivine-aeon-py) installed (`pip install -r requirements.txt`), you can simply run `python3 bundle.py` and answer the script prompts with your desired specification. For inspiration, here are several filter expression that can be useful for generating custom editions:
 
 ```
 # Models with at least 10 variables and 5 inputs:

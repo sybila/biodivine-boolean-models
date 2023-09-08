@@ -1,3 +1,4 @@
+from pathlib import Path
 from biodivine_aeon import *
 
 # Note that the methods assume that the model is in the "canonical" format,
@@ -32,3 +33,11 @@ def inputs_identity(model):
 			new_model.set_update_function(var, model.get_update_function(var))
 
 	return new_model
+
+def output_model(dir, model, id, format, suffix = ""):
+	if format == "aeon":
+		Path(f"{dir}/{id:03d}{suffix}.aeon").write_text(model.to_aeon())
+	if format == "bnet":
+		Path(f"{dir}/{id:03d}{suffix}.bnet").write_text(model.to_bnet())
+	if format == "sbml":
+		Path(f"{dir}/{id:03d}{suffix}.sbml").write_text(model.to_sbml())
