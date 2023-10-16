@@ -1,1 +1,15 @@
-{"id": 94, "name": "MACROPHAGE-POLARIZATION-STATES", "url-publication": "https://doi.org/10.3389/fphys.2018.01659", "url-model": "https://doi.org/10.3389/fphys.2018.01659", "keywords": ["curated", "repaired"], "variables": 23, "inputs": 8, "regulations": 52}
+{
+    "id": 94,
+    "name": "MACROPHAGE-POLARIZATION-STATES",
+    "url-publication": "https://doi.org/10.3389/fphys.2018.01659",
+    "url-model": "https://doi.org/10.3389/fphys.2018.01659",
+    "keywords": [
+        "curated",
+        "repaired"
+    ],
+    "variables": 23,
+    "inputs": 8,
+    "regulations": 52,
+    "notes": "### Modifications\n\nThe model is originally published as a `.bnet` file, but the paper also contains information about regulations. As such, these were also added, resulting in an `.aeon` file.\n\nThe following regulations were also added because they are missing in the published list (some are visible in the main figure though - hence we know their monotonicity):\n - `IL1b -> IL1R`\n - `IL1b_e -> IL1R`\n - `IL10_out -> IL10R`\n - `PPARg -? PPARg`\n - `STAT6 -? STAT6`\n - `JMJD3 -? JMJD3`\n - `STAT3 -? STAT3`\n - `ERK -? ERK`\n\nFinally, two regulations turned out to be non-essential:\n - Regulation `IL16_e -> IL1R` marked as non-essential.\n - Regulation `IL1b_e -> FcgR` marked as non-essential.",
+    "bib": "@article{bbm-094,\n  title={Gene regulatory network modeling of macrophage differentiation corroborates the continuum hypothesis of polarization states},\n  author={Palma, Alessandro and Jarrah, Abdul Salam and Tieri, Paolo and Cesareni, Gianni and Castiglione, Filippo},\n  journal={Frontiers in physiology},\n  volume={9},\n  pages={1659},\n  year={2018},\n  publisher={Frontiers Media SA}\n}"
+}

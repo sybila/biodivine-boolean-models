@@ -1,1 +1,16 @@
-{"id": 224, "name": "BORTEZOMIB-PHARMACODYNAMIC-HETEROGENEITY", "url-publication": "https://doi.org/10.1124/jpet.118.247924", "url-model": "https://github.com/ckadelka/DesignPrinciplesGeneNetworks/blob/02c847512151f43e1e74619b6f5e6c803c434b9c/update_rules_models_in_literature_we_randomly_come_across/29632237.txt", "keywords": ["grn-principles", "curated", "repaired"], "variables": 87, "inputs": 8, "regulations": 210}
+{
+    "id": 224,
+    "name": "BORTEZOMIB-PHARMACODYNAMIC-HETEROGENEITY",
+    "url-publication": "https://doi.org/10.1124/jpet.118.247924",
+    "url-model": "https://github.com/ckadelka/DesignPrinciplesGeneNetworks/blob/02c847512151f43e1e74619b6f5e6c803c434b9c/update_rules_models_in_literature_we_randomly_come_across/29632237.txt",
+    "keywords": [
+        "grn-principles",
+        "curated",
+        "repaired"
+    ],
+    "variables": 87,
+    "inputs": 8,
+    "regulations": 210,
+    "notes": "Obtained from the `grn-principles` dataset, as I can't seem to find the \noriginal model files.\n\n### Modifications\n\nThe following regulations were adjusted to make the model logically consistent:\n\n - Regulation `PIP3 -> AKT` set as non-essential.\n - Regulation `BLIMP1 -> Bcl6` set as non-essential.\n - Regulation `mTORC1 -> DEPTOR` set as non-essential.\n - Regulation `mTORC2 -> DEPTOR` set as non-essential.\n - Regulation `DEPTOR -> mTORC1` set as non-essential.\n - Regulation `PRAS40 -> mTORC1` set as non-essential.\n - Regulation `DEPTOR -> mTORC2` set as non-essential.\n - Regulation `Prot -> pNFkB` set as non-essential.\n - Regulation `CDK2 -> pRB` set as non-essential.\n - Regulation `CYCB -> pRB` set as non-essential.\n - Regulation `IKK -> pSTAT3` set as non-essential.",
+    "bib": "@article{bbm-224,\n  title={Network-based analysis of bortezomib pharmacodynamic heterogeneity in multiple myeloma cells},\n  author={Ramakrishnan, Vidya and Mager, Donald E},\n  journal={Journal of Pharmacology and Experimental Therapeutics},\n  volume={365},\n  number={3},\n  pages={734--751},\n  year={2018},\n  publisher={ASPET}\n}"
+}

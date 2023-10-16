@@ -1,1 +1,16 @@
-{"id": 225, "name": "INTEGRATED-PROSTATE-CANCER-NETWORK", "url-publication": "https://doi.org/10.1038/srep17280", "url-model": "https://github.com/ckadelka/DesignPrinciplesGeneNetworks/blob/02c847512151f43e1e74619b6f5e6c803c434b9c/update_rules_models_in_literature_we_randomly_come_across/get_rules_for26603105_tabular.py", "keywords": ["grn-principles", "curated", "repaired"], "variables": 69, "inputs": 22, "regulations": 155}
+{
+    "id": 225,
+    "name": "INTEGRATED-PROSTATE-CANCER-NETWORK",
+    "url-publication": "https://doi.org/10.1038/srep17280",
+    "url-model": "https://github.com/ckadelka/DesignPrinciplesGeneNetworks/blob/02c847512151f43e1e74619b6f5e6c803c434b9c/update_rules_models_in_literature_we_randomly_come_across/get_rules_for26603105_tabular.py",
+    "keywords": [
+        "grn-principles",
+        "curated",
+        "repaired"
+    ],
+    "variables": 69,
+    "inputs": 22,
+    "regulations": 155,
+    "notes": "### Availability\n\nThe model is available as list of polynomials. To the best of my knowledge, these \nshould be interpreted as \"modulo two\". Under this assumption, every +1 is a negation\nand every * is a conjunction. As such, the rules were updated manually to reflect this\nand create a `.bnet` network. \n\nI am not sure what `* *` means. I am interpreting it as a conjunction with a typo.\nIf it is exponentiation, God help us all.\n\n### Modifications\n\nVariable `NKX3.1` renamed to `NKX3_1`, and generally changed all `-` in variable names to `_`.\n\nRemoved identity update functions on `ADAM17`, `CK2`, `Cdc37`, `EBP1`, `EpCAM`, `ERG`, `FHL2`, `IL_4`, `KAT5`, `MED15`, `MTUS1`, `PKIB`, `PTEN`, `RAC1`, `RhoGAP`, `SIAH2`, `SKIP`, `TMPRSS2`, `TRAP6`, `Vav3`, `Wnt` and `Znt4` to make them canonical inputs.\n\nFinally, regulation `Cdc37 -> AR` has been marked as non-essential.",
+    "bib": "@article{bbm-225,\n  title={Integrated network model provides new insights into castration-resistant prostate cancer},\n  author={Hu, Yanling and Gu, Yinmin and Wang, Huimin and Huang, Yuanjie and Zou, Yi Ming},\n  journal={scientific Reports},\n  volume={5},\n  number={1},\n  pages={17280},\n  year={2015},\n  publisher={Nature Publishing Group UK London}\n}"
+}

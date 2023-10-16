@@ -1,1 +1,15 @@
-{"id": 205, "name": "EPITHELIAL-MESENCHYMAL-TRANSITION-IN-BLADDER", "url-publication": "https://doi.org/10.1038/s41467-017-00268-2", "url-model": "https://sourceforge.net/projects/e2f1map/files/", "keywords": ["curated", "repaired"], "variables": 41, "inputs": 4, "regulations": 118}
+{
+    "id": 205,
+    "name": "EPITHELIAL-MESENCHYMAL-TRANSITION-IN-BLADDER",
+    "url-publication": "https://doi.org/10.1038/s41467-017-00268-2",
+    "url-model": "https://sourceforge.net/projects/e2f1map/files/",
+    "keywords": [
+        "curated",
+        "repaired"
+    ],
+    "variables": 41,
+    "inputs": 4,
+    "regulations": 118,
+    "notes": "### Modifications\n\nThe model is constructed from the given reaction list. Note that the output `EMT` node is technically multivalued, but this does not play due to it being an output, we thus only provide a Boolean abstraction. Note that regulation info is also available as part of the original publication (however, only as a larger network). We do not include it explicitly because the logical rules are created semi-automatically anyway - i.e. we do not expect to be an error in translation.\n\nFurthermore, following regulations were updated as non-essential because they do not have impact on the outcomes of the respective update functions (althugh note that for `EMT` this might be due to the Boolean abstraction):\n - `axin2 -> ctnnb1`\n - `mir_200b_3p -> emt`\n - `smad2 -> emt`\n - `smad4 -> emt`\n - `snai1 -> emt`\n - `smad2 -> myc`\n - `smad2 -> sp1`",
+    "bib": "@article{bbm-205,\n\ttitle={Unraveling a tumor type-specific regulatory core underlying E2F1-mediated epithelial-mesenchymal transition to predict receptor protein signatures},\n\tauthor={Khan, Faiz M and Marquardt, Stephan and Gupta, Shailendra K and Knoll, Susanne and Schmitz, Ulf and Spitschak, Alf and Engelmann, David and Vera, Julio and Wolkenhauer, Olaf and P{\\\"u}tzer, Brigitte M},\n\tjournal={Nature communications},\n\tvolume={8},\n\tnumber={1},\n\tpages={1--15},\n\tyear={2017},\n\tpublisher={Nature Publishing Group}\n}"
+}
