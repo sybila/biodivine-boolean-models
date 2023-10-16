@@ -174,6 +174,8 @@ for model_dir in source_directories:
 	metadata['variables'] = variables
 	metadata['inputs'] = inputs
 	metadata['regulations'] = regulations
+	metadata['notes'] = notes
+	metadata['bib'] = bib
 
 	# Add a row to the metadata summary csv:
 	meta_csv_summary += f"{model_id:03d}, {model_name}, {variables}, {inputs}, {regulations}\n"
@@ -189,7 +191,7 @@ for model_dir in source_directories:
 	Path(f'models/{output_directory}/model.bnet').write_text(model.to_bnet())
 
 	with open(f'models/{output_directory}/metadata.json', "w") as file:
-		json.dump(metadata, file)
+		json.dump(metadata, file, indent=4)
 
 	readme = f'# \\[{model_id:03d}\\] {model_name}\n\n'
 	readme += f' - Variables: {variables}\n'
