@@ -26,7 +26,7 @@ def read_dir_name(dir_name):
 		print("ERROR: Invalid source directory:", dir_name)
 	return (int(result.group(1)), result.group(2))	
 
-def check_metadata(id, name, metadata):
+def check_metadata(id, name, metadata, bib):
 	if (not 'id' in metadata) or metadata['id'] != id:
 		print("ERROR: Invalid id in metadata of", name)
 		sys.exit(128)
@@ -45,6 +45,10 @@ def check_metadata(id, name, metadata):
 
 	if (not 'keywords' in metadata) or (metadata['keywords'] == None):
 		print("ERROR: Missing keywords attribute in", name)
+		sys.exit(128)
+
+	if (not f'bbm-{int(id):03d}' in bib):
+		print(f"ERROR: Missing a `bbm-{int(id):03d}` key in the `citation.bib` file.")
 		sys.exit(128)
 
 def check_unused_variables(model):
@@ -139,7 +143,7 @@ for model_dir in source_directories:
 	with open(metadata_file) as file:
 		metadata = json.load(file)
 
-	check_metadata(model_id, model_name, metadata)
+	check_metadata(model_id, model_name, metadata, bib)
 
 
 	# Load the model (including syntactic check)

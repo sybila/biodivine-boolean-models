@@ -21,8 +21,13 @@ The model is provided without modifications.
 ### Model citation
 
 ```
-@article{bbm-999,
-  
+@article{bbm-223,
+  title={A Network Model to Explore the Effect of the Micro-environment on Endothelial Cell Behavior during Angiogenesis},
+  author={Nathan Weinstein and Luis Mendoza and Isidoro Gitler and Jaime Klapp},
+  journal={Frontiers in Physiology},
+  year={2017},
+  volume={8},
+  url={https://api.semanticscholar.org/CorpusID:12294741}
 }
 ```
 

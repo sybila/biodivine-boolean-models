@@ -15,16 +15,14 @@ The model is reproduced based on the table and figure within the paper.
 ### Model citation
 
 ```
-@article {bbm-208,
-	author = {H{\'e}rault, L{\'e}onard and Poplineau, Mathilde and Duprez, Estelle and Remy, {\'E}lisabeth},
-	title = {A novel Boolean network inference strategy to model early hematopoiesis aging},
-	year = {2022},
-	doi = {10.1101/2022.02.08.479548},
-	publisher = {Cold Spring Harbor Laboratory},
-	URL = {https://www.biorxiv.org/content/early/2022/05/08/2022.02.08.479548},
-	eprint = {https://www.biorxiv.org/content/early/2022/05/08/2022.02.08.479548.full.pdf},
-	journal = {bioRxiv}
+@article{bbm-208,
+  title={A novel Boolean network inference strategy to model early hematopoiesis aging},
+  author={L{\'e}onard H{\'e}rault and Mathilde Poplineau and Estelle Duprez and {\'E}lisabeth Remy},
+  journal={Computational and Structural Biotechnology Journal},
+  year={2022},
+  volume={21},
+  pages={21 - 33},
+  url={https://api.semanticscholar.org/CorpusID:248672123}
 }
-
 ```
 

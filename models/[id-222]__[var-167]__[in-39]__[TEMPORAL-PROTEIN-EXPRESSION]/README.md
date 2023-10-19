@@ -52,8 +52,14 @@ The following regulations were updated to fix logical inconsistencies:
 ### Model citation
 
 ```
-@article{bbm-999,
-  
+@article{bbm-222,
+  title={Temporal protein expression pattern in intracellular signalling cascade during T-cell activation: A computational study},
+  author={Ganguli, Piyali and Chowdhury, Saikat and Bhowmick, Rupa and Sarkar, Ram Rup},
+  journal={Journal of biosciences},
+  volume={40},
+  pages={769--789},
+  year={2015},
+  publisher={Springer}
 }
 ```
 

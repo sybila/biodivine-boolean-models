@@ -19,7 +19,7 @@ The model is provided without modifications.
 ### Model citation
 
 ```
-@article{ryll2014model,
+@article{bbm-228,
   title={A model integration approach linking signalling and gene-regulatory logic with kinetic metabolic models},
   author={Ryll, Anke and Bucher, Joachim and Bonin, Anne and Bongard, Sophia and Gon{\c{c}}alves, E and Saez-Rodriguez, Julio and Niklas, Jens and Klamt, Steffen},
   journal={Biosystems},

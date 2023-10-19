@@ -19,10 +19,12 @@ The following regulations were modified to ensure consistency of update function
 
 ```
 @article{bbm-024,
-  title={Ergodic sets as cell phenotype of budding yeast cell cycle},
-  author={Todd, Robert G and Helikar, Tom{\'a}{\v{s}}},
+  title={Ergodic Sets as Cell Phenotype of Budding Yeast Cell Cycle},
+  author={Robert G. Todd and Tom{\'a}{\vs} Helikar},
+  journal={PLoS ONE},
   year={2012},
-  publisher={Public Library of Science San Francisco, USA}
+  volume={7},
+  url={https://api.semanticscholar.org/CorpusID:17537524}
 }
 ```
 
