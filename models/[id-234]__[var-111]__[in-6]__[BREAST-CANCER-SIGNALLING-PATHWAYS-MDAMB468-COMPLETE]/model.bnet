@@ -1,0 +1,112 @@
+targets,factors
+v_ABL1, (v_SRC & v_GRB2)
+v_ABL2, v_ABL1
+v_AKT_i, ((v_MTORC2_c | v_PDPK1) & v_PIP3)
+v_APC, v_AXIN1
+v_AXIN1, (!v_DVL1 & v_GSK3B)
+v_BAD, !(v_PAK1 | (v_AKT_i | (v_ERK_i | v_PIM)))
+v_BAK1, (((v_BIM | v_P53) | v_BID) | !v_MCL1)
+v_BAX, (((v_BIM & v_P53) & v_BID) | !v_MCL1)
+v_BCL2, (!(v_BAD | v_BIM) & (v_CREB1 & v_ERK_i))
+v_BCLXL, (!(v_BAD | v_BIM) & v_CREB1)
+v_BID, v_CASP8
+v_BIM, (!(v_BCL2 | (v_BCLXL | v_AKT_i)) & (v_FOXO3 & v_FOXO1))
+v_CASP3, (v_CASP9 & v_CASP8)
+v_CASP8, (v_FADD | !(v_ERK_i & v_SRC))
+v_CASP9, ((v_CYCS | v_CASP3) & !((v_ERK_i & v_JAK2) | (v_AKT_i & (v_PRKACA & v_BCLXL))))
+v_CDKN2A, !v_MYC
+v_CEBPB, (v_ERK_i | (v_ABL2 | (v_GSK3B | v_INS)))
+v_CREB1, v_AKT_i
+v_CTNNB1, (!v_DC | (v_WNT1 | (v_SRC | v_AKT_i)))
+v_CYCLIN_D_c, ((v_STAT3 & !(v_GSK3B & (v_CDKN2A & v_P21))) & (v_EIF4E & (v_MYC & v_STAT3)))
+v_CYCS, (v_BAK1 | v_BAX)
+v_DC, (v_APC & v_GSK3B)
+v_DVL1, (v_FZD3 & !v_YAP1)
+v_E2F1, !v_PRB
+v_EGFR, (v_EGF | (v_ABL1 | (v_CTNNB1 | (v_HER2 & v_HER3))))
+v_EIF4E, !v_IVEBP1
+v_ERK_i, v_MEK_i
+v_ESR1, (v_ES & (v_AKT_i & (v_PGR & (v_KMT2D & v_FOXO3))))
+v_FADD, (v_TRADD | v_FAS)
+v_FAS, ((v_FASLG | v_P53) & !v_AKT_i)
+v_FASLG, (v_FASLG & (v_P53 & v_FOXO3))
+v_FOXO1, !v_SGK1
+v_FOXO3, (!(v_AKT_i | v_ERK_i) | v_NFKB1)
+v_FZD3, (v_WNT1 | v_CREB1)
+v_GATA3, !v_STAT1
+v_GRB2, (v_IRS1 & v_SRC)
+v_GRB7, v_INSR
+v_GSK3B, !(v_AKT_i & v_ERK_i)
+v_HER2, v_HER3
+v_HER3, (v_NRG1 & (v_EGFR & v_HER2))
+v_HES1, (v_NCID | !v_CASP3)
+v_HEY1, v_NCID
+v_HRAS, ((v_SOS1 & v_PIP3) | !v_NF1)
+v_HSP90AA1, (!v_PDPK1 & v_ABL1)
+v_IGF1, (v_IGF1 & v_STAT5)
+v_IGF1R, ((v_IGF1R & (v_IGF1 & (v_INS & v_SRC))) | (v_IL8 & v_STAT5))
+v_IL1B, (v_NOS3 & v_RELA)
+v_IL6, (v_IL1B & v_IL6)
+v_IL6R, v_IL6
+v_IL8, (v_TWIST1 | (v_JAK2 & v_STAT5))
+v_INSR, (v_INS | v_FOXO3)
+v_IRS1, !v_S6K1
+v_IVEBP1, !v_MTORC1_c
+v_JAK2, (v_IRS1 | (v_ABL1 & (v_IL8 & v_IL6R)))
+v_JUN, ((v_MAPK8 & v_PPARG) | (v_RELA & (v_ERK_i & v_ESR1)))
+v_KMT2D, ((v_JUN & (v_PAX7 & v_ESR1)) & !v_AKT_i)
+v_KRT14, (v_PAK2 | v_EGFR)
+v_LATS1, (v_NF2 & v_LCK)
+v_LCK, (v_ERK_i & v_ESR1)
+v_MAPK8, (v_RAC1 | (v_RND1 | (v_JUN | v_MYC)))
+v_MCL1, (!v_GSK3B | (v_ERK_i | v_MAPK8))
+v_MDM2, (v_P53 & v_AKT_i)
+v_MEK_i, (v_RAF1 | v_EGFR)
+v_MTORC1_c, v_RHEB
+v_MTORC2_c, (v_PIP3 & !v_S6K1)
+v_MYC, (((v_ESR1 | (v_CTNNB1 | v_PIM)) & !v_GSK3B) | (v_JAK2 & (v_EIF4E & v_STAT3)))
+v_MYOD1, !(v_HES1 | v_NF2)
+v_MYOG, (!v_HEY1 & v_MYOD1)
+v_NCID, v_NOTCH1
+v_NEDD4L, !v_SGK1
+v_NF1, !v_TWIST1
+v_NF2, v_NEDD4L
+v_NFKB1, v_NOTCH1
+v_NOS3, (v_HSP90AA1 | v_AKT_i)
+v_NOTCH1, (v_DLL_i | (v_CTNNB1 | v_LCK))
+v_P21, (!(v_ERK_i | (v_AKT_i | v_MYC)) & v_MYOG)
+v_P53, !v_MDM2
+v_PAK1, (v_TCF4 | v_AKT_i)
+v_PAK2, (v_RAC1 & v_SRC)
+v_PAX7, !v_MYOG
+v_PDPK1, (v_PIP3 & v_IGF1R)
+v_PGR, ((v_P21 & v_PG) & !(v_ESR1 | (v_ERK_i | v_AKT_i)))
+v_PI3K_c, ((v_JUN | (v_EGFR | v_ESR1)) | (v_IRS1 & (v_IGF1R & v_IGF1)))
+v_PIM, v_STAT5
+v_PIP3, (v_PI3K_c & !v_PTEN)
+v_PPARG, (!v_GATA3 & v_CEBPB)
+v_PRB, !v_CYCLIN_D_c
+v_PRKAA2, (v_STK11 | v_STAT1)
+v_PRKACA, (v_AKT_i | v_WNT1)
+v_PTEN, (v_S6K1 & !v_SRC)
+v_RAC1, ((v_PI3K_c & v_DVL1) & !v_AKT_i)
+v_RAF1, (v_HRAS & v_RAS_i)
+v_RAS_i, (v_SOS1 | v_PIP3)
+v_RELA, (v_NFKB1 | v_PIM)
+v_RHEB, !v_TSC2
+v_RND1, (v_GRB7 & v_DVL1)
+v_S6K1, (v_MTORC1_c & v_ERK_i)
+v_SGK1, ((v_MTORC2_c | v_MTORC1_c) & v_PDPK1)
+v_SOS1, (v_GRB2 | v_STAT3)
+v_SRC, (v_PRKACA & v_ESR1)
+v_STAT1, (v_JAK2 | (v_SRC | v_EGFR))
+v_STAT3, ((v_IL1B | (v_SRC | v_MAPK8)) | (v_JAK2 | v_EGFR))
+v_STAT5, (v_JAK2 & (v_SRC | v_EGFR))
+v_STK11, (!v_ERK_i & v_FOXO3)
+v_TCF4, ((v_CTNNB1 & v_JUN) & !v_FOXO1)
+v_TEAD1, (v_YAP1 & v_ABL1)
+v_TRADD, (!v_KRT14 | v_NFKB1)
+v_TSC2, (!v_AKT_i & v_PRKAA2)
+v_TWIST1, (v_ERK_i & (v_JUN & v_MYC))
+v_WNT1, (v_PGR & v_WNT1)
+v_YAP1, !v_LATS1
