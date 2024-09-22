@@ -26,7 +26,7 @@ was updated to:
 
 CYCLIN_D_c, (((STAT3) & !(GSK3B & (CDKN2A & P21)))) & (EIF4E & MYC & STAT3)
 
-as the analysis
+as the analysis stated that TEAD1 and TCF4 have no effect on CYCLIN_D_c.
 
 
 ### Model citation
