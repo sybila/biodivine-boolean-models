@@ -5,7 +5,7 @@
  - Regulations: 271
  - Publication: https://doi.org/10.1371/journal.pone.0298788
  - Source: https://github.com/Ktaoma/BoolSyn
- - Keywords: source (?), curated (?), repaired (?), multi-valued (?)
+ - Keywords: curated, repaired
 
 
 ### Modifications

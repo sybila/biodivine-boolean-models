@@ -5,13 +5,13 @@
  - Regulations: 263
  - Publication: https://doi.org/10.1371/journal.pone.0298788
  - Source: https://github.com/Ktaoma/BoolSyn
- - Keywords: source (?), curated (?), repaired (?), multi-valued (?)
+ - Keywords: curated, repaired
 
 
 ### Modifications
 
 Removed regulations:
-INS
+INS, INS
 PG, PG
 NRG1, NRG1
 FASLG, FASLG
