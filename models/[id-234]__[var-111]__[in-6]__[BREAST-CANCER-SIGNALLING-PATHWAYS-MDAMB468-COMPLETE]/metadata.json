@@ -1,0 +1,17 @@
+{
+    "id": 234,
+    "name": "BREAST-CANCER-SIGNALLING-PATHWAYS-MDAMB468-COMPLETE",
+    "url-publication": "https://doi.org/10.1371/journal.pone.0298788",
+    "url-model": "https://github.com/Ktaoma/BoolSyn",
+    "keywords": [
+        "source (?)",
+        "curated (?)",
+        "repaired (?)",
+        "multi-valued (?)"
+    ],
+    "variables": 111,
+    "inputs": 6,
+    "regulations": 271,
+    "notes": "### Modifications\n\nRemoved regulations:\nPG, PG\nNRG1, NRG1\nINS, INS\nES, ES\nEGF, EGF\nDLL_i, DLL_i\n\nRegulation:\n\nCYCLIN_D_c, (((TEAD1 | TCF4 | STAT3) & !(GSK3B & (CDKN2A & P21)))) & (EIF4E & MYC & STAT3)\n\nwas updated to:\n\nCYCLIN_D_c, (((STAT3) & !(GSK3B & (CDKN2A & P21)))) & (EIF4E & MYC & STAT3)\n\nas the analysis stated that TEAD1 and TCF4 have no effect on CYCLIN_D_c.\n",
+    "bib": "@article{bbm-234,\n\tauthor = {Taoma, Kittisak and Ruengjitchatchawalya, Marasri and Liangruksa, Monrudee and Laomettachit, Teeraphan},\n\tyear = {2024},\n\tdoi = {https://doi.org/10.1371/journal.pone.0298788},\n\ttitle = {Boolean modeling of breast cancer signaling pathways uncovers mechanisms of drug synergy},\n\tpublisher = {PLOS ONE}\n}\n\n"
+}
