@@ -13,7 +13,7 @@ for file in os.listdir('./sbml-true'):
 	bn = BooleanNetwork.from_file('./sbml-true/'+file)
 	for var in bn.variables():
 		total_variables += 1
-		regs = bn.regulators(var)
+		regs = bn.predecessors(var)
 		total_regulations += len(regs)
 		if len(regs) > 0:
 			total_non_inputs += 1

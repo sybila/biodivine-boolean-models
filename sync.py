@@ -51,46 +51,43 @@ def check_metadata(id, name, metadata, bib):
 		print(f"ERROR: Missing a `bbm-{int(id):03d}` key in the `citation.bib` file.")
 		sys.exit(128)
 
-def check_unused_variables(model):
-	graph = model.graph()
-	for var in graph.variables():
-		name = graph.get_variable_name(var)
-		if len(graph.regulators(var)) == 0 and len(graph.targets(var)) == 0:			
+def check_unused_variables(model: BooleanNetwork):
+	for var in model.variables():
+		name = model.get_variable_name(var)
+		if len(model.predecessors(var)) == 0 and len(model.successors(var)) == 0:			
 			print("ERROR: Variable", name, "is unused.")
 			sys.exit(128)
 		function = model.get_update_function(var)		
-		if function is not None and function.as_variable() == var and len(graph.regulators(var)) <= 1:
+		if function is not None and function.as_var() == var and len(model.predecessors(var)) <= 1:
 			print("ERROR: Variable", name, "is effectively an input.")
 			sys.exit(128)
 
-def erase_inputs(model):
-	graph = model.graph()
-	for var in graph.variables():
-		if len(graph.regulators(var)) == 0:
+def erase_inputs(model: BooleanNetwork):
+	for var in model.variables():
+		if len(model.predecessors(var)) == 0:
 			model.set_update_function(var, None)
 	return model
 
-def check_integrity(model):
+def check_integrity(model: BooleanNetwork):
 	# This will throw an error if the model is invalid.
-	async_graph = SymbolicAsyncGraph(model)
+	async_graph = AsynchronousGraph(model)
+	assert async_graph.network_variable_count() == model.variable_count()
 
-def model_stats(model):
-	graph = model.graph()
+def model_stats(model: BooleanNetwork):
 	variables = 0
 	inputs = 0
-	for var in graph.variables():
-		if len(graph.regulators(var)) == 0:
+	for var in model.variables():
+		if len(model.predecessors(var)) == 0:
 			inputs += 1
 		else:
 			variables += 1
-	return (variables, inputs, len(graph.regulations()))
+	return (variables, inputs, len(model.regulations()))
 
-def fix_variable_names(model):
+def fix_variable_names(model: BooleanNetwork):
 	# Ensures that every variable starts with v_,
 	# otherwise bnet may have problems with invalid names.
-	graph = model.graph()
-	for var in graph.variables():
-		name = graph.get_variable_name(var)
+	for var in model.variables():
+		name = model.get_variable_name(var)
 		model.set_variable_name(var, "v_"+name)				
 	return model
 
@@ -159,7 +156,7 @@ for model_dir in source_directories:
 		model = BooleanNetwork.from_bnet(source)
 	
 	if model == None:
-		print("ERROR: Missing source.sbml/.bnet/.aeon in", source_file)
+		print("ERROR: Missing source.sbml/.bnet/.aeon in", model_dir)
 		sys.exit(128)
 
 	# Static analysis (unused variables/regulations, etc.)

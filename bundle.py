@@ -60,10 +60,11 @@ if INPUTS == "random":
 			user_count = input().lower()
 			print(ENDC, end="")
 			if user_count == "":
-				user_count = 32
-			user_count = int(user_count)
-			if user_count > 0:
-				SAMPLE_COUNT = user_count
+				user_count_int = 32
+			else:
+				user_count_int = int(user_count)
+			if user_count_int > 0:
+				SAMPLE_COUNT = user_count_int
 				print(f"Selected {BOLD}{user_count}{ENDC} random samples.")
 				break
 		except:
@@ -76,9 +77,10 @@ if INPUTS == "random":
 			user_seed = input().lower()
 			print(ENDC, end="")
 			if user_seed == "":
-				user_seed = 0
-			user_seed = int(user_seed)
-			SAMPLE_SEED = user_seed
+				user_seed_int = 0
+			else:
+				user_seed_int = int(user_seed)
+			SAMPLE_SEED = user_seed_int
 			print(f"Selected {BOLD}{user_seed}{ENDC} as the random seed.")
 			break
 		except:
@@ -98,11 +100,11 @@ def check_filter(filter, model_dir):
 	regulations = []
 	for var in model.variables():
 		name = model.get_variable_name(var)
-		if len(model.graph().regulators(var)) == 0:
+		if len(model.predecessors(var)) == 0:
 			inputs.append(name)
 		else:
 			variables.append(name)
-		for reg in model.graph().regulators(var):
+		for reg in model.predecessors(var):
 			reg_name  = model.get_variable_name(reg)
 			regulations.append((reg_name, name))
 	
@@ -188,9 +190,9 @@ for model_dir in model_directories:
 		if INPUTS == "random":
 			# For random sampling, we have to be a bit more clever...
 			param_model = inputs_free(model)
-			stg = SymbolicAsyncGraph(param_model)
-			const_model = inputs_constant(stg.network(), "true")			
-			all_colors = stg.unit_colors()			
+			stg = AsynchronousGraph(param_model)
+			const_model = inputs_constant(model, True)			
+			all_colors = stg.mk_unit_colors()			
 			if all_colors.is_singleton():
 				# This model does not have inputs, we can just output it.				
 				output_model(OUT_DIR, const_model, metadata['id'], FORMAT)
@@ -204,7 +206,7 @@ for model_dir in model_directories:
 				input_symbolic_var = {}
 				for var in param_model.implicit_parameters():
 					name = param_model.get_variable_name(var)
-					table = ctx.get_implicit_function_table(var)
+					table = ctx.get_function_table(var)
 					assert len(table) == 1
 					symbolic_var = table[0][1]
 					input_symbolic_var[name] = symbolic_var
@@ -222,27 +224,29 @@ for model_dir in model_directories:
 
 					valuation_seed = rng.randrange(0, 2**30)
 					valuation_sample = all_colors.to_bdd().valuation_random(valuation_seed)
-					valuation_bdd = bdd_vars.mk_valuation(valuation_sample)
+					valuation_bdd = bdd_vars.mk_conjunctive_clause(valuation_sample)
 					# We have to project away the state variables from the valuation
 					# and this seems to be the easiest way to do it.
-					valuation_set = stg.unit_colored_vertices().copy_with(valuation_bdd)
+					valuation_set = ColoredVertexSet(ctx, valuation_bdd)
 					all_colors = all_colors.minus(valuation_set.colors())
 
 					suffix = "_"
 					for (name, bdd_var) in input_symbolic_var.items():
 						if valuation_sample[bdd_var]:
 							suffix += "1"
-							const_model.set_update_function(name, "true")
+							const_model.set_update_function(name, UpdateFunction.mk_const(const_model, True))
 						else:
 							suffix += "0"
-							const_model.set_update_function(name, "false")
+							const_model.set_update_function(name, UpdateFunction.mk_const(const_model, False))
 					output_model(OUT_DIR, const_model, metadata['id'], FORMAT, suffix)
 				print(" Done.")
 		else:
 			if INPUTS == "free":
 				model = inputs_free(model)
-			if INPUTS == "true" or INPUTS == "false":
-				model = inputs_constant(model, INPUTS)
+			if INPUTS == "true":
+				model = inputs_constant(model, True)
+			if INPUTS == "false":
+				model = inputs_constant(model, False)
 			if INPUTS == "identity":
 				model = inputs_identity(model)
 
