@@ -99,7 +99,7 @@ if len(sys.argv) > 1:
 else:
 	test_id = None
 
-meta_csv_summary = "ID, name, variables, regulations\n"
+meta_csv_summary = "ID, name, variables, inputs, regulations\n"
 
 for model_dir in source_directories:
 	if model_dir.startswith("."):
