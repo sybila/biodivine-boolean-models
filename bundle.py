@@ -14,6 +14,26 @@ from utils import inputs_free, inputs_constant, inputs_identity, output_model
 
 import json
 import random
+import argparse
+
+format_choices = ["bnet", "aeon", "sbml"]
+input_choices = ["true", "false", "identity", "free", "random"]
+filter_help_text = """Enter filter expression satisfied by the desired models [default: no filter].
+The filter expression is a Python expression that evaluates to True/False.
+You can assume `variables` and `inputs` are lists of entity names (strings).
+Variable `regulations` is a list of pairs of entity names.
+Variable `metadata` is a dictionary representing the `metadata.json` file.
+Finally, variable `model` is an AEON.py Boolean network.
+"""
+
+parser = argparse.ArgumentParser(
+	description="This script is responsible for generating bundles of models with specific properties.",
+)
+parser.add_argument("-f", "--format", choices=format_choices)
+parser.add_argument("-i", "--inputs", choices=input_choices)
+parser.add_argument("--filter", help=filter_help_text)
+parser.add_argument("-o", "--output-dir")
+args = parser.parse_args()
 
 ENDC = '\033[0m'
 BOLD = '\033[1m'
@@ -22,13 +42,17 @@ BOLD = '\033[1m'
 
 FORMAT = "aeon"
 while True:
-	print("Choose model format [bnet/aeon/sbml; default: aeon]")
-	print(BOLD, end="")
-	user_format = input().lower()
-	print(ENDC, end="")
+	if args.format is not None:
+		user_format = args.format
+	else:
+		print("Choose model format [bnet/aeon/sbml; default: aeon]")
+		print(BOLD, end="")
+		user_format = input().lower()
+		print(ENDC, end="")
+
 	if user_format == "":
 		user_format = "aeon"
-	if user_format in ["bnet", "aeon", "sbml"]:
+	if user_format in format_choices:
 		FORMAT = user_format
 		print(f"Selected output format: {BOLD}{user_format}{ENDC}")
 		break
@@ -38,13 +62,17 @@ while True:
 
 INPUTS = "free"
 while True:
-	print("Choose the representation of model inputs (i.e. source nodes) [true/false/identity/free/random; default: free]")
-	print(BOLD, end="")	
-	user_inputs = input().lower()
-	print(ENDC, end="")
+	if args.inputs is not None:
+		user_inputs = args.inputs
+	else:
+		print("Choose the representation of model inputs (i.e. source nodes) [true/false/identity/free/random; default: free]")
+		print(BOLD, end="")	
+		user_inputs = input().lower()
+		print(ENDC, end="")
+
 	if user_inputs == "":
 		user_inputs = "free"
-	if user_inputs in ["true", "false", "identity", "free", "random"]:
+	if user_inputs in input_choices:
 		INPUTS = user_inputs
 		print(f"Selected input representation: {BOLD}{user_inputs}{ENDC}")
 		break
@@ -123,15 +151,18 @@ def check_filter(filter, model_dir):
 
 FILTER = "True"
 while True:
-	print("Enter filter expression satisfied by the desired models [default: no filter].")
-	print(" > The filter expression is a Python expression that evaluates to True/False.")
-	print(" > You can assume `variables` and `inputs` are lists of entity names (strings).")
-	print(" > Variable `regulations` is a list of pairs of entity names.")
-	print(" > Variable `metadata` is a dictionary representing the `metadata.json` file.")
-	print(" > Finally, variable `model` is an AEON.py Boolean network.")
-	print(BOLD, end="")
-	user_filter = input().lower()
-	print(ENDC, end="")
+	if args.filter is not None:
+		user_filter = args.filter
+	else:
+		print("Enter filter expression satisfied by the desired models [default: no filter].")
+		print(" > The filter expression is a Python expression that evaluates to True/False.")
+		print(" > You can assume `variables` and `inputs` are lists of entity names (strings).")
+		print(" > Variable `regulations` is a list of pairs of entity names.")
+		print(" > Variable `metadata` is a dictionary representing the `metadata.json` file.")
+		print(" > Finally, variable `model` is an AEON.py Boolean network.")
+		print(BOLD, end="")
+		user_filter = input().lower()
+		print(ENDC, end="")
 	if user_filter == "":		
 		print("No filter given. All models will be included.")
 		break
@@ -157,10 +188,14 @@ while True:
 OUT_DIR = "bbm-edition"
 
 while True:
-	print("Choose output directory: [default: bbm-edition]")
-	print(BOLD, end="")
-	user_dir = input().lower()
-	print(ENDC, end="")
+	if args.output_dir is not None:
+		user_dir = args.output_dir
+	else:
+		print("Choose output directory: [default: bbm-edition]")
+		print(BOLD, end="")
+		user_dir = input().lower()
+		print(ENDC, end="")
+
 	if user_dir != "":
 		OUT_DIR = user_dir
 	if isfile(OUT_DIR) or isdir(OUT_DIR):
