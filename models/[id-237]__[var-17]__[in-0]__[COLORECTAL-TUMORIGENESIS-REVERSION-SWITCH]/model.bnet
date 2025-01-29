@@ -1,0 +1,18 @@
+targets,factors
+v_BHLHE40, (v_KLF6 | v_BHLHE40)
+v_CDX2, (v_MYC | (v_CDX2 | v_CDX2))
+v_DDIT3, (v_DDIT3 | (v_KLF5 | (v_DDIT3 | (v_JUN | ((v_NFIL3 & v_DDIT3) | v_DDIT3)))))
+v_FOSL2, ((v_BHLHE40 | v_KLF5) & !v_MYC)
+v_FOXO3, (v_FOXO3 & v_JUN)
+v_JUN, ((v_KLF5 & (v_NFIL3 & !v_YY1)) | ((v_KLF5 & (v_DDIT3 & !v_YY1)) | (((v_FOXO3 | v_NFIL3) & !v_YY1) | (((v_KLF5 | v_NFIL3) & !v_YY1) | ((v_DDIT3 & (v_NFIL3 & !v_YY1)) | (((v_KLF5 | v_DDIT3) & !v_YY1) | ((v_DDIT3 & !v_YY1) | ((v_KLF5 & !v_YY1) | ((v_NFIL3 & !v_YY1) | (((v_DDIT3 | v_NFIL3) & !v_YY1) | (((v_FOXO3 | v_DDIT3) & !v_YY1) | ((v_KLF5 | v_FOXO3) & !v_YY1))))))))))))
+v_KLF4, ((v_BHLHE40 | v_FOXO3) & !v_MYC)
+v_KLF5, ((v_JUN & (v_RELB & !v_YY1)) | ((v_RELB & !v_YY1) | ((v_JUN & !v_YY1) | (((v_JUN | v_RELB) & !v_YY1) | (((v_FOXO3 | v_RELB) & !v_YY1) | (((v_JUN | v_FOXO3) & !v_YY1) | (((v_FOSL2 | v_RELB) & !v_YY1) | ((v_JUN | v_FOSL2) & !v_YY1))))))))
+v_KLF6, ((v_KLF6 & v_MAFF) | v_KLF6)
+v_MAFF, (v_FOXO3 | v_BHLHE40)
+v_MYC, (v_CDX2 | (v_SMARCA4 | v_CDX2))
+v_NFIA, (v_MYC | (v_SREBF1 & v_MYC))
+v_NFIL3, (v_DDIT3 | (v_DDIT3 | v_JUN))
+v_RELB, (v_KLF5 | (v_RELB | v_RELB))
+v_SMARCA4, v_MYC
+v_SREBF1, (v_YY1 | (v_NFIA | v_YY1))
+v_YY1, (v_YY1 | (v_SREBF1 | (v_YY1 | (v_MYC | v_YY1))))
