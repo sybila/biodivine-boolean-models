@@ -1,0 +1,287 @@
+targets,factors
+v_ADAMTS4, v_NFKB_N_complex
+v_ADAMTS9_rna, (v_NFKB_N_complex & !v_MIR338_5P_rna)
+v_ADCY8, !v_GNAI3
+v_AKT2, !v_MIR650_rna
+v_AKT2_phosphorylated, (((v_cGAS | v_PI3_4_5_P__3_simple_molecule) & v_AKT2) & !v_PP2A)
+v_AMAP1, v_pyk2_phosphorylated
+v_AREG_EGFR_complex, (v_AREG & v_EGFR)
+v_ARHGEF2, v_PLXNB1_MET_sema4a_complex
+v_ARRB2, v_CCL5_ACKR2_complex
+v_Apoptosome_complex, ((v_APAF1 & v_CYCS) & v_CASP9)
+v_BAD, (v_MAPK8_phosphorylated & !v_AKT2_phosphorylated)
+v_BAK1, ((v_tBID & !v_MCL1) & !v_BCL2)
+v_BAX_Fibroblast___Mitochondrion, v_TP73_phosphorylated
+v_BAX_Fibroblast___Mitochondrion_active, ((((v_tBID | v_BCL2L11_Fibroblast___Cytoplasm_active) & v_BAX_Fibroblast___Mitochondrion) & !v_MCL1) & !v_BCL2)
+v_BCL2, (!v_BAD & !v_BCL2L11_Fibroblast___Cytoplasm_active)
+v_BCL2A1_rna, v_NFKB_N_complex
+v_BCL2L11_Fibroblast___Cytoplasm, (v_FOXO1 & v_FOXO3)
+v_BCL2L11_Fibroblast___Cytoplasm_active, (v_BCL2L11_Fibroblast___Cytoplasm & !v_MCL1)
+v_BCL2L1_rna, v_NFKB_N_complex
+v_BID, v_CASP8
+v_BRAF_phosphorylated, v_NRAS
+v_BTRC_rna, !v_MIR10a_rna
+v_CASP3, (v_CASP8 | v_Apoptosome_complex)
+v_CASP8, (v_FADD & !v_CFLAR_Fibroblast___Cytoplasm_active)
+v_CAV1_rna, !v_MIR192_rna
+v_CCL21, v_NFKB2_RELB_complex
+v_CCL2_Fibroblast___Extracellular_Space, v_CCL2_Fibroblast___secreted_components
+v_CCL2_Fibroblast___secreted_components, v_NFKB_N_complex
+v_CCL5_ACKR2_complex, v_CCL5_Fibroblast___Extracellular_Space
+v_CCL5_CCR5_complex, v_CCL5_Fibroblast___Extracellular_Space
+v_CCL5_Fibroblast___Extracellular_Space, v_CCL5_Fibroblast___secreted_components
+v_CCL5_Fibroblast___secreted_components, v_IRF5_Fibroblast___nucleus
+v_CCNA2, !v_CDKN1A
+v_CCNB1_CDC2_complex, !v_CDC25B_C
+v_CCND1_rna, v_JUN_phosphorylated
+v_CCND2, (v_MAPK8_phosphorylated & !v_CDKN1A)
+v_CCR2_CCL2_complex, v_CCL2_Fibroblast___Extracellular_Space
+v_CD40, v_IRF3_phosphorylated
+v_CD84, v_IRF1_Fibroblast___nucleus
+v_CFLAR_Fibroblast___Cytoplasm, v_NFKB_N_complex
+v_CFLAR_Fibroblast___Cytoplasm_active, v_CFLAR_Fibroblast___Cytoplasm
+v_CHUK_phosphorylated, v_MAPK14_phosphorylated
+v_CPNE3_rna, !v_MIR451A_rna
+v_CREB1_phosphorylated, (v_MAPKAPK2_phosphorylated | v_PRKACA)
+v_CRKL_phosphorylated, ((v_EGF_EGFR_complex | v_GAB1) | v_HBEGF_EGFR_complex)
+v_CSF1, (v_NFKB_N_complex & v_CREB1_phosphorylated)
+v_CSF2RA_CSF2RB_CSF2_complex, (v_CSF2_Fibroblast___Extracellular_Space & v_CSF2RA_CSF2RB_complex)
+v_CSF2_Fibroblast___Extracellular_Space, v_CSF2_Fibroblast___secreted_components
+v_CSF2_Fibroblast___secreted_components, ((v_FOS & v_NFAT5_phosphorylated) & v_JUN_phosphorylated)
+v_CSK, (v_ICAM1_ITGB2_ITGAL_complex | v_FN1_ITGAV_complex)
+v_CTF1, v_NFKB_N_complex
+v_CTNNB1, (v_CTNNB_CK1A_AXIN_GSK3B_APC_complex & v_DVL1_phosphorylated)
+v_CTSK_rna, ((v_JUN_phosphorylated & v_FOS) & v_NFKB_N_complex)
+v_CXCL1, v_NFKB_N_complex
+v_CXCL10_CXCR3_complex, (v_CXCL10_Fibroblast___Extracellular_Space & v_CXCR3)
+v_CXCL10_Fibroblast___Extracellular_Space, v_CXCL10_Fibroblast___secreted_components
+v_CXCL10_Fibroblast___secreted_components, (v_IRF3_phosphorylated & v_HOMODIMER_space_STAT1)
+v_CXCL13_CXCR3_complex, (v_CXCR3 & v_CXCL13)
+v_CXCL2, v_NFKB_N_complex
+v_CXCL3, v_NFKB_N_complex
+v_CXCL8_Fibroblast___Extracellular_Space, v_CXCL8_Fibroblast___secreted_components
+v_CXCL8_Fibroblast___secreted_components, ((v_NFAT5_phosphorylated & v_NFKB_N_complex) & v_IRF5_Fibroblast___nucleus)
+v_CXCL9, (v_IRF3_phosphorylated & v_HOMODIMER_space_STAT1)
+v_CXCR2_CXCL8_complex, v_CXCL8_Fibroblast___Extracellular_Space
+v_CYCS, v_BAX_Fibroblast___Mitochondrion_active
+v_Cell_chemotaxis_migration_fibroblast_phenotype, ((((((((v_CCL2_Fibroblast___secreted_components | v_CCL5_Fibroblast___secreted_components) | v_CXCL8_Fibroblast___secreted_components) | v_TNF_Fibroblast___secreted_components) | v_FN1_Fibroblast___secreted_components) | v_CSF2_Fibroblast___secreted_components) | v_MMP3) | v_MMP1) | v_MMP13)
+v_Cell_chemotaxis_migration_signal_phenotype, ((((((((((((((((((v_CXCL3 | v_CXCL2) | v_CXCL1) | v_CXCL9) | v_CXCL10_Fibroblast___secreted_components) | v_IL17F) | v_EFNB1) | v_IL12B) | v_IL12A) | v_CXCL10_Fibroblast___secreted_components) | v_CXCL8_Fibroblast___secreted_components) | v_CCL2_Fibroblast___secreted_components) | v_CCL5_Fibroblast___secreted_components) | v_FN1_Fibroblast___secreted_components) | v_TNF_Fibroblast___secreted_components) | v_MMP3) | v_MMP1) | v_MMP13) | v_VCAM1)
+v_DAXX, (v_TGFB1_TGFBR1_complex | v_FAS_FASL_complex)
+v_DKK1, v_TCF_LEF
+v_DOCK2_CRKL_complex, (v_DOCK2 & v_CRKL_phosphorylated)
+v_DVL1_phosphorylated, v_WNT_FRIZZLED_complex
+v_EDA_EDA2R_complex, v_EDA
+v_EFNB1, v_efnb1_rna
+v_EGF_EGFR_complex, (v_EGF & v_EGFR)
+v_ELK1_phosphorylated, (v_MAPK8_phosphorylated | v_MAPK1_phosphorylated)
+v_FADD, ((v_TIRAP_MYD88_complex | v_TRAF2_TRAF5_complex) | v_FAS_FASL_complex)
+v_FAS_FASL_complex, v_FASLG
+v_FGF1_FGFR4_complex, v_FGF1
+v_FN1_Fibroblast___Extracellular_Space, v_FN1_Fibroblast___secreted_components
+v_FN1_Fibroblast___secreted_components, (v_TCF_LEF & v_CTNNB1)
+v_FN1_ITGAV_complex, v_FN1_Fibroblast___Extracellular_Space
+v_FOS, (((v_MAPK1_phosphorylated | v_MAPK8_phosphorylated) | v_MAPK3_phosphorylated) | v_MAPK9_phosphorylated)
+v_FOXO1, !v_AKT2_phosphorylated
+v_FOXO3, !v_AKT2_phosphorylated
+v_GAB2_phosphorylated, v_GRB2
+v_GAL_rna, v_CREB1_phosphorylated
+v_GAS6, v_TP53_phosphorylated
+v_GNAI3, ((((((v_CXCL10_CXCR3_complex | v_MIF_CXCR4_complex) | v_sst_sstr_complex) | v_CXCR2_CXCL8_complex) | v_CCR2_CCL2_complex) | v_CCL5_CCR5_complex) | v_CXCL13_CXCR3_complex)
+v_GRB2, ((((((v_SHC2_phosphorylated | v_EGF_EGFR_complex) | v_FGF1_FGFR4_complex) | v_IGF1_IGF1R_complex) | v_HBEGF_EGFR_complex) | v_AREG_EGFR_complex) | v_VEGFA_VEGFR_complex)
+v_GSK3B, (v_CTNNB_CK1A_AXIN_GSK3B_APC_complex & v_DVL1_phosphorylated)
+v_HBEGF_EGFR_complex, (v_HBEGF & v_EGFR)
+v_HLA_B, v_NFKB2_RELB_complex
+v_HOMODIMER_space_STAT1, v_STAT1_Fibroblast___Cytoplasm
+v_HOMODIMER_space_STAT3, v_STAT3_Fibroblast___Cytoplasm
+v_ICAM1, v_NFKB_N_complex
+v_ICOSLG, v_CREB1_phosphorylated
+v_IFNA1_B1_IFNAR1_R2_complex, v_IFNa1_B1
+v_IFNB1_rna, v_IRF3_phosphorylated
+v_IFNE, v_IRF3_phosphorylated
+v_IFNa1, v_STAT1_Fibroblast___nucleus
+v_IFNa1_B1, (v_IFNa1 | v_IFNb1)
+v_IFNb1, v_IFNB1_rna
+v_IGF1_IGF1R_complex, v_IGF1
+v_IKBKB_phosphorylated, v_AMAP1
+v_IKK1_IKK2_complex, (v_IKK1_phosphorylated & v_IKK2_phosphorylated)
+v_IKK2_phosphorylated, v_PRKCQ
+v_IKK_complex, (((((v_TAB1_TAB2_TAK1_complex | v_MAP3K14_phosphorylated) | v_AKT2_phosphorylated) | v_MAP4K4_phosphorylated) | v_MAP3K7_phosphorylated) | v_CSF2RA_CSF2RB_CSF2_complex)
+v_IL10, v_HOMODIMER_space_STAT3
+v_IL11, v_HOMODIMER_space_STAT3
+v_IL12A, v_JUN_phosphorylated
+v_IL12B, v_STAT1_Fibroblast___nucleus
+v_IL17A_Fibroblast___Extracellular_Space, v_IL17A_Fibroblast___secreted_components
+v_IL17A_Fibroblast___secreted_components, v_STAT3_Fibroblast___nucleus
+v_IL17A_IL17RA_complex, v_IL17A_Fibroblast___Extracellular_Space
+v_IL17F, v_HOMODIMER_space_STAT3
+v_IL18_Fibroblast___Extracellular_Space, v_IL18_Fibroblast___secreted_components
+v_IL18_IL18R_complex, v_IL18_Fibroblast___Extracellular_Space
+v_IL1A_IL1R1_complex, (v_IL1A & v_IL1R1)
+v_IL1B_Fibroblast___Extracellular_Space, v_IL1B_Fibroblast___secreted_components
+v_IL1B_Fibroblast___secreted_components, (v_JUN_phosphorylated & v_NFKB_N_complex)
+v_IL1B_IL1R1_complex, (v_IL1B_Fibroblast___Extracellular_Space & v_IL1R1)
+v_IL6_Fibroblast___Extracellular_Space, v_IL6_Fibroblast___secreted_components
+v_IL6_Fibroblast___secreted_components, ((((v_YY1 & v_NFKB_N_complex) & v_FOS) & v_JUN_phosphorylated) & !v_MIR451A_rna)
+v_IL6_IL6R_complex, v_IL6_Fibroblast___Extracellular_Space
+v_IL6_IL6ST_complex, v_IL6_Fibroblast___Extracellular_Space
+v_INHBB, v_CREB1_phosphorylated
+v_IRAK1_Fibroblast___Cytoplasm, !v_MIR146A_rna
+v_IRAK1_Fibroblast___Cytoplasm_active, (v_IRAK1_Fibroblast___Cytoplasm & v_MYD88)
+v_IRAK1_IRAK4_complex, ((v_IRAK1_Fibroblast___Cytoplasm_active & v_IRAK4_Fibroblast___Cytoplasm_active) & v_TIRAP_MYD88_complex)
+v_IRAK4_Fibroblast___Cytoplasm, !v_MIR10a_rna
+v_IRAK4_Fibroblast___Cytoplasm_active, (v_IRAK4_Fibroblast___Cytoplasm & v_MYD88)
+v_IRF1_Fibroblast___Cytoplasm, v_HOMODIMER_space_STAT1
+v_IRF1_Fibroblast___nucleus, v_IRF1_Fibroblast___Cytoplasm
+v_IRF3_phosphorylated, v_TBK1_IKBKE_complex
+v_IRF5_Fibroblast___Cytoplasm, v_ISGF3_complex
+v_IRF5_Fibroblast___nucleus, (v_IRF5_Fibroblast___Cytoplasm & v_TRAF6_phosphorylated)
+v_ISGF3_complex, (v_STAT1_STAT2_complex & v_IRF9)
+v_ITGA4_ITGB1_col4a3_complex, (v_col4a3 & v_ITGA4_ITGB1_complex)
+v_ITGA4_ITGB1_sema7a_complex, (v_sema7a & v_ITGA4_ITGB1_complex)
+v_JAG1_rna, v_NFKB_N_complex
+v_JAK1, (((((v_IL6_IL6ST_complex | v_IFNA1_B1_IFNAR1_R2_complex) | v_IL6_IL6R_complex) | v_IFNG_IFNGR1_R2_complex) | v_IL10RA_IL10RB_IL10_complex) & !v_SOCS3)
+v_JAK2, ((v_IL6_IL6ST_complex | v_IL6_IL6R_complex) & !v_PTPN11_phosphorylated)
+v_JAK3, ((((v_MIF_CXCR4_complex | v_CXCR2_CXCL8_complex) | v_CCR2_CCL2_complex) | v_CCL5_CCR5_complex) & !v_NECTIN3_PTPRC_NECTIN1_complex)
+v_JUN_phosphorylated, (((v_MAPK8_phosphorylated | v_MAPK14_phosphorylated) | v_MAPK1_phosphorylated) | v_MAPK9_phosphorylated)
+v_LCK_phosphorylated, !v_PTPN6
+v_LTA, v_JUN_phosphorylated
+v_LTBP1, !v_COMP
+v_LY96_TLR2_4_complex, (v_LY96 & v_LBP_CD14_complex)
+v_MAP2K1_phosphorylated, ((((v_MAP3K8_phosphorylated | v_RAF1) | v_BRAF_phosphorylated) | v_MAP3K7_phosphorylated) | v_TAB1_TAB2_TAK1_complex)
+v_MAP2K3_phosphorylated, ((((v_MAP3K1_phosphorylated | v_MAP3K5_phosphorylated) | v_RAC1_2) | v_MAP3K2_3_4) | v_TAB1_TAB2_TAK1_complex)
+v_MAP2K4_phosphorylated, (v_MAP3K1_phosphorylated | v_RAC1_2)
+v_MAP2K6_phosphorylated, ((((v_TAB1_TAB2_TAK1_complex | v_MAP3K1_phosphorylated) | v_MAP3K5_phosphorylated) | v_RAC1_2) | v_MAP3K7_phosphorylated)
+v_MAP2K7_phosphorylated, (v_MAP3K7_phosphorylated | v_TAB1_TAB2_TAK1_complex)
+v_MAP3K14_phosphorylated, (v_TAB1_TAB2_TAK1_complex | v_MAP3K7_phosphorylated)
+v_MAP3K1_phosphorylated, (v_MAP4K4_phosphorylated | v_RAC1_2)
+v_MAP3K5_phosphorylated, ((v_TRAF2 | v_RAC1_2) | v_DAXX)
+v_MAP3K7_phosphorylated, v_TAB1_TAB2_TRAF6_complex
+v_MAP3K7_rna, !v_MIR10a_rna
+v_MAP3K8_phosphorylated, ((v_AKT2_phosphorylated | v_IKK_complex) & v_NFKB1_MAP3K8_complex)
+v_MAPK14_phosphorylated, ((v_MAP2K6_phosphorylated | v_MAP2K3_phosphorylated) & !v_MAPK1_phosphorylated)
+v_MAPK1_empty, (v_MAPK1_phosphorylated & !v_DUSP7)
+v_MAPK1_phosphorylated, ((((v_MAP2K1_phosphorylated | v_cGAS) | v_TRAF2) | v_PTK2B_phosphorylated) & v_MAPK1_empty)
+v_MAPK3_phosphorylated, (((v_cGAS | v_TRAF2) | v_MAP2K1_phosphorylated) | v_PTK2B_phosphorylated)
+v_MAPK8_phosphorylated, ((((v_MAP2K4_phosphorylated | v_MAP3K5_phosphorylated) | v_RAC1_2) | v_MAP2K7_phosphorylated) & v_MAPK3_complex)
+v_MAPK9_phosphorylated, (v_MAP2K7_phosphorylated | v_MAP2K4_phosphorylated)
+v_MAPKAPK2_phosphorylated, v_MAPK14_phosphorylated
+v_MCL1, v_AKT2_phosphorylated
+v_MDM2, v_TP53_phosphorylated
+v_MDM2_phosphorylated, (v_MDM2 & v_AKT2_phosphorylated)
+v_MIF, v_CREB1_phosphorylated
+v_MIF_CXCR4_complex, v_MIF
+v_MIR10a_rna, !v_YY1
+v_MIR155_rna, v_YY1
+v_MMP1, v_NFKB_N_complex
+v_MMP13, v_NFKB_N_complex
+v_MMP3, v_NFKB_N_complex
+v_MMP9, v_NFKB_N_complex
+v_MYD88, ((v_TLR5 | v_IL1A_IL1R1_complex) | v_IL1B_IL1R1_complex)
+v_NCID, (v_JAG1_NOTCH3_complex & v_gamma_secretase_complex)
+v_NFAT5_phosphorylated, v_CALCINEURIN
+v_NFKB1, ((v_AKT2_phosphorylated | v_IKK_complex) & v_NFKB1_MAP3K8_complex)
+v_NFKB2_RELB_complex, v_CHUK_phosphorylated
+v_NFKBIA_phosphorylated, ((v_IKK_complex | v_IKBKB_phosphorylated) & v_IKBA_NFKB1_RELA_complex)
+v_NFKBIA_rna, ((v_CREB1_phosphorylated & v_JUN_phosphorylated) & v_NFKB_N_complex)
+v_NFKBIE, (v_RELA_NFKB1_NFKBIE_complex & v_IKK1_IKK2_complex)
+v_NFKB_N_complex, v_NFKB_complex
+v_NFKB_complex, (((v_IKK_complex | v_IKBKB_phosphorylated) & v_IKBA_NFKB1_RELA_complex) | (v_RELA_NFKB1_NFKBIE_complex & v_IKK1_IKK2_complex))
+v_NRAS, (((v_SOS1 | v_GNAI3) | v_SRC_phosphorylated) & !v_rasa1)
+v_PDGFC_PDGFRB_complex, v_PDGFC
+v_PI3_4_5_P__3_simple_molecule, ((v_PI4_5_P__2_simple_molecule & v_PIK3R5_phosphorylated) & !v_PTEN)
+v_PIK3R5_phosphorylated, (((((((((((((((v_GAB1 | v_CSK) | v_EGF_EGFR_complex) | v_FGF1_FGFR4_complex) | v_JAK3) | v_RAC1_2) | v_NRAS) | v_PDGFC_PDGFRB_complex) | v_GAB2_phosphorylated) | v_GNAI3) | v_TRAF2) | v_JAK1) | v_ITGA5_ITGB1_col4a5_complex) | v_CSF2RA_CSF2RB_CSF2_complex) | v_HBEGF_EGFR_complex) | v_PTK2B_phosphorylated)
+v_PITPNM3_CCL18_complex, v_CCL18
+v_PLA2G2A_phosphorylated, (v_MAPK1_phosphorylated | v_GNAI3)
+v_PMAIP1_Fibroblast___Cytoplasm, v_TP53_phosphorylated
+v_PMAIP1_Fibroblast___Cytoplasm_active, v_PMAIP1_Fibroblast___Cytoplasm
+v_PRKACA, (v_ADCY8 | v_MAP3K7_phosphorylated)
+v_PRKCQ, v_SH2D1A
+v_PRL, v_STAT3_Fibroblast___nucleus
+v_PTGS2_rna, v_NFAT5_phosphorylated
+v_PTK2B_phosphorylated, (((v_CSK | v_ICAM1_ITGB2_ITGAL_complex) | v_ITGA4_ITGB1_sema7a_complex) | v_ITGA4_ITGB1_col4a3_complex)
+v_PTPN11_phosphorylated, (v_FGF1_FGFR4_complex | v_GAB2_phosphorylated)
+v_RAB5A, !v_MIR451A_rna
+v_RAC1_2, ((((((v_NRAS | v_VAV1_2_3_phosphorylated) | v_PTK2B_phosphorylated) | v_LY96_TLR2_4_complex) | v_DOCK2_CRKL_complex) | v_DVL1_phosphorylated) & !v_RHOA)
+v_RAF1, (v_DOCK2_CRKL_complex | v_YWHAQ)
+v_RANK_RANKL_complex, v_TNFSF11_Fibroblast___Extracellular_Space
+v_RHOA, (((v_VAV1_2_3_phosphorylated | v_ARHGEF2) | v_ngef) & !v_PRKG1)
+v_RIPK1_TRAF6_complex, ((v_RIPK1 & v_TRAF6_phosphorylated) & v_TICAM1_TICAM2_complex)
+v_RIPK3, v_NOD2
+v_RPS6KB1_phosphorylated, v_AKT2_phosphorylated
+v_RUNX1, v_MAPK1_phosphorylated
+v_SEMA4D, v_FOS
+v_SERPINE1_rna, v_TP53_phosphorylated
+v_SHC2_phosphorylated, ((((v_PDGFC_PDGFRB_complex | v_EGF_EGFR_complex) | v_CSK) | v_HBEGF_EGFR_complex) | v_LCK_phosphorylated)
+v_SHP2_GRB2_complex, (v_PTPN11_phosphorylated & v_GRB2)
+v_SMAD7, v_TGFB1_TGFBR1_complex
+v_SOCS3, v_STAT3_Fibroblast___nucleus
+v_SOS1, (((v_EGF_EGFR_complex | v_FGF1_FGFR4_complex) | v_SHP2_GRB2_complex) | v_HBEGF_EGFR_complex)
+v_SRC_phosphorylated, v_IL18_IL18R_complex
+v_STAT1_Fibroblast___Cytoplasm, ((v_JAK3 | v_JAK2) | v_TYK2)
+v_STAT1_Fibroblast___nucleus, v_STAT1_Fibroblast___Cytoplasm
+v_STAT1_STAT2_complex, (v_STAT2 & v_STAT1_Fibroblast___Cytoplasm)
+v_STAT3_Fibroblast___Cytoplasm, (((v_JAK1 | v_TYK2) | v_AKT2_phosphorylated) & !v_ZC3H12A)
+v_STAT3_Fibroblast___nucleus, v_STAT3_Fibroblast___Cytoplasm
+v_TAB1_TAB2_TAK1_complex, (((v_RIPK1_TRAF6_complex | v_TRAF2_TRAF5_complex) | v_TRAF6_phosphorylated) | v_TRAF3_TRAF6_complex)
+v_TAB1_TAB2_TRAF6_complex, (((v_IRAK1_Fibroblast___Cytoplasm_active | v_IRAK4_Fibroblast___Cytoplasm_active) & v_TAB1_TAB2_complex) & v_TRAF6_phosphorylated)
+v_TBK1_IKBKE_complex, v_TRAF3
+v_TGFB1_Fibroblast___Extracellular_Space, v_TGFb1
+v_TGFB1_Fibroblast___Extracellular_Space_active, (v_TGFB1_Fibroblast___Extracellular_Space & !v_LTBP1)
+v_TGFB1_TGFBR1_complex, v_TGFB1_Fibroblast___Extracellular_Space_active
+v_TICAM1, (v_TICAM2 & !v_SARM1)
+v_TICAM1_TICAM2_complex, v_LY96_TLR2_4_complex
+v_TICAM2, v_LY96_TLR2_4_complex
+v_TIRAP_MYD88_complex, ((v_MYD88 & v_TIRAP) & v_LY96_TLR2_4_complex)
+v_TNFRSF10A_rna, v_TP53_phosphorylated
+v_TNFRSF10B_rna, v_TP53_phosphorylated
+v_TNFSF11_Fibroblast___Extracellular_Space, v_TNFSF11_Fibroblast___secreted_components
+v_TNFSF11_Fibroblast___secreted_components, (v_STAT3_Fibroblast___nucleus & v_NFKB_N_complex)
+v_TNF_Fibroblast___Extracellular_Space, v_TNF_Fibroblast___secreted_components
+v_TNF_Fibroblast___secreted_components, (((v_NFKB_N_complex & v_JUN_phosphorylated) & v_NFAT5_phosphorylated) & !v_MIR451A_rna)
+v_TNF_TNFRSF1A_B_complex, v_TNF_Fibroblast___Extracellular_Space
+v_TRADD, v_TNF_TNFRSF1A_B_complex
+v_TRAF1_rna, v_NFKB_N_complex
+v_TRAF2, v_IL1A_IL1R1_complex
+v_TRAF2_TRAF5_complex, v_TRADD
+v_TRAF3, v_TICAM1
+v_TRAF3IP2_phosphorylated, v_IL17A_IL17RA_complex
+v_TRAF3_TRAF6_complex, v_EDA_EDA2R_complex
+v_TRAF6, !v_MIR146A_rna
+v_TRAF6_phosphorylated, ((((v_TRAF3IP2_phosphorylated | v_IRAK1_IRAK4_complex) | v_RANK_RANKL_complex) | v_CD40LG_CD40_complex) & v_TRAF6)
+v_TSC2_phosphorylated, !v_AKT2_phosphorylated
+v_TYK2, ((v_IFNA1_B1_IFNAR1_R2_complex | v_IFNG_IFNGR1_R2_complex) | v_IL10RA_IL10RB_IL10_complex)
+v_T_cells_activation_signal_phenotype, (((v_ICAM1 | v_IFNa1) | v_CSF2_Fibroblast___secreted_components) | v_CSF1)
+v_VAV1_2_3_phosphorylated, (v_ICAM1_ITGB2_ITGAL_complex | v_TXK)
+v_VCAM1, v_NFKB_N_complex
+v_VEGFA_VEGFR_complex, v_VEGFa_Fibroblast___Extracellular_Space
+v_VEGFA_rna, v_STAT1_Fibroblast___nucleus
+v_VEGFa_Fibroblast___Extracellular_Space, v_VEGFa_Fibroblast___secreted_components
+v_VEGFa_Fibroblast___secreted_components, v_VEGFA_rna
+v_WNT5B, v_WNT5B__rna
+v_WNT5B__rna, v_WNT5B_gene
+v_WNT_FRIZZLED_complex, v_WNT5A
+v_YAP1_phosphorylated, v_AKT2_phosphorylated
+v_YWHAQ, v_FOXO1
+v_angiogenesis_signal_phenotype, (((((v_VEGFa_Fibroblast___secreted_components | v_CCL21) | v_PRL) | v_SERPINE1_rna) | v_vegfc) & !v_THBS1_rna)
+v_apoptosis_fibroblast_phenotype, (((((((((((v_TNFRSF10B_rna | v_CASP8) | v_TNFRSF10A_rna) | v_CASP3) | v_TNF_Fibroblast___secreted_components) | v_BCL2L11_Fibroblast___Cytoplasm) | v_BAX_Fibroblast___Mitochondrion_active) | v_TP53_phosphorylated) & !v_CAV1_rna) & !v_BCL2L1_rna) & !v_BCL2) & !v_MCL1)
+v_apoptosis_signal_phenotype, (((v_sema3A | v_TNF_Fibroblast___secreted_components) | v_LTA) & !v_IL17F)
+v_bmp6, v_JUN_phosphorylated
+v_efnb1_rna, v_IRF1_Fibroblast___nucleus
+v_gal, v_GAL_rna
+v_hes1_rna, v_ncid_rbpj_snw1_complex
+v_inflammation_signal_phenotype, ((((((((((((((((((((((v_CXCL10_Fibroblast___secreted_components | v_NFKB_N_complex) | v_CXCL9) | v_CXCL8_Fibroblast___secreted_components) | v_IFNb1) | v_TNF_Fibroblast___secreted_components) | v_IL1B_Fibroblast___secreted_components) | v_IL17A_Fibroblast___secreted_components) | v_IL6_Fibroblast___secreted_components) | v_IRF5_Fibroblast___nucleus) | v_CCL21) | v_IRF1_Fibroblast___Cytoplasm) | v_IFNa1) | v_IL12B) | v_IL12A) | v_PRL) | v_SEMA4D) | v_ICAM1) | v_IL18_Fibroblast___secreted_components) | v_CCL5_Fibroblast___secreted_components) | v_CCL2_Fibroblast___secreted_components) | v_VCAM1) | v_LTA)
+v_jag1, v_JAG1_rna
+v_matrix_degradation_signal_phenotype, (((((v_MMP3 | v_ADAMTS4) | v_MMP9) | v_MMP1) | v_MMP13) & !v_col4a4)
+v_ncid_rbpj_snw1_complex, ((v_NCID & v_snw1) & v_rbpj)
+v_ngef, v_EPHB2
+v_osteoclastogenesis_signal_phenotype, ((((((v_IL7 | v_IL1B_Fibroblast___secreted_components) | v_IL17A_Fibroblast___secreted_components) | v_CCL21) | v_TNFSF11_Fibroblast___secreted_components) | v_IL17F) | v_IL34)
+v_p38MAPK_empty, !v_MIR451A_rna
+v_p38MAPK_phosphorylated, ((((v_MAP2K3_phosphorylated | v_MAP2K6_phosphorylated) | v_MAP2K4_phosphorylated) & v_p38MAPK_empty) & !v_RAB5A)
+v_proliferation_survival_fibroblast_phenotype, ((((((((((((((((((v_CREB1_phosphorylated | v_ADAMTS9_rna) | v_YWHAQ) | v_RPS6KB1_phosphorylated) | v_BCL2) | v_p38MAPK_phosphorylated) | v_TNFSF11_Fibroblast___secreted_components) | v_TGFb1) | v_CSF2_Fibroblast___secreted_components) | v_CCL2_Fibroblast___secreted_components) | v_BCL2L1_rna) | v_JUN_phosphorylated) | v_FOS) | v_MAPK1_phosphorylated) | v_MDM2_phosphorylated) | v_VEGFa_Fibroblast___secreted_components) | v_IL18_Fibroblast___secreted_components) | v_CXCL10_Fibroblast___secreted_components) | v_IL6_Fibroblast___secreted_components)
+v_proliferation_survival_signal_phenotype, (((((((((((v_vegfc | v_TNFSF11_Fibroblast___secreted_components) | v_TGFb1) | v_CSF2_Fibroblast___secreted_components) | v_CCL2_Fibroblast___secreted_components) | v_VEGFa_Fibroblast___secreted_components) | v_IL18_Fibroblast___secreted_components) | v_CXCL10_Fibroblast___secreted_components) | v_CXCL1) | v_IL6_Fibroblast___secreted_components) | v_IL12B) | v_IL12A)
+v_pyk2_phosphorylated, v_PITPNM3_CCL18_complex
+v_rasa1, v_EPHB2
+v_sst_sstr_complex, v_sst
+v_tBID, v_BID
+v_tgfb3, v_FOXO1
+v_vegfc, v_NFKB_N_complex
