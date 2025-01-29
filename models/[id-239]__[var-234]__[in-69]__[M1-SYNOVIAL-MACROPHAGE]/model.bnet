@@ -1,0 +1,235 @@
+targets,factors
+v_ACKR3_CXCL12_complex, v_CXCL12_M1_macrophage___Extracellular_Space
+v_ACVR2A_ACVR2B_INHBA_complex, (v_INHBA & v_ACVR2A_ACVR2B_complex)
+v_ACVR2A_ACVR2B_INHBB_complex, (v_INHBB & v_ACVR2A_ACVR2B_complex)
+v_AKT1, v_PI3K
+v_AP_1, (v_c_FOS_M1_macrophage___nucleus & v_c_JUN_phosphorylated_M1_macrophage___nucleus)
+v_AP_1_phosphorylated, (((v_p38_MAP_KINASE_phosphorylated_M1_macrophage___nucleus | v_JNK1_phosphorylated_M1_macrophage___nucleus) | v_ERK1_phosphorylated_M1_macrophage___nucleus) & v_AP_1)
+v_AREG, v_STAT3_STAT3_complex
+v_ARRB2, ((v_ACKR3_CXCL12_complex | v_CCL21_CCR7_complex) | v_CXCL13_ACKR4_complex)
+v_ASK1, (v_TRADD_TRAF2_RIP1_complex | v_DAXX)
+v_BAX, (!v_BCL2_M1_macrophage__Mitochondria_membrane_active & !v_BCL2L1_M1_macrophage__Mitochondria_active)
+v_BCL2L1_M1_macrophage__Mitochondria, (v_STAT1_STAT2_IRF9_complex & v_STAT1_STAT1_complex)
+v_BCL2L1_M1_macrophage__Mitochondria_active, ((v_BCL2L1_M1_macrophage__Mitochondria & !v_BAD) & !v_Bim)
+v_BCL2_M1_macrophage__Mitochondria_membrane, v_Bcl2_rna
+v_BCL2_M1_macrophage__Mitochondria_membrane_active, ((v_BCL2_M1_macrophage__Mitochondria_membrane & !v_BAD) & !v_Bim)
+v_BCL3_rna, ((v_AP_1_phosphorylated & v_RELA_NFKB1_complex_M1_macrophage___nucleus) & v_STAT3_STAT3_complex)
+v_Bcl2_rna, (((v_RELA_NFKB1_complex_M1_macrophage___nucleus & v_STAT1_STAT2_IRF9_complex) & v_STAT1_STAT1_complex) & v_STAT5_CRKL_complex)
+v_Bim, v_FOXO_M1_macrophage___nucleus
+v_C5a_C5aR1_complex, v_c5a
+v_CASP3, v_CASP8
+v_CASP7, v_CASP8
+v_CASP8, (v_FADD & !v_cFLIP)
+v_CASP9, ((v_BAX & !v_AKT1) & !v_XIAP)
+v_CCL20, (v_RELA_NFKB1_complex_M1_macrophage___nucleus & v_AP_1_phosphorylated)
+v_CCL21_CCR7_complex, v_CCl21
+v_CCL2_CCR2_complex, v_CCL2_M1_macrophage___Extracellular_Space
+v_CCL2_M1_macrophage___Extracellular_Space, v_CCL2_M1_macrophage___Secreted_components
+v_CCL2_M1_macrophage___Secreted_components, ((v_RELA_NFKB1_complex_M1_macrophage___nucleus & v_NFAT5) & v_AP_1_phosphorylated)
+v_CCL3, ((v_RELA_NFKB1_complex_M1_macrophage___nucleus & v_AP_1_phosphorylated) & v_IRF5_ubiquitinated)
+v_CCL4, v_RELA_NFKB1_complex_M1_macrophage___nucleus
+v_CCL5, ((v_AP_1_phosphorylated & v_RELA_NFKB1_complex_M1_macrophage___nucleus) & v_IRF5_ubiquitinated)
+v_CD40, v_IRF3_phosphorylated
+v_CD40LG, v_STAT1_STAT1_complex
+v_CD80, v_IRF3_phosphorylated
+v_CD84, v_STAT3_STAT3_complex
+v_CD86, v_IRF3_phosphorylated
+v_COX2_rna, (v_RELA_NFKB1_complex_M1_macrophage___nucleus & v_NFAT5)
+v_CRKL_phosphorylated, v_JAK1_TYK2_complex
+v_CSF1_rna, (v_RELA_NFKB1_complex_M1_macrophage___nucleus & v_AP_1_phosphorylated)
+v_CSF2RA_CSF2RB_CSF2_complex, (v_CSF2RA_CSF2RB_complex & v_CSF2_M1_macrophage___Extracellular_Space)
+v_CSF2_M1_macrophage___Extracellular_Space, v_CSF2_M1_macrophage___Secreted_components
+v_CSF2_M1_macrophage___Secreted_components, ((v_RELA_NFKB1_complex_M1_macrophage___nucleus & v_AP_1_phosphorylated) & v_NFAT5)
+v_CXCL10, ((v_IRF3_phosphorylated & v_RELA_NFKB1_complex_M1_macrophage___nucleus) & v_AP_1_phosphorylated)
+v_CXCL11, v_IRF3_phosphorylated
+v_CXCL12_M1_macrophage___Extracellular_Space, v_CXCL12_M1_macrophage___Secreted_components
+v_CXCL12_M1_macrophage___Secreted_components, v_HIF1_complex
+v_CXCL13_ACKR4_complex, v_CXCL13
+v_CXCL16, v_RELA_NFKB1_complex_M1_macrophage___nucleus
+v_CXCL1_CXCR1_complex, (v_CXCL1_M1_macrophage___Extracellular_Space & v_CXCR1)
+v_CXCL1_M1_macrophage___Extracellular_Space, v_CXCL1_M1_macrophage___Secreted_components
+v_CXCL1_M1_macrophage___Secreted_components, (v_RELA_NFKB1_complex_M1_macrophage___nucleus & v_AP_1_phosphorylated)
+v_CXCL9, v_IRF3_phosphorylated
+v_CXCR1_IL8_complex, (v_IL8_M1_macrophage___Extracellular_Space & v_CXCR1)
+v_Cell_chemotaxis_migration_signal_phenotype, (((((((((((v_CCL20 | v_CXCL10) | v_CXCL11) | v_CXCL9) | v_CCL3) | v_CCL5) | v_MMP14) | v_CXCL1_M1_macrophage___Secreted_components) | v_IL8_M1_macrophage___Secreted_components) | v_MMP3) | v_MMP9) | v_IL12_M1_macrophage___Secreted_components)
+v_DAXX, v_FASL_FAS_complex
+v_EDN1, v_RELA_NFKB1_complex_M1_macrophage___nucleus
+v_ERK1_phosphorylated_M1_macrophage___Cytoplasm, (((v_MEK1_phosphorylated | v_MEK2_phosphorylated) | v_C5a_C5aR1_complex) | v_GNB_GNG_GNAI3_complex)
+v_ERK1_phosphorylated_M1_macrophage___nucleus, v_ERK1_phosphorylated_M1_macrophage___Cytoplasm
+v_FADD, (v_MYD88_TIRAP_TOLLIP_complex | v_FASL_FAS_complex)
+v_FAS, (v_AP_1_phosphorylated & v_RELA_NFKB1_complex_M1_macrophage___nucleus)
+v_FASL_FAS_complex, (v_FASL_M1_macrophage___Extracellular_Space & v_FAS)
+v_FASL_M1_macrophage___Extracellular_Space, v_FASL_M1_macrophage___Secreted_components
+v_FASL_M1_macrophage___Secreted_components, v_AP_1_phosphorylated
+v_FOXO_M1_macrophage___Cytoplasm, !v_AKT1
+v_FOXO_M1_macrophage___nucleus, ((v_FOXO_M1_macrophage___Cytoplasm & !v_AKT1) | (v_FOXO_M1_macrophage___nucleus & v_Sirt1))
+v_GAL_GALR2_complex, v_gal
+v_GNA12_GNA13_complex, v_GAL_GALR2_complex
+v_GNAI3, ((((v_CCL2_CCR2_complex | v_CXCR1_IL8_complex) | v_CCL21_CCR7_complex) | v_CXCL1_CXCR1_complex) & v_GNB_GNG_GNAI3_complex)
+v_GNB_GNG_complex, ((((v_CCL2_CCR2_complex | v_CXCR1_IL8_complex) | v_CCL21_CCR7_complex) | v_CXCL1_CXCR1_complex) & v_GNB_GNG_GNAI3_complex)
+v_HES1_rna, v_NICD_CSL_SKIP_MAML1_ep300_complex
+v_HEY1_rna, v_NICD_CSL_SKIP_MAML1_ep300_complex
+v_HIF1_complex, (v_Hif1a & v_Hif1b)
+v_HMGB1, v_STAT3_STAT3_complex
+v_HRAS, v_SOS1
+v_ICAM1, v_RELA_NFKB1_complex_M1_macrophage___nucleus
+v_IFNAR1_IFNAR2_IFNa_complex, (v_IFNa_M1_macrophage___Extracellular_Space & v_IFNAR1_IFNAR2_complex)
+v_IFNAR1_IFNAR2_IFNb_complex, (v_IFNb_M1_macrophage___Extracellular_Space & v_IFNAR1_IFNAR2_complex)
+v_IFNE_IFNAR1_IFNAR2_complex, (v_IFNE & v_IFNAR1_IFNAR2_complex)
+v_IFNGR1_IFNGR2_IFNg_complex, (v_IFNg_M1_macrophage___Extracellular_Space & v_IFNGR1_IFNGR2_complex)
+v_IFNa_M1_macrophage___Extracellular_Space, v_IFNa_M1_macrophage___Secreted_components
+v_IFNa_M1_macrophage___Secreted_components, (v_IRF7 & v_IRF3_phosphorylated)
+v_IFNb_M1_macrophage___Extracellular_Space, v_IFNb_M1_macrophage___Secreted_components
+v_IFNb_M1_macrophage___Secreted_components, (v_IRF7 & v_IRF3_phosphorylated)
+v_IFNg_M1_macrophage___Extracellular_Space, v_IFNg_M1_macrophage___Secreted_components
+v_IFNg_M1_macrophage___Secreted_components, ((v_RELA_NFKB1_complex_M1_macrophage___nucleus & v_NFAT5) & v_STAT4_STAT4_complex)
+v_IKK1_IKK2_complex, (v_IKK1_phosphorylated & v_IKK2_phosphorylated)
+v_IKK2_phosphorylated, v_PRKCQ
+v_IKKE_TBK1_TRAF3_complex, (v_TRAF3 & v_IKKE_TBK1_complex)
+v_IKK_complex, ((((((v_TRAF6_TAB1_TAB2_TAK1_complex | v_TRAF6_ECSIT_MEKK1_TAB1_TAB2_TAK1_complex) | v_AKT1) | v_TRAF2_RIP1_TRADD_TAK1_TAB1_TAB2_complex) | v_NIK) | v_TRADD_TRAF2_RIP1_complex) | v_CSF2RA_CSF2RB_CSF2_complex)
+v_IL10_rna, (v_STAT3_STAT3_complex & v_FOXO_M1_macrophage___nucleus)
+v_IL12RB_IL12_complex, (v_IL12_M1_macrophage___Extracellular_Space & v_IL12RB_complex)
+v_IL12_M1_macrophage___Extracellular_Space, v_IL12_M1_macrophage___Secreted_components
+v_IL12_M1_macrophage___Secreted_components, (v_RELA_NFKB1_complex_M1_macrophage___nucleus & v_AP_1_phosphorylated)
+v_IL15, (v_RELA_NFKB1_complex_M1_macrophage___nucleus & v_AP_1_phosphorylated)
+v_IL18_IL18R1_complex, v_IL18_M1_macrophage___Extracellular_Space
+v_IL18_M1_macrophage___Cytoplasm, v_NFAT5
+v_IL18_M1_macrophage___Extracellular_Space, v_IL18_M1_macrophage___Secreted_components
+v_IL18_M1_macrophage___Secreted_components, (v_IL18_M1_macrophage___Cytoplasm & v_NLRP3_INFLAMMASOME_complex)
+v_IL1B_M1_macrophage___Cytoplasm, ((v_RELA_NFKB1_complex_M1_macrophage___nucleus & v_NFAT5) & v_AP_1_phosphorylated)
+v_IL1B_M1_macrophage___Extracellular_Space, v_IL1B_M1_macrophage___Secreted_components
+v_IL1B_M1_macrophage___Secreted_components, (v_IL1B_M1_macrophage___Cytoplasm & v_NLRP3_INFLAMMASOME_complex)
+v_IL1_IL1R_complex, (v_IL1B_M1_macrophage___Extracellular_Space & v_IL1R_complex)
+v_IL23R_IL12RB1_IL23_complex, (v_IL23R_IL12RB1_complex & v_IL23_M1_macrophage___Extracellular_Space)
+v_IL23_M1_macrophage___Extracellular_Space, v_IL23_M1_macrophage___Secreted_components
+v_IL23_M1_macrophage___Secreted_components, (v_RELA_NFKB1_complex_M1_macrophage___nucleus & v_AP_1_phosphorylated)
+v_IL4_rna, v_STAT3_STAT3_complex
+v_IL6_IL6R_IL6ST_complex, v_IL6_M1_macrophage___Extracellular_Space
+v_IL6_M1_macrophage___Extracellular_Space, v_IL6_M1_macrophage___Secreted_components
+v_IL6_M1_macrophage___Secreted_components, (v_NFAT5 & v_RELA_NFKB1_complex_M1_macrophage___nucleus)
+v_IL8_M1_macrophage___Extracellular_Space, v_IL8_M1_macrophage___Secreted_components
+v_IL8_M1_macrophage___Secreted_components, (v_RELA_NFKB1_complex_M1_macrophage___nucleus & v_AP_1_phosphorylated)
+v_IRAK1_IRAK4_complex, (v_IRAK4_phosphorylated & v_IRAK1)
+v_IRAK4_phosphorylated, (((v_MYD88 | v_MYD88_TIRAP_TOLLIP_complex) | v_TLR7_TLR8_ssRNA_complex) | v_TLR9_DNA_complex)
+v_IRF3_phosphorylated, (v_IKKE_TBK1_TRAF3_complex | v_IKK_complex)
+v_IRF5_ubiquitinated, v_TRAF6_IRAK1_IRAK4_complex
+v_IRF7, ((v_IKKE_TBK1_TRAF3_complex | v_IKK_complex) | v_OPN)
+v_ITCH_phosphorylated, v_JNK1_phosphorylated_M1_macrophage___Cytoplasm
+v_ITGB1_ITGA1_col4a_complex, ((v_col4a4 & v_ITGB1_ITGA1_complex) | (v_col4a5 & v_ITGB1_ITGA1_complex))
+v_JAG1, (v_AP_1_phosphorylated & v_RELA_NFKB1_complex_M1_macrophage___nucleus)
+v_JAK1, v_IL11_IL11Ra_IL6ST_complex
+v_JAK1_JAK2_complex, v_IFNGR1_IFNGR2_IFNg_complex
+v_JAK1_TYK2_complex, (((v_IL23R_IL12RB1_IL23_complex | v_IFNAR1_IFNAR2_IFNb_complex) | v_IFNAR1_IFNAR2_IFNa_complex) | v_IFNE_IFNAR1_IFNAR2_complex)
+v_JAK2, (((v_IL6_IL6R_IL6ST_complex | v_CCL21_CCR7_complex) | v_CCL2_CCR2_complex) | v_CXCR1_IL8_complex)
+v_JAK2_TYK2_complex, v_IL12RB_IL12_complex
+v_JNK1_phosphorylated_M1_macrophage___Cytoplasm, (((v_MKK7_phosphorylated | v_MKK4_phosphorylated) | v_ASK1) | v_Rac1)
+v_JNK1_phosphorylated_M1_macrophage___nucleus, v_JNK1_phosphorylated_M1_macrophage___Cytoplasm
+v_LTA, v_AP_1_phosphorylated
+v_MDM2_phosphorylated, v_AKT1
+v_MEK1_phosphorylated, (v_TPL2 | v_RAF1)
+v_MEK2_phosphorylated, (v_TPL2 | v_RAF1)
+v_MKK3_phosphorylated, (((v_TRAF6_TAB1_TAB2_TAK1_complex | v_TRAF6_ECSIT_MEKK1_TAB1_TAB2_TAK1_complex) | v_TRAF2_RIP1_TRADD_TAK1_TAB1_TAB2_complex) | v_ASK1)
+v_MKK4_phosphorylated, (((v_TRAF6_TAB1_TAB2_TAK1_complex | v_TRAF2_RIP1_TRADD_TAK1_TAB1_TAB2_complex) | v_ASK1) | v_MEKK1)
+v_MKK6_phosphorylated, (((v_TRAF6_ECSIT_MEKK1_TAB1_TAB2_TAK1_complex | v_TRAF6_TAB1_TAB2_TAK1_complex) | v_TRAF2_RIP1_TRADD_TAK1_TAB1_TAB2_complex) | v_ASK1)
+v_MKK7_phosphorylated, (((v_TRAF6_ECSIT_MEKK1_TAB1_TAB2_TAK1_complex | v_TRAF6_TAB1_TAB2_TAK1_complex) | v_TRAF2_RIP1_TRADD_TAK1_TAB1_TAB2_complex) | v_ASK1)
+v_MMP14, (v_AP_1_phosphorylated & v_RELA_NFKB1_complex_M1_macrophage___nucleus)
+v_MMP3, (v_AP_1_phosphorylated & v_RELA_NFKB1_complex_M1_macrophage___nucleus)
+v_MMP9, (v_AP_1_phosphorylated & v_RELA_NFKB1_complex_M1_macrophage___nucleus)
+v_MYD88, ((v_IL1_IL1R_complex | v_TLR5) | v_IL18_IL18R1_complex)
+v_MYD88_TIRAP_TOLLIP_complex, (v_TLR1_TLR2_biglycan_complex | v_TLR2_TLR6_biglycan_complex)
+v_Matrix_degradation_signal_phenotype, (((v_MMP3 | v_MMP14) | v_MMP9) & !v_vcan)
+v_Mcl1_rna, (((v_STAT1_STAT2_IRF9_complex & v_STAT1_STAT1_complex) & v_RELA_NFKB1_complex_M1_macrophage___nucleus) & v_ERK1_phosphorylated_M1_macrophage___nucleus)
+v_NCID, (v_notch1_JAG1_complex & v_gamma_secretase_complex_complex)
+v_NFAT5, (v_ERK1_phosphorylated_M1_macrophage___Cytoplasm | v_p38_MAP_KINASE_phosphorylated_M1_macrophage___Cytoplasm)
+v_NFKB1, (v_NFKB1_TPL2_complex & v_IKK_complex)
+v_NFKBIA_phosphorylated, ((v_IKK_complex | v_IKKE_TBK1_TRAF3_complex) & v_NFKBIA_RELA_NFKB1_complex)
+v_NFKBIE, (v_RELA_NFKB1_NFKBIE_complex & v_IKK1_IKK2_complex)
+v_NICD, v_NCID
+v_NICD_CSL_SKIP_MAML1_ep300_complex, v_NICD
+v_NIK, ((v_TRAF6_TAB1_TAB2_TAK1_complex | v_TRADD_TRAF2_RIP1_complex) | v_TRAF2_TRAF6_complex)
+v_NLRP3, v_RELA_NFKB1_complex_M1_macrophage___nucleus
+v_NLRP3_INFLAMMASOME_complex, ((v_NLRP3 & v_Casp1) & v_ASC)
+v_NOS2, v_NFAT5
+v_NOS2_phosphorylated, (v_NOS2 & v_AKT1)
+v_PI3K, (((((((((((v_Rac1 | v_TRAF6_ubiquitinated) | v_C5a_C5aR1_complex) | v_CSF2RA_CSF2RB_CSF2_complex) | v_HRAS) | v_PTK2) | v_PIK3AP1_phosphorylated) | v_CD40LG_ITGB1_ITGA1_complex) | v_JAK2) | v_JAK1_TYK2_complex) | v_Src) & !v_INPP5A)
+v_PIK3AP1_phosphorylated, v_SYK
+v_PTK2, v_ITGB1_ITGA1_col4a_complex
+v_PTPN6, v_HLA_B_LILRB1_complex
+v_RAF1, (v_HRAS & !v_AKT1)
+v_RELA_NFKB1_complex_M1_macrophage___Cytoplasm, (((v_IKK_complex | v_IKKE_TBK1_TRAF3_complex) & v_NFKBIA_RELA_NFKB1_complex) | (v_RELA_NFKB1_NFKBIE_complex & v_IKK1_IKK2_complex))
+v_RELA_NFKB1_complex_M1_macrophage___nucleus, ((v_CypA | v_Prkcd) & v_RELA_NFKB1_complex_M1_macrophage___Cytoplasm)
+v_RHOA, (v_GNA12_GNA13_complex & !v_PRKG1)
+v_RXRa_NUR77_complex, !v_AKT1
+v_Rac1, ((v_TLR1_TLR2_biglycan_complex | v_TLR2_TLR6_biglycan_complex) & !v_RHOA)
+v_SARA, (((v_ACVR2A_ACVR2B_INHBA_complex | v_ACVR2A_ACVR2B_INHBB_complex) & v_SMAD2_SARA_complex) & !v_SMAD7)
+v_SEMA4A, v_AP_1_phosphorylated
+v_SHP2_GRB2_complex, (((v_JAK2 | v_JAK1_JAK2_complex) | v_JAK1_TYK2_complex) | v_JAK2_TYK2_complex)
+v_SMAD2_SMAD4_complex, (v_SMAD2_phosphorylated & v_SMAD4)
+v_SMAD2_phosphorylated, (((v_ACVR2A_ACVR2B_INHBA_complex | v_ACVR2A_ACVR2B_INHBB_complex) & v_SMAD2_SARA_complex) & !v_SMAD7)
+v_SOCS3_rna, ((v_RELA_NFKB1_complex_M1_macrophage___nucleus & v_AP_1_phosphorylated) & v_STAT3_STAT3_complex)
+v_SOS1, v_SHP2_GRB2_complex
+v_STAT1, (((v_JAK1_JAK2_complex | v_JAK1_TYK2_complex) | v_JAK1) | v_JAK2)
+v_STAT1_STAT1_complex, v_STAT1
+v_STAT1_STAT2_IRF9_complex, ((((v_JAK1_TYK2_complex | v_JAK2_TYK2_complex) & v_STAT2) & v_STAT1) & v_IRF9)
+v_STAT3, ((v_JAK1_TYK2_complex | v_JAK2) | v_JAK1)
+v_STAT3_STAT3_complex, v_STAT3
+v_STAT4, (v_JAK2_TYK2_complex | v_JAK1)
+v_STAT4_STAT4_complex, v_STAT4
+v_STAT5_CRKL_complex, (v_CRKL_phosphorylated & v_STAT5_phosphorylated)
+v_STAT5_phosphorylated, v_JAK1_TYK2_complex
+v_SYK, !v_PTPN6
+v_Src, v_GNAI3
+v_TAB2_phosphorylated, v_IRAK1_IRAK4_complex
+v_TLR1_TLR2_biglycan_complex, (v_biglycan_simple_molecule & v_TLR1_TLR2_complex)
+v_TLR2_TLR6_biglycan_complex, (v_biglycan_simple_molecule & v_TLR2_TLR6_complex)
+v_TLR3_dsRNA_complex, v_dsRNA_simple_molecule
+v_TLR9_DNA_complex, v_DNA_simple_molecule
+v_TNFAIP3_rna, (v_RELA_NFKB1_complex_M1_macrophage___nucleus & v_AP_1_phosphorylated)
+v_TNFA_rna, (((v_RELA_NFKB1_complex_M1_macrophage___nucleus & v_AP_1_phosphorylated) & v_MK2_phosphorylated) & v_NFAT5)
+v_TNFSF11_TNFRSF11_complex, v_TNFSF11
+v_TNF_M1_macrophage___Extracellular_Space, v_TNF_M1_macrophage___Secreted_components
+v_TNF_M1_macrophage___Secreted_components, v_TNFA_rna
+v_TNF_TNFRSF1A_complex, v_TNF_M1_macrophage___Extracellular_Space
+v_TPL2, (v_NFKB1_TPL2_complex & v_IKK_complex)
+v_TRADD, v_TNF_TNFRSF1A_complex
+v_TRADD_TRAF2_RIP1_complex, (v_cIAP1 | v_TRADD)
+v_TRAF1_rna, (v_RELA_NFKB1_complex_M1_macrophage___nucleus & v_NFAT5)
+v_TRAF2_RIP1_TRADD_TAK1_TAB1_TAB2_complex, (((v_TRADD_TRAF2_RIP1_complex & v_TAK1) & v_TAB2_phosphorylated) & v_TAB1)
+v_TRAF2_TRAF6_complex, v_TNFSF11_TNFRSF11_complex
+v_TRAF3, v_TRAM1_TRIF_complex
+v_TRAF6_ECSIT_MEKK1_TAB1_TAB2_TAK1_complex, (((((v_MEKK1 & v_ECSIT) & v_TRAF6_ubiquitinated) & v_TAK1) & v_TAB1) & v_TAB2_phosphorylated)
+v_TRAF6_IRAK1_IRAK4_complex, ((v_TRAF6 & v_IRAK1_IRAK4_complex) & !v_IRAK3)
+v_TRAF6_TAB1_TAB2_TAK1_complex, (((((v_TRAF6_ubiquitinated & v_TAB2_phosphorylated) & v_TAB1) & v_TAK1) & v_TAB1) & v_TRAF2_TRAF6_complex)
+v_TRAF6_ubiquitinated, ((v_TRAF6 & v_UEV1A_UBC13_complex) & !v_PP4)
+v_TRAM1, v_TLR4_Md2_CD14_fibrinogen_complex
+v_TRAM1_TRIF_complex, (v_TRIF & v_TRAM1)
+v_TRIF, v_TLR3_dsRNA_complex
+v_T_cells_activation_signal_phenotype, (((((v_CD40 | v_CD86) | v_CD80) | v_CSF2_M1_macrophage___Secreted_components) | v_IFNa_M1_macrophage___Secreted_components) | v_ICAM1)
+v_Vegfa_rna, ((v_NFAT5 & v_RELA_NFKB1_complex_M1_macrophage___nucleus) & v_STAT3_STAT3_complex)
+v_Vegfb_rna, ((v_NFAT5 & v_RELA_NFKB1_complex_M1_macrophage___nucleus) & v_STAT4_STAT4_complex)
+v_Vegfc_rna, ((((v_AP_1_phosphorylated & v_RELA_NFKB1_complex_M1_macrophage___nucleus) & v_NFAT5) & v_STAT3_STAT3_complex) & v_HIF1_complex)
+v_XIAP, v_RELA_NFKB1_complex_M1_macrophage___nucleus
+v_angiogenesis_signal_phenotype, ((((v_NOS2_phosphorylated | v_Hif1a) | v_CXCL12_M1_macrophage___Secreted_components) | v_EDN1) | v_OPN)
+v_apoptosis_M1_macrophage_phenotype, ((((((((((((v_CASP8 | v_CASP3) | v_CASP7) | v_p53_phosphorylated) | v_Bim) | v_TNF_M1_macrophage___Secreted_components) | v_FASL_M1_macrophage___Secreted_components) | v_NLRP3_INFLAMMASOME_complex) | v_p300_SP1_complex) & !v_Mcl1_rna) & !v_p21_rna) & !v_BCL2_M1_macrophage__Mitochondria_membrane_active) & !v_BCL2L1_M1_macrophage__Mitochondria_active)
+v_apoptosis_signal_phenotype, ((v_FASL_M1_macrophage___Secreted_components | v_TNF_M1_macrophage___Secreted_components) | v_LTA)
+v_cFLIP, v_RELA_NFKB1_complex_M1_macrophage___nucleus
+v_cFLIP_ubiquitinated, (v_cFLIP & v_ITCH_phosphorylated)
+v_c_FOS_M1_macrophage___Cytoplasm, v_RELA_NFKB1_complex_M1_macrophage___nucleus
+v_c_FOS_M1_macrophage___Cytoplasm_active, (v_c_FOS_M1_macrophage___Cytoplasm & v_TSG6)
+v_c_FOS_M1_macrophage___nucleus, v_c_FOS_M1_macrophage___Cytoplasm_active
+v_c_JUN, (v_RELA_NFKB1_complex_M1_macrophage___nucleus & v_JNK1_phosphorylated_M1_macrophage___nucleus)
+v_c_JUN_phosphorylated_M1_macrophage___Cytoplasm, ((v_JNK1_phosphorylated_M1_macrophage___Cytoplasm | v_ERK1_phosphorylated_M1_macrophage___Cytoplasm) & v_c_JUN)
+v_c_JUN_phosphorylated_M1_macrophage___nucleus, v_c_JUN_phosphorylated_M1_macrophage___Cytoplasm
+v_c_Myc_rna, ((v_STAT5_CRKL_complex & v_RELA_NFKB1_complex_M1_macrophage___nucleus) & v_ERK1_phosphorylated_M1_macrophage___nucleus)
+v_inflammation_signal_phenotype, ((((((((((((((((((((((((((((v_C5a_C5aR1_complex | v_CCL20) | v_CCL4) | v_CCL5) | v_CD40) | v_COX2_rna) | v_IL15) | v_IRF7) | v_RELA_NFKB1_complex_M1_macrophage___nucleus) | v_IRF5_ubiquitinated) | v_IL23_M1_macrophage___Secreted_components) | v_IL12_M1_macrophage___Secreted_components) | v_IFNb_M1_macrophage___Secreted_components) | v_IFNa_M1_macrophage___Secreted_components) | v_TNF_M1_macrophage___Secreted_components) | v_IL18_M1_macrophage___Secreted_components) | v_IL1B_M1_macrophage___Secreted_components) | v_AREG) | v_SEMA4A) | v_ICAM1) | v_IL6_M1_macrophage___Secreted_components) | v_CCL2_M1_macrophage___Secreted_components) | v_CCL3) | v_LTA) | v_CXCL10) | v_CXCL9) | v_CXCL11) | v_IFNg_M1_macrophage___Secreted_components) & !v_ARRB2)
+v_osteoclastogenesis_M1_macrophage_phenotype, ((((v_c_FOS_M1_macrophage___Cytoplasm_active | v_c_JUN_phosphorylated_M1_macrophage___Cytoplasm) | v_IL1B_M1_macrophage___Secreted_components) | v_AP_1_phosphorylated) | v_IFNg_M1_macrophage___Secreted_components)
+v_osteoclastogenesis_signal_phenotype, (v_IL1B_M1_macrophage___Secreted_components | v_IFNg_M1_macrophage___Secreted_components)
+v_p15_rna, (v_FOXO_M1_macrophage___nucleus & !v_c_Myc_rna)
+v_p21_rna, (((v_STAT1_STAT1_complex & v_STAT1_STAT2_IRF9_complex) & v_NICD_CSL_SKIP_MAML1_ep300_complex) & v_RELA_NFKB1_complex_M1_macrophage___nucleus)
+v_p300_SP1_complex, v_SMAD2_SMAD4_complex
+v_p38_MAP_KINASE_phosphorylated_M1_macrophage___Cytoplasm, (((v_MKK3_phosphorylated | v_MKK6_phosphorylated) | v_C5a_C5aR1_complex) & !v_DUSP1)
+v_p38_MAP_KINASE_phosphorylated_M1_macrophage___nucleus, v_p38_MAP_KINASE_phosphorylated_M1_macrophage___Cytoplasm
+v_p53_phosphorylated, !v_MDM2_phosphorylated
+v_proliferation_survival_M1_macrophage_phenotype, (((((((((((((((((((v_XIAP | v_CXCL1_M1_macrophage___Secreted_components) | v_ERK1_phosphorylated_M1_macrophage___nucleus) | v_p38_MAP_KINASE_phosphorylated_M1_macrophage___nucleus) | v_MDM2_phosphorylated) | v_cFLIP) | v_BCL3_rna) | v_BCL3_rna) | v_c_FOS_M1_macrophage___Cytoplasm_active) | v_c_JUN_phosphorylated_M1_macrophage___Cytoplasm) | v_IL12_M1_macrophage___Secreted_components) | v_IL8_M1_macrophage___Secreted_components) | v_CCL2_M1_macrophage___Secreted_components) | v_CSF2_M1_macrophage___Secreted_components) | v_HBGEF) | v_p21_rna) | v_IL6_M1_macrophage___Secreted_components) | v_c_Myc_rna) | v_p38_MAP_KINASE_phosphorylated_M1_macrophage___Cytoplasm) & !v_p15_rna)
+v_proliferation_survival_signal_phenotype, ((((((((v_CXCL10 | v_IL15) | v_IL6_M1_macrophage___Secreted_components) | v_IL18_M1_macrophage___Secreted_components) | v_vcan) | v_AREG) | v_CSF2_M1_macrophage___Secreted_components) | v_CCL2_M1_macrophage___Secreted_components) | v_CXCL1_M1_macrophage___Secreted_components)
+v_vcan, v_STAT4_STAT4_complex
