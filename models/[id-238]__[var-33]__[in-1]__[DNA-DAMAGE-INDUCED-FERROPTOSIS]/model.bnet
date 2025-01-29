@@ -1,0 +1,34 @@
+targets,factors
+v_ALOX15, (v_SAT1 & !v_GPX4)
+v_APOPTOSIS, v_Caspase3
+v_ATM, ((v_DNA_damage & !v_Wip1) | ((v_DNA_damage & v_Wip1) & v_E2F1))
+v_BAX, (((!v_Wip1 & v_p53_K) & !v_BCL2) & v_BIM)
+v_BCL2, ((((!v_p53_K & !v_miR_34c) & v_E2F1) & !v_BIM) & !v_SAT1)
+v_BIM, (v_p53_K & !v_BCL2)
+v_Caspase3, (((!v_p21 & v_BIM) & v_BAX) & !v_xCT)
+v_Cdc25, (!v_ATM & !v_p38MAPK)
+v_Cric_NOTCH1, v_Myc
+v_DRUG_RESISTANCE, v_LncRNA_MALAT1
+v_E2F1, (((((((!v_ATM & !v_Myc) & !v_RB) & !v_Sirt_1) | (!v_ATM & v_Myc)) | ((((v_ATM & !v_Myc) & !v_Cdc25) & !v_RB) & !v_Sirt_1)) | (((v_ATM & !v_Myc) & v_Cdc25) & !v_RB)) | (v_ATM & v_Myc))
+v_FERROPTOSIS, ((v_p21 & v_BAX) & v_ALOX15)
+v_GPX4, v_GSH
+v_GSH, v_xCT
+v_LncRNA_MALAT1, v_Myc
+v_Mdm2, (((!v_ATM & !v_Wip1) & v_p53) | (!v_ATM & v_Wip1))
+v_Myc, (((!v_p38MAPK & !v_miR_34c) | (v_p38MAPK & !v_miR_34c)) | (((((v_p38MAPK & v_miR_34c) & !v_p21) & !v_RB) & v_E2F1) & v_xCT))
+v_PROLIFERATION, v_Mdm2
+v_RB, !v_cdk46_CycD
+v_SAT1, v_p53_K
+v_SENESCENCE, (v_p53_A & v_p21)
+v_SOX4, (!v_miR_34c & v_Myc)
+v_Sirt_1, (!v_miR_34c & v_E2F1)
+v_Wip1, v_E2F1
+v_cdk46_CycD, (!v_miR_34c | (((v_miR_34c & v_SOX4) & !v_p21) & v_Cdc25))
+v_miR_34c, ((v_p53 & !v_Cric_NOTCH1) & !v_LncRNA_MALAT1)
+v_p21, (((((((!v_p38MAPK & v_p53_A) & !v_Myc) & !v_ALOX15) | ((v_p38MAPK & !v_p53_A) & !v_Caspase3)) | (((v_p38MAPK & v_p53_A) & !v_Myc) & !v_Caspase3)) | ((((v_p38MAPK & v_p53_A) & !v_Myc) & v_Caspase3) & !v_ALOX15)) | (((v_p38MAPK & v_p53_A) & v_Myc) & !v_Caspase3))
+v_p38MAPK, (v_ATM & !v_Wip1)
+v_p53, (((((((!v_ATM & v_p38MAPK) & !v_Mdm2) & !v_Wip1) | ((v_ATM & !v_p38MAPK) & !v_LncRNA_MALAT1)) | (((v_ATM & v_p38MAPK) & !v_Mdm2) & !v_Wip1)) | ((((v_ATM & v_p38MAPK) & !v_Mdm2) & v_Wip1) & !v_LncRNA_MALAT1)) | (((v_ATM & v_p38MAPK) & v_Mdm2) & !v_LncRNA_MALAT1))
+v_p53_A, (((((!v_Wip1 & !v_p53) & !v_p53_INP1) & !v_p53_K) & !v_Sirt_1) | (((!v_Wip1 & v_p53) & !v_p53_K) & !v_Sirt_1))
+v_p53_INP1, ((!v_p53_A & v_p53_K) | v_p53_A)
+v_p53_K, (((!v_Wip1 & v_p53) & !v_p53_A) | (((v_Wip1 & v_p53) & !v_p53_A) & !v_Sirt_1))
+v_xCT, (((!v_ATM & !v_p53) | (((!v_ATM & v_p53) & v_Myc) & !v_BIM)) | (v_ATM & !v_p53))
