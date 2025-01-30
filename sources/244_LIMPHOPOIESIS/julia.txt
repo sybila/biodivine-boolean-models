@@ -1,0 +1,147 @@
+#### This Supplementary File is a julia script,
+#### run it by typing "julia model.txt" in the command line
+####
+
+using DifferentialEquations
+
+####################################
+function lympho!(du,u,p,t)
+	squad(x,omega;h=50,lambda=1) = ((-exp(0.5*h)+exp(-h*(omega-0.5)))/((1-exp(0.5*h))*(1+exp(-h*(omega-0.5)))))-(lambda*x)	
+	du[1] = squad(u[1],u[93]) # Akt	
+	du[2] = squad(u[2],0) # AP1
+	du[3] = squad(u[3],0) # B9
+	du[4] = squad(u[4],max(u[71],u[6])) # Bach2 
+	du[5] = squad(u[5],max(u[25],u[84])) # Bcl2 
+	du[6] = squad(u[6],min(u[58],u[15],1-u[9],1-u[64])) # Bcl6
+	du[7] = squad(u[7],max(u[70],u[10],u[11])) # Bcl11b
+	du[8] = squad(u[8],0) # BCR
+	du[9] = squad(u[9],min(u[64],1-u[4],1-u[6],1-u[71])) # Blimp1
+	du[10] = squad(u[10],min(max(min(u[10],u[11]),u[70],u[91]),1-u[15],1-u[77])) # CD4 
+	du[11] = squad(u[11],min(max(min(u[10],u[11]),u[70],u[77]),u[7],1-u[15],1-u[88],1-u[91])) # CD8
+	du[12] = squad(u[12],u[71]) # CD19
+	du[13] = squad(u[13],max(min(u[16],u[77],1-u[7]),u[18],u[21])) # CD122
+	du[14] = squad(u[14],0) #  Dll1
+	du[15] = squad(u[15],min(u[76],1-u[77])) # Ebf1
+	du[16] = squad(u[16],min(max(u[62],u[20],u[86]),u[77])) # EOMES
+	du[17] = squad(u[17],max(u[8],u[21])) # ERK
+	du[18] = squad(u[18],max(u[34],u[67])) # ETS1
+	du[19] = squad(u[19],min(u[15],u[71],1-u[29],1-u[34])) # E2A
+	du[20] = squad(u[20],min(1-u[7],u[72])) # E4BP4
+	du[21] = squad(u[21],min(max(u[22],u[32]),1-u[71])) # Flt3
+	du[22] = squad(u[22],0) # Flt3L
+	du[23] = squad(u[23],min(1-max(u[72],u[67]),u[15],u[19])) # Foxo1
+	du[24] = squad(u[24],min(max(u[78],u[79],u[24]),u[91],1-u[26],1-u[75],1-u[82],1-u[86])) # Foxp3
+	du[25] = squad(u[25],min(u[3],u[24])) # FR4
+	du[26] = squad(u[26],min(max(u[26],u[85],u[87]),u[91],1-u[24],1-u[29],1-u[75],1-u[76],1-u[86])) # GATA3
+	du[27] = squad(u[27],u[39]) # Gfi1
+	du[28] = squad(u[28],u[16]) # Gzmb
+	du[29] = squad(u[29],min(u[70],1-u[34])) # HEB
+	du[30] = squad(u[30],min(u[70],1-u[74])) # HES1
+	du[31] = squad(u[31],u[68]) # Helios
+	du[32] = squad(u[32],0) # Hoxa9
+	du[33] = squad(u[33],u[2]) # ICOS
+	du[34] = squad(u[34],min(1-u[7],1-u[15],1-u[91],max(u[20],u[18]))) # Id2
+	du[35] = squad(u[35],0) # IFNb
+	du[36] = squad(u[36],u[35]) # IFNbR
+	du[37] = squad(u[37],max(min(u[86],u[77]),min(max(u[63],u[83],u[86]),1-u[82]))) # IFNg 
+	du[38] = squad(u[38],u[37]) # IFNgR
+	du[39] = squad(u[39],u[74]) # Ikaros
+	du[40] = squad(u[40],0) # IL2
+	du[41] = squad(u[41],min(u[40],u[13])) # IL2Ra
+	du[42] = squad(u[42],min(u[26],1-u[81])) # IL4
+	du[43] = squad(u[43],min(u[42],1-u[80])) # IL4R
+	du[44] = squad(u[44],u[75]) # IL6
+	du[45] = squad(u[45],u[44]) # IL6R 
+	du[46] = squad(u[46],0) # IL7
+	du[47] = squad(u[47],min(u[46],1-u[88])) # IL7R
+	du[48] = squad(u[48],u[26]) # IL10
+	du[49] = squad(u[49],u[48]) # IL10R
+	du[50] = squad(u[50],0) # IL12
+	du[51] = squad(u[51],min(u[50],1-u[85])) # IL12R
+	du[52] = squad(u[52],0) # IL15
+	du[53] = squad(u[53],min(u[52],u[13])) # IL15Ra
+	du[54] = squad(u[54],max(u[75],min(u[2],u[69]))) # IL17
+	du[55] = squad(u[55],0) # IL18
+	du[56] = squad(u[56],min(u[55],1-u[85])) # IL18R
+	du[57] = squad(u[57],0) # IL21
+	du[58] = squad(u[58],u[57]) # IL21R
+	du[59] = squad(u[59],0) # IL23
+	du[60] = squad(u[60],u[59]) # IL23R
+	du[61] = squad(u[61],0) # IL27
+	du[62] = squad(u[62],u[61]) # IL27R
+	du[63] = squad(u[63],u[56]) # IRAK
+	du[64] = squad(u[64],min(max(u[9],u[68]),u[15],1-u[21])) # Irf4
+	du[65] = squad(u[65],u[38]) # JAK1
+	du[66] = squad(u[66],min(max(u[45],u[47]),1-u[70])) # JAK3
+	du[67] = squad(u[67],u[53]) # MAPK
+	du[68] = squad(u[68],u[8]) # NFkB
+	du[69] = squad(u[69],u[88]) # NFAT
+	du[70] = squad(u[70],u[14]) # Notch1
+	du[71] = squad(u[71],max(min(u[15],1-u[9],1-u[21],1-u[64],1-u[91]),min(u[15],u[84],1-u[9],1-u[64],1-u[91]))) # Pax5
+	du[72] = squad(u[72],u[53]) # PDK1
+	du[73] = squad(u[73],min(u[16],u[86])) # Prf1
+	du[74] = squad(u[74],min(1-u[27],1-u[39])) # PU1
+	du[75] = squad(u[75],min(max(u[82],u[75]),u[91],1-u[24],1-u[26],1-u[86])) # RORgt
+	du[76] = squad(u[76],min(u[76],1-u[70],1-u[77],1-u[88],1-u[91])) # Runx1
+	du[77] = squad(u[77],max(min(u[11],1-u[10],1-u[84],1-u[91]),min(u[11],u[84]),u[18])) # Runx3
+	du[78] = squad(u[78],u[90]) # SMAD2
+	du[79] = squad(u[79],min(u[90],1-u[1])) # SMAD3
+	du[80] = squad(u[80],max(u[81],u[86])) # SOCS1
+	du[81] = squad(u[81],max(u[36],u[62],u[65])) # STAT1
+	du[82] = squad(u[82],max(u[49],u[58],u[60],u[66])) # STAT3
+	du[83] = squad(u[83],min(u[51],1-u[26])) # STAT4
+	du[84] = squad(u[84],min(max(u[41],u[66]),1-u[80])) # STAT5
+	du[85] = squad(u[85],u[43]) # STAT6
+	du[86] = squad(u[86],min(max(u[81],u[86]),1-u[24],1-u[26],1-u[75])) # Tbet
+	du[87] = squad(u[87],u[70]) # TCF1
+	du[88] = squad(u[88],0) # TCR
+	du[89] = squad(u[89],u[24]) # TGFb
+	du[90] = squad(u[90],u[89]) # TGFbR
+	du[91] = squad(u[91],min(max(u[86],u[24],u[26],u[75],u[88],u[91]),1-u[77])) # ThPOK
+	du[92] = squad(u[92],u[75]) # TNFa
+	du[93] = squad(u[93],u[92]) # TNFR2
+	du[94] = squad(u[94],u[18]) # Tox2
+	du[95] = squad(u[95],u[9]) # XBP1
+end
+###################################
+
+names = ["Akt","AP1","B9","Bach2","Bcl2","Bcl6","Bcl11b","BCR","Blimp1","CD4", 
+	"CD8","CD19","CD122","Dll1","Ebf1","EOMES","ERK","ETS1","E2A","E4BP4",
+	"Flt3","Flt3L","Foxo1","Foxp3","FR4","GATA3","Gfi1","Gzmb","HEB","HES1",
+	"Helios","Hoxa9","ICOS","Id2","IFNb","IFNbR","IFNg","IFNgR","Ikaros","IL2",
+	"IL2Ra","IL4","IL4R","IL6","IL6R","IL7","IL7R","IL10","IL10R","IL12",
+	"IL12R","IL15","IL15Ra","IL17","IL18","IL18R","IL21","IL21R","IL23","IL23R",
+	"IL27","IL27R","IRAK","Irf4","JAK1","JAK3","MAPK","NFkB","NFAT","Notch1",
+	"Pax5","PDK1","Prf1","PU1","RORgt","Runx1","Runx3","SMAD2","SMAD3","SOCS1",
+	"STAT1","STAT3","STAT4","STAT5","STAT6","Tbet","TCF1","TCR","TGFb","TGFbR",
+	"ThPOK","TNFa","TNFR2","Tox2","XBP1"]
+	
+
+# t 0.0 a 10.0 con Flt3L=1
+# modify this variable to specify an initial state
+initial_state = [0,0,0,0,0,0,0,0,0,0,
+	0,0,1,0,1,0,1,0,0,0,
+	1,1,0,0,0,0,0.5,0,0,0,
+	0,0,0,0,0,0,0,0,0.5,0,
+	0,0,0,0,0,0,0,0,0,0, 
+	0,0,0,0,0,0,0,0,0,0,
+	0,0,0,0,0,0,0,0,0,0,
+	0,0,0,0.5,0,1,0,0,0,0, 
+	0,0,0,0,0,0,0,0,0,0,
+	0,0,0,0,0]
+
+
+tspan = (0.0,20.0)
+prob = ODEProblem(lympho!,initial_state,tspan)
+sol = solve(prob)
+
+time_steps = length(sol.t)
+for i in 1:time_steps
+	print(sol.t[i],"\t")
+	vals = sol.u[i]
+	for j in 1:95
+		print(vals[j],"\t")
+	end
+	println()
+end
+
