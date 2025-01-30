@@ -1,0 +1,18 @@
+targets,factors
+v_BMP2, (!v_WNT & v_ex_BMP2)
+v_DKK1, (v_MESP1 | (v_WNT & !v_ex_BMP2))
+v_FGF8, (!v_MESP1 & (v_FOXC12 | v_TBX1))
+v_FOXC12, (v_WNT & v_ex_WNT)
+v_GATA46, (v_NKX25 | (v_MESP1 | v_TBX5))
+v_HAND2, (v_IRX4 | v_GATA46)
+v_HEY2, (!v_NR2F2 & (v_GATA46 & v_NOTCH))
+v_IRX4, (v_HAND2 & (!v_NR2F2 & v_NKX25))
+v_ISL1, (v_TBX1 | (v_MESP1 | (v_FGF8 | (v_WNT & v_ex_BMP2))))
+v_MESP1, (v_WNT & !v_ex_BMP2)
+v_MYL2, (v_IRX4 & !v_NR2F2)
+v_MYL7, (v_NR2F2 & !v_HEY2)
+v_NKX25, ((v_ISL1 & v_GATA46) | (v_TBX1 | ((v_MESP1 & v_DKK1) | ((v_BMP2 & v_GATA46) | v_TBX5))))
+v_NR2F2, v_RA
+v_TBX1, v_FOXC12
+v_TBX5, (!(v_TBX1 | v_WNT) & ((v_NKX25 | (v_TBX5 | v_MESP1)) & (!v_DKK1 | (v_MESP1 | v_TBX5))))
+v_WNT, v_ex_WNT
