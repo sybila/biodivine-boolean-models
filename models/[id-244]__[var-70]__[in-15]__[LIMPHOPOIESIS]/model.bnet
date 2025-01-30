@@ -1,0 +1,71 @@
+targets,factors
+v_Akt, v_Tox2
+v_Bach2, (v_PDK1 | v_Bcl11b)
+v_Bcl11b, (v_Pax5 | (v_CD8 | v_CD19))
+v_Bcl2, (v_GATA3 | v_STAT6)
+v_Bcl6, (v_IL23 & (v_EOMES & (!v_CD4 & !v_JAK1)))
+v_Blimp1, (v_JAK1 & (!v_Bcl2 & (!v_Bcl11b & !v_PDK1)))
+v_CD122, ((v_ERK & (v_SMAD2 & !v_BCR)) | (v_E2A | v_Flt3L))
+v_CD19, v_PDK1
+v_CD4, (((v_CD8 & v_CD19) | (v_Pax5 | v_TNFa)) & (!v_EOMES & !v_SMAD2))
+v_CD8, (((v_CD8 & v_CD19) | (v_Pax5 | v_SMAD2)) & (v_BCR & (!v_EOMES & (!v_TGFb & !v_TNFa))))
+v_E2A, (v_EOMES & (v_PDK1 & (!v_HES1 & !v_IFNb)))
+v_E4BP4, (!v_BCR & v_Prf1)
+v_EOMES, ((v_IRAK | (v_Flt3 | v_TCF1)) & v_SMAD2)
+v_ERK, (v_Blimp1 | v_Flt3L)
+v_ETS1, (v_IFNb | v_NFkB)
+v_Ebf1, (v_Runx3 & !v_SMAD2)
+v_FR4, (v_Bach2 & v_FR4)
+v_Flt3, ((v_Foxo1 | v_ICOS) & !v_PDK1)
+v_Foxo1, (!(v_Prf1 | v_NFkB) & (v_EOMES & v_E4BP4))
+v_Foxp3, ((v_SMAD3 | (v_SOCS1 | v_FR4)) & (v_TNFa & (!v_Gfi1 & (!v_Runx1 & (!v_STAT4 & !v_TCF1)))))
+v_GATA3, ((v_Gfi1 | (v_Tbet | v_TCR)) & (v_TNFa & (!v_FR4 & (!v_HES1 & (!v_Runx1 & (!v_Runx3 & !v_TCF1))))))
+v_Gfi1, v_IL2
+v_Gzmb, v_ERK
+v_HEB, (v_Pax5 & !v_IFNb)
+v_HES1, (v_Pax5 & !v_RORgt)
+v_Helios, v_NFAT
+v_ICOS, v_B9
+v_IFNg, ((v_TCF1 & v_SMAD2) | ((v_Irf4 | (v_STAT5 | v_TCF1)) & !v_STAT4))
+v_IL10, v_Gfi1
+v_IL12R, (v_IL12R & !v_Tbet)
+v_IL15Ra, (v_IL15Ra & v_Dll1)
+v_IL17, (v_Runx1 | (v_B9 & v_Notch1))
+v_IL18R, (v_IL18R & !v_Tbet)
+v_IL2Ra, (v_IL2Ra & v_Dll1)
+v_IL4, (v_Gfi1 & !v_STAT3)
+v_IL4R, (v_IL4R & !v_STAT1)
+v_IL6, v_Runx1
+v_IL7R, (v_IL7R & !v_TGFb)
+v_IRAK, v_IL21
+v_Id2, (!v_BCR & (!v_EOMES & (!v_TNFa & (v_Flt3 | v_E2A))))
+v_Ikaros, v_RORgt
+v_Irf4, ((v_CD4 | v_NFAT) & (v_EOMES & !v_Flt3L))
+v_JAK1, v_Ikaros
+v_JAK3, ((v_IL7 | v_IL10) & !v_Pax5)
+v_MAPK, v_IL17
+v_NFAT, v_TGFb
+v_NFkB, v_Blimp1
+v_PDK1, v_IL17
+v_PU1, (!v_Gzmb & !v_IL2)
+v_Pax5, ((v_EOMES & (!v_CD4 & (!v_Flt3L & (!v_JAK1 & !v_TNFa)))) | (v_EOMES & (v_STAT6 & (!v_CD4 & (!v_JAK1 & !v_TNFa)))))
+v_Prf1, (v_ERK & v_TCF1)
+v_RORgt, ((v_STAT4 | v_Runx1) & (v_TNFa & (!v_FR4 & (!v_Gfi1 & !v_TCF1))))
+v_Runx1, (v_Runx3 & (!v_Pax5 & (!v_SMAD2 & (!v_TGFb & !v_TNFa))))
+v_Runx3, ((v_CD19 & (!v_CD8 & (!v_STAT6 & !v_TNFa))) | ((v_CD19 & v_STAT6) | v_E2A))
+v_SMAD2, v_ThPOK
+v_SMAD3, (v_ThPOK & !v_AP1)
+v_SOCS1, (v_STAT3 | v_TCF1)
+v_STAT1, (v_IFNg | (v_IRAK | v_JAK3))
+v_STAT3, (v_IL12 | (v_IL23 | (v_IL27 | v_MAPK)))
+v_STAT4, (v_IL15 & !v_Gfi1)
+v_STAT5, ((v_IL4 | v_MAPK) & !v_STAT1)
+v_STAT6, v_IL6
+v_TCF1, v_Pax5
+v_TGFb, v_FR4
+v_TNFa, v_Runx1
+v_Tbet, ((v_STAT3 | v_TCF1) & (!v_FR4 & (!v_Gfi1 & !v_Runx1)))
+v_ThPOK, ((v_TCF1 | (v_FR4 | (v_Gfi1 | (v_Runx1 | (v_TGFb | v_TNFa))))) & !v_SMAD2)
+v_Tox2, v_E2A
+v_XBP1, v_CD4
+v_l_notch1, v_Ebf1

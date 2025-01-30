@@ -1,0 +1,95 @@
+Akt	, Tox2
+AP1, 0
+B9, 0
+Bach2 , (PDK1 | Bcl11b)
+Bcl2 , (GATA3 | STAT6)
+Bcl6, (IL23 & EOMES & !CD4 & !JAK1)
+Bcl11b, (Pax5 | CD8 | CD19)
+BCR, 0
+Blimp1, (JAK1 & !Bcl2 & !Bcl11b & !PDK1)
+CD4 , (((CD8 & CD19) | Pax5 | TNFa) & !EOMES & !SMAD2)
+CD8, (((CD8 & CD19) | Pax5 | SMAD2) & BCR & !EOMES & !TGFb & !TNFa)
+CD19, PDK1
+CD122, ((ERK & SMAD2 & !BCR) | E2A | Flt3L)
+Dll1, 0
+Ebf1, (Runx3 & !SMAD2)
+EOMES, ((IRAK | Flt3 | TCF1) & SMAD2)
+ERK, (Blimp1 | Flt3L)
+ETS1, (IFNb | NFkB)
+E2A, (EOMES & PDK1 & !HES1 & !IFNb)
+E4BP4, (!BCR & Prf1)
+Flt3, ((Foxo1 | ICOS) & !PDK1)
+Flt3L, 0
+Foxo1, (!(Prf1 | NFkB) & EOMES & E4BP4)
+Foxp3, ((SMAD3 | SOCS1 | FR4) & TNFa & !Gfi1 & !Runx1 & !STAT4 & !TCF1)
+FR4, (Bach2 & FR4)
+GATA3, ((Gfi1 | Tbet | TCR) & TNFa & !FR4 & !HES1 & !Runx1 & !Runx3 & !TCF1)
+Gfi1, IL2
+Gzmb, ERK
+HEB, (Pax5 & !IFNb)
+HES1, (Pax5 & !RORgt)
+Helios, NFAT
+Hoxa9, 0
+ICOS, B9
+Id2, (!BCR & !EOMES & !TNFa & (Flt3 | E2A))
+IFNb, 0
+IFNbR, IFNbR
+IFNg , ((TCF1 & SMAD2) | ((Irf4 | STAT5 | TCF1) & !STAT4))
+IFNgR, IFNgR
+Ikaros, RORgt
+IL2, 0
+IL2Ra, (IL2Ra & Dll1)
+IL4, (Gfi1 & !STAT3)
+IL4R, (IL4R & !STAT1)
+IL6, Runx1
+IL6R , IL6R
+IL7, 0
+IL7R, (IL7R & !TGFb)
+IL10, Gfi1
+IL10R, IL10R
+IL12, 0
+IL12R, (IL12R & !Tbet)
+IL15, 0
+IL15Ra, (IL15Ra & Dll1)
+IL17, (Runx1 | (B9 & Notch1))
+IL18, 0
+IL18R, (IL18R & !Tbet)
+IL21, 0
+IL21R, IL21R
+IL23, 0
+IL23R, IL23R
+IL27, 0
+IL27R, IL27R
+IRAK, IL21
+Irf4, ((CD4 | NFAT) & EOMES & !Flt3L)
+JAK1, Ikaros
+JAK3, ((IL7 | IL10) & !Pax5)
+MAPK, IL17
+NFkB, Blimp1
+NFAT, TGFb
+l_notch1, Ebf1
+Pax5, ((EOMES & !CD4 & !Flt3L & !JAK1 & !TNFa) | (EOMES & STAT6 & !CD4 & !JAK1 & !TNFa))
+PDK1, IL17
+Prf1, (ERK & TCF1)
+PU1, (!Gzmb & !IL2)
+RORgt, ((STAT4 | Runx1) & TNFa & !FR4 & !Gfi1 & !TCF1)
+Runx1, (Runx3 & !Pax5 & !SMAD2 & !TGFb & !TNFa)
+Runx3, ((CD19 & !CD8 & !STAT6 & !TNFa) | (CD19 & STAT6) | E2A)
+SMAD2, ThPOK
+SMAD3, (ThPOK & !AP1)
+SOCS1, (STAT3 | TCF1)
+STAT1, (IFNg | IRAK | JAK3)
+STAT3, (IL12 | IL23 | IL27 | MAPK)
+STAT4, (IL15 & !Gfi1)
+STAT5, ((IL4 | MAPK) & !STAT1)
+STAT6, IL6
+Tbet, ((STAT3 | TCF1) & !FR4 & !Gfi1 & !Runx1)
+TCF1, Pax5
+TCR, 0
+TGFb, FR4
+TGFbR, TGFbR
+ThPOK, ((TCF1 | FR4 | Gfi1 | Runx1 | TGFb | TNFa) & !SMAD2)
+TNFa, Runx1
+TNFR2, TNFR2
+Tox2, E2A
+XBP1, CD4
