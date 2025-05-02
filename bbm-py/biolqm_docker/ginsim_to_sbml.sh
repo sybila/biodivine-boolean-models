@@ -2,7 +2,9 @@
 
 # --- Configuration ---
 # Name of the colomoto docker image
-DOCKER_IMAGE="colomoto/colomoto-docker:2025-03-01"
+DOCKER_IMAGE="daemontus/biolqm-minimal"
+# Alternatively, the colomoto docker image should also work...
+# DOCKER_IMAGE="colomoto/colomoto-docker:2025-03-01"
 # Tool inside the docker image to use for conversion
 CONVERSION_TOOL="bioLQM"
 

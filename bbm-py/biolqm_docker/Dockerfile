@@ -9,7 +9,7 @@ RUN conda config --add channels colomoto && \
     conda config --add channels conda-forge && \
     conda config --add channels potassco
 
-# Add the colomoto channel and install ginsim and ginsim-python
+# Install ginsim and ginsim-python (should also install bioLQM and nusmv)
 RUN conda install -y ginsim ginsim-python && \
     conda clean -afy
 
