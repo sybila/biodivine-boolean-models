@@ -1,0 +1,7 @@
+v_CII* = not v_CI_b1 and not v_Cro_b1 and v_N or not v_CI_b1 and v_Cro_b1 and not v_Cro_b2 and v_N or not v_CI_b1 and v_Cro_b1 and v_Cro_b2 and not v_Cro_b3 and v_N or v_CI_b1 and not v_CI_b2 and not v_Cro_b1 and v_N or v_CI_b1 and not v_CI_b2 and v_Cro_b1 and not v_Cro_b2 and v_N or v_CI_b1 and not v_CI_b2 and v_Cro_b1 and v_Cro_b2 and not v_Cro_b3 and v_N
+v_CI_b1* = not v_CI_b1 and not v_Cro_b1 or not v_CI_b1 and v_Cro_b1 and v_CII or v_CI_b1 and not v_CI_b2 and not v_Cro_b1 or v_CI_b1 and not v_CI_b2 and v_Cro_b1 and v_CII or v_CI_b1 and v_CI_b2
+v_CI_b2* = v_CI_b1 and not v_Cro_b1 or v_CI_b1 and v_Cro_b1 and v_CII
+v_Cro_b1* = not v_CI_b1 or v_CI_b1 and not v_CI_b2 or v_CI_b1 and v_CI_b2 and v_Cro_b1 and v_Cro_b2
+v_Cro_b2* = not v_CI_b1 and v_Cro_b1 or v_CI_b1 and not v_CI_b2 and v_Cro_b1 or v_CI_b1 and v_CI_b2 and v_Cro_b1 and v_Cro_b2 and v_Cro_b3
+v_Cro_b3* = not v_CI_b1 and v_Cro_b1 and v_Cro_b2 and not v_Cro_b3 or v_CI_b1 and not v_CI_b2 and v_Cro_b1 and v_Cro_b2 and not v_Cro_b3
+v_N* = not v_CI_b1 and not v_Cro_b1 or not v_CI_b1 and v_Cro_b1 and not v_Cro_b2

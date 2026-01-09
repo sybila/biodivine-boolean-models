@@ -1,0 +1,12 @@
+v_Akkermansia_* = v_Coprobacillus
+v_Barnesiella* = v_Lachnospiraceae_other_ and not v_Clindamycin_ or v_Other and not v_Clindamycin_ or v_Lachnospiraceae and not v_Clindamycin_
+v_Blautia* = v_Coprobacillus and not v_Blautia or v_Enterococcus or v_Blautia and not v_Coprobacillus or v_Blautia
+v_Clindamycin_* = v_Clindamycin_
+v_Clostridium_difficile* = v_Clostridium_difficile and not v_Barnesiella
+v_Coprobacillus* = v_Coprobacillus
+v_Enterobacteriaceae* = v_Enterobacteriaceae
+v_Enterococcus* = v_Enterobacteriaceae or v_Mollicutes or v_Blautia or v_Clostridium_difficile or not (v_Enterobacteriaceae or v_Clostridium_difficile or v_Coprobacillus or v_Blautia or v_Mollicutes)
+v_Lachnospiraceae* = v_Lachnospiraceae and not v_Clindamycin_ or v_Lachnospiraceae_other_ and not v_Clindamycin_ or v_Other and not v_Clindamycin_
+v_Lachnospiraceae_other_* = v_Lachnospiraceae and not v_Clindamycin_ or v_Other and not v_Clindamycin_ or v_Lachnospiraceae_other_ and not v_Clindamycin_
+v_Mollicutes* = v_Mollicutes
+v_Other* = v_Other and not v_Clindamycin_ or v_Lachnospiraceae_other_ and not v_Clindamycin_ or v_Lachnospiraceae and not v_Clindamycin_

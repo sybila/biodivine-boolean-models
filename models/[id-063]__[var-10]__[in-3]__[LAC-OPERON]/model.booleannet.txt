@@ -1,0 +1,13 @@
+v_A* = v_L and v_B
+v_Am* = v_Lm or v_L
+v_B* = v_M
+v_C* = not v_Ge
+v_Ge* = v_Ge
+v_L* = v_Le and v_P and not v_Ge
+v_Le* = v_Le
+v_Lem* = v_Lem
+v_Lm* = v_Lem and v_P and not v_Ge or v_Le and not v_Ge
+v_M* = v_C and not (v_R or v_Rm)
+v_P* = v_M
+v_R* = not (v_Am or v_A)
+v_Rm* = v_R or not (v_R or v_Am or v_A)

@@ -1,0 +1,16 @@
+v_AKT* = v_p70S6K or v_mTOR or v_ERBB3 or v_PDK1 or v_AKT
+v_EGF* = v_EGF
+v_ERBB1* = v_EGF and not (v_pertuzumab or v_erlotinib) or v_ERBB1 and not (v_pertuzumab or v_erlotinib) or v_PLCg and not (v_pertuzumab or v_erlotinib)
+v_ERBB2* = v_ERBB1 and not (v_erlotinib or v_trastuzumab or v_pertuzumab) or v_ERBB2 and not (v_erlotinib or v_trastuzumab or v_pertuzumab) or v_PDK1 and not (v_erlotinib or v_trastuzumab or v_pertuzumab)
+v_ERBB3* = v_ERK1_2 and not (v_erlotinib or v_pertuzumab) or v_ERBB3 and not (v_erlotinib or v_pertuzumab) or v_HRG and not (v_erlotinib or v_pertuzumab)
+v_ERK1_2* = v_MEK1_2 or v_ERK1_2
+v_HRG* = v_HRG
+v_MEK1_2* = v_ERBB1 or v_PDK1 or v_MEK1_2 or v_ERBB2 or v_ERBB3
+v_PDK1* = v_ERBB2 or v_PDK1 or v_ERBB1 or v_ERBB3
+v_PKCa* = v_PLCg or v_PKCa or v_trastuzumab
+v_PLCg* = v_ERBB1 or v_ERBB2 or v_PLCg or v_ERBB3
+v_erlotinib* = v_erlotinib
+v_mTOR* = v_AKT or v_mTOR
+v_p70S6K* = v_mTOR or v_erlotinib or v_p70S6K or v_AKT or v_ERK1_2
+v_pertuzumab* = v_pertuzumab
+v_trastuzumab* = v_trastuzumab

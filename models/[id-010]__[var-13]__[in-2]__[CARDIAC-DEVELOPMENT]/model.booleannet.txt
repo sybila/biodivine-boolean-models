@@ -1,0 +1,15 @@
+v_Bmp2* = v_exogen_BMP2_II and not v_canWnt
+v_Dkk1* = v_Mesp1 or v_canWnt and not v_exogen_BMP2_II
+v_Fgf8* = v_Tbx1 and not v_Mesp1 or v_Foxc1_2 and not v_Mesp1
+v_Foxc1_2* = v_canWnt and v_exogen_canWnt_II
+v_GATAs* = v_Nkx2_5 or v_Tbx5 or v_Mesp1
+v_Isl1* = v_Mesp1 or v_Tbx1 or v_Fgf8 or v_canWnt and v_exogen_canWnt_II
+v_Mesp1* = v_canWnt and not v_exogen_BMP2_II
+v_Nkx2_5* = v_Tbx5 or v_Tbx1 or v_Mesp1 and v_Dkk1 or v_Bmp2 and v_GATAs or v_Isl1 and v_GATAs
+v_Tbx1* = v_Foxc1_2
+v_Tbx5* = v_Tbx5 and not (v_canWnt or v_Dkk1 and not v_Tbx5 and not v_Mesp1 or v_Tbx1) or v_Nkx2_5 and not (v_canWnt or v_Dkk1 and not v_Tbx5 and not v_Mesp1 or v_Tbx1) or v_Mesp1 and not (v_canWnt or v_Dkk1 and not v_Tbx5 and not v_Mesp1 or v_Tbx1)
+v_canWnt* = v_exogen_canWnt_II
+v_exogen_BMP2_I* = v_exogen_BMP2_I
+v_exogen_BMP2_II* = v_exogen_BMP2_I
+v_exogen_CanWnt_I* = v_exogen_CanWnt_I
+v_exogen_canWnt_II* = v_exogen_CanWnt_I

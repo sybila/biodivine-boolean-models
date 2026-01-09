@@ -1,0 +1,10 @@
+v_AROMATASE* = not v_FOXL2 and v_OESTROGEN or v_FOXL2
+v_DMRT1_b1* = not v_Z1 and not v_DMRT1_b1 and not v_HEMGN and v_SOX9 and not v_FOXL2 or not v_Z1 and not v_DMRT1_b1 and v_HEMGN and not v_FOXL2 or not v_Z1 and v_DMRT1_b1 and not v_DMRT1_b2 and not v_HEMGN and v_SOX9 and not v_FOXL2 or not v_Z1 and v_DMRT1_b1 and not v_DMRT1_b2 and v_HEMGN and not v_FOXL2 or not v_Z1 and v_DMRT1_b1 and v_DMRT1_b2 or v_Z1 and not v_Z2 and not v_DMRT1_b1 and not v_HEMGN and v_SOX9 and not v_FOXL2 or v_Z1 and not v_Z2 and not v_DMRT1_b1 and v_HEMGN and not v_FOXL2 or v_Z1 and not v_Z2 and v_DMRT1_b1 and not v_DMRT1_b2 and not v_HEMGN and v_SOX9 and not v_FOXL2 or v_Z1 and not v_Z2 and v_DMRT1_b1 and not v_DMRT1_b2 and v_HEMGN and not v_FOXL2 or v_Z1 and not v_Z2 and v_DMRT1_b1 and v_DMRT1_b2 or v_Z1 and v_Z2 and not v_W and not v_DMRT1_b1 and not v_FOXL2 or v_Z1 and v_Z2 and not v_W and v_DMRT1_b1 and not v_DMRT1_b2 and not v_FOXL2 or v_Z1 and v_Z2 and not v_W and v_DMRT1_b1 and v_DMRT1_b2 or v_Z1 and v_Z2 and v_W and not v_DMRT1_b1 and not v_HEMGN and v_SOX9 and not v_FOXL2 or v_Z1 and v_Z2 and v_W and not v_DMRT1_b1 and v_HEMGN and not v_FOXL2 or v_Z1 and v_Z2 and v_W and v_DMRT1_b1 and not v_DMRT1_b2 and not v_HEMGN and v_SOX9 and not v_FOXL2 or v_Z1 and v_Z2 and v_W and v_DMRT1_b1 and not v_DMRT1_b2 and v_HEMGN and not v_FOXL2 or v_Z1 and v_Z2 and v_W and v_DMRT1_b1 and v_DMRT1_b2
+v_DMRT1_b2* = v_DMRT1_b1 and not v_HEMGN and v_SOX9 and not v_FOXL2 or v_DMRT1_b1 and v_HEMGN and not v_FOXL2
+v_FOXL2* = not v_DMRT1_b1 and not v_SOX9 or not v_DMRT1_b1 and v_SOX9 and v_OESTROGEN or v_DMRT1_b1 and not v_DMRT1_b2 and not v_SOX9 or v_DMRT1_b1 and not v_DMRT1_b2 and v_SOX9 and v_OESTROGEN
+v_HEMGN* = v_DMRT1_b1 and not v_SOX9
+v_OESTROGEN* = v_AROMATASE
+v_SOX9* = not v_DMRT1_b1 and v_SOX9 and not v_FOXL2 or v_DMRT1_b1 and not v_DMRT1_b2 and v_SOX9 and not v_FOXL2 or v_DMRT1_b1 and v_DMRT1_b2 and not v_FOXL2
+v_W* = v_W
+v_Z1* = v_Z1
+v_Z2* = v_Z2

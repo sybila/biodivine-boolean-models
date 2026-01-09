@@ -1,0 +1,15 @@
+v_ADD* = v_NUC1 and not v_TLS or v_NUC2 and not v_TLS or v_NUC1 and v_NUC2 and not v_TLS
+v_ATM* = v_ATR and not (v_FAcore or v_CHKREC) or v_DSB_ and not (v_FAcore or v_CHKREC)
+v_ATR* = v_ICL and not v_CHKREC or v_ATM and not v_CHKREC
+v_CHKREC* = v_TLS and not v_DSB_ or v_HRR2 and not v_DSB_ or v_FAHRR and not v_DSB_ or v_NHEJ and not v_DSB_ or not (v_ICL or v_NHEJ or v_FAHRR or v_ADD or v_CHKREC or v_DSB_ or v_HRR2 or v_TLS)
+v_DSB_* = v_NUC1 and not (v_FAHRR or v_HRR2 or v_NHEJ) or v_NUC2 and not (v_FAHRR or v_HRR2 or v_NHEJ)
+v_FAHRR* = v_FANCD2I and v_DSB_ and not (v_NHEJ and v_CHKREC)
+v_FANCD2I* = v_FAcore and (v_DSB_ and (v_ATM or v_ATR) or v_ATM or v_ATR) and not v_CHKREC
+v_FAcore* = v_ICL and (v_ATM or v_ATR) and not v_CHKREC
+v_HRR2* = v_TLS and v_NUC2 and v_DSB_ and not (v_NHEJ or v_CHKREC or v_FAHRR) or v_NUC2 and v_ICL and v_NHEJ and v_DSB_ and not (v_CHKREC or v_FAHRR)
+v_ICL* = v_ICL and not v_DSB_
+v_NHEJ* = v_NUC2 and v_DSB_ and not (v_HRR2 or v_FAHRR or v_CHKREC)
+v_NUC1* = v_FANCD2I and v_ICL
+v_NUC2* = v_ICL and (v_ATM or v_ATR) and not (v_FAcore and v_FANCD2I) or v_NUC1 and v_ICL and v_p53 and not (v_FAcore and v_FANCD2I)
+v_TLS* = v_FAcore and v_ADD and not v_CHKREC or v_ADD and not v_CHKREC
+v_p53* = v_NHEJ and not v_CHKREC or v_ATM and not v_CHKREC or v_ATR and not v_CHKREC

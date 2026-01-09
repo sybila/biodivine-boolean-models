@@ -1,0 +1,679 @@
+{
+  "Model": {
+    "Name": "",
+    "Variables": [
+      {
+        "Id": 0,
+        "Name": "v_BuddingCP",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(0)"
+      },
+      {
+        "Id": 1,
+        "Name": "v_Cdc14",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(9), var(8))"
+      },
+      {
+        "Id": 2,
+        "Name": "v_Cdc20",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(14), min(var(4), var(10)))"
+      },
+      {
+        "Id": 3,
+        "Name": "v_Cdh1",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(var(1), (1 - max(max(max(var(5), var(1)), var(4)), var(6))))"
+      },
+      {
+        "Id": 4,
+        "Name": "v_Clb2",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(min(var(10), (1 - max(max(min(var(3), var(2)), min(var(2), var(3))), var(16)))), (1 - max(max(max(max(var(16), var(10)), var(3)), var(2)), var(12))))"
+      },
+      {
+        "Id": 5,
+        "Name": "v_Clb5",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(11), (1 - max(var(12), var(2))))"
+      },
+      {
+        "Id": 6,
+        "Name": "v_Cln2",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(11), var(15))"
+      },
+      {
+        "Id": 7,
+        "Name": "v_Cln3",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(13), (1 - var(19)))"
+      },
+      {
+        "Id": 8,
+        "Name": "v_FEAR",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(2)"
+      },
+      {
+        "Id": 9,
+        "Name": "v_MEN",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(8), var(4))"
+      },
+      {
+        "Id": 10,
+        "Name": "v_SFF",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(4)"
+      },
+      {
+        "Id": 11,
+        "Name": "v_SMBF",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max((1 - max(var(4), var(18))), (1 - max(var(18), var(4))))"
+      },
+      {
+        "Id": 12,
+        "Name": "v_Sic1",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(max(min(var(17), (1 - max(max(min(var(5), (1 - var(1))), min(var(4), (1 - var(1)))), min(var(6), (1 - var(1)))))), min(var(12), (1 - max(max(min(var(5), (1 - var(1))), min(var(4), (1 - var(1)))), min(var(6), (1 - var(1))))))), (1 - max(max(max(max(max(var(17), var(5)), var(1)), var(4)), var(6)), var(12))))"
+      },
+      {
+        "Id": 13,
+        "Name": "v_Size",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(13)"
+      },
+      {
+        "Id": 14,
+        "Name": "v_SpindleCP",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(14)"
+      },
+      {
+        "Id": 15,
+        "Name": "v_Start",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(15)"
+      },
+      {
+        "Id": 16,
+        "Name": "v_Swe1",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max((1 - var(0)), (1 - var(0)))"
+      },
+      {
+        "Id": 17,
+        "Name": "v_Swi5",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(min(var(1), min(var(10), (1 - var(17)))), (1 - var(4)))"
+      },
+      {
+        "Id": 18,
+        "Name": "v_Whi5",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max((1 - max(min(var(6), var(15)), min(var(7), var(15)))), (1 - max(max(var(15), var(7)), var(6))))"
+      },
+      {
+        "Id": 19,
+        "Name": "v_Yhp1",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(11)"
+      }
+    ],
+    "Relationships": [
+      {
+        "Id": 42,
+        "FromVariable": 0,
+        "ToVariable": 0,
+        "Type": "Activator"
+      },
+      {
+        "Id": 34,
+        "FromVariable": 0,
+        "ToVariable": 16,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 39,
+        "FromVariable": 1,
+        "ToVariable": 3,
+        "Type": "Activator"
+      },
+      {
+        "Id": 8,
+        "FromVariable": 1,
+        "ToVariable": 12,
+        "Type": "Activator"
+      },
+      {
+        "Id": 4,
+        "FromVariable": 1,
+        "ToVariable": 17,
+        "Type": "Activator"
+      },
+      {
+        "Id": 15,
+        "FromVariable": 2,
+        "ToVariable": 4,
+        "Type": "Activator"
+      },
+      {
+        "Id": 18,
+        "FromVariable": 2,
+        "ToVariable": 5,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 22,
+        "FromVariable": 2,
+        "ToVariable": 8,
+        "Type": "Activator"
+      },
+      {
+        "Id": 14,
+        "FromVariable": 3,
+        "ToVariable": 4,
+        "Type": "Activator"
+      },
+      {
+        "Id": 24,
+        "FromVariable": 4,
+        "ToVariable": 2,
+        "Type": "Activator"
+      },
+      {
+        "Id": 40,
+        "FromVariable": 4,
+        "ToVariable": 3,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 21,
+        "FromVariable": 4,
+        "ToVariable": 9,
+        "Type": "Activator"
+      },
+      {
+        "Id": 35,
+        "FromVariable": 4,
+        "ToVariable": 10,
+        "Type": "Activator"
+      },
+      {
+        "Id": 37,
+        "FromVariable": 4,
+        "ToVariable": 11,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 9,
+        "FromVariable": 4,
+        "ToVariable": 12,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 5,
+        "FromVariable": 4,
+        "ToVariable": 17,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 38,
+        "FromVariable": 5,
+        "ToVariable": 3,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 7,
+        "FromVariable": 5,
+        "ToVariable": 12,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 41,
+        "FromVariable": 6,
+        "ToVariable": 3,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 10,
+        "FromVariable": 6,
+        "ToVariable": 12,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 33,
+        "FromVariable": 6,
+        "ToVariable": 18,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 32,
+        "FromVariable": 7,
+        "ToVariable": 18,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 28,
+        "FromVariable": 8,
+        "ToVariable": 1,
+        "Type": "Activator"
+      },
+      {
+        "Id": 20,
+        "FromVariable": 8,
+        "ToVariable": 9,
+        "Type": "Activator"
+      },
+      {
+        "Id": 27,
+        "FromVariable": 9,
+        "ToVariable": 1,
+        "Type": "Activator"
+      },
+      {
+        "Id": 23,
+        "FromVariable": 10,
+        "ToVariable": 2,
+        "Type": "Activator"
+      },
+      {
+        "Id": 13,
+        "FromVariable": 10,
+        "ToVariable": 4,
+        "Type": "Activator"
+      },
+      {
+        "Id": 2,
+        "FromVariable": 10,
+        "ToVariable": 17,
+        "Type": "Activator"
+      },
+      {
+        "Id": 17,
+        "FromVariable": 11,
+        "ToVariable": 5,
+        "Type": "Activator"
+      },
+      {
+        "Id": 0,
+        "FromVariable": 11,
+        "ToVariable": 6,
+        "Type": "Activator"
+      },
+      {
+        "Id": 26,
+        "FromVariable": 11,
+        "ToVariable": 19,
+        "Type": "Activator"
+      },
+      {
+        "Id": 16,
+        "FromVariable": 12,
+        "ToVariable": 4,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 19,
+        "FromVariable": 12,
+        "ToVariable": 5,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 11,
+        "FromVariable": 12,
+        "ToVariable": 12,
+        "Type": "Activator"
+      },
+      {
+        "Id": 30,
+        "FromVariable": 13,
+        "ToVariable": 7,
+        "Type": "Activator"
+      },
+      {
+        "Id": 43,
+        "FromVariable": 13,
+        "ToVariable": 13,
+        "Type": "Activator"
+      },
+      {
+        "Id": 25,
+        "FromVariable": 14,
+        "ToVariable": 2,
+        "Type": "Activator"
+      },
+      {
+        "Id": 44,
+        "FromVariable": 14,
+        "ToVariable": 14,
+        "Type": "Activator"
+      },
+      {
+        "Id": 1,
+        "FromVariable": 15,
+        "ToVariable": 6,
+        "Type": "Activator"
+      },
+      {
+        "Id": 45,
+        "FromVariable": 15,
+        "ToVariable": 15,
+        "Type": "Activator"
+      },
+      {
+        "Id": 31,
+        "FromVariable": 15,
+        "ToVariable": 18,
+        "Type": "Activator"
+      },
+      {
+        "Id": 12,
+        "FromVariable": 16,
+        "ToVariable": 4,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 6,
+        "FromVariable": 17,
+        "ToVariable": 12,
+        "Type": "Activator"
+      },
+      {
+        "Id": 3,
+        "FromVariable": 17,
+        "ToVariable": 17,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 36,
+        "FromVariable": 18,
+        "ToVariable": 11,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 29,
+        "FromVariable": 19,
+        "ToVariable": 7,
+        "Type": "Inhibitor"
+      }
+    ]
+  },
+  "Layout": {
+    "Variables": [
+      {
+        "Id": 0,
+        "Name": "v_BuddingCP",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 1,
+        "Name": "v_Cdc14",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 2,
+        "Name": "v_Cdc20",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 3,
+        "Name": "v_Cdh1",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 300.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 4,
+        "Name": "v_Clb2",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 5,
+        "Name": "v_Clb5",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 6,
+        "Name": "v_Cln2",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 7,
+        "Name": "v_Cln3",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 300.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 8,
+        "Name": "v_FEAR",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 9,
+        "Name": "v_MEN",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 10,
+        "Name": "v_SFF",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 11,
+        "Name": "v_SMBF",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 300.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 12,
+        "Name": "v_Sic1",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 13,
+        "Name": "v_Size",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 14,
+        "Name": "v_SpindleCP",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 15,
+        "Name": "v_Start",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 300.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 16,
+        "Name": "v_Swe1",
+        "Type": "Default",
+        "PositionX": 375.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 17,
+        "Name": "v_Swi5",
+        "Type": "Default",
+        "PositionX": 375.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 18,
+        "Name": "v_Whi5",
+        "Type": "Default",
+        "PositionX": 375.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 19,
+        "Name": "v_Yhp1",
+        "Type": "Default",
+        "PositionX": 375.0,
+        "PositionY": 300.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      }
+    ],
+    "Containers": [
+      {
+        "Id": 0,
+        "Name": "Default",
+        "Size": 1,
+        "PositionX": 0.0,
+        "PositionY": 0.0
+      }
+    ],
+    "Description": ""
+  }
+}

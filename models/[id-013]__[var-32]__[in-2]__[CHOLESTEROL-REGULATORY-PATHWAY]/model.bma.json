@@ -1,0 +1,927 @@
+{
+  "Model": {
+    "Name": "",
+    "Variables": [
+      {
+        "Id": 0,
+        "Name": "v_Acetoacetyl_CoA",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(1), var(2))"
+      },
+      {
+        "Id": 1,
+        "Name": "v_Acetyl_CoA",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(1)"
+      },
+      {
+        "Id": 2,
+        "Name": "v_Acetyl_CoA_acetyltransferase",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(3)"
+      },
+      {
+        "Id": 3,
+        "Name": "v_Acetyl_CoA_acetyltransferase_RNA",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(4)"
+      },
+      {
+        "Id": 4,
+        "Name": "v_Acetyl_CoA_acetyltransferase_gene",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(32)"
+      },
+      {
+        "Id": 5,
+        "Name": "v_Cholesterol",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(var(9), var(29))"
+      },
+      {
+        "Id": 6,
+        "Name": "v_Cyp51",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(7)"
+      },
+      {
+        "Id": 7,
+        "Name": "v_Cyp51_RNA",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(8)"
+      },
+      {
+        "Id": 8,
+        "Name": "v_Cyp51_gene",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(32)"
+      },
+      {
+        "Id": 9,
+        "Name": "v_Desmosterol",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(25)"
+      },
+      {
+        "Id": 10,
+        "Name": "v_Dimethyl_allyl_pyrophosphate",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(24)"
+      },
+      {
+        "Id": 11,
+        "Name": "v_FPP_Synthase",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(12)"
+      },
+      {
+        "Id": 12,
+        "Name": "v_FPP_Synthase_RNA",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(13)"
+      },
+      {
+        "Id": 13,
+        "Name": "v_FPP_Synthase_gene",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(32)"
+      },
+      {
+        "Id": 14,
+        "Name": "v_Farnesyl_pyrophosphate",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(15), (1 - var(11)))"
+      },
+      {
+        "Id": 15,
+        "Name": "v_Geranyl_pyrophosphate",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(var(24), var(10))"
+      },
+      {
+        "Id": 16,
+        "Name": "v_HMG_CoA",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(0), min(var(20), var(1)))"
+      },
+      {
+        "Id": 17,
+        "Name": "v_HMG_CoA_Reductase",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(18), (1 - var(31)))"
+      },
+      {
+        "Id": 18,
+        "Name": "v_HMG_CoA_Reductase_RNA",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(19)"
+      },
+      {
+        "Id": 19,
+        "Name": "v_HMG_CoA_Reductase_gene",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(32)"
+      },
+      {
+        "Id": 20,
+        "Name": "v_HMG_CoA_Synthase",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(21)"
+      },
+      {
+        "Id": 21,
+        "Name": "v_HMG_CoA_Synthase_RNA",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(22)"
+      },
+      {
+        "Id": 22,
+        "Name": "v_HMG_CoA_Synthase_gene",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(32)"
+      },
+      {
+        "Id": 23,
+        "Name": "v_Insig_SREBP_SCAP",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "(1 - var(5))"
+      },
+      {
+        "Id": 24,
+        "Name": "v_Isopentenyl_pyrophosphate",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(27)"
+      },
+      {
+        "Id": 25,
+        "Name": "v_Lanosterol",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(30)"
+      },
+      {
+        "Id": 26,
+        "Name": "v_Mevalonic_Acid",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(16), var(17))"
+      },
+      {
+        "Id": 27,
+        "Name": "v_Mevalonyl_pyrophosphate",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(26)"
+      },
+      {
+        "Id": 28,
+        "Name": "v_SREBP_SCAP",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(23), (1 - var(31)))"
+      },
+      {
+        "Id": 29,
+        "Name": "v_Septdehydrocholesterol",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(25)"
+      },
+      {
+        "Id": 30,
+        "Name": "v_Squaline",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(14)"
+      },
+      {
+        "Id": 31,
+        "Name": "v_Statins",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(31)"
+      },
+      {
+        "Id": 32,
+        "Name": "v_mSREBP",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(33)"
+      },
+      {
+        "Id": 33,
+        "Name": "v_pSREBP",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(28)"
+      }
+    ],
+    "Relationships": [
+      {
+        "Id": 24,
+        "FromVariable": 0,
+        "ToVariable": 16,
+        "Type": "Activator"
+      },
+      {
+        "Id": 15,
+        "FromVariable": 1,
+        "ToVariable": 0,
+        "Type": "Activator"
+      },
+      {
+        "Id": 41,
+        "FromVariable": 1,
+        "ToVariable": 1,
+        "Type": "Activator"
+      },
+      {
+        "Id": 25,
+        "FromVariable": 1,
+        "ToVariable": 16,
+        "Type": "Activator"
+      },
+      {
+        "Id": 14,
+        "FromVariable": 2,
+        "ToVariable": 0,
+        "Type": "Activator"
+      },
+      {
+        "Id": 18,
+        "FromVariable": 3,
+        "ToVariable": 2,
+        "Type": "Activator"
+      },
+      {
+        "Id": 8,
+        "FromVariable": 4,
+        "ToVariable": 3,
+        "Type": "Activator"
+      },
+      {
+        "Id": 17,
+        "FromVariable": 5,
+        "ToVariable": 23,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 34,
+        "FromVariable": 7,
+        "ToVariable": 6,
+        "Type": "Activator"
+      },
+      {
+        "Id": 28,
+        "FromVariable": 8,
+        "ToVariable": 7,
+        "Type": "Activator"
+      },
+      {
+        "Id": 13,
+        "FromVariable": 9,
+        "ToVariable": 5,
+        "Type": "Activator"
+      },
+      {
+        "Id": 39,
+        "FromVariable": 10,
+        "ToVariable": 15,
+        "Type": "Activator"
+      },
+      {
+        "Id": 5,
+        "FromVariable": 11,
+        "ToVariable": 14,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 9,
+        "FromVariable": 12,
+        "ToVariable": 11,
+        "Type": "Activator"
+      },
+      {
+        "Id": 2,
+        "FromVariable": 13,
+        "ToVariable": 12,
+        "Type": "Activator"
+      },
+      {
+        "Id": 27,
+        "FromVariable": 14,
+        "ToVariable": 30,
+        "Type": "Activator"
+      },
+      {
+        "Id": 4,
+        "FromVariable": 15,
+        "ToVariable": 14,
+        "Type": "Activator"
+      },
+      {
+        "Id": 21,
+        "FromVariable": 16,
+        "ToVariable": 26,
+        "Type": "Activator"
+      },
+      {
+        "Id": 22,
+        "FromVariable": 17,
+        "ToVariable": 26,
+        "Type": "Activator"
+      },
+      {
+        "Id": 36,
+        "FromVariable": 18,
+        "ToVariable": 17,
+        "Type": "Activator"
+      },
+      {
+        "Id": 16,
+        "FromVariable": 19,
+        "ToVariable": 18,
+        "Type": "Activator"
+      },
+      {
+        "Id": 23,
+        "FromVariable": 20,
+        "ToVariable": 16,
+        "Type": "Activator"
+      },
+      {
+        "Id": 6,
+        "FromVariable": 21,
+        "ToVariable": 20,
+        "Type": "Activator"
+      },
+      {
+        "Id": 37,
+        "FromVariable": 22,
+        "ToVariable": 21,
+        "Type": "Activator"
+      },
+      {
+        "Id": 31,
+        "FromVariable": 23,
+        "ToVariable": 28,
+        "Type": "Activator"
+      },
+      {
+        "Id": 3,
+        "FromVariable": 24,
+        "ToVariable": 10,
+        "Type": "Activator"
+      },
+      {
+        "Id": 38,
+        "FromVariable": 24,
+        "ToVariable": 15,
+        "Type": "Activator"
+      },
+      {
+        "Id": 1,
+        "FromVariable": 25,
+        "ToVariable": 9,
+        "Type": "Activator"
+      },
+      {
+        "Id": 0,
+        "FromVariable": 25,
+        "ToVariable": 29,
+        "Type": "Activator"
+      },
+      {
+        "Id": 29,
+        "FromVariable": 26,
+        "ToVariable": 27,
+        "Type": "Activator"
+      },
+      {
+        "Id": 11,
+        "FromVariable": 27,
+        "ToVariable": 24,
+        "Type": "Activator"
+      },
+      {
+        "Id": 10,
+        "FromVariable": 28,
+        "ToVariable": 33,
+        "Type": "Activator"
+      },
+      {
+        "Id": 12,
+        "FromVariable": 29,
+        "ToVariable": 5,
+        "Type": "Activator"
+      },
+      {
+        "Id": 33,
+        "FromVariable": 30,
+        "ToVariable": 25,
+        "Type": "Activator"
+      },
+      {
+        "Id": 35,
+        "FromVariable": 31,
+        "ToVariable": 17,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 30,
+        "FromVariable": 31,
+        "ToVariable": 28,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 42,
+        "FromVariable": 31,
+        "ToVariable": 31,
+        "Type": "Activator"
+      },
+      {
+        "Id": 32,
+        "FromVariable": 32,
+        "ToVariable": 4,
+        "Type": "Activator"
+      },
+      {
+        "Id": 19,
+        "FromVariable": 32,
+        "ToVariable": 8,
+        "Type": "Activator"
+      },
+      {
+        "Id": 40,
+        "FromVariable": 32,
+        "ToVariable": 13,
+        "Type": "Activator"
+      },
+      {
+        "Id": 7,
+        "FromVariable": 32,
+        "ToVariable": 19,
+        "Type": "Activator"
+      },
+      {
+        "Id": 26,
+        "FromVariable": 32,
+        "ToVariable": 22,
+        "Type": "Activator"
+      },
+      {
+        "Id": 20,
+        "FromVariable": 33,
+        "ToVariable": 32,
+        "Type": "Activator"
+      }
+    ]
+  },
+  "Layout": {
+    "Variables": [
+      {
+        "Id": 0,
+        "Name": "v_Acetoacetyl_CoA",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 1,
+        "Name": "v_Acetyl_CoA",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 2,
+        "Name": "v_Acetyl_CoA_acetyltransferase",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 3,
+        "Name": "v_Acetyl_CoA_acetyltransferase_RNA",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 300.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 4,
+        "Name": "v_Acetyl_CoA_acetyltransferase_gene",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 375.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 5,
+        "Name": "v_Cholesterol",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 6,
+        "Name": "v_Cyp51",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 7,
+        "Name": "v_Cyp51_RNA",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 8,
+        "Name": "v_Cyp51_gene",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 300.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 9,
+        "Name": "v_Desmosterol",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 375.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 10,
+        "Name": "v_Dimethyl_allyl_pyrophosphate",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 11,
+        "Name": "v_FPP_Synthase",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 12,
+        "Name": "v_FPP_Synthase_RNA",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 13,
+        "Name": "v_FPP_Synthase_gene",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 300.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 14,
+        "Name": "v_Farnesyl_pyrophosphate",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 375.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 15,
+        "Name": "v_Geranyl_pyrophosphate",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 16,
+        "Name": "v_HMG_CoA",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 17,
+        "Name": "v_HMG_CoA_Reductase",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 18,
+        "Name": "v_HMG_CoA_Reductase_RNA",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 300.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 19,
+        "Name": "v_HMG_CoA_Reductase_gene",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 375.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 20,
+        "Name": "v_HMG_CoA_Synthase",
+        "Type": "Default",
+        "PositionX": 375.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 21,
+        "Name": "v_HMG_CoA_Synthase_RNA",
+        "Type": "Default",
+        "PositionX": 375.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 22,
+        "Name": "v_HMG_CoA_Synthase_gene",
+        "Type": "Default",
+        "PositionX": 375.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 23,
+        "Name": "v_Insig_SREBP_SCAP",
+        "Type": "Default",
+        "PositionX": 375.0,
+        "PositionY": 300.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 24,
+        "Name": "v_Isopentenyl_pyrophosphate",
+        "Type": "Default",
+        "PositionX": 375.0,
+        "PositionY": 375.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 25,
+        "Name": "v_Lanosterol",
+        "Type": "Default",
+        "PositionX": 450.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 26,
+        "Name": "v_Mevalonic_Acid",
+        "Type": "Default",
+        "PositionX": 450.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 27,
+        "Name": "v_Mevalonyl_pyrophosphate",
+        "Type": "Default",
+        "PositionX": 450.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 28,
+        "Name": "v_SREBP_SCAP",
+        "Type": "Default",
+        "PositionX": 450.0,
+        "PositionY": 300.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 29,
+        "Name": "v_Septdehydrocholesterol",
+        "Type": "Default",
+        "PositionX": 450.0,
+        "PositionY": 375.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 30,
+        "Name": "v_Squaline",
+        "Type": "Default",
+        "PositionX": 525.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 31,
+        "Name": "v_Statins",
+        "Type": "Default",
+        "PositionX": 525.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 32,
+        "Name": "v_mSREBP",
+        "Type": "Default",
+        "PositionX": 525.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 33,
+        "Name": "v_pSREBP",
+        "Type": "Default",
+        "PositionX": 525.0,
+        "PositionY": 300.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      }
+    ],
+    "Containers": [
+      {
+        "Id": 0,
+        "Name": "Default",
+        "Size": 1,
+        "PositionX": 0.0,
+        "PositionY": 0.0
+      }
+    ],
+    "Description": ""
+  }
+}

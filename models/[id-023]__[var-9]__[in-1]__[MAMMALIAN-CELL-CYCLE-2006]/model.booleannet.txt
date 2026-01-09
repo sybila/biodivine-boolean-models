@@ -1,0 +1,10 @@
+v_Cdc20* = v_CycB
+v_Cdh1* = v_Cdc20 or v_p27 and not v_CycB or not (v_p27 or v_CycB or v_CycA or v_Cdc20)
+v_CycA* = v_CycA and not (v_Cdh1 and v_UbcH10 or v_Cdc20 or v_Rb) or v_E2F and not (v_Cdh1 and v_UbcH10 or v_Cdc20 or v_Rb)
+v_CycB* = not (v_Cdc20 or v_Cdh1)
+v_CycD* = v_CycD
+v_CycE* = v_E2F and not v_Rb
+v_E2F* = v_p27 and not (v_CycB or v_Rb) or not (v_p27 or v_Rb or v_CycB or v_CycA)
+v_Rb* = v_p27 and not (v_CycD or v_CycB) or not (v_CycE or v_p27 or v_CycB or v_CycD or v_CycA)
+v_UbcH10* = v_UbcH10 and (v_Cdh1 and (v_CycB or v_Cdc20 or v_CycA) or not v_Cdh1) or v_CycA and not v_Cdh1 or v_Cdc20 and not v_Cdh1 or v_CycB and not v_Cdh1 or not (v_UbcH10 or v_Cdh1 or v_CycB or v_Cdc20 or v_CycA)
+v_p27* = v_p27 and not (v_CycD or v_CycA and v_CycE or v_CycB) or not (v_CycE or v_p27 or v_CycB or v_CycD or v_CycA)

@@ -1,0 +1,507 @@
+{
+  "Model": {
+    "Name": "",
+    "Variables": [
+      {
+        "Id": 0,
+        "Name": "v_A",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(7), (1 - var(13)))"
+      },
+      {
+        "Id": 1,
+        "Name": "v_B",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(7)"
+      },
+      {
+        "Id": 2,
+        "Name": "v_C",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "(1 - var(13))"
+      },
+      {
+        "Id": 3,
+        "Name": "v_E",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(6), (1 - var(5)))"
+      },
+      {
+        "Id": 4,
+        "Name": "v_E_m",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(var(6), var(3))"
+      },
+      {
+        "Id": 5,
+        "Name": "v_L",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(6), var(10))"
+      },
+      {
+        "Id": 6,
+        "Name": "v_M_1",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "(1 - var(9))"
+      },
+      {
+        "Id": 7,
+        "Name": "v_M_2",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(2), (1 - var(8)))"
+      },
+      {
+        "Id": 8,
+        "Name": "v_P",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min((1 - var(11)), (1 - var(12)))"
+      },
+      {
+        "Id": 9,
+        "Name": "v_R",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(11)"
+      },
+      {
+        "Id": 10,
+        "Name": "v_T",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(12)"
+      },
+      {
+        "Id": 11,
+        "Name": "v_W",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(min(var(6), min((1 - var(5)), (1 - var(0)))), min(var(14), var(1)))"
+      },
+      {
+        "Id": 12,
+        "Name": "v_W_m",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(var(6), max(var(11), max(var(14), min(var(15), var(1)))))"
+      },
+      {
+        "Id": 13,
+        "Name": "v_gamma",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(13)"
+      },
+      {
+        "Id": 14,
+        "Name": "v_omega_e",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(14)"
+      },
+      {
+        "Id": 15,
+        "Name": "v_omega_em",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(15)"
+      }
+    ],
+    "Relationships": [
+      {
+        "Id": 17,
+        "FromVariable": 0,
+        "ToVariable": 11,
+        "Type": "Activator"
+      },
+      {
+        "Id": 18,
+        "FromVariable": 1,
+        "ToVariable": 11,
+        "Type": "Activator"
+      },
+      {
+        "Id": 22,
+        "FromVariable": 1,
+        "ToVariable": 12,
+        "Type": "Activator"
+      },
+      {
+        "Id": 11,
+        "FromVariable": 2,
+        "ToVariable": 7,
+        "Type": "Activator"
+      },
+      {
+        "Id": 6,
+        "FromVariable": 3,
+        "ToVariable": 4,
+        "Type": "Activator"
+      },
+      {
+        "Id": 4,
+        "FromVariable": 5,
+        "ToVariable": 3,
+        "Type": "Activator"
+      },
+      {
+        "Id": 19,
+        "FromVariable": 5,
+        "ToVariable": 11,
+        "Type": "Activator"
+      },
+      {
+        "Id": 5,
+        "FromVariable": 6,
+        "ToVariable": 3,
+        "Type": "Activator"
+      },
+      {
+        "Id": 7,
+        "FromVariable": 6,
+        "ToVariable": 4,
+        "Type": "Activator"
+      },
+      {
+        "Id": 8,
+        "FromVariable": 6,
+        "ToVariable": 5,
+        "Type": "Activator"
+      },
+      {
+        "Id": 20,
+        "FromVariable": 6,
+        "ToVariable": 11,
+        "Type": "Activator"
+      },
+      {
+        "Id": 23,
+        "FromVariable": 6,
+        "ToVariable": 12,
+        "Type": "Activator"
+      },
+      {
+        "Id": 0,
+        "FromVariable": 7,
+        "ToVariable": 0,
+        "Type": "Activator"
+      },
+      {
+        "Id": 2,
+        "FromVariable": 7,
+        "ToVariable": 1,
+        "Type": "Activator"
+      },
+      {
+        "Id": 12,
+        "FromVariable": 8,
+        "ToVariable": 7,
+        "Type": "Activator"
+      },
+      {
+        "Id": 10,
+        "FromVariable": 9,
+        "ToVariable": 6,
+        "Type": "Activator"
+      },
+      {
+        "Id": 9,
+        "FromVariable": 10,
+        "ToVariable": 5,
+        "Type": "Activator"
+      },
+      {
+        "Id": 13,
+        "FromVariable": 11,
+        "ToVariable": 8,
+        "Type": "Activator"
+      },
+      {
+        "Id": 15,
+        "FromVariable": 11,
+        "ToVariable": 9,
+        "Type": "Activator"
+      },
+      {
+        "Id": 24,
+        "FromVariable": 11,
+        "ToVariable": 12,
+        "Type": "Activator"
+      },
+      {
+        "Id": 14,
+        "FromVariable": 12,
+        "ToVariable": 8,
+        "Type": "Activator"
+      },
+      {
+        "Id": 16,
+        "FromVariable": 12,
+        "ToVariable": 10,
+        "Type": "Activator"
+      },
+      {
+        "Id": 1,
+        "FromVariable": 13,
+        "ToVariable": 0,
+        "Type": "Activator"
+      },
+      {
+        "Id": 3,
+        "FromVariable": 13,
+        "ToVariable": 2,
+        "Type": "Activator"
+      },
+      {
+        "Id": 27,
+        "FromVariable": 13,
+        "ToVariable": 13,
+        "Type": "Activator"
+      },
+      {
+        "Id": 21,
+        "FromVariable": 14,
+        "ToVariable": 11,
+        "Type": "Activator"
+      },
+      {
+        "Id": 25,
+        "FromVariable": 14,
+        "ToVariable": 12,
+        "Type": "Activator"
+      },
+      {
+        "Id": 28,
+        "FromVariable": 14,
+        "ToVariable": 14,
+        "Type": "Activator"
+      },
+      {
+        "Id": 26,
+        "FromVariable": 15,
+        "ToVariable": 12,
+        "Type": "Activator"
+      },
+      {
+        "Id": 29,
+        "FromVariable": 15,
+        "ToVariable": 15,
+        "Type": "Activator"
+      }
+    ]
+  },
+  "Layout": {
+    "Variables": [
+      {
+        "Id": 0,
+        "Name": "v_A",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 1,
+        "Name": "v_B",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 2,
+        "Name": "v_C",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 3,
+        "Name": "v_E",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 300.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 4,
+        "Name": "v_E_m",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 5,
+        "Name": "v_L",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 6,
+        "Name": "v_M_1",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 7,
+        "Name": "v_M_2",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 300.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 8,
+        "Name": "v_P",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 9,
+        "Name": "v_R",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 10,
+        "Name": "v_T",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 11,
+        "Name": "v_W",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 300.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 12,
+        "Name": "v_W_m",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 13,
+        "Name": "v_gamma",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 14,
+        "Name": "v_omega_e",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 15,
+        "Name": "v_omega_em",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 300.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      }
+    ],
+    "Containers": [
+      {
+        "Id": 0,
+        "Name": "Default",
+        "Size": 1,
+        "PositionX": 0.0,
+        "PositionY": 0.0
+      }
+    ],
+    "Description": ""
+  }
+}

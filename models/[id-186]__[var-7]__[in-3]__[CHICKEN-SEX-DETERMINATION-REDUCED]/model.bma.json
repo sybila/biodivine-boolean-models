@@ -1,0 +1,381 @@
+{
+  "Model": {
+    "Name": "",
+    "Variables": [
+      {
+        "Id": 0,
+        "Name": "v_AROMATASE",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(min((1 - var(3)), var(5)), var(3))"
+      },
+      {
+        "Id": 1,
+        "Name": "v_DMRT1_b1",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(max(max(max(max(max(max(max(max(max(max(max(max(max(max(max(max(min(min(min(min((1 - var(8)), (1 - var(1))), (1 - var(4))), var(6)), (1 - var(3))), min(min(min((1 - var(8)), (1 - var(1))), var(4)), (1 - var(3)))), min(min(min(min(min((1 - var(8)), var(1)), (1 - var(2))), (1 - var(4))), var(6)), (1 - var(3)))), min(min(min(min((1 - var(8)), var(1)), (1 - var(2))), var(4)), (1 - var(3)))), min(min((1 - var(8)), var(1)), var(2))), min(min(min(min(min(var(8), (1 - var(9))), (1 - var(1))), (1 - var(4))), var(6)), (1 - var(3)))), min(min(min(min(var(8), (1 - var(9))), (1 - var(1))), var(4)), (1 - var(3)))), min(min(min(min(min(min(var(8), (1 - var(9))), var(1)), (1 - var(2))), (1 - var(4))), var(6)), (1 - var(3)))), min(min(min(min(min(var(8), (1 - var(9))), var(1)), (1 - var(2))), var(4)), (1 - var(3)))), min(min(min(var(8), (1 - var(9))), var(1)), var(2))), min(min(min(min(var(8), var(9)), (1 - var(7))), (1 - var(1))), (1 - var(3)))), min(min(min(min(min(var(8), var(9)), (1 - var(7))), var(1)), (1 - var(2))), (1 - var(3)))), min(min(min(min(var(8), var(9)), (1 - var(7))), var(1)), var(2))), min(min(min(min(min(min(var(8), var(9)), var(7)), (1 - var(1))), (1 - var(4))), var(6)), (1 - var(3)))), min(min(min(min(min(var(8), var(9)), var(7)), (1 - var(1))), var(4)), (1 - var(3)))), min(min(min(min(min(min(min(var(8), var(9)), var(7)), var(1)), (1 - var(2))), (1 - var(4))), var(6)), (1 - var(3)))), min(min(min(min(min(min(var(8), var(9)), var(7)), var(1)), (1 - var(2))), var(4)), (1 - var(3)))), min(min(min(min(var(8), var(9)), var(7)), var(1)), var(2)))"
+      },
+      {
+        "Id": 2,
+        "Name": "v_DMRT1_b2",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(min(min(min(var(1), (1 - var(4))), var(6)), (1 - var(3))), min(min(var(1), var(4)), (1 - var(3))))"
+      },
+      {
+        "Id": 3,
+        "Name": "v_FOXL2",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(max(max(min((1 - var(1)), (1 - var(6))), min(min((1 - var(1)), var(6)), var(5))), min(min(var(1), (1 - var(2))), (1 - var(6)))), min(min(min(var(1), (1 - var(2))), var(6)), var(5)))"
+      },
+      {
+        "Id": 4,
+        "Name": "v_HEMGN",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(1), (1 - var(6)))"
+      },
+      {
+        "Id": 5,
+        "Name": "v_OESTROGEN",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(0)"
+      },
+      {
+        "Id": 6,
+        "Name": "v_SOX9",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(max(min(min((1 - var(1)), var(6)), (1 - var(3))), min(min(min(var(1), (1 - var(2))), var(6)), (1 - var(3)))), min(min(var(1), var(2)), (1 - var(3))))"
+      },
+      {
+        "Id": 7,
+        "Name": "v_W",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(7)"
+      },
+      {
+        "Id": 8,
+        "Name": "v_Z1",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(8)"
+      },
+      {
+        "Id": 9,
+        "Name": "v_Z2",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(9)"
+      }
+    ],
+    "Relationships": [
+      {
+        "Id": 24,
+        "FromVariable": 0,
+        "ToVariable": 5,
+        "Type": "Activator"
+      },
+      {
+        "Id": 3,
+        "FromVariable": 1,
+        "ToVariable": 1,
+        "Type": "Activator"
+      },
+      {
+        "Id": 8,
+        "FromVariable": 1,
+        "ToVariable": 2,
+        "Type": "Activator"
+      },
+      {
+        "Id": 18,
+        "FromVariable": 1,
+        "ToVariable": 3,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 12,
+        "FromVariable": 1,
+        "ToVariable": 4,
+        "Type": "Activator"
+      },
+      {
+        "Id": 14,
+        "FromVariable": 1,
+        "ToVariable": 6,
+        "Type": "Activator"
+      },
+      {
+        "Id": 4,
+        "FromVariable": 2,
+        "ToVariable": 1,
+        "Type": "Activator"
+      },
+      {
+        "Id": 19,
+        "FromVariable": 2,
+        "ToVariable": 3,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 15,
+        "FromVariable": 2,
+        "ToVariable": 6,
+        "Type": "Activator"
+      },
+      {
+        "Id": 22,
+        "FromVariable": 3,
+        "ToVariable": 0,
+        "Type": "Activator"
+      },
+      {
+        "Id": 7,
+        "FromVariable": 3,
+        "ToVariable": 1,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 11,
+        "FromVariable": 3,
+        "ToVariable": 2,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 17,
+        "FromVariable": 3,
+        "ToVariable": 6,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 5,
+        "FromVariable": 4,
+        "ToVariable": 1,
+        "Type": "Activator"
+      },
+      {
+        "Id": 9,
+        "FromVariable": 4,
+        "ToVariable": 2,
+        "Type": "Activator"
+      },
+      {
+        "Id": 23,
+        "FromVariable": 5,
+        "ToVariable": 0,
+        "Type": "Activator"
+      },
+      {
+        "Id": 21,
+        "FromVariable": 5,
+        "ToVariable": 3,
+        "Type": "Activator"
+      },
+      {
+        "Id": 6,
+        "FromVariable": 6,
+        "ToVariable": 1,
+        "Type": "Activator"
+      },
+      {
+        "Id": 10,
+        "FromVariable": 6,
+        "ToVariable": 2,
+        "Type": "Activator"
+      },
+      {
+        "Id": 20,
+        "FromVariable": 6,
+        "ToVariable": 3,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 13,
+        "FromVariable": 6,
+        "ToVariable": 4,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 16,
+        "FromVariable": 6,
+        "ToVariable": 6,
+        "Type": "Activator"
+      },
+      {
+        "Id": 2,
+        "FromVariable": 7,
+        "ToVariable": 1,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 25,
+        "FromVariable": 7,
+        "ToVariable": 7,
+        "Type": "Activator"
+      },
+      {
+        "Id": 0,
+        "FromVariable": 8,
+        "ToVariable": 1,
+        "Type": "Activator"
+      },
+      {
+        "Id": 26,
+        "FromVariable": 8,
+        "ToVariable": 8,
+        "Type": "Activator"
+      },
+      {
+        "Id": 1,
+        "FromVariable": 9,
+        "ToVariable": 1,
+        "Type": "Activator"
+      },
+      {
+        "Id": 27,
+        "FromVariable": 9,
+        "ToVariable": 9,
+        "Type": "Activator"
+      }
+    ]
+  },
+  "Layout": {
+    "Variables": [
+      {
+        "Id": 0,
+        "Name": "v_AROMATASE",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 1,
+        "Name": "v_DMRT1_b1",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 2,
+        "Name": "v_DMRT1_b2",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 3,
+        "Name": "v_FOXL2",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 4,
+        "Name": "v_HEMGN",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 5,
+        "Name": "v_OESTROGEN",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 6,
+        "Name": "v_SOX9",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 7,
+        "Name": "v_W",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 8,
+        "Name": "v_Z1",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 9,
+        "Name": "v_Z2",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      }
+    ],
+    "Containers": [
+      {
+        "Id": 0,
+        "Name": "Default",
+        "Size": 1,
+        "PositionX": 0.0,
+        "PositionY": 0.0
+      }
+    ],
+    "Description": ""
+  }
+}

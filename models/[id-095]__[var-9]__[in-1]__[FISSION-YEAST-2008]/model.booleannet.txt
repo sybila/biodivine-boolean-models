@@ -1,0 +1,10 @@
+v_Cdc25* = not v_Cdc2_Cdc13 and v_Cdc25 and not v_PP or v_Cdc2_Cdc13 and not v_Cdc25 and not v_PP or v_Cdc2_Cdc13 and v_Cdc25
+v_Cdc2_Cdc13* = not v_Ste9 and not v_Rum1 and not v_Slp1
+v_Cdc2_Cdc13_A* = not v_Ste9 and not v_Rum1 and not v_Slp1 and not v_Wee1_Mik1 and v_Cdc25
+v_PP* = v_Slp1
+v_Rum1* = not v_SK and not v_Cdc2_Cdc13 and not v_Rum1 and not v_Cdc2_Cdc13_A and v_PP or not v_SK and not v_Cdc2_Cdc13 and v_Rum1 and not v_Cdc2_Cdc13_A or not v_SK and not v_Cdc2_Cdc13 and v_Rum1 and v_Cdc2_Cdc13_A and v_PP or not v_SK and v_Cdc2_Cdc13 and v_Rum1 and not v_Cdc2_Cdc13_A and v_PP or v_SK and not v_Cdc2_Cdc13 and v_Rum1 and not v_Cdc2_Cdc13_A and v_PP
+v_SK* = v_Start
+v_Slp1* = v_Cdc2_Cdc13_A
+v_Start* = v_Start
+v_Ste9* = not v_SK and not v_Cdc2_Cdc13 and not v_Ste9 and not v_Cdc2_Cdc13_A and v_PP or not v_SK and not v_Cdc2_Cdc13 and v_Ste9 and not v_Cdc2_Cdc13_A or not v_SK and not v_Cdc2_Cdc13 and v_Ste9 and v_Cdc2_Cdc13_A and v_PP or not v_SK and v_Cdc2_Cdc13 and v_Ste9 and not v_Cdc2_Cdc13_A and v_PP or v_SK and not v_Cdc2_Cdc13 and v_Ste9 and not v_Cdc2_Cdc13_A and v_PP
+v_Wee1_Mik1* = not v_Cdc2_Cdc13 and not v_Wee1_Mik1 and v_PP or not v_Cdc2_Cdc13 and v_Wee1_Mik1 or v_Cdc2_Cdc13 and v_Wee1_Mik1 and v_PP

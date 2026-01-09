@@ -1,0 +1,12 @@
+v_BUD* = v_MASS_b1
+v_Clb2_b1* = not v_Clb2_b1 and v_MASS_b1 or v_Clb2_b1 and not v_Clb2_b2 and v_MASS_b1 or v_Clb2_b1 and v_Clb2_b2
+v_Clb2_b2* = not v_Swe1_b1 and v_Clb2_b1 and v_MASS_b1 or v_Swe1_b1 and not v_Swe1_b2 and not v_Mih1_b1 and v_Clb2_b1 and v_MASS_b1 and v_MASS_b2 or v_Swe1_b1 and not v_Swe1_b2 and v_Mih1_b1 and not v_Mih1_b2 and v_Clb2_b1 and v_MASS_b1 and v_MASS_b2 or v_Swe1_b1 and not v_Swe1_b2 and v_Mih1_b1 and v_Mih1_b2 and v_Clb2_b1 and v_MASS_b1 or v_Swe1_b1 and v_Swe1_b2 and v_Mih1_b1 and not v_Mih1_b2 and v_Clb2_b1 and v_MASS_b1 and v_MASS_b2 or v_Swe1_b1 and v_Swe1_b2 and v_Mih1_b1 and v_Mih1_b2 and v_Clb2_b1 and v_MASS_b1
+v_Hsl1* = v_BUD
+v_MASS_b1* = v_MASS_b1
+v_MASS_b2* = v_MASS_b1 and v_MASS_b2
+v_Mih1_b1* = not v_Mih1_b1 and not v_Clb2_b1 and not v_Mpk1 or not v_Mih1_b1 and v_Clb2_b1 or v_Mih1_b1 and not v_Mih1_b2 and not v_Clb2_b1 and not v_Mpk1 or v_Mih1_b1 and not v_Mih1_b2 and v_Clb2_b1 or v_Mih1_b1 and v_Mih1_b2
+v_Mih1_b2* = v_Mih1_b1 and v_Clb2_b1 and not v_Mpk1
+v_Mpk1* = not v_BUD
+v_SBF* = not v_Clb2_b1 and v_MASS_b1 or v_Clb2_b1 and not v_Clb2_b2 and v_MASS_b1
+v_Swe1_b1* = not v_SBF and v_Swe1_b1 and v_Swe1_b2 or v_SBF and not v_Swe1_b1 and not v_Clb2_b1 or v_SBF and not v_Swe1_b1 and v_Clb2_b1 and not v_Clb2_b2 or v_SBF and not v_Swe1_b1 and v_Clb2_b1 and v_Clb2_b2 and not v_Hsl1 or v_SBF and v_Swe1_b1 and not v_Swe1_b2 and not v_Clb2_b1 or v_SBF and v_Swe1_b1 and not v_Swe1_b2 and v_Clb2_b1 and not v_Clb2_b2 or v_SBF and v_Swe1_b1 and not v_Swe1_b2 and v_Clb2_b1 and v_Clb2_b2 and not v_Hsl1 or v_SBF and v_Swe1_b1 and v_Swe1_b2
+v_Swe1_b2* = v_SBF and v_Swe1_b1 and not v_Clb2_b1 and not v_Hsl1 or v_SBF and v_Swe1_b1 and v_Clb2_b1 and not v_Clb2_b2 and not v_Hsl1

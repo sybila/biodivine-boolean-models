@@ -1,0 +1,295 @@
+{
+  "Model": {
+    "Name": "",
+    "Variables": [
+      {
+        "Id": 0,
+        "Name": "v_BMP",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(0)"
+      },
+      {
+        "Id": 1,
+        "Name": "v_EGF_b1",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(1)"
+      },
+      {
+        "Id": 2,
+        "Name": "v_EGF_b2",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(1), var(2))"
+      },
+      {
+        "Id": 3,
+        "Name": "v_Floor",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(min(min(min(min(var(1), (1 - var(2))), var(0)), var(6)), var(7)), min(min(min(var(1), var(2)), var(6)), var(7)))"
+      },
+      {
+        "Id": 4,
+        "Name": "v_Operculum",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(min(min(min(min(var(1), (1 - var(2))), var(0)), (1 - var(6))), var(7)), min(min(min(var(1), var(2)), (1 - var(6))), var(7)))"
+      },
+      {
+        "Id": 5,
+        "Name": "v_Roof",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(min(min(var(1), (1 - var(2))), (1 - var(0))), var(7))"
+      },
+      {
+        "Id": 6,
+        "Name": "v_Roof_adj",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(6)"
+      },
+      {
+        "Id": 7,
+        "Name": "v_anterior",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(7)"
+      }
+    ],
+    "Relationships": [
+      {
+        "Id": 16,
+        "FromVariable": 0,
+        "ToVariable": 0,
+        "Type": "Activator"
+      },
+      {
+        "Id": 7,
+        "FromVariable": 0,
+        "ToVariable": 3,
+        "Type": "Activator"
+      },
+      {
+        "Id": 2,
+        "FromVariable": 0,
+        "ToVariable": 4,
+        "Type": "Activator"
+      },
+      {
+        "Id": 12,
+        "FromVariable": 0,
+        "ToVariable": 5,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 17,
+        "FromVariable": 1,
+        "ToVariable": 1,
+        "Type": "Activator"
+      },
+      {
+        "Id": 14,
+        "FromVariable": 1,
+        "ToVariable": 2,
+        "Type": "Activator"
+      },
+      {
+        "Id": 5,
+        "FromVariable": 1,
+        "ToVariable": 3,
+        "Type": "Activator"
+      },
+      {
+        "Id": 0,
+        "FromVariable": 1,
+        "ToVariable": 4,
+        "Type": "Activator"
+      },
+      {
+        "Id": 10,
+        "FromVariable": 1,
+        "ToVariable": 5,
+        "Type": "Activator"
+      },
+      {
+        "Id": 15,
+        "FromVariable": 2,
+        "ToVariable": 2,
+        "Type": "Activator"
+      },
+      {
+        "Id": 6,
+        "FromVariable": 2,
+        "ToVariable": 3,
+        "Type": "Activator"
+      },
+      {
+        "Id": 1,
+        "FromVariable": 2,
+        "ToVariable": 4,
+        "Type": "Activator"
+      },
+      {
+        "Id": 11,
+        "FromVariable": 2,
+        "ToVariable": 5,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 8,
+        "FromVariable": 6,
+        "ToVariable": 3,
+        "Type": "Activator"
+      },
+      {
+        "Id": 3,
+        "FromVariable": 6,
+        "ToVariable": 4,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 18,
+        "FromVariable": 6,
+        "ToVariable": 6,
+        "Type": "Activator"
+      },
+      {
+        "Id": 9,
+        "FromVariable": 7,
+        "ToVariable": 3,
+        "Type": "Activator"
+      },
+      {
+        "Id": 4,
+        "FromVariable": 7,
+        "ToVariable": 4,
+        "Type": "Activator"
+      },
+      {
+        "Id": 13,
+        "FromVariable": 7,
+        "ToVariable": 5,
+        "Type": "Activator"
+      },
+      {
+        "Id": 19,
+        "FromVariable": 7,
+        "ToVariable": 7,
+        "Type": "Activator"
+      }
+    ]
+  },
+  "Layout": {
+    "Variables": [
+      {
+        "Id": 0,
+        "Name": "v_BMP",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 1,
+        "Name": "v_EGF_b1",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 2,
+        "Name": "v_EGF_b2",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 3,
+        "Name": "v_Floor",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 4,
+        "Name": "v_Operculum",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 5,
+        "Name": "v_Roof",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 6,
+        "Name": "v_Roof_adj",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 7,
+        "Name": "v_anterior",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      }
+    ],
+    "Containers": [
+      {
+        "Id": 0,
+        "Name": "Default",
+        "Size": 1,
+        "PositionX": 0.0,
+        "PositionY": 0.0
+      }
+    ],
+    "Description": ""
+  }
+}

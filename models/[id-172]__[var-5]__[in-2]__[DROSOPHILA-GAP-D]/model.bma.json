@@ -1,0 +1,240 @@
+{
+  "Model": {
+    "Name": "",
+    "Variables": [
+      {
+        "Id": 0,
+        "Name": "v_Gt",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min((1 - var(1)), (1 - var(5)))"
+      },
+      {
+        "Id": 1,
+        "Name": "v_Hb_b1",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(1), var(2))"
+      },
+      {
+        "Id": 2,
+        "Name": "v_Hb_b2",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(min(var(1), var(2)), var(3))"
+      },
+      {
+        "Id": 3,
+        "Name": "v_Hb_b3",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(3)"
+      },
+      {
+        "Id": 4,
+        "Name": "v_Kni",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(min((1 - var(0)), (1 - var(1))), min(min((1 - var(0)), var(1)), (1 - var(2))))"
+      },
+      {
+        "Id": 5,
+        "Name": "v_Kr_b1",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(5), var(6))"
+      },
+      {
+        "Id": 6,
+        "Name": "v_Kr_b2",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(6)"
+      }
+    ],
+    "Relationships": [
+      {
+        "Id": 9,
+        "FromVariable": 0,
+        "ToVariable": 4,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 0,
+        "FromVariable": 1,
+        "ToVariable": 0,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 2,
+        "FromVariable": 1,
+        "ToVariable": 1,
+        "Type": "Activator"
+      },
+      {
+        "Id": 4,
+        "FromVariable": 1,
+        "ToVariable": 2,
+        "Type": "Activator"
+      },
+      {
+        "Id": 10,
+        "FromVariable": 1,
+        "ToVariable": 4,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 3,
+        "FromVariable": 2,
+        "ToVariable": 1,
+        "Type": "Activator"
+      },
+      {
+        "Id": 5,
+        "FromVariable": 2,
+        "ToVariable": 2,
+        "Type": "Activator"
+      },
+      {
+        "Id": 11,
+        "FromVariable": 2,
+        "ToVariable": 4,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 6,
+        "FromVariable": 3,
+        "ToVariable": 2,
+        "Type": "Activator"
+      },
+      {
+        "Id": 12,
+        "FromVariable": 3,
+        "ToVariable": 3,
+        "Type": "Activator"
+      },
+      {
+        "Id": 1,
+        "FromVariable": 5,
+        "ToVariable": 0,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 7,
+        "FromVariable": 5,
+        "ToVariable": 5,
+        "Type": "Activator"
+      },
+      {
+        "Id": 8,
+        "FromVariable": 6,
+        "ToVariable": 5,
+        "Type": "Activator"
+      },
+      {
+        "Id": 13,
+        "FromVariable": 6,
+        "ToVariable": 6,
+        "Type": "Activator"
+      }
+    ]
+  },
+  "Layout": {
+    "Variables": [
+      {
+        "Id": 0,
+        "Name": "v_Gt",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 1,
+        "Name": "v_Hb_b1",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 2,
+        "Name": "v_Hb_b2",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 3,
+        "Name": "v_Hb_b3",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 4,
+        "Name": "v_Kni",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 5,
+        "Name": "v_Kr_b1",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 6,
+        "Name": "v_Kr_b2",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      }
+    ],
+    "Containers": [
+      {
+        "Id": 0,
+        "Name": "Default",
+        "Size": 1,
+        "PositionX": 0.0,
+        "PositionY": 0.0
+      }
+    ],
+    "Description": ""
+  }
+}

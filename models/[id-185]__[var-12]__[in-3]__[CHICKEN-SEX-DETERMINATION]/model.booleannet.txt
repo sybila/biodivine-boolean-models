@@ -1,0 +1,15 @@
+v_AMH* = not v_SOX9 and not v_ESTRO and v_SF1 or v_SOX9 and not v_ESTRO
+v_AROMA* = not v_FOXL2 and v_SF1 or v_FOXL2
+v_B_CATENIN* = not v_SOX9 and v_WNT4
+v_DMRT1_b1* = not v_Z1 and not v_DMRT1_b1 and not v_HEMGN and v_SOX9 and not v_FOXL2 or not v_Z1 and not v_DMRT1_b1 and v_HEMGN and not v_FOXL2 or not v_Z1 and v_DMRT1_b1 and not v_DMRT1_b2 and not v_HEMGN and v_SOX9 and not v_FOXL2 or not v_Z1 and v_DMRT1_b1 and not v_DMRT1_b2 and v_HEMGN and not v_FOXL2 or not v_Z1 and v_DMRT1_b1 and v_DMRT1_b2 or v_Z1 and not v_Z2 and not v_DMRT1_b1 and not v_HEMGN and v_SOX9 and not v_FOXL2 or v_Z1 and not v_Z2 and not v_DMRT1_b1 and v_HEMGN and not v_FOXL2 or v_Z1 and not v_Z2 and v_DMRT1_b1 and not v_DMRT1_b2 and not v_HEMGN and v_SOX9 and not v_FOXL2 or v_Z1 and not v_Z2 and v_DMRT1_b1 and not v_DMRT1_b2 and v_HEMGN and not v_FOXL2 or v_Z1 and not v_Z2 and v_DMRT1_b1 and v_DMRT1_b2 or v_Z1 and v_Z2 and not v_W and not v_DMRT1_b1 and not v_FOXL2 or v_Z1 and v_Z2 and not v_W and v_DMRT1_b1 and not v_DMRT1_b2 and not v_FOXL2 or v_Z1 and v_Z2 and not v_W and v_DMRT1_b1 and v_DMRT1_b2 or v_Z1 and v_Z2 and v_W and not v_DMRT1_b1 and not v_HEMGN and v_SOX9 and not v_FOXL2 or v_Z1 and v_Z2 and v_W and not v_DMRT1_b1 and v_HEMGN and not v_FOXL2 or v_Z1 and v_Z2 and v_W and v_DMRT1_b1 and not v_DMRT1_b2 and not v_HEMGN and v_SOX9 and not v_FOXL2 or v_Z1 and v_Z2 and v_W and v_DMRT1_b1 and not v_DMRT1_b2 and v_HEMGN and not v_FOXL2 or v_Z1 and v_Z2 and v_W and v_DMRT1_b1 and v_DMRT1_b2
+v_DMRT1_b2* = v_DMRT1_b1 and not v_HEMGN and v_SOX9 and not v_FOXL2 or v_DMRT1_b1 and v_HEMGN and not v_FOXL2
+v_ESTRO* = v_AROMA
+v_FGF9* = v_SOX9
+v_FOXL2* = not v_DMRT1_b1 and not v_ESTRO and not v_AMH or not v_DMRT1_b1 and v_ESTRO or v_DMRT1_b1 and not v_DMRT1_b2 and not v_ESTRO and not v_AMH or v_DMRT1_b1 and not v_DMRT1_b2 and v_ESTRO
+v_HEMGN* = v_DMRT1_b1 and not v_SOX9
+v_SF1* = v_ESTRO
+v_SOX9* = not v_DMRT1_b1 and v_SOX9 and not v_FOXL2 and not v_B_CATENIN or v_DMRT1_b1 and not v_DMRT1_b2 and v_SOX9 and not v_FOXL2 and not v_B_CATENIN or v_DMRT1_b1 and v_DMRT1_b2 and not v_FOXL2
+v_W* = v_W
+v_WNT4* = not v_FGF9
+v_Z1* = v_Z1
+v_Z2* = v_Z2

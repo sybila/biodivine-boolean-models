@@ -1,0 +1,6 @@
+v_TrpE* = not v_Trp_b1 and not v_TrpR
+v_TrpR* = v_Trp_b1 and v_Trp_b2
+v_Trp_b1* = not v_Trpext_b1 and not v_Trp_b1 and v_TrpE or not v_Trpext_b1 and v_Trp_b1 and not v_Trp_b2 and v_TrpE or not v_Trpext_b1 and v_Trp_b1 and v_Trp_b2 or v_Trpext_b1
+v_Trp_b2* = v_Trpext_b1 and v_Trpext_b2 and v_Trp_b1
+v_Trpext_b1* = v_Trpext_b1
+v_Trpext_b2* = v_Trpext_b1 and v_Trpext_b2

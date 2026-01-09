@@ -1,0 +1,11 @@
+v_Eve_b1* = not v_Eve_b1 and v_Prd_b1 and not v_Slp and not v_Odd or v_Eve_b1 and not v_Eve_b2 and not v_Run and not v_Slp or v_Eve_b1 and not v_Eve_b2 and v_Run and not v_Slp and not v_Odd or v_Eve_b1 and v_Eve_b2
+v_Eve_b2* = v_Eve_b1 and not v_Eve_b2 and v_Prd_b1 and not v_Run and not v_Slp and not v_Odd or v_Eve_b1 and v_Eve_b2 and not v_Eve_b3 and v_Prd_b1 and not v_Run and not v_Slp and not v_Odd or v_Eve_b1 and v_Eve_b2 and v_Eve_b3
+v_Eve_b3* = v_Eve_b1 and v_Eve_b2 and v_Prd_b1 and not v_Run and not v_Slp and not v_Odd
+v_Ftz_b1* = not v_Eve_b1 and not v_Slp and not v_Ftz_b1 and not v_Odd or not v_Eve_b1 and not v_Slp and v_Ftz_b1 and not v_Ftz_b2 and not v_Odd or not v_Eve_b1 and not v_Slp and v_Ftz_b1 and v_Ftz_b2 or not v_Eve_b1 and v_Slp and v_Ftz_b1 and v_Ftz_b2 or v_Eve_b1 and not v_Eve_b2 and not v_Slp and not v_Ftz_b1 and not v_Odd or v_Eve_b1 and not v_Eve_b2 and not v_Slp and v_Ftz_b1 and not v_Ftz_b2 and not v_Odd or v_Eve_b1 and not v_Eve_b2 and not v_Slp and v_Ftz_b1 and v_Ftz_b2 or v_Eve_b1 and not v_Eve_b2 and v_Slp and v_Ftz_b1 and v_Ftz_b2 or v_Eve_b1 and v_Eve_b2 and v_Ftz_b1 and v_Ftz_b2
+v_Ftz_b2* = not v_Eve_b1 and not v_Slp and v_Ftz_b1 and not v_Odd or v_Eve_b1 and not v_Eve_b2 and not v_Slp and v_Ftz_b1 and not v_Odd
+v_Odd* = not v_Eve_b1 and not v_Prd_b1
+v_Ppa* = not v_Eve_b1 or v_Eve_b1 and not v_Eve_b2
+v_Prd_b1* = not v_Prd_b1 and not v_Odd or v_Prd_b1 and not v_Prd_b2 and not v_Odd or v_Prd_b1 and v_Prd_b2
+v_Prd_b2* = v_Prd_b1 and not v_Ppa and not v_Odd
+v_Run* = not v_Eve_b1 and v_Prd_b1 and not v_Odd or v_Eve_b1 and not v_Eve_b2 and v_Prd_b1 and not v_Odd
+v_Slp* = not v_Eve_b1 and not v_Ftz_b1 and not v_Odd or v_Eve_b1 and not v_Eve_b2 and not v_Ftz_b1 and not v_Odd

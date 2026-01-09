@@ -1,0 +1,14 @@
+v_APC_C* = v_MYB77 and not v_E2Fe or v_MYB3R1_4 and not v_E2Fe or v_E2Fa and not (v_E2Fe or v_RBR)
+v_CDKB1_1* = v_MYB77 or v_E2Fb and (not v_RBR or v_CYCD3_1 and not v_KRP1) and not v_E2Fc or v_MYB3R1_4
+v_CYCA2_3* = v_MYB3R1_4 and not v_APC_C or v_MYB77 and not v_APC_C
+v_CYCB1_1* = v_MYB3R1_4 and not v_APC_C or v_E2Fb and (v_CYCD3_1 and not v_KRP1 or not v_RBR) and not (v_APC_C or v_E2Fc) or v_MYB77 and not v_APC_C
+v_CYCD3_1* = not v_SCF
+v_E2Fa* = v_CDKB1_1 and not v_E2Fc and not v_CYCA2_3 and not v_E2Fa or v_CYCA2_3 and not v_E2Fc and not v_CDKB1_1 and not v_E2Fa or v_E2Fa and not (v_CDKB1_1 and v_CYCA2_3) or not (v_E2Fc or v_CDKB1_1 or v_CYCA2_3 or v_E2Fa)
+v_E2Fb* = v_E2Fa and not v_RBR
+v_E2Fc* = v_MYB3R1_4 and not (v_SCF and v_CYCD3_1 and not v_KRP1) or v_E2Fa and not (v_RBR or v_SCF and v_CYCD3_1 and not v_KRP1)
+v_E2Fe* = v_E2Fb and (not v_RBR or not v_KRP1 and v_CYCD3_1) or v_MYB77 or v_CYCD3_1 and not v_KRP1 and not v_MYB77 and not v_E2Fc and not v_E2Fb and not v_RBR or v_RBR and not v_KRP1 and not v_MYB77 and not v_E2Fc and not v_CYCD3_1 and not v_E2Fb or v_CYCD3_1 and v_E2Fb and v_RBR and not v_KRP1 and not v_MYB77 and not v_E2Fc or v_CYCD3_1 and v_KRP1 and v_E2Fb and not v_MYB77 and not v_E2Fc and not v_RBR or v_CYCD3_1 and v_KRP1 and not v_MYB77 and not v_E2Fc and not v_E2Fb and not v_RBR or v_KRP1 and not v_MYB77 and not v_E2Fc and not v_CYCD3_1 and not v_E2Fb and not v_RBR or v_RBR and v_KRP1 and not v_MYB77 and not v_E2Fc and not v_CYCD3_1 and not v_E2Fb or v_CYCD3_1 and v_RBR and not v_KRP1 and not v_MYB77 and not v_E2Fc and not v_E2Fb or v_E2Fb and v_KRP1 and v_RBR and not v_MYB77 and not v_E2Fc and not v_CYCD3_1 or v_E2Fb and v_KRP1 and v_E2Fc and not v_MYB77 and not v_CYCD3_1 and not v_RBR or v_CYCD3_1 and v_KRP1 and v_E2Fb and v_RBR and not v_MYB77 and not v_E2Fc or v_E2Fb and v_KRP1 and not v_MYB77 and not v_E2Fc and not v_CYCD3_1 and not v_RBR or v_E2Fb and not v_KRP1 and not v_MYB77 and not v_E2Fc and not v_CYCD3_1 and not v_RBR or v_CYCD3_1 and v_KRP1 and v_RBR and not v_MYB77 and not v_E2Fc and not v_E2Fb or v_E2Fb and v_RBR and not v_KRP1 and not v_MYB77 and not v_E2Fc and not v_CYCD3_1 or not (v_KRP1 or v_MYB77 or v_E2Fc or v_CYCD3_1 or v_E2Fb or v_RBR)
+v_KRP1* = v_MYB77 and not (v_CDKB1_1 and v_CYCA2_3 and v_SCF) or v_MYB3R1_4 and not (v_CDKB1_1 and v_CYCA2_3 and v_SCF)
+v_MYB3R1_4* = v_MYB77 or v_MYB3R1_4 and v_CYCB1_1 and not v_KRP1
+v_MYB77* = v_E2Fb and (v_CYCD3_1 and not v_KRP1 or not v_RBR)
+v_RBR* = v_E2Fa and (v_KRP1 or not v_CYCD3_1) and not (v_RBR and (v_KRP1 or not v_CYCD3_1)) or v_MYB3R1_4 and (v_KRP1 or not v_CYCD3_1)
+v_SCF* = v_MYB3R1_4 and not v_APC_C or v_E2Fb and (not v_RBR or v_CYCD3_1 and not v_KRP1) and not v_APC_C

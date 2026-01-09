@@ -1,0 +1,650 @@
+{
+  "Model": {
+    "Name": "",
+    "Variables": [
+      {
+        "Id": 0,
+        "Name": "v_ACVR1",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(0)"
+      },
+      {
+        "Id": 1,
+        "Name": "v_ACVR1B",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(1)"
+      },
+      {
+        "Id": 2,
+        "Name": "v_BAMBI",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(2)"
+      },
+      {
+        "Id": 3,
+        "Name": "v_BMPR1_2_ACTR2_complex",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(3)"
+      },
+      {
+        "Id": 4,
+        "Name": "v_E",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(4)"
+      },
+      {
+        "Id": 5,
+        "Name": "v_E3_ubiquitin_ligase_complex_complex",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(5)"
+      },
+      {
+        "Id": 6,
+        "Name": "v_LTBP1",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(6)"
+      },
+      {
+        "Id": 7,
+        "Name": "v_MAPK3",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(7)"
+      },
+      {
+        "Id": 8,
+        "Name": "v_Modulation_of_cell_cycle_phenotype",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(var(18), var(19))"
+      },
+      {
+        "Id": 9,
+        "Name": "v_Nsp7",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(9)"
+      },
+      {
+        "Id": 10,
+        "Name": "v_Nsp7b_cell",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(10)"
+      },
+      {
+        "Id": 11,
+        "Name": "v_Nsp7b_default_compartment",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(11)"
+      },
+      {
+        "Id": 12,
+        "Name": "v_Orf3a",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(12)"
+      },
+      {
+        "Id": 13,
+        "Name": "v_Orf7a",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(13)"
+      },
+      {
+        "Id": 14,
+        "Name": "v_Orf8",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(14)"
+      },
+      {
+        "Id": 15,
+        "Name": "v_PP2A_complex",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(var(20), var(13))"
+      },
+      {
+        "Id": 16,
+        "Name": "v_RHOA",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(var(20), var(9))"
+      },
+      {
+        "Id": 17,
+        "Name": "v_RPS6KB1_empty",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(15)"
+      },
+      {
+        "Id": 18,
+        "Name": "v_SMAD1_5_8_complex",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(min(max(max(max(var(3), var(12)), var(10)), var(4)), (1 - var(2))), (1 - var(7)))"
+      },
+      {
+        "Id": 19,
+        "Name": "v_SMAD2_3_complex",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(min(min(max(max(max(max(var(20), var(0)), var(1)), var(12)), var(11)), (1 - var(2))), (1 - var(5))), (1 - var(7)))"
+      },
+      {
+        "Id": 20,
+        "Name": "v_TGFB_TGFBR_complex",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(min(var(14), (1 - var(6))), (1 - var(2)))"
+      }
+    ],
+    "Relationships": [
+      {
+        "Id": 24,
+        "FromVariable": 0,
+        "ToVariable": 0,
+        "Type": "Activator"
+      },
+      {
+        "Id": 9,
+        "FromVariable": 0,
+        "ToVariable": 19,
+        "Type": "Activator"
+      },
+      {
+        "Id": 25,
+        "FromVariable": 1,
+        "ToVariable": 1,
+        "Type": "Activator"
+      },
+      {
+        "Id": 10,
+        "FromVariable": 1,
+        "ToVariable": 19,
+        "Type": "Activator"
+      },
+      {
+        "Id": 26,
+        "FromVariable": 2,
+        "ToVariable": 2,
+        "Type": "Activator"
+      },
+      {
+        "Id": 0,
+        "FromVariable": 2,
+        "ToVariable": 18,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 6,
+        "FromVariable": 2,
+        "ToVariable": 19,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 15,
+        "FromVariable": 2,
+        "ToVariable": 20,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 27,
+        "FromVariable": 3,
+        "ToVariable": 3,
+        "Type": "Activator"
+      },
+      {
+        "Id": 1,
+        "FromVariable": 3,
+        "ToVariable": 18,
+        "Type": "Activator"
+      },
+      {
+        "Id": 28,
+        "FromVariable": 4,
+        "ToVariable": 4,
+        "Type": "Activator"
+      },
+      {
+        "Id": 5,
+        "FromVariable": 4,
+        "ToVariable": 18,
+        "Type": "Activator"
+      },
+      {
+        "Id": 29,
+        "FromVariable": 5,
+        "ToVariable": 5,
+        "Type": "Activator"
+      },
+      {
+        "Id": 7,
+        "FromVariable": 5,
+        "ToVariable": 19,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 30,
+        "FromVariable": 6,
+        "ToVariable": 6,
+        "Type": "Activator"
+      },
+      {
+        "Id": 14,
+        "FromVariable": 6,
+        "ToVariable": 20,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 31,
+        "FromVariable": 7,
+        "ToVariable": 7,
+        "Type": "Activator"
+      },
+      {
+        "Id": 2,
+        "FromVariable": 7,
+        "ToVariable": 18,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 11,
+        "FromVariable": 7,
+        "ToVariable": 19,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 32,
+        "FromVariable": 9,
+        "ToVariable": 9,
+        "Type": "Activator"
+      },
+      {
+        "Id": 20,
+        "FromVariable": 9,
+        "ToVariable": 16,
+        "Type": "Activator"
+      },
+      {
+        "Id": 33,
+        "FromVariable": 10,
+        "ToVariable": 10,
+        "Type": "Activator"
+      },
+      {
+        "Id": 4,
+        "FromVariable": 10,
+        "ToVariable": 18,
+        "Type": "Activator"
+      },
+      {
+        "Id": 34,
+        "FromVariable": 11,
+        "ToVariable": 11,
+        "Type": "Activator"
+      },
+      {
+        "Id": 13,
+        "FromVariable": 11,
+        "ToVariable": 19,
+        "Type": "Activator"
+      },
+      {
+        "Id": 35,
+        "FromVariable": 12,
+        "ToVariable": 12,
+        "Type": "Activator"
+      },
+      {
+        "Id": 3,
+        "FromVariable": 12,
+        "ToVariable": 18,
+        "Type": "Activator"
+      },
+      {
+        "Id": 12,
+        "FromVariable": 12,
+        "ToVariable": 19,
+        "Type": "Activator"
+      },
+      {
+        "Id": 36,
+        "FromVariable": 13,
+        "ToVariable": 13,
+        "Type": "Activator"
+      },
+      {
+        "Id": 18,
+        "FromVariable": 13,
+        "ToVariable": 15,
+        "Type": "Activator"
+      },
+      {
+        "Id": 37,
+        "FromVariable": 14,
+        "ToVariable": 14,
+        "Type": "Activator"
+      },
+      {
+        "Id": 16,
+        "FromVariable": 14,
+        "ToVariable": 20,
+        "Type": "Activator"
+      },
+      {
+        "Id": 21,
+        "FromVariable": 15,
+        "ToVariable": 17,
+        "Type": "Activator"
+      },
+      {
+        "Id": 22,
+        "FromVariable": 18,
+        "ToVariable": 8,
+        "Type": "Activator"
+      },
+      {
+        "Id": 23,
+        "FromVariable": 19,
+        "ToVariable": 8,
+        "Type": "Activator"
+      },
+      {
+        "Id": 17,
+        "FromVariable": 20,
+        "ToVariable": 15,
+        "Type": "Activator"
+      },
+      {
+        "Id": 19,
+        "FromVariable": 20,
+        "ToVariable": 16,
+        "Type": "Activator"
+      },
+      {
+        "Id": 8,
+        "FromVariable": 20,
+        "ToVariable": 19,
+        "Type": "Activator"
+      }
+    ]
+  },
+  "Layout": {
+    "Variables": [
+      {
+        "Id": 0,
+        "Name": "v_ACVR1",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 1,
+        "Name": "v_ACVR1B",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 2,
+        "Name": "v_BAMBI",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 3,
+        "Name": "v_BMPR1_2_ACTR2_complex",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 300.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 4,
+        "Name": "v_E",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 5,
+        "Name": "v_E3_ubiquitin_ligase_complex_complex",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 6,
+        "Name": "v_LTBP1",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 7,
+        "Name": "v_MAPK3",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 300.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 8,
+        "Name": "v_Modulation_of_cell_cycle_phenotype",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 9,
+        "Name": "v_Nsp7",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 10,
+        "Name": "v_Nsp7b_cell",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 11,
+        "Name": "v_Nsp7b_default_compartment",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 300.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 12,
+        "Name": "v_Orf3a",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 13,
+        "Name": "v_Orf7a",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 14,
+        "Name": "v_Orf8",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 15,
+        "Name": "v_PP2A_complex",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 300.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 16,
+        "Name": "v_RHOA",
+        "Type": "Default",
+        "PositionX": 375.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 17,
+        "Name": "v_RPS6KB1_empty",
+        "Type": "Default",
+        "PositionX": 375.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 18,
+        "Name": "v_SMAD1_5_8_complex",
+        "Type": "Default",
+        "PositionX": 375.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 19,
+        "Name": "v_SMAD2_3_complex",
+        "Type": "Default",
+        "PositionX": 375.0,
+        "PositionY": 300.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 20,
+        "Name": "v_TGFB_TGFBR_complex",
+        "Type": "Default",
+        "PositionX": 450.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      }
+    ],
+    "Containers": [
+      {
+        "Id": 0,
+        "Name": "Default",
+        "Size": 1,
+        "PositionX": 0.0,
+        "PositionY": 0.0
+      }
+    ],
+    "Description": ""
+  }
+}

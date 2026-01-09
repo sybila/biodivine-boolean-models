@@ -1,0 +1,546 @@
+{
+  "Model": {
+    "Name": "",
+    "Variables": [
+      {
+        "Id": 0,
+        "Name": "v_3a",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(0)"
+      },
+      {
+        "Id": 1,
+        "Name": "v_3b",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(1)"
+      },
+      {
+        "Id": 2,
+        "Name": "v_7a",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(2)"
+      },
+      {
+        "Id": 3,
+        "Name": "v_AP_1_complex",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(var(18), var(1))"
+      },
+      {
+        "Id": 4,
+        "Name": "v_ATF2_phosphorylated",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(18)"
+      },
+      {
+        "Id": 5,
+        "Name": "v_Apoptosis_phenotype",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "(1 - var(7))"
+      },
+      {
+        "Id": 6,
+        "Name": "v_Autophagy_phenotype",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(7)"
+      },
+      {
+        "Id": 7,
+        "Name": "v_BCL2_phosphorylated",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(18)"
+      },
+      {
+        "Id": 8,
+        "Name": "v_Innate_Immunity_phenotype",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(3)"
+      },
+      {
+        "Id": 9,
+        "Name": "v_MAP2K4_phosphorylated",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(var(11), var(14))"
+      },
+      {
+        "Id": 10,
+        "Name": "v_MAP2K7_phosphorylated",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(var(12), var(14))"
+      },
+      {
+        "Id": 11,
+        "Name": "v_MEKK1_4_complex",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(14)"
+      },
+      {
+        "Id": 12,
+        "Name": "v_MLK1_2_3_complex",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(14)"
+      },
+      {
+        "Id": 13,
+        "Name": "v_S",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(13)"
+      },
+      {
+        "Id": 14,
+        "Name": "v_SARS_CoV_1_proteins_complex",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(14)"
+      },
+      {
+        "Id": 15,
+        "Name": "v_TP53_phosphorylated",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(18)"
+      },
+      {
+        "Id": 16,
+        "Name": "v_TP53_signalling_phenotype",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(15)"
+      },
+      {
+        "Id": 17,
+        "Name": "v_csa12_JNK_complex_cell",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(17)"
+      },
+      {
+        "Id": 18,
+        "Name": "v_csa1_JNK_complex_cell",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(min(max(max(max(var(9), var(10)), var(2)), var(0)), var(17)), min(var(17), var(13)))"
+      }
+    ],
+    "Relationships": [
+      {
+        "Id": 21,
+        "FromVariable": 0,
+        "ToVariable": 0,
+        "Type": "Activator"
+      },
+      {
+        "Id": 4,
+        "FromVariable": 0,
+        "ToVariable": 18,
+        "Type": "Activator"
+      },
+      {
+        "Id": 22,
+        "FromVariable": 1,
+        "ToVariable": 1,
+        "Type": "Activator"
+      },
+      {
+        "Id": 8,
+        "FromVariable": 1,
+        "ToVariable": 3,
+        "Type": "Activator"
+      },
+      {
+        "Id": 23,
+        "FromVariable": 2,
+        "ToVariable": 2,
+        "Type": "Activator"
+      },
+      {
+        "Id": 3,
+        "FromVariable": 2,
+        "ToVariable": 18,
+        "Type": "Activator"
+      },
+      {
+        "Id": 15,
+        "FromVariable": 3,
+        "ToVariable": 8,
+        "Type": "Activator"
+      },
+      {
+        "Id": 16,
+        "FromVariable": 7,
+        "ToVariable": 5,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 17,
+        "FromVariable": 7,
+        "ToVariable": 6,
+        "Type": "Activator"
+      },
+      {
+        "Id": 1,
+        "FromVariable": 9,
+        "ToVariable": 18,
+        "Type": "Activator"
+      },
+      {
+        "Id": 2,
+        "FromVariable": 10,
+        "ToVariable": 18,
+        "Type": "Activator"
+      },
+      {
+        "Id": 10,
+        "FromVariable": 11,
+        "ToVariable": 9,
+        "Type": "Activator"
+      },
+      {
+        "Id": 12,
+        "FromVariable": 12,
+        "ToVariable": 10,
+        "Type": "Activator"
+      },
+      {
+        "Id": 24,
+        "FromVariable": 13,
+        "ToVariable": 13,
+        "Type": "Activator"
+      },
+      {
+        "Id": 5,
+        "FromVariable": 13,
+        "ToVariable": 18,
+        "Type": "Activator"
+      },
+      {
+        "Id": 11,
+        "FromVariable": 14,
+        "ToVariable": 9,
+        "Type": "Activator"
+      },
+      {
+        "Id": 13,
+        "FromVariable": 14,
+        "ToVariable": 10,
+        "Type": "Activator"
+      },
+      {
+        "Id": 9,
+        "FromVariable": 14,
+        "ToVariable": 11,
+        "Type": "Activator"
+      },
+      {
+        "Id": 6,
+        "FromVariable": 14,
+        "ToVariable": 12,
+        "Type": "Activator"
+      },
+      {
+        "Id": 25,
+        "FromVariable": 14,
+        "ToVariable": 14,
+        "Type": "Activator"
+      },
+      {
+        "Id": 20,
+        "FromVariable": 15,
+        "ToVariable": 16,
+        "Type": "Activator"
+      },
+      {
+        "Id": 26,
+        "FromVariable": 17,
+        "ToVariable": 17,
+        "Type": "Activator"
+      },
+      {
+        "Id": 0,
+        "FromVariable": 17,
+        "ToVariable": 18,
+        "Type": "Activator"
+      },
+      {
+        "Id": 7,
+        "FromVariable": 18,
+        "ToVariable": 3,
+        "Type": "Activator"
+      },
+      {
+        "Id": 18,
+        "FromVariable": 18,
+        "ToVariable": 4,
+        "Type": "Activator"
+      },
+      {
+        "Id": 14,
+        "FromVariable": 18,
+        "ToVariable": 7,
+        "Type": "Activator"
+      },
+      {
+        "Id": 19,
+        "FromVariable": 18,
+        "ToVariable": 15,
+        "Type": "Activator"
+      }
+    ]
+  },
+  "Layout": {
+    "Variables": [
+      {
+        "Id": 0,
+        "Name": "v_3a",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 1,
+        "Name": "v_3b",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 2,
+        "Name": "v_7a",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 3,
+        "Name": "v_AP_1_complex",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 300.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 4,
+        "Name": "v_ATF2_phosphorylated",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 5,
+        "Name": "v_Apoptosis_phenotype",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 6,
+        "Name": "v_Autophagy_phenotype",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 7,
+        "Name": "v_BCL2_phosphorylated",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 300.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 8,
+        "Name": "v_Innate_Immunity_phenotype",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 9,
+        "Name": "v_MAP2K4_phosphorylated",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 10,
+        "Name": "v_MAP2K7_phosphorylated",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 11,
+        "Name": "v_MEKK1_4_complex",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 300.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 12,
+        "Name": "v_MLK1_2_3_complex",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 13,
+        "Name": "v_S",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 14,
+        "Name": "v_SARS_CoV_1_proteins_complex",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 15,
+        "Name": "v_TP53_phosphorylated",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 300.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 16,
+        "Name": "v_TP53_signalling_phenotype",
+        "Type": "Default",
+        "PositionX": 375.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 17,
+        "Name": "v_csa12_JNK_complex_cell",
+        "Type": "Default",
+        "PositionX": 375.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 18,
+        "Name": "v_csa1_JNK_complex_cell",
+        "Type": "Default",
+        "PositionX": 375.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      }
+    ],
+    "Containers": [
+      {
+        "Id": 0,
+        "Name": "Default",
+        "Size": 1,
+        "PositionX": 0.0,
+        "PositionY": 0.0
+      }
+    ],
+    "Description": ""
+  }
+}

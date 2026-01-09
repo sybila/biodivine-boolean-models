@@ -1,0 +1,1729 @@
+{
+  "Model": {
+    "Name": "",
+    "Variables": [
+      {
+        "Id": 0,
+        "Name": "v_ATG13_phosphorylated",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(0)"
+      },
+      {
+        "Id": 1,
+        "Name": "v_ATXN3",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(1)"
+      },
+      {
+        "Id": 2,
+        "Name": "v_BAG2",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(2)"
+      },
+      {
+        "Id": 3,
+        "Name": "v_BAG4",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(3)"
+      },
+      {
+        "Id": 4,
+        "Name": "v_BAG5",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(4)"
+      },
+      {
+        "Id": 5,
+        "Name": "v_BCL2L1_BAX_PARK7_complex",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(6), var(23))"
+      },
+      {
+        "Id": 6,
+        "Name": "v_BCL2L1_BAX_complex",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(6)"
+      },
+      {
+        "Id": 7,
+        "Name": "v_BNIP3L",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(7)"
+      },
+      {
+        "Id": 8,
+        "Name": "v_CCCP_simple_molecule",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(8)"
+      },
+      {
+        "Id": 9,
+        "Name": "v_DNM1L",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(50)"
+      },
+      {
+        "Id": 10,
+        "Name": "v_FBXO7",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(10)"
+      },
+      {
+        "Id": 11,
+        "Name": "v_FBXW7",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(11)"
+      },
+      {
+        "Id": 12,
+        "Name": "v_GABARAP",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(12)"
+      },
+      {
+        "Id": 13,
+        "Name": "v_GABARAPL1_mitochondrion",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(14), var(7))"
+      },
+      {
+        "Id": 14,
+        "Name": "v_GABARAPL1_neuron",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(14)"
+      },
+      {
+        "Id": 15,
+        "Name": "v_HSP90",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(15)"
+      },
+      {
+        "Id": 16,
+        "Name": "v_HSPA1L",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(16)"
+      },
+      {
+        "Id": 17,
+        "Name": "v_HSPA9",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(17)"
+      },
+      {
+        "Id": 18,
+        "Name": "v_MAP1LC3A_mitochondrion",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(19), var(7))"
+      },
+      {
+        "Id": 19,
+        "Name": "v_MAP1LC3A_neuron",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(19)"
+      },
+      {
+        "Id": 20,
+        "Name": "v_MARK2",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(20)"
+      },
+      {
+        "Id": 21,
+        "Name": "v_NEDD8",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(21)"
+      },
+      {
+        "Id": 22,
+        "Name": "v_OPTN",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(22)"
+      },
+      {
+        "Id": 23,
+        "Name": "v_PARK7_mitochondrion",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(24), var(17))"
+      },
+      {
+        "Id": 24,
+        "Name": "v_PARK7_neuron",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(24)"
+      },
+      {
+        "Id": 25,
+        "Name": "v_PARL",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(25)"
+      },
+      {
+        "Id": 26,
+        "Name": "v_PGAM5",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(26)"
+      },
+      {
+        "Id": 27,
+        "Name": "v_PGAM5_space__S_",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(max(var(25), var(47)), var(26))"
+      },
+      {
+        "Id": 28,
+        "Name": "v_PINK1_mitochondrion",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(max(max(max(max(min(min(var(28), var(39)), (1 - var(47))), min(var(28), var(26))), var(20)), var(43)), var(38)), min(max(var(43), var(15)), var(29)))"
+      },
+      {
+        "Id": 29,
+        "Name": "v_PINK1_neuron",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(var(21), min(min(var(29), (1 - var(4))), (1 - var(2))))"
+      },
+      {
+        "Id": 30,
+        "Name": "v_PINK1_space__fragment_space_52kD_",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(min(max(max(var(25), var(31)), var(32)), var(28)), var(15))"
+      },
+      {
+        "Id": 31,
+        "Name": "v_PMPCA",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(31)"
+      },
+      {
+        "Id": 32,
+        "Name": "v_PMPCB",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(32)"
+      },
+      {
+        "Id": 33,
+        "Name": "v_PRKN",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(33)"
+      },
+      {
+        "Id": 34,
+        "Name": "v_PRKN_ubiquitinated",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(min(max(var(29), var(55)), var(33)), min(var(33), var(1)))"
+      },
+      {
+        "Id": 35,
+        "Name": "v_ROS_simple_molecule",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(35)"
+      },
+      {
+        "Id": 36,
+        "Name": "v_SIAH3",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(36)"
+      },
+      {
+        "Id": 37,
+        "Name": "v_SNCA_mitochondrion",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(53), var(43))"
+      },
+      {
+        "Id": 38,
+        "Name": "v_SREBF1",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(11)"
+      },
+      {
+        "Id": 39,
+        "Name": "v_TIM_space_Complex_complex",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(39)"
+      },
+      {
+        "Id": 40,
+        "Name": "v_TOMM20_ubiquitinated",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(43), var(51))"
+      },
+      {
+        "Id": 41,
+        "Name": "v_TOMM40_ubiquitinated",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(43), var(51))"
+      },
+      {
+        "Id": 42,
+        "Name": "v_TOMM70",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(43), var(51))"
+      },
+      {
+        "Id": 43,
+        "Name": "v_TOM_space_complex_complex",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(43)"
+      },
+      {
+        "Id": 44,
+        "Name": "v_VPS13C",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(44)"
+      },
+      {
+        "Id": 45,
+        "Name": "v_cholesterol_simple_molecule",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(45)"
+      },
+      {
+        "Id": 46,
+        "Name": "v_fatty_space_acid_simple_molecule",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(46)"
+      },
+      {
+        "Id": 47,
+        "Name": "v_mitochondrial_space_depolarization_phenotype",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(47)"
+      },
+      {
+        "Id": 48,
+        "Name": "v_mitophagy_phenotype",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(max(max(max(max(max(max(max(var(50), var(18)), var(13)), var(0)), var(9)), var(12)), var(34)), var(52)), var(22))"
+      },
+      {
+        "Id": 49,
+        "Name": "v_neuron_space_death_phenotype",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(48), var(54))"
+      },
+      {
+        "Id": 50,
+        "Name": "v_oxidized_space_PARK7_space_dimer_complex",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(23)"
+      },
+      {
+        "Id": 51,
+        "Name": "v_path_0_csa1419_PINK1_PRKN_complex_mitochondrion",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(min(min(min(max(max(max(max(max(var(38), var(11)), var(45)), var(46)), var(16)), var(10)), var(34)), var(28)), (1 - var(3))), (1 - var(36)))"
+      },
+      {
+        "Id": 52,
+        "Name": "v_path_0_csa279_PINK1_PRKN_complex_mitochondrion",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(min(min(min(max(var(8), var(35)), var(28)), var(34)), (1 - var(30))), (1 - var(44)))"
+      },
+      {
+        "Id": 53,
+        "Name": "v_path_0_sa4348_SNCA_neuron",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(53)"
+      },
+      {
+        "Id": 54,
+        "Name": "v_path_0_sa6466_SNCA_neuron",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(54)"
+      },
+      {
+        "Id": 55,
+        "Name": "v_ubiquitin_phosphorylated",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(29)"
+      }
+    ],
+    "Relationships": [
+      {
+        "Id": 72,
+        "FromVariable": 0,
+        "ToVariable": 0,
+        "Type": "Activator"
+      },
+      {
+        "Id": 44,
+        "FromVariable": 0,
+        "ToVariable": 48,
+        "Type": "Activator"
+      },
+      {
+        "Id": 73,
+        "FromVariable": 1,
+        "ToVariable": 1,
+        "Type": "Activator"
+      },
+      {
+        "Id": 24,
+        "FromVariable": 1,
+        "ToVariable": 34,
+        "Type": "Activator"
+      },
+      {
+        "Id": 74,
+        "FromVariable": 2,
+        "ToVariable": 2,
+        "Type": "Activator"
+      },
+      {
+        "Id": 56,
+        "FromVariable": 2,
+        "ToVariable": 29,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 75,
+        "FromVariable": 3,
+        "ToVariable": 3,
+        "Type": "Activator"
+      },
+      {
+        "Id": 10,
+        "FromVariable": 3,
+        "ToVariable": 51,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 76,
+        "FromVariable": 4,
+        "ToVariable": 4,
+        "Type": "Activator"
+      },
+      {
+        "Id": 55,
+        "FromVariable": 4,
+        "ToVariable": 29,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 1,
+        "FromVariable": 6,
+        "ToVariable": 5,
+        "Type": "Activator"
+      },
+      {
+        "Id": 77,
+        "FromVariable": 6,
+        "ToVariable": 6,
+        "Type": "Activator"
+      },
+      {
+        "Id": 78,
+        "FromVariable": 7,
+        "ToVariable": 7,
+        "Type": "Activator"
+      },
+      {
+        "Id": 66,
+        "FromVariable": 7,
+        "ToVariable": 13,
+        "Type": "Activator"
+      },
+      {
+        "Id": 40,
+        "FromVariable": 7,
+        "ToVariable": 18,
+        "Type": "Activator"
+      },
+      {
+        "Id": 79,
+        "FromVariable": 8,
+        "ToVariable": 8,
+        "Type": "Activator"
+      },
+      {
+        "Id": 15,
+        "FromVariable": 8,
+        "ToVariable": 52,
+        "Type": "Activator"
+      },
+      {
+        "Id": 45,
+        "FromVariable": 9,
+        "ToVariable": 48,
+        "Type": "Activator"
+      },
+      {
+        "Id": 80,
+        "FromVariable": 10,
+        "ToVariable": 10,
+        "Type": "Activator"
+      },
+      {
+        "Id": 12,
+        "FromVariable": 10,
+        "ToVariable": 51,
+        "Type": "Activator"
+      },
+      {
+        "Id": 81,
+        "FromVariable": 11,
+        "ToVariable": 11,
+        "Type": "Activator"
+      },
+      {
+        "Id": 57,
+        "FromVariable": 11,
+        "ToVariable": 38,
+        "Type": "Activator"
+      },
+      {
+        "Id": 6,
+        "FromVariable": 11,
+        "ToVariable": 51,
+        "Type": "Activator"
+      },
+      {
+        "Id": 82,
+        "FromVariable": 12,
+        "ToVariable": 12,
+        "Type": "Activator"
+      },
+      {
+        "Id": 46,
+        "FromVariable": 12,
+        "ToVariable": 48,
+        "Type": "Activator"
+      },
+      {
+        "Id": 43,
+        "FromVariable": 13,
+        "ToVariable": 48,
+        "Type": "Activator"
+      },
+      {
+        "Id": 65,
+        "FromVariable": 14,
+        "ToVariable": 13,
+        "Type": "Activator"
+      },
+      {
+        "Id": 83,
+        "FromVariable": 14,
+        "ToVariable": 14,
+        "Type": "Activator"
+      },
+      {
+        "Id": 84,
+        "FromVariable": 15,
+        "ToVariable": 15,
+        "Type": "Activator"
+      },
+      {
+        "Id": 35,
+        "FromVariable": 15,
+        "ToVariable": 28,
+        "Type": "Activator"
+      },
+      {
+        "Id": 64,
+        "FromVariable": 15,
+        "ToVariable": 30,
+        "Type": "Activator"
+      },
+      {
+        "Id": 85,
+        "FromVariable": 16,
+        "ToVariable": 16,
+        "Type": "Activator"
+      },
+      {
+        "Id": 9,
+        "FromVariable": 16,
+        "ToVariable": 51,
+        "Type": "Activator"
+      },
+      {
+        "Id": 86,
+        "FromVariable": 17,
+        "ToVariable": 17,
+        "Type": "Activator"
+      },
+      {
+        "Id": 20,
+        "FromVariable": 17,
+        "ToVariable": 23,
+        "Type": "Activator"
+      },
+      {
+        "Id": 42,
+        "FromVariable": 18,
+        "ToVariable": 48,
+        "Type": "Activator"
+      },
+      {
+        "Id": 39,
+        "FromVariable": 19,
+        "ToVariable": 18,
+        "Type": "Activator"
+      },
+      {
+        "Id": 87,
+        "FromVariable": 19,
+        "ToVariable": 19,
+        "Type": "Activator"
+      },
+      {
+        "Id": 88,
+        "FromVariable": 20,
+        "ToVariable": 20,
+        "Type": "Activator"
+      },
+      {
+        "Id": 31,
+        "FromVariable": 20,
+        "ToVariable": 28,
+        "Type": "Activator"
+      },
+      {
+        "Id": 89,
+        "FromVariable": 21,
+        "ToVariable": 21,
+        "Type": "Activator"
+      },
+      {
+        "Id": 53,
+        "FromVariable": 21,
+        "ToVariable": 29,
+        "Type": "Activator"
+      },
+      {
+        "Id": 90,
+        "FromVariable": 22,
+        "ToVariable": 22,
+        "Type": "Activator"
+      },
+      {
+        "Id": 49,
+        "FromVariable": 22,
+        "ToVariable": 48,
+        "Type": "Activator"
+      },
+      {
+        "Id": 2,
+        "FromVariable": 23,
+        "ToVariable": 5,
+        "Type": "Activator"
+      },
+      {
+        "Id": 0,
+        "FromVariable": 23,
+        "ToVariable": 50,
+        "Type": "Activator"
+      },
+      {
+        "Id": 19,
+        "FromVariable": 24,
+        "ToVariable": 23,
+        "Type": "Activator"
+      },
+      {
+        "Id": 91,
+        "FromVariable": 24,
+        "ToVariable": 24,
+        "Type": "Activator"
+      },
+      {
+        "Id": 92,
+        "FromVariable": 25,
+        "ToVariable": 25,
+        "Type": "Activator"
+      },
+      {
+        "Id": 51,
+        "FromVariable": 25,
+        "ToVariable": 27,
+        "Type": "Activator"
+      },
+      {
+        "Id": 61,
+        "FromVariable": 25,
+        "ToVariable": 30,
+        "Type": "Activator"
+      },
+      {
+        "Id": 93,
+        "FromVariable": 26,
+        "ToVariable": 26,
+        "Type": "Activator"
+      },
+      {
+        "Id": 50,
+        "FromVariable": 26,
+        "ToVariable": 27,
+        "Type": "Activator"
+      },
+      {
+        "Id": 30,
+        "FromVariable": 26,
+        "ToVariable": 28,
+        "Type": "Activator"
+      },
+      {
+        "Id": 27,
+        "FromVariable": 28,
+        "ToVariable": 28,
+        "Type": "Activator"
+      },
+      {
+        "Id": 60,
+        "FromVariable": 28,
+        "ToVariable": 30,
+        "Type": "Activator"
+      },
+      {
+        "Id": 4,
+        "FromVariable": 28,
+        "ToVariable": 51,
+        "Type": "Activator"
+      },
+      {
+        "Id": 13,
+        "FromVariable": 28,
+        "ToVariable": 52,
+        "Type": "Activator"
+      },
+      {
+        "Id": 34,
+        "FromVariable": 29,
+        "ToVariable": 28,
+        "Type": "Activator"
+      },
+      {
+        "Id": 54,
+        "FromVariable": 29,
+        "ToVariable": 29,
+        "Type": "Activator"
+      },
+      {
+        "Id": 22,
+        "FromVariable": 29,
+        "ToVariable": 34,
+        "Type": "Activator"
+      },
+      {
+        "Id": 67,
+        "FromVariable": 29,
+        "ToVariable": 55,
+        "Type": "Activator"
+      },
+      {
+        "Id": 17,
+        "FromVariable": 30,
+        "ToVariable": 52,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 62,
+        "FromVariable": 31,
+        "ToVariable": 30,
+        "Type": "Activator"
+      },
+      {
+        "Id": 94,
+        "FromVariable": 31,
+        "ToVariable": 31,
+        "Type": "Activator"
+      },
+      {
+        "Id": 63,
+        "FromVariable": 32,
+        "ToVariable": 30,
+        "Type": "Activator"
+      },
+      {
+        "Id": 95,
+        "FromVariable": 32,
+        "ToVariable": 32,
+        "Type": "Activator"
+      },
+      {
+        "Id": 96,
+        "FromVariable": 33,
+        "ToVariable": 33,
+        "Type": "Activator"
+      },
+      {
+        "Id": 21,
+        "FromVariable": 33,
+        "ToVariable": 34,
+        "Type": "Activator"
+      },
+      {
+        "Id": 47,
+        "FromVariable": 34,
+        "ToVariable": 48,
+        "Type": "Activator"
+      },
+      {
+        "Id": 3,
+        "FromVariable": 34,
+        "ToVariable": 51,
+        "Type": "Activator"
+      },
+      {
+        "Id": 14,
+        "FromVariable": 34,
+        "ToVariable": 52,
+        "Type": "Activator"
+      },
+      {
+        "Id": 97,
+        "FromVariable": 35,
+        "ToVariable": 35,
+        "Type": "Activator"
+      },
+      {
+        "Id": 16,
+        "FromVariable": 35,
+        "ToVariable": 52,
+        "Type": "Activator"
+      },
+      {
+        "Id": 98,
+        "FromVariable": 36,
+        "ToVariable": 36,
+        "Type": "Activator"
+      },
+      {
+        "Id": 11,
+        "FromVariable": 36,
+        "ToVariable": 51,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 33,
+        "FromVariable": 38,
+        "ToVariable": 28,
+        "Type": "Activator"
+      },
+      {
+        "Id": 5,
+        "FromVariable": 38,
+        "ToVariable": 51,
+        "Type": "Activator"
+      },
+      {
+        "Id": 28,
+        "FromVariable": 39,
+        "ToVariable": 28,
+        "Type": "Activator"
+      },
+      {
+        "Id": 99,
+        "FromVariable": 39,
+        "ToVariable": 39,
+        "Type": "Activator"
+      },
+      {
+        "Id": 32,
+        "FromVariable": 43,
+        "ToVariable": 28,
+        "Type": "Activator"
+      },
+      {
+        "Id": 69,
+        "FromVariable": 43,
+        "ToVariable": 37,
+        "Type": "Activator"
+      },
+      {
+        "Id": 70,
+        "FromVariable": 43,
+        "ToVariable": 40,
+        "Type": "Activator"
+      },
+      {
+        "Id": 25,
+        "FromVariable": 43,
+        "ToVariable": 41,
+        "Type": "Activator"
+      },
+      {
+        "Id": 36,
+        "FromVariable": 43,
+        "ToVariable": 42,
+        "Type": "Activator"
+      },
+      {
+        "Id": 100,
+        "FromVariable": 43,
+        "ToVariable": 43,
+        "Type": "Activator"
+      },
+      {
+        "Id": 101,
+        "FromVariable": 44,
+        "ToVariable": 44,
+        "Type": "Activator"
+      },
+      {
+        "Id": 18,
+        "FromVariable": 44,
+        "ToVariable": 52,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 102,
+        "FromVariable": 45,
+        "ToVariable": 45,
+        "Type": "Activator"
+      },
+      {
+        "Id": 7,
+        "FromVariable": 45,
+        "ToVariable": 51,
+        "Type": "Activator"
+      },
+      {
+        "Id": 103,
+        "FromVariable": 46,
+        "ToVariable": 46,
+        "Type": "Activator"
+      },
+      {
+        "Id": 8,
+        "FromVariable": 46,
+        "ToVariable": 51,
+        "Type": "Activator"
+      },
+      {
+        "Id": 52,
+        "FromVariable": 47,
+        "ToVariable": 27,
+        "Type": "Activator"
+      },
+      {
+        "Id": 29,
+        "FromVariable": 47,
+        "ToVariable": 28,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 104,
+        "FromVariable": 47,
+        "ToVariable": 47,
+        "Type": "Activator"
+      },
+      {
+        "Id": 58,
+        "FromVariable": 48,
+        "ToVariable": 49,
+        "Type": "Activator"
+      },
+      {
+        "Id": 38,
+        "FromVariable": 50,
+        "ToVariable": 9,
+        "Type": "Activator"
+      },
+      {
+        "Id": 41,
+        "FromVariable": 50,
+        "ToVariable": 48,
+        "Type": "Activator"
+      },
+      {
+        "Id": 71,
+        "FromVariable": 51,
+        "ToVariable": 40,
+        "Type": "Activator"
+      },
+      {
+        "Id": 26,
+        "FromVariable": 51,
+        "ToVariable": 41,
+        "Type": "Activator"
+      },
+      {
+        "Id": 37,
+        "FromVariable": 51,
+        "ToVariable": 42,
+        "Type": "Activator"
+      },
+      {
+        "Id": 48,
+        "FromVariable": 52,
+        "ToVariable": 48,
+        "Type": "Activator"
+      },
+      {
+        "Id": 68,
+        "FromVariable": 53,
+        "ToVariable": 37,
+        "Type": "Activator"
+      },
+      {
+        "Id": 105,
+        "FromVariable": 53,
+        "ToVariable": 53,
+        "Type": "Activator"
+      },
+      {
+        "Id": 59,
+        "FromVariable": 54,
+        "ToVariable": 49,
+        "Type": "Activator"
+      },
+      {
+        "Id": 106,
+        "FromVariable": 54,
+        "ToVariable": 54,
+        "Type": "Activator"
+      },
+      {
+        "Id": 23,
+        "FromVariable": 55,
+        "ToVariable": 34,
+        "Type": "Activator"
+      }
+    ]
+  },
+  "Layout": {
+    "Variables": [
+      {
+        "Id": 0,
+        "Name": "v_ATG13_phosphorylated",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 1,
+        "Name": "v_ATXN3",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 2,
+        "Name": "v_BAG2",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 3,
+        "Name": "v_BAG4",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 300.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 4,
+        "Name": "v_BAG5",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 375.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 5,
+        "Name": "v_BCL2L1_BAX_PARK7_complex",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 450.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 6,
+        "Name": "v_BCL2L1_BAX_complex",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 525.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 7,
+        "Name": "v_BNIP3L",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 8,
+        "Name": "v_CCCP_simple_molecule",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 9,
+        "Name": "v_DNM1L",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 10,
+        "Name": "v_FBXO7",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 300.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 11,
+        "Name": "v_FBXW7",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 375.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 12,
+        "Name": "v_GABARAP",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 450.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 13,
+        "Name": "v_GABARAPL1_mitochondrion",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 525.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 14,
+        "Name": "v_GABARAPL1_neuron",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 15,
+        "Name": "v_HSP90",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 16,
+        "Name": "v_HSPA1L",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 17,
+        "Name": "v_HSPA9",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 300.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 18,
+        "Name": "v_MAP1LC3A_mitochondrion",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 375.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 19,
+        "Name": "v_MAP1LC3A_neuron",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 450.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 20,
+        "Name": "v_MARK2",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 525.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 21,
+        "Name": "v_NEDD8",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 22,
+        "Name": "v_OPTN",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 23,
+        "Name": "v_PARK7_mitochondrion",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 24,
+        "Name": "v_PARK7_neuron",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 300.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 25,
+        "Name": "v_PARL",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 375.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 26,
+        "Name": "v_PGAM5",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 450.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 27,
+        "Name": "v_PGAM5_space__S_",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 525.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 28,
+        "Name": "v_PINK1_mitochondrion",
+        "Type": "Default",
+        "PositionX": 375.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 29,
+        "Name": "v_PINK1_neuron",
+        "Type": "Default",
+        "PositionX": 375.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 30,
+        "Name": "v_PINK1_space__fragment_space_52kD_",
+        "Type": "Default",
+        "PositionX": 375.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 31,
+        "Name": "v_PMPCA",
+        "Type": "Default",
+        "PositionX": 375.0,
+        "PositionY": 300.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 32,
+        "Name": "v_PMPCB",
+        "Type": "Default",
+        "PositionX": 375.0,
+        "PositionY": 375.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 33,
+        "Name": "v_PRKN",
+        "Type": "Default",
+        "PositionX": 375.0,
+        "PositionY": 450.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 34,
+        "Name": "v_PRKN_ubiquitinated",
+        "Type": "Default",
+        "PositionX": 375.0,
+        "PositionY": 525.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 35,
+        "Name": "v_ROS_simple_molecule",
+        "Type": "Default",
+        "PositionX": 450.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 36,
+        "Name": "v_SIAH3",
+        "Type": "Default",
+        "PositionX": 450.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 37,
+        "Name": "v_SNCA_mitochondrion",
+        "Type": "Default",
+        "PositionX": 450.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 38,
+        "Name": "v_SREBF1",
+        "Type": "Default",
+        "PositionX": 450.0,
+        "PositionY": 300.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 39,
+        "Name": "v_TIM_space_Complex_complex",
+        "Type": "Default",
+        "PositionX": 450.0,
+        "PositionY": 375.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 40,
+        "Name": "v_TOMM20_ubiquitinated",
+        "Type": "Default",
+        "PositionX": 450.0,
+        "PositionY": 450.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 41,
+        "Name": "v_TOMM40_ubiquitinated",
+        "Type": "Default",
+        "PositionX": 450.0,
+        "PositionY": 525.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 42,
+        "Name": "v_TOMM70",
+        "Type": "Default",
+        "PositionX": 525.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 43,
+        "Name": "v_TOM_space_complex_complex",
+        "Type": "Default",
+        "PositionX": 525.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 44,
+        "Name": "v_VPS13C",
+        "Type": "Default",
+        "PositionX": 525.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 45,
+        "Name": "v_cholesterol_simple_molecule",
+        "Type": "Default",
+        "PositionX": 525.0,
+        "PositionY": 300.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 46,
+        "Name": "v_fatty_space_acid_simple_molecule",
+        "Type": "Default",
+        "PositionX": 525.0,
+        "PositionY": 375.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 47,
+        "Name": "v_mitochondrial_space_depolarization_phenotype",
+        "Type": "Default",
+        "PositionX": 525.0,
+        "PositionY": 450.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 48,
+        "Name": "v_mitophagy_phenotype",
+        "Type": "Default",
+        "PositionX": 525.0,
+        "PositionY": 525.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 49,
+        "Name": "v_neuron_space_death_phenotype",
+        "Type": "Default",
+        "PositionX": 600.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 50,
+        "Name": "v_oxidized_space_PARK7_space_dimer_complex",
+        "Type": "Default",
+        "PositionX": 600.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 51,
+        "Name": "v_path_0_csa1419_PINK1_PRKN_complex_mitochondrion",
+        "Type": "Default",
+        "PositionX": 600.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 52,
+        "Name": "v_path_0_csa279_PINK1_PRKN_complex_mitochondrion",
+        "Type": "Default",
+        "PositionX": 600.0,
+        "PositionY": 300.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 53,
+        "Name": "v_path_0_sa4348_SNCA_neuron",
+        "Type": "Default",
+        "PositionX": 600.0,
+        "PositionY": 375.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 54,
+        "Name": "v_path_0_sa6466_SNCA_neuron",
+        "Type": "Default",
+        "PositionX": 600.0,
+        "PositionY": 450.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 55,
+        "Name": "v_ubiquitin_phosphorylated",
+        "Type": "Default",
+        "PositionX": 600.0,
+        "PositionY": 525.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      }
+    ],
+    "Containers": [
+      {
+        "Id": 0,
+        "Name": "Default",
+        "Size": 1,
+        "PositionX": 0.0,
+        "PositionY": 0.0
+      }
+    ],
+    "Description": ""
+  }
+}

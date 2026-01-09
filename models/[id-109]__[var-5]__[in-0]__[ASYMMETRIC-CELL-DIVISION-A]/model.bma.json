@@ -1,0 +1,208 @@
+{
+  "Model": {
+    "Name": "",
+    "Variables": [
+      {
+        "Id": 0,
+        "Name": "v_CcrM",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(min(var(1), (1 - var(0))), (1 - var(4)))"
+      },
+      {
+        "Id": 1,
+        "Name": "v_CtrA",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(min(min(min((1 - var(1)), var(3)), (1 - var(0))), (1 - var(4))), min(min(var(1), (1 - var(0))), (1 - var(4))))"
+      },
+      {
+        "Id": 2,
+        "Name": "v_DnaA",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(min(min(var(1), (1 - var(3))), (1 - var(2))), var(0))"
+      },
+      {
+        "Id": 3,
+        "Name": "v_GcrA",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min((1 - var(1)), var(2))"
+      },
+      {
+        "Id": 4,
+        "Name": "v_SciP",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(1), (1 - var(2)))"
+      }
+    ],
+    "Relationships": [
+      {
+        "Id": 11,
+        "FromVariable": 0,
+        "ToVariable": 0,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 2,
+        "FromVariable": 0,
+        "ToVariable": 1,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 9,
+        "FromVariable": 0,
+        "ToVariable": 2,
+        "Type": "Activator"
+      },
+      {
+        "Id": 10,
+        "FromVariable": 1,
+        "ToVariable": 0,
+        "Type": "Activator"
+      },
+      {
+        "Id": 0,
+        "FromVariable": 1,
+        "ToVariable": 1,
+        "Type": "Activator"
+      },
+      {
+        "Id": 6,
+        "FromVariable": 1,
+        "ToVariable": 2,
+        "Type": "Activator"
+      },
+      {
+        "Id": 4,
+        "FromVariable": 1,
+        "ToVariable": 3,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 13,
+        "FromVariable": 1,
+        "ToVariable": 4,
+        "Type": "Activator"
+      },
+      {
+        "Id": 8,
+        "FromVariable": 2,
+        "ToVariable": 2,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 5,
+        "FromVariable": 2,
+        "ToVariable": 3,
+        "Type": "Activator"
+      },
+      {
+        "Id": 14,
+        "FromVariable": 2,
+        "ToVariable": 4,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 1,
+        "FromVariable": 3,
+        "ToVariable": 1,
+        "Type": "Activator"
+      },
+      {
+        "Id": 7,
+        "FromVariable": 3,
+        "ToVariable": 2,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 12,
+        "FromVariable": 4,
+        "ToVariable": 0,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 3,
+        "FromVariable": 4,
+        "ToVariable": 1,
+        "Type": "Inhibitor"
+      }
+    ]
+  },
+  "Layout": {
+    "Variables": [
+      {
+        "Id": 0,
+        "Name": "v_CcrM",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 1,
+        "Name": "v_CtrA",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 2,
+        "Name": "v_DnaA",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 3,
+        "Name": "v_GcrA",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 4,
+        "Name": "v_SciP",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      }
+    ],
+    "Containers": [
+      {
+        "Id": 0,
+        "Name": "Default",
+        "Size": 1,
+        "PositionX": 0.0,
+        "PositionY": 0.0
+      }
+    ],
+    "Description": ""
+  }
+}

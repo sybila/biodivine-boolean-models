@@ -1,0 +1,542 @@
+{
+  "Model": {
+    "Name": "",
+    "Variables": [
+      {
+        "Id": 0,
+        "Name": "v_Bmp2",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(12), (1 - var(10)))"
+      },
+      {
+        "Id": 1,
+        "Name": "v_Dkk1",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(min(var(10), (1 - var(12))), var(6))"
+      },
+      {
+        "Id": 2,
+        "Name": "v_Fgf8",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(min(var(8), (1 - var(6))), min(var(3), (1 - var(6))))"
+      },
+      {
+        "Id": 3,
+        "Name": "v_Foxc1_2",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(10), var(14))"
+      },
+      {
+        "Id": 4,
+        "Name": "v_GATAs",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(max(var(6), var(7)), var(9))"
+      },
+      {
+        "Id": 5,
+        "Name": "v_Isl1",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(max(max(var(6), var(8)), min(var(10), var(14))), var(2))"
+      },
+      {
+        "Id": 6,
+        "Name": "v_Mesp1_",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(10), (1 - var(12)))"
+      },
+      {
+        "Id": 7,
+        "Name": "v_Nkx2_5_",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(max(max(max(var(9), min(var(4), var(0))), min(var(5), var(4))), var(8)), min(var(6), var(1)))"
+      },
+      {
+        "Id": 8,
+        "Name": "v_Tbx1",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(3)"
+      },
+      {
+        "Id": 9,
+        "Name": "v_Tbx5",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(max(min(var(9), (1 - max(max(var(8), min(var(1), min((1 - var(9)), (1 - var(6))))), var(10)))), min(var(6), (1 - max(max(var(8), min(var(1), min((1 - var(9)), (1 - var(6))))), var(10))))), min(var(7), (1 - max(max(var(8), min(var(1), min((1 - var(9)), (1 - var(6))))), var(10)))))"
+      },
+      {
+        "Id": 10,
+        "Name": "v_canWnt",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(14)"
+      },
+      {
+        "Id": 11,
+        "Name": "v_exogen_BMP2_I",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(11)"
+      },
+      {
+        "Id": 12,
+        "Name": "v_exogen_BMP2_II",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(11)"
+      },
+      {
+        "Id": 13,
+        "Name": "v_exogen_CanWnt_I",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(13)"
+      },
+      {
+        "Id": 14,
+        "Name": "v_exogen_CanWnt_II",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(13)"
+      }
+    ],
+    "Relationships": [
+      {
+        "Id": 18,
+        "FromVariable": 0,
+        "ToVariable": 7,
+        "Type": "Activator"
+      },
+      {
+        "Id": 16,
+        "FromVariable": 1,
+        "ToVariable": 7,
+        "Type": "Activator"
+      },
+      {
+        "Id": 9,
+        "FromVariable": 1,
+        "ToVariable": 9,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 27,
+        "FromVariable": 2,
+        "ToVariable": 5,
+        "Type": "Activator"
+      },
+      {
+        "Id": 2,
+        "FromVariable": 3,
+        "ToVariable": 2,
+        "Type": "Activator"
+      },
+      {
+        "Id": 34,
+        "FromVariable": 3,
+        "ToVariable": 8,
+        "Type": "Activator"
+      },
+      {
+        "Id": 15,
+        "FromVariable": 4,
+        "ToVariable": 7,
+        "Type": "Activator"
+      },
+      {
+        "Id": 12,
+        "FromVariable": 5,
+        "ToVariable": 7,
+        "Type": "Activator"
+      },
+      {
+        "Id": 23,
+        "FromVariable": 6,
+        "ToVariable": 1,
+        "Type": "Activator"
+      },
+      {
+        "Id": 1,
+        "FromVariable": 6,
+        "ToVariable": 2,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 20,
+        "FromVariable": 6,
+        "ToVariable": 4,
+        "Type": "Activator"
+      },
+      {
+        "Id": 30,
+        "FromVariable": 6,
+        "ToVariable": 5,
+        "Type": "Activator"
+      },
+      {
+        "Id": 17,
+        "FromVariable": 6,
+        "ToVariable": 7,
+        "Type": "Activator"
+      },
+      {
+        "Id": 10,
+        "FromVariable": 6,
+        "ToVariable": 9,
+        "Type": "Activator"
+      },
+      {
+        "Id": 21,
+        "FromVariable": 7,
+        "ToVariable": 4,
+        "Type": "Activator"
+      },
+      {
+        "Id": 11,
+        "FromVariable": 7,
+        "ToVariable": 9,
+        "Type": "Activator"
+      },
+      {
+        "Id": 0,
+        "FromVariable": 8,
+        "ToVariable": 2,
+        "Type": "Activator"
+      },
+      {
+        "Id": 28,
+        "FromVariable": 8,
+        "ToVariable": 5,
+        "Type": "Activator"
+      },
+      {
+        "Id": 13,
+        "FromVariable": 8,
+        "ToVariable": 7,
+        "Type": "Activator"
+      },
+      {
+        "Id": 6,
+        "FromVariable": 8,
+        "ToVariable": 9,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 19,
+        "FromVariable": 9,
+        "ToVariable": 4,
+        "Type": "Activator"
+      },
+      {
+        "Id": 14,
+        "FromVariable": 9,
+        "ToVariable": 7,
+        "Type": "Activator"
+      },
+      {
+        "Id": 8,
+        "FromVariable": 9,
+        "ToVariable": 9,
+        "Type": "Activator"
+      },
+      {
+        "Id": 35,
+        "FromVariable": 10,
+        "ToVariable": 0,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 22,
+        "FromVariable": 10,
+        "ToVariable": 1,
+        "Type": "Activator"
+      },
+      {
+        "Id": 25,
+        "FromVariable": 10,
+        "ToVariable": 3,
+        "Type": "Activator"
+      },
+      {
+        "Id": 29,
+        "FromVariable": 10,
+        "ToVariable": 5,
+        "Type": "Activator"
+      },
+      {
+        "Id": 3,
+        "FromVariable": 10,
+        "ToVariable": 6,
+        "Type": "Activator"
+      },
+      {
+        "Id": 7,
+        "FromVariable": 10,
+        "ToVariable": 9,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 37,
+        "FromVariable": 11,
+        "ToVariable": 11,
+        "Type": "Activator"
+      },
+      {
+        "Id": 33,
+        "FromVariable": 11,
+        "ToVariable": 12,
+        "Type": "Activator"
+      },
+      {
+        "Id": 36,
+        "FromVariable": 12,
+        "ToVariable": 0,
+        "Type": "Activator"
+      },
+      {
+        "Id": 24,
+        "FromVariable": 12,
+        "ToVariable": 1,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 4,
+        "FromVariable": 12,
+        "ToVariable": 6,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 38,
+        "FromVariable": 13,
+        "ToVariable": 13,
+        "Type": "Activator"
+      },
+      {
+        "Id": 5,
+        "FromVariable": 13,
+        "ToVariable": 14,
+        "Type": "Activator"
+      },
+      {
+        "Id": 26,
+        "FromVariable": 14,
+        "ToVariable": 3,
+        "Type": "Activator"
+      },
+      {
+        "Id": 31,
+        "FromVariable": 14,
+        "ToVariable": 5,
+        "Type": "Activator"
+      },
+      {
+        "Id": 32,
+        "FromVariable": 14,
+        "ToVariable": 10,
+        "Type": "Activator"
+      }
+    ]
+  },
+  "Layout": {
+    "Variables": [
+      {
+        "Id": 0,
+        "Name": "v_Bmp2",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 1,
+        "Name": "v_Dkk1",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 2,
+        "Name": "v_Fgf8",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 3,
+        "Name": "v_Foxc1_2",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 4,
+        "Name": "v_GATAs",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 5,
+        "Name": "v_Isl1",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 6,
+        "Name": "v_Mesp1_",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 7,
+        "Name": "v_Nkx2_5_",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 8,
+        "Name": "v_Tbx1",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 9,
+        "Name": "v_Tbx5",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 10,
+        "Name": "v_canWnt",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 11,
+        "Name": "v_exogen_BMP2_I",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 12,
+        "Name": "v_exogen_BMP2_II",
+        "Type": "Default",
+        "PositionX": 375.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 13,
+        "Name": "v_exogen_CanWnt_I",
+        "Type": "Default",
+        "PositionX": 375.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 14,
+        "Name": "v_exogen_CanWnt_II",
+        "Type": "Default",
+        "PositionX": 375.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      }
+    ],
+    "Containers": [
+      {
+        "Id": 0,
+        "Name": "Default",
+        "Size": 1,
+        "PositionX": 0.0,
+        "PositionY": 0.0
+      }
+    ],
+    "Description": ""
+  }
+}

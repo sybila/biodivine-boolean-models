@@ -1,0 +1,309 @@
+{
+  "Model": {
+    "Name": "",
+    "Variables": [
+      {
+        "Id": 0,
+        "Name": "v_Ap",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(0)"
+      },
+      {
+        "Id": 1,
+        "Name": "v_Ap2",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(1)"
+      },
+      {
+        "Id": 2,
+        "Name": "v_Dl",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min((1 - var(0)), var(6))"
+      },
+      {
+        "Id": 3,
+        "Name": "v_Dl2",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min((1 - var(1)), var(7))"
+      },
+      {
+        "Id": 4,
+        "Name": "v_Fng",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(0)"
+      },
+      {
+        "Id": 5,
+        "Name": "v_Fng2",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(1)"
+      },
+      {
+        "Id": 6,
+        "Name": "v_N",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(min((1 - var(4)), var(9)), min(var(4), var(3)))"
+      },
+      {
+        "Id": 7,
+        "Name": "v_N2",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(max(min(min((1 - var(2)), var(8)), (1 - var(5))), min(min(var(2), (1 - var(8))), var(5))), min(var(2), var(8)))"
+      },
+      {
+        "Id": 8,
+        "Name": "v_Ser",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(0)"
+      },
+      {
+        "Id": 9,
+        "Name": "v_Ser2",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(1)"
+      }
+    ],
+    "Relationships": [
+      {
+        "Id": 14,
+        "FromVariable": 0,
+        "ToVariable": 0,
+        "Type": "Activator"
+      },
+      {
+        "Id": 0,
+        "FromVariable": 0,
+        "ToVariable": 2,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 2,
+        "FromVariable": 0,
+        "ToVariable": 4,
+        "Type": "Activator"
+      },
+      {
+        "Id": 6,
+        "FromVariable": 0,
+        "ToVariable": 8,
+        "Type": "Activator"
+      },
+      {
+        "Id": 15,
+        "FromVariable": 1,
+        "ToVariable": 1,
+        "Type": "Activator"
+      },
+      {
+        "Id": 7,
+        "FromVariable": 1,
+        "ToVariable": 3,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 9,
+        "FromVariable": 1,
+        "ToVariable": 5,
+        "Type": "Activator"
+      },
+      {
+        "Id": 13,
+        "FromVariable": 1,
+        "ToVariable": 9,
+        "Type": "Activator"
+      },
+      {
+        "Id": 10,
+        "FromVariable": 2,
+        "ToVariable": 7,
+        "Type": "Activator"
+      },
+      {
+        "Id": 4,
+        "FromVariable": 3,
+        "ToVariable": 6,
+        "Type": "Activator"
+      },
+      {
+        "Id": 3,
+        "FromVariable": 4,
+        "ToVariable": 6,
+        "Type": "Activator"
+      },
+      {
+        "Id": 12,
+        "FromVariable": 5,
+        "ToVariable": 7,
+        "Type": "Activator"
+      },
+      {
+        "Id": 1,
+        "FromVariable": 6,
+        "ToVariable": 2,
+        "Type": "Activator"
+      },
+      {
+        "Id": 8,
+        "FromVariable": 7,
+        "ToVariable": 3,
+        "Type": "Activator"
+      },
+      {
+        "Id": 11,
+        "FromVariable": 8,
+        "ToVariable": 7,
+        "Type": "Activator"
+      },
+      {
+        "Id": 5,
+        "FromVariable": 9,
+        "ToVariable": 6,
+        "Type": "Activator"
+      }
+    ]
+  },
+  "Layout": {
+    "Variables": [
+      {
+        "Id": 0,
+        "Name": "v_Ap",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 1,
+        "Name": "v_Ap2",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 2,
+        "Name": "v_Dl",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 3,
+        "Name": "v_Dl2",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 4,
+        "Name": "v_Fng",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 5,
+        "Name": "v_Fng2",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 6,
+        "Name": "v_N",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 7,
+        "Name": "v_N2",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 8,
+        "Name": "v_Ser",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 9,
+        "Name": "v_Ser2",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      }
+    ],
+    "Containers": [
+      {
+        "Id": 0,
+        "Name": "Default",
+        "Size": 1,
+        "PositionX": 0.0,
+        "PositionY": 0.0
+      }
+    ],
+    "Description": ""
+  }
+}

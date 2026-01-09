@@ -1,0 +1,5 @@
+v_Coup_fti* = not (v_Fgf8 or v_Sp8) or not (v_Sp8 or v_Fgf8)
+v_Emx2* = v_Coup_fti and not (v_Fgf8 or v_Sp8 or v_Pax6)
+v_Fgf8* = v_Fgf8 and v_Sp8 and not v_Emx2
+v_Pax6* = v_Sp8 and not (v_Emx2 or v_Coup_fti)
+v_Sp8* = v_Fgf8 and not v_Emx2

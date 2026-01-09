@@ -1,0 +1,203 @@
+{
+  "Model": {
+    "Name": "",
+    "Variables": [
+      {
+        "Id": 0,
+        "Name": "v_Neural_Precursor",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(2)"
+      },
+      {
+        "Id": 1,
+        "Name": "v_Progenitor",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(min((1 - var(3)), var(5)), var(3))"
+      },
+      {
+        "Id": 2,
+        "Name": "v_elavl3_HuC",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min((1 - var(4)), (1 - var(1)))"
+      },
+      {
+        "Id": 3,
+        "Name": "v_her6",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min((1 - var(4)), (1 - var(0)))"
+      },
+      {
+        "Id": 4,
+        "Name": "v_miR_9",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min((1 - var(3)), (1 - var(0)))"
+      },
+      {
+        "Id": 5,
+        "Name": "v_zic5",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min((1 - var(4)), (1 - var(0)))"
+      }
+    ],
+    "Relationships": [
+      {
+        "Id": 3,
+        "FromVariable": 0,
+        "ToVariable": 3,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 1,
+        "FromVariable": 0,
+        "ToVariable": 4,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 5,
+        "FromVariable": 0,
+        "ToVariable": 5,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 7,
+        "FromVariable": 1,
+        "ToVariable": 2,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 10,
+        "FromVariable": 2,
+        "ToVariable": 0,
+        "Type": "Activator"
+      },
+      {
+        "Id": 8,
+        "FromVariable": 3,
+        "ToVariable": 1,
+        "Type": "Activator"
+      },
+      {
+        "Id": 0,
+        "FromVariable": 3,
+        "ToVariable": 4,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 6,
+        "FromVariable": 4,
+        "ToVariable": 2,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 2,
+        "FromVariable": 4,
+        "ToVariable": 3,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 4,
+        "FromVariable": 4,
+        "ToVariable": 5,
+        "Type": "Inhibitor"
+      },
+      {
+        "Id": 9,
+        "FromVariable": 5,
+        "ToVariable": 1,
+        "Type": "Activator"
+      }
+    ]
+  },
+  "Layout": {
+    "Variables": [
+      {
+        "Id": 0,
+        "Name": "v_Neural_Precursor",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 1,
+        "Name": "v_Progenitor",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 2,
+        "Name": "v_elavl3_HuC",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 3,
+        "Name": "v_her6",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 4,
+        "Name": "v_miR_9",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 5,
+        "Name": "v_zic5",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      }
+    ],
+    "Containers": [
+      {
+        "Id": 0,
+        "Name": "Default",
+        "Size": 1,
+        "PositionX": 0.0,
+        "PositionY": 0.0
+      }
+    ],
+    "Description": ""
+  }
+}

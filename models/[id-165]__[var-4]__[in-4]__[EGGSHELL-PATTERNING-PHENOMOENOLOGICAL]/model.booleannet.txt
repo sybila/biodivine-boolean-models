@@ -1,0 +1,8 @@
+v_BMP* = v_BMP
+v_EGF_b1* = v_EGF_b1
+v_EGF_b2* = v_EGF_b1 and v_EGF_b2
+v_Floor* = v_EGF_b1 and not v_EGF_b2 and v_BMP and v_Roof_adj and v_anterior or v_EGF_b1 and v_EGF_b2 and v_Roof_adj and v_anterior
+v_Operculum* = v_EGF_b1 and not v_EGF_b2 and v_BMP and not v_Roof_adj and v_anterior or v_EGF_b1 and v_EGF_b2 and not v_Roof_adj and v_anterior
+v_Roof* = v_EGF_b1 and not v_EGF_b2 and not v_BMP and v_anterior
+v_Roof_adj* = v_Roof_adj
+v_anterior* = v_anterior

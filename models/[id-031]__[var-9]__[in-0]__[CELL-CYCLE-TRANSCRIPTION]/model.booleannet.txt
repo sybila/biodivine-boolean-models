@@ -1,0 +1,9 @@
+v_ACE2* = v_SFF
+v_CLN3* = v_SWI5 and v_ACE2 and not (v_YOX1 or v_YHP1)
+v_HCM1* = v_MBF and v_SBF
+v_MBF* = v_CLN3
+v_SBF* = v_MBF and not (v_YHP1 or v_YOX1) or v_CLN3 and not (v_YHP1 or v_YOX1)
+v_SFF* = v_SBF and v_HCM1
+v_SWI5* = v_SFF
+v_YHP1* = v_SBF or v_MBF
+v_YOX1* = v_MBF and v_SBF

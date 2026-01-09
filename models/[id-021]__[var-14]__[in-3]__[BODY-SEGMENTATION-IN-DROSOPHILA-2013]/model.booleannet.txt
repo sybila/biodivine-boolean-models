@@ -1,0 +1,17 @@
+v_CIA* = v_hh_external and v_CI_protein or v_CI_protein and not v_PTC_protein
+v_CIR* = v_CI_protein and v_PTC_protein and not v_hh_external
+v_CI_protein* = v_ci
+v_EN_protein* = v_en
+v_HH_protein* = v_hh
+v_PH* = v_PTC_protein and v_hh_external
+v_PTC_protein* = v_PTC_protein and not v_hh_external or v_ptc
+v_SLP* = v_SLP
+v_SMO* = v_hh_external or not (v_hh_external or v_PTC_protein)
+v_WG_external* = v_WG_external
+v_WG_protein* = v_wg
+v_ci* = not v_EN_protein
+v_en* = v_WG_external and not v_SLP
+v_hh* = v_EN_protein and not v_CIR
+v_hh_external* = v_hh_external
+v_ptc* = v_CIA and not (v_CIR or v_EN_protein)
+v_wg* = v_wg and (v_SLP or v_CIA) and not v_CIR or v_CIA and v_SLP and not v_CIR
