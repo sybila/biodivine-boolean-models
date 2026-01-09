@@ -54,15 +54,18 @@ def check_metadata(id, name, metadata, bib):
 		sys.exit(128)
 
 def check_unused_variables(model: BooleanNetwork):
+	errors = 0
 	for var in model.variables():
 		name = model.get_variable_name(var)
 		if len(model.predecessors(var)) == 0 and len(model.successors(var)) == 0:			
 			print("ERROR: Variable", name, "is unused.")
-			sys.exit(128)
+			errors += 1
 		function = model.get_update_function(var)		
 		if function is not None and function.as_var() == var and len(model.predecessors(var)) <= 1:
 			print("ERROR: Variable", name, "is effectively an input.")
-			sys.exit(128)
+			errors += 1
+	if errors > 0:
+		sys.exit(128)
 
 def erase_inputs(model: BooleanNetwork):
 	for var in model.variables():
