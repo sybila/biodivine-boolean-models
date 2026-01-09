@@ -1,0 +1,17 @@
+{
+    "id": 256,
+    "name": "LACTIC-ACID-LYMPH-NODE-STROMA",
+    "url-publication": "https://doi.org/10.1158/2326-6066.CIR-21-0778",
+    "url-model": "https://github.com/shorthouse-mrc/biomodelanalyzer_lactate/blob/master/Lactate_BioModelAnalyzer.json",
+    "keywords": [
+        "biomodelanalyzer",
+        "curated",
+        "multi-valued",
+        "repaired"
+    ],
+    "variables": 296,
+    "inputs": 17,
+    "regulations": 1617,
+    "notes": "### Modifications\n\nUpdate function of `Complexes`, which is `(max((floor(var(223)/var(21))*var(223)),1))-(var(213)*2)` clearly contains division by zero if `var(21) = 0`. To avoid this, we replaced `var(21)` with `max(1, var(21))` in this particular case.",
+    "bib": "@article{bbm-256,\n  title={Tumor-derived lactic acid modulates activation and metabolic status of draining lymph node stroma},\n  author={Riedel, Angela and Helal, Moutaz and Pedro, Luisa and Swietlik, Jonathan J and Shorthouse, David and Schmitz, Werner and Haas, Lisa and Young, Timothy and da Costa, Ana SH and Davidson, Sarah and others},\n  journal={Cancer immunology research},\n  volume={10},\n  number={4},\n  pages={482--497},\n  year={2022},\n  publisher={American Association for Cancer Research}\n}"
+}

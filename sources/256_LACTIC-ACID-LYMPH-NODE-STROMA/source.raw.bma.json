@@ -1,0 +1,1814 @@
+{
+    "Model": {
+      "Name": "Lactate_v16_seahorse",
+      "Variables": [
+        {
+          "Name": "MCT1",
+          "Id": 2,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": "min(var(7),var(16))"
+        },
+        {
+          "Name": "Lactate",
+          "Id": 4,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": "min(2,(var(2))*var(7))+floor(var(7)/4)*(var(2))+(floor(var(2)/4)*4)"
+        },
+        {
+          "Name": "External_lactate",
+          "Id": 7,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": "2+var(18)+var(24)-var(25)"
+        },
+        {
+          "Name": "Pyruvate",
+          "Id": 11,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": "min(2,(var(38))*var(4))+floor(var(4)/4)*(var(38))+(floor(var(38)/3)*4)-(2-var(59))"
+        },
+        {
+          "Name": "External_Protons",
+          "Id": 16,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": "2+var(25)+var(18)"
+        },
+        {
+          "Name": "TCM",
+          "Id": 18,
+          "RangeFrom": 0,
+          "RangeTo": 1,
+          "Formula": "0"
+        },
+        {
+          "Name": "Internal_protons",
+          "Id": 21,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": "min(2,(var(2))*var(16))+floor(var(16)/4)*(var(2))+(floor(var(2)/4)*4)+var(25)"
+        },
+        {
+          "Name": "NALactate",
+          "Id": 24,
+          "RangeFrom": 0,
+          "RangeTo": 1,
+          "Formula": "0"
+        },
+        {
+          "Name": "Protons",
+          "Id": 25,
+          "RangeFrom": 0,
+          "RangeTo": 1,
+          "Formula": "0"
+        },
+        {
+          "Name": "LDH",
+          "Id": 38,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": "2+max(-1,min(1,(2-var(4))))"
+        },
+        {
+          "Name": "GLUT-1",
+          "Id": 50,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": "var(207)"
+        },
+        {
+          "Name": "Glucose-6-P",
+          "Id": 51,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": "var(78)"
+        },
+        {
+          "Name": "Fructose-6-P",
+          "Id": 52,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": "var(51)"
+        },
+        {
+          "Name": "Fructose-1,6-bisphosphate",
+          "Id": 53,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": "var(52)-(2-var(177))"
+        },
+        {
+          "Name": "glyceraldehyde-3-p",
+          "Id": 54,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": "1+ceil(var(55)/4)*(max(0,(1-var(56)))+floor(var(56)/4)+floor(var(56)/3)) + floor(var(53)/2)"
+        },
+        {
+          "Name": "dihydroxyacetone-phosphate",
+          "Id": 55,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": "var(53) + ceil(var(53)/4)*(max(0,(1-var(54)))+floor(var(54)/4)+floor(var(54)/3))"
+        },
+        {
+          "Name": "bisphosphoglycerate-1,3",
+          "Id": 56,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": "ceil(var(54)/4)*2 +ceil(var(54)/4)*(max(0,(1-var(57)))+floor(var(57)/4)+floor(var(57)/3))"
+        },
+        {
+          "Name": "phosphoglycerate-3",
+          "Id": 57,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": "ceil(var(56)/4)*2 +ceil(var(56)/4)*(max(0,(1-var(58))))+floor(var(58)/4)+floor(var(58)/3)"
+        },
+        {
+          "Name": "phosphoglycerate-2",
+          "Id": 58,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": "ceil(var(57)/4)*2 +ceil(var(57)/4)*(max(0,(1-var(59)))) + floor(var(59)/4) + floor(var(59)/3)"
+        },
+        {
+          "Name": "phosphoenolpyruvate",
+          "Id": 59,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": "ceil(var(58)/4)*2"
+        },
+        {
+          "Name": "Glucose",
+          "Id": 78,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": "var(50)"
+        },
+        {
+          "Name": "TGFB2",
+          "Id": 110,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": ""
+        },
+        {
+          "Name": "MMP2",
+          "Id": 111,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": ""
+        },
+        {
+          "Name": "Col1a2",
+          "Id": 114,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": ""
+        },
+        {
+          "Name": "PDPN",
+          "Id": 116,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": ""
+        },
+        {
+          "Name": "Mit_Pyruvate",
+          "Id": 120,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": "min(2,var(125))+(1-ceil(var(122)/4))*var(125)+max(0,(var(128)-3))+floor((var(122)/4))*floor(var(125)/4)"
+        },
+        {
+          "Name": "PDH",
+          "Id": 122,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": "var(223)-(floor(var(223)/4)*3)"
+        },
+        {
+          "Name": "MPC",
+          "Id": 125,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": ""
+        },
+        {
+          "Name": "Acetyl_CoA",
+          "Id": 128,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": "min(2,((var(122)/2)*var(120)))+floor(var(120)/4)*floor(var(122)/2)"
+        },
+        {
+          "Name": "Oxaloacetate",
+          "Id": 132,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": "2"
+        },
+        {
+          "Name": "Citrate",
+          "Id": 134,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": "var(128)"
+        },
+        {
+          "Name": "Cis-aconitase",
+          "Id": 145,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": "min(2,var(134))+floor(var(134)/4)+max(0,(var(146)-3))"
+        },
+        {
+          "Name": "Isocitrate",
+          "Id": 146,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": "min(2,var(145))+(1-ceil(var(181)/4))*var(145)+max(0,(var(147)-3))+floor((var(181)/4))*floor(var(145)/4)"
+        },
+        {
+          "Name": "a-ketoglutarate",
+          "Id": 147,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": "min(2,((var(181)/2)*var(146))+max(0,(var(148)-3))) + floor(var(146)/4)*floor(var(181)/2)"
+        },
+        {
+          "Name": "Succinyl-CoA",
+          "Id": 148,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": "min(2,var(147))+floor(var(147)/4)+max(0,(var(149)-3))"
+        },
+        {
+          "Name": "Succinate",
+          "Id": 149,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": "min(2,var(148))+floor(var(148)/4)+max(0,(var(150)-3))"
+        },
+        {
+          "Name": "Fumarate",
+          "Id": 150,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": "min(2,var(149))+floor(var(149)/4)+max(0,(var(163)-3))"
+        },
+        {
+          "Name": "Malate",
+          "Id": 163,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": "min(2,var(150))+floor(var(150)/4)+max(0,(var(132)-3))"
+        },
+        {
+          "Name": "Glycolytic_activity",
+          "Id": 168,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": ""
+        },
+        {
+          "Name": "OxPhos_activity",
+          "Id": 171,
+          "RangeFrom": 0,
+          "RangeTo": 10,
+          "Formula": "avg(var(147),var(145),var(134),var(150),var(132))-(5-var(233))"
+        },
+        {
+          "Name": "Phosphofructokinase",
+          "Id": 177,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": "2+(max(-1,2-var(21)))"
+        },
+        {
+          "Name": "IDH",
+          "Id": 181,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": "var(223)-(floor(var(223)/4)*3)"
+        },
+        {
+          "Name": "SDH",
+          "Id": 185,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": "var(223)-(floor(var(223)/4)*3)"
+        },
+        {
+          "Name": "TGFB-R",
+          "Id": 189,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": ""
+        },
+        {
+          "Name": "Smad",
+          "Id": 192,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": ""
+        },
+        {
+          "Name": "STAT3",
+          "Id": 197,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": ""
+        },
+        {
+          "Name": "DCN",
+          "Id": 199,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": ""
+        },
+        {
+          "Name": "Acta2",
+          "Id": 201,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": ""
+        },
+        {
+          "Name": "Timp",
+          "Id": 202,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": ""
+        },
+        {
+          "Name": "External_glucose",
+          "Id": 207,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": "2"
+        },
+        {
+          "Name": "Counter",
+          "Id": 210,
+          "RangeFrom": 0,
+          "RangeTo": 100,
+          "Formula": "0"
+        },
+        {
+          "Name": "Oligomycin",
+          "Id": 211,
+          "RangeFrom": 0,
+          "RangeTo": 1,
+          "Formula": "(ceil(var(210)-(20/100)))"
+        },
+        {
+          "Name": "Rotanone",
+          "Id": 213,
+          "RangeFrom": 0,
+          "RangeTo": 1,
+          "Formula": "ceil(var(210)-(80/100))"
+        },
+        {
+          "Name": "ATP_synthase",
+          "Id": 220,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": "(2+((var(21)-var(223))/2))-var(211)"
+        },
+        {
+          "Name": "Mitochondrial_protons",
+          "Id": 223,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": "max(((min(2,(ceil(var(220)/2)*var(21)))+ floor(var(21)/4)*floor(var(220)/2))+(var(236)*var(21)/3)),var(247)/4)"
+        },
+        {
+          "Name": "Complexes",
+          "Id": 233,
+          "RangeFrom": 0,
+          "RangeTo": 4,
+          "Formula": "(max((floor(var(223)/var(21))*var(223)),1))-(var(213)*2)"
+        },
+        {
+          "Name": "FCCP",
+          "Id": 236,
+          "RangeFrom": 0,
+          "RangeTo": 1,
+          "Formula": "(ceil(var(210)-(50/100)))"
+        },
+        {
+          "Name": "Proton_leak",
+          "Id": 247,
+          "RangeFrom": 0,
+          "RangeTo": 1,
+          "Formula": "var(21)"
+        }
+      ],
+      "Relationships": [
+        {
+          "Id": 5,
+          "FromVariable": 2,
+          "ToVariable": 4,
+          "Type": "Activator"
+        },
+        {
+          "Id": 9,
+          "FromVariable": 7,
+          "ToVariable": 2,
+          "Type": "Activator"
+        },
+        {
+          "Id": 12,
+          "FromVariable": 4,
+          "ToVariable": 11,
+          "Type": "Activator"
+        },
+        {
+          "Id": 13,
+          "FromVariable": 11,
+          "ToVariable": 4,
+          "Type": "Activator"
+        },
+        {
+          "Id": 17,
+          "FromVariable": 16,
+          "ToVariable": 2,
+          "Type": "Activator"
+        },
+        {
+          "Id": 19,
+          "FromVariable": 18,
+          "ToVariable": 16,
+          "Type": "Activator"
+        },
+        {
+          "Id": 20,
+          "FromVariable": 18,
+          "ToVariable": 7,
+          "Type": "Activator"
+        },
+        {
+          "Id": 22,
+          "FromVariable": 2,
+          "ToVariable": 21,
+          "Type": "Activator"
+        },
+        {
+          "Id": 26,
+          "FromVariable": 25,
+          "ToVariable": 16,
+          "Type": "Activator"
+        },
+        {
+          "Id": 27,
+          "FromVariable": 24,
+          "ToVariable": 7,
+          "Type": "Activator"
+        },
+        {
+          "Id": 39,
+          "FromVariable": 38,
+          "ToVariable": 11,
+          "Type": "Activator"
+        },
+        {
+          "Id": 60,
+          "FromVariable": 51,
+          "ToVariable": 52,
+          "Type": "Activator"
+        },
+        {
+          "Id": 61,
+          "FromVariable": 52,
+          "ToVariable": 51,
+          "Type": "Activator"
+        },
+        {
+          "Id": 62,
+          "FromVariable": 52,
+          "ToVariable": 53,
+          "Type": "Activator"
+        },
+        {
+          "Id": 63,
+          "FromVariable": 53,
+          "ToVariable": 52,
+          "Type": "Activator"
+        },
+        {
+          "Id": 64,
+          "FromVariable": 53,
+          "ToVariable": 55,
+          "Type": "Activator"
+        },
+        {
+          "Id": 65,
+          "FromVariable": 55,
+          "ToVariable": 53,
+          "Type": "Activator"
+        },
+        {
+          "Id": 66,
+          "FromVariable": 55,
+          "ToVariable": 54,
+          "Type": "Activator"
+        },
+        {
+          "Id": 67,
+          "FromVariable": 54,
+          "ToVariable": 55,
+          "Type": "Activator"
+        },
+        {
+          "Id": 68,
+          "FromVariable": 53,
+          "ToVariable": 54,
+          "Type": "Activator"
+        },
+        {
+          "Id": 69,
+          "FromVariable": 54,
+          "ToVariable": 53,
+          "Type": "Activator"
+        },
+        {
+          "Id": 70,
+          "FromVariable": 54,
+          "ToVariable": 56,
+          "Type": "Activator"
+        },
+        {
+          "Id": 71,
+          "FromVariable": 56,
+          "ToVariable": 54,
+          "Type": "Activator"
+        },
+        {
+          "Id": 72,
+          "FromVariable": 56,
+          "ToVariable": 57,
+          "Type": "Activator"
+        },
+        {
+          "Id": 73,
+          "FromVariable": 57,
+          "ToVariable": 56,
+          "Type": "Activator"
+        },
+        {
+          "Id": 74,
+          "FromVariable": 57,
+          "ToVariable": 58,
+          "Type": "Activator"
+        },
+        {
+          "Id": 75,
+          "FromVariable": 58,
+          "ToVariable": 57,
+          "Type": "Activator"
+        },
+        {
+          "Id": 76,
+          "FromVariable": 58,
+          "ToVariable": 59,
+          "Type": "Activator"
+        },
+        {
+          "Id": 77,
+          "FromVariable": 59,
+          "ToVariable": 58,
+          "Type": "Activator"
+        },
+        {
+          "Id": 79,
+          "FromVariable": 78,
+          "ToVariable": 51,
+          "Type": "Activator"
+        },
+        {
+          "Id": 80,
+          "FromVariable": 51,
+          "ToVariable": 78,
+          "Type": "Activator"
+        },
+        {
+          "Id": 81,
+          "FromVariable": 50,
+          "ToVariable": 78,
+          "Type": "Activator"
+        },
+        {
+          "Id": 83,
+          "FromVariable": 59,
+          "ToVariable": 11,
+          "Type": "Activator"
+        },
+        {
+          "Id": 88,
+          "FromVariable": 38,
+          "ToVariable": 4,
+          "Type": "Activator"
+        },
+        {
+          "Id": 91,
+          "FromVariable": 16,
+          "ToVariable": 21,
+          "Type": "Activator"
+        },
+        {
+          "Id": 92,
+          "FromVariable": 21,
+          "ToVariable": 16,
+          "Type": "Activator"
+        },
+        {
+          "Id": 93,
+          "FromVariable": 7,
+          "ToVariable": 4,
+          "Type": "Activator"
+        },
+        {
+          "Id": 94,
+          "FromVariable": 4,
+          "ToVariable": 7,
+          "Type": "Activator"
+        },
+        {
+          "Id": 95,
+          "FromVariable": 4,
+          "ToVariable": 38,
+          "Type": "Inhibitor"
+        },
+        {
+          "Id": 108,
+          "FromVariable": 25,
+          "ToVariable": 21,
+          "Type": "Activator"
+        },
+        {
+          "Id": 109,
+          "FromVariable": 25,
+          "ToVariable": 7,
+          "Type": "Inhibitor"
+        },
+        {
+          "Id": 123,
+          "FromVariable": 120,
+          "ToVariable": 122,
+          "Type": "Activator"
+        },
+        {
+          "Id": 124,
+          "FromVariable": 122,
+          "ToVariable": 120,
+          "Type": "Inhibitor"
+        },
+        {
+          "Id": 126,
+          "FromVariable": 11,
+          "ToVariable": 125,
+          "Type": "Activator"
+        },
+        {
+          "Id": 127,
+          "FromVariable": 125,
+          "ToVariable": 120,
+          "Type": "Activator"
+        },
+        {
+          "Id": 129,
+          "FromVariable": 120,
+          "ToVariable": 128,
+          "Type": "Activator"
+        },
+        {
+          "Id": 130,
+          "FromVariable": 122,
+          "ToVariable": 128,
+          "Type": "Activator"
+        },
+        {
+          "Id": 133,
+          "FromVariable": 120,
+          "ToVariable": 132,
+          "Type": "Activator"
+        },
+        {
+          "Id": 135,
+          "FromVariable": 132,
+          "ToVariable": 134,
+          "Type": "Activator"
+        },
+        {
+          "Id": 136,
+          "FromVariable": 134,
+          "ToVariable": 132,
+          "Type": "Activator"
+        },
+        {
+          "Id": 137,
+          "FromVariable": 128,
+          "ToVariable": 134,
+          "Type": "Activator"
+        },
+        {
+          "Id": 144,
+          "FromVariable": 128,
+          "ToVariable": 120,
+          "Type": "Activator"
+        },
+        {
+          "Id": 151,
+          "FromVariable": 134,
+          "ToVariable": 145,
+          "Type": "Activator"
+        },
+        {
+          "Id": 152,
+          "FromVariable": 145,
+          "ToVariable": 134,
+          "Type": "Activator"
+        },
+        {
+          "Id": 153,
+          "FromVariable": 145,
+          "ToVariable": 146,
+          "Type": "Activator"
+        },
+        {
+          "Id": 154,
+          "FromVariable": 146,
+          "ToVariable": 145,
+          "Type": "Activator"
+        },
+        {
+          "Id": 155,
+          "FromVariable": 146,
+          "ToVariable": 147,
+          "Type": "Activator"
+        },
+        {
+          "Id": 156,
+          "FromVariable": 147,
+          "ToVariable": 146,
+          "Type": "Activator"
+        },
+        {
+          "Id": 157,
+          "FromVariable": 147,
+          "ToVariable": 148,
+          "Type": "Activator"
+        },
+        {
+          "Id": 158,
+          "FromVariable": 148,
+          "ToVariable": 147,
+          "Type": "Activator"
+        },
+        {
+          "Id": 159,
+          "FromVariable": 148,
+          "ToVariable": 149,
+          "Type": "Activator"
+        },
+        {
+          "Id": 160,
+          "FromVariable": 149,
+          "ToVariable": 148,
+          "Type": "Activator"
+        },
+        {
+          "Id": 161,
+          "FromVariable": 149,
+          "ToVariable": 150,
+          "Type": "Activator"
+        },
+        {
+          "Id": 162,
+          "FromVariable": 150,
+          "ToVariable": 149,
+          "Type": "Activator"
+        },
+        {
+          "Id": 164,
+          "FromVariable": 150,
+          "ToVariable": 163,
+          "Type": "Activator"
+        },
+        {
+          "Id": 165,
+          "FromVariable": 163,
+          "ToVariable": 150,
+          "Type": "Activator"
+        },
+        {
+          "Id": 166,
+          "FromVariable": 163,
+          "ToVariable": 132,
+          "Type": "Activator"
+        },
+        {
+          "Id": 167,
+          "FromVariable": 132,
+          "ToVariable": 163,
+          "Type": "Activator"
+        },
+        {
+          "Id": 169,
+          "FromVariable": 56,
+          "ToVariable": 168,
+          "Type": "Activator"
+        },
+        {
+          "Id": 170,
+          "FromVariable": 59,
+          "ToVariable": 168,
+          "Type": "Activator"
+        },
+        {
+          "Id": 172,
+          "FromVariable": 134,
+          "ToVariable": 171,
+          "Type": "Activator"
+        },
+        {
+          "Id": 173,
+          "FromVariable": 145,
+          "ToVariable": 171,
+          "Type": "Activator"
+        },
+        {
+          "Id": 174,
+          "FromVariable": 147,
+          "ToVariable": 171,
+          "Type": "Activator"
+        },
+        {
+          "Id": 175,
+          "FromVariable": 150,
+          "ToVariable": 171,
+          "Type": "Activator"
+        },
+        {
+          "Id": 176,
+          "FromVariable": 132,
+          "ToVariable": 171,
+          "Type": "Activator"
+        },
+        {
+          "Id": 178,
+          "FromVariable": 177,
+          "ToVariable": 53,
+          "Type": "Activator"
+        },
+        {
+          "Id": 179,
+          "FromVariable": 177,
+          "ToVariable": 52,
+          "Type": "Inhibitor"
+        },
+        {
+          "Id": 180,
+          "FromVariable": 21,
+          "ToVariable": 177,
+          "Type": "Inhibitor"
+        },
+        {
+          "Id": 182,
+          "FromVariable": 181,
+          "ToVariable": 147,
+          "Type": "Activator"
+        },
+        {
+          "Id": 183,
+          "FromVariable": 181,
+          "ToVariable": 146,
+          "Type": "Inhibitor"
+        },
+        {
+          "Id": 186,
+          "FromVariable": 185,
+          "ToVariable": 150,
+          "Type": "Activator"
+        },
+        {
+          "Id": 187,
+          "FromVariable": 185,
+          "ToVariable": 149,
+          "Type": "Inhibitor"
+        },
+        {
+          "Id": 191,
+          "FromVariable": 110,
+          "ToVariable": 189,
+          "Type": "Activator"
+        },
+        {
+          "Id": 193,
+          "FromVariable": 189,
+          "ToVariable": 192,
+          "Type": "Activator"
+        },
+        {
+          "Id": 194,
+          "FromVariable": 192,
+          "ToVariable": 116,
+          "Type": "Activator"
+        },
+        {
+          "Id": 195,
+          "FromVariable": 192,
+          "ToVariable": 114,
+          "Type": "Activator"
+        },
+        {
+          "Id": 196,
+          "FromVariable": 192,
+          "ToVariable": 111,
+          "Type": "Activator"
+        },
+        {
+          "Id": 198,
+          "FromVariable": 21,
+          "ToVariable": 197,
+          "Type": "Activator"
+        },
+        {
+          "Id": 200,
+          "FromVariable": 21,
+          "ToVariable": 199,
+          "Type": "Activator"
+        },
+        {
+          "Id": 203,
+          "FromVariable": 192,
+          "ToVariable": 201,
+          "Type": "Activator"
+        },
+        {
+          "Id": 204,
+          "FromVariable": 192,
+          "ToVariable": 202,
+          "Type": "Activator"
+        },
+        {
+          "Id": 205,
+          "FromVariable": 7,
+          "ToVariable": 110,
+          "Type": "Activator"
+        },
+        {
+          "Id": 206,
+          "FromVariable": 16,
+          "ToVariable": 110,
+          "Type": "Activator"
+        },
+        {
+          "Id": 208,
+          "FromVariable": 207,
+          "ToVariable": 50,
+          "Type": "Activator"
+        },
+        {
+          "Id": 214,
+          "FromVariable": 210,
+          "ToVariable": 211,
+          "Type": "Activator"
+        },
+        {
+          "Id": 216,
+          "FromVariable": 210,
+          "ToVariable": 213,
+          "Type": "Activator"
+        },
+        {
+          "Id": 222,
+          "FromVariable": 21,
+          "ToVariable": 220,
+          "Type": "Activator"
+        },
+        {
+          "Id": 224,
+          "FromVariable": 220,
+          "ToVariable": 223,
+          "Type": "Activator"
+        },
+        {
+          "Id": 225,
+          "FromVariable": 223,
+          "ToVariable": 185,
+          "Type": "Inhibitor"
+        },
+        {
+          "Id": 226,
+          "FromVariable": 223,
+          "ToVariable": 181,
+          "Type": "Inhibitor"
+        },
+        {
+          "Id": 227,
+          "FromVariable": 223,
+          "ToVariable": 122,
+          "Type": "Inhibitor"
+        },
+        {
+          "Id": 237,
+          "FromVariable": 210,
+          "ToVariable": 236,
+          "Type": "Activator"
+        },
+        {
+          "Id": 238,
+          "FromVariable": 223,
+          "ToVariable": 220,
+          "Type": "Activator"
+        },
+        {
+          "Id": 239,
+          "FromVariable": 21,
+          "ToVariable": 223,
+          "Type": "Activator"
+        },
+        {
+          "Id": 240,
+          "FromVariable": 223,
+          "ToVariable": 233,
+          "Type": "Activator"
+        },
+        {
+          "Id": 242,
+          "FromVariable": 21,
+          "ToVariable": 233,
+          "Type": "Activator"
+        },
+        {
+          "Id": 243,
+          "FromVariable": 233,
+          "ToVariable": 171,
+          "Type": "Activator"
+        },
+        {
+          "Id": 244,
+          "FromVariable": 211,
+          "ToVariable": 220,
+          "Type": "Activator"
+        },
+        {
+          "Id": 245,
+          "FromVariable": 236,
+          "ToVariable": 223,
+          "Type": "Activator"
+        },
+        {
+          "Id": 246,
+          "FromVariable": 213,
+          "ToVariable": 233,
+          "Type": "Activator"
+        },
+        {
+          "Id": 248,
+          "FromVariable": 247,
+          "ToVariable": 223,
+          "Type": "Activator"
+        },
+        {
+          "Id": 249,
+          "FromVariable": 21,
+          "ToVariable": 247,
+          "Type": "Activator"
+        }
+      ]
+    },
+    "Layout": {
+      "Variables": [
+        {
+          "Id": 2,
+          "Name": "MCT1",
+          "Type": "MembraneReceptor",
+          "ContainerId": 1,
+          "PositionX": 848.7175625618798,
+          "PositionY": 499.73875875260035,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 305.93619486847297,
+          "Description": ""
+        },
+        {
+          "Id": 4,
+          "Name": "Lactate",
+          "Type": "Default",
+          "ContainerId": 1,
+          "PositionX": 993.5425231427199,
+          "PositionY": 553.8185793800742,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 7,
+          "Name": "External_lactate",
+          "Type": "Constant",
+          "ContainerId": 0,
+          "PositionX": 906.3530219550402,
+          "PositionY": 214.56393126836312,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 11,
+          "Name": "Pyruvate",
+          "Type": "Default",
+          "ContainerId": 1,
+          "PositionX": 1116.24666367097,
+          "PositionY": 728.5883597108469,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 16,
+          "Name": "External_Protons",
+          "Type": "Constant",
+          "ContainerId": 0,
+          "PositionX": 665.9978396918882,
+          "PositionY": 439.13407648903467,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 18,
+          "Name": "TCM",
+          "Type": "Constant",
+          "ContainerId": 0,
+          "PositionX": 603.3415625618799,
+          "PositionY": 183.51475875259956,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 21,
+          "Name": "Internal_protons",
+          "Type": "Default",
+          "ContainerId": 1,
+          "PositionX": 943.3035730042728,
+          "PositionY": 623.4147461787408,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 24,
+          "Name": "NALactate",
+          "Type": "Constant",
+          "ContainerId": 0,
+          "PositionX": 804.6535625618801,
+          "PositionY": 102.29875875259948,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 25,
+          "Name": "Protons",
+          "Type": "Constant",
+          "ContainerId": 0,
+          "PositionX": 427.94956256187976,
+          "PositionY": 339.0347587525997,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 38,
+          "Name": "LDH",
+          "Type": "Default",
+          "ContainerId": 1,
+          "PositionX": 1115.6447896643378,
+          "PositionY": 614.869712640886,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 50,
+          "Name": "GLUT-1",
+          "Type": "MembraneReceptor",
+          "ContainerId": 1,
+          "PositionX": 1137.843807088339,
+          "PositionY": 315.6830627779164,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 1.914102868858667,
+          "Description": ""
+        },
+        {
+          "Id": 51,
+          "Name": "Glucose-6-P",
+          "Type": "Default",
+          "ContainerId": 1,
+          "PositionX": 1232.3702166979197,
+          "PositionY": 392.8796306257407,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 52,
+          "Name": "Fructose-6-P",
+          "Type": "Default",
+          "ContainerId": 1,
+          "PositionX": 1179.6623401056265,
+          "PositionY": 429.9699608231622,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 53,
+          "Name": "Fructose-1,6-bisphosphate",
+          "Type": "Default",
+          "ContainerId": 1,
+          "PositionX": 1138.1642246469005,
+          "PositionY": 487.3756872077333,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 54,
+          "Name": "glyceraldehyde-3-p",
+          "Type": "Default",
+          "ContainerId": 1,
+          "PositionX": 1307.2036243055043,
+          "PositionY": 485.83060007516167,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 55,
+          "Name": "dihydroxyacetone-phosphate",
+          "Type": "Default",
+          "ContainerId": 1,
+          "PositionX": 1169.9794464985905,
+          "PositionY": 555.1559424569858,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 56,
+          "Name": "bisphosphoglycerate-1,3",
+          "Type": "Default",
+          "ContainerId": 1,
+          "PositionX": 1294.6001030242269,
+          "PositionY": 548.8482064815488,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 57,
+          "Name": "phosphoglycerate-3",
+          "Type": "Default",
+          "ContainerId": 1,
+          "PositionX": 1296.9632632644664,
+          "PositionY": 611.0780928078561,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 58,
+          "Name": "phosphoglycerate-2",
+          "Type": "Default",
+          "ContainerId": 1,
+          "PositionX": 1305.6281841453447,
+          "PositionY": 675.671139374403,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 59,
+          "Name": "phosphoenolpyruvate",
+          "Type": "Default",
+          "ContainerId": 1,
+          "PositionX": 1312.7176648660632,
+          "PositionY": 742.6273461811893,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 78,
+          "Name": "Glucose",
+          "Type": "Default",
+          "ContainerId": 1,
+          "PositionX": 1091.3683223636283,
+          "PositionY": 391.304190465581,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 110,
+          "Name": "TGFB2",
+          "Type": "Constant",
+          "ContainerId": 0,
+          "PositionX": 666.8961141503984,
+          "PositionY": 686.9367463432026,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 111,
+          "Name": "MMP2",
+          "Type": "Constant",
+          "ContainerId": 0,
+          "PositionX": 698.0898061852292,
+          "PositionY": 776.4133892852177,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 114,
+          "Name": "Col1a2",
+          "Type": "MembraneReceptor",
+          "ContainerId": 1,
+          "PositionX": 830.9908414586608,
+          "PositionY": 827.9013746479923,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 246.48974868057178,
+          "Description": ""
+        },
+        {
+          "Id": 116,
+          "Name": "PDPN",
+          "Type": "MembraneReceptor",
+          "ContainerId": 1,
+          "PositionX": 820.1468535852914,
+          "PositionY": 774.4560058435286,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 256.2750208478844,
+          "Description": ""
+        },
+        {
+          "Id": 120,
+          "Name": "Mit_Pyruvate",
+          "Type": "Default",
+          "ContainerId": 119,
+          "PositionX": 1053.6889726909583,
+          "PositionY": 1195.007903757699,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 122,
+          "Name": "PDH",
+          "Type": "Default",
+          "ContainerId": 119,
+          "PositionX": 1124.169579588637,
+          "PositionY": 1253.5426450795,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": "var(Mitochondrial_protons)-(floor(var(Mitochondrial_protons)/4)*3)"
+        },
+        {
+          "Id": 125,
+          "Name": "MPC",
+          "Type": "MembraneReceptor",
+          "ContainerId": 1,
+          "PositionX": 1052.1082008281292,
+          "PositionY": 1068.8581669435089,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 191.179796911358,
+          "Description": ""
+        },
+        {
+          "Id": 128,
+          "Name": "Acetyl_CoA",
+          "Type": "Default",
+          "ContainerId": 119,
+          "PositionX": 1082.359050073065,
+          "PositionY": 1289.3802418071332,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 132,
+          "Name": "Oxaloacetate",
+          "Type": "Default",
+          "ContainerId": 119,
+          "PositionX": 925.8682110290688,
+          "PositionY": 1308.4936267285384,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 134,
+          "Name": "Citrate",
+          "Type": "Default",
+          "ContainerId": 119,
+          "PositionX": 1015.4622028481496,
+          "PositionY": 1347.9149831289342,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 145,
+          "Name": "Cis-aconitase",
+          "Type": "Default",
+          "ContainerId": 119,
+          "PositionX": 1164.785522546624,
+          "PositionY": 1374.195887395866,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 146,
+          "Name": "Isocitrate",
+          "Type": "Default",
+          "ContainerId": 119,
+          "PositionX": 1133.4380300271703,
+          "PositionY": 1442.6073727107712,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 147,
+          "Name": "a-ketoglutarate",
+          "Type": "Default",
+          "ContainerId": 119,
+          "PositionX": 1088.43803002717,
+          "PositionY": 1507.190706044105,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 148,
+          "Name": "Succinyl-CoA",
+          "Type": "Default",
+          "ContainerId": 119,
+          "PositionX": 999.2713633605028,
+          "PositionY": 1569.2740393774386,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 149,
+          "Name": "Succinate",
+          "Type": "Default",
+          "ContainerId": 119,
+          "PositionX": 929.9171798804564,
+          "PositionY": 1527.2986721632635,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 150,
+          "Name": "Fumarate",
+          "Type": "Default",
+          "ContainerId": 119,
+          "PositionX": 893.0253726913652,
+          "PositionY": 1420.9634632064713,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 163,
+          "Name": "Malate",
+          "Type": "Default",
+          "ContainerId": 119,
+          "PositionX": 857.7767772465655,
+          "PositionY": 1339.5528772258206,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 168,
+          "Name": "Glycolytic_activity",
+          "Type": "Default",
+          "ContainerId": 1,
+          "PositionX": 1181.1079302002292,
+          "PositionY": 839.332700886771,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 171,
+          "Name": "OxPhos_activity",
+          "Type": "Default",
+          "ContainerId": 119,
+          "PositionX": 1004.3091196772378,
+          "PositionY": 1456.9339511596536,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 177,
+          "Name": "Phosphofructokinase",
+          "Type": "Default",
+          "ContainerId": 1,
+          "PositionX": 1044.7934648647667,
+          "PositionY": 452.7939243254615,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 181,
+          "Name": "IDH",
+          "Type": "Default",
+          "ContainerId": 119,
+          "PositionX": 1166.771363360504,
+          "PositionY": 1506.3573727107714,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": "var(Mitochondrial_protons)-(floor(var(Mitochondrial_protons)/4)*3)"
+        },
+        {
+          "Id": 185,
+          "Name": "SDH",
+          "Type": "Default",
+          "ContainerId": 119,
+          "PositionX": 849.6232465865521,
+          "PositionY": 1489.321811821552,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": "Switch - 0 and 4 equal no activity, 1,2,3 equal similar activity"
+        },
+        {
+          "Id": 189,
+          "Name": "TGFB-R",
+          "Type": "MembraneReceptor",
+          "ContainerId": 1,
+          "PositionX": 812.630494485407,
+          "PositionY": 668.0523461027932,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 275.83754231030815,
+          "Description": ""
+        },
+        {
+          "Id": 192,
+          "Name": "Smad",
+          "Type": "Default",
+          "ContainerId": 1,
+          "PositionX": 878.8252716903185,
+          "PositionY": 717.3210602588331,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 197,
+          "Name": "STAT3",
+          "Type": "Default",
+          "ContainerId": 1,
+          "PositionX": 977.3720126558605,
+          "PositionY": 812.054573713266,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 199,
+          "Name": "DCN",
+          "Type": "Default",
+          "ContainerId": 1,
+          "PositionX": 960.678917702322,
+          "PositionY": 864.0977520978275,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 201,
+          "Name": "Acta2",
+          "Type": "Default",
+          "ContainerId": 1,
+          "PositionX": 870.3398156008188,
+          "PositionY": 646.1055709398527,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 202,
+          "Name": "Timp",
+          "Type": "Default",
+          "ContainerId": 1,
+          "PositionX": 888.9968040783032,
+          "PositionY": 816.9643075231303,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 207,
+          "Name": "External_glucose",
+          "Type": "Constant",
+          "ContainerId": 0,
+          "PositionX": 1111.603406335144,
+          "PositionY": 129.49194644374882,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 210,
+          "Name": "Counter",
+          "Type": "Default",
+          "ContainerId": 209,
+          "PositionX": 557.4704746623883,
+          "PositionY": 1241.6209332798508,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 211,
+          "Name": "Oligomycin",
+          "Type": "Default",
+          "ContainerId": 209,
+          "PositionX": 631.0956195276328,
+          "PositionY": 1158.1134668297927,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 213,
+          "Name": "Rotanone",
+          "Type": "Default",
+          "ContainerId": 209,
+          "PositionX": 581.3880231063742,
+          "PositionY": 1324.6097849398334,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 220,
+          "Name": "ATP_synthase",
+          "Type": "MembraneReceptor",
+          "ContainerId": 119,
+          "PositionX": 1021.5450104111379,
+          "PositionY": 1145.8026427153177,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 4.844640751509248,
+          "Description": ""
+        },
+        {
+          "Id": 223,
+          "Name": "Mitochondrial_protons",
+          "Type": "Default",
+          "ContainerId": 119,
+          "PositionX": 912.5898385417535,
+          "PositionY": 1250.3111992371248,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 0,
+          "Description": ""
+        },
+        {
+          "Id": 233,
+          "Name": "Complexes",
+          "Type": "MembraneReceptor",
+          "ContainerId": 119,
+          "PositionX": 966.7588576258634,
+          "PositionY": 1147.3244802926863,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 352.5053987324228,
+          "Description": "(2+(var(Mitochondrial_protons)-var(Internal_protons))+(var(Internal_protons)-2))-(var(Rotanone)*2)"
+        },
+        {
+          "Id": 236,
+          "Name": "FCCP",
+          "Type": "MembraneReceptor",
+          "ContainerId": 119,
+          "PositionX": 869.2794338092457,
+          "PositionY": 1200.359948911897,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 326.78397190842963,
+          "Description": ""
+        },
+        {
+          "Id": 247,
+          "Name": "Proton_leak",
+          "Type": "MembraneReceptor",
+          "ContainerId": 119,
+          "PositionX": 904.6586231458787,
+          "PositionY": 1175.6521488218682,
+          "CellX": 0,
+          "CellY": 0,
+          "Angle": 336.9451923044548,
+          "Description": ""
+        }
+      ],
+      "Containers": [
+        {
+          "Id": 1,
+          "Name": "Cytoplasm",
+          "Size": 3,
+          "PositionX": 3,
+          "PositionY": 1
+        },
+        {
+          "Id": 119,
+          "Name": "Mitochondria",
+          "Size": 2,
+          "PositionX": 3,
+          "PositionY": 4
+        },
+        {
+          "Id": 209,
+          "Name": "Seahorse",
+          "Size": 1,
+          "PositionX": 2,
+          "PositionY": 4
+        }
+      ]
+    },
+    "ltl": {
+      "states": [],
+      "operations": []
+    }
+  }
