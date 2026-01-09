@@ -16,7 +16,7 @@ import json
 import random
 import argparse
 
-format_choices = ["bnet", "aeon", "sbml"]
+format_choices = ["bnet", "aeon", "sbml", "bma", "booleannet"]
 input_choices = ["true", "false", "identity", "free", "random"]
 filter_help_text = """Enter filter expression satisfied by the desired models [default: no filter].
 The filter expression is a Python expression that evaluates to True/False.
@@ -45,7 +45,7 @@ while True:
 	if args.format is not None:
 		user_format = args.format
 	else:
-		print("Choose model format [bnet/aeon/sbml; default: aeon]")
+		print("Choose model format [aeon/bnet/sbml/bma/booleannet; default: aeon]")
 		print(BOLD, end="")
 		user_format = input().lower()
 		print(ENDC, end="")
@@ -72,6 +72,11 @@ while True:
 
 	if user_inputs == "":
 		user_inputs = "free"
+
+	if user_inputs == "free" and (FORMAT == "bma" or FORMAT == "booleannet"):
+		print("The BMA and Booleannet formats do not support free parameters.")
+		continue
+
 	if user_inputs in input_choices:
 		INPUTS = user_inputs
 		print(f"Selected input representation: {BOLD}{user_inputs}{ENDC}")

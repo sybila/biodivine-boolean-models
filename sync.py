@@ -12,6 +12,8 @@ from os import listdir, mkdir
 from os.path import isfile, isdir, join
 from biodivine_aeon import *
 
+from utils import inputs_identity
+
 if not isdir("sources"):
 	print("ERROR: Missing input `sources` directory.")
 	sys.exit(128)
@@ -154,9 +156,15 @@ for model_dir in source_directories:
 	if isfile(f'sources/{model_dir}/source.bnet'):
 		source = Path(f'sources/{model_dir}/source.bnet').read_text()
 		model = BooleanNetwork.from_bnet(source)
+	if isfile(f'sources/{model_dir}/source.bma.json'):
+		source = Path(f'sources/{model_dir}/source.bma.json').read_text()
+		model = BooleanNetwork.from_bma_json(source)
+	if isfile(f'sources/{model_dir}/source.booleannet.txt'):
+		source = Path(f'sources/{model_dir}/source.booleannet.txt').read_text()
+		model = BooleanNetwork.from_booleannet(source)
 	
 	if model == None:
-		print("ERROR: Missing source.sbml/.bnet/.aeon in", model_dir)
+		print("ERROR: Missing source.sbml/.bnet/.aeon/.bma.json/.booleannet.txt in", model_dir)
 		sys.exit(128)
 
 	# Static analysis (unused variables/regulations, etc.)
@@ -187,9 +195,15 @@ for model_dir in source_directories:
 		mkdir('models/'+output_directory)
 
 	# Write model outputs
+
+	# (for BMA and booleannet, we have to use identity inputs)
+	model_identity = inputs_identity(model)
+
 	Path(f'models/{output_directory}/model.aeon').write_text(model.to_aeon())
 	Path(f'models/{output_directory}/model.sbml').write_text(model.to_sbml())
 	Path(f'models/{output_directory}/model.bnet').write_text(model.to_bnet())
+	Path(f'models/{output_directory}/model.bma.json').write_text(model_identity.to_bma_json(pretty=True))
+	Path(f'models/{output_directory}/model.booleannet.txt').write_text(model_identity.to_booleannet())
 
 	with open(f'models/{output_directory}/metadata.json', "w") as file:
 		json.dump(metadata, file, indent=4)

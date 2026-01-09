@@ -37,3 +37,7 @@ def output_model(dir: str, model: BooleanNetwork, id: int, format: str, suffix: 
 		Path(f"{dir}/{id:03d}{suffix}.bnet").write_text(model.to_bnet())
 	if format == "sbml":
 		Path(f"{dir}/{id:03d}{suffix}.sbml").write_text(model.to_sbml())
+	if format == "bma":
+		Path(f"{dir}/{id:03d}{suffix}.bma.json").write_text(model.to_bma_json(pretty=True))
+	if format == "booleannet":
+		Path(f"{dir}/{id:03d}{suffix}.booleannet.txt").write_text(model.to_booleannet())
