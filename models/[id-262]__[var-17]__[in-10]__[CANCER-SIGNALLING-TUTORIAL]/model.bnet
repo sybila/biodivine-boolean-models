@@ -1,0 +1,18 @@
+targets,factors
+v_v2_KRAS_b1, (v_v59_KRAS_mutant_b1 | v_v18_EGFR_b1)
+v_v3_RAC1_b1, v_v2_KRAS_b1
+v_v4_RAF_b1, (v_v13_PAK1_b1 | v_v2_KRAS_b1)
+v_v5_MEK_b1, ((v_v13_PAK1_b1 & !v_v62_Trametinib_b1) | (v_v4_RAF_b1 & !v_v62_Trametinib_b1))
+v_v6_ERK_b1, v_v5_MEK_b1
+v_v10_GROWTH_b1, (v_v41_TOR_b1 | v_v6_ERK_b1)
+v_v13_PAK1_b1, v_v3_RAC1_b1
+v_v16_INVASION_b1, v_v13_PAK1_b1
+v_v18_EGFR_b1, (!v_v49_Cetuximab_b1 & v_v53_EGFR_mutant_b1)
+v_v20_PI3K_b1, ((v_v18_EGFR_b1 & (v_v47_IGFR_b1 & !v_v68_Idelalisib_b1)) | ((v_v2_KRAS_b1 & (v_v18_EGFR_b1 & (!v_v47_IGFR_b1 & !v_v68_Idelalisib_b1))) | (v_v2_KRAS_b1 & (!v_v18_EGFR_b1 & (v_v47_IGFR_b1 & !v_v68_Idelalisib_b1)))))
+v_v23_AKT_b1, (v_v33_PIP3_b1 | v_v20_PI3K_b1)
+v_v24_MDM2_b1, ((v_v41_TOR_b1 & !v_v65_Imidazothiazole_b1) | (v_v23_AKT_b1 & !v_v65_Imidazothiazole_b1))
+v_v25_TP53_b1, (!v_v24_MDM2_b1 & !v_v51_TP53_mutant_b1)
+v_v31_PTEN_b1, !v_v57_PTEN_mutant_b1
+v_v33_PIP3_b1, (!v_v31_PTEN_b1 | v_v20_PI3K_b1)
+v_v39_SURVIVAL_b1, !v_v25_TP53_b1
+v_v41_TOR_b1, (v_v23_AKT_b1 & !v_v45_Rapamycin_b1)
