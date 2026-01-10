@@ -1,0 +1,19 @@
+targets,factors
+v_ATF2_JUN, v_JUN
+v_ATF3, v_ATF2_JUN
+v_C21orf33, v_ATF2_JUN
+v_CEBPB, (v_MYB | !v_MYC_Max)
+v_DDIT3, !v_MYC
+v_E2F1, !v_C21orf33
+v_FOS, v_ELK1
+v_GSR, v_JUN_FOS
+v_JUN, v_SMAD3_SMAD4_JUN_FOS
+v_JUN_FOS, v_FOS
+v_JUN_JUND, v_JUN
+v_MYB, (v_E2F1 & v_JUN_JUND)
+v_MYC, ((!v_PCBP4 & v_TERT) | (!v_PCBP4 & !v_TCF4))
+v_MYC_Max, v_MYC
+v_PSAT1, v_SMARCE1
+v_SMAD3_SMAD4_JUN_FOS, v_FOS
+v_TCF4, v_JUN_FOS
+v_TERT, !v_JUN
