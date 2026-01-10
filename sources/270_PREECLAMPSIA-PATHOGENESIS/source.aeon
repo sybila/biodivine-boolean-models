@@ -1,0 +1,89 @@
+IL6 -? ADIPOQ
+INSR -? ADIPOQ
+TNF -? ADIPOQ
+EGFR -? AKT1
+INSR -? AKT1
+HypoxiaSignal -? ANGPT1
+TNF -? ANGPT1
+oxLDL -? CAV1
+CAV1 -? CD36
+InflammatorySignal -? CD36
+InsulinSignal -? CD36
+OxidativeStress -? CD36
+MMP2 -? CDH5
+TNF -? CDH5
+VEGFA -? CDH5
+CDH5 -? HIF
+EGFR -? HIF
+HypoxiaSignal -? HIF
+NFKB1 -?? HIF
+InflammatorySignal -? IL1B
+NFKB1 -? IL1B
+InflammatorySignal -? IL6
+NFKB1 -? IL6
+TNF -? IL6
+ADIPOQ -? INSR
+InsulinSignal -? INSR
+TNF -? INSR
+oxLDL -? INSR
+IL1B -? LPL
+INSR -? LPL
+InflammatorySignal -? LPL
+OxidativeStress -? LPL
+TNF -? LPL
+oxLDL -? LPL
+EGFR -? MAPK1
+TNF -? MAPK1
+NFKB1 -? MMP2
+TGFB1 -? MMP2
+IL1B -? NFKB1
+TLR4 -? NFKB1
+TNF -? NFKB1
+InflammatorySignal -? PECAM1
+MMP2 -? PECAM1
+TGFB1 -? SERPINE1
+MMP2 -? TGFB1
+NFKB1 -? THBD
+TNF -? THBD
+InflammatorySignal -? TLR4
+TLR4 -? TLR4
+oxLDL -? TLR4
+ADIPOQ -? TNF
+MAPK1 -? TNF
+NFKB1 -? TNF
+HIF -? VEGFA
+HypoxiaSignal -? VEGFA
+InflammatorySignal -? VEGFA
+ADIPOQ -? eNOS
+AKT1 -? eNOS
+InflammatorySignal -? eNOS
+InsulinSignal -? eNOS
+OxidativeStress -? eNOS
+PECAM1 -? eNOS
+ShearStress -? eNOS
+HIF -? sFlt_1
+HypoxiaSignal -? sFlt_1
+$ADIPOQ: INSR & !TNF & !IL6
+$AKT1: INSR | EGFR
+$ANGPT1: !(HypoxiaSignal | TNF)
+$CAV1: oxLDL
+$CD36: CAV1 & InsulinSignal & !OxidativeStress & !InflammatorySignal
+$CDH5: !(VEGFA | MMP2 | TNF)
+$HIF: HypoxiaSignal | CDH5 | EGFR | (NFKB1 & HypoxiaSignal)
+$IL1B: InflammatorySignal | NFKB1
+$IL6: (TNF | NFKB1) & InflammatorySignal
+$INSR: (InsulinSignal & !TNF & !oxLDL) | ADIPOQ
+$LPL: INSR & !InflammatorySignal & !OxidativeStress & !TNF & !oxLDL & !IL1B
+$MAPK1: TNF | EGFR
+$MMP2: NFKB1 | TGFB1
+$NFKB1: TLR4 | IL1B | TNF
+$PECAM1: !(MMP2 | InflammatorySignal)
+$SERPINE1: TGFB1
+$TGFB1: MMP2
+$THBD: !(NFKB1 | TNF)
+$TLR4: InflammatorySignal | TLR4 | oxLDL
+$TNF: (MAPK1 | NFKB1) & !ADIPOQ
+$VEGFA: (HypoxiaSignal | HIF) & !InflammatorySignal
+$eNOS: (ShearStress & !InflammatorySignal) | AKT1 | (ADIPOQ & InsulinSignal) | (PECAM1 & !InflammatorySignal & !OxidativeStress)
+$sFlt_1: HypoxiaSignal | HIF
+

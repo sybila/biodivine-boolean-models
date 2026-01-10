@@ -1,0 +1,24 @@
+targets,factors
+v_ADIPOQ, (v_INSR & (!v_TNF & !v_IL6))
+v_AKT1, (v_INSR | v_EGFR)
+v_ANGPT1, !(v_HypoxiaSignal | v_TNF)
+v_CAV1, v_oxLDL
+v_CD36, (v_CAV1 & (v_InsulinSignal & (!v_OxidativeStress & !v_InflammatorySignal)))
+v_CDH5, !(v_VEGFA | (v_MMP2 | v_TNF))
+v_HIF, (v_HypoxiaSignal | (v_CDH5 | (v_EGFR | (v_NFKB1 & v_HypoxiaSignal))))
+v_IL1B, (v_InflammatorySignal | v_NFKB1)
+v_IL6, ((v_TNF | v_NFKB1) & v_InflammatorySignal)
+v_INSR, ((v_InsulinSignal & (!v_TNF & !v_oxLDL)) | v_ADIPOQ)
+v_LPL, (v_INSR & (!v_InflammatorySignal & (!v_OxidativeStress & (!v_TNF & (!v_oxLDL & !v_IL1B)))))
+v_MAPK1, (v_TNF | v_EGFR)
+v_MMP2, (v_NFKB1 | v_TGFB1)
+v_NFKB1, (v_TLR4 | (v_IL1B | v_TNF))
+v_PECAM1, !(v_MMP2 | v_InflammatorySignal)
+v_SERPINE1, v_TGFB1
+v_TGFB1, v_MMP2
+v_THBD, !(v_NFKB1 | v_TNF)
+v_TLR4, (v_InflammatorySignal | (v_TLR4 | v_oxLDL))
+v_TNF, ((v_MAPK1 | v_NFKB1) & !v_ADIPOQ)
+v_VEGFA, ((v_HypoxiaSignal | v_HIF) & !v_InflammatorySignal)
+v_eNOS, ((v_ShearStress & !v_InflammatorySignal) | (v_AKT1 | ((v_ADIPOQ & v_InsulinSignal) | (v_PECAM1 & (!v_InflammatorySignal & !v_OxidativeStress)))))
+v_sFlt_1, (v_HypoxiaSignal | v_HIF)

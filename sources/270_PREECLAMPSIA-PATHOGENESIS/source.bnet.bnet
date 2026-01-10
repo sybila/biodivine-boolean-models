@@ -1,0 +1,24 @@
+NFKB1, TLR4 | IL1B | TNF
+TNF, (MAPK1 | NFKB1) & !ADIPOQ
+IL1B, InflammatorySignal | NFKB1
+IL6, (TNF | NFKB1) & InflammatorySignal
+TLR4, InflammatorySignal | TLR4 | oxLDL
+MMP2, NFKB1 | TGFB1
+TGFB1, MMP2
+SERPINE1, TGFB1
+INSR, (InsulinSignal & !TNF & !oxLDL) | ADIPOQ
+LPL, INSR & !InflammatorySignal & !OxidativeStress & !TNF & !oxLDL & !IL1B
+ADIPOQ, INSR & !TNF & !IL6
+CAV1, oxLDL
+CD36, CAV1 & InsulinSignal & !OxidativeStress & !InflammatorySignal
+eNOS, (ShearStress & !InflammatorySignal) | AKT1 | (ADIPOQ & InsulinSignal) | (PECAM1 & !InflammatorySignal & !OxidativeStress)
+VEGFA, (HypoxiaSignal | HIF) & !InflammatorySignal
+CDH5, !(VEGFA | MMP2 | TNF)
+ANGPT1, !(HypoxiaSignal | TNF)
+PECAM1, !(MMP2 | InflammatorySignal)
+THBD, !(NFKB1 | TNF)
+sFlt_1, HypoxiaSignal | HIF
+EGFR, EGFR
+AKT1, INSR | EGFR
+HIF, HypoxiaSignal | CDH5 | EGFR | (NFKB1 & HypoxiaSignal)
+MAPK1, TNF | EGFR
