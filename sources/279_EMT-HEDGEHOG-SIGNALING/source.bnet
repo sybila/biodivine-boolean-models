@@ -1,0 +1,29 @@
+SNAI1,	(!miR_34 & !SNAI1) | GLI
+miR_34, !SNAI1 & !ZEB1
+ZEB1,	(SNAI1 & SNAI2 & TWIST1 & LEF1 & B_catenin_TCF4 & GLI) | !miR_200
+miR_200, !(ZEB1 & SNAI1)
+
+SNAI2,	TWIST1 | B_catenin_nuc | GLI
+LEF1,	((B_catenin_nuc & (!miR_34))) | NFKB
+TWIST1,	SNAI1 & (!miR_34 | NFKB)
+
+B_catenin_nuc,	((!miR_34) | (!miR_200)) & (!AJ)
+B_catenin_TCF4,	B_catenin_nuc & SNAI1 & SNAI2
+
+E_cadherin, !(ZEB1 & SNAI1 & SNAI2 & TWIST1)
+TGFb_secr,	(B_catenin_TCF4 | GLI) & (!miR_200) 
+
+GLI, !SUFU
+SHH,	(GLI | NFKB) & !HHIP
+HHIP,	GLI
+Patched, !SHH
+SMO, !Patched
+SUFU, !SMO
+NFKB,	Damage
+
+AJ,	E_cadherin & neighbor
+
+Rac1, !miR_34 | !miR_200
+PAK1,	Rac1
+Migration,	PAK1 & !E_cadherin
+

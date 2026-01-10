@@ -1,0 +1,23 @@
+targets,factors
+v_AJ, (v_E_cadherin & v_neighbor)
+v_B_catenin_TCF4, (v_B_catenin_nuc & (v_SNAI1 & v_SNAI2))
+v_B_catenin_nuc, ((!v_miR_34 | !v_miR_200) & !v_AJ)
+v_E_cadherin, !(v_ZEB1 & (v_SNAI1 & (v_SNAI2 & v_TWIST1)))
+v_GLI, !v_SUFU
+v_HHIP, v_GLI
+v_LEF1, ((v_B_catenin_nuc & !v_miR_34) | v_NFKB)
+v_Migration, (v_PAK1 & !v_E_cadherin)
+v_NFKB, v_Damage
+v_PAK1, v_Rac1
+v_Patched, !v_SHH
+v_Rac1, (!v_miR_34 | !v_miR_200)
+v_SHH, ((v_GLI | v_NFKB) & !v_HHIP)
+v_SMO, !v_Patched
+v_SNAI1, ((!v_miR_34 & !v_SNAI1) | v_GLI)
+v_SNAI2, (v_TWIST1 | (v_B_catenin_nuc | v_GLI))
+v_SUFU, !v_SMO
+v_TGFb_secr, ((v_B_catenin_TCF4 | v_GLI) & !v_miR_200)
+v_TWIST1, (v_SNAI1 & (!v_miR_34 | v_NFKB))
+v_ZEB1, ((v_SNAI1 & (v_SNAI2 & (v_TWIST1 & (v_LEF1 & (v_B_catenin_TCF4 & v_GLI))))) | !v_miR_200)
+v_miR_200, !(v_ZEB1 & v_SNAI1)
+v_miR_34, (!v_SNAI1 & !v_ZEB1)
