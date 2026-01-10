@@ -1,0 +1,41 @@
+v_CEBPA -? v_CEBPA
+v_FOG1 -? v_CEBPA
+v_GATA1 -? v_CEBPA
+v_SCL -? v_CEBPA
+v_GFI1 -? v_EGR_NAB
+v_JUN -? v_EGR_NAB
+v_PU1 -? v_EGR_NAB
+v_FLI1 -? v_EKLF
+v_GATA1 -? v_EKLF
+v_EKLF -? v_FLI1
+v_GATA1 -? v_FLI1
+v_GATA1 -? v_FOG1
+v_FLI1 -? v_GATA1
+v_GATA1 -? v_GATA1
+v_GATA2 -? v_GATA1
+v_PU1 -? v_GATA1
+v_FOG1 -? v_GATA2
+v_GATA1 -? v_GATA2
+v_GATA2 -? v_GATA2
+v_PU1 -? v_GATA2
+v_CEBPA -? v_GFI1
+v_EGR_NAB -? v_GFI1
+v_GFI1 -? v_JUN
+v_PU1 -? v_JUN
+v_CEBPA -? v_PU1
+v_GATA1 -? v_PU1
+v_GATA2 -? v_PU1
+v_PU1 -? v_PU1
+v_GATA1 -? v_SCL
+v_PU1 -? v_SCL
+$v_CEBPA: v_CEBPA & !(v_GATA1 & v_FOG1 & v_SCL)
+$v_EGR_NAB: v_PU1 & v_JUN & !v_GFI1
+$v_EKLF: v_GATA1 & !v_FLI1
+$v_FLI1: v_GATA1 & !v_EKLF
+$v_FOG1: v_GATA1
+$v_GATA1: (v_GATA1 | v_GATA2 | v_FLI1) & !v_PU1
+$v_GATA2: v_GATA2 & !(v_GATA1 & v_FOG1) & !v_PU1
+$v_GFI1: v_CEBPA & !v_EGR_NAB
+$v_JUN: v_PU1 & !v_GFI1
+$v_PU1: (v_CEBPA | v_PU1) & !(v_GATA1 | v_GATA2)
+$v_SCL: v_GATA1 & !v_PU1
