@@ -1,0 +1,11 @@
+v_ERG* = (v_FLI1 or v_ERG or v_GATA2 or v_RUNX1) and not (v_SCL and v_ETO2)
+v_ETO2* = v_SCL and v_GATA2
+v_FLI1* = (v_FLI1 or v_GATA2 or v_ERG or v_GATA2 and v_SCL) and not v_GATA1
+v_GATA1* = v_SCL and v_GATA1 and not (v_PU1 and v_GATA1)
+v_GATA2* = (v_FLI1 or v_ERG or v_SCL and v_GATA2) and not (v_GATA1 and v_ZFPM1) and not (v_GATA2 and v_HHEX)
+v_HHEX* = v_FLI1 or v_ERG or v_SCL and v_GATA2
+v_PU1* = (v_FLI1 or v_RUNX1 or v_PU1) and not (v_PU1 and v_GATA1)
+v_RUNX1* = (v_PU1 or v_RUNX1 or v_FLI1 or v_ERG or v_GATA2 and v_SCL) and not (v_RUNX1 and v_SMAD6)
+v_SCL* = v_FLI1 or v_ERG or v_FLI1 and v_GATA2 or v_SCL and v_GATA1 or v_GATA2 and v_SCL
+v_SMAD6* = v_ERG or v_FLI1 or v_SCL and v_GATA2
+v_ZFPM1* = v_GATA2 and v_SCL

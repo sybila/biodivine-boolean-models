@@ -1,0 +1,12 @@
+targets,factors
+v_ERG, ((v_FLI1 | (v_ERG | (v_GATA2 | v_RUNX1))) & !(v_SCL & v_ETO2))
+v_ETO2, (v_SCL & v_GATA2)
+v_FLI1, ((v_FLI1 | (v_GATA2 | (v_ERG | (v_GATA2 & v_SCL)))) & !v_GATA1)
+v_GATA1, ((v_SCL & v_GATA1) & !(v_PU1 & v_GATA1))
+v_GATA2, ((v_FLI1 | (v_ERG | (v_SCL & v_GATA2))) & (!(v_GATA1 & v_ZFPM1) & !(v_GATA2 & v_HHEX)))
+v_HHEX, (v_FLI1 | (v_ERG | (v_SCL & v_GATA2)))
+v_PU1, ((v_FLI1 | (v_RUNX1 | v_PU1)) & !(v_PU1 & v_GATA1))
+v_RUNX1, ((v_PU1 | (v_RUNX1 | (v_FLI1 | (v_ERG | (v_GATA2 & v_SCL))))) & !(v_RUNX1 & v_SMAD6))
+v_SCL, (v_FLI1 | (v_ERG | ((v_FLI1 & v_GATA2) | ((v_SCL & v_GATA1) | (v_GATA2 & v_SCL)))))
+v_SMAD6, (v_ERG | (v_FLI1 | (v_SCL & v_GATA2)))
+v_ZFPM1, (v_GATA2 & v_SCL)
