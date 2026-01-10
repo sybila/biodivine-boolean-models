@@ -1,0 +1,26 @@
+targets,factors
+v_AKT1, (((((v_MTOR & !v_GSK3A) | (v_MTOR & !v_PTPN1)) | (v_TNF & !v_PTPN1)) | (v_TNF & !v_PTEN)) | (v_IGF1R & !v_PTEN))
+v_CBL, (v_INSR | v_GRB2)
+v_CREB1, ((!v_PTEN | (v_AKT1 & v_MAPK14)) | (v_GSK3B & !v_PTEN))
+v_FLT3, (((((!v_TNF | !v_MAPK8) | !v_MAP2K1) | v_STAT3) | v_MAP2K1) | !v_IGF1R)
+v_GRB2, (((v_IRS1 | (v_IRS1 & v_SHC1)) | (v_IRS1 & v_KIT)) | (v_FLT3 & v_SHC1))
+v_GSK3A, ((((v_FLT3 | v_CREB1) | v_RPS6) | v_MAPK8) | v_PIK3CA)
+v_GSK3B, ((!v_MAPK1 & v_MAP2K1) | (!v_MAPK1 & !v_RPS6KA1))
+v_INSR, ((!v_PTPN1 | v_GSK3A) | (v_GSK3A & !v_CBL))
+v_IRS1, ((v_INSR | (v_IGF1R & v_INSR)) | (v_INSR & !v_PTPN1))
+v_KRAS, v_PTPN11
+v_MAP2K1, (((!v_PIK3CA | !v_MTOR) | v_PIK3CA) | v_RPS6KB1)
+v_MAPK1, ((((((v_KIT | v_PTPN11) | v_MAPK8) | (v_MAP2K1 & v_KIT)) | (v_SHC1 & v_KIT)) | (v_FLT3 & v_SHC1)) | (v_PTPN11 & v_KIT))
+v_MAPK14, (((v_TNF | !v_PIK3CA) | !v_RPS6KB1) | (v_FLT3 & v_TNF))
+v_MAPK8, (v_FLT3 & v_TNF)
+v_MTOR, (v_STAT3 | v_MAPK8)
+v_PIK3CA, ((((((((((((((v_INSR | !v_CBL) | v_FLT3) | (v_KRAS & v_IRS1)) | (v_KRAS & !v_PTPN11)) | (v_TNF & v_IRS1)) | (v_TNF & !v_PTEN)) | (!v_PTPN11 & v_IGF1R)) | (v_IRS1 & !v_CBL)) | (!v_PTPN11 & v_IRS1)) | (!v_PTPN11 & v_INSR)) | (v_KIT & !v_CBL)) | (v_GRB2 & v_KIT)) | (!v_CBL & !v_PTEN)) | (!v_PTPN11 & !v_CBL))
+v_PTEN, (((((!v_GSK3B | v_CREB1) | v_TSC2) | !v_RPS6KB1) | !v_TSC2) | !v_RPS6)
+v_PTPN11, v_KIT
+v_RPS6, v_MAPK8
+v_RPS6KA1, v_PDPK1
+v_RPS6KB1, v_STAT3
+v_SHC1, (v_IGF1R & v_INSR)
+v_STAT3, ((v_MAPK1 | (v_MAPK8 & v_MAPK14)) | (v_MTOR & !v_PTPN1))
+v_STAT5A, (v_STAT3 | (v_FLT3 & !v_PTEN))
+v_TSC2, (!v_MAPK1 | (!v_MAPK1 & v_GSK3B))

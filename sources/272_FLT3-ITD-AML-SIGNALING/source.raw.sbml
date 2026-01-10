@@ -1,0 +1,1388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1" xmlns:qual="http://www.sbml.org/sbml/level3/version1/qual/version1" qual:required="true">
+	<model id="JMD">
+		<listOfCompartments>
+			<compartment id="default" constant="true"/>
+		</listOfCompartments>
+		<qual:listOfQualitativeSpecies>
+			<qual:qualitativeSpecies qual:id ="FLT3" qual:compartment="main" qual:constant="false"/>
+			<qual:qualitativeSpecies qual:id ="AKT1" qual:compartment="main" qual:constant="false"/>
+			<qual:qualitativeSpecies qual:id ="MAPK1" qual:compartment="main" qual:constant="false"/>
+			<qual:qualitativeSpecies qual:id ="GSK3B" qual:compartment="main" qual:constant="false"/>
+			<qual:qualitativeSpecies qual:id ="KRAS" qual:compartment="main" qual:constant="false"/>
+			<qual:qualitativeSpecies qual:id ="MAPK14" qual:compartment="main" qual:constant="false"/>
+			<qual:qualitativeSpecies qual:id ="MAP2K1" qual:compartment="main" qual:constant="false"/>
+			<qual:qualitativeSpecies qual:id ="MTOR" qual:compartment="main" qual:constant="false"/>
+			<qual:qualitativeSpecies qual:id ="PDPK1" qual:compartment="main" qual:constant="false"/>
+			<qual:qualitativeSpecies qual:id ="PTPN11" qual:compartment="main" qual:constant="false"/>
+			<qual:qualitativeSpecies qual:id ="RPS6KA1" qual:compartment="main" qual:constant="false"/>
+			<qual:qualitativeSpecies qual:id ="RPS6KB1" qual:compartment="main" qual:constant="false"/>
+			<qual:qualitativeSpecies qual:id ="TNF" qual:compartment="main" qual:constant="false"/>
+			<qual:qualitativeSpecies qual:id ="IGF1R" qual:compartment="main" qual:constant="false"/>
+			<qual:qualitativeSpecies qual:id ="IRS1" qual:compartment="main" qual:constant="false"/>
+			<qual:qualitativeSpecies qual:id ="GSK3A" qual:compartment="main" qual:constant="false"/>
+			<qual:qualitativeSpecies qual:id ="INSR" qual:compartment="main" qual:constant="false"/>
+			<qual:qualitativeSpecies qual:id ="SHC1" qual:compartment="main" qual:constant="false"/>
+			<qual:qualitativeSpecies qual:id ="GRB2" qual:compartment="main" qual:constant="false"/>
+			<qual:qualitativeSpecies qual:id ="KIT" qual:compartment="main" qual:constant="false"/>
+			<qual:qualitativeSpecies qual:id ="PTPN1" qual:compartment="main" qual:constant="false"/>
+			<qual:qualitativeSpecies qual:id ="CBL" qual:compartment="main" qual:constant="false"/>
+			<qual:qualitativeSpecies qual:id ="PTEN" qual:compartment="main" qual:constant="false"/>
+			<qual:qualitativeSpecies qual:id ="TSC2" qual:compartment="main" qual:constant="false"/>
+			<qual:qualitativeSpecies qual:id ="MAPK8" qual:compartment="main" qual:constant="false"/>
+			<qual:qualitativeSpecies qual:id ="PIK3CA" qual:compartment="main" qual:constant="false"/>
+			<qual:qualitativeSpecies qual:id ="STAT3" qual:compartment="main" qual:constant="false"/>
+			<qual:qualitativeSpecies qual:id ="RPS6" qual:compartment="main" qual:constant="false"/>
+			<qual:qualitativeSpecies qual:id ="CREB1" qual:compartment="main" qual:constant="false"/>
+			<qual:qualitativeSpecies qual:id ="STAT5A" qual:compartment="main" qual:constant="false"/>
+		</qual:listOfQualitativeSpecies>
+		<qual:listOfTransitions>
+			<qual:transition qual:id="t1">
+				 <qual:listOfInputs> 
+					 <qual:input  qual:id="theta_t1_TNF" qual:qualitativeSpecies="TNF" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t1_MAPK8" qual:qualitativeSpecies="MAPK8" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t1_MAP2K1" qual:qualitativeSpecies="MAP2K1" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t1_STAT3" qual:qualitativeSpecies="STAT3" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t1_MAP2K1" qual:qualitativeSpecies="MAP2K1" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t1_IGF1R" qual:qualitativeSpecies="IGF1R" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+				 </qual:listOfInputs>
+				 <qual:listOfOutputs>
+					 <qual:output qual:qualitativeSpecies="FLT3" qual:transitionEffect="assignmentLevel"/>
+				 </qual:listOfOutputs>
+				<qual:listOfFunctionTerms>
+					<qual:defaultTerm qual:resultLevel="0"/>
+					<qual:functionTerm qual:resultLevel="1">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<apply>
+								<or/>
+								<apply>
+									<eq/>
+									<ci> TNF </ci>
+									<cn type='integer'> 0 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> MAPK8 </ci>
+									<cn type='integer'> 0 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> MAP2K1 </ci>
+									<cn type='integer'> 0 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> STAT3 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> MAP2K1 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> IGF1R </ci>
+									<cn type='integer'> 0 </cn>
+								</apply>
+							</apply>
+						</math>
+					</qual:functionTerm>
+				</qual:listOfFunctionTerms>
+			</qual:transition>
+			<qual:transition qual:id="t2">
+				 <qual:listOfInputs> 
+					 <qual:input  qual:id="theta_t2_MTOR" qual:qualitativeSpecies="MTOR" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t2_GSK3A" qual:qualitativeSpecies="GSK3A" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t2_MTOR" qual:qualitativeSpecies="MTOR" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t2_PTPN1" qual:qualitativeSpecies="PTPN1" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t2_TNF" qual:qualitativeSpecies="TNF" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t2_PTPN1" qual:qualitativeSpecies="PTPN1" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t2_TNF" qual:qualitativeSpecies="TNF" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t2_PTEN" qual:qualitativeSpecies="PTEN" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t2_IGF1R" qual:qualitativeSpecies="IGF1R" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t2_PTEN" qual:qualitativeSpecies="PTEN" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+				 </qual:listOfInputs>
+				 <qual:listOfOutputs>
+					 <qual:output qual:qualitativeSpecies="AKT1" qual:transitionEffect="assignmentLevel"/>
+				 </qual:listOfOutputs>
+				<qual:listOfFunctionTerms>
+					<qual:defaultTerm qual:resultLevel="0"/>
+					<qual:functionTerm qual:resultLevel="1">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<apply>
+								<or/>
+								<apply>
+								<and/>
+								<apply>
+									<eq/>
+									<ci> MTOR </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> GSK3A </ci>
+									<cn type='integer'> 0 </cn>
+								</apply>
+								</apply>
+								<apply>
+								<and/>
+								<apply>
+									<eq/>
+									<ci> MTOR </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> PTPN1 </ci>
+									<cn type='integer'> 0 </cn>
+								</apply>
+								</apply>
+								<apply>
+								<and/>
+								<apply>
+									<eq/>
+									<ci> TNF </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> PTPN1 </ci>
+									<cn type='integer'> 0 </cn>
+								</apply>
+								</apply>
+								<apply>
+								<and/>
+								<apply>
+									<eq/>
+									<ci> TNF </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> PTEN </ci>
+									<cn type='integer'> 0 </cn>
+								</apply>
+								</apply>
+								<apply>
+								<and/>
+								<apply>
+									<eq/>
+									<ci> IGF1R </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> PTEN </ci>
+									<cn type='integer'> 0 </cn>
+								</apply>
+								</apply>
+							</apply>
+						</math>
+					</qual:functionTerm>
+				</qual:listOfFunctionTerms>
+			</qual:transition>
+			<qual:transition qual:id="t3">
+				 <qual:listOfInputs> 
+					 <qual:input  qual:id="theta_t3_KIT" qual:qualitativeSpecies="KIT" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t3_PTPN11" qual:qualitativeSpecies="PTPN11" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t3_MAPK8" qual:qualitativeSpecies="MAPK8" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t3_MAP2K1" qual:qualitativeSpecies="MAP2K1" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t3_KIT" qual:qualitativeSpecies="KIT" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t3_SHC1" qual:qualitativeSpecies="SHC1" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t3_KIT" qual:qualitativeSpecies="KIT" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t3_FLT3" qual:qualitativeSpecies="FLT3" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t3_SHC1" qual:qualitativeSpecies="SHC1" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t3_PTPN11" qual:qualitativeSpecies="PTPN11" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t3_KIT" qual:qualitativeSpecies="KIT" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+				 </qual:listOfInputs>
+				 <qual:listOfOutputs>
+					 <qual:output qual:qualitativeSpecies="MAPK1" qual:transitionEffect="assignmentLevel"/>
+				 </qual:listOfOutputs>
+				<qual:listOfFunctionTerms>
+					<qual:defaultTerm qual:resultLevel="0"/>
+					<qual:functionTerm qual:resultLevel="1">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<apply>
+								<or/>
+								<apply>
+									<eq/>
+									<ci> KIT </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> PTPN11 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> MAPK8 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+								<and/>
+								<apply>
+									<eq/>
+									<ci> MAP2K1 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> KIT </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								</apply>
+								<apply>
+								<and/>
+								<apply>
+									<eq/>
+									<ci> SHC1 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> KIT </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								</apply>
+								<apply>
+								<and/>
+								<apply>
+									<eq/>
+									<ci> FLT3 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> SHC1 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								</apply>
+								<apply>
+								<and/>
+								<apply>
+									<eq/>
+									<ci> PTPN11 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> KIT </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								</apply>
+							</apply>
+						</math>
+					</qual:functionTerm>
+				</qual:listOfFunctionTerms>
+			</qual:transition>
+			<qual:transition qual:id="t4">
+				 <qual:listOfInputs> 
+					 <qual:input  qual:id="theta_t4_MAPK1" qual:qualitativeSpecies="MAPK1" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t4_MAP2K1" qual:qualitativeSpecies="MAP2K1" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t4_MAPK1" qual:qualitativeSpecies="MAPK1" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t4_RPS6KA1" qual:qualitativeSpecies="RPS6KA1" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+				 </qual:listOfInputs>
+				 <qual:listOfOutputs>
+					 <qual:output qual:qualitativeSpecies="GSK3B" qual:transitionEffect="assignmentLevel"/>
+				 </qual:listOfOutputs>
+				<qual:listOfFunctionTerms>
+					<qual:defaultTerm qual:resultLevel="0"/>
+					<qual:functionTerm qual:resultLevel="1">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<apply>
+								<or/>
+								<apply>
+								<and/>
+								<apply>
+									<eq/>
+									<ci> MAPK1 </ci>
+									<cn type='integer'> 0 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> MAP2K1 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								</apply>
+								<apply>
+								<and/>
+								<apply>
+									<eq/>
+									<ci> MAPK1 </ci>
+									<cn type='integer'> 0 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> RPS6KA1 </ci>
+									<cn type='integer'> 0 </cn>
+								</apply>
+								</apply>
+							</apply>
+						</math>
+					</qual:functionTerm>
+				</qual:listOfFunctionTerms>
+			</qual:transition>
+			<qual:transition qual:id="t5">
+				 <qual:listOfInputs> 
+					 <qual:input  qual:id="theta_t5_PTPN11" qual:qualitativeSpecies="PTPN11" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+				 </qual:listOfInputs>
+				 <qual:listOfOutputs>
+					 <qual:output qual:qualitativeSpecies="KRAS" qual:transitionEffect="assignmentLevel"/>
+				 </qual:listOfOutputs>
+				<qual:listOfFunctionTerms>
+					<qual:defaultTerm qual:resultLevel="0"/>
+					<qual:functionTerm qual:resultLevel="1">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<apply>
+								<apply>
+									<eq/>
+									<ci> PTPN11 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+							</apply>
+						</math>
+					</qual:functionTerm>
+				</qual:listOfFunctionTerms>
+			</qual:transition>
+			<qual:transition qual:id="t6">
+				 <qual:listOfInputs> 
+					 <qual:input  qual:id="theta_t6_TNF" qual:qualitativeSpecies="TNF" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t6_PIK3CA" qual:qualitativeSpecies="PIK3CA" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t6_RPS6KB1" qual:qualitativeSpecies="RPS6KB1" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t6_FLT3" qual:qualitativeSpecies="FLT3" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t6_TNF" qual:qualitativeSpecies="TNF" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+				 </qual:listOfInputs>
+				 <qual:listOfOutputs>
+					 <qual:output qual:qualitativeSpecies="MAPK14" qual:transitionEffect="assignmentLevel"/>
+				 </qual:listOfOutputs>
+				<qual:listOfFunctionTerms>
+					<qual:defaultTerm qual:resultLevel="0"/>
+					<qual:functionTerm qual:resultLevel="1">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<apply>
+								<or/>
+								<apply>
+									<eq/>
+									<ci> TNF </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> PIK3CA </ci>
+									<cn type='integer'> 0 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> RPS6KB1 </ci>
+									<cn type='integer'> 0 </cn>
+								</apply>
+								<apply>
+								<and/>
+								<apply>
+									<eq/>
+									<ci> FLT3 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> TNF </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								</apply>
+							</apply>
+						</math>
+					</qual:functionTerm>
+				</qual:listOfFunctionTerms>
+			</qual:transition>
+			<qual:transition qual:id="t7">
+				 <qual:listOfInputs> 
+					 <qual:input  qual:id="theta_t7_PIK3CA" qual:qualitativeSpecies="PIK3CA" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t7_MTOR" qual:qualitativeSpecies="MTOR" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t7_PIK3CA" qual:qualitativeSpecies="PIK3CA" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t7_RPS6KB1" qual:qualitativeSpecies="RPS6KB1" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+				 </qual:listOfInputs>
+				 <qual:listOfOutputs>
+					 <qual:output qual:qualitativeSpecies="MAP2K1" qual:transitionEffect="assignmentLevel"/>
+				 </qual:listOfOutputs>
+				<qual:listOfFunctionTerms>
+					<qual:defaultTerm qual:resultLevel="0"/>
+					<qual:functionTerm qual:resultLevel="1">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<apply>
+								<or/>
+								<apply>
+									<eq/>
+									<ci> PIK3CA </ci>
+									<cn type='integer'> 0 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> MTOR </ci>
+									<cn type='integer'> 0 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> PIK3CA </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> RPS6KB1 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+							</apply>
+						</math>
+					</qual:functionTerm>
+				</qual:listOfFunctionTerms>
+			</qual:transition>
+			<qual:transition qual:id="t8">
+				 <qual:listOfInputs> 
+					 <qual:input  qual:id="theta_t8_STAT3" qual:qualitativeSpecies="STAT3" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t8_MAPK8" qual:qualitativeSpecies="MAPK8" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+				 </qual:listOfInputs>
+				 <qual:listOfOutputs>
+					 <qual:output qual:qualitativeSpecies="MTOR" qual:transitionEffect="assignmentLevel"/>
+				 </qual:listOfOutputs>
+				<qual:listOfFunctionTerms>
+					<qual:defaultTerm qual:resultLevel="0"/>
+					<qual:functionTerm qual:resultLevel="1">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<apply>
+								<or/>
+								<apply>
+									<eq/>
+									<ci> STAT3 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> MAPK8 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+							</apply>
+						</math>
+					</qual:functionTerm>
+				</qual:listOfFunctionTerms>
+			</qual:transition>
+			<qual:transition qual:id="t9">
+				 <qual:listOfInputs> 
+				 </qual:listOfInputs>
+				 <qual:listOfOutputs>
+					 <qual:output qual:qualitativeSpecies="PDPK1" qual:transitionEffect="assignmentLevel"/>
+				 </qual:listOfOutputs>
+				<qual:listOfFunctionTerms>
+					<qual:defaultTerm qual:resultLevel="0"/>
+					<qual:functionTerm qual:resultLevel="1">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<apply>
+							</apply>
+						</math>
+					</qual:functionTerm>
+				</qual:listOfFunctionTerms>
+			</qual:transition>
+			<qual:transition qual:id="t10">
+				 <qual:listOfInputs> 
+					 <qual:input  qual:id="theta_t10_KIT" qual:qualitativeSpecies="KIT" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+				 </qual:listOfInputs>
+				 <qual:listOfOutputs>
+					 <qual:output qual:qualitativeSpecies="PTPN11" qual:transitionEffect="assignmentLevel"/>
+				 </qual:listOfOutputs>
+				<qual:listOfFunctionTerms>
+					<qual:defaultTerm qual:resultLevel="0"/>
+					<qual:functionTerm qual:resultLevel="1">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<apply>
+								<apply>
+									<eq/>
+									<ci> KIT </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+							</apply>
+						</math>
+					</qual:functionTerm>
+				</qual:listOfFunctionTerms>
+			</qual:transition>
+			<qual:transition qual:id="t11">
+				 <qual:listOfInputs> 
+					 <qual:input  qual:id="theta_t11_PDPK1" qual:qualitativeSpecies="PDPK1" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+				 </qual:listOfInputs>
+				 <qual:listOfOutputs>
+					 <qual:output qual:qualitativeSpecies="RPS6KA1" qual:transitionEffect="assignmentLevel"/>
+				 </qual:listOfOutputs>
+				<qual:listOfFunctionTerms>
+					<qual:defaultTerm qual:resultLevel="0"/>
+					<qual:functionTerm qual:resultLevel="1">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<apply>
+								<apply>
+									<eq/>
+									<ci> PDPK1 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+							</apply>
+						</math>
+					</qual:functionTerm>
+				</qual:listOfFunctionTerms>
+			</qual:transition>
+			<qual:transition qual:id="t12">
+				 <qual:listOfInputs> 
+					 <qual:input  qual:id="theta_t12_STAT3" qual:qualitativeSpecies="STAT3" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+				 </qual:listOfInputs>
+				 <qual:listOfOutputs>
+					 <qual:output qual:qualitativeSpecies="RPS6KB1" qual:transitionEffect="assignmentLevel"/>
+				 </qual:listOfOutputs>
+				<qual:listOfFunctionTerms>
+					<qual:defaultTerm qual:resultLevel="0"/>
+					<qual:functionTerm qual:resultLevel="1">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<apply>
+								<apply>
+									<eq/>
+									<ci> STAT3 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+							</apply>
+						</math>
+					</qual:functionTerm>
+				</qual:listOfFunctionTerms>
+			</qual:transition>
+			<qual:transition qual:id="t13">
+				 <qual:listOfInputs> 
+				 </qual:listOfInputs>
+				 <qual:listOfOutputs>
+					 <qual:output qual:qualitativeSpecies="TNF" qual:transitionEffect="assignmentLevel"/>
+				 </qual:listOfOutputs>
+				<qual:listOfFunctionTerms>
+					<qual:defaultTerm qual:resultLevel="0"/>
+					<qual:functionTerm qual:resultLevel="1">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<apply>
+							</apply>
+						</math>
+					</qual:functionTerm>
+				</qual:listOfFunctionTerms>
+			</qual:transition>
+			<qual:transition qual:id="t14">
+				 <qual:listOfInputs> 
+				 </qual:listOfInputs>
+				 <qual:listOfOutputs>
+					 <qual:output qual:qualitativeSpecies="IGF1R" qual:transitionEffect="assignmentLevel"/>
+				 </qual:listOfOutputs>
+				<qual:listOfFunctionTerms>
+					<qual:defaultTerm qual:resultLevel="0"/>
+					<qual:functionTerm qual:resultLevel="1">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<apply>
+							</apply>
+						</math>
+					</qual:functionTerm>
+				</qual:listOfFunctionTerms>
+			</qual:transition>
+			<qual:transition qual:id="t15">
+				 <qual:listOfInputs> 
+					 <qual:input  qual:id="theta_t15_INSR" qual:qualitativeSpecies="INSR" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t15_IGF1R" qual:qualitativeSpecies="IGF1R" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t15_INSR" qual:qualitativeSpecies="INSR" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t15_INSR" qual:qualitativeSpecies="INSR" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t15_PTPN1" qual:qualitativeSpecies="PTPN1" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+				 </qual:listOfInputs>
+				 <qual:listOfOutputs>
+					 <qual:output qual:qualitativeSpecies="IRS1" qual:transitionEffect="assignmentLevel"/>
+				 </qual:listOfOutputs>
+				<qual:listOfFunctionTerms>
+					<qual:defaultTerm qual:resultLevel="0"/>
+					<qual:functionTerm qual:resultLevel="1">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<apply>
+								<or/>
+								<apply>
+									<eq/>
+									<ci> INSR </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+								<and/>
+								<apply>
+									<eq/>
+									<ci> IGF1R </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> INSR </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								</apply>
+								<apply>
+								<and/>
+								<apply>
+									<eq/>
+									<ci> INSR </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> PTPN1 </ci>
+									<cn type='integer'> 0 </cn>
+								</apply>
+								</apply>
+							</apply>
+						</math>
+					</qual:functionTerm>
+				</qual:listOfFunctionTerms>
+			</qual:transition>
+			<qual:transition qual:id="t16">
+				 <qual:listOfInputs> 
+					 <qual:input  qual:id="theta_t16_FLT3" qual:qualitativeSpecies="FLT3" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t16_CREB1" qual:qualitativeSpecies="CREB1" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t16_RPS6" qual:qualitativeSpecies="RPS6" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t16_MAPK8" qual:qualitativeSpecies="MAPK8" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t16_PIK3CA" qual:qualitativeSpecies="PIK3CA" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+				 </qual:listOfInputs>
+				 <qual:listOfOutputs>
+					 <qual:output qual:qualitativeSpecies="GSK3A" qual:transitionEffect="assignmentLevel"/>
+				 </qual:listOfOutputs>
+				<qual:listOfFunctionTerms>
+					<qual:defaultTerm qual:resultLevel="0"/>
+					<qual:functionTerm qual:resultLevel="1">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<apply>
+								<or/>
+								<apply>
+									<eq/>
+									<ci> FLT3 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> CREB1 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> RPS6 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> MAPK8 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> PIK3CA </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+							</apply>
+						</math>
+					</qual:functionTerm>
+				</qual:listOfFunctionTerms>
+			</qual:transition>
+			<qual:transition qual:id="t17">
+				 <qual:listOfInputs> 
+					 <qual:input  qual:id="theta_t17_PTPN1" qual:qualitativeSpecies="PTPN1" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t17_GSK3A" qual:qualitativeSpecies="GSK3A" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t17_GSK3A" qual:qualitativeSpecies="GSK3A" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t17_CBL" qual:qualitativeSpecies="CBL" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+				 </qual:listOfInputs>
+				 <qual:listOfOutputs>
+					 <qual:output qual:qualitativeSpecies="INSR" qual:transitionEffect="assignmentLevel"/>
+				 </qual:listOfOutputs>
+				<qual:listOfFunctionTerms>
+					<qual:defaultTerm qual:resultLevel="0"/>
+					<qual:functionTerm qual:resultLevel="1">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<apply>
+								<or/>
+								<apply>
+									<eq/>
+									<ci> PTPN1 </ci>
+									<cn type='integer'> 0 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> GSK3A </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+								<and/>
+								<apply>
+									<eq/>
+									<ci> GSK3A </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> CBL </ci>
+									<cn type='integer'> 0 </cn>
+								</apply>
+								</apply>
+							</apply>
+						</math>
+					</qual:functionTerm>
+				</qual:listOfFunctionTerms>
+			</qual:transition>
+			<qual:transition qual:id="t18">
+				 <qual:listOfInputs> 
+					 <qual:input  qual:id="theta_t18_IGF1R" qual:qualitativeSpecies="IGF1R" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t18_INSR" qual:qualitativeSpecies="INSR" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+				 </qual:listOfInputs>
+				 <qual:listOfOutputs>
+					 <qual:output qual:qualitativeSpecies="SHC1" qual:transitionEffect="assignmentLevel"/>
+				 </qual:listOfOutputs>
+				<qual:listOfFunctionTerms>
+					<qual:defaultTerm qual:resultLevel="0"/>
+					<qual:functionTerm qual:resultLevel="1">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<apply>
+								<and/>
+								<apply>
+									<eq/>
+									<ci> IGF1R </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> INSR </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+							</apply>
+						</math>
+					</qual:functionTerm>
+				</qual:listOfFunctionTerms>
+			</qual:transition>
+			<qual:transition qual:id="t19">
+				 <qual:listOfInputs> 
+					 <qual:input  qual:id="theta_t19_IRS1" qual:qualitativeSpecies="IRS1" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t19_IRS1" qual:qualitativeSpecies="IRS1" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t19_SHC1" qual:qualitativeSpecies="SHC1" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t19_IRS1" qual:qualitativeSpecies="IRS1" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t19_KIT" qual:qualitativeSpecies="KIT" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t19_FLT3" qual:qualitativeSpecies="FLT3" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t19_SHC1" qual:qualitativeSpecies="SHC1" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+				 </qual:listOfInputs>
+				 <qual:listOfOutputs>
+					 <qual:output qual:qualitativeSpecies="GRB2" qual:transitionEffect="assignmentLevel"/>
+				 </qual:listOfOutputs>
+				<qual:listOfFunctionTerms>
+					<qual:defaultTerm qual:resultLevel="0"/>
+					<qual:functionTerm qual:resultLevel="1">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<apply>
+								<or/>
+								<apply>
+									<eq/>
+									<ci> IRS1 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+								<and/>
+								<apply>
+									<eq/>
+									<ci> IRS1 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> SHC1 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								</apply>
+								<apply>
+								<and/>
+								<apply>
+									<eq/>
+									<ci> IRS1 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> KIT </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								</apply>
+								<apply>
+								<and/>
+								<apply>
+									<eq/>
+									<ci> FLT3 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> SHC1 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								</apply>
+							</apply>
+						</math>
+					</qual:functionTerm>
+				</qual:listOfFunctionTerms>
+			</qual:transition>
+			<qual:transition qual:id="t20">
+				 <qual:listOfInputs> 
+				 </qual:listOfInputs>
+				 <qual:listOfOutputs>
+					 <qual:output qual:qualitativeSpecies="KIT" qual:transitionEffect="assignmentLevel"/>
+				 </qual:listOfOutputs>
+				<qual:listOfFunctionTerms>
+					<qual:defaultTerm qual:resultLevel="0"/>
+					<qual:functionTerm qual:resultLevel="1">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<apply>
+							</apply>
+						</math>
+					</qual:functionTerm>
+				</qual:listOfFunctionTerms>
+			</qual:transition>
+			<qual:transition qual:id="t21">
+				 <qual:listOfInputs> 
+				 </qual:listOfInputs>
+				 <qual:listOfOutputs>
+					 <qual:output qual:qualitativeSpecies="PTPN1" qual:transitionEffect="assignmentLevel"/>
+				 </qual:listOfOutputs>
+				<qual:listOfFunctionTerms>
+					<qual:defaultTerm qual:resultLevel="0"/>
+					<qual:functionTerm qual:resultLevel="1">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<apply>
+							</apply>
+						</math>
+					</qual:functionTerm>
+				</qual:listOfFunctionTerms>
+			</qual:transition>
+			<qual:transition qual:id="t22">
+				 <qual:listOfInputs> 
+					 <qual:input  qual:id="theta_t22_INSR" qual:qualitativeSpecies="INSR" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t22_GRB2" qual:qualitativeSpecies="GRB2" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+				 </qual:listOfInputs>
+				 <qual:listOfOutputs>
+					 <qual:output qual:qualitativeSpecies="CBL" qual:transitionEffect="assignmentLevel"/>
+				 </qual:listOfOutputs>
+				<qual:listOfFunctionTerms>
+					<qual:defaultTerm qual:resultLevel="0"/>
+					<qual:functionTerm qual:resultLevel="1">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<apply>
+								<or/>
+								<apply>
+									<eq/>
+									<ci> INSR </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> GRB2 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+							</apply>
+						</math>
+					</qual:functionTerm>
+				</qual:listOfFunctionTerms>
+			</qual:transition>
+			<qual:transition qual:id="t23">
+				 <qual:listOfInputs> 
+					 <qual:input  qual:id="theta_t23_GSK3B" qual:qualitativeSpecies="GSK3B" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t23_CREB1" qual:qualitativeSpecies="CREB1" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t23_TSC2" qual:qualitativeSpecies="TSC2" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t23_RPS6KB1" qual:qualitativeSpecies="RPS6KB1" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t23_TSC2" qual:qualitativeSpecies="TSC2" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t23_RPS6" qual:qualitativeSpecies="RPS6" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+				 </qual:listOfInputs>
+				 <qual:listOfOutputs>
+					 <qual:output qual:qualitativeSpecies="PTEN" qual:transitionEffect="assignmentLevel"/>
+				 </qual:listOfOutputs>
+				<qual:listOfFunctionTerms>
+					<qual:defaultTerm qual:resultLevel="0"/>
+					<qual:functionTerm qual:resultLevel="1">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<apply>
+								<or/>
+								<apply>
+									<eq/>
+									<ci> GSK3B </ci>
+									<cn type='integer'> 0 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> CREB1 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> TSC2 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> RPS6KB1 </ci>
+									<cn type='integer'> 0 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> TSC2 </ci>
+									<cn type='integer'> 0 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> RPS6 </ci>
+									<cn type='integer'> 0 </cn>
+								</apply>
+							</apply>
+						</math>
+					</qual:functionTerm>
+				</qual:listOfFunctionTerms>
+			</qual:transition>
+			<qual:transition qual:id="t24">
+				 <qual:listOfInputs> 
+					 <qual:input  qual:id="theta_t24_MAPK1" qual:qualitativeSpecies="MAPK1" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t24_MAPK1" qual:qualitativeSpecies="MAPK1" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t24_GSK3B" qual:qualitativeSpecies="GSK3B" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+				 </qual:listOfInputs>
+				 <qual:listOfOutputs>
+					 <qual:output qual:qualitativeSpecies="TSC2" qual:transitionEffect="assignmentLevel"/>
+				 </qual:listOfOutputs>
+				<qual:listOfFunctionTerms>
+					<qual:defaultTerm qual:resultLevel="0"/>
+					<qual:functionTerm qual:resultLevel="1">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<apply>
+								<or/>
+								<apply>
+									<eq/>
+									<ci> MAPK1 </ci>
+									<cn type='integer'> 0 </cn>
+								</apply>
+								<apply>
+								<and/>
+								<apply>
+									<eq/>
+									<ci> MAPK1 </ci>
+									<cn type='integer'> 0 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> GSK3B </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								</apply>
+							</apply>
+						</math>
+					</qual:functionTerm>
+				</qual:listOfFunctionTerms>
+			</qual:transition>
+			<qual:transition qual:id="t25">
+				 <qual:listOfInputs> 
+					 <qual:input  qual:id="theta_t25_FLT3" qual:qualitativeSpecies="FLT3" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t25_TNF" qual:qualitativeSpecies="TNF" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+				 </qual:listOfInputs>
+				 <qual:listOfOutputs>
+					 <qual:output qual:qualitativeSpecies="MAPK8" qual:transitionEffect="assignmentLevel"/>
+				 </qual:listOfOutputs>
+				<qual:listOfFunctionTerms>
+					<qual:defaultTerm qual:resultLevel="0"/>
+					<qual:functionTerm qual:resultLevel="1">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<apply>
+								<and/>
+								<apply>
+									<eq/>
+									<ci> FLT3 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> TNF </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+							</apply>
+						</math>
+					</qual:functionTerm>
+				</qual:listOfFunctionTerms>
+			</qual:transition>
+			<qual:transition qual:id="t26">
+				 <qual:listOfInputs> 
+					 <qual:input  qual:id="theta_t26_INSR" qual:qualitativeSpecies="INSR" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t26_CBL" qual:qualitativeSpecies="CBL" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t26_FLT3" qual:qualitativeSpecies="FLT3" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t26_KRAS" qual:qualitativeSpecies="KRAS" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t26_IRS1" qual:qualitativeSpecies="IRS1" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t26_KRAS" qual:qualitativeSpecies="KRAS" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t26_PTPN11" qual:qualitativeSpecies="PTPN11" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t26_TNF" qual:qualitativeSpecies="TNF" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t26_IRS1" qual:qualitativeSpecies="IRS1" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t26_TNF" qual:qualitativeSpecies="TNF" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t26_PTEN" qual:qualitativeSpecies="PTEN" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t26_PTPN11" qual:qualitativeSpecies="PTPN11" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t26_IGF1R" qual:qualitativeSpecies="IGF1R" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t26_IRS1" qual:qualitativeSpecies="IRS1" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t26_CBL" qual:qualitativeSpecies="CBL" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t26_PTPN11" qual:qualitativeSpecies="PTPN11" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t26_IRS1" qual:qualitativeSpecies="IRS1" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t26_PTPN11" qual:qualitativeSpecies="PTPN11" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t26_INSR" qual:qualitativeSpecies="INSR" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t26_KIT" qual:qualitativeSpecies="KIT" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t26_CBL" qual:qualitativeSpecies="CBL" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t26_GRB2" qual:qualitativeSpecies="GRB2" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t26_KIT" qual:qualitativeSpecies="KIT" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t26_CBL" qual:qualitativeSpecies="CBL" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t26_PTEN" qual:qualitativeSpecies="PTEN" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t26_PTPN11" qual:qualitativeSpecies="PTPN11" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t26_CBL" qual:qualitativeSpecies="CBL" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+				 </qual:listOfInputs>
+				 <qual:listOfOutputs>
+					 <qual:output qual:qualitativeSpecies="PIK3CA" qual:transitionEffect="assignmentLevel"/>
+				 </qual:listOfOutputs>
+				<qual:listOfFunctionTerms>
+					<qual:defaultTerm qual:resultLevel="0"/>
+					<qual:functionTerm qual:resultLevel="1">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<apply>
+								<or/>
+								<apply>
+									<eq/>
+									<ci> INSR </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> CBL </ci>
+									<cn type='integer'> 0 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> FLT3 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+								<and/>
+								<apply>
+									<eq/>
+									<ci> KRAS </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> IRS1 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								</apply>
+								<apply>
+								<and/>
+								<apply>
+									<eq/>
+									<ci> KRAS </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> PTPN11 </ci>
+									<cn type='integer'> 0 </cn>
+								</apply>
+								</apply>
+								<apply>
+								<and/>
+								<apply>
+									<eq/>
+									<ci> TNF </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> IRS1 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								</apply>
+								<apply>
+								<and/>
+								<apply>
+									<eq/>
+									<ci> TNF </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> PTEN </ci>
+									<cn type='integer'> 0 </cn>
+								</apply>
+								</apply>
+								<apply>
+								<and/>
+								<apply>
+									<eq/>
+									<ci> PTPN11 </ci>
+									<cn type='integer'> 0 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> IGF1R </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								</apply>
+								<apply>
+								<and/>
+								<apply>
+									<eq/>
+									<ci> IRS1 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> CBL </ci>
+									<cn type='integer'> 0 </cn>
+								</apply>
+								</apply>
+								<apply>
+								<and/>
+								<apply>
+									<eq/>
+									<ci> PTPN11 </ci>
+									<cn type='integer'> 0 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> IRS1 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								</apply>
+								<apply>
+								<and/>
+								<apply>
+									<eq/>
+									<ci> PTPN11 </ci>
+									<cn type='integer'> 0 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> INSR </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								</apply>
+								<apply>
+								<and/>
+								<apply>
+									<eq/>
+									<ci> KIT </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> CBL </ci>
+									<cn type='integer'> 0 </cn>
+								</apply>
+								</apply>
+								<apply>
+								<and/>
+								<apply>
+									<eq/>
+									<ci> GRB2 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> KIT </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								</apply>
+								<apply>
+								<and/>
+								<apply>
+									<eq/>
+									<ci> CBL </ci>
+									<cn type='integer'> 0 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> PTEN </ci>
+									<cn type='integer'> 0 </cn>
+								</apply>
+								</apply>
+								<apply>
+								<and/>
+								<apply>
+									<eq/>
+									<ci> PTPN11 </ci>
+									<cn type='integer'> 0 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> CBL </ci>
+									<cn type='integer'> 0 </cn>
+								</apply>
+								</apply>
+							</apply>
+						</math>
+					</qual:functionTerm>
+				</qual:listOfFunctionTerms>
+			</qual:transition>
+			<qual:transition qual:id="t27">
+				 <qual:listOfInputs> 
+					 <qual:input  qual:id="theta_t27_MAPK1" qual:qualitativeSpecies="MAPK1" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t27_MAPK8" qual:qualitativeSpecies="MAPK8" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t27_MAPK14" qual:qualitativeSpecies="MAPK14" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t27_MTOR" qual:qualitativeSpecies="MTOR" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t27_PTPN1" qual:qualitativeSpecies="PTPN1" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+				 </qual:listOfInputs>
+				 <qual:listOfOutputs>
+					 <qual:output qual:qualitativeSpecies="STAT3" qual:transitionEffect="assignmentLevel"/>
+				 </qual:listOfOutputs>
+				<qual:listOfFunctionTerms>
+					<qual:defaultTerm qual:resultLevel="0"/>
+					<qual:functionTerm qual:resultLevel="1">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<apply>
+								<or/>
+								<apply>
+									<eq/>
+									<ci> MAPK1 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+								<and/>
+								<apply>
+									<eq/>
+									<ci> MAPK8 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> MAPK14 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								</apply>
+								<apply>
+								<and/>
+								<apply>
+									<eq/>
+									<ci> MTOR </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> PTPN1 </ci>
+									<cn type='integer'> 0 </cn>
+								</apply>
+								</apply>
+							</apply>
+						</math>
+					</qual:functionTerm>
+				</qual:listOfFunctionTerms>
+			</qual:transition>
+			<qual:transition qual:id="t28">
+				 <qual:listOfInputs> 
+					 <qual:input  qual:id="theta_t28_MAPK8" qual:qualitativeSpecies="MAPK8" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+				 </qual:listOfInputs>
+				 <qual:listOfOutputs>
+					 <qual:output qual:qualitativeSpecies="RPS6" qual:transitionEffect="assignmentLevel"/>
+				 </qual:listOfOutputs>
+				<qual:listOfFunctionTerms>
+					<qual:defaultTerm qual:resultLevel="0"/>
+					<qual:functionTerm qual:resultLevel="1">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<apply>
+								<apply>
+									<eq/>
+									<ci> MAPK8 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+							</apply>
+						</math>
+					</qual:functionTerm>
+				</qual:listOfFunctionTerms>
+			</qual:transition>
+			<qual:transition qual:id="t29">
+				 <qual:listOfInputs> 
+					 <qual:input  qual:id="theta_t29_PTEN" qual:qualitativeSpecies="PTEN" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t29_AKT1" qual:qualitativeSpecies="AKT1" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t29_MAPK14" qual:qualitativeSpecies="MAPK14" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t29_GSK3B" qual:qualitativeSpecies="GSK3B" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t29_PTEN" qual:qualitativeSpecies="PTEN" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+				 </qual:listOfInputs>
+				 <qual:listOfOutputs>
+					 <qual:output qual:qualitativeSpecies="CREB1" qual:transitionEffect="assignmentLevel"/>
+				 </qual:listOfOutputs>
+				<qual:listOfFunctionTerms>
+					<qual:defaultTerm qual:resultLevel="0"/>
+					<qual:functionTerm qual:resultLevel="1">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<apply>
+								<or/>
+								<apply>
+									<eq/>
+									<ci> PTEN </ci>
+									<cn type='integer'> 0 </cn>
+								</apply>
+								<apply>
+								<and/>
+								<apply>
+									<eq/>
+									<ci> AKT1 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> MAPK14 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								</apply>
+								<apply>
+								<and/>
+								<apply>
+									<eq/>
+									<ci> GSK3B </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> PTEN </ci>
+									<cn type='integer'> 0 </cn>
+								</apply>
+								</apply>
+							</apply>
+						</math>
+					</qual:functionTerm>
+				</qual:listOfFunctionTerms>
+			</qual:transition>
+			<qual:transition qual:id="t30">
+				 <qual:listOfInputs> 
+					 <qual:input  qual:id="theta_t30_STAT3" qual:qualitativeSpecies="STAT3" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t30_FLT3" qual:qualitativeSpecies="FLT3" qual:transitionEffect="none" qual:sign="positive" qual:thresholdLevel="1"/>
+					 <qual:input  qual:id="theta_t30_PTEN" qual:qualitativeSpecies="PTEN" qual:transitionEffect="none" qual:sign="negative" qual:thresholdLevel="1"/>
+				 </qual:listOfInputs>
+				 <qual:listOfOutputs>
+					 <qual:output qual:qualitativeSpecies="STAT5A" qual:transitionEffect="assignmentLevel"/>
+				 </qual:listOfOutputs>
+				<qual:listOfFunctionTerms>
+					<qual:defaultTerm qual:resultLevel="0"/>
+					<qual:functionTerm qual:resultLevel="1">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<apply>
+								<or/>
+								<apply>
+									<eq/>
+									<ci> STAT3 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+								<and/>
+								<apply>
+									<eq/>
+									<ci> FLT3 </ci>
+									<cn type='integer'> 1 </cn>
+								</apply>
+								<apply>
+									<eq/>
+									<ci> PTEN </ci>
+									<cn type='integer'> 0 </cn>
+								</apply>
+								</apply>
+							</apply>
+						</math>
+					</qual:functionTerm>
+				</qual:listOfFunctionTerms>
+			</qual:transition>
+		</qual:listOfTransitions>
+	</model>
+</sbml>
