@@ -1,3 +1,3 @@
 ### Modifications
 
-Regulation sing of `E2F1 -> ORC` changed from `negative` to `unknown` to ensure integrity with the update function.
+Model is reproduced as is, only with two identity inputs (`GF_High` and `Trail`) set to free.

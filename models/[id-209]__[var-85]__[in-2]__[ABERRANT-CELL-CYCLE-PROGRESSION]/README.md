@@ -2,15 +2,15 @@
 
  - Variables: 85
  - Inputs: 2
- - Regulations: 372
+ - Regulations: 373
  - Publication: https://doi.org/10.1371/journal.pcbi.1006402
- - Source: https://doi.org/10.1371/journal.pcbi.1006402
- - Keywords: curated, repaired
+ - Source: ['https://doi.org/10.1371/journal.pcbi.1006402', 'https://www.ebi.ac.uk/biomodels/MODEL2006170002']
+ - Keywords: curated, repaired, biomodels
 
 
 ### Modifications
 
-Regulation sing of `E2F1 -> ORC` changed from `negative` to `unknown` to ensure integrity with the update function.
+Model is reproduced as is, only with two identity inputs (`GF_High` and `Trail`) set to free.
 
 ### Model citation
 
