@@ -1,0 +1,948 @@
+{
+  "Model": {
+    "Name": "",
+    "Variables": [
+      {
+        "Id": 0,
+        "Name": "v_ADPmore_thanATP_A",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(2), var(27))"
+      },
+      {
+        "Id": 1,
+        "Name": "v_ADPmore_thanATP_B",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(28), var(3))"
+      },
+      {
+        "Id": 2,
+        "Name": "v_ATPmore_thanADP_A",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(24), var(0))"
+      },
+      {
+        "Id": 3,
+        "Name": "v_ATPmore_thanADP_B",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(1), var(25))"
+      },
+      {
+        "Id": 4,
+        "Name": "v_CaNa_ch_close_A",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(5), var(15))"
+      },
+      {
+        "Id": 5,
+        "Name": "v_CaNa_ch_open_A",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(4), var(13))"
+      },
+      {
+        "Id": 6,
+        "Name": "v_CaNa_in_A",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(7), var(5))"
+      },
+      {
+        "Id": 7,
+        "Name": "v_CaNa_out_A",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(6), var(4))"
+      },
+      {
+        "Id": 8,
+        "Name": "v_Ca_in_B",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(9), var(11))"
+      },
+      {
+        "Id": 9,
+        "Name": "v_Ca_out_B",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(8), var(10))"
+      },
+      {
+        "Id": 10,
+        "Name": "v_Cach_close_B",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(11), var(16))"
+      },
+      {
+        "Id": 11,
+        "Name": "v_Cach_open_B",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(10), var(14))"
+      },
+      {
+        "Id": 12,
+        "Name": "v_H_glucose",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(22)"
+      },
+      {
+        "Id": 13,
+        "Name": "v_K_in_A",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(15), var(17))"
+      },
+      {
+        "Id": 14,
+        "Name": "v_K_in_B",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(16), var(18))"
+      },
+      {
+        "Id": 15,
+        "Name": "v_K_out_A",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(13), var(19))"
+      },
+      {
+        "Id": 16,
+        "Name": "v_K_out_B",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(14), var(20))"
+      },
+      {
+        "Id": 17,
+        "Name": "v_Kch_close_A",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(19), var(0))"
+      },
+      {
+        "Id": 18,
+        "Name": "v_Kch_close_B",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(20), var(3))"
+      },
+      {
+        "Id": 19,
+        "Name": "v_Kch_open_A",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(17), var(2))"
+      },
+      {
+        "Id": 20,
+        "Name": "v_Kch_open_B",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(18), var(1))"
+      },
+      {
+        "Id": 21,
+        "Name": "v_L_glucose",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(22)"
+      },
+      {
+        "Id": 22,
+        "Name": "v_N_glucose",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(var(26), var(23))"
+      },
+      {
+        "Id": 23,
+        "Name": "v_glucagon",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(29)"
+      },
+      {
+        "Id": 24,
+        "Name": "v_glucose_in_A",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(23)"
+      },
+      {
+        "Id": 25,
+        "Name": "v_glucose_in_B",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(12), var(9))"
+      },
+      {
+        "Id": 26,
+        "Name": "v_insuline",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(30)"
+      },
+      {
+        "Id": 27,
+        "Name": "v_low_inside_A",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(21), var(7))"
+      },
+      {
+        "Id": 28,
+        "Name": "v_low_inside_B",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "var(26)"
+      },
+      {
+        "Id": 29,
+        "Name": "v_ready_A",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(7), var(5))"
+      },
+      {
+        "Id": 30,
+        "Name": "v_ready_B",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(9), var(11))"
+      }
+    ],
+    "Relationships": [
+      {
+        "Id": 4,
+        "FromVariable": 0,
+        "ToVariable": 2,
+        "Type": "Activator"
+      },
+      {
+        "Id": 33,
+        "FromVariable": 0,
+        "ToVariable": 17,
+        "Type": "Activator"
+      },
+      {
+        "Id": 6,
+        "FromVariable": 1,
+        "ToVariable": 3,
+        "Type": "Activator"
+      },
+      {
+        "Id": 39,
+        "FromVariable": 1,
+        "ToVariable": 20,
+        "Type": "Activator"
+      },
+      {
+        "Id": 0,
+        "FromVariable": 2,
+        "ToVariable": 0,
+        "Type": "Activator"
+      },
+      {
+        "Id": 37,
+        "FromVariable": 2,
+        "ToVariable": 19,
+        "Type": "Activator"
+      },
+      {
+        "Id": 2,
+        "FromVariable": 3,
+        "ToVariable": 1,
+        "Type": "Activator"
+      },
+      {
+        "Id": 35,
+        "FromVariable": 3,
+        "ToVariable": 18,
+        "Type": "Activator"
+      },
+      {
+        "Id": 10,
+        "FromVariable": 4,
+        "ToVariable": 5,
+        "Type": "Activator"
+      },
+      {
+        "Id": 14,
+        "FromVariable": 4,
+        "ToVariable": 7,
+        "Type": "Activator"
+      },
+      {
+        "Id": 8,
+        "FromVariable": 5,
+        "ToVariable": 4,
+        "Type": "Activator"
+      },
+      {
+        "Id": 12,
+        "FromVariable": 5,
+        "ToVariable": 6,
+        "Type": "Activator"
+      },
+      {
+        "Id": 52,
+        "FromVariable": 5,
+        "ToVariable": 29,
+        "Type": "Activator"
+      },
+      {
+        "Id": 15,
+        "FromVariable": 6,
+        "ToVariable": 7,
+        "Type": "Activator"
+      },
+      {
+        "Id": 13,
+        "FromVariable": 7,
+        "ToVariable": 6,
+        "Type": "Activator"
+      },
+      {
+        "Id": 49,
+        "FromVariable": 7,
+        "ToVariable": 27,
+        "Type": "Activator"
+      },
+      {
+        "Id": 53,
+        "FromVariable": 7,
+        "ToVariable": 29,
+        "Type": "Activator"
+      },
+      {
+        "Id": 18,
+        "FromVariable": 8,
+        "ToVariable": 9,
+        "Type": "Activator"
+      },
+      {
+        "Id": 16,
+        "FromVariable": 9,
+        "ToVariable": 8,
+        "Type": "Activator"
+      },
+      {
+        "Id": 46,
+        "FromVariable": 9,
+        "ToVariable": 25,
+        "Type": "Activator"
+      },
+      {
+        "Id": 54,
+        "FromVariable": 9,
+        "ToVariable": 30,
+        "Type": "Activator"
+      },
+      {
+        "Id": 19,
+        "FromVariable": 10,
+        "ToVariable": 9,
+        "Type": "Activator"
+      },
+      {
+        "Id": 22,
+        "FromVariable": 10,
+        "ToVariable": 11,
+        "Type": "Activator"
+      },
+      {
+        "Id": 17,
+        "FromVariable": 11,
+        "ToVariable": 8,
+        "Type": "Activator"
+      },
+      {
+        "Id": 20,
+        "FromVariable": 11,
+        "ToVariable": 10,
+        "Type": "Activator"
+      },
+      {
+        "Id": 55,
+        "FromVariable": 11,
+        "ToVariable": 30,
+        "Type": "Activator"
+      },
+      {
+        "Id": 47,
+        "FromVariable": 12,
+        "ToVariable": 25,
+        "Type": "Activator"
+      },
+      {
+        "Id": 11,
+        "FromVariable": 13,
+        "ToVariable": 5,
+        "Type": "Activator"
+      },
+      {
+        "Id": 29,
+        "FromVariable": 13,
+        "ToVariable": 15,
+        "Type": "Activator"
+      },
+      {
+        "Id": 23,
+        "FromVariable": 14,
+        "ToVariable": 11,
+        "Type": "Activator"
+      },
+      {
+        "Id": 31,
+        "FromVariable": 14,
+        "ToVariable": 16,
+        "Type": "Activator"
+      },
+      {
+        "Id": 9,
+        "FromVariable": 15,
+        "ToVariable": 4,
+        "Type": "Activator"
+      },
+      {
+        "Id": 25,
+        "FromVariable": 15,
+        "ToVariable": 13,
+        "Type": "Activator"
+      },
+      {
+        "Id": 21,
+        "FromVariable": 16,
+        "ToVariable": 10,
+        "Type": "Activator"
+      },
+      {
+        "Id": 27,
+        "FromVariable": 16,
+        "ToVariable": 14,
+        "Type": "Activator"
+      },
+      {
+        "Id": 26,
+        "FromVariable": 17,
+        "ToVariable": 13,
+        "Type": "Activator"
+      },
+      {
+        "Id": 38,
+        "FromVariable": 17,
+        "ToVariable": 19,
+        "Type": "Activator"
+      },
+      {
+        "Id": 28,
+        "FromVariable": 18,
+        "ToVariable": 14,
+        "Type": "Activator"
+      },
+      {
+        "Id": 40,
+        "FromVariable": 18,
+        "ToVariable": 20,
+        "Type": "Activator"
+      },
+      {
+        "Id": 30,
+        "FromVariable": 19,
+        "ToVariable": 15,
+        "Type": "Activator"
+      },
+      {
+        "Id": 34,
+        "FromVariable": 19,
+        "ToVariable": 17,
+        "Type": "Activator"
+      },
+      {
+        "Id": 32,
+        "FromVariable": 20,
+        "ToVariable": 16,
+        "Type": "Activator"
+      },
+      {
+        "Id": 36,
+        "FromVariable": 20,
+        "ToVariable": 18,
+        "Type": "Activator"
+      },
+      {
+        "Id": 50,
+        "FromVariable": 21,
+        "ToVariable": 27,
+        "Type": "Activator"
+      },
+      {
+        "Id": 24,
+        "FromVariable": 22,
+        "ToVariable": 12,
+        "Type": "Activator"
+      },
+      {
+        "Id": 41,
+        "FromVariable": 22,
+        "ToVariable": 21,
+        "Type": "Activator"
+      },
+      {
+        "Id": 42,
+        "FromVariable": 23,
+        "ToVariable": 22,
+        "Type": "Activator"
+      },
+      {
+        "Id": 45,
+        "FromVariable": 23,
+        "ToVariable": 24,
+        "Type": "Activator"
+      },
+      {
+        "Id": 5,
+        "FromVariable": 24,
+        "ToVariable": 2,
+        "Type": "Activator"
+      },
+      {
+        "Id": 7,
+        "FromVariable": 25,
+        "ToVariable": 3,
+        "Type": "Activator"
+      },
+      {
+        "Id": 43,
+        "FromVariable": 26,
+        "ToVariable": 22,
+        "Type": "Activator"
+      },
+      {
+        "Id": 51,
+        "FromVariable": 26,
+        "ToVariable": 28,
+        "Type": "Activator"
+      },
+      {
+        "Id": 1,
+        "FromVariable": 27,
+        "ToVariable": 0,
+        "Type": "Activator"
+      },
+      {
+        "Id": 3,
+        "FromVariable": 28,
+        "ToVariable": 1,
+        "Type": "Activator"
+      },
+      {
+        "Id": 44,
+        "FromVariable": 29,
+        "ToVariable": 23,
+        "Type": "Activator"
+      },
+      {
+        "Id": 48,
+        "FromVariable": 30,
+        "ToVariable": 26,
+        "Type": "Activator"
+      }
+    ]
+  },
+  "Layout": {
+    "Variables": [
+      {
+        "Id": 0,
+        "Name": "v_ADPmore_thanATP_A",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 1,
+        "Name": "v_ADPmore_thanATP_B",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 2,
+        "Name": "v_ATPmore_thanADP_A",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 3,
+        "Name": "v_ATPmore_thanADP_B",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 300.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 4,
+        "Name": "v_CaNa_ch_close_A",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 375.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 5,
+        "Name": "v_CaNa_ch_open_A",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 6,
+        "Name": "v_CaNa_in_A",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 7,
+        "Name": "v_CaNa_out_A",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 8,
+        "Name": "v_Ca_in_B",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 300.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 9,
+        "Name": "v_Ca_out_B",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 375.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 10,
+        "Name": "v_Cach_close_B",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 11,
+        "Name": "v_Cach_open_B",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 12,
+        "Name": "v_H_glucose",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 13,
+        "Name": "v_K_in_A",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 300.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 14,
+        "Name": "v_K_in_B",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 375.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 15,
+        "Name": "v_K_out_A",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 16,
+        "Name": "v_K_out_B",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 17,
+        "Name": "v_Kch_close_A",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 18,
+        "Name": "v_Kch_close_B",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 300.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 19,
+        "Name": "v_Kch_open_A",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 375.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 20,
+        "Name": "v_Kch_open_B",
+        "Type": "Default",
+        "PositionX": 375.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 21,
+        "Name": "v_L_glucose",
+        "Type": "Default",
+        "PositionX": 375.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 22,
+        "Name": "v_N_glucose",
+        "Type": "Default",
+        "PositionX": 375.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 23,
+        "Name": "v_glucagon",
+        "Type": "Default",
+        "PositionX": 375.0,
+        "PositionY": 300.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 24,
+        "Name": "v_glucose_in_A",
+        "Type": "Default",
+        "PositionX": 375.0,
+        "PositionY": 375.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 25,
+        "Name": "v_glucose_in_B",
+        "Type": "Default",
+        "PositionX": 450.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 26,
+        "Name": "v_insuline",
+        "Type": "Default",
+        "PositionX": 450.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 27,
+        "Name": "v_low_inside_A",
+        "Type": "Default",
+        "PositionX": 450.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 28,
+        "Name": "v_low_inside_B",
+        "Type": "Default",
+        "PositionX": 450.0,
+        "PositionY": 300.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 29,
+        "Name": "v_ready_A",
+        "Type": "Default",
+        "PositionX": 450.0,
+        "PositionY": 375.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 30,
+        "Name": "v_ready_B",
+        "Type": "Default",
+        "PositionX": 525.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      }
+    ],
+    "Containers": [
+      {
+        "Id": 0,
+        "Name": "Default",
+        "Size": 1,
+        "PositionX": 0.0,
+        "PositionY": 0.0
+      }
+    ],
+    "Description": ""
+  }
+}

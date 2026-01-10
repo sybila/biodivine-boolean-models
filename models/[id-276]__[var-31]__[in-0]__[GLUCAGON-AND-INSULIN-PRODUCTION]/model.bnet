@@ -1,0 +1,32 @@
+targets,factors
+v_ADPmore_thanATP_A, (v_ATPmore_thanADP_A & v_low_inside_A)
+v_ADPmore_thanATP_B, (v_low_inside_B & v_ATPmore_thanADP_B)
+v_ATPmore_thanADP_A, (v_glucose_in_A & v_ADPmore_thanATP_A)
+v_ATPmore_thanADP_B, (v_ADPmore_thanATP_B & v_glucose_in_B)
+v_CaNa_ch_close_A, (v_CaNa_ch_open_A & v_K_out_A)
+v_CaNa_ch_open_A, (v_CaNa_ch_close_A & v_K_in_A)
+v_CaNa_in_A, (v_CaNa_out_A & v_CaNa_ch_open_A)
+v_CaNa_out_A, (v_CaNa_in_A & v_CaNa_ch_close_A)
+v_Ca_in_B, (v_Ca_out_B & v_Cach_open_B)
+v_Ca_out_B, (v_Ca_in_B & v_Cach_close_B)
+v_Cach_close_B, (v_Cach_open_B & v_K_out_B)
+v_Cach_open_B, (v_Cach_close_B & v_K_in_B)
+v_H_glucose, v_N_glucose
+v_K_in_A, (v_K_out_A & v_Kch_close_A)
+v_K_in_B, (v_K_out_B & v_Kch_close_B)
+v_K_out_A, (v_K_in_A & v_Kch_open_A)
+v_K_out_B, (v_K_in_B & v_Kch_open_B)
+v_Kch_close_A, (v_Kch_open_A & v_ADPmore_thanATP_A)
+v_Kch_close_B, (v_Kch_open_B & v_ATPmore_thanADP_B)
+v_Kch_open_A, (v_Kch_close_A & v_ATPmore_thanADP_A)
+v_Kch_open_B, (v_Kch_close_B & v_ADPmore_thanATP_B)
+v_L_glucose, v_N_glucose
+v_N_glucose, (v_insuline | v_glucagon)
+v_glucagon, v_ready_A
+v_glucose_in_A, v_glucagon
+v_glucose_in_B, (v_H_glucose & v_Ca_out_B)
+v_insuline, v_ready_B
+v_low_inside_A, (v_L_glucose & v_CaNa_out_A)
+v_low_inside_B, v_insuline
+v_ready_A, (v_CaNa_out_A & v_CaNa_ch_open_A)
+v_ready_B, (v_Ca_out_B & v_Cach_open_B)

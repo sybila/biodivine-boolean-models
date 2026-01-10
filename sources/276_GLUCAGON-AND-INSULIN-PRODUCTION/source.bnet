@@ -1,0 +1,31 @@
+ADPmore_thanATP_A,ATPmore_thanADP_A & low_inside_A
+ADPmore_thanATP_B,low_inside_B & ATPmore_thanADP_B
+ATPmore_thanADP_A,glucose_in_A & ADPmore_thanATP_A
+ATPmore_thanADP_B,ADPmore_thanATP_B & glucose_in_B
+Cach_close_B,Cach_open_B & K_out_B
+Cach_open_B,Cach_close_B & K_in_B
+CaNa_ch_close_A,CaNa_ch_open_A & K_out_A
+CaNa_ch_open_A,CaNa_ch_close_A & K_in_A
+CaNa_in_A,CaNa_out_A & CaNa_ch_open_A
+CaNa_out_A,CaNa_in_A & CaNa_ch_close_A
+Ca_in_B,Ca_out_B & Cach_open_B
+Ca_out_B,Ca_in_B & Cach_close_B
+glucagon,ready_A
+glucose_in_A,glucagon
+glucose_in_B,H_glucose & Ca_out_B
+H_glucose,N_glucose
+insuline,ready_B
+Kch_close_A,Kch_open_A & ADPmore_thanATP_A
+Kch_close_B,Kch_open_B & ATPmore_thanADP_B
+Kch_open_A,Kch_close_A & ATPmore_thanADP_A
+Kch_open_B,Kch_close_B & ADPmore_thanATP_B
+K_in_A,K_out_A & Kch_close_A
+K_in_B,K_out_B & Kch_close_B
+K_out_A,K_in_A & Kch_open_A
+K_out_B,K_in_B & Kch_open_B
+low_inside_A,L_glucose & CaNa_out_A
+low_inside_B,insuline
+L_glucose,N_glucose
+N_glucose,insuline | glucagon
+ready_A,CaNa_out_A & CaNa_ch_open_A
+ready_B,Ca_out_B & Cach_open_B
