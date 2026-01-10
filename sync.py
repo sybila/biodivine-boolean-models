@@ -185,10 +185,10 @@ for model_dir in source_directories:
 			regulations, "regulations.")
 
 	metadata['variables'] = variables
-	metadata['variable_names'] = variable_list(model)
+	metadata['variable-names'] = variable_list(model)
 	metadata['inputs'] = inputs
-	metadata['input_names'] = input_list(model)
-	metadata['output_names'] = output_list(model)
+	metadata['input-names'] = input_list(model)
+	metadata['output-names'] = output_list(model)
 	metadata['regulations'] = regulations
 	metadata['notes'] = notes
 	metadata['bib'] = bib
