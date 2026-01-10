@@ -1,0 +1,12 @@
+v_Ecadherin_mRNA* = not (v_ZEB1_H and v_ZEB1 and v_SNAI1 and v_SNAI2 and v_Twist)
+v_LEF1* = v_ZEB1 and not v_miR_200 or v_ZEB1_H
+v_N_bcatenin_H* = not v_miR_34 and not v_miR_200
+v_SNAI1* = (v_ZEB1_H or v_ZEB1) and not v_miR_34 or v_ZEB1_H and v_ZEB1
+v_SNAI2* = v_Twist and (v_SNAI2 or v_N_bcatenin_H and v_LEF1)
+v_TGFb_secr* = v_b_catenin_TCF4 and not v_miR_200
+v_Twist* = v_SNAI1 and not v_miR_34
+v_ZEB1* = v_SNAI2 or v_b_catenin_TCF4 and not v_miR_200
+v_ZEB1_H* = v_ZEB1 and v_N_bcatenin_H and v_LEF1 and (v_SNAI2 or not v_miR_200)
+v_b_catenin_TCF4* = v_N_bcatenin_H and v_SNAI1 and v_SNAI2
+v_miR_200* = not (v_Twist and v_ZEB1_H and v_SNAI1) and not (v_ZEB1 and not v_miR_200)
+v_miR_34* = not v_SNAI1 or not (v_ZEB1 or v_ZEB1_H)

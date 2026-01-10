@@ -1,0 +1,491 @@
+{
+  "Model": {
+    "Name": "",
+    "Variables": [
+      {
+        "Id": 0,
+        "Name": "v_Ecadherin_mRNA",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "(1 - min(min(min(min(var(8), var(7)), var(3)), var(4)), var(6)))"
+      },
+      {
+        "Id": 1,
+        "Name": "v_LEF1",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(min(var(7), (1 - var(10))), var(8))"
+      },
+      {
+        "Id": 2,
+        "Name": "v_N_bcatenin_H",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min((1 - var(11)), (1 - var(10)))"
+      },
+      {
+        "Id": 3,
+        "Name": "v_SNAI1",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(min(max(var(8), var(7)), (1 - var(11))), min(var(8), var(7)))"
+      },
+      {
+        "Id": 4,
+        "Name": "v_SNAI2",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(6), max(var(4), min(var(2), var(1))))"
+      },
+      {
+        "Id": 5,
+        "Name": "v_TGFb_secr",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(9), (1 - var(10)))"
+      },
+      {
+        "Id": 6,
+        "Name": "v_Twist",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(3), (1 - var(11)))"
+      },
+      {
+        "Id": 7,
+        "Name": "v_ZEB1",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max(var(4), min(var(9), (1 - var(10))))"
+      },
+      {
+        "Id": 8,
+        "Name": "v_ZEB1_H",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(7), min(min(var(2), var(1)), max(var(4), (1 - var(10)))))"
+      },
+      {
+        "Id": 9,
+        "Name": "v_b_catenin_TCF4",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min(var(2), min(var(3), var(4)))"
+      },
+      {
+        "Id": 10,
+        "Name": "v_miR_200",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "min((1 - min(var(6), min(var(8), var(3)))), (1 - min(var(7), (1 - var(10)))))"
+      },
+      {
+        "Id": 11,
+        "Name": "v_miR_34",
+        "RangeFrom": 0,
+        "RangeTo": 1,
+        "Formula": "max((1 - var(3)), (1 - max(var(7), var(8))))"
+      }
+    ],
+    "Relationships": [
+      {
+        "Id": 13,
+        "FromVariable": 1,
+        "ToVariable": 4,
+        "Type": "Activator"
+      },
+      {
+        "Id": 24,
+        "FromVariable": 1,
+        "ToVariable": 8,
+        "Type": "Activator"
+      },
+      {
+        "Id": 14,
+        "FromVariable": 2,
+        "ToVariable": 4,
+        "Type": "Activator"
+      },
+      {
+        "Id": 25,
+        "FromVariable": 2,
+        "ToVariable": 8,
+        "Type": "Activator"
+      },
+      {
+        "Id": 29,
+        "FromVariable": 2,
+        "ToVariable": 9,
+        "Type": "Activator"
+      },
+      {
+        "Id": 0,
+        "FromVariable": 3,
+        "ToVariable": 0,
+        "Type": "Activator"
+      },
+      {
+        "Id": 19,
+        "FromVariable": 3,
+        "ToVariable": 6,
+        "Type": "Activator"
+      },
+      {
+        "Id": 30,
+        "FromVariable": 3,
+        "ToVariable": 9,
+        "Type": "Activator"
+      },
+      {
+        "Id": 32,
+        "FromVariable": 3,
+        "ToVariable": 10,
+        "Type": "Activator"
+      },
+      {
+        "Id": 37,
+        "FromVariable": 3,
+        "ToVariable": 11,
+        "Type": "Activator"
+      },
+      {
+        "Id": 1,
+        "FromVariable": 4,
+        "ToVariable": 0,
+        "Type": "Activator"
+      },
+      {
+        "Id": 15,
+        "FromVariable": 4,
+        "ToVariable": 4,
+        "Type": "Activator"
+      },
+      {
+        "Id": 21,
+        "FromVariable": 4,
+        "ToVariable": 7,
+        "Type": "Activator"
+      },
+      {
+        "Id": 26,
+        "FromVariable": 4,
+        "ToVariable": 8,
+        "Type": "Activator"
+      },
+      {
+        "Id": 31,
+        "FromVariable": 4,
+        "ToVariable": 9,
+        "Type": "Activator"
+      },
+      {
+        "Id": 2,
+        "FromVariable": 6,
+        "ToVariable": 0,
+        "Type": "Activator"
+      },
+      {
+        "Id": 16,
+        "FromVariable": 6,
+        "ToVariable": 4,
+        "Type": "Activator"
+      },
+      {
+        "Id": 33,
+        "FromVariable": 6,
+        "ToVariable": 10,
+        "Type": "Activator"
+      },
+      {
+        "Id": 3,
+        "FromVariable": 7,
+        "ToVariable": 0,
+        "Type": "Activator"
+      },
+      {
+        "Id": 5,
+        "FromVariable": 7,
+        "ToVariable": 1,
+        "Type": "Activator"
+      },
+      {
+        "Id": 10,
+        "FromVariable": 7,
+        "ToVariable": 3,
+        "Type": "Activator"
+      },
+      {
+        "Id": 27,
+        "FromVariable": 7,
+        "ToVariable": 8,
+        "Type": "Activator"
+      },
+      {
+        "Id": 34,
+        "FromVariable": 7,
+        "ToVariable": 10,
+        "Type": "Activator"
+      },
+      {
+        "Id": 38,
+        "FromVariable": 7,
+        "ToVariable": 11,
+        "Type": "Activator"
+      },
+      {
+        "Id": 4,
+        "FromVariable": 8,
+        "ToVariable": 0,
+        "Type": "Activator"
+      },
+      {
+        "Id": 6,
+        "FromVariable": 8,
+        "ToVariable": 1,
+        "Type": "Activator"
+      },
+      {
+        "Id": 11,
+        "FromVariable": 8,
+        "ToVariable": 3,
+        "Type": "Activator"
+      },
+      {
+        "Id": 35,
+        "FromVariable": 8,
+        "ToVariable": 10,
+        "Type": "Activator"
+      },
+      {
+        "Id": 39,
+        "FromVariable": 8,
+        "ToVariable": 11,
+        "Type": "Activator"
+      },
+      {
+        "Id": 17,
+        "FromVariable": 9,
+        "ToVariable": 5,
+        "Type": "Activator"
+      },
+      {
+        "Id": 22,
+        "FromVariable": 9,
+        "ToVariable": 7,
+        "Type": "Activator"
+      },
+      {
+        "Id": 7,
+        "FromVariable": 10,
+        "ToVariable": 1,
+        "Type": "Activator"
+      },
+      {
+        "Id": 8,
+        "FromVariable": 10,
+        "ToVariable": 2,
+        "Type": "Activator"
+      },
+      {
+        "Id": 18,
+        "FromVariable": 10,
+        "ToVariable": 5,
+        "Type": "Activator"
+      },
+      {
+        "Id": 23,
+        "FromVariable": 10,
+        "ToVariable": 7,
+        "Type": "Activator"
+      },
+      {
+        "Id": 28,
+        "FromVariable": 10,
+        "ToVariable": 8,
+        "Type": "Activator"
+      },
+      {
+        "Id": 36,
+        "FromVariable": 10,
+        "ToVariable": 10,
+        "Type": "Activator"
+      },
+      {
+        "Id": 9,
+        "FromVariable": 11,
+        "ToVariable": 2,
+        "Type": "Activator"
+      },
+      {
+        "Id": 12,
+        "FromVariable": 11,
+        "ToVariable": 3,
+        "Type": "Activator"
+      },
+      {
+        "Id": 20,
+        "FromVariable": 11,
+        "ToVariable": 6,
+        "Type": "Activator"
+      }
+    ]
+  },
+  "Layout": {
+    "Variables": [
+      {
+        "Id": 0,
+        "Name": "v_Ecadherin_mRNA",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 1,
+        "Name": "v_LEF1",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 2,
+        "Name": "v_N_bcatenin_H",
+        "Type": "Default",
+        "PositionX": 75.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 3,
+        "Name": "v_SNAI1",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 4,
+        "Name": "v_SNAI2",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 5,
+        "Name": "v_TGFb_secr",
+        "Type": "Default",
+        "PositionX": 150.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 6,
+        "Name": "v_Twist",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 7,
+        "Name": "v_ZEB1",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 8,
+        "Name": "v_ZEB1_H",
+        "Type": "Default",
+        "PositionX": 225.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 9,
+        "Name": "v_b_catenin_TCF4",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 75.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 10,
+        "Name": "v_miR_200",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 150.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      },
+      {
+        "Id": 11,
+        "Name": "v_miR_34",
+        "Type": "Default",
+        "PositionX": 300.0,
+        "PositionY": 225.0,
+        "Angle": 0.0,
+        "Description": "",
+        "ContainerId": 0,
+        "CellX": null,
+        "CellY": null
+      }
+    ],
+    "Containers": [
+      {
+        "Id": 0,
+        "Name": "Default",
+        "Size": 1,
+        "PositionX": 0.0,
+        "PositionY": 0.0
+      }
+    ],
+    "Description": ""
+  }
+}

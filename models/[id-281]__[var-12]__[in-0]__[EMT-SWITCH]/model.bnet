@@ -1,0 +1,13 @@
+targets,factors
+v_Ecadherin_mRNA, !((((v_ZEB1_H & v_ZEB1) & v_SNAI1) & v_SNAI2) & v_Twist)
+v_LEF1, ((v_ZEB1 & !v_miR_200) | v_ZEB1_H)
+v_N_bcatenin_H, (!v_miR_34 & !v_miR_200)
+v_SNAI1, (((v_ZEB1_H | v_ZEB1) & !v_miR_34) | (v_ZEB1_H & v_ZEB1))
+v_SNAI2, (v_Twist & (v_SNAI2 | (v_N_bcatenin_H & v_LEF1)))
+v_TGFb_secr, (v_b_catenin_TCF4 & !v_miR_200)
+v_Twist, (v_SNAI1 & !v_miR_34)
+v_ZEB1, (v_SNAI2 | (v_b_catenin_TCF4 & !v_miR_200))
+v_ZEB1_H, (v_ZEB1 & ((v_N_bcatenin_H & v_LEF1) & (v_SNAI2 | !v_miR_200)))
+v_b_catenin_TCF4, (v_N_bcatenin_H & (v_SNAI1 & v_SNAI2))
+v_miR_200, (!(v_Twist & (v_ZEB1_H & v_SNAI1)) & !(v_ZEB1 & !v_miR_200))
+v_miR_34, (!v_SNAI1 | !(v_ZEB1 | v_ZEB1_H))
