@@ -1,0 +1,109 @@
+v_PI3K -> v_AKT
+v_FOXO3A -> v_ATM
+v_External_quiescence -> v_Anti_apoptotic_proteins
+v_GSK3b -| v_Anti_apoptotic_proteins
+v_RAS -> v_Anti_apoptotic_proteins
+v_AKT -| v_Apoptosis
+v_CYCS -> v_Apoptosis
+v_FOXO3A -> v_Autophagy
+v_ROS -> v_Autophagy
+v_mTORC1 -| v_Autophagy
+v_ATM -> v_BMI1
+v_FOXO3A -> v_BMI1
+v_cMYC -> v_BMI1
+v_CDKN1C -| v_CCND1
+v_CDKN2A -| v_CCND1
+v_cMYC -> v_CCND1
+v_CCND1 -> v_CCNE1
+v_CDKN1A -| v_CCNE1
+v_CDKN1B -| v_CCNE1
+v_CDKN1C -| v_CCNE1
+v_E2F -> v_CCNE1
+v_External_quiescence -> v_CDKN1A
+v_FOXO3A -> v_CDKN1A
+v_GFI1 -> v_CDKN1A
+v_TP53 -> v_CDKN1A
+v_cMYC -| v_CDKN1A
+v_FOXO3A -> v_CDKN1B
+v_External_quiescence -> v_CDKN1C
+v_FOXO3A -> v_CDKN1C
+v_BMI1 -| v_CDKN2A
+v_ETS -> v_CDKN2A
+v_ROS -> v_CDKN2A
+v_BMI1 -| v_CDKN2D
+v_E2F -> v_CDKN2D
+v_ROS -> v_CDKN2D
+v_GSK3b -| v_CTNNB1
+v_Anti_apoptotic_proteins -| v_CYCS
+v_Pro_apoptotic_proteins -> v_CYCS
+v_GFI1 -| v_E2F
+v_RB -| v_E2F
+v_MEF -| v_ETS
+v_RAS -> v_ETS
+v_AKT -| v_FOXO3A
+v_External_quiescence -> v_FOXO3A
+v_TP53 -> v_GFI1
+v_AKT -| v_GSK3b
+v_ATM -| v_MDM2
+v_CDKN2D -| v_MDM2
+v_MEF -> v_MDM2
+v_TP53 -> v_MDM2
+v_RAS -> v_MEF
+v_mTORC1 -> v_Mitochondria
+v_RAS -> v_PI3K
+v_AKT -| v_Pro_apoptotic_proteins
+v_ROS -> v_Pro_apoptotic_proteins
+v_TP53 -> v_Pro_apoptotic_proteins
+v_External_cycling -> v_RAS
+v_CCND1 -| v_RB
+v_CCNE1 -| v_RB
+v_ATM -| v_ROS
+v_BMI1 -| v_ROS
+v_FOXO3A -| v_ROS
+v_Mitochondria -> v_ROS
+v_TP53 -| v_ROS
+v_CCNE1 -> v_S_phase
+v_E2F -> v_S_phase
+v_CDKN1A -> v_Senescence
+v_CDKN2A -> v_Senescence
+v_ROS -> v_Senescence
+v_TP53 -> v_Senescence
+v_MDM2 -| v_TP53
+v_AKT -| v_TSC1_2
+v_CTNNB1 -> v_cMYC
+v_GSK3b -| v_cMYC
+v_TSC1_2 -| v_mTORC1
+$v_AKT: v_PI3K
+$v_ATM: v_FOXO3A
+$v_Anti_apoptotic_proteins: (v_RAS | v_External_quiescence) & !v_GSK3b
+$v_Apoptosis: v_CYCS & !v_AKT
+$v_Autophagy: v_FOXO3A & v_ROS & !v_mTORC1
+$v_BMI1: v_cMYC | (v_ATM & v_FOXO3A)
+$v_CCND1: !v_CDKN2A & !v_CDKN1C & v_cMYC
+$v_CCNE1: !v_CDKN1C & ((!v_CDKN1A & !v_CDKN1B) | v_CCND1) & v_E2F
+$v_CDKN1A: (v_TP53 | v_FOXO3A | v_External_quiescence | v_GFI1) & !v_cMYC
+$v_CDKN1B: v_FOXO3A
+$v_CDKN1C: v_External_quiescence | v_FOXO3A
+$v_CDKN2A: (v_ETS | v_ROS) & !v_BMI1
+$v_CDKN2D: !v_BMI1 & (v_E2F | v_ROS)
+$v_CTNNB1: !v_GSK3b
+$v_CYCS: v_Pro_apoptotic_proteins & !v_Anti_apoptotic_proteins
+$v_E2F: !v_RB & !v_GFI1
+$v_ETS: v_RAS & !v_MEF
+$v_FOXO3A: v_External_quiescence & !v_AKT
+$v_GFI1: v_TP53
+$v_GSK3b: !v_AKT
+$v_MDM2: (v_TP53 | v_MEF) & !v_CDKN2D & !v_ATM
+$v_MEF: v_RAS
+$v_Mitochondria: v_mTORC1
+$v_PI3K: v_RAS
+$v_Pro_apoptotic_proteins: v_TP53 & v_ROS & !v_AKT
+$v_RAS: v_External_cycling
+$v_RB: !v_CCND1 & !v_CCNE1
+$v_ROS: v_Mitochondria | !v_ATM | !v_FOXO3A | !v_BMI1 | !v_TP53
+$v_S_phase: v_CCNE1 & v_E2F
+$v_Senescence: (v_CDKN2A & v_ROS) | (v_TP53 & v_ROS & v_CDKN1A)
+$v_TP53: !v_MDM2
+$v_TSC1_2: !v_AKT
+$v_cMYC: v_CTNNB1 & !v_GSK3b
+$v_mTORC1: !v_TSC1_2

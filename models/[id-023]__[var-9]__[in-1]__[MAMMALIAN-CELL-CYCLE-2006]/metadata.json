@@ -13,7 +13,22 @@
         "repaired"
     ],
     "variables": 9,
+    "variable_names": [
+        "v_Cdc20",
+        "v_Cdh1",
+        "v_CycA",
+        "v_CycB",
+        "v_CycE",
+        "v_E2F",
+        "v_Rb",
+        "v_UbcH10",
+        "v_p27"
+    ],
     "inputs": 1,
+    "input_names": [
+        "v_CycD"
+    ],
+    "output_names": [],
     "regulations": 34,
     "notes": "### Modifications\n\nTo ensure network inputs are canonically represented, the auto-regulated identity update function of `CycD (S_5)` has been removed.\n\nAdditionally, the following regulations were modified to ensure consistency of update functions with the regulatory graph:\n\n - Regulation `UbcH10 (S_10) -> CycA (S_7)` sign set to `unknown`.\n - Regulation `CycE (S_2) -> p27 (S_9)` sign set to `unknown`.",
     "bib": "@article{bbm-023,\n  title={Dynamical analysis of a generic {Boolean} model for the control of the mammalian cell cycle},\n  author={Faur{\\'e}, Adrien and Naldi, Aur{\\'e}lien and Chaouiya, Claudine and Thieffry, Denis},\n  journal={Bioinformatics},\n  volume={22},\n  number={14},\n  pages={e124--e131},\n  year={2006},\n  publisher={Oxford University Press}\n}"

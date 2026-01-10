@@ -12,7 +12,7 @@ from os import listdir, mkdir
 from os.path import isfile, isdir, join
 from biodivine_aeon import *
 
-from utils import inputs_identity
+from utils import input_list, inputs_identity, output_list, variable_list
 
 if not isdir("sources"):
 	print("ERROR: Missing input `sources` directory.")
@@ -184,7 +184,10 @@ for model_dir in source_directories:
 			regulations, "regulations.")
 
 	metadata['variables'] = variables
+	metadata['variable_names'] = variable_list(model)
 	metadata['inputs'] = inputs
+	metadata['input_names'] = input_list(model)
+	metadata['output_names'] = output_list(model)
 	metadata['regulations'] = regulations
 	metadata['notes'] = notes
 	metadata['bib'] = bib
@@ -203,6 +206,7 @@ for model_dir in source_directories:
 	model_identity = inputs_identity(model)
 
 	Path(f'models/{output_directory}/model.aeon').write_text(model.to_aeon())
+	Path(f'models/{output_directory}/model.inferred-graph.aeon').write_text(model.infer_valid_graph().to_aeon())
 	Path(f'models/{output_directory}/model.sbml').write_text(model.to_sbml())
 	Path(f'models/{output_directory}/model.bnet').write_text(model.to_bnet())
 	Path(f'models/{output_directory}/model.bma.json').write_text(model_identity.to_bma_json(pretty=True))

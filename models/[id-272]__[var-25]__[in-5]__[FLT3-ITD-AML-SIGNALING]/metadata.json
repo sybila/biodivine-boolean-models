@@ -8,7 +8,43 @@
         "repaired"
     ],
     "variables": 25,
+    "variable_names": [
+        "v_AKT1",
+        "v_CBL",
+        "v_CREB1",
+        "v_FLT3",
+        "v_GRB2",
+        "v_GSK3A",
+        "v_GSK3B",
+        "v_INSR",
+        "v_IRS1",
+        "v_KRAS",
+        "v_MAP2K1",
+        "v_MAPK1",
+        "v_MAPK14",
+        "v_MAPK8",
+        "v_MTOR",
+        "v_PIK3CA",
+        "v_PTEN",
+        "v_PTPN11",
+        "v_RPS6",
+        "v_RPS6KA1",
+        "v_RPS6KB1",
+        "v_SHC1",
+        "v_STAT3",
+        "v_TSC2"
+    ],
     "inputs": 5,
+    "input_names": [
+        "v_IGF1R",
+        "v_KIT",
+        "v_PDPK1",
+        "v_PTPN1",
+        "v_TNF"
+    ],
+    "output_names": [
+        "v_STAT5A"
+    ],
     "regulations": 85,
     "notes": "### Modifications\n\nThe model is taken from a different paper (https://github.com/IlyaLab/LogicModelMerger/tree/main) where it was translated to SBML. The original model files are also\navailable (https://github.com/SaccoPerfettoLab/FLT3-ITD_driven_AML_Boolean_models/tree/main), but are only listed in some R-specific format, so taking the SBML\nwas much easier. Also note that there are many versions of the model, as this is intended as patient-specific model. As such, this is only one possible version\namong all presented models.\n\nAlso, the .sbml model contained some syntax errors in update functions of model inputs `PTPN1`, `KIT`, `TNF`, `IGF1R`, `PDPK1`. These have been updated such that\nthe input variable simply has no transition object.\n\nFurthermore, dual regulations have been declared as two regulations (`MAP2K1 -> FLT3`, `PIK3CA -> MAP2K1`, `TSC2 -> PTEN`). These have been changed to dual, as per SBML spec.\n\nUpdate functions of `RPS6`, `RPS6KA1`, `PTPN11`, `KRAS` and `RPS6KB1` contained doubly-nested `<apply>` which has been removed.\n\nFinally, the following regulations were marked as non-essential:\n - TNF has no effect in FLT3.\n - MAPK8 has no effect in FLT3.\n - MAP2K1 has no effect in FLT3.\n - STAT3 has no effect in FLT3.\n - IGF1R has no effect in FLT3.\n - MAP2K1 has no effect in MAPK1.\n - FLT3 has no effect in MAPK14.\n - PIK3CA has no effect in MAP2K1.\n - MTOR has no effect in MAP2K1.\n - RPS6KB1 has no effect in MAP2K1.\n - IGF1R has no effect in IRS1.\n - PTPN1 has no effect in IRS1.\n - CBL has no effect in INSR.\n - KIT has no effect in GRB2.\n - GSK3B has no effect in PTEN.\n - CREB1 has no effect in PTEN.\n - TSC2 has no effect in PTEN.\n - RPS6KB1 has no effect in PTEN.\n - RPS6 has no effect in PTEN.\n - GSK3B has no effect in TSC2.\n - GSK3B has no effect in CREB1.",
     "bib": "@article{bbm-272,\n  title={Unveiling the signaling network of FLT3-ITD AML improves drug sensitivity prediction},\n  author={Latini, Sara and Venafra, Veronica and Massacci, Giorgia and Bica, Valeria and Graziosi, Simone and Pugliese, Giusj Monia and Iannuccelli, Marta and Frioni, Filippo and Minnella, Gessica and Marra, John Donald and others},\n  journal={Elife},\n  volume={12},\n  pages={RP90532},\n  year={2024},\n  publisher={eLife Sciences Publications Limited}\n}\n"

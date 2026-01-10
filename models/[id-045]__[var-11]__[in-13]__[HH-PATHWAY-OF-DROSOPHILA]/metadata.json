@@ -13,7 +13,37 @@
         "repaired"
     ],
     "variables": 11,
+    "variable_names": [
+        "v_Ci_act",
+        "v_Ci_rep",
+        "v_Cos",
+        "v_Dally",
+        "v_Dlp",
+        "v_Fu",
+        "v_Hh",
+        "v_Ptc",
+        "v_Smo",
+        "v_SuFu"
+    ],
     "inputs": 13,
+    "input_names": [
+        "v_Boi",
+        "v_CK1a",
+        "v_Disp",
+        "v_Gprk2",
+        "v_Lipophorin",
+        "v_Pka",
+        "v_Rasp",
+        "v_Sgg",
+        "v_Shf",
+        "v_Slmb",
+        "v_Tow",
+        "v_Ttv",
+        "v_iHog"
+    ],
+    "output_names": [
+        "v_Targets"
+    ],
     "regulations": 32,
     "notes": "### Modifications\n\nThe regulatory graph was modified to ensure consistency with the update functions:\n\n - Regulation `Smo (S_7) -> Cos (S_2)` sign set to `unknown`.\n - Regulation `Tow (S_10) -> Smo (S_7)`  sign set to `unknown`.\n - Regulation `Sgg (S_20) -> Ci_act (S_22)`  sign set to `unknown`.\n - Regulation `Slmb (S_21) -> Ci_act (S_22)`  sign set to `unknown`.\n - Regulation `CK1a (S_11) -> Ci_act (S_22)`  sign set to `unknown`.\n - Regulation `SuFu (S_8) -> Ci_act (S_22)`  sign set to `unknown`.\n - Regulation `Pka (S_3) -> Ci_act (S_22)`  sign set to `unknown`.\n",
     "bib": "@article{bbm-045,\n  title={Logical modelling of Drosophila signalling pathways},\n  author={Mbodj, Abibatou and Junion, Guillaume and Brun, Christine and Furlong, Eileen EM and Thieffry, Denis},\n  journal={Molecular BioSystems},\n  volume={9},\n  number={9},\n  pages={2248--2258},\n  year={2013},\n  publisher={Royal Society of Chemistry}\n}"

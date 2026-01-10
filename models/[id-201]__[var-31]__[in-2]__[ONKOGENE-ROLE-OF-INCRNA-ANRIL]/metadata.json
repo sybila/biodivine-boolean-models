@@ -8,7 +8,46 @@
         "repaired"
     ],
     "variables": 31,
+    "variable_names": [
+        "v_AKT",
+        "v_ANRIL",
+        "v_ATM",
+        "v_BAX",
+        "v_BCL2",
+        "v_CDK2_CycE",
+        "v_CDK46_CycD",
+        "v_Caspase3",
+        "v_Cdc25A",
+        "v_E2F1",
+        "v_EZH2",
+        "v_HDAC1",
+        "v_KLF2",
+        "v_Mdm2",
+        "v_Myc",
+        "v_PTEN",
+        "v_PUMA",
+        "v_RB",
+        "v_Sirt_1",
+        "v_UFC1",
+        "v_Wip1",
+        "v_miR_34a",
+        "v_p21",
+        "v_p38MAPK",
+        "v_p53",
+        "v_p53_A",
+        "v_p53_INP1",
+        "v_p53_K"
+    ],
     "inputs": 2,
+    "input_names": [
+        "v_DNA_Damage",
+        "v_miR_16"
+    ],
+    "output_names": [
+        "v_Apoptosis",
+        "v_Proliferation",
+        "v_Senescence"
+    ],
     "regulations": 94,
     "notes": "### Modifications\n\nThe model is reconstructed from the attached table as `.aeon` file. It is also published as `.ginml` file, but only as a `.pdf` of screenshots :(\n\nHowever, note that there seem to be some inconsistencies between rules in the table and rules in the `.ginml` file (and some also within the table itself---see `Proliferation`). Adding a `E2F1 -> EZH2` regulation was necessary as well. Finally, regulation `p53_K -> BAX` sign had to be changed to `unknown`.",
     "bib": "@article{bbm-201,\n  title={Dynamical analysis of a boolean network model of the Oncogene role of lncRNA ANRIL and lncRNA UFC1 in non-small cell lung cancer},\n  author={Gupta, Shantanu and Hashimoto, Ronaldo F},\n  journal={Biomolecules},\n  volume={12},\n  number={3},\n  pages={420},\n  year={2022},\n  publisher={MDPI}\n}"

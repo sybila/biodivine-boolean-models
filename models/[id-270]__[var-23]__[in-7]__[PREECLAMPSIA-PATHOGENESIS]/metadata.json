@@ -9,7 +9,43 @@
         "repaired"
     ],
     "variables": 23,
+    "variable_names": [
+        "v_ADIPOQ",
+        "v_AKT1",
+        "v_CAV1",
+        "v_CDH5",
+        "v_HIF",
+        "v_IL1B",
+        "v_IL6",
+        "v_INSR",
+        "v_MAPK1",
+        "v_MMP2",
+        "v_NFKB1",
+        "v_PECAM1",
+        "v_TGFB1",
+        "v_TLR4",
+        "v_TNF",
+        "v_VEGFA"
+    ],
     "inputs": 7,
+    "input_names": [
+        "v_EGFR",
+        "v_HypoxiaSignal",
+        "v_InflammatorySignal",
+        "v_InsulinSignal",
+        "v_OxidativeStress",
+        "v_ShearStress",
+        "v_oxLDL"
+    ],
+    "output_names": [
+        "v_ANGPT1",
+        "v_CD36",
+        "v_LPL",
+        "v_SERPINE1",
+        "v_THBD",
+        "v_eNOS",
+        "v_sFlt_1"
+    ],
     "regulations": 65,
     "notes": "### Modifications\n\nThe model was extracted from the text table in the supplement. It should appear on cellcollective at some point in the future.\n\nThe .bnet file was then converted to AEON, where `EGFR` was set as input node, and `NFKB1 -> HIF` regulation was set as non-essential.",
     "bib": "@article{bbm-270,\n  title={Temporal Network Dynamics and Boolean Modeling Reveal Critical State Transitions and Regulatory Hubs in Preeclampsia Pathogenesis},\n  author={Manfredi, Leandro Henrique},\n  journal={medRxiv},\n  pages={2025--08},\n  year={2025},\n  publisher={Cold Spring Harbor Laboratory Press}\n}\n"

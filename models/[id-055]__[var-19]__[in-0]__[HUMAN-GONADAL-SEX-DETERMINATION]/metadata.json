@@ -9,7 +9,31 @@
         "repaired"
     ],
     "variables": 19,
+    "variable_names": [
+        "v_AMH",
+        "v_CBX2",
+        "v_CTNNB1",
+        "v_DKK1",
+        "v_DMRT1",
+        "v_FGF9",
+        "v_FOXL2",
+        "v_GATA4",
+        "v_NR0B1",
+        "v_NR5A1",
+        "v_PGD2",
+        "v_RSPO1",
+        "v_SOX9",
+        "v_SRY",
+        "v_UGR",
+        "v_WNT4",
+        "v_WT1mKTS",
+        "v_WT1pKTS"
+    ],
     "inputs": 0,
+    "input_names": [],
+    "output_names": [
+        "v_DHH"
+    ],
     "regulations": 79,
     "notes": "### Modifications\n\nThe regulatory graph was modified to ensure consistency with the update functions: \n\n - Regulation `GATA4 (S_15) -> SOX9 (S_1)` marked as non-essential.\n - Regulation `NR5A1 (S_3) -> SOX9 (S_1)` marked as non-essential.\n - Regulation `CBX2 (S_4) -> SOX9 (S_1)` marked as non-essential.\n - Regulation `WNT4 (S_6) -> NR5A1 (S_3)` sign set to `unknown`.\n - Regulation `WNT4 (S_6) -> CBX2 (S_4)` sign set to `unknown`.\n - Regulation `CTNNB1 (S_12) -> CBX2 (S_4)` sign set to `unknown`.\n - Regulation `CTNNB1 (S_12) -> AMH (S_7)` sign set to `unknown`.\n - Regulation `WT1mKTS (S_18) -> AMH (S_7)` marked as non-essential.\n - Regulation `SOX9 (S_1) -> NR0B1 (S_10)` sign set to `unknown`.\n - Regulation `AMH (S_7) -> CTNNB1 (S_12)` sign set to `unknown`.\n - Regulation `CTNNB1 (S_12) -> WT1pKTS (S_17)` sign set to `unknown`.\n",
     "bib": "@article{bbm-055,\n  title={A Boolean network model of human gonadal sex determination},\n  author={R{\\'\\i}os, Osiris and Frias, Sara and Rodr{\\'\\i}guez, Alfredo and Kofman, Susana and Merchant, Horacio and Torres, Leda and Mendoza, Luis},\n  journal={Theoretical Biology and Medical Modelling},\n  volume={12},\n  number={1},\n  pages={1--18},\n  year={2015},\n  publisher={BioMed Central}\n}"

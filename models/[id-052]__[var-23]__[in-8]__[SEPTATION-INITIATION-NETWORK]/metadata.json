@@ -9,7 +9,44 @@
         "repaired"
     ],
     "variables": 23,
+    "variable_names": [
+        "v_Rga4",
+        "v_SIP",
+        "v_byr4",
+        "v_byr4_cdc16",
+        "v_cdc11",
+        "v_cdc14_sid1",
+        "v_cdc16",
+        "v_cdc42",
+        "v_cdc7",
+        "v_dma1",
+        "v_fin1",
+        "v_flp1",
+        "v_gef1",
+        "v_nak1",
+        "v_orb6",
+        "v_pak1",
+        "v_plo1",
+        "v_pmo25",
+        "v_pom1",
+        "v_scd1",
+        "v_sid4",
+        "v_spg1"
+    ],
     "inputs": 8,
+    "input_names": [
+        "v_CK1",
+        "v_cdk_0",
+        "v_cdk_H",
+        "v_cdk_L",
+        "v_etd1",
+        "v_ppc89",
+        "v_ras1",
+        "v_sid2_mob1"
+    ],
+    "output_names": [
+        "v_sid2"
+    ],
     "regulations": 50,
     "notes": "### Modifications\n\nThe regulatory graph was modified to ensure consistency with the update functions: \n\n - Regulation `dma1 (S_11) -> plo1 (S_13)` sign set to `unknown`.\n - Regulation `ppc89 (S_19) -> SIP (S_17)` sign set to `unknown`.\n - Regulation `plo1 (S_13) -> byr4 (S_21)` sign set to `unknwon`.\n - Regulation `cdc11 (S_29) -> sid2 (S_28)` marked as non-essential.\n - Regulation `SIP (S_17) -> sid2 (S_28)` marked as non-essential.\n - Regulation `flp1 (S_8) -> cdc11 (S_29)` marked as non-essential.\n",
     "bib": "@article{bbm-052,\n  title={An extended, Boolean model of the Septation Initiation Network in S. pombe provides insights into its regulation},\n  author={Chasapi, Anastasia and Wachowicz, Paulina and Niknejad, Anne and Collin, Philippe and Krapp, Andrea and Cano, Elena and Simanis, Viesturs and Xenarios, Ioannis},\n  journal={PloS one},\n  volume={10},\n  number={8},\n  pages={e0134214},\n  year={2015},\n  publisher={Public Library of Science San Francisco, CA USA}\n}"
