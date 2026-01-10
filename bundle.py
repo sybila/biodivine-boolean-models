@@ -18,6 +18,7 @@ import argparse
 
 format_choices = ["bnet", "aeon", "sbml", "bma", "booleannet"]
 input_choices = ["true", "false", "identity", "free", "random"]
+graph_choices = ["original", "inferred"]
 filter_help_text = """Enter filter expression satisfied by the desired models [default: no filter].
 The filter expression is a Python expression that evaluates to True/False.
 You can assume `variables` and `inputs` are lists of entity names (strings).
@@ -31,6 +32,7 @@ parser = argparse.ArgumentParser(
 )
 parser.add_argument("-f", "--format", choices=format_choices)
 parser.add_argument("-i", "--inputs", choices=input_choices)
+parser.add_argument("-g", "--graph", choices=graph_choices)
 parser.add_argument("--filter", help=filter_help_text)
 parser.add_argument("-o", "--output-dir")
 args = parser.parse_args()
@@ -80,6 +82,25 @@ while True:
 	if user_inputs in input_choices:
 		INPUTS = user_inputs
 		print(f"Selected input representation: {BOLD}{user_inputs}{ENDC}")
+		break
+	print("Invalid representation chosen.")
+
+GRAPH = "original"
+while True: 
+	if args.inputs is not None:
+		user_graph = args.graph
+	else:
+		print("Do you want to use the original, or inferred regulatory graph [original/inferred; default: original]")
+		print(BOLD, end="")	
+		user_graph = input().lower()
+		print(ENDC, end="")
+
+	if user_graph == "":
+		user_graph = "original"
+
+	if user_graph in graph_choices:
+		GRAPH = user_graph
+		print(f"Selected graph representation: {BOLD}{user_inputs}{ENDC}")
 		break
 	print("Invalid representation chosen.")
 
@@ -235,7 +256,7 @@ for model_dir in model_directories:
 			all_colors = stg.mk_unit_colors()			
 			if all_colors.is_singleton():
 				# This model does not have inputs, we can just output it.				
-				output_model(OUT_DIR, const_model, metadata['id'], FORMAT)
+				output_model(OUT_DIR, const_model, metadata['id'], FORMAT, infer_graph=(GRAPH == "inferred"))
 			else:
 				ctx = stg.symbolic_context()
 				bdd_vars = ctx.bdd_variable_set()
@@ -278,7 +299,7 @@ for model_dir in model_directories:
 						else:
 							suffix += "0"
 							const_model.set_update_function(name, UpdateFunction.mk_const(const_model, False))
-					output_model(OUT_DIR, const_model, metadata['id'], FORMAT, suffix)
+					output_model(OUT_DIR, const_model, metadata['id'], FORMAT, suffix, infer_graph=(GRAPH == "inferred"))
 				print(" Done.")
 		else:
 			if INPUTS == "free":
@@ -290,7 +311,7 @@ for model_dir in model_directories:
 			if INPUTS == "identity":
 				model = inputs_identity(model)
 
-			output_model(OUT_DIR, model, metadata['id'], FORMAT)
+			output_model(OUT_DIR, model, metadata['id'], FORMAT, infer_graph=(GRAPH == "inferred"))
 
 
 Path(f'{OUT_DIR}/summary.csv').write_text(meta_csv_summary)
