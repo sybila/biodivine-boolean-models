@@ -1,0 +1,36 @@
+targets, factors
+
+PI3K, RAS 
+TSC1_2, !AKT
+mTORC1, !TSC1_2 
+FOXO3A, (External_quiescence) & !AKT
+ATM, FOXO3A
+ROS, Mitochondria | !ATM | !FOXO3A | !BMI1 | !TP53
+Mitochondria, mTORC1
+Autophagy, FOXO3A & ROS & !mTORC1 
+RAS, External_cycling
+ETS, RAS & !MEF
+MEF, RAS
+GSK3b, !AKT
+CTNNB1, !GSK3b
+cMYC, CTNNB1 & !GSK3b
+BMI1, cMYC | (ATM & FOXO3A)
+MDM2, (TP53 | MEF) & !CDKN2D & !ATM
+TP53, !MDM2  
+CDKN1C, External_quiescence | FOXO3A 
+CDKN1A, (TP53 | FOXO3A | External_quiescence |GFI1) & !cMYC
+CDKN1B, FOXO3A
+GFI1, TP53
+RB, !CCND1 & !CCNE1
+E2F, !RB  & !GFI1  
+CCND1, !CDKN2A & !CDKN1C & cMYC 
+CCNE1, (!CDKN1C) & ((!CDKN1A & !CDKN1B) | CCND1) & (E2F)
+S_phase, CCNE1 & E2F
+AKT, PI3K
+CDKN2D, !BMI1 & (E2F | ROS)
+CDKN2A, (ETS | ROS) & !BMI1 
+Pro_apoptotic_proteins, TP53 &  ROS & !AKT
+Anti_apoptotic_proteins, (RAS | External_quiescence) & !GSK3b
+CYCS, Pro_apoptotic_proteins & !Anti_apoptotic_proteins
+Apoptosis, CYCS & !AKT 
+Senescence, (CDKN2A & ROS) | (TP53 & ROS & CDKN1A) 
