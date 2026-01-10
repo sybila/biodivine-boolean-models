@@ -12,7 +12,7 @@ from os import listdir, mkdir
 from os.path import isfile, isdir, join
 from biodivine_aeon import *
 
-from utils import input_list, inputs_identity, output_list, variable_list
+from utils import input_list, inputs_identity, normalize_names, output_list, variable_list
 
 if not isdir("sources"):
 	print("ERROR: Missing input `sources` directory.")
@@ -175,6 +175,7 @@ for model_dir in source_directories:
 	model = erase_inputs(model)
 	check_integrity(model)
 	model = fix_variable_names(model)
+	normalize_names(model)
 	print("\t - Model is OK.")
 
 	(variables, inputs, regulations) = model_stats(model)

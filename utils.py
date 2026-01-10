@@ -33,6 +33,10 @@ def inputs_identity(model: BooleanNetwork):
 def output_model(dir: str, model: BooleanNetwork, id: int, format: str, suffix: str = "", infer_graph: bool = False):
 	if infer_graph:
 		model = model.infer_valid_graph()
+
+	# Before printing, normalize variable names.
+	normalize_names(model)
+
 	if format == "aeon":
 		Path(f"{dir}/{id:03d}{suffix}.aeon").write_text(model.to_aeon())
 	if format == "bnet":
@@ -43,6 +47,11 @@ def output_model(dir: str, model: BooleanNetwork, id: int, format: str, suffix: 
 		Path(f"{dir}/{id:03d}{suffix}.bma.json").write_text(model.to_bma_json(pretty=True))
 	if format == "booleannet":
 		Path(f"{dir}/{id:03d}{suffix}.booleannet.txt").write_text(model.to_booleannet())
+
+def normalize_names(model: BooleanNetwork):
+	for name in model.variable_names():
+		if '-' in name or '/' in name or ',' in name or "." in name or ' ' in name:
+			model.set_variable_name(name, name.replace('-', '_').replace('/', '_').replace(',', '_').replace('.', '_').replace(' ', '_'))
 
 def input_list(model: BooleanNetwork) -> list[str]:
 	result = []
