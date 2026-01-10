@@ -5,7 +5,7 @@
  - Regulations: 2135
  - Publication: https://doi.org/10.1039/c8ib00026c
  - Source: https://biomodelanalyzer.org/preloaded/metabolism.json
- - Keywords: biomodelanalyzer, curated, multi-valued
+ - Keywords: biomodelanalyzer, multi-valued
 
 
 ### Modifications
