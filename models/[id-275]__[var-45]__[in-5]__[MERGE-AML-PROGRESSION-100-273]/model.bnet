@@ -1,0 +1,46 @@
+targets,factors
+v_AKT1, (v_FLT3 | v_PIK3CA)
+v_ANTI_APOPTOTIC_PROTEINS, (!v_GSK3B & (v_EXTERNAL_QUIESCENCE | v_NRAS))
+v_APOPTOSIS, ((!v_AKT1 & !v_BCL2) & (v_CYCS | v_TP53))
+v_ATM, v_FOXO3
+v_AUTOPHAGY, ((v_FOXO3 & !v_MTOR) & v_ROS1)
+v_BCL2, (v_MAPK1 & !v_TP53)
+v_BMI1, (v_MYC | (v_ATM & v_FOXO3))
+v_CCND1, ((((!v_CDKN1C & !v_CDKN2A) & !v_DNMT3A) & !v_GSK3B) & v_MYC)
+v_CCNE1, ((!v_CDKN1C & v_E2F1) & (v_CCND1 | (!v_CDKN1A & !v_CDKN1B)))
+v_CDKN1A, (!v_MYC & (((v_EXTERNAL_QUIESCENCE | v_FOXO3) | v_GFI1) | v_TP53))
+v_CDKN1B, v_FOXO3
+v_CDKN1C, (v_EXTERNAL_QUIESCENCE | v_FOXO3)
+v_CDKN2A, (!v_BMI1 & ((v_ETS1 | v_NPM1) | v_ROS1))
+v_CDKN2D, (!v_BMI1 & (v_E2F1 | v_ROS1))
+v_CEBPA, !v_FLT3
+v_CTNNB1, !v_GSK3B
+v_CYCS, (!v_ANTI_APOPTOTIC_PROTEINS & v_PRO_APOPTOTIC_PROTEINS)
+v_DIFFERENTIATION, (!v_MEIS1 & (v_CEBPA | v_ETV6))
+v_E2F1, (!v_GFI1 & !v_RB1)
+v_ETS1, (!v_MEFV & v_NRAS)
+v_ETV6, !v_MAPK1
+v_FBXW7, v_NPM1
+v_FOXO3, (!v_AKT1 & v_EXTERNAL_QUIESCENCE)
+v_GFI1, v_TP53
+v_GSK3B, !v_AKT1
+v_HOXA9, !v_NPM1
+v_MAPK1, v_FLT3
+v_MDM2, ((!v_ATM & !v_CDKN2D) & (v_MEFV | v_TP53))
+v_MEFV, v_NRAS
+v_MEIS1, (!v_DNMT3A & v_HOXA9)
+v_MITOCHONDRIA, v_MTOR
+v_MTOR, !v_TSC1
+v_MYC, ((!v_FBXW7 & !v_GSK3B) & (v_CTNNB1 | v_MAPK1))
+v_NRAS, v_EXTERNAL_CYCLING
+v_PIK3CA, v_NRAS
+v_PROLIFERATION, ((((v_CCND1 | v_MEIS1) | v_MYC) | v_SOX4) | v_STAT5A)
+v_PRO_APOPTOTIC_PROTEINS, ((!v_AKT1 & v_ROS1) & v_TP53)
+v_RB1, (!v_CCND1 & !v_CCNE1)
+v_ROS1, ((((!v_ATM | !v_BMI1) | !v_FOXO3) | v_MITOCHONDRIA) | !v_TP53)
+v_SENESCENCE, (((v_CDKN1A & v_ROS1) & v_TP53) | (v_CDKN2A & v_ROS1))
+v_SOX4, !v_CEBPA
+v_STAT5A, v_FLT3
+v_S_PHASE, (v_CCNE1 & v_E2F1)
+v_TP53, (v_CDKN2A & !v_MDM2)
+v_TSC1, !v_AKT1
