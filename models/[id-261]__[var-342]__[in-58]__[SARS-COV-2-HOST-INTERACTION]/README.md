@@ -5,7 +5,7 @@
  - Regulations: 2354
  - Publication: https://doi.org/10.1038/s41746-022-00561-5
  - Source: https://github.com/JFisherLab/COVID19/blob/main/COVID_model.json
- - Keywords: biomodelsanalyzer, curated, multi-valued
+ - Keywords: biomodelanalyzer, curated, multi-valued
 
 
 ### Modifications

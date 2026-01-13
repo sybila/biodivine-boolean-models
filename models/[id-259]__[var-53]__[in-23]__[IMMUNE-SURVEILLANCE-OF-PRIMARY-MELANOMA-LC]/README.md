@@ -5,7 +5,7 @@
  - Regulations: 210
  - Publication: https://doi.org/10.1126/sciadv.add1992
  - Source: https://github.com/JFisherLab/Melanoma-LC/blob/main/models/LC_Model.json
- - Keywords: biomodelsanalyzer, curated, multi-valued
+ - Keywords: biomodelanalyzer, curated, multi-valued
 
 
 ### Modifications
