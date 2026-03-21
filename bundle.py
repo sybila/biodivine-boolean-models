@@ -235,7 +235,7 @@ print(f" ... Writing BBM edition models to {OUT_DIR} ... ")
 
 mkdir(OUT_DIR)
 
-meta_csv_summary = "ID, name, variables, regulations\n"
+meta_csv_summary = "ID, name, variables, inputs, regulations\n"
 
 for model_dir in model_directories:
 	if check_filter(FILTER, model_dir):
