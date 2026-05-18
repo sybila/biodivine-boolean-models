@@ -24,15 +24,13 @@ The regulatory graph was modified to ensure consistency with the update function
 
 ```
 @article{bbm-066,
-  title={The cell collective: toward an open and collaborative approach to systems biology},
-  author={Helikar, Tom{\'a}{\v{s}} and Kowal, Bryan and McClenathan, Sean and Bruckner, Mitchell and Rowley, Thaine and Madrahimov, Alex and Wicks, Ben and Shrestha, Manish and Limbu, Kahani and Rogers, Jim A},
-  journal={BMC systems biology},
-  volume={6},
-  number={1},
-  pages={1--14},
-  year={2012},
-  publisher={BioMed Central}
+  title={A mechanistic computational model reveals that plasticity of CD4+ T cell differentiation is a function of cytokine composition and dosage},
+  author={Puniya, Bhanwar Lal and Todd, Robert G and Mohammed, Akram and Brown, Deborah M and Barberis, Matteo and Helikar, Tom{\'a}{\v{s}}},
+  journal={Frontiers in physiology},
+  volume={9},
+  pages={878},
+  year={2018},
+  publisher={Frontiers Media SA}
 }
-
 ```
 
