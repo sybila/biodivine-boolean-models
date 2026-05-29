@@ -100,7 +100,7 @@ while True:
 
 	if user_graph in graph_choices:
 		GRAPH = user_graph
-		print(f"Selected graph representation: {BOLD}{user_inputs}{ENDC}")
+		print(f"Selected graph representation: {BOLD}{user_graph}{ENDC}")
 		break
 	print("Invalid representation chosen.")
 
@@ -292,7 +292,8 @@ for model_dir in model_directories:
 					all_colors = all_colors.minus(valuation_set.colors())
 
 					suffix = "_"
-					for (name, bdd_var) in input_symbolic_var.items():
+					for name in sorted(input_symbolic_var.keys()):
+						bdd_var = input_symbolic_var[name]
 						if valuation_sample[bdd_var]:
 							suffix += "1"
 							const_model.set_update_function(name, UpdateFunction.mk_const(const_model, True))
